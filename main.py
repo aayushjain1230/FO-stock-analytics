@@ -49,20 +49,27 @@ def run_analytics_engine():
     if not config:
         return
 
-    # --- TICKER SELECTION (WITH ROTATING QUART) ---
+    # --- TICKER SELECTION (WITH CLOUD PROMPT SUPPORT) ---
     if is_automated:
-        watchlist = config.get("watchlist", [])
-        market_scan_list = config.get("market_scan", [])
+        # Check if user provided tickers via the GitHub "Prompt" box
+        manual_input = os.getenv("MANUAL_TICKERS", "").strip()
         
-        # Get the next chunk of the S&P 500 / Market Scan
-        quart_tickers, next_index = get_current_quart(market_scan_list, slice_size=25)
-        
-        # Combine Priority Watchlist + the Current Quart
-        tickers = list(dict.fromkeys(watchlist + quart_tickers)) # Remove duplicates
-        print(f"Running Cloud Scan: {len(watchlist)} priority + {len(quart_tickers)} from market scan.")
+        if manual_input:
+            # Use tickers from the manual prompt
+            tickers = [t.strip().upper() for t in manual_input.split() if t.strip()]
+            print(f"Running Manual Cloud Prompt: {tickers}")
+            # Keep the rotation index the same for one-off manual runs
+            next_index = state_manager.load_previous_state().get("last_scan_index", 0)
+        else:
+            # Scheduled run: Use Priority Watchlist + Rotating Market Scan
+            watchlist = config.get("watchlist", [])
+            market_scan_list = config.get("market_scan", [])
+            quart_tickers, next_index = get_current_quart(market_scan_list, slice_size=25)
+            tickers = list(dict.fromkeys(watchlist + quart_tickers))
+            print(f"Running Scheduled Scan: {len(watchlist)} priority + {len(quart_tickers)} from market scan.")
         
     else:
-        # Define the recommended "Stage 2" list
+        # Local Interactive Mode for VS Code
         recommended_list = ["DOCN", "SE", "PATH", "CIEN", "NVDA", "LLY", "ORCL"]
         
         while True:
@@ -81,7 +88,6 @@ def run_analytics_engine():
             if user_input == 'exit':
                 return
             
-            # Feature 1: Reset Watchlist
             if user_input == 'reset':
                 config['watchlist'] = []
                 with open(os.path.join('config', 'config.json'), 'w') as f:
@@ -89,11 +95,9 @@ def run_analytics_engine():
                 print("--- [SUCCESS] Watchlist reset to empty ---")
                 continue
 
-            # Feature 2: Recommended List
             if user_input == 'rec':
                 tickers = recommended_list
                 print(f"Using Recommended List: {tickers}")
-                
                 save_confirm = input("Save these to your permanent watchlist? (y/n): ").lower()
                 if save_confirm == 'y':
                     config['watchlist'] = tickers
@@ -101,7 +105,6 @@ def run_analytics_engine():
                         json.dump(config, f, indent=4)
                     print("--- [SUCCESS] Recommended list saved to config.json ---")
             
-            # Manual Ticker Entry
             elif user_input:
                 tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
                 save_confirm = input(f"Save {tickers} as your permanent watchlist? (y/n): ").lower()
@@ -125,7 +128,7 @@ def run_analytics_engine():
     prev_state = state_manager.load_previous_state()
     current_full_state = {}
     
-    # If in cloud, preserve the rotation index for the next run
+    # Preserve the rotation index
     if is_automated:
         current_full_state["last_scan_index"] = next_index
 
