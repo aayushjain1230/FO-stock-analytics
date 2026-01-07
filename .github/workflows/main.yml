@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Required to push state changes back to the repo
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -23,7 +26,16 @@ jobs:
 
       - name: Execute script
         env:
-          # This connects your GitHub Secrets to your Python code
+          # Injects your Telegram secrets into the environment
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python main.py
+
+      - name: Commit and Push State Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Only adds the state file so other code remains untouched
+          git add state/state.json
+          git commit -m "Update stock engine state [automated]" || echo "No changes to state"
+          git push
