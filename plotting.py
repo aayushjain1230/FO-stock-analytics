@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import math
@@ -106,4 +108,5 @@ def create_comparison_chart(all_stock_data, benchmark_df, max_tickers=4):
             ax_rs.tick_params(axis='x', rotation=20, labelsize=8)
 
     plt.tight_layout()
+
     plt.show()
