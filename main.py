@@ -60,7 +60,8 @@ def run_analytics_engine():
         # Combine Priority Watchlist + the Current Quart
         tickers = list(dict.fromkeys(watchlist + quart_tickers)) # Remove duplicates
         print(f"Running Cloud Scan: {len(watchlist)} priority + {len(quart_tickers)} from market scan.")
-   else:
+        
+    else:
         # Define the recommended "Stage 2" list
         recommended_list = ["DOCN", "SE", "PATH", "CIEN", "NVDA", "LLY", "ORCL"]
         
@@ -179,5 +180,3 @@ def run_analytics_engine():
 
 if __name__ == "__main__":
     run_analytics_engine()
-
-
