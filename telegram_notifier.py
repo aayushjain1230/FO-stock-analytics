@@ -21,6 +21,7 @@ def format_ticker_report(ticker, alerts, latest):
     report = f"🔍 *Ticker: {ticker}*\n"
     
     # Section 1: Triggered Events (The "Why")
+    # We use this specific string to check if a real event happened
     if alerts and "Initial data recorded" not in alerts[0]:
         report += "🎯 *Events:*\n"
         for alert in alerts:
@@ -29,7 +30,6 @@ def format_ticker_report(ticker, alerts, latest):
         report += "🎯 *Events:* No new technical changes.\n"
     
     # Section 2: Technical Snapshot (The "State")
-    # Logic for trend status
     trend = "Above SMA200" if latest['Close'] > latest['SMA200'] else "Below SMA200"
     rs_status = "Outperforming" if latest.get('RS_Line', 0) > latest.get('RS_SMA20', 0) else "Lagging"
     
@@ -44,16 +44,23 @@ def format_ticker_report(ticker, alerts, latest):
 def send_bundle(full_report_list):
     """
     Groups all ticker reports into a single professional message.
-    Prioritizes GitHub Secrets for automation.
+    ONLY sends if at least one ticker has a real technical event.
     """
+    # 1. Check if any report actually contains a real event
+    # This prevents the 15-minute "No new technical changes" spam
+    has_real_events = any(
+        "🎯 *Events:*" in report and "No new technical changes" not in report 
+        for report in full_report_list
+    )
+
+    if not has_real_events:
+        print("No technical events detected across all tickers. Skipping Telegram notification.")
+        return
+
     tg_config = load_telegram_config()
-    
-    # GitHub Actions will use Environment Variables; Local use config.json
-    # This allows the script to work in both places seamlessly.
     token = os.getenv('TELEGRAM_BOT_TOKEN') or tg_config.get("token")
     chat_id = os.getenv('TELEGRAM_CHAT_ID') or tg_config.get("chat_id")
     
-    # Note: If running in GitHub Actions, "enabled" check is bypassed if Secrets exist
     is_enabled = tg_config.get("enabled", False) or (token and chat_id)
 
     if not is_enabled:
@@ -61,10 +68,10 @@ def send_bundle(full_report_list):
         return
 
     if not token or not chat_id:
-        print("Telegram Error: Missing token or chat_id in environment or config.")
+        print("Telegram Error: Missing token or chat_id.")
         return
 
-    # Construct the final master message
+    # 2. Construct the final message only if we passed the check above
     message = "🔔 *JFO Technical Analytics Summary*\n"
     message += "============================\n\n"
     
@@ -73,7 +80,6 @@ def send_bundle(full_report_list):
 
     message += "\n_Status: Analysis Complete_"
 
-    # Send via Telegram API
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {
         "chat_id": chat_id,
