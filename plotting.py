@@ -1,8 +1,14 @@
 import matplotlib
-matplotlib.use('Agg')
+matplotlib.use('Agg') # Required for running on GitHub Actions (non-interactive)
 import matplotlib.pyplot as plt
 import pandas as pd
 import math
+import os
+
+# Create the folder if it doesn't exist
+if not os.path.exists('plots'):
+    os.makedirs('plots')
+    print("Created 'plots' directory.")
 
 def create_chart(ticker, df, benchmark_df):
     """
@@ -43,7 +49,12 @@ def create_chart(ticker, df, benchmark_df):
         ax2.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    plt.show()
+    
+    # SAVE THE CHART (Replaces plt.show)
+    save_path = os.path.join('plots', f'{ticker}_analysis.png')
+    plt.savefig(save_path)
+    print(f"Single chart saved to {save_path}")
+    plt.close()
 
 def create_comparison_chart(all_stock_data, benchmark_df, max_tickers=4):
     """
@@ -59,7 +70,6 @@ def create_comparison_chart(all_stock_data, benchmark_df, max_tickers=4):
     num_stocks = len(tickers)
     
     # Grid Setup: 1 row for main chart, then 1 row per stock
-    # Each stock row has 2 columns: [Price+SMAs] and [RS Line]
     fig = plt.figure(figsize=(15, 5 + (4 * num_stocks)))
     gs = fig.add_gridspec(num_stocks + 1, 2, height_ratios=[2] + [1.2]*num_stocks)
     
@@ -109,4 +119,8 @@ def create_comparison_chart(all_stock_data, benchmark_df, max_tickers=4):
 
     plt.tight_layout()
 
-    plt.show()
+    # SAVE THE COMPARISON DASHBOARD (Replaces plt.show)
+    save_path = os.path.join('plots', 'executive_dashboard.png')
+    plt.savefig(save_path)
+    print(f"Executive dashboard saved to {save_path}")
+    plt.close()
