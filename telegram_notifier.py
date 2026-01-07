@@ -44,18 +44,24 @@ def format_ticker_report(ticker, alerts, latest):
 def send_bundle(full_report_list):
     """
     Groups all ticker reports into a single professional message.
+    Prioritizes GitHub Secrets for automation.
     """
     tg_config = load_telegram_config()
     
-    if not tg_config.get("enabled", False):
-        print("Telegram notifications are disabled in config.")
+    # GitHub Actions will use Environment Variables; Local use config.json
+    # This allows the script to work in both places seamlessly.
+    token = os.getenv('TELEGRAM_BOT_TOKEN') or tg_config.get("token")
+    chat_id = os.getenv('TELEGRAM_CHAT_ID') or tg_config.get("chat_id")
+    
+    # Note: If running in GitHub Actions, "enabled" check is bypassed if Secrets exist
+    is_enabled = tg_config.get("enabled", False) or (token and chat_id)
+
+    if not is_enabled:
+        print("Telegram notifications are disabled.")
         return
 
-    token = tg_config.get("token")
-    chat_id = tg_config.get("chat_id")
-
     if not token or not chat_id:
-        print("Telegram Error: Missing token or chat_id in config.")
+        print("Telegram Error: Missing token or chat_id in environment or config.")
         return
 
     # Construct the final master message
@@ -78,7 +84,7 @@ def send_bundle(full_report_list):
     try:
         response = requests.post(url, data=payload, timeout=10)
         if response.status_code == 200:
-            print(f"Telegram report sent successfully to Chat ID: {chat_id}")
+            print(f"Telegram report sent successfully.")
         else:
             print(f"Telegram Failed: {response.text}")
     except Exception as e:
