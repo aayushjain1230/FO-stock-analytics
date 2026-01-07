@@ -22,50 +22,59 @@ def load_config():
 
 def run_analytics_engine():
     print("--- Jain Family Office: US Stock Technical Engine v2 ---")
-
+    
+    # Check if we are running in the cloud (GitHub Actions)
+    is_automated = os.getenv("GITHUB_ACTIONS") == "true"
+    
     # 1. INITIALIZATION
     config = load_config()
     if not config:
         return
 
-    # --- TICKER INPUT WITH ERROR HANDLING & RETRY ---
-    while True:
-        print("\n[PROMPT] Enter tickers to analyze separated by spaces (e.g., NVDA TSLA AAPL)")
-        user_input = input("Leave blank to use config list (or type 'exit' to quit): ").strip()
-        
-        if user_input.lower() == 'exit':
-            print("Exiting engine...")
-            return
+    # --- TICKER SELECTION ---
+    if is_automated:
+        # Automatically use config list in the cloud
+        tickers = config.get("tickers", [])
+        print(f"Running in Cloud: Using default config list {tickers}")
+    else:
+        # Interactive mode for local use
+        while True:
+            print("\n[PROMPT] Enter tickers to analyze separated by spaces (e.g., NVDA TSLA AAPL)")
+            user_input = input("Leave blank to use config list (or type 'exit' to quit): ").strip()
+            
+            if user_input.lower() == 'exit':
+                print("Exiting engine...")
+                return
 
-        if user_input:
-            tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
-        else:
-            tickers = config.get("tickers", [])
-            print(f"Using default config list: {tickers}")
-
-        if not tickers:
-            print("[!] No tickers found. Please provide symbols to analyze.")
-            continue
-
-        # Validate tickers
-        valid_tickers = []
-        invalid_found = False
-        
-        print(f"Validating {len(tickers)} tickers...")
-        for t in tickers:
-            test_data = prices.get_price_history(t)
-            if test_data is not None and not test_data.empty:
-                valid_tickers.append(t)
+            if user_input:
+                tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
             else:
-                print(f"--- [ERROR] '{t}' is an invalid ticker. ---")
-                invalid_found = True
-        
-        if invalid_found:
-            print("[!] Please re-enter the list with the correct spellings.")
-            continue
-        else:
-            tickers = valid_tickers
-            break
+                tickers = config.get("tickers", [])
+                print(f"Using default config list: {tickers}")
+
+            if not tickers:
+                print("[!] No tickers found. Please provide symbols to analyze.")
+                continue
+
+            # Validate tickers
+            valid_tickers = []
+            invalid_found = False
+            
+            print(f"Validating {len(tickers)} tickers...")
+            for t in tickers:
+                test_data = prices.get_price_history(t)
+                if test_data is not None and not test_data.empty:
+                    valid_tickers.append(t)
+                else:
+                    print(f"--- [ERROR] '{t}' is an invalid ticker. ---")
+                    invalid_found = True
+            
+            if invalid_found:
+                print("[!] Please re-enter the list with the correct spellings.")
+                continue
+            else:
+                tickers = valid_tickers
+                break
 
     benchmark_symbol = config.get("benchmark", "SPY")
 
@@ -126,7 +135,11 @@ def run_analytics_engine():
     # 6. VISUALIZATION
     if all_stock_data:
         print("\n[4/4] Generating Executive Comparison Dashboard...")
-        plotting.create_comparison_chart(all_stock_data, benchmark_data)
+        # Note: Plotting might fail in a headless GitHub environment without a virtual display
+        try:
+            plotting.create_comparison_chart(all_stock_data, benchmark_data)
+        except Exception as e:
+            print(f"  > Plotting skipped or failed: {e}")
     else:
         print("\n[4/4] No valid stock data to plot.")
 
