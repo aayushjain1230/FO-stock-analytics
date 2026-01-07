@@ -61,7 +61,7 @@ def run_analytics_engine():
         tickers = list(dict.fromkeys(watchlist + quart_tickers)) # Remove duplicates
         print(f"Running Cloud Scan: {len(watchlist)} priority + {len(quart_tickers)} from market scan.")
     else:
-        # Interactive mode for local use remains the same
+        # Interactive mode for local use with "Save to Config" feature
         while True:
             print("\n[PROMPT] Enter tickers to analyze separated by spaces (e.g., NVDA TSLA AAPL)")
             user_input = input("Leave blank to use config list (or type 'exit' to quit): ").strip()
@@ -72,12 +72,21 @@ def run_analytics_engine():
 
             if user_input:
                 tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
+                
+                # Prompt to save these new tickers to config.json
+                save_confirm = input(f"Would you like to save {tickers} as your permanent watchlist? (y/n): ").lower()
+                if save_confirm == 'y':
+                    config['watchlist'] = tickers
+                    config_path = os.path.join('config', 'config.json')
+                    with open(config_path, 'w') as f:
+                        json.dump(config, f, indent=4)
+                    print(f"--- [SUCCESS] Watchlist saved to {config_path} ---")
             else:
                 tickers = config.get("watchlist", [])
-                print(f"Using priority watchlist: {tickers}")
+                print(f"Using priority watchlist from config: {tickers}")
 
             if not tickers:
-                print("[!] No tickers found.")
+                print("[!] No tickers found. Please provide symbols to analyze.")
                 continue
             break
 
@@ -142,3 +151,4 @@ def run_analytics_engine():
 
 if __name__ == "__main__":
     run_analytics_engine()
+
