@@ -60,33 +60,61 @@ def run_analytics_engine():
         # Combine Priority Watchlist + the Current Quart
         tickers = list(dict.fromkeys(watchlist + quart_tickers)) # Remove duplicates
         print(f"Running Cloud Scan: {len(watchlist)} priority + {len(quart_tickers)} from market scan.")
-    else:
-        # Interactive mode for local use with "Save to Config" feature
+   else:
+        # Define the recommended "Stage 2" list
+        recommended_list = ["DOCN", "SE", "PATH", "CIEN", "NVDA", "LLY", "ORCL"]
+        
         while True:
-            print("\n[PROMPT] Enter tickers to analyze separated by spaces (e.g., NVDA TSLA AAPL)")
-            user_input = input("Leave blank to use config list (or type 'exit' to quit): ").strip()
+            print("\n" + "="*40)
+            print("STOCK ANALYTICS ENGINE - INTERACTIVE MODE")
+            print("="*40)
+            print("Commands:")
+            print("  - [Enter Tickers] e.g., 'AAPL TSLA NVDA'")
+            print("  - 'rec'         : Use recommended Stage 2 list")
+            print("  - 'reset'       : Clear watchlist and reset to defaults")
+            print("  - 'exit'        : Close the program")
+            print("-"*40)
             
-            if user_input.lower() == 'exit':
-                print("Exiting engine...")
+            user_input = input("Selection: ").strip().lower()
+            
+            if user_input == 'exit':
                 return
+            
+            # Feature 1: Reset Watchlist
+            if user_input == 'reset':
+                config['watchlist'] = []
+                with open(os.path.join('config', 'config.json'), 'w') as f:
+                    json.dump(config, f, indent=4)
+                print("--- [SUCCESS] Watchlist reset to empty ---")
+                continue
 
-            if user_input:
-                tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
+            # Feature 2: Recommended List
+            if user_input == 'rec':
+                tickers = recommended_list
+                print(f"Using Recommended List: {tickers}")
                 
-                # Prompt to save these new tickers to config.json
-                save_confirm = input(f"Would you like to save {tickers} as your permanent watchlist? (y/n): ").lower()
+                save_confirm = input("Save these to your permanent watchlist? (y/n): ").lower()
                 if save_confirm == 'y':
                     config['watchlist'] = tickers
-                    config_path = os.path.join('config', 'config.json')
-                    with open(config_path, 'w') as f:
+                    with open(os.path.join('config', 'config.json'), 'w') as f:
                         json.dump(config, f, indent=4)
-                    print(f"--- [SUCCESS] Watchlist saved to {config_path} ---")
+                    print("--- [SUCCESS] Recommended list saved to config.json ---")
+            
+            # Manual Ticker Entry
+            elif user_input:
+                tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
+                save_confirm = input(f"Save {tickers} as your permanent watchlist? (y/n): ").lower()
+                if save_confirm == 'y':
+                    config['watchlist'] = tickers
+                    with open(os.path.join('config', 'config.json'), 'w') as f:
+                        json.dump(config, f, indent=4)
+                    print("--- [SUCCESS] New watchlist saved ---")
             else:
                 tickers = config.get("watchlist", [])
-                print(f"Using priority watchlist from config: {tickers}")
+                print(f"Using current watchlist from config: {tickers}")
 
             if not tickers:
-                print("[!] No tickers found. Please provide symbols to analyze.")
+                print("[!] No tickers provided. Please enter symbols or type 'rec'.")
                 continue
             break
 
@@ -151,4 +179,5 @@ def run_analytics_engine():
 
 if __name__ == "__main__":
     run_analytics_engine()
+
 
