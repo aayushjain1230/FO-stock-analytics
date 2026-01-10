@@ -4,7 +4,7 @@ import pandas_ta as ta
 def calculate_metrics(df, benchmark_df):
     """
     Calculates technical indicators: SMAs (20, 50, 200), RSI, 
-    and Relative Strength vs Benchmark with specific event triggers.
+    and Relative Strength vs Benchmark with sensitive event triggers.
     """
     # 1. Trend Indicators (Moving Averages)
     df['SMA20'] = df['Close'].rolling(window=20).mean()
@@ -29,12 +29,12 @@ def calculate_metrics(df, benchmark_df):
     df_weekly['RSI_W'] = ta.rsi(df_weekly['Close'], length=14)
     df['RSI_Weekly'] = df_weekly['RSI_W'].reindex(df.index, method='ffill')
 
-    # Monthly RSI
+    # Monthly RSI - Using 'ME' to avoid FutureWarning
     df_monthly = df.resample('ME').apply(ohlc_dict)
     df_monthly['RSI_M'] = ta.rsi(df_monthly['Close'], length=14)
     df['RSI_Monthly'] = df_monthly['RSI_M'].reindex(df.index, method='ffill')
 
-    # --- NEW: EVENT TRIGGERS ---
+    # --- SENSITIVE EVENT TRIGGERS ---
     
     # 6. Trend Event: Golden Cross (SMA50 crosses above SMA200)
     df['Golden_Cross'] = (df['SMA50'] > df['SMA200']) & (df['SMA50'].shift(1) <= df['SMA200'].shift(1))
@@ -43,11 +43,12 @@ def calculate_metrics(df, benchmark_df):
     df['RSI_Oversold'] = (df['RSI'] < 30)
     df['RSI_Overbought'] = (df['RSI'] > 70)
 
-    # 8. RS Breakout (RS Line crosses above its 20-day average)
-    df['RS_Breakout'] = (df['RS_Line'] > df['RS_SMA20']) & (df['RS_Line'].shift(1) <= df['RS_SMA20'].shift(1))
+    # 8. RS Breakout (Now 1% above average for higher sensitivity)
+    # This will trigger more often than a simple cross
+    df['RS_Breakout'] = (df['RS_Line'] > (df['RS_SMA20'] * 1.01))
 
-    # 9. Volume Spike (Volume is 2x the 20-day average)
+    # 9. Volume Spike (Lowered to 1.5x for more frequent alerts)
     df['Vol_20_Avg'] = df['Volume'].rolling(window=20).mean()
-    df['Volume_Spike'] = df['Volume'] > (df['Vol_20_Avg'] * 2)
+    df['Volume_Spike'] = df['Volume'] > (df['Vol_20_Avg'] * 1.5)
 
     return df
