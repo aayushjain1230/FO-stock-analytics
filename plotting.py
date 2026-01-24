@@ -10,9 +10,9 @@ if not os.path.exists('plots'):
     os.makedirs('plots')
     print("Created 'plots' directory.")
 
-def create_chart(ticker, df, benchmark_df):
+def create_chart(ticker, df, benchmark_df, score=None):
     """
-    Detailed single-stock chart with SMAs and Benchmark overlay.
+    Detailed single-stock chart with SMAs, Benchmark overlay, and Market Leader Score.
     Useful for deep-dives into a specific ticker.
     """
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True, 
@@ -32,6 +32,13 @@ def create_chart(ticker, df, benchmark_df):
     if '52W_High' in df.columns:
         ax1.axhline(y=df['52W_High'].iloc[-1], color='green', linestyle=':', alpha=0.5, label='52W High')
 
+    # Visualizing the "Market Leader" Score (V2.0 Enhancement)
+    if score is not None:
+        color = 'green' if score >= 70 else 'orange' if score >= 40 else 'red'
+        ax1.text(0.02, 0.95, f'JFO Score: {score}/100', transform=ax1.transAxes, 
+                 fontsize=14, fontweight='bold', color='white',
+                 bbox=dict(facecolor=color, alpha=0.8, edgecolor='none'))
+
     ax1.set_title(f"{ticker} - Detailed Technical Analysis", fontsize=16, fontweight='bold')
     ax1.set_ylabel("Price (USD)")
     ax1.legend(loc='upper left', ncol=2, fontsize=9)
@@ -50,9 +57,9 @@ def create_chart(ticker, df, benchmark_df):
 
     plt.tight_layout()
     
-    # SAVE THE CHART (Replaces plt.show)
+    # SAVE THE CHART
     save_path = os.path.join('plots', f'{ticker}_analysis.png')
-    plt.savefig(save_path)
+    plt.savefig(save_path, dpi=150)
     print(f"Single chart saved to {save_path}")
     plt.close()
 
@@ -119,8 +126,8 @@ def create_comparison_chart(all_stock_data, benchmark_df, max_tickers=4):
 
     plt.tight_layout()
 
-    # SAVE THE COMPARISON DASHBOARD (Replaces plt.show)
+    # SAVE THE COMPARISON DASHBOARD
     save_path = os.path.join('plots', 'executive_dashboard.png')
-    plt.savefig(save_path)
+    plt.savefig(save_path, dpi=150)
     print(f"Executive dashboard saved to {save_path}")
     plt.close()
