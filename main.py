@@ -2,7 +2,6 @@ import os
 import json
 import prices
 import indicators
-import scoring
 import state_manager
 import telegram_notifier 
 import plotting 
@@ -28,20 +27,17 @@ def get_current_quart(full_list, slice_size=25):
     state = state_manager.load_previous_state()
     last_index = state.get("last_scan_index", 0)
     
-    # Reset to 0 if we reached the end of the market scan list
     if last_index >= len(full_list):
         last_index = 0
         
     next_index = last_index + slice_size
     current_quart = full_list[last_index:next_index]
     
-    # We don't save the index here; we pass it back to be saved with the full state later
     return current_quart, next_index
 
 def run_analytics_engine():
     print("--- Jain Family Office: US Stock Technical Engine v2 ---")
     
-    # Check if we are running in the cloud (GitHub Actions)
     is_automated = os.getenv("GITHUB_ACTIONS") == "true"
     
     # 1. INITIALIZATION
@@ -49,86 +45,53 @@ def run_analytics_engine():
     if not config:
         return
 
-    # --- TICKER SELECTION (WITH CLOUD PROMPT SUPPORT) ---
+    # --- TICKER SELECTION ---
     if is_automated:
-        # Check if user provided tickers via the GitHub "Prompt" box
         manual_input = os.getenv("MANUAL_TICKERS", "").strip()
-        
         if manual_input:
-            # Use tickers from the manual prompt
             tickers = [t.strip().upper() for t in manual_input.split() if t.strip()]
             print(f"Running Manual Cloud Prompt: {tickers}")
-            # Keep the rotation index the same for one-off manual runs
             next_index = state_manager.load_previous_state().get("last_scan_index", 0)
         else:
-            # Scheduled run: Use Priority Watchlist + Rotating Market Scan
             watchlist = config.get("watchlist", [])
             market_scan_list = config.get("market_scan", [])
             quart_tickers, next_index = get_current_quart(market_scan_list, slice_size=25)
             tickers = list(dict.fromkeys(watchlist + quart_tickers))
-            print(f"Running Scheduled Scan: {len(watchlist)} priority + {len(quart_tickers)} from market scan.")
+            print(f"Running Scheduled Scan: {len(watchlist)} priority + {len(quart_tickers)} scan.")
         
     else:
-        # Local Interactive Mode for VS Code
+        # Local Interactive Mode
         recommended_list = ["DOCN", "SE", "PATH", "CIEN", "NVDA", "LLY", "ORCL"]
-        
         while True:
             print("\n" + "="*40)
             print("STOCK ANALYTICS ENGINE - INTERACTIVE MODE")
             print("="*40)
-            print("Commands:")
-            print("  - [Enter Tickers] e.g., 'AAPL TSLA NVDA'")
-            print("  - 'rec'         : Use recommended Stage 2 list")
-            print("  - 'reset'       : Clear watchlist and reset to defaults")
-            print("  - 'exit'        : Close the program")
-            print("-"*40)
+            user_input = input("Selection (tickers, 'rec', 'reset', 'exit'): ").strip().lower()
             
-            user_input = input("Selection: ").strip().lower()
-            
-            if user_input == 'exit':
-                return
-            
+            if user_input == 'exit': return
             if user_input == 'reset':
                 config['watchlist'] = []
-                with open(os.path.join('config', 'config.json'), 'w') as f:
-                    json.dump(config, f, indent=4)
-                print("--- [SUCCESS] Watchlist reset to empty ---")
-                continue
+                with open(os.path.join('config', 'config.json'), 'w') as f: json.dump(config, f, indent=4)
+                print("--- Watchlist reset ---"); continue
 
             if user_input == 'rec':
                 tickers = recommended_list
-                print(f"Using Recommended List: {tickers}")
-                save_confirm = input("Save these to your permanent watchlist? (y/n): ").lower()
-                if save_confirm == 'y':
-                    config['watchlist'] = tickers
-                    with open(os.path.join('config', 'config.json'), 'w') as f:
-                        json.dump(config, f, indent=4)
-                    print("--- [SUCCESS] Recommended list saved to config.json ---")
-            
             elif user_input:
                 tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
-                save_confirm = input(f"Save {tickers} as your permanent watchlist? (y/n): ").lower()
-                if save_confirm == 'y':
-                    config['watchlist'] = tickers
-                    with open(os.path.join('config', 'config.json'), 'w') as f:
-                        json.dump(config, f, indent=4)
-                    print("--- [SUCCESS] New watchlist saved ---")
             else:
                 tickers = config.get("watchlist", [])
-                print(f"Using current watchlist from config: {tickers}")
 
             if not tickers:
-                print("[!] No tickers provided. Please enter symbols or type 'rec'.")
+                print("[!] No tickers provided.")
                 continue
             break
 
     benchmark_symbol = config.get("benchmark", "SPY")
 
-    # 2. STATE MANAGEMENT & DATA COLLECTION SETUP
+    # 2. STATE & DATA SETUP
     prev_state = state_manager.load_previous_state()
     current_full_state = {}
     
-    # Preserve the rotation index
     if is_automated:
         current_full_state["last_scan_index"] = next_index
 
@@ -138,7 +101,6 @@ def run_analytics_engine():
     # 3. BENCHMARK DATA
     print(f"\n[1/4] Fetching benchmark data ({benchmark_symbol})...")
     benchmark_data = prices.get_price_history(benchmark_symbol)
-    
     if benchmark_data is None:
         print(f"Critical Error: Could not fetch benchmark data.")
         return
@@ -147,28 +109,46 @@ def run_analytics_engine():
     print(f"[2/4] Processing {len(tickers)} tickers...")
 
     for ticker in tickers:
-        print(f"Analyzing: {ticker}...")
-        stock_data = prices.get_price_history(ticker)
-        
-        if stock_data is None or stock_data.empty:
-            continue
+        try:
+            print(f"Analyzing: {ticker}...")
+            stock_data = prices.get_price_history(ticker)
+            
+            if stock_data is None or stock_data.empty:
+                continue
 
-        analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
-        rating_result = scoring.generate_rating(analyzed_data)
-        all_stock_data[ticker] = analyzed_data
-        
-        ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
-        current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
+            # --- Calculation Core ---
+            # 1. Run Indicators
+            analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
+            
+            # 2. Apply "Market Leader" Scoring (V2 New Logic)
+            last_row = analyzed_data.iloc[-1]
+            score = indicators.calculate_market_leader_score(last_row)
+            analyzed_data['Market_Leader_Score'] = score # Apply to the latest record
+            
+            all_stock_data[ticker] = analyzed_data
+            
+            # 3. Handle Alerts & Memory
+            ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
+            current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
 
-        ticker_report = telegram_notifier.format_ticker_report(ticker, ticker_alerts, analyzed_data.iloc[-1])
-        all_ticker_reports.append(ticker_report)
+            # 4. Format for Telegram (Passing the score into the report)
+            ticker_report = telegram_notifier.format_ticker_report(
+                ticker, 
+                ticker_alerts, 
+                last_row, 
+                score=score
+            )
+            all_ticker_reports.append(ticker_report)
+            
+        except Exception as e:
+            print(f"Error processing {ticker}: {e}")
 
     # 5. STATE SAVING & NOTIFICATIONS
     print("\n[3/4] Saving state and sending reports...")
     state_manager.save_current_state(current_full_state)
     
     telegram_cfg = config.get("telegram", {})
-    if telegram_cfg.get("enabled", True):
+    if telegram_cfg.get("enabled", True) and all_ticker_reports:
         telegram_notifier.send_bundle(all_ticker_reports) 
 
     # 6. VISUALIZATION
