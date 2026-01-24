@@ -59,7 +59,7 @@ def run_analytics_engine():
     # Checks if NYSE is open. (Comment out the 'return' for weekend testing)
     if not is_market_open():
         print("Market is closed. Script terminating to save compute.")
-        # return 
+        return 
 
     # 2. INITIALIZATION
     config = load_config()
@@ -181,4 +181,5 @@ def run_analytics_engine():
 
 if __name__ == "__main__":
     run_analytics_engine()
+
 
