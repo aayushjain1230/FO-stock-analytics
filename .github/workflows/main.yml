@@ -3,9 +3,10 @@ name: Run Stock Engine
 on:
   schedule:
     # Runs every 15 minutes, Monday-Friday (UTC time)
-    - cron: '*/15 * * * 1-5'
+    # Note: 14:30 - 21:00 UTC covers the standard NYSE trading day
+    - cron: '*/15 14-21 * * 1-5'
   workflow_dispatch:
-    # This adds a manual "Prompt" button with an input box
+    # Manual "Prompt" button for custom scans
     inputs:
       manual_tickers:
         description: 'Enter Tickers (Leave blank for config list)'
@@ -15,38 +16,59 @@ on:
 jobs:
   run-analytics:
     runs-on: ubuntu-latest
+    
+    # Permissions required to push state.json back to your repo
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # Use the default GITHUB_TOKEN for workflow permissions
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip' # Speeds up subsequent runs by caching libraries
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Execute script
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # This passes your prompt input to the Python script
+          # Passes manual inputs to Python's os.getenv('MANUAL_TICKERS')
           MANUAL_TICKERS: ${{ github.event.inputs.manual_tickers }}
         run: python main.py
 
       - name: Upload Trend Charts
+        if: always() # Upload even if the script partially fails
         uses: actions/upload-artifact@v4
         with:
           name: stock-analysis-plots
-          path: plots/  # Ensure this matches your plotting.py save folder
+          path: plots/ # Path must match your plotting.py output directory
 
       - name: Commit and Push State Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/state.json
+          # Ensure the state directory exists so git doesn't error
+          mkdir -p state 
+          git add state/state.json || echo "No state file found to add"
           git commit -m "Update stock engine state [automated]" || echo "No changes to state"
           git push
+
+      # --- [CHANGE #4] FAILURE NOTIFICATION ---
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+          -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+          -d text="⚠️ **JFO Engine Alert**: The stock scan workflow has failed. Please check the GitHub Actions logs for the latest run." \
+          -d parse_mode="Markdown"
