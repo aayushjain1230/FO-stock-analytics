@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import time
 
 def load_telegram_config():
     """Reads credentials from the config file."""
@@ -39,7 +40,7 @@ def format_ticker_report(ticker, alerts, latest, score=0):
             report += f"  • {event}\n"
 
     # Section 2: Standard Alerts (State Transitions)
-    if alerts and "Initial data recorded" not in alerts[0]:
+    if alerts and "Initial data recorded" not in str(alerts):
         report += "🎯 *Standard Alerts:*\n"
         for alert in alerts:
             report += f"  • {alert}\n"
@@ -47,7 +48,9 @@ def format_ticker_report(ticker, alerts, latest, score=0):
         report += "🎯 *Events:* No new technical changes.\n"
     
     # Section 3: Technical Snapshot
-    trend = "Above SMA200" if latest['Close'] > latest['SMA200'] else "Below SMA200"
+    # Check for SMA200 existence to prevent KeyError
+    sma200 = latest.get('SMA200', 0)
+    trend = "Above SMA200" if latest['Close'] > sma200 else "Below SMA200"
     rs_status = "Outperforming" if latest.get('RS_Line', 0) > latest.get('RS_SMA20', 0) else "Lagging"
     
     report += (
@@ -58,10 +61,58 @@ def format_ticker_report(ticker, alerts, latest, score=0):
     )
     return report + "------------------------------------------\n"
 
+def send_long_message(message_text):
+    """
+    Splits the final report into chunks to respect Telegram's 4096 char limit.
+    """
+    tg_config = load_telegram_config()
+    token = os.getenv('TELEGRAM_BOT_TOKEN') or tg_config.get("token")
+    chat_id = os.getenv('TELEGRAM_CHAT_ID') or tg_config.get("chat_id")
+    
+    if not token or not chat_id:
+        print("Telegram Error: Missing credentials.")
+        return
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    MAX_LENGTH = 4000 # Safe margin
+
+    # Split logic
+    if len(message_text) <= MAX_LENGTH:
+        _execute_send(url, chat_id, message_text)
+    else:
+        while len(message_text) > 0:
+            if len(message_text) > MAX_LENGTH:
+                # Find last newline within limit so we don't cut a ticker in half
+                split_at = message_text.rfind('\n', 0, MAX_LENGTH)
+                if split_at == -1: split_at = MAX_LENGTH
+                
+                chunk = message_text[:split_at]
+                _execute_send(url, chat_id, chunk)
+                
+                message_text = message_text[split_at:].lstrip()
+                time.sleep(0.5) # Avoid flood limits
+            else:
+                _execute_send(url, chat_id, message_text)
+                break
+
+def _execute_send(url, chat_id, text):
+    """Helper to perform the actual POST request."""
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "Markdown"
+    }
+    try:
+        response = requests.post(url, data=payload, timeout=10)
+        if response.status_code != 200:
+            print(f"Telegram Failed: {response.text}")
+    except Exception as e:
+        print(f"Telegram Connection Error: {e}")
+
 def send_bundle(full_report_list):
     """
-    Groups all ticker reports into a single message.
-    ONLY sends if a real event (New Events OR Standard Alerts) is present.
+    Groups all ticker reports into a single message (or multiple chunks).
+    ONLY sends if a real event is present.
     """
     has_real_events = any(
         ("🎯 *Standard Alerts:*" in report) or ("🌟 *Critical Events:*" in report)
@@ -72,36 +123,16 @@ def send_bundle(full_report_list):
         print("No technical events detected. Skipping Telegram.")
         return
 
-    tg_config = load_telegram_config()
-    token = os.getenv('TELEGRAM_BOT_TOKEN') or tg_config.get("token")
-    chat_id = os.getenv('TELEGRAM_CHAT_ID') or tg_config.get("chat_id")
-    
-    if not token or not chat_id:
-        print("Telegram Error: Missing credentials.")
-        return
-
     # Construct Final Message
     message = "🔔 *JFO Technical Analytics Summary*\n"
     message += "============================\n\n"
     
     for ticker_report in full_report_list:
+        # Avoid cluttering the report with "No changes" tickers
         if "No new technical changes" not in ticker_report:
             message += ticker_report
 
     message += "\n_Status: Analysis Complete_"
-
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": message,
-        "parse_mode": "Markdown"
-    }
-
-    try:
-        response = requests.post(url, data=payload, timeout=10)
-        if response.status_code == 200:
-            print(f"Telegram report sent.")
-        else:
-            print(f"Telegram Failed: {response.text}")
-    except Exception as e:
-        print(f"Connection Error: {e}")
+    
+    # Use the long message sender to handle chunking
+    send_long_message(message)
