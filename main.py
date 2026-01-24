@@ -1,11 +1,18 @@
 import os
 import json
+import sys
+import pandas as pd
+import pandas_market_calendars as mcal
+import pytz
+from datetime import datetime
+
+# Existing project modules
 import prices
 import indicators
 import state_manager
 import telegram_notifier 
 import plotting 
-import scoring  # Integrated the new scoring module
+import scoring 
 
 def load_config():
     """Loads settings and ticker list from config/config.json."""
@@ -20,11 +27,24 @@ def load_config():
         print(f"Error: config.json is not formatted correctly.")
         return None
 
+def is_market_open():
+    """Checks if the NYSE is currently open using real-world holiday calendars."""
+    nyse = mcal.get_calendar('NYSE')
+    # Get current time in UTC
+    now_utc = datetime.now(pytz.utc)
+    
+    # Get schedule for the current day
+    schedule = nyse.schedule(start_date=now_utc, end_date=now_utc)
+    
+    if schedule.empty:
+        return False
+        
+    # Check if current UTC time is within the market_open and market_close window
+    is_open = schedule.iloc[0].market_open <= now_utc <= schedule.iloc[0].market_close
+    return is_open
+
 def get_current_quart(full_list, slice_size=25):
-    """
-    Saves the current index in state so each run 
-    picks the next group of stocks from the market scan.
-    """
+    """Saves the current index in state so each run picks the next group of stocks."""
     state = state_manager.load_previous_state()
     last_index = state.get("last_scan_index", 0)
     
@@ -39,6 +59,12 @@ def get_current_quart(full_list, slice_size=25):
 def run_analytics_engine():
     print("--- Jain Family Office: US Stock Technical Engine v2 ---")
     
+    # --- MARKET GATEKEEPER ---
+    # We check this first to save resources and avoid sending telegram messages
+    if not is_market_open():
+        print("Market is closed (Weekend/Holiday/After Hours). Exiting engine.")
+        return
+
     is_automated = os.getenv("GITHUB_ACTIONS") == "true"
     
     # 1. INITIALIZATION
@@ -52,25 +78,20 @@ def run_analytics_engine():
         if manual_input:
             tickers = [t.strip().upper() for t in manual_input.split() if t.strip()]
             print(f"Running Manual Cloud Prompt: {tickers}")
-            # Keep the current index where it is if running a manual prompt
             next_index = state_manager.load_previous_state().get("last_scan_index", 0)
         else:
             watchlist = config.get("watchlist", [])
             market_scan_list = config.get("market_scan", [])
             quart_tickers, next_index = get_current_quart(market_scan_list, slice_size=25)
-            # Combine watchlist (always scan) + the current rotating slice
             tickers = list(dict.fromkeys(watchlist + quart_tickers))
             print(f"Running Scheduled Scan: {len(watchlist)} priority + {len(quart_tickers)} scan.")
     else:
-        # Local Interactive Mode (kept for your local testing)
         tickers = config.get("watchlist", ["AAPL", "NVDA", "TSLA"])
         next_index = 0
 
     benchmark_symbol = config.get("benchmark", "SPY")
 
     # 2. STATE SETUP
-    # We load the full previous state so we can preserve data for tickers 
-    # that ARE NOT in the current scan group.
     prev_state = state_manager.load_previous_state()
     current_full_state = prev_state.copy() 
     
@@ -99,20 +120,14 @@ def run_analytics_engine():
                 continue
 
             # --- Calculation Core ---
-            # 1. Run Indicators (Math logic)
             analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
-            
-            # 2. Apply "Market Leader" Scoring (V2 New Logic from scoring.py)
             rating_result = scoring.generate_rating(analyzed_data)
             score = rating_result['score']
             
             all_stock_data[ticker] = analyzed_data
-            
-            # 3. Handle Alerts & Update memory for this specific ticker
             ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
             current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
 
-            # 4. Format for Telegram
             ticker_report = telegram_notifier.format_ticker_report(
                 ticker, 
                 ticker_alerts, 
