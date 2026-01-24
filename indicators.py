@@ -64,18 +64,26 @@ def calculate_metrics(df, benchmark_df):
     return df
 
 def get_market_regime_label(spy_df):
-    """
-    Traffic Light Filter: Determines if the overall market environment is healthy.
-    """
-    if spy_df is None or spy_df.empty:
-        return "Unknown"
-    
-    latest_close = spy_df['Close'].iloc[-1]
-    spy_sma200 = ta.sma(spy_df['Close'], length=200).iloc[-1]
-    
-    if latest_close > spy_sma200:
-        return "🟢 BULLISH REGIME (Risk-On)"
-    return "🔴 BEARISH REGIME (Caution/Cash)"
+    try:
+        if spy_df is None or len(spy_df) < 200:
+            return "Unknown (Incomplete Data)"
+
+        # Calculate SMA200
+        sma_series = ta.sma(spy_df['Close'], length=200)
+        
+        if sma_series is None or sma_series.isna().all():
+            return "Neutral (Calculating...)"
+
+        latest_close = spy_df['Close'].iloc[-1]
+        latest_sma = sma_series.iloc[-1]
+
+        if latest_close > latest_sma:
+            return "🟢 Bullish (Above SMA200)"
+        else:
+            return "🔴 Bearish (Below SMA200)"
+    except Exception as e:
+        print(f"Regime Check Error: {e}")
+        return "Neutral"
 
 def calculate_market_leader_score(row):
     """
@@ -117,3 +125,4 @@ def calculate_market_leader_score(row):
         score -= 20
         
     return max(0, min(score, 100))
+
