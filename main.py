@@ -38,15 +38,20 @@ def is_market_open():
     return market_open <= now_utc <= market_close
 
 def get_sp500_sectors():
-    """Scrapes Wikipedia for the live S&P 500 list and GICS sectors."""
     try:
-        table = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')[0]
+        # We must set a User-Agent header to avoid the 403 Forbidden error
+        url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        
+        response = requests.get(url, headers=headers)
+        table = pd.read_html(response.text)[0]
+        
         table['Symbol'] = table['Symbol'].str.replace('.', '-', regex=False)
         return dict(zip(table['Symbol'], table['GICS Sector']))
     except Exception as e:
         print(f"Error fetching S&P 500 sector list: {e}")
         return {}
-
+        
 def run_analytics_engine():
     print("\n--- Jain Family Office: Market Intelligence Engine v2 ---")
     
@@ -176,3 +181,4 @@ def run_analytics_engine():
 
 if __name__ == "__main__":
     run_analytics_engine()
+
