@@ -1,192 +1,195 @@
 import os
 import json
-import sys
+import time
+import requests
 import pandas as pd
+import pandas_ta as ta
 import pandas_market_calendars as mcal
 import pytz
 import yfinance as yf
 from datetime import datetime
 
-# Existing project modules
-import prices
-import indicators
-import state_manager
-import telegram_notifier 
-import plotting 
-import scoring 
-
-def load_config():
-    """Loads settings and ticker list from config/config.json."""
+# ==========================================
+# 1. TELEGRAM & NOTIFICATION ENGINE
+# ==========================================
+def load_telegram_config():
     config_path = os.path.join('config', 'config.json')
     try:
         with open(config_path, 'r') as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"Configuration Error: {e}")
-        return None
+            config = json.load(f)
+            return config.get("telegram", {})
+    except: return {}
 
-def is_market_open():
-    """Gatekeeper: Checks if NYSE is currently open using real-world holiday calendars."""
-    nyse = mcal.get_calendar('NYSE')
-    # Use UTC for GitHub Actions/Cloud compatibility
-    now_utc = datetime.now(pytz.utc)
-    
-    schedule = nyse.schedule(start_date=now_utc, end_date=now_utc)
-    if schedule.empty:
-        return False
-        
-    market_open = schedule.iloc[0].market_open
-    market_close = schedule.iloc[0].market_close
-    
-    return market_open <= now_utc <= market_close
+def format_ticker_report(ticker, alerts, latest, rating_data):
+    score = rating_data['score']
+    tier = rating_data['rating']
+    metrics = rating_data['metrics']
+    is_extended = rating_data.get('is_extended', False)
+    tv_link = f"https://www.tradingview.com/symbols/{ticker}/"
 
+    report = f"🔍 *[{ticker}]({tv_link})* | Score: `{score}/100`\n"
+    report += f"🏷 *Rank: {tier}*\n"
+    if is_extended: report += "⚠️ *STRETCHED: High Risk*\n"
+    
+    event_list = []
+    if latest.get('Golden_Cross'): event_list.append("🚀 *GOLDEN CROSS*")
+    if latest.get('Volume_Spike'): event_list.append("📊 *INSTITUTIONAL VOLUME*")
+    if latest.get('RS_Breakout'): event_list.append("⚡ *RS BREAKOUT*")
+
+    if event_list:
+        report += "🌟 *Critical Events:*\n"
+        for event in event_list: report += f"  • {event}\n"
+
+    if alerts and "Initial" not in str(alerts):
+        report += "🎯 *Alerts:* " + ", ".join(alerts) + "\n"
+    
+    report += (f"📊 RS: `{metrics.get('mrs_value', 0):+.1f}` | Vol: `{metrics.get('rel_volume', '1.0x')}`\n")
+    return report + "--------------------------\n"
+
+def send_long_message(message_text):
+    tg_config = load_telegram_config()
+    token = os.getenv('TELEGRAM_BOT_TOKEN') or tg_config.get("token")
+    chat_id = os.getenv('TELEGRAM_CHAT_ID') or tg_config.get("chat_id")
+    if not token or not chat_id: return
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    for i in range(0, len(message_text), 4000):
+        chunk = message_text[i:i+4000]
+        payload = {"chat_id": chat_id, "text": chunk, "parse_mode": "Markdown", "disable_web_page_preview": True}
+        requests.post(url, data=payload, timeout=15)
+        time.sleep(0.6)
+
+# ==========================================
+# 2. INDICATORS & SCORING ENGINE
+# ==========================================
+def calculate_metrics(df, benchmark_df):
+    df, benchmark_df = df.align(benchmark_df, join='inner', axis=0)
+    df['SMA50'] = ta.sma(df['Close'], length=50)
+    df['SMA200'] = ta.sma(df['Close'], length=200)
+    df['SMA20'] = ta.sma(df['Close'], length=20)
+    
+    df['RV'] = df['Volume'] / ta.sma(df['Volume'], length=20)
+    df['Volume_Spike'] = df['RV'] >= 2.0
+    
+    df['RS_Line'] = df['Close'] / benchmark_df['Close']
+    df['RS_SMA50'] = ta.sma(df['RS_Line'], length=50)
+    df['MRS'] = ((df['RS_Line'] / df['RS_SMA50']) - 1) * 100
+    df['RS_SMA20'] = ta.sma(df['RS_Line'], length=20)
+    
+    df['ATR'] = ta.atr(df['High'], df['Low'], df['Close'], length=14)
+    df['Dist_SMA20'] = (df['Close'] - df['SMA20']) / df['ATR']
+    
+    df['RSI_Weekly'] = ta.rsi(df['Close'], length=14) # Simplified for main.py consolidation
+    df['Golden_Cross'] = (df['SMA50'] > df['SMA200']) & (df['SMA50'].shift(1) <= df['SMA200'].shift(1))
+    df['RS_Breakout'] = (df['MRS'] > 0) & (df['MRS'].shift(1) <= 0)
+    return df
+
+def generate_rating(df):
+    latest = df.iloc[-1]
+    score = 0
+    is_stage_2 = latest['Close'] > latest['SMA50'] > latest['SMA200']
+    if is_stage_2: score += 40
+    if latest['MRS'] > 0: score += 20
+    if latest.get('RV', 0) >= 2.0: score += 20
+    if latest.get('RS_Breakout'): score += 10
+    
+    is_extended = latest.get('Dist_SMA20', 0) > 3.0
+    if is_extended: score -= 25
+
+    if score >= 80: rating = "Tier 1: Leader 🏆"
+    elif score >= 60: rating = "Tier 2: Improving 📈"
+    else: rating = "Tier 3: Avoid 🔴"
+
+    return {
+        "score": max(0, score), "rating": rating, "is_extended": is_extended,
+        "metrics": {"mrs_value": round(latest['MRS'], 2), "rel_volume": f"{round(latest['RV'], 2)}x"}
+    }
+
+# ==========================================
+# 3. STATE MANAGEMENT
+# ==========================================
+def load_state():
+    path = os.path.join('state', 'state.json')
+    if os.path.exists(path):
+        with open(path, 'r') as f: return json.load(f)
+    return {}
+
+def save_state(state):
+    os.makedirs('state', exist_ok=True)
+    with open(os.path.join('state', 'state.json'), 'w') as f:
+        json.dump(state, f, indent=4)
+
+# ==========================================
+# 4. MAIN EXECUTION ENGINE
+# ==========================================
 def get_sp500_sectors():
-    """Scrapes Wikipedia for the live S&P 500 list and GICS sectors."""
     try:
-        # Wikipedia is the standard source for GICS sector groupings
         table = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')[0]
-        # Standardize tickers (e.g., BRK.B -> BRK-B) for yfinance compatibility
         table['Symbol'] = table['Symbol'].str.replace('.', '-', regex=False)
         return dict(zip(table['Symbol'], table['GICS Sector']))
-    except Exception as e:
-        print(f"Error fetching S&P 500 sector list: {e}")
-        return {}
+    except: return {}
+
+def is_market_open():
+    nyse = mcal.get_calendar('NYSE')
+    now = datetime.now(pytz.utc)
+    schedule = nyse.schedule(start_date=now, end_date=now)
+    return not schedule.empty and (schedule.iloc[0].market_open <= now <= schedule.iloc[0].market_close)
 
 def run_analytics_engine():
-    print("\n--- Jain Family Office: Market Intelligence Engine v2 ---")
-    
-    # 1. MARKET GATEKEEPER
-    # Prevents running on weekends, holidays, or after hours to save resources.
+    print("--- JFO Engine Starting ---")
     if not is_market_open():
-        print("Market is closed. Script terminating.")
+        print("Market closed. Skipping.")
         return
 
-    # 2. INITIALIZATION
-    config = load_config()
-    if not config:
-        return
+    config_path = os.path.join('config', 'config.json')
+    with open(config_path, 'r') as f: config = json.load(f)
     
     watchlist = config.get("watchlist", [])
-    benchmark_symbol = config.get("benchmark", "SPY")
-    
-    # Fetch S&P 500 metadata for breadth analysis
     sector_map = get_sp500_sectors()
-    all_sp500_tickers = list(sector_map.keys())
+    manual_input = os.getenv('MANUAL_TICKERS', '')
     
-    # Create a unique list of all tickers to download in one batch
-    full_scan_list = list(set(watchlist + all_sp500_tickers))
-
-    # 3. DATA ACQUISITION
-    print(f"[1/4] Batch downloading data for {len(full_scan_list)} tickers...")
-    # 'threads=True' is essential for speed when handling 500+ stocks
-    batch_data = yf.download(full_scan_list, period="1y", interval="1d", group_by='ticker', threads=True)
-    benchmark_data = prices.get_price_history(benchmark_symbol)
-
-    if benchmark_data is None:
-        print("Critical Error: Could not fetch benchmark data.")
-        return
-
-    # 4. PROCESSING LOGIC
-    print("[2/4] Analyzing and Grouping Stocks...")
-    prev_state = state_manager.load_previous_state()
-    current_full_state = prev_state.copy()
+    full_scan_list = [t.strip().upper() for t in manual_input.split(',')] if manual_input else list(set(watchlist + list(sector_map.keys())))
     
-    watchlist_data_for_plot = {}
-    watchlist_reports = []
-    sector_reports = {} 
-    sector_leader_counts = {} # Tracks Market Breadth
+    batch_data = yf.download(full_scan_list, period="1y", group_by='ticker', threads=True)
+    benchmark_data = yf.download("SPY", period="1y")
+    
+    prev_state = load_state()
+    current_state = prev_state.copy()
+    watchlist_reports, sector_reports = [], {}
 
     for ticker in full_scan_list:
         try:
-            # Extract ticker-specific dataframe from the multi-indexed batch
             stock_data = batch_data[ticker].dropna()
-            if stock_data.empty:
-                continue
-
-            # --- Technical Analysis Pipeline ---
-            # Now includes Relative Volume (RV) and Mansfield RS (MRS)
-            analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
-            rating_result = scoring.generate_rating(analyzed_data)
-            score = rating_result['score']
-            latest_metrics = analyzed_data.iloc[-1]
+            if stock_data.empty: continue
             
-            # --- Alert & State Management ---
-            ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
-            current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
+            analyzed = calculate_metrics(stock_data, benchmark_data)
+            rating = generate_rating(analyzed)
+            
+            # Simple Alerting Logic
+            alerts = []
+            if rating['score'] >= 80 and prev_state.get(ticker, {}).get('score', 0) < 80:
+                alerts.append("🔥 NEW LEADER")
 
-            # --- Formatting ---
-            report_line = telegram_notifier.format_ticker_report(ticker, ticker_alerts, latest_metrics, score)
-
-            # --- Intelligent Sorting ---
+            report_line = format_ticker_report(ticker, alerts, analyzed.iloc[-1], rating)
+            
             if ticker in watchlist:
-                # Primary Watchlist always gets reported
                 watchlist_reports.append(report_line)
-                watchlist_data_for_plot[ticker] = analyzed_data
-            else:
-                # S&P 500 Filtering: Only report 'Leaders' (Score >= 70) to filter noise
-                if score >= 70:
-                    sector = sector_map.get(ticker, "Other Sectors")
-                    if sector not in sector_reports:
-                        sector_reports[sector] = []
-                    sector_reports[sector].append(report_line)
-                    
-                    # Log for Momentum Summary
-                    sector_leader_counts[sector] = sector_leader_counts.get(sector, 0) + 1
+            elif rating['score'] >= 80:
+                sec = sector_map.get(ticker, "Other")
+                sector_reports[sec] = sector_reports.get(sec, "") + report_line
+            
+            current_state[ticker] = {"score": rating['score'], "price": float(analyzed.iloc[-1]['Close'])}
+        except: continue
 
-        except Exception as e:
-            # Continue processing the rest of the list even if one ticker fails
-            continue
+    # Build Final Message
+    final_msg = "🚀 **JFO MARKET INTEL**\n\n📌 **WATCHLIST**\n" + "".join(watchlist_reports)
+    final_msg += "\n📊 **SECTOR LEADERS**\n"
+    for sec, content in sector_reports.items():
+        final_msg += f"\n📂 *{sec}*\n{content}"
 
-    # 5. REPORT GENERATION & NOTIFICATION
-    print("[3/4] Compiling Clean Executive Report...")
-    final_report = "🚀 **DAILY MARKET INTELLIGENCE** 🚀\n\n"
-    
-    # Breadth Summary: Identify the strongest sectors today
-    if sector_leader_counts:
-        top_sectors = sorted(sector_leader_counts.items(), key=lambda x: x[1], reverse=True)
-        final_report += "🔥 **SECTOR MOMENTUM SUMMARY**\n"
-        for sect, count in top_sectors[:3]: # Show top 3 performing sectors
-            final_report += f"• {sect}: {count} leaders identified\n"
-        final_report += "\n" + ("━" * 15) + "\n\n"
-    
-    # Section A: Primary Watchlist
-    final_report += "📌 **PRIMARY WATCHLIST**\n"
-    if watchlist_reports:
-        final_report += "\n".join(watchlist_reports)
-    else:
-        final_report += "_No data found for watchlist symbols._"
-    
-    final_report += "\n\n" + ("━" * 15) + "\n\n"
-    
-    # Section B: Grouped S&P 500 Leaders
-    final_report += "📊 **S&P 500 SECTOR LEADERS** (Score > 70)\n"
-    if not sector_reports:
-        final_report += "_No high-scoring stocks found today._"
-    else:
-        # Sort sectors alphabetically for structured reading
-        for sector in sorted(sector_reports.keys()):
-            reports = sector_reports[sector]
-            final_report += f"\n📂 *{sector}*\n"
-            # Limit to top 5 per sector to keep message concise
-            final_report += "\n".join(reports[:5])
-            final_report += "\n"
-
-    # Save finalized state to storage
-    state_manager.save_current_state(current_full_state)
-    
-    # Dispatch through long message handler to respect Telegram character limits
-    telegram_notifier.send_long_message(final_report)
-
-    # 6. VISUALIZATION
-    # We only plot the watchlist to maintain high resolution and relevance
-    if watchlist_data_for_plot:
-        print("[4/4] Generating Watchlist Dashboards...")
-        try:
-            plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
-        except Exception as e:
-            print(f"Plotting error: {e}")
-
-    print("\nFull S&P 500 Batch Analysis Complete. Report dispatched.")
+    send_long_message(final_msg)
+    save_state(current_state)
+    print("Done.")
 
 if __name__ == "__main__":
     run_analytics_engine()
