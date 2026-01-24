@@ -5,6 +5,7 @@ import indicators
 import state_manager
 import telegram_notifier 
 import plotting 
+import scoring  # Integrated the new scoring module
 
 def load_config():
     """Loads settings and ticker list from config/config.json."""
@@ -21,7 +22,7 @@ def load_config():
 
 def get_current_quart(full_list, slice_size=25):
     """
-    Saves the current index in state.json so each run 
+    Saves the current index in state so each run 
     picks the next group of stocks from the market scan.
     """
     state = state_manager.load_previous_state()
@@ -51,46 +52,27 @@ def run_analytics_engine():
         if manual_input:
             tickers = [t.strip().upper() for t in manual_input.split() if t.strip()]
             print(f"Running Manual Cloud Prompt: {tickers}")
+            # Keep the current index where it is if running a manual prompt
             next_index = state_manager.load_previous_state().get("last_scan_index", 0)
         else:
             watchlist = config.get("watchlist", [])
             market_scan_list = config.get("market_scan", [])
             quart_tickers, next_index = get_current_quart(market_scan_list, slice_size=25)
+            # Combine watchlist (always scan) + the current rotating slice
             tickers = list(dict.fromkeys(watchlist + quart_tickers))
             print(f"Running Scheduled Scan: {len(watchlist)} priority + {len(quart_tickers)} scan.")
-        
     else:
-        # Local Interactive Mode
-        recommended_list = ["DOCN", "SE", "PATH", "CIEN", "NVDA", "LLY", "ORCL"]
-        while True:
-            print("\n" + "="*40)
-            print("STOCK ANALYTICS ENGINE - INTERACTIVE MODE")
-            print("="*40)
-            user_input = input("Selection (tickers, 'rec', 'reset', 'exit'): ").strip().lower()
-            
-            if user_input == 'exit': return
-            if user_input == 'reset':
-                config['watchlist'] = []
-                with open(os.path.join('config', 'config.json'), 'w') as f: json.dump(config, f, indent=4)
-                print("--- Watchlist reset ---"); continue
-
-            if user_input == 'rec':
-                tickers = recommended_list
-            elif user_input:
-                tickers = [t.strip().upper() for t in user_input.split() if t.strip()]
-            else:
-                tickers = config.get("watchlist", [])
-
-            if not tickers:
-                print("[!] No tickers provided.")
-                continue
-            break
+        # Local Interactive Mode (kept for your local testing)
+        tickers = config.get("watchlist", ["AAPL", "NVDA", "TSLA"])
+        next_index = 0
 
     benchmark_symbol = config.get("benchmark", "SPY")
 
-    # 2. STATE & DATA SETUP
+    # 2. STATE SETUP
+    # We load the full previous state so we can preserve data for tickers 
+    # that ARE NOT in the current scan group.
     prev_state = state_manager.load_previous_state()
-    current_full_state = {}
+    current_full_state = prev_state.copy() 
     
     if is_automated:
         current_full_state["last_scan_index"] = next_index
@@ -117,25 +99,24 @@ def run_analytics_engine():
                 continue
 
             # --- Calculation Core ---
-            # 1. Run Indicators
+            # 1. Run Indicators (Math logic)
             analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
             
-            # 2. Apply "Market Leader" Scoring (V2 New Logic)
-            last_row = analyzed_data.iloc[-1]
-            score = indicators.calculate_market_leader_score(last_row)
-            analyzed_data['Market_Leader_Score'] = score # Apply to the latest record
+            # 2. Apply "Market Leader" Scoring (V2 New Logic from scoring.py)
+            rating_result = scoring.generate_rating(analyzed_data)
+            score = rating_result['score']
             
             all_stock_data[ticker] = analyzed_data
             
-            # 3. Handle Alerts & Memory
+            # 3. Handle Alerts & Update memory for this specific ticker
             ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
             current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
 
-            # 4. Format for Telegram (Passing the score into the report)
+            # 4. Format for Telegram
             ticker_report = telegram_notifier.format_ticker_report(
                 ticker, 
                 ticker_alerts, 
-                last_row, 
+                analyzed_data.iloc[-1], 
                 score=score
             )
             all_ticker_reports.append(ticker_report)
@@ -147,8 +128,7 @@ def run_analytics_engine():
     print("\n[3/4] Saving state and sending reports...")
     state_manager.save_current_state(current_full_state)
     
-    telegram_cfg = config.get("telegram", {})
-    if telegram_cfg.get("enabled", True) and all_ticker_reports:
+    if all_ticker_reports:
         telegram_notifier.send_bundle(all_ticker_reports) 
 
     # 6. VISUALIZATION
@@ -159,7 +139,7 @@ def run_analytics_engine():
         except Exception as e:
             print(f"Plotting error: {e}")
 
-    print("\nBatch analysis complete. Rotating scanner operational.")
+    print("\nBatch analysis complete. Scanner updated.")
 
 if __name__ == "__main__":
     run_analytics_engine()
