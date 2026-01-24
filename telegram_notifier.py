@@ -13,20 +13,26 @@ def load_telegram_config():
     except Exception:
         return {}
 
-def format_ticker_report(ticker, alerts, latest, score=0):
+def format_ticker_report(ticker, alerts, latest, rating_data):
     """
     Creates a bundled, executive-friendly report for a single ticker.
-    Includes Tier Rating, Score, and Critical Events.
+    Includes TradingView links, Tier Ratings, and Volatility Guards.
     """
-    # Header & Rating Logic
-    tier = "Tier 5: Avoid 🔴"
-    if score >= 80: tier = "Tier 1: Market Leader 🏆"
-    elif score >= 60: tier = "Tier 2: Improving 📈"
-    elif score >= 40: tier = "Tier 3: Neutral ⚖️"
-    elif score >= 20: tier = "Tier 4: Lagging 📉"
+    score = rating_data['score']
+    tier = rating_data['rating']
+    metrics = rating_data['metrics']
+    is_extended = rating_data.get('is_extended', False)
+    
+    # Generate TradingView Link for instant chart access
+    tv_link = f"https://www.tradingview.com/symbols/{ticker}/"
 
-    report = f"🔍 *Ticker: {ticker}* | `{score}/100`\n"
-    report += f"🏷 *Rating: {tier}*\n"
+    # Header: Ticker is now a clickable link
+    report = f"🔍 *[{ticker}]({tv_link})* | Score: `{score}/100`\n"
+    report += f"🏷 *Rank: {tier}*\n"
+    
+    # Volatility Warning
+    if is_extended:
+        report += "⚠️ *STRETCHED: High Volatility Risk*\n"
     
     # Section 1: Major Technical Events (The "Big Hits")
     event_list = []
@@ -47,20 +53,16 @@ def format_ticker_report(ticker, alerts, latest, score=0):
     elif not event_list:
         report += "🎯 *Events:* No new technical changes.\n"
     
-    # Section 3: Technical Snapshot (Enhanced with MRS and RV)
+    # Section 3: Technical Snapshot (Multi-Timeframe & RS)
     sma200 = latest.get('SMA200', 0)
     trend = "Above SMA200" if latest['Close'] > sma200 else "Below SMA200"
-    
-    rv = latest.get('RV', 1.0)
-    mrs = latest.get('MRS', 0)
-    mrs_status = "💪 Strong" if mrs > 0 else "😴 Weak"
     
     report += (
         f"📊 *Snapshot:*\n"
         f"  • Price: ${latest['Close']:.2f} ({trend})\n"
-        f"  • Rel. Volume: {rv:.2f}x (Avg: 1.0x)\n"
-        f"  • RSI (W/M): {latest.get('RSI_Weekly', 0):.0f} / {latest.get('RSI_Monthly', 0):.0f}\n"
-        f"  • RS vs SPY: {mrs_status} ({mrs:+.1f})\n"
+        f"  • Rel. Volume: {metrics.get('rel_volume', '1.0x')}\n"
+        f"  • RS vs SPY: {metrics.get('mrs_value', 0):+.1f} (MRS)\n"
+        f"  • RSI (W/M): {metrics.get('weekly_rsi', 'N/A')} / {latest.get('RSI_Monthly', 0):.0f}\n"
     )
     return report + "------------------------------------------\n"
 
@@ -94,7 +96,7 @@ def send_long_message(message_text):
                 
                 # Remove the sent chunk and leading whitespace
                 message_text = message_text[split_at:].lstrip()
-                time.sleep(0.5) # Avoid Telegram's flood/rate limit protection
+                time.sleep(0.6) # Avoid Telegram's flood/rate limit protection
             else:
                 _execute_send(url, chat_id, message_text)
                 break
@@ -104,7 +106,8 @@ def _execute_send(url, chat_id, text):
     payload = {
         "chat_id": chat_id,
         "text": text,
-        "parse_mode": "Markdown"
+        "parse_mode": "Markdown",
+        "disable_web_page_preview": True # Keeps the chat clean from 50+ link previews
     }
     try:
         response = requests.post(url, data=payload, timeout=15)
@@ -113,30 +116,29 @@ def _execute_send(url, chat_id, text):
     except Exception as e:
         print(f"Connection Exception: {e}")
 
-def send_bundle(full_report_list):
+def send_bundle(full_report_list, regime_label="Unknown"):
     """
     Groups multiple ticker reports into a single automated dispatch.
-    Only triggers if a 'Critical Event' or 'Standard Alert' is detected.
+    Includes Market Regime headers.
     """
-    has_real_events = any(
-        ("🎯 *Standard Alerts:*" in report) or ("🌟 *Critical Events:*" in report)
-        for report in full_report_list
-    )
-
-    if not has_real_events:
-        print("No significant technical events to report. Skipping dispatch.")
+    if not full_report_list:
         return
 
     # Construct the final master message
-    message = "🔔 *JFO Technical Analytics Summary*\n"
+    message = f"🏦 **JAIN FAMILY OFFICE: DAILY INTEL**\n"
+    message += f"Regime: {regime_label}\n"
     message += "============================\n\n"
     
-    for ticker_report in full_report_list:
-        # Exclude tickers that are just 'snapshot only' with no new changes
-        if "No new technical changes" not in ticker_report:
-            message += ticker_report
+    significant_reports = [r for r in full_report_list if "No new technical changes" not in r]
+    
+    if not significant_reports:
+        print("No significant technical events to report.")
+        return
 
-    message += "\n_Status: Daily Analysis Complete_"
+    for ticker_report in significant_reports:
+        message += ticker_report
+
+    message += "\n_Status: Analysis Complete_"
     
     # Hand off to the chunking logic for delivery
     send_long_message(message)
