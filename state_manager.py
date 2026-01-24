@@ -1,5 +1,6 @@
 import json
 import os
+import pandas as pd
 
 # Path to the state file - Ensures persistence in the 'state' directory
 STATE_FILE = os.path.join('state', 'state.json')
@@ -21,6 +22,8 @@ def load_previous_state():
 def save_current_state(full_state):
     """Saves current technical values for next run comparison."""
     try:
+        # Ensure directory exists before saving
+        os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
         with open(STATE_FILE, 'w') as f:
             json.dump(full_state, f, indent=4)
     except Exception as e:
@@ -28,70 +31,89 @@ def save_current_state(full_state):
 
 def get_ticker_alerts(ticker, current_data, previous_state):
     """
-    Compares previous vs current values to detect technical events.
-    Returns a list of alert messages for the ticker based on state transitions.
+    Detects critical transitions: Stage changes, RS breakouts, and Trend shifts.
+    Compares current metrics against the saved state to trigger 'new' alerts only.
     """
     alerts = []
     
-    # Get current values (the very last row of analyzed data)
+    # Safety Check: Get the very last row of analyzed data
+    if current_data is None or current_data.empty:
+        return alerts
+        
     latest = current_data.iloc[-1]
     
     # Get previous values from state (if they exist)
     prev = previous_state.get(ticker, {})
     
     if not prev:
-        # Avoid flooding Telegram on the very first run for a new ticker
-        return ["Initial data recorded. Monitoring for changes starting next run."]
+        # Avoid flooding on the first-ever run for a ticker
+        return ["✨ Initial data recorded. Monitoring for transitions."]
 
-    # --- 1. Price vs SMA Crossings ---
-    # Check SMA200 (Long-term Institutional Trend)
-    if latest['Close'] > latest['SMA200'] and prev.get('close', 0) <= prev.get('sma200', 0):
-        alerts.append(f"🚀 Price crossed ABOVE SMA200 (${latest['SMA200']:.2f})")
-    elif latest['Close'] < latest['SMA200'] and prev.get('close', 0) >= prev.get('sma200', 0):
-        alerts.append(f"⚠️ Price crossed BELOW SMA200 (${latest['SMA200']:.2f})")
-
-    # Check SMA50 (Medium-term Trend)
-    if latest['Close'] > latest['SMA50'] and prev.get('close', 0) <= prev.get('sma50', 0):
-        alerts.append(f"⚡ Price crossed ABOVE SMA50 (${latest['SMA50']:.2f})")
-    elif latest['Close'] < latest['SMA50'] and prev.get('close', 0) >= prev.get('sma50', 0):
-        alerts.append(f"📉 Price crossed BELOW SMA50 (${latest['SMA50']:.2f})")
-
-    # --- 2. Weekly RSI Momentum ---
-    # Bullish Cross: Above 40 (Trend Shift)
-    if latest['RSI_Weekly'] >= 40 and prev.get('rsi_weekly', 0) < 40:
-        alerts.append(f"📈 Weekly RSI reclaimed 40 (Bullish Momentum)")
-    elif latest['RSI_Weekly'] < 40 and prev.get('rsi_weekly', 0) >= 40:
-        alerts.append(f"📉 Weekly RSI dropped below 40 (Bearish Shift)")
-
-    # --- 3. Monthly RSI Momentum ---
-    if latest['RSI_Monthly'] >= 40 and prev.get('rsi_monthly', 0) < 40:
-        alerts.append(f"🌟 Monthly RSI improved above 40 (Now: {latest['RSI_Monthly']:.1f})")
-
-    # --- 4. 52-Week High Breakouts ---
-    if latest['Close'] >= latest['52W_High'] and latest['Close'] > prev.get('52w_high', 0):
-        alerts.append(f"🔥 NEW 52-Week High reached at ${latest['Close']:.2f}")
+    # --- 1. Stage 2 Transition (The Stan Weinstein Methodology) ---
+    is_stage_2 = bool(latest['Close'] > latest['SMA50'] > latest['SMA200'])
+    was_stage_2 = prev.get('is_stage_2', False)
     
-    # Check for 52-Week Lows if available
-    if '52W_Low' in latest:
-        if latest['Close'] <= latest['52W_Low'] and latest['Close'] < prev.get('52w_low', 999999):
-            alerts.append(f"🧊 NEW 52-Week Low reached at ${latest['Close']:.2f}")
+    if is_stage_2 and not was_stage_2:
+        alerts.append("🚀 ENTERED STAGE 2: Perfect Trend Alignment (Bullish)")
+    elif not is_stage_2 and was_stage_2:
+        alerts.append("⚠️ EXITED STAGE 2: Trend structure broken")
+
+    # --- 2. Mansfield Relative Strength (MRS) Breakout ---
+    # Captures the exact moment a stock starts outperforming the S&P 500
+    mrs = latest.get('MRS', 0)
+    prev_mrs = prev.get('mrs', 0)
+    if mrs > 0 and prev_mrs <= 0:
+        alerts.append("⚡ RS BREAKOUT: Stock is now leading the market")
+    elif mrs < 0 and prev_mrs >= 0:
+        alerts.append("📉 RS BREAKDOWN: Stock is now lagging the market")
+
+    # --- 3. Institutional Volume Spikes ---
+    rv = latest.get('RV', 1.0)
+    if rv >= 2.0: # 2x the 20-day average volume
+        alerts.append(f"📊 VOLUME SPIKE: {rv:.1f}x normal volume (Institutional Buy)")
+
+    # --- 4. Price vs SMA Crossings ---
+    # Long-term Trend (SMA200)
+    if latest['Close'] > latest['SMA200'] and prev.get('close', 0) <= prev.get('sma200', 0):
+        alerts.append(f"🚀 Crossed ABOVE SMA200 (${latest['SMA200']:.2f})")
+    elif latest['Close'] < latest['SMA200'] and prev.get('close', 0) >= prev.get('sma200', 0):
+        alerts.append(f"🔴 Crossed BELOW SMA200 (${latest['SMA200']:.2f})")
+
+    # Medium-term Trend (SMA50)
+    if latest['Close'] > latest['SMA50'] and prev.get('close', 0) <= prev.get('sma50', 0):
+        alerts.append(f"⚡ Crossed ABOVE SMA50 (${latest['SMA50']:.2f})")
+
+    # --- 5. Momentum Shifts (RSI) ---
+    # Reclaiming the 50-midline is a sign of renewed strength
+    if latest['RSI_Weekly'] >= 50 and prev.get('rsi_weekly', 0) < 50:
+        alerts.append("📈 Weekly RSI reclaimed 50 (Positive Momentum)")
+
+    # --- 6. 52-Week High Breakouts ---
+    # Using a 252-day window for high detection
+    rolling_high = current_data['Close'].rolling(window=252, min_periods=1).max().iloc[-1]
+    if latest['Close'] >= rolling_high and latest['Close'] > prev.get('close', 0):
+         alerts.append(f"🔥 BLUE SKY: New 52-Week High at ${latest['Close']:.2f}")
 
     return alerts
 
 def update_ticker_state(ticker, analyzed_data, current_full_state):
     """
-    Updates the dictionary with current values to be saved to state.json.
+    Populates the state dictionary with current values for JSON persistence.
+    Converts all NumPy/Pandas types to standard Python types for JSON compatibility.
     """
+    if analyzed_data is None or analyzed_data.empty:
+        return current_full_state
+        
     latest = analyzed_data.iloc[-1]
     
-    # Store only what is necessary for the next comparison
+    # Store only what is required for comparison logic in the next run
     current_full_state[ticker] = {
         "close": float(latest['Close']),
         "sma200": float(latest['SMA200']),
         "sma50": float(latest['SMA50']),
-        "rsi_weekly": float(latest['RSI_Weekly']) if latest['RSI_Weekly'] is not None else 0,
-        "rsi_monthly": float(latest['RSI_Monthly']) if latest['RSI_Monthly'] is not None else 0,
-        "52w_high": float(latest['52W_High']),
-        "52w_low": float(latest.get('52W_Low', 0))
+        "rsi_weekly": float(latest['RSI_Weekly']) if pd.notnull(latest['RSI_Weekly']) else 50.0,
+        "mrs": float(latest.get('MRS', 0)),
+        "is_stage_2": bool(latest['Close'] > latest['SMA50'] > latest['SMA200']),
+        "rv": float(latest.get('RV', 1.0))
     }
     return current_full_state
