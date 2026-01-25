@@ -33,3 +33,6 @@ An automated institutional-grade market scanner and alerting system. This engine
 Ensure you have Python 3.9+ installed, then run:
 ```bash
 pip install -r requirements.txt
+
+
+
