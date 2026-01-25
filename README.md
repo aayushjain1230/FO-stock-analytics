@@ -1,53 +1,35 @@
-🏦 JFO Market Intelligence Engine v2
-An institutional-grade market scanner that identifies Tier 1 Market Leaders using the Mansfield Relative Strength (MRS) and Stan Weinstein Stage Analysis methodologies. It operates automatically via GitHub Actions and sends executive-level alerts directly to Telegram.
+# 📈 Jain Family Office: Market Intelligence Engine
 
-🚀 Key Features
-Stage 2 Detection: Identifies the precise moment a stock enters a long-term bullish uptrend.
+An automated institutional-grade market scanner and alerting system. This engine monitors your personal watchlist and the S&P 500 sectors, generating technical analysis reports and visual dashboards directly to Telegram.
 
-Relative Strength (MRS): Compares every stock against the S&P 500 (SPY) to find true outperformance.
+---
 
-Institutional Volume: Detects "Big Money" footprints by scanning for significant relative volume spikes.
+## 🚀 Key Features
 
-Volatility Guard: A built-in safety mechanism that penalizes over-extended stocks to prevent "buying the top."
+* **Dual-Layer Scanning:** Tracks your custom `watchlist.json` + scans the entire S&P 500 for momentum leaders and laggards.
+* **Smart Alerts:** Only notifies you via Telegram when data actually changes (MD5 Fingerprinting).
+* **Executive Dashboards:** Generates high-resolution multi-panel charts of your entire watchlist vs. the S&P 500 benchmark.
+* **Market Gatekeeper:** Automatically respects NYSE market hours and holidays to save on compute minutes.
+* **GitHub Actions Ready:** Fully automated via cron schedules—no server required.
 
-Smart Alerts: State-persistent memory ensures you only get notified of new technical events (no spam).
+---
 
-📁 Project Structure
-main.py: The central controller that manages the workflow.
+## 📂 Project Structure
 
-indicators.py: The "Brain"—calculates all technical math and Mansfield RS.
+| File / Folder | Purpose |
+| :--- | :--- |
+| `main.py` | The central brain; handles logic, orchestration, and scheduling. |
+| `watchlist.json` | Persistent list of your favorite stock tickers. |
+| `plots/` | Stores generated PNG dashboards and technical charts. |
+| `state/` | Stores historical data and report hashes for deduplication. |
+| `indicators.py` | TA logic (RSI, Moving Averages, RS Line). |
+| `telegram_notifier.py` | Handles message bundling and image uploads to Telegram. |
 
-scoring.py: The "Judge"—ranks stocks from Tier 1 (Leader) to Tier 5 (Avoid).
+---
 
-state_manager.py: The "Memory"—tracks previous data to detect trend crossovers.
+## 🛠 Setup & Installation
 
-telegram_notifier.py: The "Messenger"—formats and dispatches alerts with TradingView links.
-
-plotting.py: The "Artist"—generates high-resolution technical dashboards.
-
-🛠 Setup & Installation
-Clone the Repository:
-
-Bash
-git clone https://github.com/yourusername/jfo-engine.git
-cd jfo-engine
-Install Requirements:
-
-Bash
+### 1. Requirements
+Ensure you have Python 3.9+ installed, then run:
+```bash
 pip install -r requirements.txt
-Configure Credentials: Create a config/config.json file:
-
-JSON
-{
-  "telegram": {
-    "token": "YOUR_BOT_TOKEN",
-    "chat_id": "YOUR_CHAT_ID"
-  },
-  "watchlist": ["AAPL", "NVDA", "TSLA"],
-  "benchmark": "SPY"
-}
-🤖 Automation
-The engine is configured to run via GitHub Actions every 30 minutes during market hours. It automatically checks if the NYSE is open before executing to save processing minutes.
-
-⚖️ Disclaimer
-This software is for educational and technical analysis purposes only. It does not constitute financial advice. Trading involves significant risk. Always perform your own due diligence before making investment decisions.
