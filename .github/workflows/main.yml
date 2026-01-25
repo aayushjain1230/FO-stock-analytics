@@ -92,3 +92,10 @@ jobs:
           -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
           -d text="⚠️ **FO Engine Alert**: The stock scan workflow has failed. Please check the GitHub Actions logs." \
           -d parse_mode="Markdown"
+      - name: Save Watchlist Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add watchlist.json
+        git commit -m "Update watchlist from Action" || echo "No changes to commit"
+        git push
