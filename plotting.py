@@ -1,5 +1,5 @@
 import matplotlib
-matplotlib.use('Agg') # Required for running on GitHub Actions (non-interactive)
+matplotlib.use('Agg') # Required for running on GitHub Actions
 import matplotlib.pyplot as plt
 import pandas as pd
 import math
@@ -13,7 +13,6 @@ if not os.path.exists('plots'):
 def create_chart(ticker, df, benchmark_df, score=None):
     """
     Detailed single-stock chart with SMAs, Benchmark overlay, and Market Leader Score.
-    Useful for deep-dives into a specific ticker.
     """
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True, 
                                    gridspec_kw={'height_ratios': [3, 1]})
@@ -28,11 +27,9 @@ def create_chart(ticker, df, benchmark_df, score=None):
     bench_norm = (benchmark_df['Close'] / benchmark_df['Close'].iloc[0]) * df['Close'].iloc[0]
     ax1.plot(df.index, bench_norm, color='gray', label='SPY (Bench)', alpha=0.3, linewidth=1)
     
-    # 52-Week High Reference
     if '52W_High' in df.columns:
         ax1.axhline(y=df['52W_High'].iloc[-1], color='green', linestyle=':', alpha=0.5, label='52W High')
 
-    # Visualizing the "Market Leader" Score (V2.0 Enhancement)
     if score is not None:
         color = 'green' if score >= 70 else 'orange' if score >= 40 else 'red'
         ax1.text(0.02, 0.95, f'JFO Score: {score}/100', transform=ax1.transAxes, 
@@ -56,78 +53,81 @@ def create_chart(ticker, df, benchmark_df, score=None):
         ax2.grid(True, alpha=0.2)
 
     plt.tight_layout()
-    
-    # SAVE THE CHART
     save_path = os.path.join('plots', f'{ticker}_analysis.png')
     plt.savefig(save_path, dpi=150)
-    print(f"Single chart saved to {save_path}")
     plt.close()
 
-def create_comparison_chart(all_stock_data, benchmark_df, max_tickers=4):
+def create_comparison_chart(all_stock_data, benchmark_df):
     """
-    Executive Dashboard - Professional Way:
-    - Top: All stocks cumulative returns vs Benchmark %
-    - Bottom: Individual blocks showing Price + SMAs vs Relative Strength
+    Executive Dashboard showing ALL watchlist stocks.
+    - Top: Cumulative returns % for every ticker vs SPY.
+    - Subplots: Price and RS blocks for every ticker.
     """
     if not all_stock_data:
         print("No data available for comparison.")
         return
 
-    tickers = list(all_stock_data.keys())[:max_tickers]
+    # Remove the limit - get all tickers from the provided dictionary
+    tickers = list(all_stock_data.keys())
     num_stocks = len(tickers)
     
-    # Grid Setup: 1 row for main chart, then 1 row per stock
-    fig = plt.figure(figsize=(15, 5 + (4 * num_stocks)))
+    # Dynamically scale the height of the figure based on the number of stocks
+    # Base height (6) + 4 inches per ticker
+    fig_height = 6 + (4 * num_stocks)
+    fig = plt.figure(figsize=(15, fig_height))
+    
+    # Grid Setup: 1 row for main chart, then 1 row per stock in the list
     gs = fig.add_gridspec(num_stocks + 1, 2, height_ratios=[2] + [1.2]*num_stocks)
     
     # --- 1. TOP PANEL: CUMULATIVE RETURNS % (Full Width) ---
     ax_main = fig.add_subplot(gs[0, :])
     bench_returns = (benchmark_df['Close'] / benchmark_df['Close'].iloc[0] - 1) * 100
-    ax_main.plot(bench_returns.index, bench_returns, color='black', linewidth=2.5, label='S&P 500 (SPY)', zorder=10)
+    ax_main.plot(bench_returns.index, bench_returns, color='black', linewidth=3, label='S&P 500 (SPY)', zorder=10)
 
     for ticker in tickers:
         df = all_stock_data[ticker]
         stock_returns = (df['Close'] / df['Close'].iloc[0] - 1) * 100
-        ax_main.plot(stock_returns.index, stock_returns, label=f'{ticker}', alpha=0.7)
+        ax_main.plot(stock_returns.index, stock_returns, label=f'{ticker}', alpha=0.8, linewidth=1.5)
 
-    ax_main.set_title("Watchlist Performance vs Benchmark (Cumulative %)", fontsize=16, fontweight='bold')
+    ax_main.set_title(f"Watchlist Performance Comparison ({num_stocks} Stocks)", fontsize=18, fontweight='bold')
     ax_main.set_ylabel("Return %")
-    ax_main.legend(loc='upper left', ncol=3, fontsize=10)
+    ax_main.legend(loc='upper left', ncol=min(num_stocks, 5), fontsize=10)
     ax_main.grid(True, alpha=0.3)
 
-    # --- 2. INDIVIDUAL ANALYSIS BLOCKS ---
+    # --- 2. INDIVIDUAL ANALYSIS BLOCKS FOR ALL TICKERS ---
     for i, ticker in enumerate(tickers):
         df = all_stock_data[ticker]
         row_idx = i + 1
         
         # COLUMN A: Price and SMAs
         ax_price = fig.add_subplot(gs[row_idx, 0])
-        ax_price.plot(df.index, df['Close'], color='black', linewidth=1, label='Price')
-        ax_price.plot(df.index, df['SMA20'], color='cyan', alpha=0.5, label='20 SMA', linestyle='--')
-        ax_price.plot(df.index, df['SMA50'], color='orange', alpha=0.7, label='50 SMA')
-        ax_price.plot(df.index, df['SMA200'], color='red', linewidth=1.2, label='200 SMA')
+        ax_price.plot(df.index, df['Close'], color='black', linewidth=1.2, label='Price')
+        ax_price.plot(df.index, df['SMA20'], color='cyan', alpha=0.6, label='20 SMA', linestyle='--')
+        ax_price.plot(df.index, df['SMA50'], color='orange', alpha=0.8, label='50 SMA')
+        ax_price.plot(df.index, df['SMA200'], color='red', linewidth=1.5, label='200 SMA')
         
-        ax_price.set_title(f"{ticker}: Price Trend (SMAs)", fontsize=11, fontweight='bold')
-        ax_price.legend(fontsize=8, loc='best')
+        ax_price.set_title(f"{ticker}: Price Trend", fontsize=12, fontweight='bold')
+        ax_price.legend(fontsize=8, loc='upper left', ncol=2)
         ax_price.grid(True, alpha=0.1)
-        ax_price.tick_params(axis='x', rotation=20, labelsize=8)
+        ax_price.tick_params(axis='x', rotation=15, labelsize=8)
 
         # COLUMN B: Relative Strength
         ax_rs = fig.add_subplot(gs[row_idx, 1])
         if 'RS_Line' in df.columns:
-            ax_rs.plot(df.index, df['RS_Line'], color='purple', label='RS Line')
-            ax_rs.plot(df.index, df['RS_SMA20'], color='gray', linestyle='--', alpha=0.6)
-            ax_rs.fill_between(df.index, df['RS_Line'], df['RS_SMA20'], 
-                               where=(df['RS_Line'] >= df['RS_SMA20']), color='green', alpha=0.1)
+            ax_rs.plot(df.index, df['RS_Line'], color='purple', label='RS Line', linewidth=1.2)
+            if 'RS_SMA20' in df.columns:
+                ax_rs.plot(df.index, df['RS_SMA20'], color='gray', linestyle='--', alpha=0.6)
+                ax_rs.fill_between(df.index, df['RS_Line'], df['RS_SMA20'], 
+                                   where=(df['RS_Line'] >= df['RS_SMA20']), color='green', alpha=0.1)
             
-            ax_rs.set_title(f"{ticker}: RS vs SPY", fontsize=11, fontweight='bold')
+            ax_rs.set_title(f"{ticker}: RS vs SPY", fontsize=12, fontweight='bold')
             ax_rs.grid(True, alpha=0.1)
-            ax_rs.tick_params(axis='x', rotation=20, labelsize=8)
+            ax_rs.tick_params(axis='x', rotation=15, labelsize=8)
 
     plt.tight_layout()
 
     # SAVE THE COMPARISON DASHBOARD
     save_path = os.path.join('plots', 'executive_dashboard.png')
     plt.savefig(save_path, dpi=150)
-    print(f"Executive dashboard saved to {save_path}")
+    print(f"Full Executive dashboard ({num_stocks} stocks) saved to {save_path}")
     plt.close()
