@@ -3,6 +3,7 @@ import json
 import argparse
 import sys
 import requests
+import hashlib
 import pandas as pd
 import pandas_market_calendars as mcal
 import pytz
@@ -20,9 +21,11 @@ import scoring
 # CONFIGURATION & CONSTANTS
 # ==========================================
 WATCHLIST_FILE = 'watchlist.json'
+STATE_DIR = 'state'
+HASH_FILE = os.path.join(STATE_DIR, 'last_report_hash.json')
 
 # ==========================================
-# PART 1: WATCHLIST MANAGEMENT (New Logic)
+# PART 1: WATCHLIST MANAGEMENT
 # ==========================================
 
 def load_watchlist_data():
@@ -77,7 +80,7 @@ def manage_cli_updates(add_list=None, remove_list=None):
         print("No changes made to the watchlist.")
 
 # ==========================================
-# PART 2: EXISTING ANALYTICS UTILITIES
+# PART 2: UTILITIES & DEDUPLICATION
 # ==========================================
 
 def load_config():
@@ -91,7 +94,7 @@ def load_config():
         return None
 
 def is_market_open():
-    """Gatekeeper: Checks if NYSE is currently open using real-world holiday calendars."""
+    """Gatekeeper: Checks if NYSE is currently open."""
     nyse = mcal.get_calendar('NYSE')
     now_utc = datetime.now(pytz.utc)
     
@@ -104,15 +107,33 @@ def is_market_open():
     
     return market_open <= now_utc <= market_close
 
+def should_send_report(content_to_hash):
+    """Checks if the report content is identical to the last one sent."""
+    current_hash = hashlib.md5(content_to_hash.encode('utf-8')).hexdigest()
+    
+    if not os.path.exists(STATE_DIR):
+        os.makedirs(STATE_DIR)
+
+    if os.path.exists(HASH_FILE):
+        with open(HASH_FILE, 'r') as f:
+            try:
+                last_hash = json.load(f).get('hash')
+                if last_hash == current_hash:
+                    return False
+            except:
+                pass
+
+    # Save new hash
+    with open(HASH_FILE, 'w') as f:
+        json.dump({'hash': current_hash}, f)
+    return True
+
 def get_sp500_sectors():
     try:
-        # We must set a User-Agent header to avoid the 403 Forbidden error
         url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        
         response = requests.get(url, headers=headers)
         table = pd.read_html(response.text)[0]
-        
         table['Symbol'] = table['Symbol'].str.replace('.', '-', regex=False)
         return dict(zip(table['Symbol'], table['GICS Sector']))
     except Exception as e:
@@ -127,28 +148,19 @@ def run_analytics_engine():
     print("\n--- Jain Family Office: Market Intelligence Engine v2 ---")
     
     # 1. MARKET GATEKEEPER
-    # Checks if NYSE is open. (Comment out the 'return' for weekend testing)
     if not is_market_open():
         print("Market is closed. Script terminating to save compute.")
-        # return  # <--- Uncomment this for production to prevent running when market is closed
+        # return 
 
     # 2. INITIALIZATION
     config = load_config()
     if not config: return
     
-    # UPDATED: Load watchlist from the JSON file logic instead of config.json
     watchlist = load_watchlist_data()
-    
-    if not watchlist:
-        print("Warning: Watchlist is empty. Please add stocks using --add.")
-    
     benchmark_symbol = config.get("benchmark", "SPY")
-    
-    # Fetch S&P 500 metadata
     sector_map = get_sp500_sectors()
     all_sp500_tickers = list(sector_map.keys())
     
-    # Check for manual override from GitHub Action Inputs
     manual_input = os.getenv('MANUAL_TICKERS', '')
     if manual_input:
         full_scan_list = [t.strip().upper() for t in manual_input.split(',')]
@@ -169,13 +181,12 @@ def run_analytics_engine():
         print("Critical Error: Benchmark data missing.")
         return
 
-    # Determine Market Regime via indicators.py
     regime_label = indicators.get_market_regime_label(benchmark_data)
 
     # 4. PROCESSING LOGIC
     print("[2/4] Analyzing and Grouping Stocks...")
     prev_state = state_manager.load_previous_state()
-    current_full_state = {} # We will rebuild the state each run
+    current_full_state = {} 
     
     watchlist_data_for_plot = {}
     watchlist_reports = []
@@ -184,9 +195,7 @@ def run_analytics_engine():
 
     for ticker in full_scan_list:
         try:
-            # Extract individual ticker data from batch
             if len(full_scan_list) > 1:
-                # Handle MultiIndex column issue if it arises
                 try:
                     stock_data = batch_data[ticker].dropna()
                 except KeyError:
@@ -196,25 +205,17 @@ def run_analytics_engine():
 
             if stock_data.empty: continue
 
-            # --- Technical Analysis (indicators.py) ---
             analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
-            
-            # --- Scoring (scoring.py) ---
             rating_result = scoring.generate_rating(analyzed_data)
-            
-            # --- Alerting (state_manager.py) ---
             ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
             current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
 
-            # --- Formatting (telegram_notifier.py) ---
             report_line = telegram_notifier.format_ticker_report(ticker, ticker_alerts, analyzed_data.iloc[-1], rating_result)
 
-            # --- Sorting Logic ---
             if ticker in watchlist:
                 watchlist_reports.append(report_line)
                 watchlist_data_for_plot[ticker] = analyzed_data
             else:
-                # S&P 500 Leaders Filter (Only Tier 1 Leaders, Score >= 80)
                 if rating_result['score'] >= 80:
                     sector = sector_map.get(ticker, "Other Sectors")
                     if sector not in sector_reports:
@@ -223,20 +224,13 @@ def run_analytics_engine():
                     sector_leader_counts[sector] = sector_leader_counts.get(sector, 0) + 1
 
         except Exception as e:
-            # print(f"Error processing {ticker}: {e}") # Optional: Uncomment for debugging
             continue
 
-    # 5. REPORT GENERATION & NOTIFICATION
+    # 5. DEDUPLICATION & NOTIFICATION
     print("[3/4] Compiling Executive Report...")
     
-    # Watchlist Segment
-    watchlist_segment = "📌 **PRIMARY WATCHLIST**\n"
-    if watchlist_reports:
-        watchlist_segment += "".join(watchlist_reports)
-    else:
-        watchlist_segment += "_No active data for watchlist._\n"
-
-    # Sector Leaders Segment
+    watchlist_segment = "📌 **PRIMARY WATCHLIST**\n" + ("".join(watchlist_reports) if watchlist_reports else "_No active data._\n")
+    
     sector_segment = "📊 **S&P 500 MOMENTUM LEADERS**\n"
     if not sector_reports:
         sector_segment += "_No Tier 1 Leaders found today._"
@@ -244,16 +238,21 @@ def run_analytics_engine():
         sorted_sectors = sorted(sector_leader_counts.items(), key=lambda x: x[1], reverse=True)
         for sector, count in sorted_sectors:
             sector_segment += f"\n📂 *{sector}* ({count})\n"
-            sector_segment += "".join(sector_reports[sector][:3]) # Top 3 per sector
+            sector_segment += "".join(sector_reports[sector][:3])
 
-    # Dispatch to Telegram (telegram_notifier.py)
-    final_payload = [watchlist_segment, sector_segment]
-    telegram_notifier.send_bundle(final_payload, regime_label)
+    # Combine content to check for changes (Fingerprinting)
+    full_report_body = watchlist_segment + sector_segment
+    
+    if should_send_report(full_report_body):
+        telegram_notifier.send_bundle([watchlist_segment, sector_segment], regime_label)
+        print("Notification sent to Telegram.")
+    else:
+        print("Data unchanged since last run. Skipping Telegram notification.")
 
     # Save finalized state
     state_manager.save_current_state(current_full_state)
     
-    # 6. VISUALIZATION (plotting.py)
+    # 6. VISUALIZATION
     if watchlist_data_for_plot:
         print("[4/4] Generating Dashboards...")
         try:
@@ -264,23 +263,18 @@ def run_analytics_engine():
     print("\nJFO Engine: Analysis Complete.")
 
 # ==========================================
-# MAIN EXECUTION ENTRY POINT
+# ENTRY POINT
 # ==========================================
 
 def main():
     parser = argparse.ArgumentParser(description="JFO Market Intelligence Engine")
-    
-    # Arguments for Watchlist Management
-    parser.add_argument('--add', nargs='+', help="Add tickers to watchlist (e.g. --add AAPL MSFT)")
-    parser.add_argument('--remove', nargs='+', help="Remove tickers from watchlist (e.g. --remove TSLA)")
-    parser.add_argument('--list', action='store_true', help="Display current watchlist")
-    
-    # Argument for Analytics
-    parser.add_argument('--analyze', action='store_true', help="Run the full analytics engine")
+    parser.add_argument('--add', nargs='+', help="Add tickers")
+    parser.add_argument('--remove', nargs='+', help="Remove tickers")
+    parser.add_argument('--list', action='store_true', help="List watchlist")
+    parser.add_argument('--analyze', action='store_true', help="Run engine")
 
     args = parser.parse_args()
 
-    # Priority 1: Management Commands
     if args.add or args.remove:
         manage_cli_updates(add_list=args.add, remove_list=args.remove)
     
@@ -288,8 +282,6 @@ def main():
         wl = load_watchlist_data()
         print(f"Current Watchlist ({len(wl)}): {', '.join(wl)}")
 
-    # Priority 2: Analytics
-    # Run analytics if --analyze is passed, OR if NO arguments are passed (default behavior)
     if args.analyze or not any(vars(args).values()):
         run_analytics_engine()
 
