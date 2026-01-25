@@ -123,7 +123,7 @@ def should_send_report(content_to_hash):
             except:
                 pass
 
-    # Save new hash
+    # Save new hash for the next comparison
     with open(HASH_FILE, 'w') as f:
         json.dump({'hash': current_hash}, f)
     return True
@@ -184,14 +184,14 @@ def run_analytics_engine():
     regime_label = indicators.get_market_regime_label(benchmark_data)
 
     # 4. PROCESSING LOGIC
-    print("[2/4] Analyzing and Grouping Stocks...")
+    print("[2/4] Analyzing Leaders and Drops...")
     prev_state = state_manager.load_previous_state()
     current_full_state = {} 
     
     watchlist_data_for_plot = {}
     watchlist_reports = []
-    sector_reports = {} 
-    sector_leader_counts = {} 
+    leader_reports = {} 
+    laggard_reports = {} # Stores Market Drops (Weakness)
 
     for ticker in full_scan_list:
         try:
@@ -205,51 +205,63 @@ def run_analytics_engine():
 
             if stock_data.empty: continue
 
+            # TA and Scoring
             analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
             rating_result = scoring.generate_rating(analyzed_data)
             ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
             current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
 
             report_line = telegram_notifier.format_ticker_report(ticker, ticker_alerts, analyzed_data.iloc[-1], rating_result)
+            sector = sector_map.get(ticker, "Other Sectors")
 
+            # Sorting into Groups
             if ticker in watchlist:
                 watchlist_reports.append(report_line)
                 watchlist_data_for_plot[ticker] = analyzed_data
-            else:
-                if rating_result['score'] >= 80:
-                    sector = sector_map.get(ticker, "Other Sectors")
-                    if sector not in sector_reports:
-                        sector_reports[sector] = []
-                    sector_reports[sector].append(report_line)
-                    sector_leader_counts[sector] = sector_leader_counts.get(sector, 0) + 1
+            
+            # S&P 500 Scanning Logic
+            if rating_result['score'] >= 80:
+                if sector not in leader_reports: leader_reports[sector] = []
+                leader_reports[sector].append(report_line)
+            elif rating_result['score'] <= 30:
+                if sector not in laggard_reports: laggard_reports[sector] = []
+                laggard_reports[sector].append(report_line)
 
-        except Exception as e:
+        except Exception:
             continue
 
     # 5. DEDUPLICATION & NOTIFICATION
     print("[3/4] Compiling Executive Report...")
     
+    # Section A: Watchlist
     watchlist_segment = "📌 **PRIMARY WATCHLIST**\n" + ("".join(watchlist_reports) if watchlist_reports else "_No active data._\n")
     
-    sector_segment = "📊 **S&P 500 MOMENTUM LEADERS**\n"
-    if not sector_reports:
-        sector_segment += "_No Tier 1 Leaders found today._"
+    # Section B: Leaders
+    leader_segment = "📈 **S&P 500 MOMENTUM LEADERS**\n"
+    if not leader_reports:
+        leader_segment += "_No Tier 1 Leaders found today._"
     else:
-        sorted_sectors = sorted(sector_leader_counts.items(), key=lambda x: x[1], reverse=True)
-        for sector, count in sorted_sectors:
-            sector_segment += f"\n📂 *{sector}* ({count})\n"
-            sector_segment += "".join(sector_reports[sector][:3])
+        for sec in sorted(leader_reports.keys()):
+            leader_segment += f"\n📂 *{sec}*\n" + "".join(leader_reports[sec][:3])
 
-    # Combine content to check for changes (Fingerprinting)
-    full_report_body = watchlist_segment + sector_segment
+    # Section C: Drops (New)
+    drop_segment = "📉 **S&P 500 MARKET DROPS (WEAKNESS)**\n"
+    if not laggard_reports:
+        drop_segment += "_No significant drops found today._"
+    else:
+        for sec in sorted(laggard_reports.keys()):
+            drop_segment += f"\n📂 *{sec}*\n" + "".join(laggard_reports[sec][:3])
+
+    # Combine all text to fingerprint the run
+    full_report_body = watchlist_segment + leader_segment + drop_segment
     
     if should_send_report(full_report_body):
-        telegram_notifier.send_bundle([watchlist_segment, sector_segment], regime_label)
-        print("Notification sent to Telegram.")
+        telegram_notifier.send_bundle([watchlist_segment, leader_segment, drop_segment], regime_label)
+        print("New data detected. Notification sent to Telegram.")
     else:
-        print("Data unchanged since last run. Skipping Telegram notification.")
+        print("Data identical to last run. Staying silent to avoid spam.")
 
-    # Save finalized state
+    # Save finalized state for alert tracking
     state_manager.save_current_state(current_full_state)
     
     # 6. VISUALIZATION
@@ -268,10 +280,10 @@ def run_analytics_engine():
 
 def main():
     parser = argparse.ArgumentParser(description="JFO Market Intelligence Engine")
-    parser.add_argument('--add', nargs='+', help="Add tickers")
-    parser.add_argument('--remove', nargs='+', help="Remove tickers")
-    parser.add_argument('--list', action='store_true', help="List watchlist")
-    parser.add_argument('--analyze', action='store_true', help="Run engine")
+    parser.add_argument('--add', nargs='+', help="Add tickers to watchlist")
+    parser.add_argument('--remove', nargs='+', help="Remove tickers from watchlist")
+    parser.add_argument('--list', action='store_true', help="List current watchlist")
+    parser.add_argument('--analyze', action='store_true', help="Run the full engine")
 
     args = parser.parse_args()
 
@@ -282,6 +294,7 @@ def main():
         wl = load_watchlist_data()
         print(f"Current Watchlist ({len(wl)}): {', '.join(wl)}")
 
+    # Default to analyzing if no management args provided
     if args.analyze or not any(vars(args).values()):
         run_analytics_engine()
 
