@@ -2,14 +2,22 @@ name: Run Stock Engine
 
 on:
   schedule:
-    # Runs every 15 minutes, Monday-Friday (UTC time)
-    # Note: 14:30 - 21:00 UTC covers the standard NYSE trading day
+    # Runs every 30 minutes, Monday-Friday (UTC time) during NYSE hours
     - cron: '*/30 13-21 * * 1-5'
   workflow_dispatch:
-    # Manual "Prompt" button for custom scans
+    # Manual interface for custom actions and watchlist management
     inputs:
+      action:
+        description: 'Choose Action'
+        required: true
+        default: 'Run Stocks'
+        type: choice
+        options:
+          - 'Run Stocks'
+          - 'Add to Watchlist'
+          - 'Overwrite Watchlist'
       manual_tickers:
-        description: 'Enter Tickers (Leave blank for config list)'
+        description: 'Enter Tickers (comma separated, e.g., AAPL, TSLA)'
         required: false
         default: ''
 
@@ -17,7 +25,7 @@ jobs:
   run-analytics:
     runs-on: ubuntu-latest
     
-    # Permissions required to push state.json back to your repo
+    # Permissions required to push state.json and watchlist.json back to your repo
     permissions:
       contents: write
 
@@ -25,50 +33,62 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Use the default GITHUB_TOKEN for workflow permissions
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip' # Speeds up subsequent runs by caching libraries
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Execute script
+      - name: Update Watchlist (if requested)
+        env:
+          INPUT_ACTION: ${{ github.event.inputs.action }}
+          INPUT_STOCKS: ${{ github.event.inputs.manual_tickers }}
+        run: |
+          # This runs the logic to update your watchlist.json before the main engine starts
+          python manage_watchlist.py
+
+      - name: Execute Stock Engine
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # Passes manual inputs to Python's os.getenv('MANUAL_TICKERS')
+          # The engine will now look at watchlist.json updated in the previous step
           MANUAL_TICKERS: ${{ github.event.inputs.manual_tickers }}
+          ACTION_TYPE: ${{ github.event.inputs.action }}
         run: python main.py
 
       - name: Upload Trend Charts
-        if: always() # Upload even if the script partially fails
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: stock-analysis-plots
-          path: plots/ # Path must match your plotting.py output directory
+          path: plots/
 
-      - name: Commit and Push State Changes
+      - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # Ensure the state directory exists so git doesn't error
-          mkdir -p state 
-          git add state/state.json || echo "No state file found to add"
-          git commit -m "Update stock engine state [automated]" || echo "No changes to state"
+          
+          # Create directories if they don't exist
+          mkdir -p state
+          
+          # Stage the state and the watchlist
+          git add state/state.json || echo "No state file"
+          git add watchlist.json || echo "No watchlist file"
+          
+          git commit -m "Update stock engine state and watchlist [automated]" || echo "No changes to commit"
           git push
 
-      # --- [CHANGE #4] FAILURE NOTIFICATION ---
       - name: Notify on Failure
         if: failure()
         run: |
           curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
           -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-          -d text="⚠️ **JFO Engine Alert**: The stock scan workflow has failed. Please check the GitHub Actions logs for the latest run." \
+          -d text="⚠️ **FO Engine Alert**: The stock scan workflow has failed. Please check the GitHub Actions logs." \
           -d parse_mode="Markdown"
