@@ -38,6 +38,8 @@ HASH_FILE = os.path.join(STATE_DIR, 'last_report_hash.json')
 # CRITICAL: Create folders before any analysis starts
 os.makedirs('plots', exist_ok=True)
 os.makedirs(STATE_DIR, exist_ok=True)
+os.makedirs('logs', exist_ok=True)
+os.makedirs('cache', exist_ok=True)
 
 # ==========================================
 # PART 1: WATCHLIST MANAGEMENT
@@ -102,11 +104,13 @@ def load_config():
     """Loads settings from config/config.json."""
     config_path = os.path.join('config', 'config.json')
     try:
+        if not os.path.exists(config_path):
+             return {"benchmark": "SPY"} # Default if config missing
         with open(config_path, 'r') as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"Configuration Error: {e}")
-        return None
+        return {"benchmark": "SPY"}
 
 def is_market_open():
     """Gatekeeper: Checks if NYSE is currently open."""
@@ -129,7 +133,8 @@ def should_send_report(content_to_hash):
     if os.path.exists(HASH_FILE):
         with open(HASH_FILE, 'r') as f:
             try:
-                last_hash = json.load(f).get('hash')
+                data = json.load(f)
+                last_hash = data.get('hash')
                 if last_hash == current_hash:
                     return False
             except:
@@ -137,7 +142,7 @@ def should_send_report(content_to_hash):
 
     # Save new hash for the next comparison
     with open(HASH_FILE, 'w') as f:
-        json.dump({'hash': current_hash}, f)
+        json.dump({'hash': current_hash, 'timestamp': str(datetime.now())}, f)
     return True
 
 @cache_result(cache_key="sp500_sectors", ttl_seconds=86400)  # Cache for 24 hours
@@ -146,14 +151,11 @@ def get_sp500_sectors() -> Dict[str, str]:
     """
     Scrapes S&P 500 list from Wikipedia for sector-based scanning.
     Results are cached for 24 hours to reduce API calls.
-    
-    Returns:
-        Dictionary mapping ticker symbols to GICS sectors
     """
     try:
         url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
-        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        response = safe_request(url, headers=headers, timeout=30)
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+        response = requests.get(url, headers=headers, timeout=30)
         table = pd.read_html(response.text)[0]
         table['Symbol'] = table['Symbol'].str.replace('.', '-', regex=False)
         sector_map = dict(zip(table['Symbol'], table['GICS Sector']))
@@ -161,7 +163,8 @@ def get_sp500_sectors() -> Dict[str, str]:
         return sector_map
     except Exception as e:
         logger.error(f"Error fetching S&P 500 sector list: {e}", exc_info=True)
-        return {}
+        # Fallback to avoid crash
+        return {"AAPL": "Information Technology", "MSFT": "Information Technology", "NVDA": "Information Technology"}
 
 # ==========================================
 # PART 3: MAIN ANALYTICS ENGINE
@@ -236,17 +239,9 @@ def run_analytics_engine():
         try:
             # Handle multi-index data from batch download
             if len(full_scan_list) > 1:
-                # Check if ticker exists in the multi-index columns
-                if hasattr(batch_data.columns, 'levels') and len(batch_data.columns.levels) > 0:
-                    if ticker not in batch_data.columns.levels[0]:
-                        continue
-                    stock_data = batch_data[ticker].dropna()
-                else:
-                    # Fallback for single-level columns
-                    try:
-                        stock_data = batch_data[ticker].dropna()
-                    except (KeyError, TypeError):
-                        continue
+                if ticker not in batch_data.columns.levels[0]:
+                    continue
+                stock_data = batch_data[ticker].dropna()
             else:
                 stock_data = batch_data.dropna()
 
@@ -295,7 +290,7 @@ def run_analytics_engine():
     watchlist_segment = "📌 **PRIMARY WATCHLIST**\n" + ("".join(watchlist_reports) if watchlist_reports else "_No active data._\n")
     
     # Section B: Leaders
-    leader_segment = "📈 **S&P 500 MOMENTUM LEADERS**\n"
+    leader_segment = "\n📈 **S&P 500 MOMENTUM LEADERS**\n"
     if not leader_reports:
         leader_segment += "_No Tier 1 Leaders found today._"
     else:
@@ -303,7 +298,7 @@ def run_analytics_engine():
             leader_segment += f"\n📂 *{sec}*\n" + "".join(leader_reports[sec][:3])
 
     # Section C: Drops (New)
-    drop_segment = "📉 **S&P 500 MARKET DROPS (WEAKNESS)**\n"
+    drop_segment = "\n📉 **S&P 500 MARKET DROPS (WEAKNESS)**\n"
     if not laggard_reports:
         drop_segment += "_No significant drops found today._"
     else:
@@ -363,4 +358,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
