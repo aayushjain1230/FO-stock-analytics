@@ -113,19 +113,16 @@ def send_long_message(message_text):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     MAX_LENGTH = 4000
 
-    if len(message_text) <= MAX_LENGTH:
-        _execute_send(url, chat_id, message_text)
-    else:
-        while message_text:
-            split_at = message_text.rfind('\n', 0, MAX_LENGTH)
-            if split_at == -1:
-                split_at = MAX_LENGTH
+    while message_text:
+        split_at = message_text.rfind('\n', 0, MAX_LENGTH)
+        if split_at == -1:
+            split_at = MAX_LENGTH
 
-            chunk = message_text[:split_at]
-            _execute_send(url, chat_id, chunk)
+        chunk = message_text[:split_at]
+        _execute_send(url, chat_id, chunk)
 
-            message_text = message_text[split_at:].lstrip()
-            time.sleep(0.6)
+        message_text = message_text[split_at:].lstrip()
+        time.sleep(0.6)
 
 
 def _execute_send(url, chat_id, text):
@@ -144,6 +141,10 @@ def _execute_send(url, chat_id, text):
 
 
 def send_bundle(full_report_list, regime_label="Unknown"):
+    """
+    Combines multiple ticker reports into a single dispatch.
+    Skips placeholder-only reports.
+    """
     if not full_report_list:
         return
 
