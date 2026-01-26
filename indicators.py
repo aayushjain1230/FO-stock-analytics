@@ -18,16 +18,16 @@ def calculate_metrics(df, benchmark_df):
     # ------------------------------------------------------------
     # 1. Trend Foundation & Stage Analysis
     # ------------------------------------------------------------
-    df["SMA20"] = ta.sma(df["Close"], length=20)
-    df["SMA50"] = ta.sma(df["Close"], length=50)
-    df["SMA200"] = ta.sma(df["Close"], length=200)
+    df["SMA20"] = pd.to_numeric(ta.sma(df["Close"], length=20), errors="coerce")
+    df["SMA50"] = pd.to_numeric(ta.sma(df["Close"], length=50), errors="coerce")
+    df["SMA200"] = pd.to_numeric(ta.sma(df["Close"], length=200), errors="coerce")
 
     # ------------------------------------------------------------
     # 2. Institutional Volume Intelligence
     # ------------------------------------------------------------
-    df["Vol_20_Avg"] = ta.sma(df["Volume"], length=20)
+    df["Vol_20_Avg"] = pd.to_numeric(ta.sma(df["Volume"], length=20), errors="coerce")
     df["RV"] = df["Volume"] / df["Vol_20_Avg"]
-    df["Volume_Spike"] = df["RV"] >= 2.0  # 2x average volume
+    df["Volume_Spike"] = (df["RV"] >= 2.0).fillna(False)  # True if 2x average volume
 
     # ------------------------------------------------------------
     # 3. Mansfield Relative Strength (MRS)
@@ -38,8 +38,8 @@ def calculate_metrics(df, benchmark_df):
         benchmark_close = benchmark_close.iloc[:, 0]
 
     df["RS_Line"] = df["Close"].values / benchmark_close.values
-    df["RS_SMA50"] = ta.sma(df["RS_Line"], length=50)
-    df["RS_SMA20"] = ta.sma(df["RS_Line"], length=20)
+    df["RS_SMA50"] = pd.to_numeric(ta.sma(df["RS_Line"], length=50), errors="coerce")
+    df["RS_SMA20"] = pd.to_numeric(ta.sma(df["RS_Line"], length=20), errors="coerce")
 
     # MRS > 0 = outperforming benchmark
     df["MRS"] = ((df["RS_Line"] / df["RS_SMA50"]) - 1) * 100
@@ -47,44 +47,37 @@ def calculate_metrics(df, benchmark_df):
     # ------------------------------------------------------------
     # 4. Volatility Guard (ATR)
     # ------------------------------------------------------------
-    df["ATR"] = ta.atr(df["High"], df["Low"], df["Close"], length=14)
+    df["ATR"] = pd.to_numeric(ta.atr(df["High"], df["Low"], df["Close"], length=14), errors="coerce")
     df["Dist_SMA20"] = (df["Close"] - df["SMA20"]) / df["ATR"]
 
     # ------------------------------------------------------------
     # 5. Momentum (Daily RSI)
     # ------------------------------------------------------------
-    df["RSI"] = ta.rsi(df["Close"], length=14)
+    df["RSI"] = pd.to_numeric(ta.rsi(df["Close"], length=14), errors="coerce")
 
     # ------------------------------------------------------------
     # 6. Multi-Timeframe RSI (Weekly / Monthly)
     # ------------------------------------------------------------
-    ohlc_dict = {
-        "Open": "first",
-        "High": "max",
-        "Low": "min",
-        "Close": "last",
-        "Volume": "sum",
-    }
+    ohlc_dict = {"Open": "first", "High": "max", "Low": "min", "Close": "last", "Volume": "sum"}
 
-    # Weekly
+    # Weekly Analysis
     df_weekly = df.resample("W").apply(ohlc_dict)
-    df_weekly["RSI_W"] = ta.rsi(df_weekly["Close"], length=14)
+    df_weekly["RSI_W"] = pd.to_numeric(ta.rsi(df_weekly["Close"], length=14), errors="coerce")
     df["RSI_Weekly"] = df_weekly["RSI_W"].reindex(df.index, method="ffill")
 
-    # Monthly
+    # Monthly Analysis
     df_monthly = df.resample("ME").apply(ohlc_dict)
-    df_monthly["RSI_M"] = ta.rsi(df_monthly["Close"], length=14)
+    df_monthly["RSI_M"] = pd.to_numeric(ta.rsi(df_monthly["Close"], length=14), errors="coerce")
     df["RSI_Monthly"] = df_monthly["RSI_M"].reindex(df.index, method="ffill")
 
     # ------------------------------------------------------------
     # 7. Critical Signal Triggers
     # ------------------------------------------------------------
     df["Golden_Cross"] = (
-        (df["SMA50"] > df["SMA200"])
-        & (df["SMA50"].shift(1) <= df["SMA200"].shift(1))
-    )
+        (df["SMA50"] > df["SMA200"]) & (df["SMA50"].shift(1) <= df["SMA200"].shift(1))
+    ).fillna(False)
 
-    df["RS_Breakout"] = (df["MRS"] > 0) & (df["MRS"].shift(1) <= 0)
+    df["RS_Breakout"] = ((df["MRS"] > 0) & (df["MRS"].shift(1) <= 0)).fillna(False)
 
     # ------------------------------------------------------------
     # 8. Market Regime Label (stored in metadata)
@@ -95,13 +88,19 @@ def calculate_metrics(df, benchmark_df):
 
 
 def get_market_regime_label(spy_df):
+    """
+    Determines the market regime based on SPY SMA200.
+
+    Returns:
+        str: Market regime label
+    """
     try:
         if spy_df is None or len(spy_df) < 200:
             return "Unknown (Incomplete Data)"
 
-        sma_series = ta.sma(spy_df["Close"], length=200)
+        sma_series = pd.to_numeric(ta.sma(spy_df["Close"], length=200), errors="coerce")
 
-        if sma_series is None or sma_series.isna().all():
+        if sma_series.isna().all():
             return "Neutral (Calculating...)"
 
         latest_close = spy_df["Close"].iloc[-1]
@@ -122,12 +121,11 @@ def calculate_market_leader_score(row):
     JFO Market Leader Score (0–100)
 
     Breakdown:
-    - Stage & Trend Health: 40
-    - Relative Strength: 30
-    - Momentum & Volume: 30
-    - Volatility penalty for climax extensions
+        - Stage & Trend Health: 40
+        - Relative Strength: 30
+        - Momentum & Volume: 30
+        - Volatility penalty for climax extensions
     """
-
     score = 0
 
     # Safety Check
@@ -141,25 +139,25 @@ def calculate_market_leader_score(row):
     # ------------------------------------------------------------
     # 1. Stage & Trend Health (40)
     # ------------------------------------------------------------
-    if row["Close"] > row["SMA50"] > row["SMA200"]:
+    if pd.notna(row["SMA50"]) and pd.notna(row["SMA200"]) and row["Close"] > row["SMA50"] > row["SMA200"]:
         score += 40
-    elif row["Close"] > row["SMA200"]:
+    elif pd.notna(row["SMA200"]) and row["Close"] > row["SMA200"]:
         score += 20
 
     # ------------------------------------------------------------
     # 2. Relative Strength (30)
     # ------------------------------------------------------------
-    if row["MRS"] > 0:
+    if pd.notna(row["MRS"]) and row["MRS"] > 0:
         score += 20
-    if row["RS_Line"] > row["RS_SMA20"]:
+    if pd.notna(row.get("RS_Line")) and pd.notna(row.get("RS_SMA20")) and row["RS_Line"] > row["RS_SMA20"]:
         score += 10
 
     # ------------------------------------------------------------
     # 3. Momentum & Volume (30)
     # ------------------------------------------------------------
-    if row["RSI_Weekly"] > 50:
+    if pd.notna(row.get("RSI_Weekly")) and row["RSI_Weekly"] > 50:
         score += 10
-    if row["RSI_Monthly"] > 50:
+    if pd.notna(row.get("RSI_Monthly")) and row["RSI_Monthly"] > 50:
         score += 10
     if row.get("RV", 0) > 1.5:
         score += 10
