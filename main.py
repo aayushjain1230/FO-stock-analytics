@@ -325,11 +325,14 @@ def run_analytics_engine():
     # 6. VISUALIZATION
     if watchlist_data_for_plot:
         logger.info("[4/4] Generating Dashboards...")
+    
         try:
             plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
             logger.info(f"Generated charts for {len(watchlist_data_for_plot)} tickers")
         except Exception as e:
             logger.error(f"Plotting error: {e}", exc_info=True)
+    else:
+        print("[4/4] SKIP: No data found in watchlist_data_for_plot. Check your tickers!")
 
     logger.info("JFO Engine: Cycle Complete.")
     logger.info("=" * 60)
@@ -360,3 +363,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
