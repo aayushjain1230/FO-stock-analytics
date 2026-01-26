@@ -25,7 +25,7 @@ jobs:
   run-analytics:
     runs-on: ubuntu-latest
     
-    # Permissions required to push state.json and watchlist.json back to your repo
+    # Permissions required to push state, logs, and watchlist changes back to your repo
     permissions:
       contents: write
 
@@ -34,7 +34,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Fetch all history so we can push back to the branch
           fetch-depth: 0
 
       - name: Set up Python
@@ -66,8 +65,12 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           MANUAL_TICKERS: ${{ github.event.inputs.manual_tickers }}
         # Runs analysis if manual action is 'Run Stocks' OR if triggered by Schedule
-        if: github.event.inputs.action == 'Run Stocks' || github.event_name == 'schedule'
+        if: github.event.inputs.action == 'Run Stocks' || github.event_name == 'schedule' || github.event.inputs.action == ''
         run: python main.py --analyze
+
+      - name: Debug - List Files
+        if: always()
+        run: ls -R
 
       - name: Upload Trend Charts
         if: always()
@@ -75,6 +78,15 @@ jobs:
         with:
           name: stock-analysis-plots
           path: plots/
+          if-no-files-found: ignore
+
+      - name: Upload Execution Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: execution-logs
+          path: logs/
+          if-no-files-found: ignore
 
       - name: Commit and Push Changes
         if: always()
@@ -82,16 +94,16 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Stage the state and the watchlist
-          # We use '|| true' to ensure the script doesn't crash if a file is missing
-          git add state/state.json || true
+          # Stage the state, watchlist, and hash files
+          git add state/ || true
           git add watchlist.json || true
+          git add cache/ || true
           
           # Commit only if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update stock engine state and watchlist [automated]"
+            git commit -m "Update engine state, cache, and watchlist [automated]"
             git push origin main
           fi
 
@@ -100,5 +112,5 @@ jobs:
         run: |
           curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
           -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-          -d text="⚠️ **FO Engine Alert**: The stock scan workflow has failed. Please check the GitHub Actions logs." \
+          -d text="⚠️ **FO Engine Alert**: The stock scan workflow has failed. Check the execution logs artifact for details." \
           -d parse_mode="Markdown"
