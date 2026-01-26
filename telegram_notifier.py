@@ -120,8 +120,48 @@ def send_bundle(full_report_list, regime_label="Unknown"):
     """
     Groups multiple ticker reports into a single automated dispatch.
     Includes Market Regime headers.
+    Only sends if there is actual new news/alerts.
     """
     if not full_report_list:
+        return
+
+    # Filter out segments that only contain placeholder text
+    placeholder_texts = [
+        "_No active data._",
+        "_No Tier 1 Leaders found today._",
+        "_No significant drops found today._"
+    ]
+    
+    # Check for actual new alerts/events in the segments
+    significant_reports = []
+    for segment in full_report_list:
+        # Skip if segment is just a placeholder
+        if any(placeholder in segment for placeholder in placeholder_texts):
+            continue
+        
+        # Check if segment has any actual alerts or critical events
+        # Look for alert markers that indicate real changes
+        has_actual_alerts = any(marker in segment for marker in [
+            "🌟 *Critical Events:*",  # Critical events section
+            "🎯 *Standard Alerts:*",  # Standard alerts section (but not "No new technical changes")
+            "🚀 ENTERED STAGE 2",
+            "⚡ RS BREAKOUT",
+            "📊 VOLUME SPIKE",
+            "🚀 Crossed ABOVE",
+            "🔴 Crossed BELOW",
+            "📈 Weekly RSI reclaimed",
+            "🔥 BLUE SKY"
+        ])
+        
+        # If segment contains "No new technical changes" but no actual alerts, skip it
+        if "No new technical changes" in segment and not has_actual_alerts:
+            continue
+        
+        # If we get here, the segment has meaningful content
+        significant_reports.append(segment)
+    
+    if not significant_reports:
+        print("No new technical events or alerts to report. Skipping Telegram notification.")
         return
 
     # Construct the final master message
@@ -129,12 +169,6 @@ def send_bundle(full_report_list, regime_label="Unknown"):
     message += f"Regime: {regime_label}\n"
     message += "============================\n\n"
     
-    significant_reports = [r for r in full_report_list if "No new technical changes" not in r]
-    
-    if not significant_reports:
-        print("No significant technical events to report.")
-        return
-
     for ticker_report in significant_reports:
         message += ticker_report
 
