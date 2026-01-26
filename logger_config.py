@@ -4,7 +4,7 @@ Provides structured logging with file and console outputs.
 """
 import logging
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 def setup_logger(name: str = "jfo_engine", log_level: str = "INFO") -> logging.Logger:
@@ -30,7 +30,7 @@ def setup_logger(name: str = "jfo_engine", log_level: str = "INFO") -> logging.L
     logs_dir.mkdir(exist_ok=True)
     
     # File handler - logs to file with date
-    log_file = logs_dir / f"jfo_engine_{datetime.utcnow().strftime('%Y%m%d')}.log"
+    log_file = logs_dir / f"jfo_engine_{datetime.now(timezone.utc).strftime('%Y%m%d')}.log"
     file_handler = logging.FileHandler(log_file, encoding='utf-8')
     file_handler.setLevel(logging.DEBUG)
     
