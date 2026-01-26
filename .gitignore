@@ -207,8 +207,9 @@ marimo/_lsp/
 __marimo__/
 
 # --- JFO Engine Specifics ---
-# We want to ignore the plots to keep the repo size small
-plots/
+# We want to ignore the plots content but keep the folder
+plots/*
+!plots/.keep
 
 # We want to keep the state folder but ignore any temporary lock files
 # Do NOT ignore state/state.json as it acts as the bot's memory
@@ -223,7 +224,9 @@ config/config.json
 .env
 
 # Logs
-logs/
+# Allow the folder and .keep but ignore the actual log files
+logs/*
+!logs/.keep
 *.log
 
 # Cache
