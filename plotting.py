@@ -10,10 +10,20 @@ if not os.path.exists('plots'):
     os.makedirs('plots')
     print("Created 'plots' directory.")
 
+def _flatten_columns(df):
+    """Helper to handle MultiIndex columns from yfinance batch downloads."""
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = df.columns.get_level_values(-1)
+    return df
+
 def create_chart(ticker, df, benchmark_df, score=None):
     """
     Detailed single-stock chart with SMAs, Benchmark overlay, and Market Leader Score.
     """
+    # Flatten columns to ensure 'Close' and other metrics are accessible
+    df = _flatten_columns(df.copy())
+    benchmark_df = _flatten_columns(benchmark_df.copy())
+
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True, 
                                    gridspec_kw={'height_ratios': [3, 1]})
 
@@ -44,9 +54,10 @@ def create_chart(ticker, df, benchmark_df, score=None):
     # --- BOTTOM PANEL: RELATIVE STRENGTH ---
     if 'RS_Line' in df.columns:
         ax2.plot(df.index, df['RS_Line'], color='purple', label='RS Line (Price/SPY)')
-        ax2.plot(df.index, df['RS_SMA20'], color='gray', linestyle=':', alpha=0.6)
-        ax2.fill_between(df.index, df['RS_Line'], df['RS_SMA20'], 
-                         where=(df['RS_Line'] >= df['RS_SMA20']), color='green', alpha=0.1)
+        if 'RS_SMA20' in df.columns:
+            ax2.plot(df.index, df['RS_SMA20'], color='gray', linestyle=':', alpha=0.6)
+            ax2.fill_between(df.index, df['RS_Line'], df['RS_SMA20'], 
+                             where=(df['RS_Line'] >= df['RS_SMA20']), color='green', alpha=0.1)
         
         ax2.set_ylabel("RS Ratio")
         ax2.legend(loc='upper left', fontsize=9)
@@ -60,32 +71,31 @@ def create_chart(ticker, df, benchmark_df, score=None):
 def create_comparison_chart(all_stock_data, benchmark_df):
     """
     Executive Dashboard showing ALL watchlist stocks.
-    - Top: Cumulative returns % for every ticker vs SPY.
-    - Subplots: Price and RS blocks for every ticker.
     """
     if not all_stock_data:
-        print("No data available for comparison.")
+        # Emergency save to prevent GitHub 'No files found' error
+        plt.figure(figsize=(10, 5))
+        plt.text(0.5, 0.5, "No Watchlist Data Found to Plot", ha='center')
+        plt.savefig('plots/no_data_error.png')
+        plt.close()
+        print("No data available for comparison. Created error image.")
         return
 
-    # Remove the limit - get all tickers from the provided dictionary
+    benchmark_df = _flatten_columns(benchmark_df.copy())
     tickers = list(all_stock_data.keys())
     num_stocks = len(tickers)
     
-    # Dynamically scale the height of the figure based on the number of stocks
-    # Base height (6) + 4 inches per ticker
     fig_height = 6 + (4 * num_stocks)
     fig = plt.figure(figsize=(15, fig_height))
-    
-    # Grid Setup: 1 row for main chart, then 1 row per stock in the list
     gs = fig.add_gridspec(num_stocks + 1, 2, height_ratios=[2] + [1.2]*num_stocks)
     
-    # --- 1. TOP PANEL: CUMULATIVE RETURNS % (Full Width) ---
+    # --- 1. TOP PANEL: CUMULATIVE RETURNS % ---
     ax_main = fig.add_subplot(gs[0, :])
     bench_returns = (benchmark_df['Close'] / benchmark_df['Close'].iloc[0] - 1) * 100
     ax_main.plot(bench_returns.index, bench_returns, color='black', linewidth=3, label='S&P 500 (SPY)', zorder=10)
 
     for ticker in tickers:
-        df = all_stock_data[ticker]
+        df = _flatten_columns(all_stock_data[ticker].copy())
         stock_returns = (df['Close'] / df['Close'].iloc[0] - 1) * 100
         ax_main.plot(stock_returns.index, stock_returns, label=f'{ticker}', alpha=0.8, linewidth=1.5)
 
@@ -94,9 +104,9 @@ def create_comparison_chart(all_stock_data, benchmark_df):
     ax_main.legend(loc='upper left', ncol=min(num_stocks, 5), fontsize=10)
     ax_main.grid(True, alpha=0.3)
 
-    # --- 2. INDIVIDUAL ANALYSIS BLOCKS FOR ALL TICKERS ---
+    # --- 2. INDIVIDUAL ANALYSIS BLOCKS ---
     for i, ticker in enumerate(tickers):
-        df = all_stock_data[ticker]
+        df = _flatten_columns(all_stock_data[ticker].copy())
         row_idx = i + 1
         
         # COLUMN A: Price and SMAs
@@ -125,9 +135,7 @@ def create_comparison_chart(all_stock_data, benchmark_df):
             ax_rs.tick_params(axis='x', rotation=15, labelsize=8)
 
     plt.tight_layout()
-
-    # SAVE THE COMPARISON DASHBOARD
     save_path = os.path.join('plots', 'executive_dashboard.png')
     plt.savefig(save_path, dpi=150)
-    print(f"Full Executive dashboard ({num_stocks} stocks) saved to {save_path}")
+    print(f"Full Executive dashboard saved to {save_path}")
     plt.close()
