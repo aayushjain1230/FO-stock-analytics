@@ -222,7 +222,16 @@ def run_analytics_engine():
         logger.critical("Benchmark data missing. Cannot proceed with analysis.")
         return
 
+    # Ensure benchmark_data is always a DataFrame with a 'Close' column
+    if isinstance(benchmark_data, pd.Series):
+        benchmark_data = benchmark_data.to_frame(name='Close')
+    elif isinstance(benchmark_data, pd.DataFrame) and 'Close' not in benchmark_data.columns:
+        benchmark_data = benchmark_data.iloc[:, [0]]
+        benchmark_data.columns = ['Close']
+
+    # Now safely get regime label
     regime_label = indicators.get_market_regime_label(benchmark_data)
+
 
     # 4. PROCESSING LOGIC
     logger.info("[2/4] Analyzing Leaders and Drops...")
@@ -349,3 +358,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
