@@ -33,7 +33,6 @@ def calculate_metrics(df, benchmark_df):
     # 3. Mansfield Relative Strength (MRS)
     # ------------------------------------------------------------
     benchmark_close = benchmark_df["Close"]
-
     if isinstance(benchmark_close, pd.DataFrame):
         benchmark_close = benchmark_close.iloc[:, 0]
 
@@ -41,7 +40,6 @@ def calculate_metrics(df, benchmark_df):
     df["RS_SMA50"] = pd.to_numeric(ta.sma(df["RS_Line"], length=50), errors="coerce")
     df["RS_SMA20"] = pd.to_numeric(ta.sma(df["RS_Line"], length=20), errors="coerce")
 
-    # MRS > 0 = outperforming benchmark
     df["MRS"] = ((df["RS_Line"] / df["RS_SMA50"]) - 1) * 100
 
     # ------------------------------------------------------------
@@ -90,6 +88,7 @@ def calculate_metrics(df, benchmark_df):
 def get_market_regime_label(spy_df):
     """
     Determines the market regime based on SPY SMA200.
+    Fully safe against scalars / NaNs.
 
     Returns:
         str: Market regime label
@@ -98,13 +97,21 @@ def get_market_regime_label(spy_df):
         if spy_df is None or len(spy_df) < 200:
             return "Unknown (Incomplete Data)"
 
-        sma_series = pd.to_numeric(ta.sma(spy_df["Close"], length=200), errors="coerce")
+        close_series = spy_df["Close"]
+        if isinstance(close_series, (float, np.float64)):
+            close_series = pd.Series([close_series])
 
-        if sma_series.isna().all():
+        sma200 = pd.to_numeric(ta.sma(close_series, length=200), errors="coerce")
+
+        # Safety: check if SMA200 series exists and is not all NaN
+        if sma200.isna().all() or close_series.isna().all():
             return "Neutral (Calculating...)"
 
-        latest_close = spy_df["Close"].iloc[-1]
-        latest_sma = sma_series.iloc[-1]
+        latest_close = close_series.iloc[-1]
+        latest_sma = sma200.iloc[-1]
+
+        if pd.isna(latest_close) or pd.isna(latest_sma):
+            return "Neutral"
 
         if latest_close > latest_sma:
             return "🟢 Bullish (Above SMA200)"
@@ -136,25 +143,19 @@ def calculate_market_leader_score(row):
     ):
         return 0
 
-    # ------------------------------------------------------------
     # 1. Stage & Trend Health (40)
-    # ------------------------------------------------------------
-    if pd.notna(row["SMA50"]) and pd.notna(row["SMA200"]) and row["Close"] > row["SMA50"] > row["SMA200"]:
+    if pd.notna(row.get("SMA50")) and pd.notna(row.get("SMA200")) and row["Close"] > row["SMA50"] > row["SMA200"]:
         score += 40
-    elif pd.notna(row["SMA200"]) and row["Close"] > row["SMA200"]:
+    elif pd.notna(row.get("SMA200")) and row["Close"] > row["SMA200"]:
         score += 20
 
-    # ------------------------------------------------------------
     # 2. Relative Strength (30)
-    # ------------------------------------------------------------
-    if pd.notna(row["MRS"]) and row["MRS"] > 0:
+    if pd.notna(row.get("MRS")) and row["MRS"] > 0:
         score += 20
     if pd.notna(row.get("RS_Line")) and pd.notna(row.get("RS_SMA20")) and row["RS_Line"] > row["RS_SMA20"]:
         score += 10
 
-    # ------------------------------------------------------------
     # 3. Momentum & Volume (30)
-    # ------------------------------------------------------------
     if pd.notna(row.get("RSI_Weekly")) and row["RSI_Weekly"] > 50:
         score += 10
     if pd.notna(row.get("RSI_Monthly")) and row["RSI_Monthly"] > 50:
@@ -162,9 +163,7 @@ def calculate_market_leader_score(row):
     if row.get("RV", 0) > 1.5:
         score += 10
 
-    # ------------------------------------------------------------
     # 4. Extension Penalty
-    # ------------------------------------------------------------
     if row.get("Dist_SMA20", 0) > 3.0:
         score -= 20
 
