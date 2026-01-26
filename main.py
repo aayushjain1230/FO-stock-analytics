@@ -24,6 +24,10 @@ WATCHLIST_FILE = 'watchlist.json'
 STATE_DIR = 'state'
 HASH_FILE = os.path.join(STATE_DIR, 'last_report_hash.json')
 
+# CRITICAL: Create folders before any analysis starts
+os.makedirs('plots', exist_ok=True)
+os.makedirs(STATE_DIR, exist_ok=True)
+
 # ==========================================
 # PART 1: WATCHLIST MANAGEMENT
 # ==========================================
@@ -32,8 +36,8 @@ def load_watchlist_data():
     """Loads tickers from the JSON file. Creates file if missing."""
     if not os.path.exists(WATCHLIST_FILE):
         with open(WATCHLIST_FILE, 'w') as f:
-            json.dump([], f)
-        return []
+            json.dump(["SPY", "QQQ"], f) # Default starters
+        return ["SPY", "QQQ"]
     
     with open(WATCHLIST_FILE, 'r') as f:
         try:
@@ -111,9 +115,6 @@ def should_send_report(content_to_hash):
     """Checks if the report content is identical to the last one sent."""
     current_hash = hashlib.md5(content_to_hash.encode('utf-8')).hexdigest()
     
-    if not os.path.exists(STATE_DIR):
-        os.makedirs(STATE_DIR)
-
     if os.path.exists(HASH_FILE):
         with open(HASH_FILE, 'r') as f:
             try:
@@ -129,6 +130,7 @@ def should_send_report(content_to_hash):
     return True
 
 def get_sp500_sectors():
+    """Scrapes S&P 500 list from Wikipedia for sector-based scanning."""
     try:
         url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
@@ -149,8 +151,7 @@ def run_analytics_engine():
     
     # 1. MARKET GATEKEEPER
     if not is_market_open():
-        print("Market is closed. Script terminating to save compute.")
-        # return 
+        print("Notice: Market is currently closed. Using last available close data.")
 
     # 2. INITIALIZATION
     config = load_config()
@@ -195,17 +196,26 @@ def run_analytics_engine():
 
     for ticker in full_scan_list:
         try:
+            # Handle multi-index data from batch download
             if len(full_scan_list) > 1:
-                try:
+                # Check if ticker exists in the multi-index columns
+                if hasattr(batch_data.columns, 'levels') and len(batch_data.columns.levels) > 0:
+                    if ticker not in batch_data.columns.levels[0]:
+                        continue
                     stock_data = batch_data[ticker].dropna()
-                except KeyError:
-                    continue
+                else:
+                    # Fallback for single-level columns
+                    try:
+                        stock_data = batch_data[ticker].dropna()
+                    except (KeyError, TypeError):
+                        continue
             else:
                 stock_data = batch_data.dropna()
 
-            if stock_data.empty: continue
+            if stock_data.empty or len(stock_data) < 50:
+                continue
 
-            # TA and Scoring
+            # TA, Scoring, and Alerts
             analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
             rating_result = scoring.generate_rating(analyzed_data)
             ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
@@ -220,10 +230,10 @@ def run_analytics_engine():
                 watchlist_data_for_plot[ticker] = analyzed_data
             
             # S&P 500 Scanning Logic
-            if rating_result['score'] >= 80:
+            if rating_result['score'] >= 85:
                 if sector not in leader_reports: leader_reports[sector] = []
                 leader_reports[sector].append(report_line)
-            elif rating_result['score'] <= 30:
+            elif rating_result['score'] <= 25:
                 if sector not in laggard_reports: laggard_reports[sector] = []
                 laggard_reports[sector].append(report_line)
 
@@ -257,9 +267,9 @@ def run_analytics_engine():
     
     if should_send_report(full_report_body):
         telegram_notifier.send_bundle([watchlist_segment, leader_segment, drop_segment], regime_label)
-        print("New data detected. Notification sent to Telegram.")
+        print("New technical events detected. Notification dispatched.")
     else:
-        print("Data identical to last run. Staying silent to avoid spam.")
+        print("Analysis complete. Data identical to last run; silence maintained.")
 
     # Save finalized state for alert tracking
     state_manager.save_current_state(current_full_state)
@@ -272,7 +282,7 @@ def run_analytics_engine():
         except Exception as e:
             print(f"Plotting error: {e}")
 
-    print("\nJFO Engine: Analysis Complete.")
+    print("\nJFO Engine: Cycle Complete.")
 
 # ==========================================
 # ENTRY POINT
