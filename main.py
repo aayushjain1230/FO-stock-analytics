@@ -9,13 +9,24 @@ import pandas_market_calendars as mcal
 import pytz
 import yfinance as yf
 from datetime import datetime
+from typing import List, Dict, Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Import your custom logic modules
 import indicators
 import state_manager
 import telegram_notifier 
 import plotting 
-import scoring 
+import scoring
+from logger_config import setup_logger
+from utils import retry_on_failure, cache_result, safe_request, validate_ticker
+
+# Initialize logger with environment variable support
+log_level = os.getenv('LOG_LEVEL', 'INFO')
+logger = setup_logger(log_level=log_level) 
 
 # ==========================================
 # CONFIGURATION & CONSTANTS
@@ -129,17 +140,27 @@ def should_send_report(content_to_hash):
         json.dump({'hash': current_hash}, f)
     return True
 
-def get_sp500_sectors():
-    """Scrapes S&P 500 list from Wikipedia for sector-based scanning."""
+@cache_result(cache_key="sp500_sectors", ttl_seconds=86400)  # Cache for 24 hours
+@retry_on_failure(max_retries=3, delay=2.0)
+def get_sp500_sectors() -> Dict[str, str]:
+    """
+    Scrapes S&P 500 list from Wikipedia for sector-based scanning.
+    Results are cached for 24 hours to reduce API calls.
+    
+    Returns:
+        Dictionary mapping ticker symbols to GICS sectors
+    """
     try:
         url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        response = requests.get(url, headers=headers)
+        response = safe_request(url, headers=headers, timeout=30)
         table = pd.read_html(response.text)[0]
         table['Symbol'] = table['Symbol'].str.replace('.', '-', regex=False)
-        return dict(zip(table['Symbol'], table['GICS Sector']))
+        sector_map = dict(zip(table['Symbol'], table['GICS Sector']))
+        logger.info(f"Successfully fetched {len(sector_map)} S&P 500 tickers")
+        return sector_map
     except Exception as e:
-        print(f"Error fetching S&P 500 sector list: {e}")
+        logger.error(f"Error fetching S&P 500 sector list: {e}", exc_info=True)
         return {}
 
 # ==========================================
@@ -147,45 +168,59 @@ def get_sp500_sectors():
 # ==========================================
 
 def run_analytics_engine():
-    print("\n--- Jain Family Office: Market Intelligence Engine v2 ---")
+    """Main analytics engine orchestrator."""
+    logger.info("=" * 60)
+    logger.info("Jain Family Office: Market Intelligence Engine v2")
+    logger.info("=" * 60)
     
     # 1. MARKET GATEKEEPER
     if not is_market_open():
-        print("Notice: Market is currently closed. Using last available close data.")
+        logger.info("Market is currently closed. Using last available close data.")
 
     # 2. INITIALIZATION
     config = load_config()
-    if not config: return
+    if not config:
+        logger.error("Failed to load configuration. Exiting.")
+        return
     
     watchlist = load_watchlist_data()
+    logger.info(f"Watchlist loaded: {len(watchlist)} tickers")
+    
     benchmark_symbol = config.get("benchmark", "SPY")
     sector_map = get_sp500_sectors()
     all_sp500_tickers = list(sector_map.keys())
+    logger.info(f"S&P 500 sector map loaded: {len(all_sp500_tickers)} tickers")
     
     manual_input = os.getenv('MANUAL_TICKERS', '')
     if manual_input:
         full_scan_list = [t.strip().upper() for t in manual_input.split(',')]
-        print(f"Manual override: Scanning {full_scan_list}")
+        # Validate tickers
+        full_scan_list = [t for t in full_scan_list if validate_ticker(t)]
+        logger.info(f"Manual override: Scanning {len(full_scan_list)} tickers: {full_scan_list}")
     else:
         full_scan_list = list(set(watchlist + all_sp500_tickers))
+        logger.info(f"Full scan list: {len(full_scan_list)} unique tickers")
 
     # 3. DATA ACQUISITION
-    print(f"[1/4] Batch downloading data for {len(full_scan_list)} tickers...")
+    logger.info(f"[1/4] Batch downloading data for {len(full_scan_list)} tickers...")
     try:
-        batch_data = yf.download(full_scan_list, period="1y", interval="1d", group_by='ticker', threads=True)
-        benchmark_data = yf.download(benchmark_symbol, period="1y")
+        batch_data = yf.download(full_scan_list, period="1y", interval="1d", group_by='ticker', threads=True, progress=False)
+        logger.info("Batch data download completed")
+        
+        benchmark_data = yf.download(benchmark_symbol, period="1y", progress=False)
+        logger.info(f"Benchmark data ({benchmark_symbol}) downloaded")
     except Exception as e:
-        print(f"Data download failed: {e}")
+        logger.error(f"Data download failed: {e}", exc_info=True)
         return
 
     if benchmark_data.empty:
-        print("Critical Error: Benchmark data missing.")
+        logger.critical("Benchmark data missing. Cannot proceed with analysis.")
         return
 
     regime_label = indicators.get_market_regime_label(benchmark_data)
 
     # 4. PROCESSING LOGIC
-    print("[2/4] Analyzing Leaders and Drops...")
+    logger.info("[2/4] Analyzing Leaders and Drops...")
     prev_state = state_manager.load_previous_state()
     current_full_state = {} 
     
@@ -193,6 +228,9 @@ def run_analytics_engine():
     watchlist_reports = []
     leader_reports = {} 
     laggard_reports = {} # Stores Market Drops (Weakness)
+    
+    processed_count = 0
+    skipped_count = 0
 
     for ticker in full_scan_list:
         try:
@@ -213,6 +251,8 @@ def run_analytics_engine():
                 stock_data = batch_data.dropna()
 
             if stock_data.empty or len(stock_data) < 50:
+                skipped_count += 1
+                logger.debug(f"Skipping {ticker}: insufficient data ({len(stock_data) if not stock_data.empty else 0} rows)")
                 continue
 
             # TA, Scoring, and Alerts
@@ -236,12 +276,20 @@ def run_analytics_engine():
             elif rating_result['score'] <= 25:
                 if sector not in laggard_reports: laggard_reports[sector] = []
                 laggard_reports[sector].append(report_line)
+            
+            processed_count += 1
+            if processed_count % 50 == 0:
+                logger.debug(f"Processed {processed_count}/{len(full_scan_list)} tickers...")
 
-        except Exception:
+        except Exception as e:
+            skipped_count += 1
+            logger.warning(f"Error processing {ticker}: {e}", exc_info=True)
             continue
+    
+    logger.info(f"Processing complete: {processed_count} processed, {skipped_count} skipped")
 
     # 5. DEDUPLICATION & NOTIFICATION
-    print("[3/4] Compiling Executive Report...")
+    logger.info("[3/4] Compiling Executive Report...")
     
     # Section A: Watchlist
     watchlist_segment = "📌 **PRIMARY WATCHLIST**\n" + ("".join(watchlist_reports) if watchlist_reports else "_No active data._\n")
@@ -267,22 +315,24 @@ def run_analytics_engine():
     
     if should_send_report(full_report_body):
         telegram_notifier.send_bundle([watchlist_segment, leader_segment, drop_segment], regime_label)
-        print("New technical events detected. Notification dispatched.")
+        logger.info("New technical events detected. Notification dispatched.")
     else:
-        print("Analysis complete. Data identical to last run; silence maintained.")
+        logger.info("Analysis complete. Data identical to last run; silence maintained.")
 
     # Save finalized state for alert tracking
     state_manager.save_current_state(current_full_state)
     
     # 6. VISUALIZATION
     if watchlist_data_for_plot:
-        print("[4/4] Generating Dashboards...")
+        logger.info("[4/4] Generating Dashboards...")
         try:
             plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
+            logger.info(f"Generated charts for {len(watchlist_data_for_plot)} tickers")
         except Exception as e:
-            print(f"Plotting error: {e}")
+            logger.error(f"Plotting error: {e}", exc_info=True)
 
-    print("\nJFO Engine: Cycle Complete.")
+    logger.info("JFO Engine: Cycle Complete.")
+    logger.info("=" * 60)
 
 # ==========================================
 # ENTRY POINT
