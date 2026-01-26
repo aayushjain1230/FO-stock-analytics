@@ -88,7 +88,6 @@ def calculate_metrics(df, benchmark_df):
 def get_market_regime_label(spy_df):
     """
     Determines the market regime based on SPY SMA200.
-    Fully safe against scalars / NaNs.
 
     Returns:
         str: Market regime label
@@ -97,21 +96,20 @@ def get_market_regime_label(spy_df):
         if spy_df is None or len(spy_df) < 200:
             return "Unknown (Incomplete Data)"
 
-        close_series = spy_df["Close"]
-        if isinstance(close_series, (float, np.float64)):
-            close_series = pd.Series([close_series])
+        sma_raw = ta.sma(spy_df["Close"], length=200)
 
-        sma200 = pd.to_numeric(ta.sma(close_series, length=200), errors="coerce")
+        # Ensure sma_series is always a pd.Series
+        if isinstance(sma_raw, (float, np.float64)):
+            sma_series = pd.Series([sma_raw] * len(spy_df), index=spy_df.index)
+        else:
+            sma_series = pd.to_numeric(sma_raw, errors="coerce")
 
-        # Safety: check if SMA200 series exists and is not all NaN
-        if sma200.isna().all() or close_series.isna().all():
+        # If somehow all values are NaN
+        if sma_series.isna().all():
             return "Neutral (Calculating...)"
 
-        latest_close = close_series.iloc[-1]
-        latest_sma = sma200.iloc[-1]
-
-        if pd.isna(latest_close) or pd.isna(latest_sma):
-            return "Neutral"
+        latest_close = spy_df["Close"].iloc[-1]
+        latest_sma = sma_series.iloc[-1]
 
         if latest_close > latest_sma:
             return "🟢 Bullish (Above SMA200)"
@@ -168,3 +166,4 @@ def calculate_market_leader_score(row):
         score -= 20
 
     return max(0, min(score, 100))
+
