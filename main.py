@@ -22,7 +22,7 @@ import telegram_notifier
 import plotting 
 import scoring
 from logger_config import setup_logger
-from utils import retry_on_failure, cache_result, safe_request, validate_ticker
+from utils import retry_on_failure, cache_result, safe_request, validate_ticker, read_html_table
 
 # Initialize logger with environment variable support
 log_level = os.getenv('LOG_LEVEL', 'INFO')
@@ -156,7 +156,10 @@ def get_sp500_sectors() -> Dict[str, str]:
         url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
         response = requests.get(url, headers=headers, timeout=30)
-        table = pd.read_html(response.text)[0]
+
+        # ONLY CHANGE IS HERE
+        table = read_html_table(response.text)
+
         table['Symbol'] = table['Symbol'].str.replace('.', '-', regex=False)
         sector_map = dict(zip(table['Symbol'], table['GICS Sector']))
         logger.info(f"Successfully fetched {len(sector_map)} S&P 500 tickers")
@@ -197,7 +200,6 @@ def run_analytics_engine():
     manual_input = os.getenv('MANUAL_TICKERS', '')
     if manual_input:
         full_scan_list = [t.strip().upper() for t in manual_input.split(',')]
-        # Validate tickers
         full_scan_list = [t for t in full_scan_list if validate_ticker(t)]
         logger.info(f"Manual override: Scanning {len(full_scan_list)} tickers: {full_scan_list}")
     else:
@@ -230,14 +232,13 @@ def run_analytics_engine():
     watchlist_data_for_plot = {}
     watchlist_reports = []
     leader_reports = {} 
-    laggard_reports = {} # Stores Market Drops (Weakness)
+    laggard_reports = {}
     
     processed_count = 0
     skipped_count = 0
 
     for ticker in full_scan_list:
         try:
-            # Handle multi-index data from batch download
             if len(full_scan_list) > 1:
                 if ticker not in batch_data.columns.levels[0]:
                     continue
@@ -247,30 +248,27 @@ def run_analytics_engine():
 
             if stock_data.empty or len(stock_data) < 50:
                 skipped_count += 1
-                logger.debug(f"Skipping {ticker}: insufficient data ({len(stock_data) if not stock_data.empty else 0} rows)")
+                logger.debug(f"Skipping {ticker}: insufficient data")
                 continue
 
-            # TA, Scoring, and Alerts
             analyzed_data = indicators.calculate_metrics(stock_data, benchmark_data)
             rating_result = scoring.generate_rating(analyzed_data)
             ticker_alerts = state_manager.get_ticker_alerts(ticker, analyzed_data, prev_state)
             current_full_state = state_manager.update_ticker_state(ticker, analyzed_data, current_full_state)
 
-            report_line = telegram_notifier.format_ticker_report(ticker, ticker_alerts, analyzed_data.iloc[-1], rating_result)
+            report_line = telegram_notifier.format_ticker_report(
+                ticker, ticker_alerts, analyzed_data.iloc[-1], rating_result
+            )
             sector = sector_map.get(ticker, "Other Sectors")
 
-            # Sorting into Groups
             if ticker in watchlist:
                 watchlist_reports.append(report_line)
                 watchlist_data_for_plot[ticker] = analyzed_data
             
-            # S&P 500 Scanning Logic
             if rating_result['score'] >= 85:
-                if sector not in leader_reports: leader_reports[sector] = []
-                leader_reports[sector].append(report_line)
+                leader_reports.setdefault(sector, []).append(report_line)
             elif rating_result['score'] <= 25:
-                if sector not in laggard_reports: laggard_reports[sector] = []
-                laggard_reports[sector].append(report_line)
+                laggard_reports.setdefault(sector, []).append(report_line)
             
             processed_count += 1
             if processed_count % 50 == 0:
@@ -286,10 +284,8 @@ def run_analytics_engine():
     # 5. DEDUPLICATION & NOTIFICATION
     logger.info("[3/4] Compiling Executive Report...")
     
-    # Section A: Watchlist
     watchlist_segment = "📌 **PRIMARY WATCHLIST**\n" + ("".join(watchlist_reports) if watchlist_reports else "_No active data._\n")
     
-    # Section B: Leaders
     leader_segment = "\n📈 **S&P 500 MOMENTUM LEADERS**\n"
     if not leader_reports:
         leader_segment += "_No Tier 1 Leaders found today._"
@@ -297,7 +293,6 @@ def run_analytics_engine():
         for sec in sorted(leader_reports.keys()):
             leader_segment += f"\n📂 *{sec}*\n" + "".join(leader_reports[sec][:3])
 
-    # Section C: Drops (New)
     drop_segment = "\n📉 **S&P 500 MARKET DROPS (WEAKNESS)**\n"
     if not laggard_reports:
         drop_segment += "_No significant drops found today._"
@@ -305,7 +300,6 @@ def run_analytics_engine():
         for sec in sorted(laggard_reports.keys()):
             drop_segment += f"\n📂 *{sec}*\n" + "".join(laggard_reports[sec][:3])
 
-    # Combine all text to fingerprint the run
     full_report_body = watchlist_segment + leader_segment + drop_segment
     
     if should_send_report(full_report_body):
@@ -314,13 +308,11 @@ def run_analytics_engine():
     else:
         logger.info("Analysis complete. Data identical to last run; silence maintained.")
 
-    # Save finalized state for alert tracking
     state_manager.save_current_state(current_full_state)
     
     # 6. VISUALIZATION
     if watchlist_data_for_plot:
         logger.info("[4/4] Generating Dashboards...")
-    
         try:
             plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
             logger.info(f"Generated charts for {len(watchlist_data_for_plot)} tickers")
@@ -352,7 +344,6 @@ def main():
         wl = load_watchlist_data()
         print(f"Current Watchlist ({len(wl)}): {', '.join(wl)}")
 
-    # Default to analyzing if no management args provided
     if args.analyze or not any(vars(args).values()):
         run_analytics_engine()
 
