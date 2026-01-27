@@ -25,7 +25,7 @@ jobs:
   run-analytics:
     runs-on: ubuntu-latest
     
-    # Permissions required to push state, logs, and watchlist changes back to your repo
+    # Permissions required to push changes back to the repo
     permissions:
       contents: write
 
@@ -50,7 +50,7 @@ jobs:
       - name: Update Watchlist (if requested)
         if: github.event.inputs.action == 'Add to Watchlist' || github.event.inputs.action == 'Remove from Watchlist'
         run: |
-          # Convert "AAPL, TSLA" into "AAPL TSLA" so argparse reads them correctly
+          # Clean commas and extra spaces
           CLEAN_TICKERS=$(echo "${{ github.event.inputs.manual_tickers }}" | tr ',' ' ')
           
           if [ "${{ github.event.inputs.action }}" == "Add to Watchlist" ]; then
@@ -64,8 +64,11 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           MANUAL_TICKERS: ${{ github.event.inputs.manual_tickers }}
-        # Runs analysis if manual action is 'Run Stocks' OR if triggered by Schedule
-        if: github.event.inputs.action == 'Run Stocks' || github.event_name == 'schedule' || github.event.inputs.action == ''
+        # Runs analysis if manual action is 'Run Stocks' OR if triggered by Schedule OR manual run without specific input
+        if: |
+          github.event_name == 'schedule' || 
+          github.event.inputs.action == 'Run Stocks' || 
+          github.event.inputs.action == ''
         run: python main.py --analyze
 
       - name: Debug - List Files
@@ -73,12 +76,12 @@ jobs:
         run: ls -R
 
       - name: Upload Trend Charts
-        if: always()
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: stock-analysis-plots
           path: plots/
-          if-no-files-found: ignore
+          if-no-files-found: warn
 
       - name: Upload Execution Logs
         if: always()
@@ -94,14 +97,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Stage the state, watchlist, and hash files
-          git add state/ || true
+          # Force add files that might be in .gitignore but we want to track (like cache/state)
+          git add -f state/ || true
           git add watchlist.json || true
-          git add cache/ || true
+          git add -f cache/*.json || true
           
-          # Commit only if there are changes
+          # Only commit if there are actually changes to avoid workflow errors
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit."
           else
             git commit -m "Update engine state, cache, and watchlist [automated]"
             git push origin main
@@ -112,5 +115,5 @@ jobs:
         run: |
           curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
           -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-          -d text="⚠️ **FO Engine Alert**: The stock scan workflow has failed. Check the execution logs artifact for details." \
+          -d text="⚠️ **FO Engine Alert**: The stock scan workflow has failed. Check GitHub Actions for logs." \
           -d parse_mode="Markdown"
