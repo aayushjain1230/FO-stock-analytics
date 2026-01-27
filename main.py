@@ -6,6 +6,8 @@ import pandas as pd
 import pandas_market_calendars as mcal
 import pytz
 import yfinance as yf
+import requests
+from io import StringIO
 from datetime import datetime
 from typing import Dict
 from dotenv import load_dotenv
@@ -22,7 +24,7 @@ import scoring
 from logger_config import setup_logger
 from utils import retry_on_failure, cache_result, read_html_table
 
-# Logger
+# Logger initialization
 log_level = os.getenv("LOG_LEVEL", "INFO")
 logger = setup_logger(log_level=log_level)
 
@@ -33,13 +35,14 @@ WATCHLIST_FILE = "watchlist.json"
 STATE_DIR = "state"
 HASH_FILE = os.path.join(STATE_DIR, "last_report_hash.json")
 
+# Ensure environment directories exist
 os.makedirs("plots", exist_ok=True)
 os.makedirs("logs", exist_ok=True)
 os.makedirs("cache", exist_ok=True)
 os.makedirs(STATE_DIR, exist_ok=True)
 
 # ==========================================
-# WATCHLIST
+# WATCHLIST MANAGEMENT
 # ==========================================
 def load_watchlist_data():
     if not os.path.exists(WATCHLIST_FILE):
@@ -111,21 +114,24 @@ def should_send_report(content):
     return True
 
 # ==========================================
-# S&P 500 SECTORS
+# S&P 500 SECTOR SCRAPER
 # ==========================================
 @cache_result(cache_key="sp500_sectors", ttl_seconds=86400)
 @retry_on_failure(max_retries=3, delay=2)
 def get_sp500_sectors() -> Dict[str, str]:
-    import requests  # <- fix missing requests import
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-    headers = {"User-Agent": "Mozilla/5.0"}
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
     response = requests.get(url, headers=headers, timeout=30)
-    table = read_html_table(response.text)
+    
+    # Use read_html via StringIO to handle Wikipedia's table structure
+    tables = pd.read_html(StringIO(response.text))
+    table = tables[0]
+    
     table["Symbol"] = table["Symbol"].str.replace(".", "-", regex=False)
     return dict(zip(table["Symbol"], table["GICS Sector"]))
 
 # ==========================================
-# MAIN ENGINE
+# MAIN ANALYTICS ENGINE
 # ==========================================
 def run_analytics_engine():
     logger.info("=" * 60)
@@ -133,19 +139,18 @@ def run_analytics_engine():
     logger.info("=" * 60)
 
     if not is_market_open():
-        logger.info("Market closed – using last available close")
+        logger.info("Market closed – using last available close data")
 
     config = load_config()
     watchlist = load_watchlist_data()
     benchmark_symbol = config.get("benchmark", "SPY")
+    
     sector_map = get_sp500_sectors()
     scan_list = list(set(watchlist + list(sector_map.keys())))
-    logger.info(f"Scanning {len(scan_list)} tickers")
+    logger.info(f"Scanning {len(scan_list)} total tickers")
 
-    # -----------------------------
-    # DATA DOWNLOAD
-    # -----------------------------
-    batch_data = yf.download(
+    # 1. Download Data
+    batch_raw = yf.download(
         scan_list,
         period="1y",
         interval="1d",
@@ -153,60 +158,28 @@ def run_analytics_engine():
         threads=True,
         progress=False,
     )
-    benchmark_data = yf.download(
+    
+    benchmark_raw = yf.download(
         benchmark_symbol,
         period="1y",
         progress=False,
     )
-    if benchmark_data.empty:
-        logger.critical("Benchmark data missing")
+
+    if benchmark_raw.empty:
+        logger.critical("Failed to download benchmark data. Aborting.")
         return
 
-    # -----------------------------
-    # NORMALIZE BENCHMARK DATA
-    # -----------------------------
-    if isinstance(benchmark_data.columns, pd.MultiIndex):
-        if "Close" in benchmark_data.columns.get_level_values(1):
-            benchmark_data = benchmark_data.xs("Close", level=1, axis=1)
-        else:
-            benchmark_data = benchmark_data.iloc[:, 0]
-
-    benchmark_data = benchmark_data.to_frame() if isinstance(benchmark_data, pd.Series) else benchmark_data
-    benchmark_data = benchmark_data.rename(columns={benchmark_data.columns[0]: "Close"}).dropna()
-
-    # -----------------------------
-    # NORMALIZE BATCH DATA PER TICKER
-    # -----------------------------
-    normalized_batch = {}
-    for ticker in scan_list:
-        try:
-            df = batch_data[ticker] if ticker in batch_data.columns.levels[0] else None
-            if df is None:
-                continue
-            if isinstance(df.columns, pd.MultiIndex):
-                if "Close" in df.columns.get_level_values(0):
-                    df = df["Close"].to_frame()
-                else:
-                    df = df.iloc[:, [0]]
-            else:
-                df = df[["Close"]]
-            df = df.dropna()
-            if len(df) < 60:
-                continue
-            normalized_batch[ticker] = df
-        except Exception as e:
-            logger.warning(f"Normalization failed for {ticker}: {e}", exc_info=True)
-    batch_data = normalized_batch
-
-    # -----------------------------
-    # MARKET REGIME
-    # -----------------------------
+    # Normalize Benchmark (handle MultiIndex if yf returns it)
+    if isinstance(benchmark_raw.columns, pd.MultiIndex):
+        benchmark_data = benchmark_raw.xs("Close", level=1, axis=1) if "Close" in benchmark_raw.columns.get_level_values(1) else benchmark_raw.iloc[:, 0]
+    else:
+        benchmark_data = benchmark_raw["Close"]
+    
+    benchmark_data = benchmark_data.to_frame("Close").dropna()
     market_regime = get_market_regime_label(benchmark_data)
-    logger.info(f"Market Regime: {market_regime}")
+    logger.info(f"Detected Market Regime: {market_regime}")
 
-    # -----------------------------
-    # PROCESSING
-    # -----------------------------
+    # 2. Process Tickers
     prev_state = state_manager.load_previous_state()
     new_state = {}
     watchlist_data_for_plot = {}
@@ -214,46 +187,61 @@ def run_analytics_engine():
     leaders = {}
     laggards = {}
 
-    for ticker, df in batch_data.items():
+    for ticker in scan_list:
         try:
+            # Extract and flatten data for this ticker
+            if ticker not in batch_raw.columns.levels[0]:
+                continue
+            
+            df = batch_raw[ticker].copy().dropna(subset=["Close"])
+            if len(df) < 60:
+                continue
+
+            # Run Analysis
             analyzed = calculate_metrics(df, benchmark_data)
             rating = scoring.generate_rating(analyzed)
             alerts = state_manager.get_ticker_alerts(ticker, analyzed, prev_state)
             new_state = state_manager.update_ticker_state(ticker, analyzed, new_state)
+            
             line = telegram_notifier.format_ticker_report(ticker, alerts, analyzed.iloc[-1], rating)
             sector = sector_map.get(ticker, "Other")
+
+            # Grouping for report
             if ticker in watchlist:
                 watchlist_reports.append(line)
                 watchlist_data_for_plot[ticker] = analyzed
+            
             if rating["score"] >= 85:
                 leaders.setdefault(sector, []).append(line)
             elif rating["score"] <= 25:
                 laggards.setdefault(sector, []).append(line)
-        except Exception as e:
-            logger.warning(f"{ticker} failed: {e}", exc_info=True)
 
-    # -----------------------------
-    # REPORTING
-    # -----------------------------
-    report = (
-        "📌 **WATCHLIST**\n"
-        + "".join(watchlist_reports)
-        + "\n📈 **LEADERS**\n"
-        + "".join(v[0] for v in leaders.values())
-        + "\n📉 **LAGGARDS**\n"
-        + "".join(v[0] for v in laggards.values())
-    )
-    if should_send_report(report):
-        telegram_notifier.send_bundle([report], market_regime)
+        except Exception as e:
+            logger.warning(f"Failed to process {ticker}: {e}")
+
+    # 3. Report Compilation
+    report_body = "📌 **WATCHLIST UPDATES**\n" + ("".join(watchlist_reports) if watchlist_reports else "No significant changes.\n")
+    
+    if leaders:
+        report_body += "\n📈 **TOP MOMENTUM LEADERS**\n"
+        for sec, items in sorted(leaders.items()):
+            report_body += f"📂 *{sec}*: " + ", ".join([i.split()[0] for i in items[:5]]) + "\n"
+
+    if laggards:
+        report_body += "\n📉 **MARKET LAGGARDS (WATCH FOR DROPS)**\n"
+        for sec, items in sorted(laggards.items()):
+            report_body += f"📂 *{sec}*: " + ", ".join([i.split()[0] for i in items[:5]]) + "\n"
+
+    # 4. Finalizing
+    if should_send_report(report_body):
+        telegram_notifier.send_bundle([report_body], market_regime)
+        logger.info("Executive report dispatched to Telegram")
+    
     state_manager.save_current_state(new_state)
 
-    # -----------------------------
-    # PLOTTING
-    # -----------------------------
     if watchlist_data_for_plot:
-        # Align all DataFrames by index to avoid plotting errors
-        benchmark_plot = benchmark_data.reindex_like(next(iter(watchlist_data_for_plot.values())))
-        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_plot)
+        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
+        logger.info("Watchlist comparison charts updated")
 
     logger.info("JFO Engine: Cycle Complete")
     logger.info("=" * 60)
@@ -262,17 +250,22 @@ def run_analytics_engine():
 # ENTRY POINT
 # ==========================================
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--add", nargs="+")
-    parser.add_argument("--remove", nargs="+")
-    parser.add_argument("--list", action="store_true")
-    parser.add_argument("--analyze", action="store_true")
+    parser = argparse.ArgumentParser(description="JFO Stock Intelligence System")
+    parser.add_argument("--add", nargs="+", help="Add tickers to watchlist")
+    parser.add_argument("--remove", nargs="+", help="Remove tickers from watchlist")
+    parser.add_argument("--list", action="store_true", help="List current watchlist")
+    parser.add_argument("--analyze", action="store_true", help="Run the full analysis engine")
+    
     args = parser.parse_args()
+
     if args.add or args.remove:
         manage_cli_updates(args.add, args.remove)
+    
     if args.list:
         wl = load_watchlist_data()
-        print(", ".join(wl))
+        print(f"Current Watchlist: {', '.join(wl)}")
+    
+    # Default to analysis if no flags or specifically requested
     if args.analyze or not any(vars(args).values()):
         run_analytics_engine()
 
