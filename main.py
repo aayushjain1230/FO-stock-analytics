@@ -184,6 +184,8 @@ def run_analytics_engine():
     new_state = {}
     watchlist_data_for_plot = {}
     watchlist_reports = []
+    
+    # Dictionaries to hold (Ticker, Score) tuples for clean formatting
     leaders = {}
     laggards = {}
 
@@ -211,31 +213,71 @@ def run_analytics_engine():
                 watchlist_reports.append(line)
                 watchlist_data_for_plot[ticker] = analyzed
             
+            # Store Ticker and Score cleanly for the final report
             if rating["score"] >= 85:
-                leaders.setdefault(sector, []).append(line)
+                leaders.setdefault(sector, []).append((ticker, rating["score"]))
             elif rating["score"] <= 25:
-                laggards.setdefault(sector, []).append(line)
+                laggards.setdefault(sector, []).append((ticker, rating["score"]))
 
         except Exception as e:
             logger.warning(f"Failed to process {ticker}: {e}")
 
-    # 3. Report Compilation
-    report_body = "📌 **WATCHLIST UPDATES**\n" + ("".join(watchlist_reports) if watchlist_reports else "No significant changes.\n")
-    
-    if leaders:
-        report_body += "\n📈 **TOP MOMENTUM LEADERS**\n"
-        for sec, items in sorted(leaders.items()):
-            report_body += f"📂 *{sec}*: " + ", ".join([i.split()[0] for i in items[:5]]) + "\n"
+    # 3. Report Compilation (Clean Sector Grouping)
+    report_lines = []
+    report_lines.append(f"🏛 **JFO MARKET INTELLIGENCE**")
+    report_lines.append(f"Regime: {market_regime}")
+    report_lines.append("="*20)
 
+    # Watchlist Section (Always included if present)
+    if watchlist_reports:
+        report_lines.append("\n📌 **WATCHLIST UPDATES**")
+        report_lines.append("".join(watchlist_reports))
+
+    # Leaders Section
+    if leaders:
+        report_lines.append("\n🚀 **SECTOR LEADERS (Score 85+)**")
+        for sec, items in sorted(leaders.items()):
+            # Sort by score descending
+            items.sort(key=lambda x: x[1], reverse=True)
+            # Format: AAPL(99), MSFT(95)...
+            formatted_tickers = [f"{t}({s})" for t, s in items[:6]]
+            report_lines.append(f"📂 *{sec}*: {', '.join(formatted_tickers)}")
+
+    # Laggards Section
     if laggards:
-        report_body += "\n📉 **MARKET LAGGARDS (WATCH FOR DROPS)**\n"
+        report_lines.append("\n📉 **SECTOR LAGGARDS (Score <25)**")
         for sec, items in sorted(laggards.items()):
-            report_body += f"📂 *{sec}*: " + ", ".join([i.split()[0] for i in items[:5]]) + "\n"
+            # Sort by score ascending (worst first)
+            items.sort(key=lambda x: x[1])
+            formatted_tickers = [f"{t}({s})" for t, s in items[:6]]
+            report_lines.append(f"📂 *{sec}*: {', '.join(formatted_tickers)}")
+
+    final_report = "\n".join(report_lines)
 
     # 4. Finalizing
-    if should_send_report(report_body):
-        telegram_notifier.send_bundle([report_body], market_regime)
-        logger.info("Executive report dispatched to Telegram")
+    if should_send_report(final_report):
+        # We manually call the bot API here to ensure we send ONE message with NO links
+        bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        chat_id = os.getenv("TELEGRAM_CHAT_ID")
+        
+        if bot_token and chat_id:
+            try:
+                # disable_web_page_preview=True prevents the big link previews
+                url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+                payload = {
+                    "chat_id": chat_id, 
+                    "text": final_report, 
+                    "parse_mode": "Markdown",
+                    "disable_web_page_preview": True 
+                }
+                requests.post(url, json=payload)
+                logger.info("Executive report dispatched to Telegram")
+            except Exception as e:
+                logger.error(f"Telegram Send Failed: {e}")
+        else:
+            logger.warning("Telegram credentials missing.")
+    else:
+        logger.info("No actionable changes. Telegram message skipped.")
     
     state_manager.save_current_state(new_state)
 
