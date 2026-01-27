@@ -2,10 +2,14 @@ import requests
 import json
 import os
 import time
+import re
 
+
+# ============================================================
+# CONFIG
+# ============================================================
 
 def load_telegram_config():
-    """Reads credentials from the config file."""
     config_path = os.path.join('config', 'config.json')
     try:
         with open(config_path, 'r') as f:
@@ -15,39 +19,61 @@ def load_telegram_config():
         return {}
 
 
-def _safe_float(value, default=None):
-    """Safely cast to float or return default."""
-    try:
-        return float(value)
-    except (TypeError, ValueError):
-        return default
+# ============================================================
+# HELPERS
+# ============================================================
 
+def _safe_float(value):
+    try:
+        if value is None:
+            return None
+        if isinstance(value, (int, float)):
+            return float(value)
+        if isinstance(value, str):
+            return float(value.replace("%", "").replace("x", ""))
+    except Exception:
+        return None
+    return None
+
+
+def _escape_md(text: str) -> str:
+    """Escape Telegram Markdown special characters."""
+    return re.sub(r'([_*\[\]()~`>#+\-=|{}.!])', r'\\\1', str(text))
+
+
+# ============================================================
+# REPORT FORMATTER
+# ============================================================
 
 def format_ticker_report(ticker, alerts, latest, rating_data):
-    """
-    Creates a bundled, executive-friendly report for a single ticker.
-    Includes TradingView links, Tier Ratings, and Volatility Guards.
-    """
     score = rating_data.get('score', 0)
     tier = rating_data.get('rating', 'N/A')
     metrics = rating_data.get('metrics', {})
     is_extended = rating_data.get('is_extended', False)
 
-    # Generate TradingView Link
     tv_link = f"https://www.tradingview.com/symbols/{ticker}/"
 
-    report = f"🔍 *[{ticker}]({tv_link})* | Score: `{score}/100`\n"
-    report += f"🏷 *Rank: {tier}*\n"
+    report = (
+        f"🔍 *[{_escape_md(ticker)}]({_escape_md(tv_link)})* | "
+        f"Score: `{score}/100`\n"
+    )
+    report += f"🏷 *Rank: {_escape_md(tier)}*\n"
 
     if is_extended:
         report += "⚠️ *STRETCHED: High Volatility Risk*\n"
 
-    # Section 1: Critical Events
+    # ----------------------------
+    # Critical Events
+    # ----------------------------
     event_list = []
+
     if latest.get('Golden_Cross'):
         event_list.append("🚀 *GOLDEN CROSS*")
-    if latest.get('Volume_Spike'):
+
+    rv = _safe_float(latest.get('RV'))
+    if rv is not None and rv >= 2.0:
         event_list.append("📊 *INSTITUTIONAL VOLUME*")
+
     if latest.get('RS_Breakout'):
         event_list.append("⚡ *RS BREAKOUT*")
 
@@ -56,39 +82,44 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
         for event in event_list:
             report += f"  • {event}\n"
 
-    # Section 2: Standard Alerts
+    # ----------------------------
+    # Standard Alerts
+    # ----------------------------
     if alerts and "Initial data recorded" not in str(alerts):
         report += "🎯 *Standard Alerts:*\n"
         for alert in alerts:
-            report += f"  • {alert}\n"
+            report += f"  • {_escape_md(alert)}\n"
     elif not event_list:
         report += "🎯 *Events:* No new technical changes.\n"
 
-    # -------- SAFE SNAPSHOT VALUES --------
+    # ----------------------------
+    # Snapshot
+    # ----------------------------
     close_price = _safe_float(latest.get('Close'))
     sma200 = _safe_float(latest.get('SMA200'))
-    rsi_monthly = _safe_float(latest.get('RSI_Monthly'))
     weekly_rsi = _safe_float(metrics.get('weekly_rsi'))
+    rsi_monthly = _safe_float(latest.get('RSI_Monthly'))
     mrs_value = _safe_float(metrics.get('mrs_value'))
 
     trend = "Unknown"
     if close_price is not None and sma200 is not None:
         trend = "Above SMA200" if close_price > sma200 else "Below SMA200"
 
-    # Section 3: Technical Snapshot
     report += "📊 *Snapshot:*\n"
 
-    if close_price is not None:
-        report += f"  • Price: ${close_price:.2f} ({trend})\n"
-    else:
-        report += "  • Price: N/A\n"
+    report += (
+        f"  • Price: ${close_price:.2f} ({trend})\n"
+        if close_price is not None
+        else "  • Price: N/A\n"
+    )
 
     report += f"  • Rel. Volume: {metrics.get('rel_volume', 'N/A')}\n"
 
-    if mrs_value is not None:
-        report += f"  • RS vs SPY: {mrs_value:+.1f} (MRS)\n"
-    else:
-        report += "  • RS vs SPY: N/A\n"
+    report += (
+        f"  • RS vs SPY: {mrs_value:+.1f} (MRS)\n"
+        if mrs_value is not None
+        else "  • RS vs SPY: N/A\n"
+    )
 
     rsi_w = f"{weekly_rsi:.0f}" if weekly_rsi is not None else "N/A"
     rsi_m = f"{rsi_monthly:.0f}" if rsi_monthly is not None else "N/A"
@@ -98,16 +129,17 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     return report + "------------------------------------------\n"
 
 
+# ============================================================
+# TELEGRAM SENDING
+# ============================================================
+
 def send_long_message(message_text):
-    """
-    Splits the final report into chunks to respect Telegram's 4096 char limit.
-    """
     tg_config = load_telegram_config()
     token = os.getenv('TELEGRAM_BOT_TOKEN') or tg_config.get("token")
     chat_id = os.getenv('TELEGRAM_CHAT_ID') or tg_config.get("chat_id")
 
     if not token or not chat_id:
-        print("Telegram Error: Missing credentials (Token or Chat ID).")
+        print("Telegram Error: Missing credentials.")
         return
 
     url = f"https://api.telegram.org/bot{token}/sendMessage"
@@ -120,71 +152,63 @@ def send_long_message(message_text):
 
         chunk = message_text[:split_at]
         _execute_send(url, chat_id, chunk)
-
         message_text = message_text[split_at:].lstrip()
-        time.sleep(0.6)
+        time.sleep(0.7)
 
 
-def _execute_send(url, chat_id, text):
+def _execute_send(url, chat_id, text, retries=3):
     payload = {
         "chat_id": chat_id,
         "text": text,
-        "parse_mode": "Markdown",
+        "parse_mode": "MarkdownV2",
         "disable_web_page_preview": True
     }
-    try:
-        response = requests.post(url, data=payload, timeout=15)
-        if response.status_code != 200:
-            print(f"Telegram API Error: {response.text}")
-    except Exception as e:
-        print(f"Connection Exception: {e}")
 
+    for attempt in range(retries):
+        try:
+            response = requests.post(url, data=payload, timeout=15)
+            if response.status_code == 200:
+                return
+            time.sleep(1.5)
+        except Exception:
+            time.sleep(1.5)
+
+    print("Telegram send failed after retries.")
+
+
+# ============================================================
+# BUNDLE DISPATCH
+# ============================================================
 
 def send_bundle(full_report_list, regime_label="Unknown"):
-    """
-    Combines multiple ticker reports into a single dispatch.
-    Skips placeholder-only reports.
-    """
     if not full_report_list:
         return
 
-    placeholder_texts = [
+    placeholders = [
         "_No active data._",
         "_No Tier 1 Leaders found today._",
         "_No significant drops found today._"
     ]
 
-    significant_reports = []
+    significant = []
     for segment in full_report_list:
-        if any(p in segment for p in placeholder_texts):
+        if any(p in segment for p in placeholders):
             continue
-
-        has_actual_alerts = any(marker in segment for marker in [
-            "🌟 *Critical Events:*",
-            "🎯 *Standard Alerts:*",
-            "🚀 ENTERED STAGE 2",
-            "⚡ RS BREAKOUT",
-            "📊 VOLUME SPIKE",
-            "🚀 Crossed ABOVE",
-            "🔴 Crossed BELOW",
-            "📈 Weekly RSI reclaimed",
-            "🔥 BLUE SKY"
-        ])
-
-        if "No new technical changes" in segment and not has_actual_alerts:
+        if "No new technical changes" in segment:
             continue
+        significant.append(segment)
 
-        significant_reports.append(segment)
-
-    if not significant_reports:
-        print("No new technical events or alerts to report. Skipping Telegram notification.")
+    if not significant:
+        print("No actionable signals. Telegram message skipped.")
         return
 
-    message = "🏦 **JAIN FAMILY OFFICE: DAILY INTEL**\n"
-    message += f"Regime: {regime_label}\n"
-    message += "============================\n\n"
+    message = (
+        "🏦 *JAIN FAMILY OFFICE: DAILY INTEL*\n"
+        f"Regime: {_escape_md(regime_label)}\n"
+        "============================\n\n"
+    )
 
-    for report in significant_reports:
+    for report in significant:
         message += report
 
     message += "\n_Status: Analysis Complete_"
