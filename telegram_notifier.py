@@ -4,7 +4,6 @@ import os
 import time
 import re
 
-
 # ============================================================
 # CONFIG
 # ============================================================
@@ -12,12 +11,13 @@ import re
 def load_telegram_config():
     config_path = os.path.join('config', 'config.json')
     try:
-        with open(config_path, 'r') as f:
-            config = json.load(f)
-            return config.get("telegram", {})
+        if os.path.exists(config_path):
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+                return config.get("telegram", {})
     except Exception:
-        return {}
-
+        pass
+    return {}
 
 # ============================================================
 # HELPERS
@@ -35,11 +35,9 @@ def _safe_float(value):
         return None
     return None
 
-
 def _escape_md(text: str) -> str:
     """Escape Telegram Markdown special characters."""
     return re.sub(r'([_*\[\]()~`>#+\-=|{}.!])', r'\\\1', str(text))
-
 
 # ============================================================
 # REPORT FORMATTER
@@ -66,7 +64,6 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     # Critical Events
     # ----------------------------
     event_list = []
-
     if latest.get('Golden_Cross'):
         event_list.append("🚀 *GOLDEN CROSS*")
 
@@ -93,7 +90,7 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
         report += "🎯 *Events:* No new technical changes.\n"
 
     # ----------------------------
-    # Snapshot
+    # Snapshot (The detailed metric block)
     # ----------------------------
     close_price = _safe_float(latest.get('Close'))
     sma200 = _safe_float(latest.get('SMA200'))
@@ -106,32 +103,48 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
         trend = "Above SMA200" if close_price > sma200 else "Below SMA200"
 
     report += "📊 *Snapshot:*\n"
-
-    report += (
-        f"  • Price: ${close_price:.2f} ({trend})\n"
-        if close_price is not None
-        else "  • Price: N/A\n"
-    )
+    
+    if close_price is not None:
+        report += f"  • Price: ${close_price:.2f} ({trend})\n"
+    else:
+        report += "  • Price: N/A\n"
 
     report += f"  • Rel. Volume: {metrics.get('rel_volume', 'N/A')}\n"
 
-    report += (
-        f"  • RS vs SPY: {mrs_value:+.1f} (MRS)\n"
-        if mrs_value is not None
-        else "  • RS vs SPY: N/A\n"
-    )
+    if mrs_value is not None:
+        report += f"  • RS vs SPY: {mrs_value:+.1f} (MRS)\n"
+    else:
+        report += "  • RS vs SPY: N/A\n"
 
     rsi_w = f"{weekly_rsi:.0f}" if weekly_rsi is not None else "N/A"
     rsi_m = f"{rsi_monthly:.0f}" if rsi_monthly is not None else "N/A"
-
+    
     report += f"  • RSI (W/M): {rsi_w} / {rsi_m}\n"
 
     return report + "------------------------------------------\n"
 
-
 # ============================================================
 # TELEGRAM SENDING
 # ============================================================
+
+def _execute_send(url, chat_id, text, retries=3):
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "MarkdownV2",
+        "disable_web_page_preview": True
+    }
+
+    for attempt in range(retries):
+        try:
+            response = requests.post(url, data=payload, timeout=15)
+            if response.status_code == 200:
+                return
+            time.sleep(1.5)
+        except Exception:
+            time.sleep(1.5)
+
+    print("Telegram send failed after retries.")
 
 def send_long_message(message_text):
     tg_config = load_telegram_config()
@@ -154,27 +167,6 @@ def send_long_message(message_text):
         _execute_send(url, chat_id, chunk)
         message_text = message_text[split_at:].lstrip()
         time.sleep(0.7)
-
-
-def _execute_send(url, chat_id, text, retries=3):
-    payload = {
-        "chat_id": chat_id,
-        "text": text,
-        "parse_mode": "MarkdownV2",
-        "disable_web_page_preview": True
-    }
-
-    for attempt in range(retries):
-        try:
-            response = requests.post(url, data=payload, timeout=15)
-            if response.status_code == 200:
-                return
-            time.sleep(1.5)
-        except Exception:
-            time.sleep(1.5)
-
-    print("Telegram send failed after retries.")
-
 
 # ============================================================
 # BUNDLE DISPATCH
