@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Project imports
-import indicators
+from indicators import calculate_metrics, get_market_regime_label
 import state_manager
 import telegram_notifier
 import plotting
@@ -181,8 +181,46 @@ def run_analytics_engine():
         logger.critical("Benchmark data missing")
         return
 
-    # Normalize benchmark to Close-only (explicit, deterministic)
-    benchmark_data = benchmark_data[["Close"]].dropna()
+    # -----------------------------
+    # NORMALIZE BENCHMARK DATA
+    # -----------------------------
+    if isinstance(benchmark_data.columns, pd.MultiIndex):
+        if "Close" in benchmark_data.columns.get_level_values(1):
+            benchmark_data = benchmark_data.xs("Close", level=1, axis=1)
+        else:
+            benchmark_data = benchmark_data.iloc[:, 0]
+
+    benchmark_data = benchmark_data.to_frame() if isinstance(benchmark_data, pd.Series) else benchmark_data
+    benchmark_data = benchmark_data.rename(columns={benchmark_data.columns[0]: "Close"}).dropna()
+
+    # -----------------------------
+    # NORMALIZE BATCH DATA PER TICKER
+    # -----------------------------
+    normalized_batch = {}
+    for ticker in scan_list:
+        try:
+            df = batch_data[ticker] if ticker in batch_data.columns.levels[0] else None
+            if df is None:
+                continue
+
+            if isinstance(df.columns, pd.MultiIndex):
+                if "Close" in df.columns.get_level_values(0):
+                    df = df["Close"].to_frame()
+                else:
+                    df = df.iloc[:, [0]]
+            else:
+                df = df[["Close"]]
+
+            df = df.dropna()
+            if len(df) < 60:
+                continue
+
+            normalized_batch[ticker] = df
+
+        except Exception as e:
+            logger.warning(f"Normalization failed for {ticker}: {e}", exc_info=True)
+
+    batch_data = normalized_batch
 
     # --------------------------------------
     # MARKET REGIME (COMPUTED ONCE)
@@ -201,30 +239,15 @@ def run_analytics_engine():
     leaders = {}
     laggards = {}
 
-    for ticker in scan_list:
+    for ticker, df in batch_data.items():
         try:
-            if ticker not in batch_data.columns.levels[0]:
-                continue
-
-            df = batch_data[ticker].dropna()
-            if len(df) < 60:
-                continue
-
-            analyzed = indicators.calculate_metrics(df, benchmark_data)
+            analyzed = calculate_metrics(df, benchmark_data)  # direct call
             rating = scoring.generate_rating(analyzed)
 
-            alerts = state_manager.get_ticker_alerts(
-                ticker, analyzed, prev_state
-            )
+            alerts = state_manager.get_ticker_alerts(ticker, analyzed, prev_state)
+            new_state = state_manager.update_ticker_state(ticker, analyzed, new_state)
 
-            new_state = state_manager.update_ticker_state(
-                ticker, analyzed, new_state
-            )
-
-            line = telegram_notifier.format_ticker_report(
-                ticker, alerts, analyzed.iloc[-1], rating
-            )
-
+            line = telegram_notifier.format_ticker_report(ticker, alerts, analyzed.iloc[-1], rating)
             sector = sector_map.get(ticker, "Other")
 
             if ticker in watchlist:
@@ -260,9 +283,7 @@ def run_analytics_engine():
     # PLOTTING
     # --------------------------------------
     if watchlist_data_for_plot:
-        plotting.create_comparison_chart(
-            watchlist_data_for_plot, benchmark_data
-        )
+        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
 
     logger.info("JFO Engine: Cycle Complete")
     logger.info("=" * 60)
