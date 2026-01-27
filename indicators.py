@@ -2,7 +2,6 @@ import pandas as pd
 import pandas_ta as ta
 import numpy as np
 
-
 def calculate_metrics(df, benchmark_df):
     """
     Advanced Technical Engine for the JFO Analytics Project.
@@ -33,8 +32,9 @@ def calculate_metrics(df, benchmark_df):
     else:
         bench_close = benchmark_df
 
+    # Align data to ensure we are comparing the same dates
     df_close, benchmark_close = df["Close"].align(bench_close, join="inner")
-    df = df.loc[df_close.index]  # align df to match
+    df = df.loc[df_close.index].copy() # Ensure we have a deep copy for calculations
 
     # ------------------------------------------------------------
     # 1. Trend Foundation & Stage Analysis
@@ -46,9 +46,16 @@ def calculate_metrics(df, benchmark_df):
     # ------------------------------------------------------------
     # 2. Institutional Volume Intelligence
     # ------------------------------------------------------------
-    df["Vol_20_Avg"] = pd.to_numeric(ta.sma(df["Volume"], length=20), errors="coerce")
-    df["RV"] = df["Volume"] / df["Vol_20_Avg"]
-    df["Volume_Spike"] = (df["RV"] >= 2.0).fillna(False)
+    # Use .get() to avoid KeyError if 'Volume' is missing due to yfinance formatting
+    volume_col = df.get("Volume")
+    if volume_col is not None:
+        df["Vol_20_Avg"] = pd.to_numeric(ta.sma(volume_col, length=20), errors="coerce")
+        df["RV"] = volume_col / df["Vol_20_Avg"]
+        df["Volume_Spike"] = (df["RV"] >= 2.0).fillna(False)
+    else:
+        df["Vol_20_Avg"] = np.nan
+        df["RV"] = np.nan
+        df["Volume_Spike"] = False
 
     # ------------------------------------------------------------
     # 3. Mansfield Relative Strength (MRS)
@@ -81,13 +88,16 @@ def calculate_metrics(df, benchmark_df):
         "Volume": "sum",
     }
 
+    # Remove columns from ohlc_dict if they don't exist in the df
+    active_ohlc = {k: v for k, v in ohlc_dict.items() if k in df.columns}
+
     # Weekly
-    df_weekly = df.resample("W").apply(ohlc_dict)
+    df_weekly = df.resample("W").apply(active_ohlc)
     df_weekly["RSI_W"] = pd.to_numeric(ta.rsi(df_weekly["Close"], length=14), errors="coerce")
     df["RSI_Weekly"] = df_weekly["RSI_W"].reindex(df.index, method="ffill")
 
-    # Monthly
-    df_monthly = df.resample("M").apply(ohlc_dict)
+    # Monthly - UPDATED FROM 'M' TO 'ME'
+    df_monthly = df.resample("ME").apply(active_ohlc)
     df_monthly["RSI_M"] = pd.to_numeric(ta.rsi(df_monthly["Close"], length=14), errors="coerce")
     df["RSI_Monthly"] = df_monthly["RSI_M"].reindex(df.index, method="ffill")
 
@@ -121,6 +131,7 @@ def get_market_regime_label(spy_df):
         if isinstance(sma_raw, pd.Series):
             sma_series = pd.to_numeric(sma_raw, errors="coerce")
         elif isinstance(sma_raw, (float, np.floating)):
+            # Robust check for numpy types
             sma_series = pd.Series([sma_raw] * len(close), index=close.index)
         else:
             sma_series = pd.Series(sma_raw, index=close.index).astype(float)
@@ -128,8 +139,10 @@ def get_market_regime_label(spy_df):
         latest_sma = sma_series.iloc[-1]
         latest_close = close.iloc[-1]
 
+        # Use pd.isna() instead of .isna() to avoid 'numpy.float64' attribute errors
         if pd.isna(latest_sma):
             return "Neutral (Calculating...)"
+        
         return "🟢 Bullish (Above SMA200)" if latest_close > latest_sma else "🔴 Bearish (Below SMA200)"
 
     except Exception as e:
@@ -143,9 +156,11 @@ def calculate_market_leader_score(row):
     """
     score = 0
 
-    # Safety check
+    # Safety check for required metrics
+    # Use pd.isna(val) for safety against single-value numpy floats
     for key in ("SMA200", "RSI_Weekly", "MRS"):
-        if row.get(key) is None or pd.isna(row[key]):
+        val = row.get(key)
+        if val is None or pd.isna(val):
             return 0
 
     # Stage & Trend Health
@@ -163,13 +178,13 @@ def calculate_market_leader_score(row):
     # Momentum & Volume
     if row["RSI_Weekly"] > 50:
         score += 10
-    if row.get("RSI_Monthly") is not None and row["RSI_Monthly"] > 50:
+    if pd.notna(row.get("RSI_Monthly")) and row["RSI_Monthly"] > 50:
         score += 10
-    if row.get("RV") is not None and row["RV"] > 1.5:
+    if pd.notna(row.get("RV")) and row["RV"] > 1.5:
         score += 10
 
-    # Extension Penalty
-    if row.get("Dist_SMA20") is not None and row["Dist_SMA20"] > 3.0:
+    # Extension Penalty (Overbought)
+    if pd.notna(row.get("Dist_SMA20")) and row["Dist_SMA20"] > 3.0:
         score -= 20
 
     return max(0, min(score, 100))
