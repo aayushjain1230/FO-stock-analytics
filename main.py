@@ -23,7 +23,6 @@ import plotting
 import scoring
 from logger_config import setup_logger
 from utils import retry_on_failure, cache_result, validate_ticker, read_html_table
-from indicators import get_market_regime_label
 
 # Logger
 log_level = os.getenv("LOG_LEVEL", "INFO")
@@ -164,26 +163,31 @@ def run_analytics_engine():
     # DATA DOWNLOAD
     # --------------------------------------
     batch_data = yf.download(
-        scan_list, period="1y", interval="1d",
-        group_by="ticker", threads=True, progress=False
+        scan_list,
+        period="1y",
+        interval="1d",
+        group_by="ticker",
+        threads=True,
+        progress=False,
     )
 
     benchmark_data = yf.download(
-        benchmark_symbol, period="1y", progress=False
+        benchmark_symbol,
+        period="1y",
+        progress=False,
     )
 
     if benchmark_data.empty:
         logger.critical("Benchmark data missing")
         return
 
-    if "Close" not in benchmark_data.columns:
-        benchmark_data = benchmark_data.iloc[:, [0]]
-        benchmark_data.columns = ["Close"]
+    # Normalize benchmark to Close-only (explicit, deterministic)
+    benchmark_data = benchmark_data[["Close"]].dropna()
 
     # --------------------------------------
     # MARKET REGIME (COMPUTED ONCE)
     # --------------------------------------
-    market_regime = get_market_regime_label(benchmark_data)
+    market_regime = indicators.get_market_regime_label(benchmark_data)
     logger.info(f"Market Regime: {market_regime}")
 
     # --------------------------------------
@@ -208,7 +212,11 @@ def run_analytics_engine():
 
             analyzed = indicators.calculate_metrics(df, benchmark_data)
             rating = scoring.generate_rating(analyzed)
-            alerts = state_manager.get_ticker_alerts(ticker, analyzed, prev_state)
+
+            alerts = state_manager.get_ticker_alerts(
+                ticker, analyzed, prev_state
+            )
+
             new_state = state_manager.update_ticker_state(
                 ticker, analyzed, new_state
             )
@@ -235,17 +243,16 @@ def run_analytics_engine():
     # REPORTING
     # --------------------------------------
     report = (
-        "📌 **WATCHLIST**\n" + "".join(watchlist_reports) +
-        "\n📈 **LEADERS**\n" +
-        "".join(v[0] for v in leaders.values()) +
-        "\n📉 **LAGGARDS**\n" +
-        "".join(v[0] for v in laggards.values())
+        "📌 **WATCHLIST**\n"
+        + "".join(watchlist_reports)
+        + "\n📈 **LEADERS**\n"
+        + "".join(v[0] for v in leaders.values())
+        + "\n📉 **LAGGARDS**\n"
+        + "".join(v[0] for v in laggards.values())
     )
 
     if should_send_report(report):
-        telegram_notifier.send_bundle(
-            [report], market_regime
-        )
+        telegram_notifier.send_bundle([report], market_regime)
 
     state_manager.save_current_state(new_state)
 
