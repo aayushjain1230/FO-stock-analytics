@@ -1,8 +1,6 @@
 import os
 import json
 import argparse
-import sys
-import requests
 import hashlib
 import pandas as pd
 import pandas_market_calendars as mcal
@@ -22,7 +20,7 @@ import telegram_notifier
 import plotting
 import scoring
 from logger_config import setup_logger
-from utils import retry_on_failure, cache_result, validate_ticker, read_html_table
+from utils import retry_on_failure, cache_result, read_html_table
 
 # Logger
 log_level = os.getenv("LOG_LEVEL", "INFO")
@@ -48,7 +46,6 @@ def load_watchlist_data():
         with open(WATCHLIST_FILE, "w") as f:
             json.dump(["SPY", "QQQ"], f)
         return ["SPY", "QQQ"]
-
     try:
         with open(WATCHLIST_FILE, "r") as f:
             data = json.load(f)
@@ -56,31 +53,26 @@ def load_watchlist_data():
     except json.JSONDecodeError:
         return []
 
-
 def save_watchlist_data(tickers):
     tickers = sorted(set(t.upper() for t in tickers))
     with open(WATCHLIST_FILE, "w") as f:
         json.dump(tickers, f, indent=4)
 
-
 def manage_cli_updates(add_list=None, remove_list=None):
     current = load_watchlist_data()
     changed = False
-
     if add_list:
         for t in add_list:
             t = t.upper()
             if t not in current:
                 current.append(t)
                 changed = True
-
     if remove_list:
         for t in remove_list:
             t = t.upper()
             if t in current:
                 current.remove(t)
                 changed = True
-
     if changed:
         save_watchlist_data(current)
 
@@ -91,13 +83,11 @@ def load_config():
     path = os.path.join("config", "config.json")
     if not os.path.exists(path):
         return {"benchmark": "SPY"}
-
     try:
         with open(path, "r") as f:
             return json.load(f)
     except Exception:
         return {"benchmark": "SPY"}
-
 
 def is_market_open():
     nyse = mcal.get_calendar("NYSE")
@@ -107,10 +97,8 @@ def is_market_open():
         return False
     return sched.iloc[0].market_open <= now <= sched.iloc[0].market_close
 
-
 def should_send_report(content):
     content_hash = hashlib.md5(content.encode("utf-8")).hexdigest()
-
     if os.path.exists(HASH_FILE):
         with open(HASH_FILE, "r") as f:
             try:
@@ -118,10 +106,8 @@ def should_send_report(content):
                     return False
             except Exception:
                 pass
-
     with open(HASH_FILE, "w") as f:
         json.dump({"hash": content_hash, "ts": str(datetime.now())}, f)
-
     return True
 
 # ==========================================
@@ -133,10 +119,8 @@ def get_sp500_sectors() -> Dict[str, str]:
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers=headers, timeout=30)
-
     table = read_html_table(response.text)
     table["Symbol"] = table["Symbol"].str.replace(".", "-", regex=False)
-
     return dict(zip(table["Symbol"], table["GICS Sector"]))
 
 # ==========================================
@@ -152,16 +136,14 @@ def run_analytics_engine():
 
     config = load_config()
     watchlist = load_watchlist_data()
-
     benchmark_symbol = config.get("benchmark", "SPY")
     sector_map = get_sp500_sectors()
     scan_list = list(set(watchlist + list(sector_map.keys())))
-
     logger.info(f"Scanning {len(scan_list)} tickers")
 
-    # --------------------------------------
+    # -----------------------------
     # DATA DOWNLOAD
-    # --------------------------------------
+    # -----------------------------
     batch_data = yf.download(
         scan_list,
         period="1y",
@@ -202,7 +184,6 @@ def run_analytics_engine():
             df = batch_data[ticker] if ticker in batch_data.columns.levels[0] else None
             if df is None:
                 continue
-
             if isinstance(df.columns, pd.MultiIndex):
                 if "Close" in df.columns.get_level_values(0):
                     df = df["Close"].to_frame()
@@ -210,30 +191,25 @@ def run_analytics_engine():
                     df = df.iloc[:, [0]]
             else:
                 df = df[["Close"]]
-
             df = df.dropna()
             if len(df) < 60:
                 continue
-
             normalized_batch[ticker] = df
-
         except Exception as e:
             logger.warning(f"Normalization failed for {ticker}: {e}", exc_info=True)
-
     batch_data = normalized_batch
 
-    # --------------------------------------
-    # MARKET REGIME (COMPUTED ONCE)
-    # --------------------------------------
-    market_regime = indicators.get_market_regime_label(benchmark_data)
+    # -----------------------------
+    # MARKET REGIME
+    # -----------------------------
+    market_regime = get_market_regime_label(benchmark_data)
     logger.info(f"Market Regime: {market_regime}")
 
-    # --------------------------------------
+    # -----------------------------
     # PROCESSING
-    # --------------------------------------
+    # -----------------------------
     prev_state = state_manager.load_previous_state()
     new_state = {}
-
     watchlist_data_for_plot = {}
     watchlist_reports = []
     leaders = {}
@@ -241,30 +217,25 @@ def run_analytics_engine():
 
     for ticker, df in batch_data.items():
         try:
-            analyzed = calculate_metrics(df, benchmark_data)  # direct call
+            analyzed = calculate_metrics(df, benchmark_data)
             rating = scoring.generate_rating(analyzed)
-
             alerts = state_manager.get_ticker_alerts(ticker, analyzed, prev_state)
             new_state = state_manager.update_ticker_state(ticker, analyzed, new_state)
-
             line = telegram_notifier.format_ticker_report(ticker, alerts, analyzed.iloc[-1], rating)
             sector = sector_map.get(ticker, "Other")
-
             if ticker in watchlist:
                 watchlist_reports.append(line)
                 watchlist_data_for_plot[ticker] = analyzed
-
             if rating["score"] >= 85:
                 leaders.setdefault(sector, []).append(line)
             elif rating["score"] <= 25:
                 laggards.setdefault(sector, []).append(line)
-
         except Exception as e:
             logger.warning(f"{ticker} failed: {e}", exc_info=True)
 
-    # --------------------------------------
+    # -----------------------------
     # REPORTING
-    # --------------------------------------
+    # -----------------------------
     report = (
         "📌 **WATCHLIST**\n"
         + "".join(watchlist_reports)
@@ -279,11 +250,13 @@ def run_analytics_engine():
 
     state_manager.save_current_state(new_state)
 
-    # --------------------------------------
+    # -----------------------------
     # PLOTTING
-    # --------------------------------------
+    # -----------------------------
     if watchlist_data_for_plot:
-        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
+        # ensure all DataFrames align on the same index
+        benchmark_data_plot = benchmark_data.copy()
+        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data_plot)
 
     logger.info("JFO Engine: Cycle Complete")
     logger.info("=" * 60)
@@ -298,17 +271,13 @@ def main():
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--analyze", action="store_true")
     args = parser.parse_args()
-
     if args.add or args.remove:
         manage_cli_updates(args.add, args.remove)
-
     if args.list:
         wl = load_watchlist_data()
         print(", ".join(wl))
-
     if args.analyze or not any(vars(args).values()):
         run_analytics_engine()
-
 
 if __name__ == "__main__":
     main()
