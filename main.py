@@ -116,6 +116,7 @@ def should_send_report(content):
 @cache_result(cache_key="sp500_sectors", ttl_seconds=86400)
 @retry_on_failure(max_retries=3, delay=2)
 def get_sp500_sectors() -> Dict[str, str]:
+    import requests  # <- fix missing requests import
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers=headers, timeout=30)
@@ -152,13 +153,11 @@ def run_analytics_engine():
         threads=True,
         progress=False,
     )
-
     benchmark_data = yf.download(
         benchmark_symbol,
         period="1y",
         progress=False,
     )
-
     if benchmark_data.empty:
         logger.critical("Benchmark data missing")
         return
@@ -244,19 +243,17 @@ def run_analytics_engine():
         + "\n📉 **LAGGARDS**\n"
         + "".join(v[0] for v in laggards.values())
     )
-
     if should_send_report(report):
         telegram_notifier.send_bundle([report], market_regime)
-
     state_manager.save_current_state(new_state)
 
     # -----------------------------
     # PLOTTING
     # -----------------------------
     if watchlist_data_for_plot:
-        # ensure all DataFrames align on the same index
-        benchmark_data_plot = benchmark_data.copy()
-        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data_plot)
+        # Align all DataFrames by index to avoid plotting errors
+        benchmark_plot = benchmark_data.reindex_like(next(iter(watchlist_data_for_plot.values())))
+        plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_plot)
 
     logger.info("JFO Engine: Cycle Complete")
     logger.info("=" * 60)
