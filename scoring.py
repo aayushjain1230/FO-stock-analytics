@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def generate_rating(df):
     """
     Final JFO Scoring Engine: Total Market Intelligence Integration.
@@ -10,6 +9,7 @@ def generate_rating(df):
     2. Institutional Footprint (RV & RS)
     3. Momentum (Multi-Timeframe RSI)
     4. Volatility Guard (ATR Extension Penalty)
+    5. Proximity to Annual Highs/Lows
     """
 
     # -----------------------------
@@ -104,21 +104,26 @@ def generate_rating(df):
         rating = "Tier 5: Avoid 🔴"
 
     # -----------------------------
-    # 52-WEEK HIGH PROXIMITY
+    # 52-WEEK HIGH/LOW PROXIMITY
     # -----------------------------
     dist_high = "N/A"
+    dist_low = "N/A"
 
     if "Close" in df.columns:
-        high_52w = (
-            df["Close"]
-            .rolling(window=252, min_periods=1)
-            .max()
-            .iloc[-1]
-        )
+        # Calculate Rolling Max/Min for 252 trading days (1 Year)
+        rolling_window = df["Close"].rolling(window=252, min_periods=1)
+        high_52w = rolling_window.max().iloc[-1]
+        low_52w = rolling_window.min().iloc[-1]
 
+        # Calculate Distance from 52-Week High
         if pd.notna(high_52w) and high_52w > 0:
-            percent_off = ((high_52w - latest["Close"]) / high_52w) * 100
-            dist_high = f"{round(percent_off, 2)}%"
+            off_high = ((high_52w - latest["Close"]) / high_52w) * 100
+            dist_high = f"{round(off_high, 2)}%"
+
+        # Calculate Distance from 52-Week Low
+        if pd.notna(low_52w) and low_52w > 0:
+            off_low = ((latest["Close"] - low_52w) / low_52w) * 100
+            dist_low = f"{round(off_low, 2)}%"
 
     # -----------------------------
     # RETURN PAYLOAD
@@ -138,6 +143,7 @@ def generate_rating(df):
             "mrs_value": round(mrs, 2),
             "rel_volume": f"{round(rv, 2)}x",
             "dist_52w_high": dist_high,
+            "dist_52w_low": dist_low,
             "volatility_risk": "HIGH" if is_extended else "NORMAL",
         },
     }
