@@ -107,7 +107,7 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     if price:
         report += f"  • Price: ${_escape_md(f'{price:.2f}')} ({_escape_md(trend)})\n"
     
-    report += f"  • Rel. Volume: {_escape_md(metrics.get('rel_volume', 'N/A'))}\n"
+    report += f"  • Rel. Volume: {_escape_md(str(metrics.get('rel_volume', 'N/A')))}\n"
     
     if mrs is not None:
         report += f"  • RS vs SPY: {_escape_md(f'{mrs:+.1f}')} (MRS)\n"
@@ -117,7 +117,7 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     report += f"  • RSI (W/M): {_escape_md(rw_str)} / {_escape_md(rm_str)}\n"
     
     # 52-Week Bounds
-    report += f"  • 52W Range: 🔽 {_escape_md(d_low)} from low | 🔼 {_escape_md(d_high)} to high\n"
+    report += f"  • 52W Range: 🔽 {_escape_md(str(d_low))} from low | 🔼 {_escape_md(str(d_high))} to high\n"
 
     return report + _escape_md("------------------------------------------") + "\n"
 
@@ -155,7 +155,7 @@ def format_sector_summary(sector_map):
 # ============================================================
 
 def _execute_send(url, chat_id, text, retries=3):
-    """Handles the actual POST request with retry logic."""
+    """Handles the actual POST request with retry logic and parsing fallback."""
     payload = {
         "chat_id": chat_id,
         "text": text,
@@ -169,6 +169,16 @@ def _execute_send(url, chat_id, text, retries=3):
             response = requests.post(url, json=payload, timeout=20)
             if response.status_code == 200:
                 return True
+            
+            # If MarkdownV2 fails specifically, try to send without parsing as a safety net
+            if response.status_code == 400 and "can't parse entities" in response.text:
+                print(f"Parsing failure on attempt {attempt+1}. Retrying as plain text...")
+                payload["parse_mode"] = ""
+                # Strip the backslashes we added if we are going plain text
+                payload["text"] = text.replace("\\", "")
+                response = requests.post(url, json=payload, timeout=20)
+                if response.status_code == 200: return True
+
             print(f"Attempt {attempt+1} failed: {response.text}")
             time.sleep(2)
         except Exception as e:
