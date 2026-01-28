@@ -97,7 +97,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Force add files that might be in .gitignore but we want to track (like cache/state)
+          # Force add files that might be in .gitignore but we want to track
           git add -f state/ || true
           git add watchlist.json || true
           git add -f cache/*.json || true
@@ -107,6 +107,12 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Update engine state, cache, and watchlist [automated]"
+            
+            # --- CRITICAL FIX START ---
+            # Pull with rebase ensures we don't get the 'non-fast-forward' rejection
+            git pull --rebase origin main
+            # --- CRITICAL FIX END ---
+            
             git push origin main
           fi
 
