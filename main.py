@@ -224,8 +224,7 @@ def run_analytics_engine():
     
     # Storage for Sector Performance and Leaders
     sector_performance_tracker = {}
-    leaders = {}
-    laggards = {}
+    sector_scoring_tracker = {} # Used to find top/bottom without re-running indicators
 
     for ticker in scan_list:
         try:
@@ -242,6 +241,9 @@ def run_analytics_engine():
             rating = scoring.generate_rating(analyzed)
             alerts = state_manager.get_ticker_alerts(ticker, analyzed, prev_state)
             
+            # --- 3-RUN TREND DATA INJECTION ---
+            rating["price_history"] = df['Close'].tail(3).tolist()
+            
             # Update internal state
             new_state = state_manager.update_ticker_state(ticker, analyzed, new_state)
             
@@ -256,24 +258,15 @@ def run_analytics_engine():
             
             if sector not in sector_performance_tracker:
                 sector_performance_tracker[sector] = []
+                sector_scoring_tracker[sector] = []
                 
             sector_performance_tracker[sector].append(daily_change)
+            sector_scoring_tracker[sector].append((ticker, rating["score"]))
 
             # Handle Watchlist
             if ticker in watchlist:
                 watchlist_reports.append(report_line)
                 watchlist_data_for_plot[ticker] = analyzed
-            
-            # Identify Leaders and Laggards for Summary
-            if rating["score"] >= 85:
-                if sector not in leaders:
-                    leaders[sector] = []
-                leaders[sector].append((ticker, rating["score"]))
-                
-            elif rating["score"] <= 25:
-                if sector not in laggards:
-                    laggards[sector] = []
-                laggards[sector].append((ticker, rating["score"]))
 
         except Exception as e:
             logger.warning(f"Error processing ticker {ticker}: {e}")
@@ -286,8 +279,8 @@ def run_analytics_engine():
             
         avg_change = sum(changes) / len(changes)
         
-        # Get Top/Bottom Stock for this Sector
-        all_sector_tickers = [(t, s['score']) for t, s in [(t, scoring.generate_rating(calculate_metrics(batch_raw[t].dropna(), benchmark_data))) for t in scan_list if sector_map.get(t) == sector_name]]
+        # Get Top/Bottom Stock for this Sector from our scoring tracker
+        all_sector_tickers = sector_scoring_tracker.get(sector_name, [])
         
         if all_sector_tickers:
             all_sector_tickers.sort(key=lambda x: x[1])
@@ -304,7 +297,6 @@ def run_analytics_engine():
         }
 
     # 4. Dispatch to Telegram Notifier
-    # The notifier handles the internal compilation and sending
     telegram_notifier.send_bundle(watchlist_reports, final_sector_stats, market_regime)
 
     # 5. Save State and Generate Plots
