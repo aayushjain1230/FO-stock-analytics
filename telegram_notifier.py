@@ -40,7 +40,6 @@ def _escape_md(text: str) -> str:
     STRICT MarkdownV2 Escaping. 
     Telegram V2 will FAIL to send if even a single '.' or '-' is unescaped.
     """
-    # Reserved characters in Telegram MarkdownV2
     escape_chars = r'_*[]()~`>#+-=|{}.!'
     return re.sub(f'([{re.escape(escape_chars)}])', r'\\\1', str(text))
 
@@ -97,6 +96,8 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     mrs = _safe_float(metrics.get('mrs_value'))
     rsi_w = _safe_float(metrics.get('weekly_rsi'))
     rsi_m = _safe_float(latest.get('RSI_Monthly'))
+    d_high = metrics.get('dist_52w_high', 'N/A')
+    d_low = metrics.get('dist_52w_low', 'N/A')
 
     trend = "Above SMA200" if (price and sma200 and price > sma200) else "Below SMA200"
 
@@ -112,6 +113,9 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     rw_str = f"{rsi_w:.0f}" if rsi_w else "N/A"
     rm_str = f"{rsi_m:.0f}" if rsi_m else "N/A"
     report += f"  • RSI (W/M): {rw_str} / {rm_str}\n"
+    
+    # 52-Week Bounds
+    report += f"  • 52W Range: 🔽 {d_low} from low | 🔼 {d_high} to high\n"
 
     return report + "------------------------------------------\n"
 
@@ -123,7 +127,7 @@ def format_sector_summary(sector_map):
     if not sector_map:
         return ""
 
-    report = "📂 *SECTOR PERFORMANCE (11 Sectors)*\n"
+    report = "📂 *SECTOR PERFORMANCE (S&P 500)*\n"
     report += "------------------------------------------\n"
 
     # Sort sectors by change %
@@ -139,7 +143,7 @@ def format_sector_summary(sector_map):
         
         emoji = "🟢" if chg >= 0 else "🔴"
         report += f"{emoji} *{_escape_md(name)}* ({chg:+.2f}%)\n"
-        report += f"   🔼 Leader: `{top}` | 🔽 Laggard: `{bottom}`\n"
+        report += f"    🔼 Leader: `{top}` | 🔽 Laggard: `{bottom}`\n"
 
     return report
 
@@ -158,7 +162,6 @@ def _execute_send(url, chat_id, text, retries=3):
 
     for attempt in range(retries):
         try:
-            # Use 'data' for payload to mimic curl-style requests if needed
             response = requests.post(url, data=payload, timeout=20)
             if response.status_code == 200:
                 return True
@@ -187,7 +190,6 @@ def send_long_message(message_text):
             _execute_send(url, chat_id, message_text)
             break
         
-        # Find best place to split (newline)
         split_at = message_text.rfind('\n', 0, MAX_LENGTH)
         if split_at == -1: split_at = MAX_LENGTH
 
@@ -198,13 +200,12 @@ def send_long_message(message_text):
         time.sleep(0.8)
 
 # ============================================================
-# BUNDLE COORDINATOR (The Final Boss)
+# BUNDLE COORDINATOR
 # ============================================================
 
 def send_bundle(watchlist_reports, sector_map, regime_label="Unknown"):
     """
     Compiles everything into a single, high-intel daily intel report.
-    Checks for empty data to prevent 'Market Closed' noise.
     """
     if not watchlist_reports and not sector_map:
         print("No significant activity detected. Quiet mode enabled.")
@@ -217,14 +218,14 @@ def send_bundle(watchlist_reports, sector_map, regime_label="Unknown"):
         "============================\n\n"
     )
 
-    # Section 1: Watchlist (Personal Stocks)
+    # Section 1: Watchlist
     if watchlist_reports:
         message += "⭐ *WATCHLIST UPDATE*\n"
         for r in watchlist_reports:
             message += r
         message += "\n"
 
-    # Section 2: 11 Sectors (S&P Overview)
+    # Section 2: 11 Sectors
     if sector_map:
         message += format_sector_summary(sector_map)
 
