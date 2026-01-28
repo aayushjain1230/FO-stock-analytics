@@ -52,16 +52,29 @@ def _escape_md(text: str) -> str:
 def format_ticker_report(ticker, alerts, latest, rating_data):
     """
     Watchlist Detailer. 
-    Shows Score, Rank, Events, and the Full Snapshot block.
+    Shows Score, Rank, Events, and the Full Snapshot block with 3-run trend.
     """
     score = rating_data.get('score', 0)
     tier = rating_data.get('rating', 'N/A')
     metrics = rating_data.get('metrics', {})
     is_extended = rating_data.get('is_extended', False)
 
+    # --- 3-RUN PRICE TREND LOGIC ---
+    history = rating_data.get('price_history', [])
+    trend_emoji = ""
+    if len(history) >= 3:
+        # Check last 3 data points
+        p1, p2, p3 = history[-3], history[-2], history[-1]
+        if p3 > p2 > p1:
+            trend_emoji = " (🚀 🔼🔼🔼)"
+        elif p3 < p2 < p1:
+            trend_emoji = " (⚠️ 🔽🔽🔽)"
+        else:
+            trend_emoji = " (↔️)"
+
     tv_link = f"https://www.tradingview.com/symbols/{ticker}/"
 
-    # Header with Hyperlink (Escape ticker and link separately)
+    # Header with Hyperlink
     report = f"⭐ *[{_escape_md(ticker)}]({_escape_md(tv_link)})* | Score: `{_escape_md(str(score))}/100`\n"
     report += f"🏷 *Rank: {_escape_md(tier)}*\n"
 
@@ -84,7 +97,7 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
         for event in event_list:
             report += f"  • {event}\n"
 
-    # 2. Alerts (Only significant ones)
+    # 2. Alerts
     if alerts and "Initial data recorded" not in str(alerts):
         report += "🎯 *Specific Alerts:*\n"
         for alert in alerts:
@@ -101,12 +114,13 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     d_high = metrics.get('dist_52w_high', 'N/A')
     d_low = metrics.get('dist_52w_low', 'N/A')
 
-    trend = "Above SMA200" if (price and sma200 and price > sma200) else "Below SMA200"
+    trend_label = "Above SMA200" if (price and sma200 and price > sma200) else "Below SMA200"
 
     report += "📊 *Snapshot:*\n"
     if price:
-        report += f"  • Price: ${_escape_md(f'{price:.2f}')} ({_escape_md(trend)})\n"
+        report += f"  • Price: ${_escape_md(f'{price:.2f}')}{_escape_md(trend_emoji)}\n"
     
+    report += f"  • SMA200: {_escape_md(trend_label)}\n"
     report += f"  • Rel. Volume: {_escape_md(str(metrics.get('rel_volume', 'N/A')))}\n"
     
     if mrs is not None:
@@ -116,7 +130,6 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
     rm_str = f"{rsi_m:.0f}" if rsi_m else "N/A"
     report += f"  • RSI (W/M): {_escape_md(rw_str)} / {_escape_md(rm_str)}\n"
     
-    # 52-Week Bounds
     report += f"  • 52W Range: 🔽 {_escape_md(str(d_low))} from low | 🔼 {_escape_md(str(d_high))} to high\n"
 
     return report + _escape_md("------------------------------------------") + "\n"
@@ -124,10 +137,17 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
 def format_sector_summary(sector_map):
     """
     The 11-Sector Organizer.
-    Identifies Highs and Lows for each group.
+    Professional multi-line formatting with tree-style layout and emojis.
     """
     if not sector_map:
         return ""
+
+    sector_emojis = {
+        "Information Technology": "💻", "Health Care": "🏥", "Financials": "🏦",
+        "Consumer Discretionary": "🛍️", "Communication Services": "📡",
+        "Industrials": "⚙️", "Consumer Staples": "🛒", "Energy": "🛢️",
+        "Utilities": "⚡", "Real Estate": "🏢", "Materials": "🏗️"
+    }
 
     report = _escape_md("📂 SECTOR PERFORMANCE (S&P 500)") + "\n"
     report += _escape_md("------------------------------------------") + "\n"
@@ -143,10 +163,13 @@ def format_sector_summary(sector_map):
         top = data.get('top', 'N/A')
         bottom = data.get('bottom', 'N/A')
         
-        emoji = "🟢" if chg >= 0 else "🔴"
-        # Escape the name and the formatted change string
-        report += f"{emoji} *{_escape_md(name)}* ({_escape_md(f'{chg:+.2f}%')})\n"
-        report += f"    🔼 Leader: `{_escape_md(top)}` | 🔽 Laggard: `{_escape_md(bottom)}`\n"
+        s_emoji = sector_emojis.get(name, "📁")
+        perf_emoji = "🟢" if chg >= 0 else "🔴"
+        
+        # Professional Multi-line layout
+        report += f"{perf_emoji} {s_emoji} *{_escape_md(name)}* ({_escape_md(f'{chg:+.2f}%')})\n"
+        report += f"    ├ 🏆 Leader: `{_escape_md(top)}`\n"
+        report += f"    └ 📉 Laggard: `{_escape_md(bottom)}`\n\n"
 
     return report
 
@@ -165,16 +188,14 @@ def _execute_send(url, chat_id, text, retries=3):
 
     for attempt in range(retries):
         try:
-            # Send using json payload for better handling of escaped characters
             response = requests.post(url, json=payload, timeout=20)
             if response.status_code == 200:
                 return True
             
-            # If MarkdownV2 fails specifically, try to send without parsing as a safety net
+            # If MarkdownV2 fails, fallback to plain text safety net
             if response.status_code == 400 and "can't parse entities" in response.text:
                 print(f"Parsing failure on attempt {attempt+1}. Retrying as plain text...")
                 payload["parse_mode"] = ""
-                # Strip the backslashes we added if we are going plain text
                 payload["text"] = text.replace("\\", "")
                 response = requests.post(url, json=payload, timeout=20)
                 if response.status_code == 200: return True
@@ -204,7 +225,6 @@ def send_long_message(message_text):
             _execute_send(url, chat_id, message_text)
             break
         
-        # Find best place to split (newline)
         split_at = message_text.rfind('\n', 0, MAX_LENGTH)
         if split_at == -1: split_at = MAX_LENGTH
 
@@ -226,7 +246,7 @@ def send_bundle(watchlist_reports, sector_map, regime_label="Unknown"):
         print("No significant activity detected. Quiet mode enabled.")
         return
 
-    # Header - All static elements escaped
+    # Header
     message = (
         _escape_md("🏦 JAIN FAMILY OFFICE: DAILY INTEL") + "\n"
         f"Market Regime: {_escape_md(regime_label)}\n"
