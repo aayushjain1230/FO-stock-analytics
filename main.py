@@ -52,7 +52,10 @@ def load_watchlist_data():
     try:
         with open(WATCHLIST_FILE, "r") as f:
             data = json.load(f)
-            return data if isinstance(data, list) else []
+            if isinstance(data, list):
+                return data
+            else:
+                return []
     except json.JSONDecodeError:
         return []
 
@@ -64,18 +67,23 @@ def save_watchlist_data(tickers):
 def manage_cli_updates(add_list=None, remove_list=None):
     current = load_watchlist_data()
     changed = False
+    
     if add_list:
         for t in add_list:
             t = t.upper()
             if t not in current:
                 current.append(t)
                 changed = True
+                logger.info(f"Added {t} to watchlist")
+                
     if remove_list:
         for t in remove_list:
             t = t.upper()
             if t in current:
                 current.remove(t)
                 changed = True
+                logger.info(f"Removed {t} from watchlist")
+                
     if changed:
         save_watchlist_data(current)
 
@@ -89,28 +97,46 @@ def load_config():
     try:
         with open(path, "r") as f:
             return json.load(f)
-    except Exception:
+    except Exception as e:
+        logger.error(f"Error loading config: {e}")
         return {"benchmark": "SPY"}
 
 def is_market_open():
+    """Checks the NYSE calendar to see if the market is currently active."""
     nyse = mcal.get_calendar("NYSE")
     now = datetime.now(pytz.utc)
+    
+    # Get the schedule for today
     sched = nyse.schedule(start_date=now, end_date=now)
+    
     if sched.empty:
         return False
-    return sched.iloc[0].market_open <= now <= sched.iloc[0].market_close
+        
+    # Schedule times are typically returned in UTC
+    market_open = sched.iloc[0].market_open
+    market_close = sched.iloc[0].market_close
+    
+    return market_open <= now <= market_close
 
 def should_send_report(content):
+    """Prevents duplicate reports by hashing the content."""
     content_hash = hashlib.md5(content.encode("utf-8")).hexdigest()
+    
     if os.path.exists(HASH_FILE):
         with open(HASH_FILE, "r") as f:
             try:
-                if json.load(f).get("hash") == content_hash:
+                state = json.load(f)
+                if state.get("hash") == content_hash:
                     return False
             except Exception:
                 pass
+                
     with open(HASH_FILE, "w") as f:
-        json.dump({"hash": content_hash, "ts": str(datetime.now())}, f)
+        json.dump({
+            "hash": content_hash, 
+            "timestamp": str(datetime.now())
+        }, f)
+        
     return True
 
 # ==========================================
@@ -119,15 +145,21 @@ def should_send_report(content):
 @cache_result(cache_key="sp500_sectors", ttl_seconds=86400)
 @retry_on_failure(max_retries=3, delay=2)
 def get_sp500_sectors() -> Dict[str, str]:
+    """Scrapes Wikipedia for S&P 500 company sector data."""
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    
     response = requests.get(url, headers=headers, timeout=30)
     
-    # Use read_html via StringIO to handle Wikipedia's table structure
+    # Using read_html to handle the table parsing
     tables = pd.read_html(StringIO(response.text))
     table = tables[0]
     
+    # Clean ticker symbols for yfinance (replace dots with dashes)
     table["Symbol"] = table["Symbol"].str.replace(".", "-", regex=False)
+    
     return dict(zip(table["Symbol"], table["GICS Sector"]))
 
 # ==========================================
@@ -138,8 +170,10 @@ def run_analytics_engine():
     logger.info("Jain Family Office: Market Intelligence Engine v2")
     logger.info("=" * 60)
 
+    # 🛑 THE FIX: Stop everything immediately if the market is closed.
     if not is_market_open():
-        logger.info("Market closed – using last available close data")
+        logger.info("MARKET IS CLOSED. Cycle terminated to avoid duplicate notifications.")
+        return
 
     config = load_config()
     watchlist = load_watchlist_data()
@@ -147,7 +181,8 @@ def run_analytics_engine():
     
     sector_map = get_sp500_sectors()
     scan_list = list(set(watchlist + list(sector_map.keys())))
-    logger.info(f"Scanning {len(scan_list)} total tickers")
+    
+    logger.info(f"Scanning {len(scan_list)} total tickers (Watchlist + S&P 500)")
 
     # 1. Download Data
     batch_raw = yf.download(
@@ -166,16 +201,18 @@ def run_analytics_engine():
     )
 
     if benchmark_raw.empty:
-        logger.critical("Failed to download benchmark data. Aborting.")
+        logger.critical("CRITICAL: Failed to download benchmark data. Aborting cycle.")
         return
 
-    # Normalize Benchmark (handle MultiIndex if yf returns it)
+    # Normalize Benchmark Data
     if isinstance(benchmark_raw.columns, pd.MultiIndex):
         benchmark_data = benchmark_raw.xs("Close", level=1, axis=1) if "Close" in benchmark_raw.columns.get_level_values(1) else benchmark_raw.iloc[:, 0]
     else:
         benchmark_data = benchmark_raw["Close"]
     
     benchmark_data = benchmark_data.to_frame("Close").dropna()
+    
+    # Detect Market Regime
     market_regime = get_market_regime_label(benchmark_data)
     logger.info(f"Detected Market Regime: {market_regime}")
 
@@ -185,13 +222,14 @@ def run_analytics_engine():
     watchlist_data_for_plot = {}
     watchlist_reports = []
     
-    # Dictionaries to hold (Ticker, Score) tuples for clean formatting
+    # Storage for Sector Performance and Leaders
+    sector_performance_tracker = {}
     leaders = {}
     laggards = {}
 
     for ticker in scan_list:
         try:
-            # Extract and flatten data for this ticker
+            # Ensure ticker data exists in batch
             if ticker not in batch_raw.columns.levels[0]:
                 continue
             
@@ -199,104 +237,95 @@ def run_analytics_engine():
             if len(df) < 60:
                 continue
 
-            # Run Analysis
+            # Core Calculations
             analyzed = calculate_metrics(df, benchmark_data)
             rating = scoring.generate_rating(analyzed)
             alerts = state_manager.get_ticker_alerts(ticker, analyzed, prev_state)
+            
+            # Update internal state
             new_state = state_manager.update_ticker_state(ticker, analyzed, new_state)
             
-            line = telegram_notifier.format_ticker_report(ticker, alerts, analyzed.iloc[-1], rating)
+            # Daily Percentage Change for Sector Weighting
+            daily_change = ((df['Close'].iloc[-1] - df['Close'].iloc[-2]) / df['Close'].iloc[-2]) * 100
+            
+            # Generate Report Snippet
+            report_line = telegram_notifier.format_ticker_report(ticker, alerts, analyzed.iloc[-1], rating)
+            
+            # Categorize Sector
             sector = sector_map.get(ticker, "Other")
+            
+            if sector not in sector_performance_tracker:
+                sector_performance_tracker[sector] = []
+                
+            sector_performance_tracker[sector].append(daily_change)
 
-            # Grouping for report
+            # Handle Watchlist
             if ticker in watchlist:
-                watchlist_reports.append(line)
+                watchlist_reports.append(report_line)
                 watchlist_data_for_plot[ticker] = analyzed
             
-            # Store Ticker and Score cleanly for the final report
+            # Identify Leaders and Laggards for Summary
             if rating["score"] >= 85:
-                leaders.setdefault(sector, []).append((ticker, rating["score"]))
+                if sector not in leaders:
+                    leaders[sector] = []
+                leaders[sector].append((ticker, rating["score"]))
+                
             elif rating["score"] <= 25:
-                laggards.setdefault(sector, []).append((ticker, rating["score"]))
+                if sector not in laggards:
+                    laggards[sector] = []
+                laggards[sector].append((ticker, rating["score"]))
 
         except Exception as e:
-            logger.warning(f"Failed to process {ticker}: {e}")
+            logger.warning(f"Error processing ticker {ticker}: {e}")
 
-    # 3. Report Compilation (Clean Sector Grouping)
-    report_lines = []
-    report_lines.append(f"🏛 **JFO MARKET INTELLIGENCE**")
-    report_lines.append(f"Regime: {market_regime}")
-    report_lines.append("="*20)
-
-    # Watchlist Section (Always included if present)
-    if watchlist_reports:
-        report_lines.append("\n📌 **WATCHLIST UPDATES**")
-        report_lines.append("".join(watchlist_reports))
-
-    # Leaders Section
-    if leaders:
-        report_lines.append("\n🚀 **SECTOR LEADERS (Score 85+)**")
-        for sec, items in sorted(leaders.items()):
-            # Sort by score descending
-            items.sort(key=lambda x: x[1], reverse=True)
-            # Format: AAPL(99), MSFT(95)...
-            formatted_tickers = [f"{t}({s})" for t, s in items[:6]]
-            report_lines.append(f"📂 *{sec}*: {', '.join(formatted_tickers)}")
-
-    # Laggards Section
-    if laggards:
-        report_lines.append("\n📉 **SECTOR LAGGARDS (Score <25)**")
-        for sec, items in sorted(laggards.items()):
-            # Sort by score ascending (worst first)
-            items.sort(key=lambda x: x[1])
-            formatted_tickers = [f"{t}({s})" for t, s in items[:6]]
-            report_lines.append(f"📂 *{sec}*: {', '.join(formatted_tickers)}")
-
-    final_report = "\n".join(report_lines)
-
-    # 4. Finalizing
-    if should_send_report(final_report):
-        # We manually call the bot API here to ensure we send ONE message with NO links
-        bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
-        chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    # 3. Finalize the Sector Summary (11 Sectors)
+    final_sector_stats = {}
+    for sector_name, changes in sector_performance_tracker.items():
+        if not changes:
+            continue
+            
+        avg_change = sum(changes) / len(changes)
         
-        if bot_token and chat_id:
-            try:
-                # disable_web_page_preview=True prevents the big link previews
-                url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-                payload = {
-                    "chat_id": chat_id, 
-                    "text": final_report, 
-                    "parse_mode": "Markdown",
-                    "disable_web_page_preview": True 
-                }
-                requests.post(url, json=payload)
-                logger.info("Executive report dispatched to Telegram")
-            except Exception as e:
-                logger.error(f"Telegram Send Failed: {e}")
+        # Get Top/Bottom Stock for this Sector
+        all_sector_tickers = [(t, s['score']) for t, s in [(t, scoring.generate_rating(calculate_metrics(batch_raw[t].dropna(), benchmark_data))) for t in scan_list if sector_map.get(t) == sector_name]]
+        
+        if all_sector_tickers:
+            all_sector_tickers.sort(key=lambda x: x[1])
+            top_stock = all_sector_tickers[-1][0]
+            bottom_stock = all_sector_tickers[0][0]
         else:
-            logger.warning("Telegram credentials missing.")
-    else:
-        logger.info("No actionable changes. Telegram message skipped.")
-    
+            top_stock = "N/A"
+            bottom_stock = "N/A"
+            
+        final_sector_stats[sector_name] = {
+            'change': avg_change,
+            'top': top_stock,
+            'bottom': bottom_stock
+        }
+
+    # 4. Dispatch to Telegram Notifier
+    # The notifier handles the internal compilation and sending
+    telegram_notifier.send_bundle(watchlist_reports, final_sector_stats, market_regime)
+
+    # 5. Save State and Generate Plots
     state_manager.save_current_state(new_state)
 
     if watchlist_data_for_plot:
         plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
-        logger.info("Watchlist comparison charts updated")
+        logger.info("Watchlist performance charts updated and saved.")
 
-    logger.info("JFO Engine: Cycle Complete")
+    logger.info("JFO Engine: Analysis Cycle Complete")
     logger.info("=" * 60)
 
 # ==========================================
 # ENTRY POINT
 # ==========================================
 def main():
-    parser = argparse.ArgumentParser(description="JFO Stock Intelligence System")
-    parser.add_argument("--add", nargs="+", help="Add tickers to watchlist")
-    parser.add_argument("--remove", nargs="+", help="Remove tickers from watchlist")
-    parser.add_argument("--list", action="store_true", help="List current watchlist")
-    parser.add_argument("--analyze", action="store_true", help="Run the full analysis engine")
+    parser = argparse.ArgumentParser(description="Jain Family Office: Stock Intelligence System")
+    parser.add_argument("--add", nargs="+", help="Add specific tickers to the watchlist")
+    parser.add_argument("--remove", nargs="+", help="Remove specific tickers from the watchlist")
+    parser.add_argument("--list", action="store_true", help="Display the current active watchlist")
+    parser.add_argument("--analyze", action="store_true", help="Manually trigger the full analysis engine")
     
     args = parser.parse_args()
 
@@ -304,10 +333,10 @@ def main():
         manage_cli_updates(args.add, args.remove)
     
     if args.list:
-        wl = load_watchlist_data()
-        print(f"Current Watchlist: {', '.join(wl)}")
+        current_watchlist = load_watchlist_data()
+        print(f"Current Active Watchlist: {', '.join(current_watchlist)}")
     
-    # Default to analysis if no flags or specifically requested
+    # Run the engine if specifically requested or if no other flags are set
     if args.analyze or not any(vars(args).values()):
         run_analytics_engine()
 
