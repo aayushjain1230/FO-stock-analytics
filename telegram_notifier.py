@@ -40,6 +40,8 @@ def _escape_md(text: str) -> str:
     STRICT MarkdownV2 Escaping. 
     Telegram V2 will FAIL to send if even a single '.' or '-' is unescaped.
     """
+    if text is None: return ""
+    # Reserved characters in Telegram MarkdownV2
     escape_chars = r'_*[]()~`>#+-=|{}.!'
     return re.sub(f'([{re.escape(escape_chars)}])', r'\\\1', str(text))
 
@@ -59,20 +61,20 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
 
     tv_link = f"https://www.tradingview.com/symbols/{ticker}/"
 
-    # Header with Hyperlink
-    report = f"⭐ *[{_escape_md(ticker)}]({_escape_md(tv_link)})* | Score: `{score}/100`\n"
+    # Header with Hyperlink (Escape ticker and link separately)
+    report = f"⭐ *[{_escape_md(ticker)}]({_escape_md(tv_link)})* | Score: `{_escape_md(str(score))}/100`\n"
     report += f"🏷 *Rank: {_escape_md(tier)}*\n"
 
     if is_extended:
-        report += "⚠️ *STRETCHED: High Volatility Risk*\n"
+        report += _escape_md("⚠️ STRETCHED: High Volatility Risk") + "\n"
 
     # 1. Critical Events
     event_list = []
     if latest.get('Golden_Cross'): event_list.append("🚀 *GOLDEN CROSS*")
     
-    rv = _safe_float(latest.get('RV'))
-    if rv and rv >= 2.0: 
-        event_list.append(f"📊 *VOLUME SPIKE ({rv:.1f}x)*")
+    rv_val = _safe_float(latest.get('RV'))
+    if rv_val and rv_val >= 2.0: 
+        event_list.append(f"📊 *VOLUME SPIKE ({_escape_md(f'{rv_val:.1f}x')})*")
         
     if latest.get('RS_Breakout'): 
         event_list.append("⚡ *RS BREAKOUT*")
@@ -88,7 +90,7 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
         for alert in alerts:
             report += f"  • {_escape_md(alert)}\n"
     elif not event_list:
-        report += "🎯 *Events:* No new technical shifts.\n"
+        report += _escape_md("🎯 Events: No new technical shifts.") + "\n"
 
     # 3. The Full Snapshot Block
     price = _safe_float(latest.get('Close'))
@@ -103,21 +105,21 @@ def format_ticker_report(ticker, alerts, latest, rating_data):
 
     report += "📊 *Snapshot:*\n"
     if price:
-        report += f"  • Price: ${price:.2f} ({trend})\n"
+        report += f"  • Price: ${_escape_md(f'{price:.2f}')} ({_escape_md(trend)})\n"
     
-    report += f"  • Rel. Volume: {metrics.get('rel_volume', 'N/A')}\n"
+    report += f"  • Rel. Volume: {_escape_md(metrics.get('rel_volume', 'N/A'))}\n"
     
     if mrs is not None:
-        report += f"  • RS vs SPY: {mrs:+.1f} (MRS)\n"
+        report += f"  • RS vs SPY: {_escape_md(f'{mrs:+.1f}')} (MRS)\n"
     
     rw_str = f"{rsi_w:.0f}" if rsi_w else "N/A"
     rm_str = f"{rsi_m:.0f}" if rsi_m else "N/A"
-    report += f"  • RSI (W/M): {rw_str} / {rm_str}\n"
+    report += f"  • RSI (W/M): {_escape_md(rw_str)} / {_escape_md(rm_str)}\n"
     
     # 52-Week Bounds
-    report += f"  • 52W Range: 🔽 {d_low} from low | 🔼 {d_high} to high\n"
+    report += f"  • 52W Range: 🔽 {_escape_md(d_low)} from low | 🔼 {_escape_md(d_high)} to high\n"
 
-    return report + "------------------------------------------\n"
+    return report + _escape_md("------------------------------------------") + "\n"
 
 def format_sector_summary(sector_map):
     """
@@ -127,8 +129,8 @@ def format_sector_summary(sector_map):
     if not sector_map:
         return ""
 
-    report = "📂 *SECTOR PERFORMANCE (S&P 500)*\n"
-    report += "------------------------------------------\n"
+    report = _escape_md("📂 SECTOR PERFORMANCE (S&P 500)") + "\n"
+    report += _escape_md("------------------------------------------") + "\n"
 
     # Sort sectors by change %
     sorted_names = sorted(sector_map.keys(), 
@@ -142,8 +144,9 @@ def format_sector_summary(sector_map):
         bottom = data.get('bottom', 'N/A')
         
         emoji = "🟢" if chg >= 0 else "🔴"
-        report += f"{emoji} *{_escape_md(name)}* ({chg:+.2f}%)\n"
-        report += f"    🔼 Leader: `{top}` | 🔽 Laggard: `{bottom}`\n"
+        # Escape the name and the formatted change string
+        report += f"{emoji} *{_escape_md(name)}* ({_escape_md(f'{chg:+.2f}%')})\n"
+        report += f"    🔼 Leader: `{_escape_md(top)}` | 🔽 Laggard: `{_escape_md(bottom)}`\n"
 
     return report
 
@@ -162,7 +165,8 @@ def _execute_send(url, chat_id, text, retries=3):
 
     for attempt in range(retries):
         try:
-            response = requests.post(url, data=payload, timeout=20)
+            # Send using json payload for better handling of escaped characters
+            response = requests.post(url, json=payload, timeout=20)
             if response.status_code == 200:
                 return True
             print(f"Attempt {attempt+1} failed: {response.text}")
@@ -190,6 +194,7 @@ def send_long_message(message_text):
             _execute_send(url, chat_id, message_text)
             break
         
+        # Find best place to split (newline)
         split_at = message_text.rfind('\n', 0, MAX_LENGTH)
         if split_at == -1: split_at = MAX_LENGTH
 
@@ -211,26 +216,27 @@ def send_bundle(watchlist_reports, sector_map, regime_label="Unknown"):
         print("No significant activity detected. Quiet mode enabled.")
         return
 
-    # Header
+    # Header - All static elements escaped
     message = (
-        "🏦 *JAIN FAMILY OFFICE: DAILY INTEL*\n"
+        _escape_md("🏦 JAIN FAMILY OFFICE: DAILY INTEL") + "\n"
         f"Market Regime: {_escape_md(regime_label)}\n"
-        "============================\n\n"
+        f"{_escape_md('============================')}\n\n"
     )
 
-    # Section 1: Watchlist
+    # Section 1: Watchlist Update
     if watchlist_reports:
         message += "⭐ *WATCHLIST UPDATE*\n"
         for r in watchlist_reports:
             message += r
         message += "\n"
 
-    # Section 2: 11 Sectors
+    # Section 2: 11 Sectors Overview
     if sector_map:
         message += format_sector_summary(sector_map)
 
     # Footer
-    message += f"\n_Status: Analysis Complete ({time.strftime('%Y-%m-%d')})_"
+    curr_date = time.strftime('%Y-%m-%d')
+    message += f"\n_Status: Analysis Complete ({_escape_md(curr_date)})_"
 
     # Send it
     send_long_message(message)
