@@ -114,6 +114,10 @@ python main.py
 python main.py --analyze
 ```
 
+`python main.py` respects market hours for scheduled/normal runs.
+`python main.py --analyze` performs a manual run even when the market is closed.
+Use `python main.py --force` if you want the same override behavior without relying on the manual-analysis flag.
+
 ### Watchlist Management
 ```bash
 # Add tickers
@@ -355,3 +359,78 @@ This is a private project. For improvements, please document changes and test th
 ---
 
 **Built with ❤️ for institutional-grade market intelligence**
+
+
+---
+
+## Quant Intelligence Engine Additions
+
+The platform now includes a research-focused quant layer on top of the original watchlist scanner.
+
+### Generate a Quant Research Snapshot
+```bash
+python main.py --quant-report
+```
+This writes `state/latest_quant_research.json` with return, risk, trend, momentum, volume, volatility-regime, quant-score, and natural-language research notes for the watchlist.
+
+### Generate the Static Quant Dashboard
+```bash
+python main.py --dashboard
+```
+This writes `plots/quant_research_dashboard.html` with the requested dashboard sections: market overview, watchlist, technical analysis, momentum research, options lab, Greeks lab, Monte Carlo, statistical arbitrage, portfolio analytics, and risk analytics.
+
+### Run the Options Lab
+```bash
+python main.py --option-lab --stock-price 195.20 --strike 195 --days 37 --volatility 0.312 --market-price 6.40 --option-type call
+```
+The options lab returns Black-Scholes fair value, implied volatility, Greeks, break-even, Monte Carlo price, probability metrics, and plain-English Greek explanations.
+
+### Python Modules Added
+| File | Purpose |
+| :--- | :--- |
+| `quant_analytics.py` | Return/risk metrics, beta/alpha, volatility regimes, portfolio analytics, VaR, expected shortfall, and scoring. |
+| `options_analytics.py` | Black-Scholes, Greeks, implied volatility solver, break-even analysis, and Monte Carlo option pricing. |
+| `backtesting.py` | Momentum research, volatility targeting, performance reports, and pairs trading utilities. |
+| `research_reports.py` | Educational natural-language stock and option research summaries. |
+| `quant_dashboard.py` | Static HTML dashboard generation from saved state snapshots. |
+
+Note: `pandas-ta` was removed from `requirements.txt` for Python 3.14 compatibility. `indicators.py` includes local fallback implementations for SMA, EMA, RSI, ATR, MACD, and ROC.
+
+
+---
+
+## Intelligence Platform Upgrade
+
+The system now includes the first production foundation for the Jain Family Office Quant Intelligence Engine: persistent research storage, structured scoring, market regime analysis, Why Now gating, and signal validation scaffolding.
+
+### Initialize the Research Database
+```bash
+python main.py --init-db
+```
+Creates `state/jfo_quant.db` with tables for stocks, price history, technical metrics, fundamentals, scores, market regimes, signals, options data, news events, and portfolio positions.
+
+### Run the Intelligence Snapshot
+```bash
+python main.py --quant-report
+```
+Downloads watchlist and market-context data, stores price/technical/score records, calculates market regime, and writes `state/latest_quant_research.json`.
+
+### Review Signal Validation
+```bash
+python main.py --signal-performance
+```
+Summarizes measured signal outcomes once enough future price data exists. This supports the rule that no signal should be trusted without measurable historical performance.
+
+### Why Now Rule
+Alerts are now gated by a Why Now engine. A stock can score well and remain on the watchlist, but it will not become an alert unless a fresh trigger exists, such as breakout, relative-strength acceleration, volume spike, 52-week high pressure, pullback to support, or rank improvement.
+
+### New Platform Modules
+| File | Purpose |
+| :--- | :--- |
+| `database.py` | SQLite schema and persistence for prices, scores, regimes, signals, options, news, and portfolio tables. |
+| `intelligence_scoring.py` | Technical, momentum, volume, fundamental, catalyst, risk, confidence, and final 0-100 scoring. |
+| `market_regime.py` | S&P 500, Nasdaq, Russell 2000, Dow, VIX, and sector ETF regime/health analysis. |
+| `why_now.py` | Alert gating and trigger explanations with evidence, date of change, strength, and invalidation condition. |
+| `signal_validation.py` | Outcome measurement for 1w, 1m, 3m, 6m returns, drawdown, and S&P-relative performance. |
+
+This upgrade keeps the original watchlist, S&P 500 scan, charts, and Telegram flow intact while moving the project toward evidence-based opportunity discovery.
