@@ -297,11 +297,57 @@ def _build_run_summary(interesting_rows, market_regime, watchlist_count, config)
 
 
 
+
+def _yahoo_safe_period(period, interval):
+    """Clamp Yahoo Finance periods to ranges supported for intraday candles."""
+    intraday_limits = {
+        "1m": "7d",
+        "2m": "60d",
+        "5m": "60d",
+        "15m": "60d",
+        "30m": "60d",
+        "60m": "730d",
+        "90m": "60d",
+        "1h": "730d",
+    }
+    interval = str(interval or "1d").lower()
+    period = str(period or "1y").lower()
+    if interval not in intraday_limits:
+        return period
+
+    limit = intraday_limits[interval]
+    if _period_to_days(period) > _period_to_days(limit):
+        logger.warning(f"Yahoo only supports interval={interval} for about {limit}; using period={limit} instead of {period}.")
+        return limit
+    return period
+
+
+def _period_to_days(period):
+    period = str(period or "0d").lower().strip()
+    if period.endswith("mo"):
+        number, unit = period[:-2], "mo"
+    else:
+        number, unit = period[:-1], period[-1:]
+    try:
+        value = int(number)
+    except Exception:
+        return 10_000
+    if unit == "d":
+        return value
+    if unit == "w":
+        return value * 7
+    if unit == "mo":
+        return value * 30
+    if unit == "y":
+        return value * 365
+    return 10_000
+
 def _download_context(symbol_map, period, interval):
     if yf is None:
         return {}
     symbols = list(symbol_map.values())
-    raw = yf.download(symbols, period=period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
+    safe_period = _yahoo_safe_period(period, interval)
+    raw = yf.download(symbols, period=safe_period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
     data = {}
     for name, symbol in symbol_map.items():
         try:
@@ -366,12 +412,13 @@ def run_analytics_engine(force=False):
 
     period = settings.get("period", "1y")
     interval = settings.get("interval", "1d")
+    download_period = _yahoo_safe_period(period, interval)
     minimum_history_days = int(settings.get("minimum_history_days", 252))
     risk_free_rate = float(settings.get("risk_free_rate", 0.045))
 
     batch_raw = yf.download(
         scan_list,
-        period=period,
+        period=download_period,
         interval=interval,
         group_by="ticker",
         threads=True,
@@ -380,7 +427,7 @@ def run_analytics_engine(force=False):
     )
     benchmark_raw = yf.download(
         benchmark_symbol,
-        period=period,
+        period=download_period,
         interval=interval,
         progress=False,
         auto_adjust=False,
@@ -391,7 +438,7 @@ def run_analytics_engine(force=False):
         return
 
     benchmark_data = _normalize_benchmark_data(benchmark_raw)
-    market_payload, sector_data = _build_market_intelligence(period, interval)
+    market_payload, sector_data = _build_market_intelligence(download_period, interval)
     market_regime_label = market_payload.get("regime") or get_market_regime_label(benchmark_data, config=config)
     logger.info(f"Detected Market Regime: {market_regime_label} | Health {market_payload.get('health_score')}/100")
 
@@ -556,13 +603,14 @@ def run_quant_research_report():
 
     period = settings.get("quant_period", "2y")
     interval = settings.get("interval", "1d")
+    download_period = _yahoo_safe_period(period, interval)
     benchmark_symbol = config.get("benchmark", "SPY")
     risk_free_rate = float(settings.get("risk_free_rate", 0.045))
 
-    batch_raw = yf.download(watchlist, period=period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
-    benchmark_raw = yf.download(benchmark_symbol, period=period, interval=interval, progress=False, auto_adjust=False)
+    batch_raw = yf.download(watchlist, period=download_period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
+    benchmark_raw = yf.download(benchmark_symbol, period=download_period, interval=interval, progress=False, auto_adjust=False)
     benchmark_data = _normalize_benchmark_data(benchmark_raw) if not benchmark_raw.empty else None
-    market_payload, sector_data = _build_market_intelligence(period, interval)
+    market_payload, sector_data = _build_market_intelligence(download_period, interval)
 
     rows = []
     for ticker in watchlist:
