@@ -64,6 +64,8 @@ DEFAULT_CONFIG = {
     "settings": {
         "period": "1y",
         "interval": "1d",
+        "research_interval": "1d",
+        "use_intraday_research": False,
         "minimum_history_days": 252,
         "sma_trend": 20,
         "sma_fast": 50,
@@ -342,6 +344,24 @@ def _period_to_days(period):
         return value * 365
     return 10_000
 
+
+def _research_download_params(settings, period_key="period", default_period="1y"):
+    """Use stable daily candles for scoring unless intraday research is explicitly enabled."""
+    period = settings.get(period_key, default_period)
+    configured_interval = str(settings.get("interval", "1d")).lower()
+    research_interval = str(settings.get("research_interval", "1d")).lower()
+
+    if settings.get("use_intraday_research", False):
+        interval = configured_interval
+    else:
+        interval = research_interval or "1d"
+        if configured_interval not in ("1d", "1wk", "1mo") and interval == "1d":
+            logger.warning(
+                f"Config interval={configured_interval} is intraday. Running the bot every 15 minutes does not require intraday candles; using interval=1d for research scoring."
+            )
+
+    return period, interval, _yahoo_safe_period(period, interval)
+
 def _download_context(symbol_map, period, interval):
     if yf is None:
         return {}
@@ -410,9 +430,7 @@ def run_analytics_engine(force=False):
 
     logger.info(f"Scanning {len(scan_list)} total tickers (watchlist + S&P 500)")
 
-    period = settings.get("period", "1y")
-    interval = settings.get("interval", "1d")
-    download_period = _yahoo_safe_period(period, interval)
+    period, interval, download_period = _research_download_params(settings, period_key="period", default_period="1y")
     minimum_history_days = int(settings.get("minimum_history_days", 252))
     risk_free_rate = float(settings.get("risk_free_rate", 0.045))
 
@@ -601,9 +619,7 @@ def run_quant_research_report():
         print("Watchlist is empty. Add tickers before running --quant-report.")
         return
 
-    period = settings.get("quant_period", "2y")
-    interval = settings.get("interval", "1d")
-    download_period = _yahoo_safe_period(period, interval)
+    period, interval, download_period = _research_download_params(settings, period_key="quant_period", default_period="2y")
     benchmark_symbol = config.get("benchmark", "SPY")
     risk_free_rate = float(settings.get("risk_free_rate", 0.045))
 
