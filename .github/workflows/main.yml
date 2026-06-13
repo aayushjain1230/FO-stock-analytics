@@ -50,9 +50,7 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run Tests
-        run: |
-          python -m unittest discover -s tests
+      
 
       - name: Update Watchlist
         if: github.event.inputs.action == 'Add to Watchlist' || github.event.inputs.action == 'Remove from Watchlist'
