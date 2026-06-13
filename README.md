@@ -467,3 +467,52 @@ Example `portfolio.json`:
 ```
 
 The report writes `state/latest_portfolio_report.json` and stores a snapshot in SQLite. It calculates portfolio return, variance, volatility, covariance, correlation, Sharpe ratio, drawdown, risk contribution, diversification, health score, time-series risk trends, Monte Carlo forecast, Markowitz optimization comparison, factor exposure, and portfolio-level Why Now triggers.
+
+
+---
+
+## Stock Discovery & Individual Stock Intelligence
+
+Run the full watchlist discovery engine:
+
+```bash
+python main.py --stock-discovery
+```
+
+Run a single-ticker intelligence report:
+
+```bash
+python main.py --stock-report NVDA
+```
+
+Use a saved screener:
+
+```bash
+python main.py --stock-discovery --screener technical_breakout
+```
+
+Saved screeners live in `config/screeners.json`. The engine currently supports reusable filters for quality momentum, technical breakouts, and value watchlists.
+
+Outputs:
+
+- `state/latest_stock_discovery.json`
+- `state/stock_reports/<TICKER>.json`
+- SQLite tables: `stock_intelligence_reports`, `discovery_runs`
+
+The stock intelligence layer includes technical screening, fundamental snapshots, analyst target fields, short-interest fields, news impact scoring, portfolio-fit context, sector rankings, and a concise evidence-based report with Bull Case, Bear Case, Technical Outlook, Fundamental Outlook, Portfolio Fit, Why Now, and invalidation.
+
+Some sources are intentionally marked unavailable until dedicated providers are added: earnings call transcripts, Reddit/X sentiment, SEC filing parsing, and deep insider transaction feeds.
+
+
+### Catalyst Scoring and News Persistence
+
+`stock_discovery.py` now builds catalyst inputs for `intelligence_scoring.catalyst_score()` from available Yahoo/news/technical fields:
+
+- growth or earnings trend strength
+- analyst recommendation / target fields
+- insider ownership signal
+- constructive technical/sector backdrop
+- elevated-importance news
+- news tone shifts
+
+Fetched news is persisted to the SQLite `news_events` table. Fundamentals are cached under `cache/fundamentals/` for six hours to reduce Yahoo rate-limit failures in GitHub Actions. CI tests use mocks and do not call Yahoo.
