@@ -181,6 +181,18 @@ def initialize_database(db_path: str = DB_PATH):
                 current_value REAL,
                 gain_loss REAL
             );
+
+            CREATE TABLE IF NOT EXISTS portfolio_risk_snapshots (
+                date TEXT PRIMARY KEY,
+                health_score REAL,
+                annual_volatility REAL,
+                sharpe_ratio REAL,
+                max_drawdown REAL,
+                average_correlation REAL,
+                diversification_score REAL,
+                why_now TEXT,
+                payload_json TEXT
+            );
             """
         )
 
@@ -329,6 +341,30 @@ def store_signal(ticker: str, date: str, signal_type: str, entry_price: float, s
             ),
         )
 
+
+
+def store_portfolio_snapshot(date: str, payload: Dict):
+    initialize_database()
+    with connect() as conn:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO portfolio_risk_snapshots
+            (date, health_score, annual_volatility, sharpe_ratio, max_drawdown,
+             average_correlation, diversification_score, why_now, payload_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                date,
+                _safe(payload.get("portfolio_health", {}).get("score")),
+                _safe(payload.get("variance", {}).get("annual_volatility")),
+                _safe(payload.get("sharpe", {}).get("sharpe_ratio")),
+                _safe(payload.get("maximum_drawdown")),
+                _safe(payload.get("correlation", {}).get("average_correlation")),
+                _safe(payload.get("diversification", {}).get("score")),
+                payload.get("why_now", {}).get("reason"),
+                json.dumps(payload, default=str),
+            ),
+        )
 
 def recent_scores(ticker: str, limit: int = 10):
     initialize_database()
