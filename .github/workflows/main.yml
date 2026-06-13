@@ -21,6 +21,10 @@ on:
         required: false
         default: ''
 
+concurrency:
+  group: stock-engine-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   run-analytics:
     runs-on: ubuntu-latest
@@ -46,6 +50,10 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Run Tests
+        run: |
+          python -m unittest discover -s tests
+
       - name: Update Watchlist
         if: github.event.inputs.action == 'Add to Watchlist' || github.event.inputs.action == 'Remove from Watchlist'
         run: |
@@ -70,6 +78,7 @@ jobs:
           python main.py --init-db
           python main.py --analyze
           python main.py --quant-report
+          python main.py --portfolio-report
           python main.py --dashboard
 
       - name: Debug - List Files
@@ -101,6 +110,8 @@ jobs:
             state/
             cache/
             watchlist.json
+            portfolio.json
+            plots/quant_research_dashboard.html
           if-no-files-found: warn
 
       - name: Commit and Push Changes
@@ -111,13 +122,15 @@ jobs:
 
           git add -f state/ || true
           git add watchlist.json || true
+          git add portfolio.json || true
           git add -f cache/*.json || true
+          git add -f plots/quant_research_dashboard.html || true
 
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update engine state, cache, and watchlist [automated]"
-            git pull --rebase origin main
+            git commit -m "Update engine state, cache, reports, and watchlist [automated]"
+            git pull --rebase --autostash origin main
             git push origin main
           fi
 
