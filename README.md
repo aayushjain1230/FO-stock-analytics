@@ -434,3 +434,36 @@ Alerts are now gated by a Why Now engine. A stock can score well and remain on t
 | `signal_validation.py` | Outcome measurement for 1w, 1m, 3m, 6m returns, drawdown, and S&P-relative performance. |
 
 This upgrade keeps the original watchlist, S&P 500 scan, charts, and Telegram flow intact while moving the project toward evidence-based opportunity discovery.
+
+
+---
+
+## Portfolio Risk, Performance & Quant Intelligence
+
+Generate a full portfolio-level risk report:
+
+```bash
+python main.py --portfolio-report
+```
+
+Send a Telegram alert only when the portfolio Why Now engine detects a meaningful change:
+
+```bash
+python main.py --portfolio-report --send-portfolio-alert
+```
+
+By default, the engine uses `portfolio.json` if present. If no portfolio file exists, it falls back to equal-weight watchlist positions so the report still works.
+
+Example `portfolio.json`:
+
+```json
+{
+  "positions": [
+    {"ticker": "NVDA", "shares": 10, "cost_basis": 120.0, "sector": "Technology"},
+    {"ticker": "MSFT", "shares": 8, "cost_basis": 410.0, "sector": "Technology"},
+    {"ticker": "JPM", "shares": 12, "cost_basis": 190.0, "sector": "Financials"}
+  ]
+}
+```
+
+The report writes `state/latest_portfolio_report.json` and stores a snapshot in SQLite. It calculates portfolio return, variance, volatility, covariance, correlation, Sharpe ratio, drawdown, risk contribution, diversification, health score, time-series risk trends, Monte Carlo forecast, Markowitz optimization comparison, factor exposure, and portfolio-level Why Now triggers.
