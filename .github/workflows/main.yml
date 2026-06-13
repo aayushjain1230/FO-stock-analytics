@@ -50,8 +50,6 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      
-
       - name: Update Watchlist
         if: github.event.inputs.action == 'Add to Watchlist' || github.event.inputs.action == 'Remove from Watchlist'
         run: |
@@ -77,6 +75,7 @@ jobs:
           python main.py --analyze
           python main.py --quant-report
           python main.py --portfolio-report
+          python main.py --stock-discovery
           python main.py --dashboard
 
       - name: Debug - List Files
@@ -109,6 +108,7 @@ jobs:
             cache/
             watchlist.json
             portfolio.json
+            config/screeners.json
             plots/quant_research_dashboard.html
           if-no-files-found: warn
 
@@ -121,7 +121,9 @@ jobs:
           git add -f state/ || true
           git add watchlist.json || true
           git add portfolio.json || true
+          git add -f config/screeners.json || true
           git add -f cache/*.json || true
+          git add -f cache/fundamentals/ || true
           git add -f plots/quant_research_dashboard.html || true
 
           if git diff --staged --quiet; then
