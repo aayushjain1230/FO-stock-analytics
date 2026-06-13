@@ -88,6 +88,7 @@ def _crossed_above(prior, latest, left: str, right: str) -> bool:
 
 
 def _trigger(reason: str, evidence: str, strength: int, invalidates: str) -> Dict:
+    
     return {
         "reason": reason,
         "evidence": evidence,
