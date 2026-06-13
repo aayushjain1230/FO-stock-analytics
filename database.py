@@ -10,7 +10,8 @@ DB_PATH = os.path.join("state", "jfo_quant.db")
 
 
 @contextmanager
-def connect(db_path: str = DB_PATH):
+def connect(db_path: str = None):
+    db_path = db_path or DB_PATH
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
@@ -21,7 +22,8 @@ def connect(db_path: str = DB_PATH):
         conn.close()
 
 
-def initialize_database(db_path: str = DB_PATH):
+def initialize_database(db_path: str = None):
+    db_path = db_path or DB_PATH
     with connect(db_path) as conn:
         conn.executescript(
             """
@@ -193,6 +195,28 @@ def initialize_database(db_path: str = DB_PATH):
                 why_now TEXT,
                 payload_json TEXT
             );
+
+            CREATE TABLE IF NOT EXISTS stock_intelligence_reports (
+                ticker TEXT NOT NULL,
+                date TEXT NOT NULL,
+                final_score REAL,
+                rating TEXT,
+                confidence REAL,
+                why_now TEXT,
+                fundamental_classification TEXT,
+                technical_setup TEXT,
+                portfolio_fit TEXT,
+                payload_json TEXT,
+                PRIMARY KEY (ticker, date)
+            );
+
+            CREATE TABLE IF NOT EXISTS discovery_runs (
+                date TEXT PRIMARY KEY,
+                screener TEXT,
+                match_count INTEGER,
+                summary TEXT,
+                payload_json TEXT
+            );
             """
         )
 
@@ -362,6 +386,80 @@ def store_portfolio_snapshot(date: str, payload: Dict):
                 _safe(payload.get("correlation", {}).get("average_correlation")),
                 _safe(payload.get("diversification", {}).get("score")),
                 payload.get("why_now", {}).get("reason"),
+                json.dumps(payload, default=str),
+            ),
+        )
+
+
+
+def store_news_events(ticker: str, events):
+    initialize_database()
+    rows = []
+    for event in events or []:
+        rows.append(
+            (
+                ticker,
+                str(event.get("published") or datetime.now().date().isoformat()),
+                event.get("headline"),
+                event.get("source"),
+                event.get("summary"),
+                _safe(event.get("bullish_score")),
+                _safe(event.get("bearish_score")),
+                _safe(event.get("importance_score")),
+                event.get("why_it_matters"),
+            )
+        )
+    if not rows:
+        return
+    with connect() as conn:
+        conn.executemany(
+            """
+            INSERT INTO news_events
+            (ticker, date, headline, source, summary, bullish_score, bearish_score, importance_score, why_it_matters)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            rows,
+        )
+
+def store_stock_intelligence_report(ticker: str, date: str, payload: Dict):
+    initialize_database()
+    with connect() as conn:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO stock_intelligence_reports
+            (ticker, date, final_score, rating, confidence, why_now, fundamental_classification,
+             technical_setup, portfolio_fit, payload_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                ticker,
+                date,
+                _safe(payload.get("score", {}).get("final_score")),
+                payload.get("score", {}).get("rating"),
+                _safe(payload.get("score", {}).get("confidence")),
+                payload.get("why_now", {}).get("reason"),
+                payload.get("fundamentals", {}).get("classification"),
+                payload.get("technical_screen", {}).get("setup_type"),
+                payload.get("portfolio_fit", {}).get("assessment"),
+                json.dumps(payload, default=str),
+            ),
+        )
+
+
+def store_discovery_run(date: str, payload: Dict):
+    initialize_database()
+    with connect() as conn:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO discovery_runs
+            (date, screener, match_count, summary, payload_json)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                date,
+                payload.get("screener"),
+                len(payload.get("matches", [])),
+                payload.get("summary"),
                 json.dumps(payload, default=str),
             ),
         )
