@@ -38,6 +38,7 @@ import research_reports
 import scoring
 import signal_validation
 import state_manager
+import stock_discovery
 import telegram_notifier
 import why_now
 try:
@@ -60,6 +61,8 @@ HASH_FILE = os.path.join(STATE_DIR, "last_report_hash.json")
 COMPARISON_FILE = os.path.join(STATE_DIR, "latest_comparison.json")
 QUANT_RESEARCH_FILE = os.path.join(STATE_DIR, "latest_quant_research.json")
 PORTFOLIO_REPORT_FILE = os.path.join(STATE_DIR, "latest_portfolio_report.json")
+STOCK_DISCOVERY_FILE = os.path.join(STATE_DIR, "latest_stock_discovery.json")
+STOCK_REPORT_DIR = os.path.join(STATE_DIR, "stock_reports")
 
 DEFAULT_CONFIG = {
     "benchmark": "SPY",
@@ -665,6 +668,94 @@ def run_quant_research_report():
 
 
 
+
+def _build_portfolio_context_for_discovery(period="2y", interval="1d"):
+    try:
+        watchlist = [ticker.upper() for ticker in load_watchlist_data()]
+        portfolio_payload = portfolio_engine.load_portfolio(fallback_tickers=watchlist)
+        positions = portfolio_payload.get("positions", [])
+        tickers = sorted({position["ticker"] for position in positions})
+        if not tickers:
+            return {}
+        raw = yf.download(tickers, period=period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
+        price_data = {ticker: _extract_downloaded_ticker(raw, ticker) for ticker in tickers}
+        report = portfolio_engine.generate_portfolio_report(positions=positions, price_data=price_data)
+        sector_map = {position["ticker"]: position.get("sector", "Unknown") for position in positions}
+        return {"positions": positions, "report": report, "sector_map": sector_map}
+    except Exception as exc:
+        logger.warning(f"Portfolio context unavailable for stock discovery: {exc}")
+        return {}
+
+
+def run_stock_discovery(screener_name="quality_momentum", ticker=None):
+    """Generate stock discovery rankings and individual intelligence reports."""
+    if yf is None or calculate_metrics is None:
+        raise RuntimeError("Stock discovery requires yfinance and indicator calculations.")
+
+    database.initialize_database()
+    os.makedirs(STOCK_REPORT_DIR, exist_ok=True)
+    config = load_config()
+    settings = config.get("settings", {})
+    watchlist = [item.upper() for item in load_watchlist_data()]
+    symbols = [ticker.upper()] if ticker else watchlist
+    if not symbols:
+        print("No tickers available for stock discovery.")
+        return
+
+    period, interval, download_period = _research_download_params(settings, period_key="quant_period", default_period="2y")
+    benchmark_symbol = config.get("benchmark", "SPY")
+    raw = yf.download(symbols, period=download_period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
+    benchmark_raw = yf.download(benchmark_symbol, period=download_period, interval=interval, progress=False, auto_adjust=False)
+    benchmark_data = _normalize_benchmark_data(benchmark_raw) if not benchmark_raw.empty else None
+    market_payload, sector_data = _build_market_intelligence(download_period, interval)
+    portfolio_context = _build_portfolio_context_for_discovery(period=download_period, interval=interval)
+
+    rows = []
+    for symbol in symbols:
+        try:
+            df = _extract_downloaded_ticker(raw, symbol)
+            if df.empty:
+                rows.append({"ticker": symbol, "error": "No price data returned"})
+                continue
+            analyzed = calculate_metrics(df, benchmark_data, config=config) if benchmark_data is not None else df
+            sector_df = None
+            report = stock_discovery.build_stock_intelligence(
+                symbol,
+                analyzed,
+                benchmark_data,
+                market_payload,
+                yf_module=yf,
+                sector_df=sector_df,
+                portfolio_context=portfolio_context,
+            )
+            database.upsert_stock(
+                symbol,
+                company_name=report.get("fundamentals", {}).get("company_name"),
+                sector=report.get("fundamentals", {}).get("sector"),
+                industry=report.get("fundamentals", {}).get("industry"),
+            )
+            database.store_stock_intelligence_report(symbol, datetime.now().date().isoformat(), report)
+            database.store_news_events(symbol, report.get("news", {}).get("items", []))
+            with open(os.path.join(STOCK_REPORT_DIR, f"{symbol}.json"), "w") as f:
+                json.dump(report, f, indent=2, default=str)
+            rows.append(report)
+        except Exception as exc:
+            logger.warning(f"Error building stock intelligence for {symbol}: {exc}")
+            rows.append({"ticker": symbol, "error": str(exc)})
+
+    discovery = stock_discovery.discover_stocks([row for row in rows if "score" in row], screener_name=screener_name)
+    discovery["errors"] = [row for row in rows if "error" in row]
+    with open(STOCK_DISCOVERY_FILE, "w") as f:
+        json.dump(discovery, f, indent=2, default=str)
+    database.store_discovery_run(datetime.now().date().isoformat(), discovery)
+
+    if ticker:
+        report = next((row for row in rows if row.get("ticker") == ticker.upper()), None)
+        print(report.get("report") if report and "report" in report else json.dumps(report, indent=2, default=str))
+    else:
+        print(f"Stock discovery saved to {STOCK_DISCOVERY_FILE}")
+        print(discovery.get("summary"))
+
 def run_portfolio_report(send_alert=False):
     """Generate portfolio-level risk, performance, and quant intelligence."""
     if yf is None:
@@ -772,6 +863,9 @@ def main():
     parser.add_argument("--init-db", action="store_true", help="Create or migrate the SQLite research database")
     parser.add_argument("--signal-performance", action="store_true", help="Print historical signal validation summary")
     parser.add_argument("--portfolio-report", action="store_true", help="Generate portfolio risk, performance, and intelligence report")
+    parser.add_argument("--stock-discovery", action="store_true", help="Run stock discovery and screening intelligence")
+    parser.add_argument("--screener", default="quality_momentum", help="Saved screener name for stock discovery")
+    parser.add_argument("--stock-report", help="Generate an individual stock intelligence report for one ticker")
     parser.add_argument("--send-portfolio-alert", action="store_true", help="Send portfolio Telegram alert when a Why Now trigger exists")
     parser.add_argument("--stock-price", type=float, help="Option lab underlying stock price")
     parser.add_argument("--strike", type=float, help="Option lab strike price")
@@ -805,6 +899,12 @@ def main():
 
     if args.portfolio_report:
         run_portfolio_report(send_alert=args.send_portfolio_alert)
+
+    if args.stock_discovery:
+        run_stock_discovery(screener_name=args.screener)
+
+    if args.stock_report:
+        run_stock_discovery(screener_name=args.screener, ticker=args.stock_report)
 
     if args.dashboard:
         path = quant_dashboard.generate_dashboard()
