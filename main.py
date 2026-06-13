@@ -31,6 +31,7 @@ import database
 import intelligence_scoring
 import market_regime
 import options_analytics
+import portfolio_engine
 import quant_analytics
 import quant_dashboard
 import research_reports
@@ -58,6 +59,7 @@ STATE_DIR = "state"
 HASH_FILE = os.path.join(STATE_DIR, "last_report_hash.json")
 COMPARISON_FILE = os.path.join(STATE_DIR, "latest_comparison.json")
 QUANT_RESEARCH_FILE = os.path.join(STATE_DIR, "latest_quant_research.json")
+PORTFOLIO_REPORT_FILE = os.path.join(STATE_DIR, "latest_portfolio_report.json")
 
 DEFAULT_CONFIG = {
     "benchmark": "SPY",
@@ -662,6 +664,85 @@ def run_quant_research_report():
     print(f"Quant research snapshot saved to {QUANT_RESEARCH_FILE}")
 
 
+
+def run_portfolio_report(send_alert=False):
+    """Generate portfolio-level risk, performance, and quant intelligence."""
+    if yf is None:
+        raise RuntimeError("Portfolio reports require yfinance.")
+
+    database.initialize_database()
+    config = load_config()
+    settings = config.get("settings", {})
+    watchlist = [ticker.upper() for ticker in load_watchlist_data()]
+    portfolio_payload = portfolio_engine.load_portfolio(fallback_tickers=watchlist)
+    positions = portfolio_payload.get("positions", [])
+    tickers = sorted({position["ticker"] for position in positions})
+    if not tickers:
+        print("No portfolio positions found. Add portfolio.json or watchlist tickers first.")
+        return
+
+    period = settings.get("portfolio_period", "2y")
+    interval = "1d"
+    raw = yf.download(tickers, period=period, interval=interval, group_by="ticker", threads=True, progress=False, auto_adjust=False)
+    price_data = {ticker: _extract_downloaded_ticker(raw, ticker) for ticker in tickers}
+
+    factor_symbols = {
+        "Market Factor": "SPY",
+        "Technology Factor": "XLK",
+        "Growth Factor": "QQQ",
+        "Value Factor": "IWD",
+        "Momentum Factor": "MTUM",
+        "Low Volatility Factor": "SPLV",
+        "Interest Rate Sensitivity": "TLT",
+    }
+    factor_data = _download_context(factor_symbols, period, interval)
+    benchmark_df = factor_data.get("Market Factor")
+    risk_free_rate = float(settings.get("risk_free_rate", 0.045))
+
+    report = portfolio_engine.generate_portfolio_report(
+        positions=positions,
+        price_data=price_data,
+        benchmark_df=benchmark_df,
+        factor_prices=factor_data,
+        risk_free_rate=risk_free_rate,
+    )
+    with open(PORTFOLIO_REPORT_FILE, "w") as f:
+        json.dump(report, f, indent=2, default=str)
+    database.store_portfolio_snapshot(datetime.now().date().isoformat(), report)
+    print(f"Portfolio intelligence report saved to {PORTFOLIO_REPORT_FILE}")
+
+    why_payload = report.get("why_now", {})
+    if send_alert and why_payload.get("send_alert"):
+        message = _format_portfolio_telegram(report)
+        if should_send_report(message):
+            telegram_notifier.send_long_message(message)
+    elif send_alert:
+        print("No portfolio Why Now trigger. Telegram portfolio alert skipped.")
+
+
+def _format_portfolio_telegram(report):
+    health = report.get("portfolio_health", {})
+    why_payload = report.get("why_now", {})
+    risk_contrib = report.get("risk_contributions", {})
+    top_risk = sorted(risk_contrib.items(), key=lambda item: item[1], reverse=True)[:3]
+    top_risk_text = ", ".join(f"{ticker}: {value:.1f}%" for ticker, value in top_risk) or "N/A"
+    return "\n".join(
+        [
+            "PORTFOLIO RISK ALERT",
+            "",
+            f"Portfolio Health Score: {health.get('score', 'N/A')}/100 ({health.get('classification', 'N/A')})",
+            f"Why Now: {why_payload.get('reason', 'N/A')}",
+            f"Impact: {why_payload.get('evidence', 'N/A')}",
+            f"Annual Volatility: {report.get('variance', {}).get('annual_volatility', 0) * 100:.2f}%",
+            f"Sharpe Ratio: {report.get('sharpe', {}).get('sharpe_ratio', 0):.2f}",
+            f"Average Correlation: {report.get('correlation', {}).get('average_correlation', 0):.2f}",
+            f"Top Risk Contributors: {top_risk_text}",
+            f"What To Watch: {why_payload.get('what_to_watch', 'Monitor volatility, correlation, drawdown, and sector concentration.')}",
+            "",
+            "Educational risk analysis only, not financial advice.",
+        ]
+    )
+
 def run_option_lab(args):
     """Run the standalone options analytics lab from CLI inputs."""
     if args.stock_price is None or args.strike is None:
@@ -690,6 +771,8 @@ def main():
     parser.add_argument("--dashboard", action="store_true", help="Generate the static quant research dashboard HTML")
     parser.add_argument("--init-db", action="store_true", help="Create or migrate the SQLite research database")
     parser.add_argument("--signal-performance", action="store_true", help="Print historical signal validation summary")
+    parser.add_argument("--portfolio-report", action="store_true", help="Generate portfolio risk, performance, and intelligence report")
+    parser.add_argument("--send-portfolio-alert", action="store_true", help="Send portfolio Telegram alert when a Why Now trigger exists")
     parser.add_argument("--stock-price", type=float, help="Option lab underlying stock price")
     parser.add_argument("--strike", type=float, help="Option lab strike price")
     parser.add_argument("--days", type=float, default=30, help="Option lab days to expiration")
@@ -719,6 +802,9 @@ def main():
 
     if args.option_lab:
         run_option_lab(args)
+
+    if args.portfolio_report:
+        run_portfolio_report(send_alert=args.send_portfolio_alert)
 
     if args.dashboard:
         path = quant_dashboard.generate_dashboard()
