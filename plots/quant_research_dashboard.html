@@ -5,46 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JFO Quant Research Dashboard</title>
   <style>
-    :root { color-scheme: light; --ink:#17202a; --muted:#5d6d7e; --line:#d7dbdd; --panel:#f8f9f9; --accent:#117a65; }
-    body { margin:0; font-family:Arial, sans-serif; color:var(--ink); background:#ffffff; }
-    header { padding:24px 32px 12px; border-bottom:1px solid var(--line); }
+    :root { color-scheme: light; --ink:#17202a; --muted:#5d6d7e; --line:#d7dbdd; --panel:#f8f9f9; --accent:#117a65; --warn:#a04000; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, sans-serif; color:var(--ink); background:#fff; }
+    header { padding:22px 32px 12px; border-bottom:1px solid var(--line); }
     h1 { margin:0 0 8px; font-size:28px; letter-spacing:0; }
     h2 { margin:26px 0 10px; font-size:20px; }
-    h3 { margin:0 0 6px; font-size:15px; }
+    h3 { margin:16px 0 8px; font-size:15px; }
     p { color:var(--muted); line-height:1.45; }
     nav { display:flex; gap:8px; overflow-x:auto; padding:12px 32px; border-bottom:1px solid var(--line); }
     nav a { color:var(--accent); text-decoration:none; white-space:nowrap; font-size:13px; border:1px solid var(--line); padding:6px 8px; border-radius:4px; }
-    main { padding:0 32px 36px; max-width:1180px; }
-    table { width:100%; border-collapse:collapse; font-size:13px; }
-    th, td { border-bottom:1px solid var(--line); padding:9px 8px; text-align:left; }
+    main { padding:0 32px 36px; max-width:1240px; }
+    table { width:100%; border-collapse:collapse; font-size:13px; margin:8px 0 18px; }
+    th, td { border-bottom:1px solid var(--line); padding:9px 8px; text-align:left; vertical-align:top; }
     th { background:var(--panel); font-weight:700; }
     article { border-left:3px solid var(--accent); padding:10px 12px; margin:10px 0; background:var(--panel); }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px; }
-    .metric { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:14px; }
-    code { background:#eef2f3; padding:2px 4px; border-radius:3px; }
+    pre { white-space:pre-wrap; margin:0; color:var(--muted); font-family:Arial, sans-serif; line-height:1.45; }
+    .metrics { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin:10px 0 16px; }
+    .metric { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:12px; }
+    .metric span { display:block; color:var(--muted); font-size:12px; margin-bottom:5px; }
+    .metric strong { font-size:18px; }
+    .narrow { max-width:520px; }
+    .stamp { color:var(--muted); font-size:13px; }
+    @media (max-width: 720px) { header, nav, main { padding-left:14px; padding-right:14px; } table { display:block; overflow-x:auto; } }
   </style>
 </head>
 <body>
   <header>
     <h1>Jain Family Office Quant Intelligence Engine</h1>
-    <p>Generated 2026-06-13T21:53:23. Educational research analytics only, not financial advice.</p>
+    <p class="stamp">Generated 2026-06-13T18:32:29. Educational research analytics only, not financial advice.</p>
   </header>
-  <nav><a href='#market-overview'>Market Overview</a><a href='#watchlist'>Watchlist</a><a href='#technical-analysis'>Technical Analysis</a><a href='#momentum-research'>Momentum Research</a><a href='#options-lab'>Options Lab</a><a href='#greeks-lab'>Greeks Lab</a><a href='#monte-carlo-simulator'>Monte Carlo Simulator</a><a href='#statistical-arbitrage'>Statistical Arbitrage</a><a href='#portfolio-analytics'>Portfolio Analytics</a><a href='#risk-analytics'>Risk Analytics</a></nav>
+  <nav><a href='#market-overview'>Market Overview</a><a href='#opportunities'>Opportunities</a><a href='#watchlist'>Watchlist</a><a href='#portfolio'>Portfolio</a><a href='#sectors'>Sectors</a><a href='#news'>News</a><a href='#research'>Research</a><a href='#risk'>Risk</a></nav>
   <main>
-    <section id="market-overview">
-      <h2>Market Overview</h2>
-      <p>Research leaders: GOOGL (83), TSM (75), AAPL (73). Weakest research profiles: MSFT (18), FIZZ (25), TSLA (25). Review risk, liquidity, and options data before forming any conclusion.</p>
-    </section>
-    <section id="watchlist"><h2>Watchlist</h2><table><thead><tr><th>Ticker</th><th>Quant Score</th><th>Label</th><th>Close</th><th>Sharpe</th><th>Ann. Vol</th><th>Max DD</th><th>Vol Regime</th></tr></thead><tbody><tr><td>AAPL</td><td>73</td><td>Watch closely</td><td>291.13</td><td>0.55</td><td>27.92%</td><td>-33.36%</td><td>Normal volatility</td></tr><tr><td>AMD</td><td>65</td><td>Watch closely</td><td>511.57</td><td>1.19</td><td>60.61%</td><td>-57.49%</td><td>High volatility</td></tr><tr><td>AMZN</td><td>73</td><td>Watch closely</td><td>238.55</td><td>0.43</td><td>32.53%</td><td>-30.88%</td><td>Normal volatility</td></tr><tr><td>FIZZ</td><td>25</td><td>High risk / weak setup</td><td>36.94</td><td>-0.38</td><td>27.58%</td><td>-40.08%</td><td>High volatility</td></tr><tr><td>GE</td><td>63</td><td>Watch closely</td><td>335.30</td><td>1.22</td><td>33.00%</td><td>-21.36%</td><td>Normal volatility</td></tr><tr><td>GOOGL</td><td>83</td><td>Research priority</td><td>359.68</td><td>1.20</td><td>30.62%</td><td>-29.81%</td><td>Normal volatility</td></tr><tr><td>MSFT</td><td>18</td><td>High risk / weak setup</td><td>390.74</td><td>-0.26</td><td>25.48%</td><td>-33.91%</td><td>High volatility</td></tr><tr><td>NVDA</td><td>55</td><td>Watch closely</td><td>205.19</td><td>0.63</td><td>48.16%</td><td>-36.88%</td><td>Normal volatility</td></tr><tr><td>TSLA</td><td>25</td><td>High risk / weak setup</td><td>406.43</td><td>0.89</td><td>61.26%</td><td>-53.77%</td><td>Normal volatility</td></tr><tr><td>TSM</td><td>75</td><td>Research priority</td><td>423.93</td><td>1.22</td><td>41.54%</td><td>-36.82%</td><td>Normal volatility</td></tr><tr><td>VGT</td><td>73</td><td>Watch closely</td><td>116.74</td><td>0.90</td><td>26.37%</td><td>-27.23%</td><td>High volatility</td></tr></tbody></table></section>
-    <section id="technical-analysis"><h2>Technical Analysis</h2><p>Price, moving-average, RSI, MACD, rate-of-change, relative strength, and volume metrics are calculated in the analytics engine.</p></section>
-    <section id="momentum-research"><h2>Momentum Research</h2><p>Use <code>backtesting.run_momentum_research</code> to test 3, 6, 12, and 24 month momentum portfolios with costs and slippage.</p></section>
-    <section id="options-lab"><h2>Options Lab</h2><p>Run <code>python main.py --option-lab --stock-price 195 --strike 195 --days 37 --volatility 0.31</code>.</p></section>
-    <section id="greeks-lab"><h2>Greeks Lab</h2><p>Delta, gamma, vega, theta, and rho are generated by the options engine with plain-English explanations.</p></section>
-    <section id="monte-carlo-simulator"><h2>Monte Carlo Simulator</h2><p>The options engine simulates terminal stock prices and compares Monte Carlo option value with Black-Scholes fair value.</p></section>
-    <section id="statistical-arbitrage"><h2>Statistical Arbitrage</h2><p>Pairs trading utilities calculate correlation, spread, z-score, signal state, and backtest performance.</p></section>
-    <section id="portfolio-analytics"><h2>Portfolio Analytics</h2><p>Portfolio beta, volatility, correlation matrix, diversification score, and concentration risk are available in <code>quant_analytics.portfolio_analytics</code>.</p></section>
-    <section id="risk-analytics"><h2>Risk Analytics</h2><p>VaR, expected shortfall, stress-test inputs, drawdowns, and volatility targeting are available in the quant modules.</p></section>
-    <section><h2>AI Research Analyst</h2><article><h3>AAPL</h3><p>AAPL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.92%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>AMD</h3><p>AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 60.61%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article><article><h3>AMZN</h3><p>AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.53%, max drawdown is -30.88%, and the research score is 73/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>FIZZ</h3><p>FIZZ is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.58%, max drawdown is -40.08%, and the research score is 25/100 (High risk / weak setup). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article><article><h3>GE</h3><p>GE is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 33.00%, max drawdown is -21.36%, and the research score is 63/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>GOOGL</h3><p>GOOGL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.62%, max drawdown is -29.81%, and the research score is 83/100 (Research priority). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>MSFT</h3><p>MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 25.48%, max drawdown is -33.91%, and the research score is 18/100 (High risk / weak setup). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article><article><h3>NVDA</h3><p>NVDA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 48.16%, max drawdown is -36.88%, and the research score is 55/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>TSLA</h3><p>TSLA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.26%, max drawdown is -53.77%, and the research score is 25/100 (High risk / weak setup). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>TSM</h3><p>TSM is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 41.54%, max drawdown is -36.82%, and the research score is 75/100 (Research priority). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>VGT</h3><p>VGT is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 26.37%, max drawdown is -27.23%, and the research score is 73/100 (Watch closely). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article></section>
+    <section id="market-overview"><h2>Market Overview</h2><p>Research leaders: GOOGL (83), TSM (75), AAPL (73). Weakest research profiles: TSLA (10), MSFT (18), FIZZ (25). Review risk, liquidity, and options data before forming any conclusion.</p></section>
+    <section id="opportunities"><h2>Opportunities</h2><p>Top screened opportunity: TSM with score 71.15/100. Why Now: No clear Why Now trigger.</p><table><thead><tr><th>Ticker</th><th>Score</th><th>Rating</th><th>Sector</th><th>Fundamentals</th><th>Setup</th><th>Why Now</th></tr></thead><tbody><tr><td>TSM</td><td>71.2</td><td>Watch</td><td>Technology</td><td>Quality Compounder</td><td>trend continuation</td><td>No clear Why Now trigger</td></tr><tr><td>GE</td><td>69.0</td><td>Watch</td><td>Industrials</td><td>Fundamentally Strong</td><td>No clear setup</td><td>No clear Why Now trigger</td></tr></tbody></table></section>
+    <section id="watchlist"><h2>Watchlist</h2><table><thead><tr><th>Ticker</th><th>Score</th><th>Rating</th><th>Close</th><th>Confidence</th><th>Risk</th><th>Sharpe</th><th>Ann. Vol</th><th>Why Now</th></tr></thead><tbody><tr><td>AAPL</td><td>58</td><td>Hold</td><td>291.58</td><td>29</td><td>Controlled</td><td>0.61</td><td>27.95%</td><td>No clear Why Now trigger</td></tr><tr><td>AMD</td><td>50</td><td>Hold</td><td>452.40</td><td>21</td><td>High</td><td>1.09</td><td>60.29%</td><td>No clear Why Now trigger</td></tr><tr><td>AMZN</td><td>53</td><td>Hold</td><td>238.00</td><td>26</td><td>Controlled</td><td>0.40</td><td>32.53%</td><td>No clear Why Now trigger</td></tr><tr><td>FIZZ</td><td>55</td><td>Hold</td><td>37.11</td><td>34</td><td>Moderate</td><td>-0.31</td><td>27.63%</td><td>No clear Why Now trigger</td></tr><tr><td>GE</td><td>56</td><td>Hold</td><td>318.71</td><td>36</td><td>Controlled</td><td>1.10</td><td>32.95%</td><td>No clear Why Now trigger</td></tr><tr><td>GOOGL</td><td>53</td><td>Hold</td><td>356.38</td><td>26</td><td>Controlled</td><td>1.17</td><td>30.64%</td><td>No clear Why Now trigger</td></tr><tr><td>MSFT</td><td>34</td><td>Drop</td><td>397.36</td><td>21</td><td>Controlled</td><td>-0.19</td><td>25.49%</td><td>No clear Why Now trigger</td></tr><tr><td>NVDA</td><td>47</td><td>Hold</td><td>200.42</td><td>21</td><td>Moderate</td><td>0.68</td><td>48.26%</td><td>No clear Why Now trigger</td></tr><tr><td>TSLA</td><td>25</td><td>Avoid</td><td>381.59</td><td>8</td><td>High</td><td>0.89</td><td>61.26%</td><td>No clear Why Now trigger</td></tr><tr><td>TSM</td><td>57</td><td>Hold</td><td>408.75</td><td>35</td><td>Moderate</td><td>1.23</td><td>41.59%</td><td>No clear Why Now trigger</td></tr><tr><td>VGT</td><td>58</td><td>Hold</td><td>112.34</td><td>29</td><td>Controlled</td><td>0.89</td><td>26.32%</td><td>No clear Why Now trigger</td></tr></tbody></table></section>
+    <section id="portfolio"><h2>Portfolio</h2><div class='metrics'><div class='metric'><span>Health</span><strong>98.1/100</strong></div><div class='metric'><span>Annual Vol</span><strong>25.72%</strong></div><div class='metric'><span>Sharpe</span><strong>1.13</strong></div><div class='metric'><span>Max Drawdown</span><strong>-26.85%</strong></div><div class='metric'><span>Avg Corr</span><strong>0.39</strong></div><div class='metric'><span>Diversification</span><strong>67.7/100</strong></div></div><article><h3>Portfolio Why Now</h3><p>No clear portfolio Why Now trigger: Portfolio risk did not materially change.</p></article><h3>Top Risk Contributors</h3><table class='narrow'><thead><tr><th>Ticker</th><th>Risk Contribution</th></tr></thead><tbody><tr><td>AMD</td><td>15.9%</td></tr><tr><td>TSLA</td><td>15.7%</td></tr><tr><td>NVDA</td><td>13.5%</td></tr><tr><td>TSM</td><td>11.4%</td></tr><tr><td>VGT</td><td>8.7%</td></tr></tbody></table></section>
+    <section id="sectors"><h2>Sector Rankings</h2><table><thead><tr><th>Sector</th><th>Avg Score</th><th>Count</th><th>Leaders</th></tr></thead><tbody><tr><td>Industrials</td><td>69.0</td><td>1</td><td>GE (69.0)</td></tr><tr><td>Unknown</td><td>61.8</td><td>1</td><td>VGT (61.8)</td></tr><tr><td>Communication Services</td><td>60.9</td><td>1</td><td>GOOGL (60.9)</td></tr><tr><td>Technology</td><td>57.9</td><td>5</td><td>TSM (71.2), AAPL (63.9), AMD (57.6)</td></tr><tr><td>Consumer Defensive</td><td>56.8</td><td>1</td><td>FIZZ (56.8)</td></tr><tr><td>Consumer Cyclical</td><td>50.7</td><td>2</td><td>AMZN (60.9), TSLA (40.5)</td></tr></tbody></table></section>
+    <section id="news"><h2>News Intelligence</h2><table><thead><tr><th>Ticker</th><th>Headline</th><th>Source</th><th>Why It Matters</th></tr></thead><tbody><tr><td>TSM</td><td>Taiwan Semiconductor (TSM) Posts Strong May Sales, UBS Names Stock a Top Pick on Agentic AI Outlook</td><td>Insider Monkey</td><td>News appears more supportive of sentiment or growth expectations.</td></tr><tr><td>GE</td><td>Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance</td><td>Simply Wall St.</td><td>News appears more supportive of sentiment or growth expectations.</td></tr><tr><td>AAPL</td><td>Amazon Expands Satellite, Cloud And Robotics Investments As Valuation Gap Widens</td><td>Simply Wall St.</td><td>News impact is unclear; monitor price and volume reaction.</td></tr><tr><td>VGT</td><td>Artificial Intelligence (AI) ETF Showdown: Vanguard&#x27;s VGT vs. the iShares SOXX</td><td>Motley Fool</td><td>News impact is unclear; monitor price and volume reaction.</td></tr><tr><td>AMZN</td><td>Why Starlink is so important to SpaceX&#x27;s IPO</td><td>Yahoo Finance</td><td>News impact is unclear; monitor price and volume reaction.</td></tr><tr><td>GOOGL</td><td>Alphabet’s New SpaceX Exposure Adds A Fresh Dimension To Its Story</td><td>Simply Wall St.</td><td>News impact is unclear; monitor price and volume reaction.</td></tr><tr><td>AMD</td><td>Citi resets AMD stock price target on key move</td><td>TheStreet</td><td>News appears more supportive of sentiment or growth expectations.</td></tr><tr><td>FIZZ</td><td>Suja Life Sees 66% EBITDA Growth as Functional Beverage Boom Accelerates</td><td>IPO-Edge.com</td><td>News appears more supportive of sentiment or growth expectations.</td></tr></tbody></table></section>
+    <section id="research"><h2>Research Notes</h2><article><h3>AAPL</h3><p>AAPL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.95%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>AMD</h3><p>AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 60.29%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article><article><h3>AMZN</h3><p>AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.53%, max drawdown is -30.88%, and the research score is 73/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>FIZZ</h3><p>FIZZ is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.63%, max drawdown is -40.08%, and the research score is 25/100 (High risk / weak setup). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article><article><h3>GE</h3><p>GE is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.95%, max drawdown is -21.36%, and the research score is 53/100 (Neutral). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>GOOGL</h3><p>GOOGL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.64%, max drawdown is -29.81%, and the research score is 83/100 (Research priority). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>MSFT</h3><p>MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 25.49%, max drawdown is -33.91%, and the research score is 18/100 (High risk / weak setup). The current volatility regime is high volatility. This is an educational research summary, not financial advice.</p></article><article><h3>NVDA</h3><p>NVDA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 48.26%, max drawdown is -36.88%, and the research score is 55/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice.</p></article><article><h3>TSM</h3><pre>Ticker: TSM
+Rating: Watch | Score: 71.15/100 | Confidence: 64.64/100
+Bull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder
+Bear Case: volume confirmation is weak
+Technical Outlook: trend continuation | Support: 316.5 | Resistance: 446.69000244140625
+Fundamental Outlook: Quality Compounder | Forward P/E: 21.707851
+News/Catalyst: Taiwan Semiconductor (TSM) Posts Strong May Sales, UBS Names Stock a Top Pick on Agentic AI Outlook
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>GE</h3><pre>Ticker: GE
+Rating: Watch | Score: 69.0/100 | Confidence: 62.81/100
+Bull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong
+Bear Case: volume confirmation is weak
+Technical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875
+Fundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613
+News/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>AAPL</h3><pre>Ticker: AAPL
+Rating: Hold | Score: 63.9/100 | Confidence: 50.06/100
+Bull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder
+Bear Case: volume confirmation is weak
+Technical Outlook: trend continuation | Support: 246.6300048828125 | Resistance: 315.20001220703125
+Fundamental Outlook: Quality Compounder | Forward P/E: 30.341877
+News/Catalyst: Amazon Expands Satellite, Cloud And Robotics Investments As Valuation Gap Widens
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>VGT</h3><pre>Ticker: VGT
+Rating: Hold | Score: 61.75/100 | Confidence: 43.79/100
+Bull Case: momentum and relative strength are constructive
+Bear Case: volume confirmation is weak
+Technical Outlook: trend continuation | Support: 83.5875015258789 | Resistance: 125.7699966430664
+Fundamental Outlook: Fundamentally Average | Forward P/E: None
+News/Catalyst: Artificial Intelligence (AI) ETF Showdown: Vanguard&#x27;s VGT vs. the iShares SOXX
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>AMZN</h3><pre>Ticker: AMZN
+Rating: Hold | Score: 60.9/100 | Confidence: 49.97/100
+Bull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder
+Bear Case: No major bear case detected from available data.
+Technical Outlook: No clear setup | Support: 199.33999633789062 | Resistance: 274.989990234375
+Fundamental Outlook: Quality Compounder | Forward P/E: 24.193811
+News/Catalyst: Why Starlink is so important to SpaceX&#x27;s IPO
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>GOOGL</h3><pre>Ticker: GOOGL
+Rating: Hold | Score: 60.9/100 | Confidence: 46.52/100
+Bull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder
+Bear Case: volume confirmation is weak
+Technical Outlook: No clear setup | Support: 273.5 | Resistance: 402.6199951171875
+Fundamental Outlook: Quality Compounder | Forward P/E: 24.838732
+News/Catalyst: Alphabet’s New SpaceX Exposure Adds A Fresh Dimension To Its Story
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>AMD</h3><pre>Ticker: AMD
+Rating: Avoid | Score: 57.65/100 | Confidence: 41.81/100
+Bull Case: momentum and relative strength are constructive
+Bear Case: risk score is elevated, volume confirmation is weak
+Technical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 542.52001953125
+Fundamental Outlook: Fundamentally Average | Forward P/E: 39.040714
+News/Catalyst: Citi resets AMD stock price target on key move
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article><article><h3>FIZZ</h3><pre>Ticker: FIZZ
+Rating: Hold | Score: 56.8/100 | Confidence: 52.92/100
+Bull Case: No decisive bull case yet.
+Bear Case: volume confirmation is weak
+Technical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668
+Fundamental Outlook: Fundamentally Average | Forward P/E: 18.358015
+News/Catalyst: Suja Life Sees 66% EBITDA Growth as Functional Beverage Boom Accelerates
+Portfolio Fit: Already held; monitor risk contribution and thesis quality.
+Why Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.
+What Invalidates: N/A</pre></article></section>
+    <section id="risk"><h2>Risk Analytics</h2><p>Portfolio Health Score: 98.12/100 (Excellent). Annual volatility is 25.72%, Sharpe is 1.13, max drawdown is -26.85%, and average correlation is 0.39. Top risk contributors: AMD: 15.9%, TSLA: 15.7%, NVDA: 13.5%. Why Now: No clear portfolio Why Now trigger. What to watch next: Risk, correlation, and drawdown trends.</p></section>
   </main>
 </body>
 </html>
