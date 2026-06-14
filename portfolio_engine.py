@@ -83,6 +83,35 @@ def weights_from_positions(positions: Iterable[Dict], price_frame: pd.DataFrame)
     return weights / total
 
 
+
+def portfolio_drift_monitor(positions: Iterable[Dict], weights: pd.Series, drift_threshold_pct: float = 2.0) -> Dict:
+    target_weights = {}
+    for position in positions:
+        ticker = position.get("ticker")
+        target = position.get("target_weight", position.get("weight"))
+        if ticker and target is not None:
+            target_weights[ticker] = float(target)
+    if not target_weights and not weights.empty:
+        target_weights = {ticker: 1 / len(weights) for ticker in weights.index}
+    rows = []
+    for ticker, current_weight in weights.items():
+        target = target_weights.get(ticker, 1 / len(weights) if len(weights) else 0)
+        drift_pct = (float(current_weight) - float(target)) * 100
+        rows.append({
+            "ticker": ticker,
+            "current_weight_pct": round(float(current_weight) * 100, 2),
+            "target_weight_pct": round(float(target) * 100, 2),
+            "drift_pct": round(drift_pct, 2),
+            "status": "rebalance_watch" if abs(drift_pct) >= drift_threshold_pct else "in_band",
+        })
+    alerts = [row for row in rows if row["status"] == "rebalance_watch"]
+    return {
+        "threshold_pct": drift_threshold_pct,
+        "alerts": alerts,
+        "positions": sorted(rows, key=lambda row: abs(row["drift_pct"]), reverse=True),
+        "summary": f"{len(alerts)} positions drifted by at least {drift_threshold_pct:.1f}% from target.",
+    }
+
 def portfolio_returns(price_frame: pd.DataFrame, weights: pd.Series) -> pd.Series:
     returns = price_frame[weights.index].pct_change().dropna(how="all").fillna(0)
     return returns.dot(weights)
@@ -348,6 +377,7 @@ def generate_portfolio_report(positions: Iterable[Dict], price_data: Dict[str, p
         "maximum_drawdown": quant_analytics.max_drawdown(returns),
         "risk_contributions": risk_contrib,
         "sector_exposure": {key: round(float(value * 100), 2) for key, value in sector_exposure.items()},
+        "drift_monitor": portfolio_drift_monitor(positions, weights),
         "diversification": diversification,
         "time_series_monitor": time_series_monitor(price_frame, weights),
         "forecast": forecasting_engine(price_frame, weights),
