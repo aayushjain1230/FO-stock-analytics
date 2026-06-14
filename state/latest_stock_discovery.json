@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T14:59:44.270199",
+  "generated_at": "2026-06-14T15:34:35.910419",
   "screener": "quality_momentum",
   "filters": {
     "min_final_score": 60,
@@ -13,7 +13,7 @@
   "matches": [
     {
       "ticker": "TSM",
-      "generated_at": "2026-06-14T14:59:43.970109",
+      "generated_at": "2026-06-14T15:34:34.686028",
       "score": {
         "final_score": 71.15,
         "rating": "Watch",
@@ -48,7 +48,7 @@
             "1m": 0.06283837889377208,
             "3m": 0.25955528652168103,
             "6m": 0.3776695230638243,
-            "12m": 1.0092743161151927
+            "12m": 1.0092741708022293
           },
           "acceleration": 0.0707,
           "evidence": [
@@ -81,14 +81,14 @@
         "risk": {
           "score": 60.0,
           "risk_metrics": {
-            "volatility": 0.02617071613259517,
-            "annualized_volatility": 0.41544723911587744,
-            "maximum_drawdown": -0.3681737626873405,
-            "sharpe_ratio": 1.3273453098176207,
-            "sortino_ratio": 1.9738670620843282,
-            "calmar_ratio": 1.60703733497022,
-            "beta": 1.6454314856633294,
-            "alpha": 0.24870311554122312
+            "volatility": 0.02617071170029211,
+            "annualized_volatility": 0.4154471687552476,
+            "maximum_drawdown": -0.36817376268734137,
+            "sharpe_ratio": 1.3273456846050489,
+            "sortino_ratio": 1.973867281135265,
+            "calmar_ratio": 1.6070377294165523,
+            "beta": 1.6454327069094186,
+            "alpha": 0.24870297351078735
           },
           "evidence": [
             "Historical drawdown is severe",
@@ -146,7 +146,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 18.0,
         "next_earnings_date": "1776342600",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 56.46698429463956,
@@ -162,9 +163,43 @@
       },
       "earnings": {
         "next_earnings_date": "1776342600",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.07,
+        "last_surprise_pct": 0.0468,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 3.33393,
+            "eps_actual": 3.49,
+            "surprise_pct": 0.0468,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 2.97556,
+            "eps_actual": 3.14,
+            "surprise_pct": 0.0553,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 2.62516,
+            "eps_actual": 2.92,
+            "surprise_pct": 0.11229999,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 2.31303,
+            "eps_actual": 2.47,
+            "surprise_pct": 0.0679,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
@@ -176,12 +211,53 @@
         "bullish_news_score": 3,
         "bearish_news_score": 0,
         "institutional_ownership": 0.15640001,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 3.33393,
+                "eps_actual": 3.49,
+                "surprise_pct": 0.0468,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 2.97556,
+                "eps_actual": 3.14,
+                "surprise_pct": 0.0553,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 2.62516,
+                "eps_actual": 2.92,
+                "surprise_pct": 0.11229999,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 2.31303,
+                "eps_actual": 2.47,
+                "surprise_pct": 0.0679,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.07,
+            "last_surprise_pct": 0.0468,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 10.36
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "technical/sector backdrop is constructive",
+          "recent earnings surprise or earnings growth is positive",
+          "analyst target/recommendation data is supportive",
+          "technical backdrop is constructive",
           "recent news item has elevated importance",
-          "news tone suggests a catalyst shift"
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -233,20 +309,20 @@
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
           },
           {
-            "headline": "Amkor Technology (AMKR) Hits All-Time High \u2014 Here\u2019s Why",
-            "source": "Insider Monkey",
-            "published": "2026-06-13T05:54:28Z",
-            "summary": "Amkor Technology Inc. (NASDAQ:AMKR) is one of the 10 Stocks That Absolutely Exploded Higher. Amkor Technology saw its share prices climb to a fresh all-time high on Friday, as investors poured funds into industries largely benefiting from the AI wave, helped by the easing tensions on the geopolitical front. In intra-day trading, the stock climbed [\u2026]",
+            "headline": "TSMC Revenue Surges 30% in May on Relentless AI Demand. TSM Stock Is Still Undervalued Here.",
+            "source": "Barchart",
+            "published": "2026-06-13T15:00:03Z",
+            "summary": "The world's most important chipmaker just gave investors another reason to believe the AI boom is far from over.",
             "bullish_score": 0,
             "bearish_score": 0,
             "importance_score": 30,
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
           },
           {
-            "headline": "AI Stocks Underestimate the Technology\u2019s Potential, Says This Tech Investor",
-            "source": "Barrons.com",
-            "published": "2026-06-13T02:07:00Z",
-            "summary": "Brian Barbetta, co-head of technology investing at Wellington Management, is betting on Nvidia, ASML, and Samsara.",
+            "headline": "Amkor Technology (AMKR) Hits All-Time High \u2014 Here\u2019s Why",
+            "source": "Insider Monkey",
+            "published": "2026-06-13T05:54:28Z",
+            "summary": "Amkor Technology Inc. (NASDAQ:AMKR) is one of the 10 Stocks That Absolutely Exploded Higher. Amkor Technology saw its share prices climb to a fresh all-time high on Friday, as investors poured funds into industries largely benefiting from the AI wave, helped by the easing tensions on the geopolitical front. In intra-day trading, the stock climbed [\u2026]",
             "bullish_score": 0,
             "bearish_score": 0,
             "importance_score": 30,
@@ -279,11 +355,11 @@
     },
     {
       "ticker": "GE",
-      "generated_at": "2026-06-14T14:59:42.548860",
+      "generated_at": "2026-06-14T15:34:31.835913",
       "score": {
-        "final_score": 69.0,
+        "final_score": 67.0,
         "rating": "Watch",
-        "confidence": 62.81,
+        "confidence": 55.1,
         "risk_level": "Controlled",
         "categories": {
           "technical": 75.0,
@@ -291,7 +367,7 @@
           "volume": 25.0,
           "fundamental": 70.0,
           "risk": 100,
-          "catalyst": 70.0
+          "catalyst": 30.0
         },
         "technical": {
           "score": 75.0,
@@ -314,7 +390,7 @@
             "1m": 0.13772860613745985,
             "3m": 0.11882273369637941,
             "6m": 0.18537533147183693,
-            "12m": 0.37290128423776525
+            "12m": 0.3729013700136452
           },
           "acceleration": 0.0261,
           "evidence": [
@@ -345,22 +421,20 @@
         "risk": {
           "score": 100,
           "risk_metrics": {
-            "volatility": 0.020786223724365865,
-            "annualized_volatility": 0.3299710720249373,
-            "maximum_drawdown": -0.21364262257290023,
-            "sharpe_ratio": 1.3564203357343179,
-            "sortino_ratio": 1.7569069155854589,
-            "calmar_ratio": 2.2510538345840745,
-            "beta": 1.188617930102274,
-            "alpha": 0.22888862849477948
+            "volatility": 0.020786227267335852,
+            "annualized_volatility": 0.32997112826784225,
+            "maximum_drawdown": -0.21364273629911035,
+            "sharpe_ratio": 1.3564201624832481,
+            "sortino_ratio": 1.756906518630781,
+            "calmar_ratio": 2.251052636304059,
+            "beta": 1.188618038230517,
+            "alpha": 0.22888864242350326
           },
           "evidence": []
         },
         "catalyst": {
-          "score": 70.0,
+          "score": 30.0,
           "evidence": [
-            "earnings surprise",
-            "analyst revision",
             "sector strength",
             "guidance change"
           ]
@@ -406,7 +480,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 21.0,
         "next_earnings_date": "1784205000",
-        "classification": "Fundamentally Strong"
+        "classification": "Fundamentally Strong",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 68.49361846550376,
@@ -422,13 +497,47 @@
       },
       "earnings": {
         "next_earnings_date": "1784205000",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.14,
+        "last_surprise_pct": 0.16309999,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.59919,
+            "eps_actual": 1.86,
+            "surprise_pct": 0.16309999,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 1.42976,
+            "eps_actual": 1.57,
+            "surprise_pct": 0.09810001,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.46885,
+            "eps_actual": 1.66,
+            "surprise_pct": 0.1301,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 1.43135,
+            "eps_actual": 1.66,
+            "surprise_pct": 0.1597,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
-        "earnings_surprise": true,
-        "analyst_revision": true,
+        "earnings_surprise": false,
+        "analyst_revision": false,
         "insider_buying": false,
         "sector_strength": true,
         "major_news": false,
@@ -436,11 +545,50 @@
         "bullish_news_score": 2,
         "bearish_news_score": 0,
         "institutional_ownership": 0.80974996,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 1.59919,
+                "eps_actual": 1.86,
+                "surprise_pct": 0.16309999,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 1.42976,
+                "eps_actual": 1.57,
+                "surprise_pct": 0.09810001,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 1.46885,
+                "eps_actual": 1.66,
+                "surprise_pct": 0.1301,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 1.43135,
+                "eps_actual": 1.66,
+                "surprise_pct": 0.1597,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.14,
+            "last_surprise_pct": 0.16309999,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 4.67
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "technical/sector backdrop is constructive",
-          "news tone suggests a catalyst shift"
+          "technical backdrop is constructive",
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -534,13 +682,13 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: GE\nRating: Watch | Score: 69.0/100 | Confidence: 62.81/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613\nNews/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: GE\nRating: Watch | Score: 67.0/100 | Confidence: 55.1/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613\nNews/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     }
   ],
   "top_ranked": [
     {
       "ticker": "TSM",
-      "generated_at": "2026-06-14T14:59:43.970109",
+      "generated_at": "2026-06-14T15:34:34.686028",
       "score": {
         "final_score": 71.15,
         "rating": "Watch",
@@ -575,7 +723,7 @@
             "1m": 0.06283837889377208,
             "3m": 0.25955528652168103,
             "6m": 0.3776695230638243,
-            "12m": 1.0092743161151927
+            "12m": 1.0092741708022293
           },
           "acceleration": 0.0707,
           "evidence": [
@@ -608,14 +756,14 @@
         "risk": {
           "score": 60.0,
           "risk_metrics": {
-            "volatility": 0.02617071613259517,
-            "annualized_volatility": 0.41544723911587744,
-            "maximum_drawdown": -0.3681737626873405,
-            "sharpe_ratio": 1.3273453098176207,
-            "sortino_ratio": 1.9738670620843282,
-            "calmar_ratio": 1.60703733497022,
-            "beta": 1.6454314856633294,
-            "alpha": 0.24870311554122312
+            "volatility": 0.02617071170029211,
+            "annualized_volatility": 0.4154471687552476,
+            "maximum_drawdown": -0.36817376268734137,
+            "sharpe_ratio": 1.3273456846050489,
+            "sortino_ratio": 1.973867281135265,
+            "calmar_ratio": 1.6070377294165523,
+            "beta": 1.6454327069094186,
+            "alpha": 0.24870297351078735
           },
           "evidence": [
             "Historical drawdown is severe",
@@ -673,7 +821,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 18.0,
         "next_earnings_date": "1776342600",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 56.46698429463956,
@@ -689,9 +838,43 @@
       },
       "earnings": {
         "next_earnings_date": "1776342600",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.07,
+        "last_surprise_pct": 0.0468,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 3.33393,
+            "eps_actual": 3.49,
+            "surprise_pct": 0.0468,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 2.97556,
+            "eps_actual": 3.14,
+            "surprise_pct": 0.0553,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 2.62516,
+            "eps_actual": 2.92,
+            "surprise_pct": 0.11229999,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 2.31303,
+            "eps_actual": 2.47,
+            "surprise_pct": 0.0679,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
@@ -703,12 +886,53 @@
         "bullish_news_score": 3,
         "bearish_news_score": 0,
         "institutional_ownership": 0.15640001,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 3.33393,
+                "eps_actual": 3.49,
+                "surprise_pct": 0.0468,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 2.97556,
+                "eps_actual": 3.14,
+                "surprise_pct": 0.0553,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 2.62516,
+                "eps_actual": 2.92,
+                "surprise_pct": 0.11229999,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 2.31303,
+                "eps_actual": 2.47,
+                "surprise_pct": 0.0679,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.07,
+            "last_surprise_pct": 0.0468,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 10.36
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "technical/sector backdrop is constructive",
+          "recent earnings surprise or earnings growth is positive",
+          "analyst target/recommendation data is supportive",
+          "technical backdrop is constructive",
           "recent news item has elevated importance",
-          "news tone suggests a catalyst shift"
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -760,20 +984,20 @@
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
           },
           {
-            "headline": "Amkor Technology (AMKR) Hits All-Time High \u2014 Here\u2019s Why",
-            "source": "Insider Monkey",
-            "published": "2026-06-13T05:54:28Z",
-            "summary": "Amkor Technology Inc. (NASDAQ:AMKR) is one of the 10 Stocks That Absolutely Exploded Higher. Amkor Technology saw its share prices climb to a fresh all-time high on Friday, as investors poured funds into industries largely benefiting from the AI wave, helped by the easing tensions on the geopolitical front. In intra-day trading, the stock climbed [\u2026]",
+            "headline": "TSMC Revenue Surges 30% in May on Relentless AI Demand. TSM Stock Is Still Undervalued Here.",
+            "source": "Barchart",
+            "published": "2026-06-13T15:00:03Z",
+            "summary": "The world's most important chipmaker just gave investors another reason to believe the AI boom is far from over.",
             "bullish_score": 0,
             "bearish_score": 0,
             "importance_score": 30,
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
           },
           {
-            "headline": "AI Stocks Underestimate the Technology\u2019s Potential, Says This Tech Investor",
-            "source": "Barrons.com",
-            "published": "2026-06-13T02:07:00Z",
-            "summary": "Brian Barbetta, co-head of technology investing at Wellington Management, is betting on Nvidia, ASML, and Samsara.",
+            "headline": "Amkor Technology (AMKR) Hits All-Time High \u2014 Here\u2019s Why",
+            "source": "Insider Monkey",
+            "published": "2026-06-13T05:54:28Z",
+            "summary": "Amkor Technology Inc. (NASDAQ:AMKR) is one of the 10 Stocks That Absolutely Exploded Higher. Amkor Technology saw its share prices climb to a fresh all-time high on Friday, as investors poured funds into industries largely benefiting from the AI wave, helped by the easing tensions on the geopolitical front. In intra-day trading, the stock climbed [\u2026]",
             "bullish_score": 0,
             "bearish_score": 0,
             "importance_score": 30,
@@ -806,11 +1030,11 @@
     },
     {
       "ticker": "GE",
-      "generated_at": "2026-06-14T14:59:42.548860",
+      "generated_at": "2026-06-14T15:34:31.835913",
       "score": {
-        "final_score": 69.0,
+        "final_score": 67.0,
         "rating": "Watch",
-        "confidence": 62.81,
+        "confidence": 55.1,
         "risk_level": "Controlled",
         "categories": {
           "technical": 75.0,
@@ -818,7 +1042,7 @@
           "volume": 25.0,
           "fundamental": 70.0,
           "risk": 100,
-          "catalyst": 70.0
+          "catalyst": 30.0
         },
         "technical": {
           "score": 75.0,
@@ -841,7 +1065,7 @@
             "1m": 0.13772860613745985,
             "3m": 0.11882273369637941,
             "6m": 0.18537533147183693,
-            "12m": 0.37290128423776525
+            "12m": 0.3729013700136452
           },
           "acceleration": 0.0261,
           "evidence": [
@@ -872,22 +1096,20 @@
         "risk": {
           "score": 100,
           "risk_metrics": {
-            "volatility": 0.020786223724365865,
-            "annualized_volatility": 0.3299710720249373,
-            "maximum_drawdown": -0.21364262257290023,
-            "sharpe_ratio": 1.3564203357343179,
-            "sortino_ratio": 1.7569069155854589,
-            "calmar_ratio": 2.2510538345840745,
-            "beta": 1.188617930102274,
-            "alpha": 0.22888862849477948
+            "volatility": 0.020786227267335852,
+            "annualized_volatility": 0.32997112826784225,
+            "maximum_drawdown": -0.21364273629911035,
+            "sharpe_ratio": 1.3564201624832481,
+            "sortino_ratio": 1.756906518630781,
+            "calmar_ratio": 2.251052636304059,
+            "beta": 1.188618038230517,
+            "alpha": 0.22888864242350326
           },
           "evidence": []
         },
         "catalyst": {
-          "score": 70.0,
+          "score": 30.0,
           "evidence": [
-            "earnings surprise",
-            "analyst revision",
             "sector strength",
             "guidance change"
           ]
@@ -933,7 +1155,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 21.0,
         "next_earnings_date": "1784205000",
-        "classification": "Fundamentally Strong"
+        "classification": "Fundamentally Strong",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 68.49361846550376,
@@ -949,13 +1172,47 @@
       },
       "earnings": {
         "next_earnings_date": "1784205000",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.14,
+        "last_surprise_pct": 0.16309999,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.59919,
+            "eps_actual": 1.86,
+            "surprise_pct": 0.16309999,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 1.42976,
+            "eps_actual": 1.57,
+            "surprise_pct": 0.09810001,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.46885,
+            "eps_actual": 1.66,
+            "surprise_pct": 0.1301,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 1.43135,
+            "eps_actual": 1.66,
+            "surprise_pct": 0.1597,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
-        "earnings_surprise": true,
-        "analyst_revision": true,
+        "earnings_surprise": false,
+        "analyst_revision": false,
         "insider_buying": false,
         "sector_strength": true,
         "major_news": false,
@@ -963,11 +1220,50 @@
         "bullish_news_score": 2,
         "bearish_news_score": 0,
         "institutional_ownership": 0.80974996,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 1.59919,
+                "eps_actual": 1.86,
+                "surprise_pct": 0.16309999,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 1.42976,
+                "eps_actual": 1.57,
+                "surprise_pct": 0.09810001,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 1.46885,
+                "eps_actual": 1.66,
+                "surprise_pct": 0.1301,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 1.43135,
+                "eps_actual": 1.66,
+                "surprise_pct": 0.1597,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.14,
+            "last_surprise_pct": 0.16309999,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 4.67
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "technical/sector backdrop is constructive",
-          "news tone suggests a catalyst shift"
+          "technical backdrop is constructive",
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -1061,15 +1357,15 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: GE\nRating: Watch | Score: 69.0/100 | Confidence: 62.81/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613\nNews/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: GE\nRating: Watch | Score: 67.0/100 | Confidence: 55.1/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613\nNews/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     },
     {
       "ticker": "AAPL",
-      "generated_at": "2026-06-14T14:59:41.022480",
+      "generated_at": "2026-06-14T15:34:29.599998",
       "score": {
-        "final_score": 64.4,
+        "final_score": 63.4,
         "rating": "Hold",
-        "confidence": 51.71,
+        "confidence": 48.3,
         "risk_level": "Controlled",
         "categories": {
           "technical": 57.0,
@@ -1077,7 +1373,7 @@
           "volume": 0,
           "fundamental": 86.0,
           "risk": 100,
-          "catalyst": 70.0
+          "catalyst": 50.0
         },
         "technical": {
           "score": 57.0,
@@ -1128,22 +1424,21 @@
         "risk": {
           "score": 100,
           "risk_metrics": {
-            "volatility": 0.017586945430844828,
-            "annualized_volatility": 0.2791841035876747,
-            "maximum_drawdown": -0.33360519953145074,
-            "sharpe_ratio": 0.7076184254444423,
-            "sortino_ratio": 0.9640543718292965,
-            "calmar_ratio": 0.5162771999105584,
-            "beta": 1.1365936344760996,
-            "alpha": -0.011563207817977046
+            "volatility": 0.017586948239042808,
+            "annualized_volatility": 0.2791841481664356,
+            "maximum_drawdown": -0.33360519953145007,
+            "sharpe_ratio": 0.707618481958602,
+            "sortino_ratio": 0.9640551242601877,
+            "calmar_ratio": 0.5162773271368803,
+            "beta": 1.1365934591582336,
+            "alpha": -0.011563114180753162
           },
           "evidence": []
         },
         "catalyst": {
-          "score": 70.0,
+          "score": 50.0,
           "evidence": [
             "earnings surprise",
-            "analyst revision",
             "sector strength",
             "guidance change"
           ]
@@ -1189,7 +1484,8 @@
         "recommendation": "buy",
         "number_of_analysts": 43.0,
         "next_earnings_date": "1777579200",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 34.18561939152667,
@@ -1205,13 +1501,47 @@
       },
       "earnings": {
         "next_earnings_date": "1777579200",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.06,
+        "last_surprise_pct": 0.0346,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.94275,
+            "eps_actual": 2.01,
+            "surprise_pct": 0.0346,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 2.6708,
+            "eps_actual": 2.84,
+            "surprise_pct": 0.0634,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.76993,
+            "eps_actual": 1.85,
+            "surprise_pct": 0.0452,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 1.42572,
+            "eps_actual": 1.57,
+            "surprise_pct": 0.1012,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
-        "analyst_revision": true,
+        "analyst_revision": false,
         "insider_buying": false,
         "sector_strength": true,
         "major_news": false,
@@ -1219,11 +1549,51 @@
         "bullish_news_score": 2,
         "bearish_news_score": 0,
         "institutional_ownership": 0.65829,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 1.94275,
+                "eps_actual": 2.01,
+                "surprise_pct": 0.0346,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 2.6708,
+                "eps_actual": 2.84,
+                "surprise_pct": 0.0634,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 1.76993,
+                "eps_actual": 1.85,
+                "surprise_pct": 0.0452,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 1.42572,
+                "eps_actual": 1.57,
+                "surprise_pct": 0.1012,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.06,
+            "last_surprise_pct": 0.0346,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 7.41
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "technical/sector backdrop is constructive",
-          "news tone suggests a catalyst shift"
+          "recent earnings surprise or earnings growth is positive",
+          "technical backdrop is constructive",
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -1317,11 +1687,11 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: AAPL\nRating: Hold | Score: 64.4/100 | Confidence: 51.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 246.6300048828125 | Resistance: 315.20001220703125\nFundamental Outlook: Quality Compounder | Forward P/E: 30.341877\nNews/Catalyst: Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: AAPL\nRating: Hold | Score: 63.4/100 | Confidence: 48.3/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 246.6300048828125 | Resistance: 315.20001220703125\nFundamental Outlook: Quality Compounder | Forward P/E: 30.341877\nNews/Catalyst: Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     },
     {
       "ticker": "VGT",
-      "generated_at": "2026-06-14T14:59:44.263673",
+      "generated_at": "2026-06-14T15:34:35.905048",
       "score": {
         "final_score": 61.75,
         "rating": "Hold",
@@ -1383,14 +1753,14 @@
         "risk": {
           "score": 85.0,
           "risk_metrics": {
-            "volatility": 0.01661106995085927,
-            "annualized_volatility": 0.26369256060402924,
-            "maximum_drawdown": -0.2722879227646884,
-            "sharpe_ratio": 1.069805710456249,
-            "sortino_ratio": 1.4184330992452094,
-            "calmar_ratio": 1.0309002024229654,
-            "beta": 1.4444986124023464,
-            "alpha": 0.0163301157860992
+            "volatility": 0.016611071020814425,
+            "annualized_volatility": 0.26369257758904074,
+            "maximum_drawdown": -0.27228780633663185,
+            "sharpe_ratio": 1.0698056615538383,
+            "sortino_ratio": 1.4184323997376087,
+            "calmar_ratio": 1.0309006432275343,
+            "beta": 1.4444992448771459,
+            "alpha": 0.016330022560848475
           },
           "evidence": [
             "Short-term volatility is rising"
@@ -1445,7 +1815,8 @@
         "recommendation": null,
         "number_of_analysts": null,
         "next_earnings_date": null,
-        "classification": "Fundamentally Average"
+        "classification": "Fundamentally Average",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 51.494110307692694,
@@ -1463,7 +1834,7 @@
         "next_earnings_date": null,
         "surprise_tracking": "Unavailable from current data provider.",
         "risk_score": 25,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "note": "Earnings surprise data unavailable from yfinance."
       },
       "catalysts": {
         "earnings_surprise": false,
@@ -1475,10 +1846,21 @@
         "bullish_news_score": 3,
         "bearish_news_score": 1,
         "institutional_ownership": null,
+        "detail": {
+          "earnings": {
+            "available": false,
+            "history": [],
+            "beat_streak": 0,
+            "miss_streak": 0,
+            "average_surprise_pct": null,
+            "last_surprise_pct": null,
+            "last_surprise_direction": null
+          }
+        },
         "evidence": [
-          "technical/sector backdrop is constructive",
+          "technical backdrop is constructive",
           "recent news item has elevated importance",
-          "news tone suggests a catalyst shift"
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -1576,7 +1958,7 @@
     },
     {
       "ticker": "GOOGL",
-      "generated_at": "2026-06-14T14:59:42.824399",
+      "generated_at": "2026-06-14T15:34:32.403438",
       "score": {
         "final_score": 60.9,
         "rating": "Hold",
@@ -1638,14 +2020,14 @@
         "risk": {
           "score": 100,
           "risk_metrics": {
-            "volatility": 0.019286820755371657,
-            "annualized_volatility": 0.30616878779875395,
-            "maximum_drawdown": -0.298058750020996,
-            "sharpe_ratio": 1.3497350880188608,
-            "sortino_ratio": 2.145318108218916,
-            "calmar_ratio": 1.485231056371949,
-            "beta": 1.0933253723196947,
-            "alpha": 0.2120885516108474
+            "volatility": 0.019286821029630155,
+            "annualized_volatility": 0.3061687921524726,
+            "maximum_drawdown": -0.29805869785160766,
+            "sharpe_ratio": 1.349735360438495,
+            "sortino_ratio": 2.145318429368604,
+            "calmar_ratio": 1.4852317446362815,
+            "beta": 1.0933260341191506,
+            "alpha": 0.2120885326539264
           },
           "evidence": []
         },
@@ -1698,7 +2080,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 53.0,
         "next_earnings_date": "1777492800",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 33.9622752530485,
@@ -1714,9 +2097,43 @@
       },
       "earnings": {
         "next_earnings_date": "1777492800",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.33,
+        "last_surprise_pct": 0.9159,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 2.66714,
+            "eps_actual": 5.11,
+            "surprise_pct": 0.9159,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 2.63521,
+            "eps_actual": 2.82,
+            "surprise_pct": 0.0701,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 2.26199,
+            "eps_actual": 2.87,
+            "surprise_pct": 0.2688,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 2.18615,
+            "eps_actual": 2.31,
+            "surprise_pct": 0.056700002,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
@@ -1728,10 +2145,51 @@
         "bullish_news_score": 3,
         "bearish_news_score": 0,
         "institutional_ownership": 0.8075,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 2.66714,
+                "eps_actual": 5.11,
+                "surprise_pct": 0.9159,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 2.63521,
+                "eps_actual": 2.82,
+                "surprise_pct": 0.0701,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 2.26199,
+                "eps_actual": 2.87,
+                "surprise_pct": 0.2688,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 2.18615,
+                "eps_actual": 2.31,
+                "surprise_pct": 0.056700002,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.33,
+            "last_surprise_pct": 0.9159,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 20.34
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "news tone suggests a catalyst shift"
+          "recent earnings surprise or earnings growth is positive",
+          "analyst target/recommendation data is supportive",
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -1829,7 +2287,7 @@
     },
     {
       "ticker": "AMZN",
-      "generated_at": "2026-06-14T14:59:41.687330",
+      "generated_at": "2026-06-14T15:34:30.659332",
       "score": {
         "final_score": 60.15,
         "rating": "Hold",
@@ -1897,8 +2355,8 @@
             "sharpe_ratio": 0.5658408580521307,
             "sortino_ratio": 0.8381284667869958,
             "calmar_ratio": 0.45451678442906956,
-            "beta": 1.364707034566132,
-            "alpha": -0.06700593540066842
+            "beta": 1.364707331272019,
+            "alpha": -0.06700597311102693
           },
           "evidence": []
         },
@@ -1952,7 +2410,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 63.0,
         "next_earnings_date": "1777492800",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 26.761484897107167,
@@ -1968,9 +2427,43 @@
       },
       "earnings": {
         "next_earnings_date": "1777492800",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 1,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.3,
+        "last_surprise_pct": 0.6818,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.65303,
+            "eps_actual": 2.78,
+            "surprise_pct": 0.6818,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 1.95962,
+            "eps_actual": 1.95,
+            "surprise_pct": -0.0049,
+            "beat": false
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.55757,
+            "eps_actual": 1.95,
+            "surprise_pct": 0.252,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 1.33192,
+            "eps_actual": 1.68,
+            "surprise_pct": 0.2613,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
@@ -1982,11 +2475,52 @@
         "bullish_news_score": 2,
         "bearish_news_score": 0,
         "institutional_ownership": 0.68018997,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 1.65303,
+                "eps_actual": 2.78,
+                "surprise_pct": 0.6818,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 1.95962,
+                "eps_actual": 1.95,
+                "surprise_pct": -0.0049,
+                "beat": false
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 1.55757,
+                "eps_actual": 1.95,
+                "surprise_pct": 0.252,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 1.33192,
+                "eps_actual": 1.68,
+                "surprise_pct": 0.2613,
+                "beat": true
+              }
+            ],
+            "beat_streak": 1,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.3,
+            "last_surprise_pct": 0.6818,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 31.0
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "insider ownership is meaningful",
-          "news tone suggests a catalyst shift"
+          "recent earnings surprise or earnings growth is positive",
+          "analyst target/recommendation data is supportive",
+          "insider ownership or purchase data is supportive",
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -2084,11 +2618,11 @@
     },
     {
       "ticker": "AMD",
-      "generated_at": "2026-06-14T14:59:41.349404",
+      "generated_at": "2026-06-14T15:34:30.118305",
       "score": {
-        "final_score": 57.65,
+        "final_score": 56.65,
         "rating": "Avoid",
-        "confidence": 41.81,
+        "confidence": 39.03,
         "risk_level": "High",
         "categories": {
           "technical": 80.0,
@@ -2096,7 +2630,7 @@
           "volume": 0,
           "fundamental": 61.0,
           "risk": 20.0,
-          "catalyst": 85.0
+          "catalyst": 65.0
         },
         "technical": {
           "score": 80.0,
@@ -2157,8 +2691,8 @@
             "sharpe_ratio": 1.2640313108455778,
             "sortino_ratio": 2.059470849589924,
             "calmar_ratio": 1.3864441345301786,
-            "beta": 2.2027035775405004,
-            "alpha": 0.3608881276302638
+            "beta": 2.2027050158563544,
+            "alpha": 0.36088789024297996
           },
           "evidence": [
             "Volatility is elevated",
@@ -2168,10 +2702,9 @@
           ]
         },
         "catalyst": {
-          "score": 85.0,
+          "score": 65.0,
           "evidence": [
             "earnings surprise",
-            "analyst revision",
             "sector strength",
             "major news",
             "guidance change"
@@ -2218,7 +2751,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 48.0,
         "next_earnings_date": "1778011200",
-        "classification": "Fundamentally Average"
+        "classification": "Fundamentally Average",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 57.22721404068582,
@@ -2234,13 +2768,47 @@
       },
       "earnings": {
         "next_earnings_date": "1778011200",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 3,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.06,
+        "last_surprise_pct": 0.0582,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.29468,
+            "eps_actual": 1.37,
+            "surprise_pct": 0.0582,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 1.31917,
+            "eps_actual": 1.53,
+            "surprise_pct": 0.1598,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.171,
+            "eps_actual": 1.2,
+            "surprise_pct": 0.0248,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 0.48264,
+            "eps_actual": 0.48,
+            "surprise_pct": -0.0055,
+            "beat": false
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
-        "analyst_revision": true,
+        "analyst_revision": false,
         "insider_buying": false,
         "sector_strength": true,
         "major_news": true,
@@ -2248,12 +2816,52 @@
         "bullish_news_score": 3,
         "bearish_news_score": 0,
         "institutional_ownership": 0.72152,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 1.29468,
+                "eps_actual": 1.37,
+                "surprise_pct": 0.0582,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 1.31917,
+                "eps_actual": 1.53,
+                "surprise_pct": 0.1598,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 1.171,
+                "eps_actual": 1.2,
+                "surprise_pct": 0.0248,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 0.48264,
+                "eps_actual": 0.48,
+                "surprise_pct": -0.0055,
+                "beat": false
+              }
+            ],
+            "beat_streak": 3,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.06,
+            "last_surprise_pct": 0.0582,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": -4.93
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "technical/sector backdrop is constructive",
+          "recent earnings surprise or earnings growth is positive",
+          "technical backdrop is constructive",
           "recent news item has elevated importance",
-          "news tone suggests a catalyst shift"
+          "news tone or forward EPS implies a catalyst shift"
         ]
       },
       "analyst": {
@@ -2274,6 +2882,16 @@
       "news": {
         "available": true,
         "items": [
+          {
+            "headline": "Xbox fans waiting on Project Helix get unexpected news from Wedbush",
+            "source": "TheStreet",
+            "published": "2026-06-14T15:07:00Z",
+            "summary": "The explosion in AI spending is having a ripple effect throughout the tech industry, and now gamers are going to pay the price. To find out just how much weight AI holds in the U.S. economy, the Federal Reserve Bank of St. Louis looked at how much money is being spent on software, R&D and ...",
+            "bullish_score": 0,
+            "bearish_score": 0,
+            "importance_score": 30,
+            "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+          },
           {
             "headline": "AMD Meta AI Chip Pact Puts Data Center Growth And Valuation In Focus",
             "source": "Simply Wall St.",
@@ -2313,16 +2931,6 @@
             "bearish_score": 0,
             "importance_score": 30,
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-          },
-          {
-            "headline": "Should You Look for the \u201cNext Nvidia\u201d \u2014 or Just Buy the Real Thing?",
-            "source": "24/7 Wall St.",
-            "published": "2026-06-13T15:25:36Z",
-            "summary": "The artificial intelligence boom has created a familiar pattern on Wall Street. Investors spend years chasing the market\u2019s biggest winner, then spend the next few years searching for whatever comes next. That search is happening right now with Nvidia (NASDAQ:NVDA). After becoming one of the most successful investments in stock market history, Nvidia\u2019s recent performance ... Should You Look for the \u201cNext Nvidia\u201d \u2014 or Just Buy the Real Thing?",
-            "bullish_score": 0,
-            "bearish_score": 0,
-            "importance_score": 30,
-            "why_it_matters": "News impact is unclear; monitor price and volume reaction."
           }
         ]
       },
@@ -2347,15 +2955,15 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: AMD\nRating: Avoid | Score: 57.65/100 | Confidence: 41.81/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 542.52001953125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.040714\nNews/Catalyst: AMD Meta AI Chip Pact Puts Data Center Growth And Valuation In Focus\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: AMD\nRating: Avoid | Score: 56.65/100 | Confidence: 39.03/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 542.52001953125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.040714\nNews/Catalyst: Xbox fans waiting on Project Helix get unexpected news from Wedbush\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     },
     {
       "ticker": "FIZZ",
-      "generated_at": "2026-06-14T14:59:42.250021",
+      "generated_at": "2026-06-14T15:34:31.250332",
       "score": {
-        "final_score": 56.8,
+        "final_score": 55.8,
         "rating": "Hold",
-        "confidence": 52.92,
+        "confidence": 49.83,
         "risk_level": "Moderate",
         "categories": {
           "technical": 75.0,
@@ -2363,7 +2971,7 @@
           "volume": 25.0,
           "fundamental": 62.0,
           "risk": 60.0,
-          "catalyst": 70.0
+          "catalyst": 50.0
         },
         "technical": {
           "score": 75.0,
@@ -2420,8 +3028,8 @@
             "sharpe_ratio": -0.212135312583401,
             "sortino_ratio": -0.35055780986839585,
             "calmar_ratio": -0.22842708752589738,
-            "beta": 0.1169647223136028,
-            "alpha": -0.08002384458713183
+            "beta": 0.11696483492503203,
+            "alpha": -0.08002386385951066
           },
           "evidence": [
             "Historical drawdown is severe",
@@ -2429,9 +3037,8 @@
           ]
         },
         "catalyst": {
-          "score": 70.0,
+          "score": 50.0,
           "evidence": [
-            "analyst revision",
             "insider buying",
             "sector strength",
             "major news"
@@ -2478,7 +3085,8 @@
         "recommendation": "none",
         "number_of_analysts": 1.0,
         "next_earnings_date": null,
-        "classification": "Fundamentally Average"
+        "classification": "Fundamentally Average",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 58.829781405796304,
@@ -2494,13 +3102,47 @@
       },
       "earnings": {
         "next_earnings_date": null,
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 25,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 0,
+        "miss_streak": 2,
+        "average_surprise_pct": -0.02,
+        "last_surprise_pct": -0.008,
+        "last_surprise_direction": "miss",
+        "risk_score": 35,
+        "history": [
+          {
+            "date": "2026-01-31",
+            "eps_estimate": 0.44354,
+            "eps_actual": 0.44,
+            "surprise_pct": -0.008,
+            "beat": false
+          },
+          {
+            "date": "2025-10-31",
+            "eps_estimate": 0.51499,
+            "eps_actual": 0.49,
+            "surprise_pct": -0.048499998,
+            "beat": false
+          },
+          {
+            "date": "2025-07-31",
+            "eps_estimate": 0.59887,
+            "eps_actual": 0.6,
+            "surprise_pct": 0.0019,
+            "beat": true
+          },
+          {
+            "date": "2025-04-30",
+            "eps_estimate": 0.4761,
+            "eps_actual": 0.47,
+            "surprise_pct": -0.0128,
+            "beat": false
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": false,
-        "analyst_revision": true,
+        "analyst_revision": false,
         "insider_buying": true,
         "sector_strength": true,
         "major_news": true,
@@ -2508,10 +3150,50 @@
         "bullish_news_score": 2,
         "bearish_news_score": 2,
         "institutional_ownership": 0.26306,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-01-31",
+                "eps_estimate": 0.44354,
+                "eps_actual": 0.44,
+                "surprise_pct": -0.008,
+                "beat": false
+              },
+              {
+                "date": "2025-10-31",
+                "eps_estimate": 0.51499,
+                "eps_actual": 0.49,
+                "surprise_pct": -0.048499998,
+                "beat": false
+              },
+              {
+                "date": "2025-07-31",
+                "eps_estimate": 0.59887,
+                "eps_actual": 0.6,
+                "surprise_pct": 0.0019,
+                "beat": true
+              },
+              {
+                "date": "2025-04-30",
+                "eps_estimate": 0.4761,
+                "eps_actual": 0.47,
+                "surprise_pct": -0.0128,
+                "beat": false
+              }
+            ],
+            "beat_streak": 0,
+            "miss_streak": 2,
+            "average_surprise_pct": -0.02,
+            "last_surprise_pct": -0.008,
+            "last_surprise_direction": "miss"
+          },
+          "analyst_upside_pct": -5.25
+        },
         "evidence": [
-          "analyst/target fields are supportive",
-          "insider ownership is meaningful",
-          "technical/sector backdrop is constructive",
+          "insider ownership or purchase data is supportive",
+          "technical backdrop is constructive",
           "recent news item has elevated importance"
         ]
       },
@@ -2606,11 +3288,11 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: FIZZ\nRating: Hold | Score: 56.8/100 | Confidence: 52.92/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.358015\nNews/Catalyst: Suja Life Sees 66% EBITDA Growth as Functional Beverage Boom Accelerates\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: FIZZ\nRating: Hold | Score: 55.8/100 | Confidence: 49.83/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.358015\nNews/Catalyst: Suja Life Sees 66% EBITDA Growth as Functional Beverage Boom Accelerates\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     },
     {
       "ticker": "NVDA",
-      "generated_at": "2026-06-14T14:59:43.400838",
+      "generated_at": "2026-06-14T15:34:33.504137",
       "score": {
         "final_score": 54.9,
         "rating": "Hold",
@@ -2642,7 +3324,7 @@
             "1m": -0.09033722105863007,
             "3m": 0.13969017329439715,
             "6m": 0.11785976081866512,
-            "12m": 0.4385162606518125
+            "12m": 0.4385164145358136
           },
           "acceleration": 0.0808,
           "evidence": [
@@ -2673,14 +3355,14 @@
         "risk": {
           "score": 60.0,
           "risk_metrics": {
-            "volatility": 0.030338388252700917,
-            "annualized_volatility": 0.48160698297102017,
-            "maximum_drawdown": -0.368810311256192,
-            "sharpe_ratio": 0.7234641417761962,
-            "sortino_ratio": 1.0213461525183891,
+            "volatility": 0.030338384742304214,
+            "annualized_volatility": 0.4816069272452001,
+            "maximum_drawdown": -0.36881031125619235,
+            "sharpe_ratio": 0.7234641668139659,
+            "sortino_ratio": 1.0213464097794862,
             "calmar_ratio": 0.7092738595632899,
-            "beta": 2.0116278137040164,
-            "alpha": -0.021688993808830576
+            "beta": 2.0116289990439253,
+            "alpha": -0.021689215272355983
           },
           "evidence": [
             "Historical drawdown is severe",
@@ -2735,7 +3417,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 59.0,
         "next_earnings_date": "1787774400",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 42.117536815510256,
@@ -2751,9 +3434,43 @@
       },
       "earnings": {
         "next_earnings_date": "1787774400",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.05,
+        "last_surprise_pct": 0.0554,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-04-30",
+            "eps_estimate": 1.77191,
+            "eps_actual": 1.87,
+            "surprise_pct": 0.0554,
+            "beat": true
+          },
+          {
+            "date": "2026-01-31",
+            "eps_estimate": 1.53812,
+            "eps_actual": 1.62,
+            "surprise_pct": 0.053200003,
+            "beat": true
+          },
+          {
+            "date": "2025-10-31",
+            "eps_estimate": 1.25647,
+            "eps_actual": 1.3,
+            "surprise_pct": 0.0346,
+            "beat": true
+          },
+          {
+            "date": "2025-07-31",
+            "eps_estimate": 1.00867,
+            "eps_actual": 1.05,
+            "surprise_pct": 0.040999997,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
@@ -2765,9 +3482,50 @@
         "bullish_news_score": 1,
         "bearish_news_score": 1,
         "institutional_ownership": 0.7086,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-04-30",
+                "eps_estimate": 1.77191,
+                "eps_actual": 1.87,
+                "surprise_pct": 0.0554,
+                "beat": true
+              },
+              {
+                "date": "2026-01-31",
+                "eps_estimate": 1.53812,
+                "eps_actual": 1.62,
+                "surprise_pct": 0.053200003,
+                "beat": true
+              },
+              {
+                "date": "2025-10-31",
+                "eps_estimate": 1.25647,
+                "eps_actual": 1.3,
+                "surprise_pct": 0.0346,
+                "beat": true
+              },
+              {
+                "date": "2025-07-31",
+                "eps_estimate": 1.00867,
+                "eps_actual": 1.05,
+                "surprise_pct": 0.040999997,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.05,
+            "last_surprise_pct": 0.0554,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 45.69
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive"
+          "recent earnings surprise or earnings growth is positive",
+          "analyst target/recommendation data is supportive"
         ]
       },
       "analyst": {
@@ -2789,6 +3547,36 @@
         "available": true,
         "items": [
           {
+            "headline": "Up 18% in 2026, Is Coca-Cola a Buy at an All-Time High?",
+            "source": "Motley Fool",
+            "published": "2026-06-14T15:08:00Z",
+            "summary": "The pop star is bubbly right now, but that doesn't mean it will inevitably go flat.",
+            "bullish_score": 0,
+            "bearish_score": 0,
+            "importance_score": 30,
+            "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+          },
+          {
+            "headline": "Xbox fans waiting on Project Helix get unexpected news from Wedbush",
+            "source": "TheStreet",
+            "published": "2026-06-14T15:07:00Z",
+            "summary": "The explosion in AI spending is having a ripple effect throughout the tech industry, and now gamers are going to pay the price. To find out just how much weight AI holds in the U.S. economy, the Federal Reserve Bank of St. Louis looked at how much money is being spent on software, R&D and ...",
+            "bullish_score": 0,
+            "bearish_score": 0,
+            "importance_score": 30,
+            "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+          },
+          {
+            "headline": "Got $2,500? 1 Unstoppable Medical Juggernaut to Buy Hand Over Fist and Hold for the Next 20 Years",
+            "source": "24/7 Wall St.",
+            "published": "2026-06-14T14:57:33Z",
+            "summary": "For an investor in their 50s or 60s who is finished chasing trends, Medtronic (NYSE:MDT) is a stock worth owning for decades because it pairs inelastic demand for medical devices with a 49th consecutive year of dividend increases. A $2,500 stake at the current $80.33 share price buys roughly 31 shares of a business engineered ... Got $2,500? 1 Unstoppable Medical Juggernaut to Buy Hand Over Fist and Hold for the Next 20 Years",
+            "bullish_score": 0,
+            "bearish_score": 1,
+            "importance_score": 45,
+            "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+          },
+          {
             "headline": "2 Best Stocks to Buy in the Market Right Now",
             "source": "Motley Fool",
             "published": "2026-06-14T14:50:00Z",
@@ -2807,36 +3595,6 @@
             "bearish_score": 0,
             "importance_score": 30,
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-          },
-          {
-            "headline": "3 Uranium Stocks Worth Buying as Nuclear Heats up in June",
-            "source": "24/7 Wall St.",
-            "published": "2026-06-14T14:30:50Z",
-            "summary": "Nuclear\u2019s narrative shifted from theory to commitment this spring, and June is where capital flows show up in fundamentals. Thirty-eight countries have pledged to triple nuclear capacity by 2050, Meta has signed agreements for up to 6.6 GWe of nuclear, and the U.S. Department of Energy is offering up to $26.5 billion in loan guarantees ... 3 Uranium Stocks Worth Buying as Nuclear Heats up in June",
-            "bullish_score": 0,
-            "bearish_score": 0,
-            "importance_score": 30,
-            "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-          },
-          {
-            "headline": "Prediction: This Will Be the Next $1 Trillion Artificial Intelligence (AI) Chip Stock, According to Jensen Huang",
-            "source": "Motley Fool",
-            "published": "2026-06-14T14:20:00Z",
-            "summary": "Jensen Huang recently declared Marvell Technology would become the next AI chip stock to reach a $1 trillion market cap.",
-            "bullish_score": 0,
-            "bearish_score": 0,
-            "importance_score": 30,
-            "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-          },
-          {
-            "headline": "Is IREN (IREN) Quietly Rewriting Its AI Infrastructure Story With Microsoft-Backed GPU Financing?",
-            "source": "Simply Wall St.",
-            "published": "2026-06-14T14:13:21Z",
-            "summary": "In early June 2026, IREN Limited closed a US$3.65 billion investment-grade GPU financing facility linked to its Microsoft AI cloud contract and advanced plans for an 800MW, transmission-ready data center campus in Bundey, South Australia, while also engaging BE Networks and NVIDIA DSX Air to test its upcoming Blackwell Ultra GPU deployment via a digital twin. Taken together, these moves highlight how IREN is trying to reposition itself from a Bitcoin miner into a large-scale AI...",
-            "bullish_score": 0,
-            "bearish_score": 1,
-            "importance_score": 45,
-            "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
           }
         ]
       },
@@ -2861,11 +3619,11 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: NVDA\nRating: Hold | Score: 54.9/100 | Confidence: 39.53/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 165.1699981689453 | Resistance: 235.74000549316406\nFundamental Outlook: Quality Compounder | Forward P/E: 16.122227\nNews/Catalyst: 2 Best Stocks to Buy in the Market Right Now\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: NVDA\nRating: Hold | Score: 54.9/100 | Confidence: 39.53/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 165.1699981689453 | Resistance: 235.74000549316406\nFundamental Outlook: Quality Compounder | Forward P/E: 16.122227\nNews/Catalyst: Up 18% in 2026, Is Coca-Cola a Buy at an All-Time High?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     },
     {
       "ticker": "MSFT",
-      "generated_at": "2026-06-14T14:59:43.097353",
+      "generated_at": "2026-06-14T15:34:32.940830",
       "score": {
         "final_score": 41.4,
         "rating": "Drop",
@@ -2896,7 +3654,7 @@
             "1m": -0.03362136275895378,
             "3m": -0.010020744786548241,
             "6m": -0.17987277549110048,
-            "12m": -0.16664325710146188
+            "12m": -0.1666433113420117
           },
           "acceleration": 0.0799,
           "evidence": [
@@ -2924,14 +3682,14 @@
         "risk": {
           "score": 85.0,
           "risk_metrics": {
-            "volatility": 0.016050165042317564,
-            "annualized_volatility": 0.25478847122108855,
-            "maximum_drawdown": -0.33910095902930926,
-            "sharpe_ratio": -0.08376502018313414,
-            "sortino_ratio": -0.11202082284961216,
-            "calmar_ratio": -0.154430439513068,
-            "beta": 0.9126422036995739,
-            "alpha": -0.1892571207219155
+            "volatility": 0.016050168103229834,
+            "annualized_volatility": 0.2547885198115645,
+            "maximum_drawdown": -0.3391008841431321,
+            "sharpe_ratio": -0.08376509452562483,
+            "sortino_ratio": -0.11202092731129848,
+            "calmar_ratio": -0.15443057248479056,
+            "beta": 0.9126436084777149,
+            "alpha": -0.18925739090700933
           },
           "evidence": [
             "Short-term volatility is rising"
@@ -2985,7 +3743,8 @@
         "recommendation": "strong_buy",
         "number_of_analysts": 55.0,
         "next_earnings_date": "1777492800",
-        "classification": "Quality Compounder"
+        "classification": "Quality Compounder",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 38.93438147209588,
@@ -3001,9 +3760,43 @@
       },
       "earnings": {
         "next_earnings_date": "1777492800",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.08,
+        "last_surprise_pct": 0.052199997,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 4.05827,
+            "eps_actual": 4.27,
+            "surprise_pct": 0.052199997,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 3.91702,
+            "eps_actual": 4.14,
+            "surprise_pct": 0.056900002,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 3.66355,
+            "eps_actual": 4.13,
+            "surprise_pct": 0.1273,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 3.37669,
+            "eps_actual": 3.65,
+            "surprise_pct": 0.0809,
+            "beat": true
+          }
+        ]
       },
       "catalysts": {
         "earnings_surprise": true,
@@ -3015,9 +3808,50 @@
         "bullish_news_score": 2,
         "bearish_news_score": 1,
         "institutional_ownership": 0.75778997,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 4.05827,
+                "eps_actual": 4.27,
+                "surprise_pct": 0.052199997,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 3.91702,
+                "eps_actual": 4.14,
+                "surprise_pct": 0.056900002,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 3.66355,
+                "eps_actual": 4.13,
+                "surprise_pct": 0.1273,
+                "beat": true
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 3.37669,
+                "eps_actual": 3.65,
+                "surprise_pct": 0.0809,
+                "beat": true
+              }
+            ],
+            "beat_streak": 4,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.08,
+            "last_surprise_pct": 0.052199997,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 43.67
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive"
+          "recent earnings surprise or earnings growth is positive",
+          "analyst target/recommendation data is supportive"
         ]
       },
       "analyst": {
@@ -3038,6 +3872,16 @@
       "news": {
         "available": true,
         "items": [
+          {
+            "headline": "Microsoft Weighs Xbox Restructuring As Investors Focus On Cloud And AI",
+            "source": "Simply Wall St.",
+            "published": "2026-06-14T15:11:16Z",
+            "summary": "Microsoft (NasdaqGS:MSFT) is reportedly reviewing options for its Xbox gaming division, including a spin off, joint venture, or restructuring into a separate subsidiary. The review follows significant layoffs, pressure on revenue, and consistently low profit margins within Xbox relative to the wider group. Any decision could reshape how Microsoft allocates capital between gaming and its core cloud and AI businesses. For you as an investor, Xbox sits inside a much larger story at Microsoft,...",
+            "bullish_score": 1,
+            "bearish_score": 0,
+            "importance_score": 45,
+            "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+          },
           {
             "headline": "Is IREN (IREN) Quietly Rewriting Its AI Infrastructure Story With Microsoft-Backed GPU Financing?",
             "source": "Simply Wall St.",
@@ -3077,16 +3921,6 @@
             "bearish_score": 0,
             "importance_score": 30,
             "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-          },
-          {
-            "headline": "3 Beaten Down AI Infrastructure Stocks to Buy in June",
-            "source": "24/7 Wall St.",
-            "published": "2026-06-14T12:30:10Z",
-            "summary": "AI infrastructure stocks have given investors a textbook entry window this month. The trio that anchors the spending cycle has all pulled back from spring highs, even as the underlying revenue trajectory keeps accelerating. NVIDIA (NASDAQ:NVDA), Broadcom (NASDAQ:AVGO) and Microsoft (NASDAQ:MSFT) are the picks-and-shovels triangle of the AI buildout: silicon, custom accelerators and networking, and the ... 3 Beaten Down AI Infrastructure Stocks to Buy in June",
-            "bullish_score": 1,
-            "bearish_score": 0,
-            "importance_score": 45,
-            "why_it_matters": "News appears more supportive of sentiment or growth expectations."
           }
         ]
       },
@@ -3111,15 +3945,15 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: MSFT\nRating: Drop | Score: 41.4/100 | Confidence: 38.68/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 356.7699890136719 | Resistance: 460.5199890136719\nFundamental Outlook: Quality Compounder | Forward P/E: 20.197561\nNews/Catalyst: Is IREN (IREN) Quietly Rewriting Its AI Infrastructure Story With Microsoft-Backed GPU Financing?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: MSFT\nRating: Drop | Score: 41.4/100 | Confidence: 38.68/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 356.7699890136719 | Resistance: 460.5199890136719\nFundamental Outlook: Quality Compounder | Forward P/E: 20.197561\nNews/Catalyst: Microsoft Weighs Xbox Restructuring As Investors Focus On Cloud And AI\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     },
     {
       "ticker": "TSLA",
-      "generated_at": "2026-06-14T14:59:43.694658",
+      "generated_at": "2026-06-14T15:34:34.085996",
       "score": {
-        "final_score": 40.45,
+        "final_score": 38.45,
         "rating": "Drop",
-        "confidence": 39.23,
+        "confidence": 32.05,
         "risk_level": "High",
         "categories": {
           "technical": 38.0,
@@ -3127,7 +3961,7 @@
           "volume": 25.0,
           "fundamental": 53.0,
           "risk": 35.0,
-          "catalyst": 55.0
+          "catalyst": 15.0
         },
         "technical": {
           "score": 38.0,
@@ -3182,8 +4016,8 @@
             "sharpe_ratio": 0.9612525106739402,
             "sortino_ratio": 1.5702685465255124,
             "calmar_ratio": 0.9248079595514782,
-            "beta": 2.311015053777161,
-            "alpha": 0.16367089337057544
+            "beta": 2.311016109255606,
+            "alpha": 0.16367072776027036
           },
           "evidence": [
             "Volatility is elevated",
@@ -3192,10 +4026,8 @@
           ]
         },
         "catalyst": {
-          "score": 55.0,
+          "score": 15.0,
           "evidence": [
-            "earnings surprise",
-            "analyst revision",
             "insider buying"
           ]
         },
@@ -3240,7 +4072,8 @@
         "recommendation": "buy",
         "number_of_analysts": 41.0,
         "next_earnings_date": "1776888000",
-        "classification": "Fundamentally Average"
+        "classification": "Fundamentally Average",
+        "from_cache": true
       },
       "technical_screen": {
         "rsi": 43.60380981244031,
@@ -3256,13 +4089,47 @@
       },
       "earnings": {
         "next_earnings_date": "1776888000",
-        "surprise_tracking": "Unavailable from current data provider.",
-        "risk_score": 50,
-        "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+        "surprise_tracking": "Available",
+        "beat_streak": 2,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.04,
+        "last_surprise_pct": 0.1715,
+        "last_surprise_direction": "beat",
+        "risk_score": 65,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 0.34999,
+            "eps_actual": 0.41,
+            "surprise_pct": 0.1715,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 0.45061,
+            "eps_actual": 0.5,
+            "surprise_pct": 0.1096,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 0.55885,
+            "eps_actual": 0.5,
+            "surprise_pct": -0.105299994,
+            "beat": false
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 0.40391,
+            "eps_actual": 0.4,
+            "surprise_pct": -0.0097,
+            "beat": false
+          }
+        ]
       },
       "catalysts": {
-        "earnings_surprise": true,
-        "analyst_revision": true,
+        "earnings_surprise": false,
+        "analyst_revision": false,
         "insider_buying": true,
         "sector_strength": false,
         "major_news": false,
@@ -3270,10 +4137,49 @@
         "bullish_news_score": 1,
         "bearish_news_score": 0,
         "institutional_ownership": 0.44926,
+        "detail": {
+          "earnings": {
+            "available": true,
+            "history": [
+              {
+                "date": "2026-03-31",
+                "eps_estimate": 0.34999,
+                "eps_actual": 0.41,
+                "surprise_pct": 0.1715,
+                "beat": true
+              },
+              {
+                "date": "2025-12-31",
+                "eps_estimate": 0.45061,
+                "eps_actual": 0.5,
+                "surprise_pct": 0.1096,
+                "beat": true
+              },
+              {
+                "date": "2025-09-30",
+                "eps_estimate": 0.55885,
+                "eps_actual": 0.5,
+                "surprise_pct": -0.105299994,
+                "beat": false
+              },
+              {
+                "date": "2025-06-30",
+                "eps_estimate": 0.40391,
+                "eps_actual": 0.4,
+                "surprise_pct": -0.0097,
+                "beat": false
+              }
+            ],
+            "beat_streak": 2,
+            "miss_streak": 0,
+            "average_surprise_pct": 0.04,
+            "last_surprise_pct": 0.1715,
+            "last_surprise_direction": "beat"
+          },
+          "analyst_upside_pct": 3.47
+        },
         "evidence": [
-          "growth/earnings trend is positive",
-          "analyst/target fields are supportive",
-          "insider ownership is meaningful"
+          "insider ownership or purchase data is supportive"
         ]
       },
       "analyst": {
@@ -3367,18 +4273,18 @@
         "invalidates": "N/A",
         "triggers": []
       },
-      "report": "Ticker: TSLA\nRating: Drop | Score: 40.45/100 | Confidence: 39.23/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, valuation is demanding\nTechnical Outlook: No clear setup | Support: 343.25 | Resistance: 445.2699890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 162.57526\nNews/Catalyst: OpenAI Just Launched a Robotics Division. Should Tesla Investors Be Worried?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+      "report": "Ticker: TSLA\nRating: Drop | Score: 38.45/100 | Confidence: 32.05/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, valuation is demanding\nTechnical Outlook: No clear setup | Support: 343.25 | Resistance: 445.2699890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 162.57526\nNews/Catalyst: OpenAI Just Launched a Robotics Division. Should Tesla Investors Be Worried?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
     }
   ],
   "sector_rankings": [
     {
       "sector": "Industrials",
-      "average_score": 69.0,
+      "average_score": 67.0,
       "leader_count": 1,
       "leaders": [
         {
           "ticker": "GE",
-          "score": 69.0
+          "score": 67.0
         }
       ]
     },
@@ -3406,7 +4312,7 @@
     },
     {
       "sector": "Technology",
-      "average_score": 57.9,
+      "average_score": 57.5,
       "leader_count": 5,
       "leaders": [
         {
@@ -3415,11 +4321,11 @@
         },
         {
           "ticker": "AAPL",
-          "score": 64.4
+          "score": 63.4
         },
         {
           "ticker": "AMD",
-          "score": 57.65
+          "score": 56.65
         },
         {
           "ticker": "NVDA",
@@ -3433,18 +4339,18 @@
     },
     {
       "sector": "Consumer Defensive",
-      "average_score": 56.8,
+      "average_score": 55.8,
       "leader_count": 1,
       "leaders": [
         {
           "ticker": "FIZZ",
-          "score": 56.8
+          "score": 55.8
         }
       ]
     },
     {
       "sector": "Consumer Cyclical",
-      "average_score": 50.3,
+      "average_score": 49.3,
       "leader_count": 2,
       "leaders": [
         {
@@ -3453,7 +4359,7 @@
         },
         {
           "ticker": "TSLA",
-          "score": 40.45
+          "score": 38.45
         }
       ]
     }

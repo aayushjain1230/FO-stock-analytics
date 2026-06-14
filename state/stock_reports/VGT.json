@@ -1,6 +1,6 @@
 {
   "ticker": "VGT",
-  "generated_at": "2026-06-14T14:59:44.263673",
+  "generated_at": "2026-06-14T15:34:35.905048",
   "score": {
     "final_score": 61.75,
     "rating": "Hold",
@@ -62,14 +62,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01661106995085927,
-        "annualized_volatility": 0.26369256060402924,
-        "maximum_drawdown": -0.2722879227646884,
-        "sharpe_ratio": 1.069805710456249,
-        "sortino_ratio": 1.4184330992452094,
-        "calmar_ratio": 1.0309002024229654,
-        "beta": 1.4444986124023464,
-        "alpha": 0.0163301157860992
+        "volatility": 0.016611071020814425,
+        "annualized_volatility": 0.26369257758904074,
+        "maximum_drawdown": -0.27228780633663185,
+        "sharpe_ratio": 1.0698056615538383,
+        "sortino_ratio": 1.4184323997376087,
+        "calmar_ratio": 1.0309006432275343,
+        "beta": 1.4444992448771459,
+        "alpha": 0.016330022560848475
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -124,7 +124,8 @@
     "recommendation": null,
     "number_of_analysts": null,
     "next_earnings_date": null,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 51.494110307692694,
@@ -142,7 +143,7 @@
     "next_earnings_date": null,
     "surprise_tracking": "Unavailable from current data provider.",
     "risk_score": 25,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "note": "Earnings surprise data unavailable from yfinance."
   },
   "catalysts": {
     "earnings_surprise": false,
@@ -154,10 +155,21 @@
     "bullish_news_score": 3,
     "bearish_news_score": 1,
     "institutional_ownership": null,
+    "detail": {
+      "earnings": {
+        "available": false,
+        "history": [],
+        "beat_streak": 0,
+        "miss_streak": 0,
+        "average_surprise_pct": null,
+        "last_surprise_pct": null,
+        "last_surprise_direction": null
+      }
+    },
     "evidence": [
-      "technical/sector backdrop is constructive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
-      "news tone suggests a catalyst shift"
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {

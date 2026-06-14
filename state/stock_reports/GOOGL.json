@@ -1,6 +1,6 @@
 {
   "ticker": "GOOGL",
-  "generated_at": "2026-06-14T14:59:42.824399",
+  "generated_at": "2026-06-14T15:34:32.403438",
   "score": {
     "final_score": 60.9,
     "rating": "Hold",
@@ -62,14 +62,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019286820755371657,
-        "annualized_volatility": 0.30616878779875395,
-        "maximum_drawdown": -0.298058750020996,
-        "sharpe_ratio": 1.3497350880188608,
-        "sortino_ratio": 2.145318108218916,
-        "calmar_ratio": 1.485231056371949,
-        "beta": 1.0933253723196947,
-        "alpha": 0.2120885516108474
+        "volatility": 0.019286821029630155,
+        "annualized_volatility": 0.3061687921524726,
+        "maximum_drawdown": -0.29805869785160766,
+        "sharpe_ratio": 1.349735360438495,
+        "sortino_ratio": 2.145318429368604,
+        "calmar_ratio": 1.4852317446362815,
+        "beta": 1.0933260341191506,
+        "alpha": 0.2120885326539264
       },
       "evidence": []
     },
@@ -122,7 +122,8 @@
     "recommendation": "strong_buy",
     "number_of_analysts": 53.0,
     "next_earnings_date": "1777492800",
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 33.9622752530485,
@@ -138,9 +139,43 @@
   },
   "earnings": {
     "next_earnings_date": "1777492800",
-    "surprise_tracking": "Unavailable from current data provider.",
-    "risk_score": 50,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "surprise_tracking": "Available",
+    "beat_streak": 4,
+    "miss_streak": 0,
+    "average_surprise_pct": 0.33,
+    "last_surprise_pct": 0.9159,
+    "last_surprise_direction": "beat",
+    "risk_score": 65,
+    "history": [
+      {
+        "date": "2026-03-31",
+        "eps_estimate": 2.66714,
+        "eps_actual": 5.11,
+        "surprise_pct": 0.9159,
+        "beat": true
+      },
+      {
+        "date": "2025-12-31",
+        "eps_estimate": 2.63521,
+        "eps_actual": 2.82,
+        "surprise_pct": 0.0701,
+        "beat": true
+      },
+      {
+        "date": "2025-09-30",
+        "eps_estimate": 2.26199,
+        "eps_actual": 2.87,
+        "surprise_pct": 0.2688,
+        "beat": true
+      },
+      {
+        "date": "2025-06-30",
+        "eps_estimate": 2.18615,
+        "eps_actual": 2.31,
+        "surprise_pct": 0.056700002,
+        "beat": true
+      }
+    ]
   },
   "catalysts": {
     "earnings_surprise": true,
@@ -152,10 +187,51 @@
     "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.8075,
+    "detail": {
+      "earnings": {
+        "available": true,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 2.66714,
+            "eps_actual": 5.11,
+            "surprise_pct": 0.9159,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 2.63521,
+            "eps_actual": 2.82,
+            "surprise_pct": 0.0701,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 2.26199,
+            "eps_actual": 2.87,
+            "surprise_pct": 0.2688,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 2.18615,
+            "eps_actual": 2.31,
+            "surprise_pct": 0.056700002,
+            "beat": true
+          }
+        ],
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.33,
+        "last_surprise_pct": 0.9159,
+        "last_surprise_direction": "beat"
+      },
+      "analyst_upside_pct": 20.34
+    },
     "evidence": [
-      "growth/earnings trend is positive",
-      "analyst/target fields are supportive",
-      "news tone suggests a catalyst shift"
+      "recent earnings surprise or earnings growth is positive",
+      "analyst target/recommendation data is supportive",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {

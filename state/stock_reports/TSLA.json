@@ -1,10 +1,10 @@
 {
   "ticker": "TSLA",
-  "generated_at": "2026-06-14T14:59:43.694658",
+  "generated_at": "2026-06-14T15:34:34.085996",
   "score": {
-    "final_score": 40.45,
+    "final_score": 38.45,
     "rating": "Drop",
-    "confidence": 39.23,
+    "confidence": 32.05,
     "risk_level": "High",
     "categories": {
       "technical": 38.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 53.0,
       "risk": 35.0,
-      "catalyst": 55.0
+      "catalyst": 15.0
     },
     "technical": {
       "score": 38.0,
@@ -67,8 +67,8 @@
         "sharpe_ratio": 0.9612525106739402,
         "sortino_ratio": 1.5702685465255124,
         "calmar_ratio": 0.9248079595514782,
-        "beta": 2.311015053777161,
-        "alpha": 0.16367089337057544
+        "beta": 2.311016109255606,
+        "alpha": 0.16367072776027036
       },
       "evidence": [
         "Volatility is elevated",
@@ -77,10 +77,8 @@
       ]
     },
     "catalyst": {
-      "score": 55.0,
+      "score": 15.0,
       "evidence": [
-        "earnings surprise",
-        "analyst revision",
         "insider buying"
       ]
     },
@@ -125,7 +123,8 @@
     "recommendation": "buy",
     "number_of_analysts": 41.0,
     "next_earnings_date": "1776888000",
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 43.60380981244031,
@@ -141,13 +140,47 @@
   },
   "earnings": {
     "next_earnings_date": "1776888000",
-    "surprise_tracking": "Unavailable from current data provider.",
-    "risk_score": 50,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "surprise_tracking": "Available",
+    "beat_streak": 2,
+    "miss_streak": 0,
+    "average_surprise_pct": 0.04,
+    "last_surprise_pct": 0.1715,
+    "last_surprise_direction": "beat",
+    "risk_score": 65,
+    "history": [
+      {
+        "date": "2026-03-31",
+        "eps_estimate": 0.34999,
+        "eps_actual": 0.41,
+        "surprise_pct": 0.1715,
+        "beat": true
+      },
+      {
+        "date": "2025-12-31",
+        "eps_estimate": 0.45061,
+        "eps_actual": 0.5,
+        "surprise_pct": 0.1096,
+        "beat": true
+      },
+      {
+        "date": "2025-09-30",
+        "eps_estimate": 0.55885,
+        "eps_actual": 0.5,
+        "surprise_pct": -0.105299994,
+        "beat": false
+      },
+      {
+        "date": "2025-06-30",
+        "eps_estimate": 0.40391,
+        "eps_actual": 0.4,
+        "surprise_pct": -0.0097,
+        "beat": false
+      }
+    ]
   },
   "catalysts": {
-    "earnings_surprise": true,
-    "analyst_revision": true,
+    "earnings_surprise": false,
+    "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": false,
     "major_news": false,
@@ -155,10 +188,49 @@
     "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.44926,
+    "detail": {
+      "earnings": {
+        "available": true,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 0.34999,
+            "eps_actual": 0.41,
+            "surprise_pct": 0.1715,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 0.45061,
+            "eps_actual": 0.5,
+            "surprise_pct": 0.1096,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 0.55885,
+            "eps_actual": 0.5,
+            "surprise_pct": -0.105299994,
+            "beat": false
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 0.40391,
+            "eps_actual": 0.4,
+            "surprise_pct": -0.0097,
+            "beat": false
+          }
+        ],
+        "beat_streak": 2,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.04,
+        "last_surprise_pct": 0.1715,
+        "last_surprise_direction": "beat"
+      },
+      "analyst_upside_pct": 3.47
+    },
     "evidence": [
-      "growth/earnings trend is positive",
-      "analyst/target fields are supportive",
-      "insider ownership is meaningful"
+      "insider ownership or purchase data is supportive"
     ]
   },
   "analyst": {
@@ -252,5 +324,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: TSLA\nRating: Drop | Score: 40.45/100 | Confidence: 39.23/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, valuation is demanding\nTechnical Outlook: No clear setup | Support: 343.25 | Resistance: 445.2699890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 162.57526\nNews/Catalyst: OpenAI Just Launched a Robotics Division. Should Tesla Investors Be Worried?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: TSLA\nRating: Drop | Score: 38.45/100 | Confidence: 32.05/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, valuation is demanding\nTechnical Outlook: No clear setup | Support: 343.25 | Resistance: 445.2699890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 162.57526\nNews/Catalyst: OpenAI Just Launched a Robotics Division. Should Tesla Investors Be Worried?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

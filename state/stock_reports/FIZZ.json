@@ -1,10 +1,10 @@
 {
   "ticker": "FIZZ",
-  "generated_at": "2026-06-14T14:59:42.250021",
+  "generated_at": "2026-06-14T15:34:31.250332",
   "score": {
-    "final_score": 56.8,
+    "final_score": 55.8,
     "rating": "Hold",
-    "confidence": 52.92,
+    "confidence": 49.83,
     "risk_level": "Moderate",
     "categories": {
       "technical": 75.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 62.0,
       "risk": 60.0,
-      "catalyst": 70.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 75.0,
@@ -69,8 +69,8 @@
         "sharpe_ratio": -0.212135312583401,
         "sortino_ratio": -0.35055780986839585,
         "calmar_ratio": -0.22842708752589738,
-        "beta": 0.1169647223136028,
-        "alpha": -0.08002384458713183
+        "beta": 0.11696483492503203,
+        "alpha": -0.08002386385951066
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -78,9 +78,8 @@
       ]
     },
     "catalyst": {
-      "score": 70.0,
+      "score": 50.0,
       "evidence": [
-        "analyst revision",
         "insider buying",
         "sector strength",
         "major news"
@@ -127,7 +126,8 @@
     "recommendation": "none",
     "number_of_analysts": 1.0,
     "next_earnings_date": null,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 58.829781405796304,
@@ -143,13 +143,47 @@
   },
   "earnings": {
     "next_earnings_date": null,
-    "surprise_tracking": "Unavailable from current data provider.",
-    "risk_score": 25,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "surprise_tracking": "Available",
+    "beat_streak": 0,
+    "miss_streak": 2,
+    "average_surprise_pct": -0.02,
+    "last_surprise_pct": -0.008,
+    "last_surprise_direction": "miss",
+    "risk_score": 35,
+    "history": [
+      {
+        "date": "2026-01-31",
+        "eps_estimate": 0.44354,
+        "eps_actual": 0.44,
+        "surprise_pct": -0.008,
+        "beat": false
+      },
+      {
+        "date": "2025-10-31",
+        "eps_estimate": 0.51499,
+        "eps_actual": 0.49,
+        "surprise_pct": -0.048499998,
+        "beat": false
+      },
+      {
+        "date": "2025-07-31",
+        "eps_estimate": 0.59887,
+        "eps_actual": 0.6,
+        "surprise_pct": 0.0019,
+        "beat": true
+      },
+      {
+        "date": "2025-04-30",
+        "eps_estimate": 0.4761,
+        "eps_actual": 0.47,
+        "surprise_pct": -0.0128,
+        "beat": false
+      }
+    ]
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": true,
     "major_news": true,
@@ -157,10 +191,50 @@
     "bullish_news_score": 2,
     "bearish_news_score": 2,
     "institutional_ownership": 0.26306,
+    "detail": {
+      "earnings": {
+        "available": true,
+        "history": [
+          {
+            "date": "2026-01-31",
+            "eps_estimate": 0.44354,
+            "eps_actual": 0.44,
+            "surprise_pct": -0.008,
+            "beat": false
+          },
+          {
+            "date": "2025-10-31",
+            "eps_estimate": 0.51499,
+            "eps_actual": 0.49,
+            "surprise_pct": -0.048499998,
+            "beat": false
+          },
+          {
+            "date": "2025-07-31",
+            "eps_estimate": 0.59887,
+            "eps_actual": 0.6,
+            "surprise_pct": 0.0019,
+            "beat": true
+          },
+          {
+            "date": "2025-04-30",
+            "eps_estimate": 0.4761,
+            "eps_actual": 0.47,
+            "surprise_pct": -0.0128,
+            "beat": false
+          }
+        ],
+        "beat_streak": 0,
+        "miss_streak": 2,
+        "average_surprise_pct": -0.02,
+        "last_surprise_pct": -0.008,
+        "last_surprise_direction": "miss"
+      },
+      "analyst_upside_pct": -5.25
+    },
     "evidence": [
-      "analyst/target fields are supportive",
-      "insider ownership is meaningful",
-      "technical/sector backdrop is constructive",
+      "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance"
     ]
   },
@@ -255,5 +329,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: FIZZ\nRating: Hold | Score: 56.8/100 | Confidence: 52.92/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.358015\nNews/Catalyst: Suja Life Sees 66% EBITDA Growth as Functional Beverage Boom Accelerates\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: FIZZ\nRating: Hold | Score: 55.8/100 | Confidence: 49.83/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.358015\nNews/Catalyst: Suja Life Sees 66% EBITDA Growth as Functional Beverage Boom Accelerates\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

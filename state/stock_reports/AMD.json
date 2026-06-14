@@ -1,10 +1,10 @@
 {
   "ticker": "AMD",
-  "generated_at": "2026-06-14T14:59:41.349404",
+  "generated_at": "2026-06-14T15:34:30.118305",
   "score": {
-    "final_score": 57.65,
+    "final_score": 56.65,
     "rating": "Avoid",
-    "confidence": 41.81,
+    "confidence": 39.03,
     "risk_level": "High",
     "categories": {
       "technical": 80.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 61.0,
       "risk": 20.0,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 80.0,
@@ -73,8 +73,8 @@
         "sharpe_ratio": 1.2640313108455778,
         "sortino_ratio": 2.059470849589924,
         "calmar_ratio": 1.3864441345301786,
-        "beta": 2.2027035775405004,
-        "alpha": 0.3608881276302638
+        "beta": 2.2027050158563544,
+        "alpha": 0.36088789024297996
       },
       "evidence": [
         "Volatility is elevated",
@@ -84,10 +84,9 @@
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "sector strength",
         "major news",
         "guidance change"
@@ -134,7 +133,8 @@
     "recommendation": "strong_buy",
     "number_of_analysts": 48.0,
     "next_earnings_date": "1778011200",
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 57.22721404068582,
@@ -150,13 +150,47 @@
   },
   "earnings": {
     "next_earnings_date": "1778011200",
-    "surprise_tracking": "Unavailable from current data provider.",
-    "risk_score": 50,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "surprise_tracking": "Available",
+    "beat_streak": 3,
+    "miss_streak": 0,
+    "average_surprise_pct": 0.06,
+    "last_surprise_pct": 0.0582,
+    "last_surprise_direction": "beat",
+    "risk_score": 65,
+    "history": [
+      {
+        "date": "2026-03-31",
+        "eps_estimate": 1.29468,
+        "eps_actual": 1.37,
+        "surprise_pct": 0.0582,
+        "beat": true
+      },
+      {
+        "date": "2025-12-31",
+        "eps_estimate": 1.31917,
+        "eps_actual": 1.53,
+        "surprise_pct": 0.1598,
+        "beat": true
+      },
+      {
+        "date": "2025-09-30",
+        "eps_estimate": 1.171,
+        "eps_actual": 1.2,
+        "surprise_pct": 0.0248,
+        "beat": true
+      },
+      {
+        "date": "2025-06-30",
+        "eps_estimate": 0.48264,
+        "eps_actual": 0.48,
+        "surprise_pct": -0.0055,
+        "beat": false
+      }
+    ]
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
@@ -164,12 +198,52 @@
     "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.72152,
+    "detail": {
+      "earnings": {
+        "available": true,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.29468,
+            "eps_actual": 1.37,
+            "surprise_pct": 0.0582,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 1.31917,
+            "eps_actual": 1.53,
+            "surprise_pct": 0.1598,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.171,
+            "eps_actual": 1.2,
+            "surprise_pct": 0.0248,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 0.48264,
+            "eps_actual": 0.48,
+            "surprise_pct": -0.0055,
+            "beat": false
+          }
+        ],
+        "beat_streak": 3,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.06,
+        "last_surprise_pct": 0.0582,
+        "last_surprise_direction": "beat"
+      },
+      "analyst_upside_pct": -4.93
+    },
     "evidence": [
-      "growth/earnings trend is positive",
-      "analyst/target fields are supportive",
-      "technical/sector backdrop is constructive",
+      "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
-      "news tone suggests a catalyst shift"
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -190,6 +264,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Xbox fans waiting on Project Helix get unexpected news from Wedbush",
+        "source": "TheStreet",
+        "published": "2026-06-14T15:07:00Z",
+        "summary": "The explosion in AI spending is having a ripple effect throughout the tech industry, and now gamers are going to pay the price. To find out just how much weight AI holds in the U.S. economy, the Federal Reserve Bank of St. Louis looked at how much money is being spent on software, R&D and ...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "AMD Meta AI Chip Pact Puts Data Center Growth And Valuation In Focus",
         "source": "Simply Wall St.",
@@ -229,16 +313,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Should You Look for the \u201cNext Nvidia\u201d \u2014 or Just Buy the Real Thing?",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-13T15:25:36Z",
-        "summary": "The artificial intelligence boom has created a familiar pattern on Wall Street. Investors spend years chasing the market\u2019s biggest winner, then spend the next few years searching for whatever comes next. That search is happening right now with Nvidia (NASDAQ:NVDA). After becoming one of the most successful investments in stock market history, Nvidia\u2019s recent performance ... Should You Look for the \u201cNext Nvidia\u201d \u2014 or Just Buy the Real Thing?",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -263,5 +337,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMD\nRating: Avoid | Score: 57.65/100 | Confidence: 41.81/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 542.52001953125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.040714\nNews/Catalyst: AMD Meta AI Chip Pact Puts Data Center Growth And Valuation In Focus\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMD\nRating: Avoid | Score: 56.65/100 | Confidence: 39.03/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 542.52001953125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.040714\nNews/Catalyst: Xbox fans waiting on Project Helix get unexpected news from Wedbush\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

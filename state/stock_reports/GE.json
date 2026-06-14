@@ -1,10 +1,10 @@
 {
   "ticker": "GE",
-  "generated_at": "2026-06-14T14:59:42.548860",
+  "generated_at": "2026-06-14T15:34:31.835913",
   "score": {
-    "final_score": 69.0,
+    "final_score": 67.0,
     "rating": "Watch",
-    "confidence": 62.81,
+    "confidence": 55.1,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 70.0,
       "risk": 100,
-      "catalyst": 70.0
+      "catalyst": 30.0
     },
     "technical": {
       "score": 75.0,
@@ -35,7 +35,7 @@
         "1m": 0.13772860613745985,
         "3m": 0.11882273369637941,
         "6m": 0.18537533147183693,
-        "12m": 0.37290128423776525
+        "12m": 0.3729013700136452
       },
       "acceleration": 0.0261,
       "evidence": [
@@ -66,22 +66,20 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.020786223724365865,
-        "annualized_volatility": 0.3299710720249373,
-        "maximum_drawdown": -0.21364262257290023,
-        "sharpe_ratio": 1.3564203357343179,
-        "sortino_ratio": 1.7569069155854589,
-        "calmar_ratio": 2.2510538345840745,
-        "beta": 1.188617930102274,
-        "alpha": 0.22888862849477948
+        "volatility": 0.020786227267335852,
+        "annualized_volatility": 0.32997112826784225,
+        "maximum_drawdown": -0.21364273629911035,
+        "sharpe_ratio": 1.3564201624832481,
+        "sortino_ratio": 1.756906518630781,
+        "calmar_ratio": 2.251052636304059,
+        "beta": 1.188618038230517,
+        "alpha": 0.22888864242350326
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 70.0,
+      "score": 30.0,
       "evidence": [
-        "earnings surprise",
-        "analyst revision",
         "sector strength",
         "guidance change"
       ]
@@ -127,7 +125,8 @@
     "recommendation": "strong_buy",
     "number_of_analysts": 21.0,
     "next_earnings_date": "1784205000",
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 68.49361846550376,
@@ -143,13 +142,47 @@
   },
   "earnings": {
     "next_earnings_date": "1784205000",
-    "surprise_tracking": "Unavailable from current data provider.",
-    "risk_score": 50,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "surprise_tracking": "Available",
+    "beat_streak": 4,
+    "miss_streak": 0,
+    "average_surprise_pct": 0.14,
+    "last_surprise_pct": 0.16309999,
+    "last_surprise_direction": "beat",
+    "risk_score": 65,
+    "history": [
+      {
+        "date": "2026-03-31",
+        "eps_estimate": 1.59919,
+        "eps_actual": 1.86,
+        "surprise_pct": 0.16309999,
+        "beat": true
+      },
+      {
+        "date": "2025-12-31",
+        "eps_estimate": 1.42976,
+        "eps_actual": 1.57,
+        "surprise_pct": 0.09810001,
+        "beat": true
+      },
+      {
+        "date": "2025-09-30",
+        "eps_estimate": 1.46885,
+        "eps_actual": 1.66,
+        "surprise_pct": 0.1301,
+        "beat": true
+      },
+      {
+        "date": "2025-06-30",
+        "eps_estimate": 1.43135,
+        "eps_actual": 1.66,
+        "surprise_pct": 0.1597,
+        "beat": true
+      }
+    ]
   },
   "catalysts": {
-    "earnings_surprise": true,
-    "analyst_revision": true,
+    "earnings_surprise": false,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": false,
@@ -157,11 +190,50 @@
     "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.80974996,
+    "detail": {
+      "earnings": {
+        "available": true,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.59919,
+            "eps_actual": 1.86,
+            "surprise_pct": 0.16309999,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 1.42976,
+            "eps_actual": 1.57,
+            "surprise_pct": 0.09810001,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.46885,
+            "eps_actual": 1.66,
+            "surprise_pct": 0.1301,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 1.43135,
+            "eps_actual": 1.66,
+            "surprise_pct": 0.1597,
+            "beat": true
+          }
+        ],
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.14,
+        "last_surprise_pct": 0.16309999,
+        "last_surprise_direction": "beat"
+      },
+      "analyst_upside_pct": 4.67
+    },
     "evidence": [
-      "growth/earnings trend is positive",
-      "analyst/target fields are supportive",
-      "technical/sector backdrop is constructive",
-      "news tone suggests a catalyst shift"
+      "technical backdrop is constructive",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -255,5 +327,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: GE\nRating: Watch | Score: 69.0/100 | Confidence: 62.81/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613\nNews/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: GE\nRating: Watch | Score: 67.0/100 | Confidence: 55.1/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.25 | Resistance: 335.29998779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.600613\nNews/Catalyst: Wolfspeed Targets High Voltage Growth With Gen 5 SiC And GE Alliance\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,10 +1,10 @@
 {
   "ticker": "AAPL",
-  "generated_at": "2026-06-14T14:59:41.022480",
+  "generated_at": "2026-06-14T15:34:29.599998",
   "score": {
-    "final_score": 64.4,
+    "final_score": 63.4,
     "rating": "Hold",
-    "confidence": 51.71,
+    "confidence": 48.3,
     "risk_level": "Controlled",
     "categories": {
       "technical": 57.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 70.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 57.0,
@@ -63,22 +63,21 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017586945430844828,
-        "annualized_volatility": 0.2791841035876747,
-        "maximum_drawdown": -0.33360519953145074,
-        "sharpe_ratio": 0.7076184254444423,
-        "sortino_ratio": 0.9640543718292965,
-        "calmar_ratio": 0.5162771999105584,
-        "beta": 1.1365936344760996,
-        "alpha": -0.011563207817977046
+        "volatility": 0.017586948239042808,
+        "annualized_volatility": 0.2791841481664356,
+        "maximum_drawdown": -0.33360519953145007,
+        "sharpe_ratio": 0.707618481958602,
+        "sortino_ratio": 0.9640551242601877,
+        "calmar_ratio": 0.5162773271368803,
+        "beta": 1.1365934591582336,
+        "alpha": -0.011563114180753162
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 70.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "sector strength",
         "guidance change"
       ]
@@ -124,7 +123,8 @@
     "recommendation": "buy",
     "number_of_analysts": 43.0,
     "next_earnings_date": "1777579200",
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 34.18561939152667,
@@ -140,13 +140,47 @@
   },
   "earnings": {
     "next_earnings_date": "1777579200",
-    "surprise_tracking": "Unavailable from current data provider.",
-    "risk_score": 50,
-    "note": "Earnings surprise streaks need historical earnings endpoint enrichment."
+    "surprise_tracking": "Available",
+    "beat_streak": 4,
+    "miss_streak": 0,
+    "average_surprise_pct": 0.06,
+    "last_surprise_pct": 0.0346,
+    "last_surprise_direction": "beat",
+    "risk_score": 65,
+    "history": [
+      {
+        "date": "2026-03-31",
+        "eps_estimate": 1.94275,
+        "eps_actual": 2.01,
+        "surprise_pct": 0.0346,
+        "beat": true
+      },
+      {
+        "date": "2025-12-31",
+        "eps_estimate": 2.6708,
+        "eps_actual": 2.84,
+        "surprise_pct": 0.0634,
+        "beat": true
+      },
+      {
+        "date": "2025-09-30",
+        "eps_estimate": 1.76993,
+        "eps_actual": 1.85,
+        "surprise_pct": 0.0452,
+        "beat": true
+      },
+      {
+        "date": "2025-06-30",
+        "eps_estimate": 1.42572,
+        "eps_actual": 1.57,
+        "surprise_pct": 0.1012,
+        "beat": true
+      }
+    ]
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": false,
@@ -154,11 +188,51 @@
     "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.65829,
+    "detail": {
+      "earnings": {
+        "available": true,
+        "history": [
+          {
+            "date": "2026-03-31",
+            "eps_estimate": 1.94275,
+            "eps_actual": 2.01,
+            "surprise_pct": 0.0346,
+            "beat": true
+          },
+          {
+            "date": "2025-12-31",
+            "eps_estimate": 2.6708,
+            "eps_actual": 2.84,
+            "surprise_pct": 0.0634,
+            "beat": true
+          },
+          {
+            "date": "2025-09-30",
+            "eps_estimate": 1.76993,
+            "eps_actual": 1.85,
+            "surprise_pct": 0.0452,
+            "beat": true
+          },
+          {
+            "date": "2025-06-30",
+            "eps_estimate": 1.42572,
+            "eps_actual": 1.57,
+            "surprise_pct": 0.1012,
+            "beat": true
+          }
+        ],
+        "beat_streak": 4,
+        "miss_streak": 0,
+        "average_surprise_pct": 0.06,
+        "last_surprise_pct": 0.0346,
+        "last_surprise_direction": "beat"
+      },
+      "analyst_upside_pct": 7.41
+    },
     "evidence": [
-      "growth/earnings trend is positive",
-      "analyst/target fields are supportive",
-      "technical/sector backdrop is constructive",
-      "news tone suggests a catalyst shift"
+      "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -252,5 +326,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AAPL\nRating: Hold | Score: 64.4/100 | Confidence: 51.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 246.6300048828125 | Resistance: 315.20001220703125\nFundamental Outlook: Quality Compounder | Forward P/E: 30.341877\nNews/Catalyst: Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AAPL\nRating: Hold | Score: 63.4/100 | Confidence: 48.3/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 246.6300048828125 | Resistance: 315.20001220703125\nFundamental Outlook: Quality Compounder | Forward P/E: 30.341877\nNews/Catalyst: Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
