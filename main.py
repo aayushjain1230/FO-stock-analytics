@@ -5,8 +5,8 @@ import json
 import os
 from datetime import datetime
 from io import StringIO
-from typing import Dict
 from pathlib import Path
+from typing import Dict
 
 import pandas as pd
 import requests
@@ -26,6 +26,12 @@ try:
 except ModuleNotFoundError:
     yf = None
 from dotenv import load_dotenv
+
+import benchmark_comparison
+import earnings_alerts
+import intraday_monitor
+import trade_journal
+import watchlist_intelligence
 
 import plotting
 import database
@@ -681,6 +687,7 @@ def run_quant_research_report():
         row["research_note"] = research_reports.stock_research_note(ticker, latest, rating, quant_payload)
         rows.append(row)
 
+    watchlist_intelligence.build_watchlist_report(watchlist, rows)
     payload = {
         "generated_at": datetime.now().isoformat(),
         "benchmark": benchmark_symbol,
@@ -722,7 +729,12 @@ def run_stock_discovery(screener_name="quality_momentum", ticker=None):
     config = load_config()
     settings = config.get("settings", {})
     watchlist = [item.upper() for item in load_watchlist_data()]
-    symbols = [ticker.upper()] if ticker else watchlist
+    if ticker:
+        symbols = [ticker.upper()]
+    else:
+        sector_map = get_sp500_sectors()
+        max_symbols = int(settings.get("discovery_max_symbols", 150))
+        symbols = sorted(set(watchlist + list(sector_map.keys())[:max_symbols]))
     if not symbols:
         print("No tickers available for stock discovery.")
         return
@@ -768,8 +780,13 @@ def run_stock_discovery(screener_name="quality_momentum", ticker=None):
             logger.warning(f"Error building stock intelligence for {symbol}: {exc}")
             rows.append({"ticker": symbol, "error": str(exc)})
 
-    discovery = stock_discovery.discover_stocks([row for row in rows if "score" in row], screener_name=screener_name)
+    intelligence_rows = [row for row in rows if "score" in row]
+    discovery = stock_discovery.discover_stocks(intelligence_rows, screener_name=screener_name)
     discovery["errors"] = [row for row in rows if "error" in row]
+    earnings_payload = earnings_alerts.build_earnings_alerts(intelligence_rows)
+    earnings_message = earnings_alerts.format_telegram(earnings_payload)
+    if earnings_message and should_send_report(earnings_message):
+        telegram_notifier.send_long_message(earnings_message)
     with open(STOCK_DISCOVERY_FILE, "w") as f:
         json.dump(discovery, f, indent=2, default=str)
     database.store_discovery_run(datetime.now().date().isoformat(), discovery)
@@ -822,6 +839,8 @@ def run_portfolio_report(send_alert=False):
         factor_prices=factor_data,
         risk_free_rate=risk_free_rate,
     )
+    price_frame = portfolio_engine.price_frame_from_data(price_data)
+    report["benchmark_comparison"] = benchmark_comparison.comparison(price_frame, benchmark_df)
     with open(PORTFOLIO_REPORT_FILE, "w") as f:
         json.dump(report, f, indent=2, default=str)
     database.store_portfolio_snapshot(datetime.now().date().isoformat(), report)
@@ -876,6 +895,23 @@ def run_option_lab(args):
     payload["greek_explanations"] = options_analytics.greek_explanations(payload.get("greeks", {}))
     print(json.dumps(payload, indent=2))
 
+
+def run_trade_journal_summary():
+    payload = trade_journal.summarize_trades()
+    print(json.dumps(payload, indent=2, default=str))
+
+
+def run_intraday_monitor(send_alert=True):
+    if yf is None:
+        raise RuntimeError("Intraday monitor requires yfinance.")
+    watchlist = [ticker.upper() for ticker in load_watchlist_data()]
+    payload = intraday_monitor.scan(yf, watchlist)
+    message = intraday_monitor.format_telegram(payload)
+    if send_alert and message and should_send_report(message):
+        telegram_notifier.send_long_message(message)
+    print(json.dumps(payload, indent=2, default=str))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Jain Family Office: Stock Intelligence System")
     parser.add_argument("--add", nargs="+", help="Add specific tickers to the watchlist")
@@ -900,6 +936,9 @@ def main():
     parser.add_argument("--volatility", type=float, default=0.30, help="Option lab annualized volatility")
     parser.add_argument("--market-price", type=float, help="Option lab observed market option price")
     parser.add_argument("--option-type", choices=["call", "put"], default="call", help="Option lab contract type")
+    parser.add_argument("--trade-journal", action="store_true", help="Summarize trade journal performance")
+    parser.add_argument("--log-trade", nargs=5, metavar=("TICKER", "ACTION", "SHARES", "PRICE", "REASON"), help="Log a trade journal entry")
+    parser.add_argument("--intraday-monitor", action="store_true", help="Run lightweight intraday price/volume alert monitor")
 
     args = parser.parse_args()
 
@@ -922,6 +961,17 @@ def main():
 
     if args.option_lab:
         run_option_lab(args)
+
+    if args.log_trade:
+        ticker_value, action_value, shares_value, price_value, reason_value = args.log_trade
+        trade = trade_journal.log_trade(ticker_value, action_value, float(shares_value), float(price_value), reason_value)
+        print(json.dumps(trade, indent=2, default=str))
+
+    if args.trade_journal:
+        run_trade_journal_summary()
+
+    if args.intraday_monitor:
+        run_intraday_monitor(send_alert=True)
 
     if args.portfolio_report:
         run_portfolio_report(send_alert=args.send_portfolio_alert)
