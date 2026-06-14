@@ -7,6 +7,7 @@ from typing import Dict, Iterable, Optional
 import numpy as np
 import pandas as pd
 
+import fundamentals_fetcher
 import intelligence_scoring
 import portfolio_engine
 import quant_analytics
@@ -54,77 +55,9 @@ def load_screeners(path: str = SCREENERS_FILE) -> Dict:
 
 
 def fetch_fundamentals(yf_module, ticker: str, use_cache: bool = True) -> Dict:
-    payload = {"ticker": ticker, "available": False}
-    cached = _load_fundamentals_cache(ticker) if use_cache else None
-    if cached:
-        return cached
-    try:
-        stock = yf_module.Ticker(ticker)
-        info = stock.info or {}
-    except Exception as exc:
-        payload["error"] = str(exc)
-        if cached:
-            cached["cache_warning"] = str(exc)
-            return cached
-        return payload
-
-    revenue_growth = _safe(info.get("revenueGrowth"))
-    eps_growth = _safe(info.get("earningsGrowth"))
-    gross_margin = _safe(info.get("grossMargins"))
-    operating_margin = _safe(info.get("operatingMargins"))
-    net_margin = _safe(info.get("profitMargins"))
-    roe = _safe(info.get("returnOnEquity"))
-    debt_to_equity = _safe(info.get("debtToEquity"))
-    forward_pe = _safe(info.get("forwardPE"))
-    peg = _safe(info.get("pegRatio"))
-
-    payload.update(
-        {
-            "available": bool(info),
-            "company_name": info.get("longName") or info.get("shortName"),
-            "sector": info.get("sector"),
-            "industry": info.get("industry"),
-            "market_cap": _safe(info.get("marketCap")),
-            "revenue_growth": revenue_growth,
-            "eps_growth": eps_growth,
-            "fcf_growth": None,
-            "ebitda_growth": None,
-            "gross_margin": gross_margin,
-            "operating_margin": operating_margin,
-            "net_margin": net_margin,
-            "roe": roe,
-            "roic": None,
-            "debt_to_equity": debt_to_equity / 100 if debt_to_equity and debt_to_equity > 10 else debt_to_equity,
-            "cash_position": _safe(info.get("totalCash")),
-            "interest_coverage": None,
-            "current_ratio": _safe(info.get("currentRatio")),
-            "forward_pe": forward_pe,
-            "trailing_pe": _safe(info.get("trailingPE")),
-            "peg": peg,
-            "price_to_book": _safe(info.get("priceToBook")),
-            "price_to_sales": _safe(info.get("priceToSalesTrailing12Months")),
-            "enterprise_to_ebitda": _safe(info.get("enterpriseToEbitda")),
-            "fcf_yield": _safe(info.get("freeCashflow")) / _safe(info.get("marketCap")) if _safe(info.get("freeCashflow")) and _safe(info.get("marketCap")) else None,
-            "institutional_ownership": _safe(info.get("heldPercentInstitutions")),
-            "insider_ownership": _safe(info.get("heldPercentInsiders")),
-            "short_interest": _safe(info.get("sharesShort")),
-            "short_ratio": _safe(info.get("shortRatio")),
-            "short_percent_float": _safe(info.get("shortPercentOfFloat")),
-            "days_to_cover": _safe(info.get("shortRatio")),
-            "target_mean_price": _safe(info.get("targetMeanPrice")),
-            "target_high_price": _safe(info.get("targetHighPrice")),
-            "target_low_price": _safe(info.get("targetLowPrice")),
-            "recommendation": info.get("recommendationKey"),
-            "number_of_analysts": _safe(info.get("numberOfAnalystOpinions")),
-            "next_earnings_date": _earnings_date(info),
-        }
-    )
-    payload["classification"] = intelligence_scoring.classify_fundamentals(
-        intelligence_scoring.fundamental_score(payload)["score"], payload
-    )
-    _save_fundamentals_cache(ticker, payload)
-    return payload
-
+    if yf_module is None:
+        return {"ticker": ticker, "available": False}
+    return fundamentals_fetcher.fetch_fundamentals_cached(yf_module, ticker, use_cache=use_cache)
 
 def fetch_news(yf_module, ticker: str, limit: int = 5) -> Dict:
     try:
@@ -158,8 +91,11 @@ def fetch_news(yf_module, ticker: str, limit: int = 5) -> Dict:
 
 
 
-def fetch_catalysts(fundamentals: Dict, news: Dict, technical: Dict) -> Dict:
+def fetch_catalysts(fundamentals: Dict, news: Dict, technical: Dict, yf_module=None, ticker: Optional[str] = None) -> Dict:
     """Convert available Yahoo/news/technical fields into catalyst flags used by scoring."""
+    if yf_module is not None and ticker:
+        return fundamentals_fetcher.fetch_catalysts(yf_module, ticker, fundamentals=fundamentals, news=news, technical=technical)
+
     news_items = news.get("items", []) if news else []
     bullish_news = sum(item.get("bullish_score", 0) for item in news_items)
     bearish_news = sum(item.get("bearish_score", 0) for item in news_items)
@@ -277,12 +213,12 @@ def build_stock_intelligence(
     fundamentals = fetch_fundamentals(yf_module, ticker) if yf_module is not None else {"available": False}
     tech = technical_screen(analyzed)
     news = fetch_news(yf_module, ticker) if yf_module is not None else {"available": False, "items": []}
-    catalysts = fetch_catalysts(fundamentals, news, tech)
+    catalysts = fetch_catalysts(fundamentals, news, tech, yf_module=yf_module, ticker=ticker)
     score = intelligence_scoring.final_stock_score(analyzed, benchmark_df=benchmark_df, sector_df=sector_df, fundamentals=fundamentals, catalysts=catalysts)
     why_payload = why_now.evaluate_why_now(ticker, analyzed, score, market_payload=market_payload)
     options_flow = {"available": False, "note": "Options flow scan requires a dedicated options-chain pass."}
     sentiment = {"available": False, "note": "Social sentiment sources are not configured."}
-    earnings = earnings_snapshot(fundamentals)
+    earnings = earnings_snapshot(fundamentals, yf_module=yf_module, ticker=ticker)
     portfolio_fit = portfolio_fit_snapshot(ticker, portfolio_context)
     report = stock_report_text(ticker, score, fundamentals, tech, why_payload, news, portfolio_fit)
     return {
@@ -359,14 +295,15 @@ def portfolio_fit_snapshot(ticker: str, portfolio_context: Optional[Dict]) -> Di
     return {"available": True, "sector": sector, "current_sector_weight": sector_weight, "assessment": assessment}
 
 
-def earnings_snapshot(fundamentals: Dict) -> Dict:
+def earnings_snapshot(fundamentals: Dict, yf_module=None, ticker: Optional[str] = None) -> Dict:
+    if yf_module is not None and ticker:
+        return fundamentals_fetcher.earnings_snapshot(yf_module, ticker, fundamentals)
     return {
         "next_earnings_date": fundamentals.get("next_earnings_date"),
         "surprise_tracking": "Unavailable from current data provider.",
         "risk_score": 50 if fundamentals.get("next_earnings_date") else 25,
         "note": "Earnings surprise streaks need historical earnings endpoint enrichment.",
     }
-
 
 def analyst_snapshot(fundamentals: Dict) -> Dict:
     price = fundamentals.get("target_mean_price")
