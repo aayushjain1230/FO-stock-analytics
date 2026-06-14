@@ -20,6 +20,27 @@ import intelligence_scoring
 CACHE_DIR = os.path.join("cache", "fundamentals")
 CACHE_TTL_SECONDS = 3600 * 6
 
+ETF_SYMBOLS = {
+    "SPY", "QQQ", "IWM", "DIA", "VTI", "VOO", "VGT",
+    "XLK", "XLF", "XLV", "XLY", "XLP", "XLE", "XLI",
+    "XLB", "XLU", "XLRE", "XLC", "SMH", "SOXX", "TLT",
+    "IWD", "MTUM", "SPLV",
+}
+
+
+def is_etf_symbol(ticker: str) -> bool:
+    return str(ticker or "").upper() in ETF_SYMBOLS
+
+
+def _etf_payload(ticker: str) -> Dict:
+    return {
+        "ticker": ticker.upper(),
+        "available": False,
+        "asset_type": "ETF",
+        "classification": "ETF / Fund",
+        "note": "Company fundamentals skipped because this symbol is an ETF/fund.",
+    }
+
 
 def _cache_path(ticker: str) -> str:
     os.makedirs(CACHE_DIR, exist_ok=True)
@@ -83,6 +104,9 @@ def _earnings_date(info: Dict) -> Optional[str]:
 
 
 def fetch_fundamentals(yf_module, ticker: str) -> Dict:
+    if is_etf_symbol(ticker):
+        return _etf_payload(ticker)
+
     payload: Dict = {"ticker": ticker.upper(), "available": False}
     try:
         stock = yf_module.Ticker(ticker)
@@ -154,6 +178,9 @@ def fetch_fundamentals(yf_module, ticker: str) -> Dict:
 
 
 def fetch_fundamentals_cached(yf_module, ticker: str, use_cache: bool = True) -> Dict:
+    if is_etf_symbol(ticker):
+        return _etf_payload(ticker)
+
     cached = _cache_read(ticker) if use_cache else None
     if cached is not None:
         return cached
@@ -164,6 +191,18 @@ def fetch_fundamentals_cached(yf_module, ticker: str, use_cache: bool = True) ->
 
 
 def fetch_earnings_history(yf_module, ticker: str) -> Dict:
+    if is_etf_symbol(ticker):
+        return {
+            "available": False,
+            "history": [],
+            "beat_streak": 0,
+            "miss_streak": 0,
+            "average_surprise_pct": None,
+            "last_surprise_pct": None,
+            "last_surprise_direction": None,
+            "note": "Earnings history skipped because this symbol is an ETF/fund.",
+        }
+
     result = {
         "available": False,
         "history": [],
@@ -240,6 +279,23 @@ def fetch_earnings_history(yf_module, ticker: str) -> Dict:
 
 def fetch_catalysts(yf_module, ticker: str, fundamentals: Optional[Dict] = None, news: Optional[Dict] = None, technical: Optional[Dict] = None) -> Dict:
     fundamentals = fundamentals or {}
+    if is_etf_symbol(ticker):
+        technical = technical or {}
+        news_items = (news or {}).get("items", [])
+        return {
+            "earnings_surprise": False,
+            "analyst_revision": False,
+            "insider_buying": False,
+            "sector_strength": bool(technical.get("price_above_sma50") and technical.get("price_above_sma200")),
+            "major_news": bool(news_items and max(item.get("importance_score", 0) for item in news_items) >= 60),
+            "guidance_change": False,
+            "bullish_news_score": sum(item.get("bullish_score", 0) for item in news_items),
+            "bearish_news_score": sum(item.get("bearish_score", 0) for item in news_items),
+            "institutional_ownership": None,
+            "detail": {"note": "Company catalysts skipped because this symbol is an ETF/fund."},
+            "evidence": ["ETF/fund evaluated on technical, trend, volume, and portfolio context"],
+        }
+
     news_items = (news or {}).get("items", [])
     technical = technical or {}
     catalysts: Dict = {
