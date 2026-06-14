@@ -72,10 +72,12 @@ jobs:
           github.event.inputs.action == ''
         run: |
           python main.py --init-db
+          python main.py --intraday-monitor
           python main.py --analyze
           python main.py --quant-report
           python main.py --portfolio-report
           python main.py --stock-discovery
+          python main.py --trade-journal
           python main.py --dashboard
 
       - name: Debug - List Files
@@ -108,6 +110,8 @@ jobs:
             cache/
             watchlist.json
             portfolio.json
+            trade_journal.json
+            watchlist_intelligence.json
             config/screeners.json
             plots/quant_research_dashboard.html
           if-no-files-found: warn
@@ -121,6 +125,8 @@ jobs:
           git add -f state/ || true
           git add watchlist.json || true
           git add portfolio.json || true
+          git add trade_journal.json || true
+          git add watchlist_intelligence.json || true
           git add -f config/screeners.json || true
           git add -f cache/*.json || true
           git add -f cache/fundamentals/ || true
