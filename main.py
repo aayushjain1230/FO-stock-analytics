@@ -437,6 +437,7 @@ def run_analytics_engine(force=False):
 
     period, interval, download_period = _research_download_params(settings, period_key="period", default_period="1y")
     minimum_history_days = int(settings.get("minimum_history_days", 252))
+    minimum_chart_history_days = min(minimum_history_days, 200)
     risk_free_rate = float(settings.get("risk_free_rate", 0.045))
 
     batch_raw = yf.download(
@@ -476,11 +477,8 @@ def run_analytics_engine(force=False):
 
     for ticker in scan_list:
         try:
-            if ticker not in batch_raw.columns.levels[0]:
-                continue
-
-            df = batch_raw[ticker].copy().dropna(subset=["Close"])
-            if len(df) < minimum_history_days:
+            df = _extract_downloaded_ticker(batch_raw, ticker)
+            if df.empty or len(df) < minimum_chart_history_days:
                 continue
 
             analyzed = calculate_metrics(df, benchmark_data, config=config)
@@ -594,6 +592,14 @@ def run_analytics_engine(force=False):
     state_manager.save_current_state(new_state)
 
     if watchlist_data_for_plot:
+        current_chart_names = {f"{ticker}_analysis.png" for ticker in watchlist_data_for_plot}
+        for chart_path in Path("plots").glob("*_analysis.png"):
+            if chart_path.name not in current_chart_names:
+                chart_path.unlink(missing_ok=True)
+
+        for ticker, analyzed in watchlist_data_for_plot.items():
+            score = next((row.get("score") for row in comparison_rows if row.get("ticker") == ticker), None)
+            plotting.create_chart(ticker, analyzed, benchmark_data, score=score)
         plotting.create_comparison_chart(watchlist_data_for_plot, benchmark_data)
         logger.info("Watchlist performance charts updated and saved.")
 
@@ -604,11 +610,29 @@ def run_analytics_engine(force=False):
 
 
 def _extract_downloaded_ticker(batch_raw, ticker):
-    if isinstance(batch_raw.columns, pd.MultiIndex):
-        if ticker in batch_raw.columns.get_level_values(0):
-            return batch_raw[ticker].copy().dropna(subset=["Close"])
+    if batch_raw is None or batch_raw.empty:
         return pd.DataFrame()
-    return batch_raw.copy().dropna(subset=["Close"])
+
+    if isinstance(batch_raw.columns, pd.MultiIndex):
+        ticker = ticker.upper()
+        columns = batch_raw.columns
+
+        if ticker in columns.get_level_values(0):
+            df = batch_raw[ticker].copy()
+        elif ticker in columns.get_level_values(-1):
+            df = batch_raw.xs(ticker, axis=1, level=-1).copy()
+        else:
+            return pd.DataFrame()
+    else:
+        df = batch_raw.copy()
+
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = df.columns.get_level_values(-1)
+
+    close_col = "Close" if "Close" in df.columns else "close" if "close" in df.columns else None
+    if close_col is None:
+        return pd.DataFrame()
+    return df.dropna(subset=[close_col])
 
 
 def run_quant_research_report():
@@ -833,6 +857,7 @@ def _format_portfolio_telegram(report):
             "Educational risk analysis only, not financial advice.",
         ]
     )
+
 
 def run_option_lab(args):
     """Run the standalone options analytics lab from CLI inputs."""
