@@ -1,13 +1,13 @@
 {
   "ticker": "DE",
-  "generated_at": "2026-06-15T17:51:54.955184",
+  "generated_at": "2026-06-15T20:51:02.801593",
   "score": {
-    "final_score": 57.35,
+    "final_score": 59.1,
     "rating": "Hold",
-    "confidence": 52.0,
+    "confidence": 53.13,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 58.0,
+      "technical": 65.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 39.0,
@@ -15,27 +15,28 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 58.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 529.1199951171875,
       "resistance": 618.0,
-      "risk_reward": 0.61
+      "risk_reward": 0.92
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.01712370452714218,
-        "3m": 0.02394751842863241,
-        "6m": 0.23590618691323906,
-        "12m": 0.14564903775838922
+        "1m": 0.0014443060586291079,
+        "3m": 0.008162927939954878,
+        "6m": 0.21685416257434897,
+        "12m": 0.12798829863928374
       },
-      "acceleration": -0.094,
+      "acceleration": -0.1003,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1553091.05,
-      "relative_volume": 0.3208575569346047,
+      "average_volume": 1578276.05,
+      "relative_volume": 0.6348832322457152,
       "accumulation_days": 8,
       "distribution_days": 5,
       "evidence": [
@@ -63,14 +64,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.018584255952031323,
-        "annualized_volatility": 0.2950159173014808,
-        "maximum_drawdown": -0.19898024334673559,
-        "sharpe_ratio": 0.9339366409826111,
-        "sortino_ratio": 1.6195179521178813,
-        "calmar_ratio": 1.315400897365469,
-        "beta": 0.7074085609898438,
-        "alpha": 0.1414962666242298
+        "volatility": 0.01857879209726129,
+        "annualized_volatility": 0.2949291812959531,
+        "maximum_drawdown": -0.1989802433467357,
+        "sharpe_ratio": 0.9074955560908666,
+        "sortino_ratio": 1.5742656529347125,
+        "calmar_ratio": 1.2658468195128236,
+        "beta": 0.7030049527067782,
+        "alpha": 0.1348247090368719
       },
       "evidence": []
     },
@@ -83,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "DE",
@@ -133,14 +134,15 @@
     "next_earnings_date": "1787229000",
     "eps_current_year": 17.67,
     "eps_forward": 22.85406,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 71.95080986474504,
+    "rsi": 69.13546960390431,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3208575569346047,
+    "relative_volume": 0.6348832322457152,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -194,7 +196,7 @@
     "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 1,
     "bearish_news_score": 1,
     "institutional_ownership": 0.82837,
     "detail": {
@@ -236,7 +238,7 @@
         "last_surprise_pct": 0.1407,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.28,
+      "analyst_upside_pct": 11.94,
       "eps_growth_implied": 29.34
     },
     "evidence": [
@@ -264,6 +266,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "How Did Wall Street Sleep Through CAT Stock's 150% Surge?",
+        "source": "Trefis",
+        "published": "2026-06-15T18:38:17Z",
+        "summary": "Before the heavy-machinery giant surged, its own order book was telling a story most investors weren't hearing.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Spotting Winners: Deere (NYSE:DE) And Agricultural Machinery Stocks In Q1",
         "source": "StockStory",
@@ -303,16 +315,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Titan Machinery Q1 Earnings Beat Estimates on Better Equipment Margins",
-        "source": "Zacks",
-        "published": "2026-06-10T13:54:00Z",
-        "summary": "TITN beats Q1 earnings and revenue estimates as stronger equipment margins from aged inventory reductions help offset soft retail demand.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -339,5 +341,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DE\nRating: Hold | Score: 57.35/100 | Confidence: 52.0/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 529.1199951171875 | Resistance: 618.0\nFundamental Outlook: Fundamentally Weak | Forward P/E: 25.56001\nNews/Catalyst: Spotting Winners: Deere (NYSE:DE) And Agricultural Machinery Stocks In Q1\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DE\nRating: Hold | Score: 59.1/100 | Confidence: 53.13/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 529.1199951171875 | Resistance: 618.0\nFundamental Outlook: Fundamentally Weak | Forward P/E: 25.56001\nNews/Catalyst: How Did Wall Street Sleep Through CAT Stock's 150% Surge?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

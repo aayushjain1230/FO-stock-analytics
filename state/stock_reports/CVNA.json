@@ -1,38 +1,39 @@
 {
   "ticker": "CVNA",
-  "generated_at": "2026-06-15T17:51:52.072762",
+  "generated_at": "2026-06-15T20:50:59.684756",
   "score": {
-    "final_score": 36.9,
+    "final_score": 43.15,
     "rating": "Drop",
-    "confidence": 27.86,
+    "confidence": 40.46,
     "risk_level": "High",
     "categories": {
-      "technical": 26.0,
+      "technical": 36.0,
       "momentum": 45.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 76.0,
       "risk": 35.0,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 26.0,
+      "score": 36.0,
       "evidence": [
         "Price above SMA20",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 56.25600051879883,
       "resistance": 83.35800170898438,
-      "risk_reward": 1.25
+      "risk_reward": 1.14
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": -0.017690144529461826,
-        "3m": 0.11612254108682163,
-        "6m": -0.27760027107083063,
-        "12m": 0.0707007692663737
+        "1m": -0.009060797705717105,
+        "3m": 0.12592739894424754,
+        "6m": -0.2712541698161275,
+        "12m": 0.08010660819896187
       },
-      "acceleration": 0.2549,
+      "acceleration": 0.2616,
       "evidence": [
         "3m return is positive",
         "12m return is positive",
@@ -40,12 +41,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 10181587.4,
-      "relative_volume": 0.9175924767880498,
-      "accumulation_days": 2,
+      "score": 25.0,
+      "average_volume": 10393212.7,
+      "relative_volume": 1.3061460774299367,
+      "accumulation_days": 3,
       "distribution_days": 4,
-      "evidence": []
+      "evidence": [
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -58,14 +61,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.042083984303902894,
-        "annualized_volatility": 0.6680625398812364,
+        "volatility": 0.04211390634119525,
+        "annualized_volatility": 0.6685375374976124,
         "maximum_drawdown": -0.4302386909731666,
-        "sharpe_ratio": 1.1973541045537919,
-        "sortino_ratio": 1.6806586843196354,
-        "calmar_ratio": 1.8145446595041288,
-        "beta": 2.174841699031029,
-        "alpha": 0.3878487506646403
+        "sharpe_ratio": 1.203574145139347,
+        "sortino_ratio": 1.690590574714422,
+        "calmar_ratio": 1.8328663894411512,
+        "beta": 2.1778838992612406,
+        "alpha": 0.3931560886282144
       },
       "evidence": [
         "Volatility is elevated",
@@ -81,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive; Momentum is accelerating; revenue growth is strong"
+    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "CVNA",
@@ -131,17 +134,18 @@
     "next_earnings_date": "1777492800",
     "eps_current_year": 1.72,
     "eps_forward": 2.16388,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 46.91564087045826,
-    "macd_cross": false,
+    "rsi": 47.95684839874977,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9175924767880498,
+    "relative_volume": 1.3061460774299367,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 56.25600051879883,
     "resistance": 83.35800170898438
   },
@@ -234,7 +238,7 @@
         "last_surprise_pct": 0.1171,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 34.88,
+      "analyst_upside_pct": 33.67,
       "eps_growth_implied": 25.81
     },
     "evidence": [
@@ -336,5 +340,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CVNA\nRating: Drop | Score: 36.9/100 | Confidence: 27.86/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 56.25600051879883 | Resistance: 83.35800170898438\nFundamental Outlook: Quality Compounder | Forward P/E: 31.554428\nNews/Catalyst: Jim Cramer Notes \u201cCarvana Was a Great Buy for Us\u201d\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CVNA\nRating: Drop | Score: 43.15/100 | Confidence: 40.46/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: MACD bullish crossover | Support: 56.25600051879883 | Resistance: 83.35800170898438\nFundamental Outlook: Quality Compounder | Forward P/E: 31.554428\nNews/Catalyst: Jim Cramer Notes \u201cCarvana Was a Great Buy for Us\u201d\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

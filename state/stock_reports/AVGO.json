@@ -1,10 +1,10 @@
 {
   "ticker": "AVGO",
-  "generated_at": "2026-06-15T17:51:09.059846",
+  "generated_at": "2026-06-15T20:50:09.603069",
   "score": {
-    "final_score": 53.9,
+    "final_score": 53.15,
     "rating": "Hold",
-    "confidence": 42.77,
+    "confidence": 40.38,
     "risk_level": "Moderate",
     "categories": {
       "technical": 55.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 86.0,
       "risk": 60.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 55.0,
@@ -29,12 +29,12 @@
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.1041406521764322,
-        "3m": 0.21511889474066637,
-        "6m": -0.026572078450804892,
-        "12m": 0.5510692006606386
+        "1m": -0.10425431504279459,
+        "3m": 0.21496472556569168,
+        "6m": -0.0266955828915737,
+        "12m": 0.5508724075237452
       },
-      "acceleration": 0.2284,
+      "acceleration": 0.2283,
       "evidence": [
         "3m return is positive",
         "12m return is positive",
@@ -44,8 +44,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 31246982.2,
-      "relative_volume": 0.4189058615714896,
+      "average_volume": 31865172.65,
+      "relative_volume": 0.7987828366591323,
       "accumulation_days": 6,
       "distribution_days": 6,
       "evidence": []
@@ -61,14 +61,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.034257157591786075,
-        "annualized_volatility": 0.5438155176708859,
-        "maximum_drawdown": -0.4114968292670552,
-        "sharpe_ratio": 1.0002527423930072,
-        "sortino_ratio": 1.4609496212666986,
-        "calmar_ratio": 1.187188888013925,
-        "beta": 2.0082577741580536,
-        "alpha": 0.16345628815674454
+        "volatility": 0.034256940643765596,
+        "annualized_volatility": 0.5438120737278281,
+        "maximum_drawdown": -0.41149676738581287,
+        "sharpe_ratio": 1.000137506725802,
+        "sortino_ratio": 1.4607715206865353,
+        "calmar_ratio": 1.1869569723075064,
+        "beta": 2.008979066144327,
+        "alpha": 0.16432047281068393
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -76,11 +76,10 @@
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
@@ -134,14 +133,15 @@
     "next_earnings_date": "1780516800",
     "eps_current_year": 6.0,
     "eps_forward": 19.35046,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 43.63065631655256,
+    "rsi": 43.61784298999225,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4189058615714896,
+    "relative_volume": 0.7987828366591323,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -193,9 +193,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 5,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.79896003,
     "detail": {
@@ -237,13 +237,12 @@
         "last_surprise_pct": 0.0178,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 32.56,
+      "analyst_upside_pct": 32.52,
       "eps_growth_implied": 222.51
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -265,6 +264,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "How Marvell Broke The Law Of Large Numbers",
+        "source": "Trefis",
+        "published": "2026-06-15T19:49:26Z",
+        "summary": "The chipmaker convinced Wall Street its recent growth was only the beginning, sparking a stock rally that never looked back.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Intel Draws Cramer Support",
+        "source": "GuruFocus.com",
+        "published": "2026-06-15T19:01:51Z",
+        "summary": "Cramer sees Intel as a potential TSMC alternative.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "The Console Cycle That Could Test Advanced Micro Stock",
         "source": "Trefis",
@@ -290,26 +309,6 @@
         "source": "Zacks",
         "published": "2026-06-15T14:47:00Z",
         "summary": "Credo's massive rally faces a fresh test as earnings growth, estimate revisions, margins and cash flow support attention despite rich valuation.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "LITE vs. AVGO: Which AI Infrastructure Stock Is the Better Pick Now?",
-        "source": "Zacks",
-        "published": "2026-06-15T14:36:00Z",
-        "summary": "Lumentum tops Broadcom as its AI-driven optical networking growth, expanding margins and demand visibility point to stronger near-term upside.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Forget Buying Nvidia. This Overlooked ETF Beat the Nasdaq by Owning the AI Stocks You Can\u2019t",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-15T14:04:00Z",
-        "summary": "Here is a fact that will annoy anyone who has been told NVIDIA is the only way to play artificial intelligence. Over the past year, the Global X Artificial Intelligence & Technology ETF (NASDAQ:AIQ) returned 52%, while the Invesco QQQ Trust (NASDAQ:QQQ) returned 35%. NVIDIA (NASDAQ:NVDA) itself, the supposed only AI trade worth making, returned ... Forget Buying Nvidia. This Overlooked ETF Beat the Nasdaq by Owning the AI Stocks You Can\u2019t",
         "bullish_score": 1,
         "bearish_score": 0,
         "importance_score": 45,
@@ -340,5 +339,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AVGO\nRating: Hold | Score: 53.9/100 | Confidence: 42.77/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 293.4100036621094 | Resistance: 481.57000732421875\nFundamental Outlook: Quality Compounder | Forward P/E: 20.352745\nNews/Catalyst: The Console Cycle That Could Test Advanced Micro Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AVGO\nRating: Hold | Score: 53.15/100 | Confidence: 40.38/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 293.4100036621094 | Resistance: 481.57000732421875\nFundamental Outlook: Quality Compounder | Forward P/E: 20.352745\nNews/Catalyst: How Marvell Broke The Law Of Large Numbers\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

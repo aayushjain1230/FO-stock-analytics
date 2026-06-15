@@ -1,15 +1,15 @@
 {
   "ticker": "XYZ",
-  "generated_at": "2026-06-15T17:52:10.012729",
+  "generated_at": "2026-06-15T20:51:23.463020",
   "score": {
-    "final_score": 64.75,
-    "rating": "Hold",
-    "confidence": 54.2,
+    "final_score": 72.25,
+    "rating": "Watch",
+    "confidence": 64.21,
     "risk_level": "Moderate",
     "categories": {
       "technical": 80.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 55.0,
       "risk": 60.0,
       "catalyst": 50.0
@@ -32,12 +32,12 @@
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.03802602079018036,
-        "3m": 0.24060153538859996,
-        "6m": 0.16726928608010327,
-        "12m": 0.16288178190159397
+        "1m": 0.03942401430098186,
+        "3m": 0.24227235371225198,
+        "6m": 0.16884134193864098,
+        "12m": 0.1644479287537608
       },
-      "acceleration": 0.157,
+      "acceleration": 0.1579,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,12 +48,14 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 5823793.05,
-      "relative_volume": 0.8406481751613754,
-      "accumulation_days": 6,
+      "score": 75.0,
+      "average_volume": 6049536.7,
+      "relative_volume": 1.5555958194286184,
+      "accumulation_days": 7,
       "distribution_days": 3,
       "evidence": [
+        "Relative volume is 1.56x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -65,14 +67,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.03223089612753221,
-        "annualized_volatility": 0.5116496141172299,
+        "volatility": 0.03223697909385014,
+        "annualized_volatility": 0.5117461782138949,
         "maximum_drawdown": -0.5296198984978919,
-        "sharpe_ratio": 0.4288352025929883,
-        "sortino_ratio": 0.558350230664584,
-        "calmar_ratio": 0.17162356227708356,
-        "beta": 1.7321512636192966,
-        "alpha": -0.10877049794341982
+        "sharpe_ratio": 0.43017376255765344,
+        "sortino_ratio": 0.5601987638259445,
+        "calmar_ratio": 0.17302402315757934,
+        "beta": 1.7324548820809231,
+        "alpha": -0.10718151422873697
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -137,17 +139,18 @@
     "next_earnings_date": "1778184000",
     "eps_current_year": 1.28,
     "eps_forward": 4.97799,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.540691827771624,
+    "rsi": 58.67962846061822,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8406481751613754,
+    "relative_volume": 1.5555958194286184,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 55.97999954223633,
     "resistance": 76.0999984741211
   },
@@ -240,7 +243,7 @@
         "last_surprise_pct": 0.2555,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 21.9,
+      "analyst_upside_pct": 21.59,
       "eps_growth_implied": 288.91
     },
     "evidence": [
@@ -349,5 +352,5 @@
       }
     ]
   },
-  "report": "Ticker: XYZ\nRating: Hold | Score: 64.75/100 | Confidence: 54.2/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 55.97999954223633 | Resistance: 76.0999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.898583\nNews/Catalyst: Nu Holdings' Massive Brazil Opportunity Continues to Fuel Growth\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: XYZ\nRating: Watch | Score: 72.25/100 | Confidence: 64.21/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 55.97999954223633 | Resistance: 76.0999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.898583\nNews/Catalyst: Nu Holdings' Massive Brazil Opportunity Continues to Fuel Growth\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

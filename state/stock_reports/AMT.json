@@ -1,40 +1,41 @@
 {
   "ticker": "AMT",
-  "generated_at": "2026-06-15T17:51:00.866891",
+  "generated_at": "2026-06-15T20:49:57.601520",
   "score": {
-    "final_score": 54.95,
+    "final_score": 57.45,
     "rating": "Hold",
-    "confidence": 52.81,
+    "confidence": 56.14,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 50.0,
+      "technical": 57.0,
       "momentum": 40.0,
       "volume": 25.0,
       "fundamental": 68.0,
       "risk": 100,
-      "catalyst": 70.0
+      "catalyst": 85.0
     },
     "technical": {
-      "score": 50.0,
+      "score": 57.0,
       "evidence": [
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 167.27000427246094,
       "resistance": 194.1199951171875,
-      "risk_reward": 0.53
+      "risk_reward": 0.45
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": 0.09433563707311965,
-        "3m": 0.02023984855216976,
-        "6m": 0.04717506387299264,
-        "12m": -0.11129845284586526
+        "1m": 0.09990138445741348,
+        "3m": 0.025428747712594513,
+        "6m": 0.052500954463778005,
+        "12m": -0.10677848670080248
       },
-      "acceleration": -0.0033,
+      "acceleration": -0.0008,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,8 +44,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3075862.1,
-      "relative_volume": 0.5699676848321646,
+      "average_volume": 3126660.0,
+      "relative_volume": 0.885641547210122,
       "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
@@ -62,27 +63,28 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016238344884320233,
-        "annualized_volatility": 0.2577757336032555,
-        "maximum_drawdown": -0.2754215624468842,
-        "sharpe_ratio": 0.1884797244179219,
-        "sortino_ratio": 0.265782045076181,
-        "calmar_ratio": 0.05628128656633708,
-        "beta": -0.03040206836987975,
-        "alpha": 0.05434565914146455
+        "volatility": 0.016231945293760933,
+        "annualized_volatility": 0.2576741432525802,
+        "maximum_drawdown": -0.2754215624468854,
+        "sharpe_ratio": 0.1983961431647691,
+        "sortino_ratio": 0.2795496844289006,
+        "calmar_ratio": 0.0657395142888757,
+        "beta": -0.028684578631516022,
+        "alpha": 0.056541075919995354
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 70.0,
+      "score": 85.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "AMT",
@@ -132,14 +134,15 @@
     "next_earnings_date": "1777379400",
     "eps_current_year": 6.2,
     "eps_forward": 6.90612,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.8187032526156,
+    "rsi": 51.16012343412621,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5699676848321646,
+    "relative_volume": 0.885641547210122,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -191,9 +194,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 3,
     "bearish_news_score": 1,
     "institutional_ownership": 0.96656996,
     "detail": {
@@ -235,13 +238,14 @@
         "last_surprise_pct": 0.17040001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 16.93,
+      "analyst_upside_pct": 16.35,
       "eps_growth_implied": 11.39
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -263,6 +267,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Key Reasons to Add Vornado Stock to Your Portfolio Right Now",
+        "source": "Zacks",
+        "published": "2026-06-15T17:34:00Z",
+        "summary": "VNO's premium assets, strong NYC leasing, Park Avenue Plaza acquisition and ample liquidity support cash-flow growth.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "AMT vs. PSA: Which Stock Is the Better Value Option?",
         "source": "Zacks",
@@ -302,16 +316,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "American Tower (AMT) Stock Sinks As Market Gains: What You Should Know",
-        "source": "Zacks",
-        "published": "2026-06-11T22:15:03Z",
-        "summary": "American Tower (AMT) reached $189.31 at the closing of the latest trading day, reflecting a -1.66% change compared to its last close.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -338,5 +342,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMT\nRating: Hold | Score: 54.95/100 | Confidence: 52.81/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 167.27000427246094 | Resistance: 194.1199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 26.763945\nNews/Catalyst: AMT vs. PSA: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMT\nRating: Hold | Score: 57.45/100 | Confidence: 56.14/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 167.27000427246094 | Resistance: 194.1199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 26.763945\nNews/Catalyst: Key Reasons to Add Vornado Stock to Your Portfolio Right Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

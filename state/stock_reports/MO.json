@@ -1,23 +1,22 @@
 {
   "ticker": "MO",
-  "generated_at": "2026-06-15T17:52:04.970474",
+  "generated_at": "2026-06-15T20:51:17.214585",
   "score": {
-    "final_score": 60.95,
+    "final_score": 57.45,
     "rating": "Hold",
-    "confidence": 54.71,
+    "confidence": 49.13,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 55.0,
       "momentum": 50.0,
       "volume": 25.0,
       "fundamental": 73.0,
       "risk": 100,
-      "catalyst": 50.0
+      "catalyst": 30.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 55.0,
       "evidence": [
-        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -25,17 +24,17 @@
       ],
       "support": 63.779998779296875,
       "resistance": 74.55000305175781,
-      "risk_reward": 0.82
+      "risk_reward": 0.85
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": -0.03735674208327877,
-        "3m": 0.04950386092713255,
-        "6m": 0.22905385358728525,
-        "12m": 0.2451395583356235
+        "1m": -0.03894499629330084,
+        "3m": 0.04777229639183478,
+        "6m": 0.22702613408408023,
+        "12m": 0.24308530138477957
       },
-      "acceleration": -0.065,
+      "acceleration": -0.0657,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -44,10 +43,10 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7445936.35,
-      "relative_volume": 0.47748554820778183,
+      "average_volume": 7653525.95,
+      "relative_volume": 1.0070023999853297,
       "accumulation_days": 4,
-      "distribution_days": 1,
+      "distribution_days": 2,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -62,26 +61,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.013396215572637449,
-        "annualized_volatility": 0.2126583294876565,
-        "maximum_drawdown": -0.16396944236149746,
-        "sharpe_ratio": 1.4577465240761551,
-        "sortino_ratio": 2.025793031568455,
-        "calmar_ratio": 2.0295643984575777,
-        "beta": -0.10896207785399688,
-        "alpha": 0.33064655549152244
+        "volatility": 0.013404139122209401,
+        "annualized_volatility": 0.21278411193766616,
+        "maximum_drawdown": -0.16396944236149724,
+        "sharpe_ratio": 1.4530906367772,
+        "sortino_ratio": 2.016914931347988,
+        "calmar_ratio": 2.022789079184464,
+        "beta": -0.10890995002770448,
+        "alpha": 0.32977149772202824
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 30.0,
       "evidence": [
         "earnings surprise",
-        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
+    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
   },
   "fundamentals": {
     "ticker": "MO",
@@ -131,17 +129,18 @@
     "next_earnings_date": "1785414600",
     "eps_current_year": 4.79,
     "eps_forward": 5.87357,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 40.80082082528125,
+    "rsi": 40.4794291122049,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.47748554820778183,
-    "price_above_sma50": true,
+    "relative_volume": 1.0070023999853297,
+    "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "No clear setup",
     "support": 63.779998779296875,
     "resistance": 74.55000305175781
   },
@@ -189,7 +188,7 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": true,
+    "sector_strength": false,
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
@@ -234,12 +233,11 @@
         "last_surprise_pct": 0.0592,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 0.92,
+      "analyst_upside_pct": 1.11,
       "eps_growth_implied": 22.62
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -336,5 +334,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: MO\nRating: Hold | Score: 60.95/100 | Confidence: 54.71/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 63.779998779296875 | Resistance: 74.55000305175781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.87106\nNews/Catalyst: How to Build $3,000 a Month in Dividend Income Before You Turn 50\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: MO\nRating: Hold | Score: 57.45/100 | Confidence: 49.13/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 63.779998779296875 | Resistance: 74.55000305175781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.87106\nNews/Catalyst: How to Build $3,000 a Month in Dividend Income Before You Turn 50\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
