@@ -1,52 +1,49 @@
 {
   "ticker": "MSFT",
-  "generated_at": "2026-06-14T16:14:41.507323",
+  "generated_at": "2026-06-15T17:52:05.533866",
   "score": {
-    "final_score": 41.4,
+    "final_score": 39.65,
     "rating": "Drop",
-    "confidence": 38.68,
+    "confidence": 33.07,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 30.0,
-      "momentum": 10.0,
-      "volume": 25.0,
+      "technical": 18.0,
+      "momentum": 25.0,
+      "volume": 0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 40.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 18.0,
       "evidence": [
-        "EMA trend is positive",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 356.7699890136719,
       "resistance": 460.5199890136719,
-      "risk_reward": 2.05
+      "risk_reward": 1.41
     },
     "momentum": {
-      "score": 10.0,
+      "score": 25.0,
       "returns": {
-        "1m": -0.03362136275895378,
-        "3m": -0.010020744786548241,
-        "6m": -0.17987282802318483,
-        "12m": -0.1666433113420117
+        "1m": -0.02151569031538847,
+        "3m": 0.0016772654898533634,
+        "6m": -0.1694722842040065,
+        "12m": -0.1585439397587297
       },
-      "acceleration": 0.0799,
+      "acceleration": 0.0864,
       "evidence": [
+        "3m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 37883025.0,
-      "relative_volume": 0.9203541691826352,
-      "accumulation_days": 4,
+      "score": 0,
+      "average_volume": 36206615.95,
+      "relative_volume": 0.47623945369023085,
+      "accumulation_days": 3,
       "distribution_days": 3,
-      "evidence": [
-        "Accumulation days exceed distribution days"
-      ]
+      "evidence": []
     },
     "fundamental": {
       "score": 86.0,
@@ -59,27 +56,29 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01605016399205246,
-        "annualized_volatility": 0.2547884545486469,
-        "maximum_drawdown": -0.3391009590293088,
-        "sharpe_ratio": -0.08376503896146739,
-        "sortino_ratio": -0.11202078425170135,
-        "calmar_ratio": -0.1544304395130718,
-        "beta": 0.9126430446683145,
-        "alpha": -0.1892572103002112
+        "volatility": 0.016088547270096214,
+        "annualized_volatility": 0.25539777019789023,
+        "maximum_drawdown": -0.33910095902930937,
+        "sharpe_ratio": -0.06845890477372255,
+        "sortino_ratio": -0.09177051940710676,
+        "calmar_ratio": -0.1440575285072867,
+        "beta": 0.9139548086563677,
+        "alpha": -0.19064766224325522
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 40.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision"
+        "analyst revision",
+        "major news",
+        "guidance change"
       ]
     },
-    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; Accumulation days exceed distribution days; revenue growth is strong"
+    "explanation": "Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; revenue growth is strong; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "MSFT",
@@ -87,7 +86,8 @@
     "company_name": "Microsoft Corporation",
     "sector": "Technology",
     "industry": "Software - Infrastructure",
-    "market_cap": 2902586556416.0,
+    "exchange": "NMS",
+    "market_cap": 2969019351040.0,
     "revenue_growth": 0.183,
     "eps_growth": 0.234,
     "fcf_growth": null,
@@ -96,18 +96,22 @@
     "operating_margin": 0.46326,
     "net_margin": 0.39341998,
     "roe": 0.34013999,
+    "roa": 0.14814,
     "roic": null,
     "debt_to_equity": 0.30271000000000003,
-    "cash_position": 78227996672.0,
-    "interest_coverage": null,
     "current_ratio": 1.283,
-    "forward_pe": 20.197561,
-    "trailing_pe": 23.258333,
+    "quick_ratio": 1.142,
+    "cash_position": 78227996672.0,
+    "total_debt": 125431996416.0,
+    "interest_coverage": null,
+    "forward_pe": 20.65983,
+    "trailing_pe": 23.790657,
     "peg": 1.2,
-    "price_to_book": 7.0053964,
-    "price_to_sales": 9.1198015,
+    "price_to_book": 7.1657314,
+    "price_to_sales": 9.32853,
     "enterprise_to_ebitda": 15.992,
-    "fcf_yield": 0.012751127479106098,
+    "enterprise_to_revenue": 9.268,
+    "fcf_yield": 0.012465816764392441,
     "institutional_ownership": 0.75778997,
     "insider_ownership": 0.0008,
     "short_interest": 88696120.0,
@@ -119,16 +123,19 @@
     "target_low_price": 400.0,
     "recommendation": "strong_buy",
     "number_of_analysts": 55.0,
+    "dividend_yield": 0.93,
+    "payout_ratio": 0.20729999,
     "next_earnings_date": "1777492800",
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "eps_current_year": 16.8,
+    "eps_forward": 19.3459,
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 38.93438147209588,
+    "rsi": 43.845717278207104,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9203541691826352,
+    "relative_volume": 0.47623945369023085,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -180,10 +187,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
-    "guidance_change": false,
-    "bullish_news_score": 2,
-    "bearish_news_score": 1,
+    "major_news": true,
+    "guidance_change": true,
+    "bullish_news_score": 4,
+    "bearish_news_score": 3,
     "institutional_ownership": 0.75778997,
     "detail": {
       "earnings": {
@@ -224,11 +231,14 @@
         "last_surprise_pct": 0.052199997,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 43.67
+      "analyst_upside_pct": 40.46,
+      "eps_growth_implied": 15.15
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive"
+      "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -250,54 +260,54 @@
     "available": true,
     "items": [
       {
-        "headline": "Microsoft Weighs Xbox Restructuring As Investors Focus On Cloud And AI",
-        "source": "Simply Wall St.",
-        "published": "2026-06-14T15:11:16Z",
-        "summary": "Microsoft (NasdaqGS:MSFT) is reportedly reviewing options for its Xbox gaming division, including a spin off, joint venture, or restructuring into a separate subsidiary. The review follows significant layoffs, pressure on revenue, and consistently low profit margins within Xbox relative to the wider group. Any decision could reshape how Microsoft allocates capital between gaming and its core cloud and AI businesses. For you as an investor, Xbox sits inside a much larger story at Microsoft,...",
+        "headline": "Market Chatter: Microsoft Sued by Shareholders Over Azure Growth, AI Costs",
+        "source": "MT Newswires",
+        "published": "2026-06-15T17:25:03Z",
+        "summary": "Microsoft (MSFT) faces a proposed class action lawsuit filed by shareholders alleging the company fa",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Should You Buy The Dip In Adobe Stock?",
+        "source": "Trefis",
+        "published": "2026-06-15T17:20:48Z",
+        "summary": "The creative software giant is intentionally shifting its strategic focus to chase a large new audience, a pivot that is temporarily pressuring near-term growth metrics, forcing investors to weigh a long-term vision against near-term uncertainty.",
         "bullish_score": 1,
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "Is IREN (IREN) Quietly Rewriting Its AI Infrastructure Story With Microsoft-Backed GPU Financing?",
-        "source": "Simply Wall St.",
-        "published": "2026-06-14T14:13:21Z",
-        "summary": "In early June 2026, IREN Limited closed a US$3.65 billion investment-grade GPU financing facility linked to its Microsoft AI cloud contract and advanced plans for an 800MW, transmission-ready data center campus in Bundey, South Australia, while also engaging BE Networks and NVIDIA DSX Air to test its upcoming Blackwell Ultra GPU deployment via a digital twin. Taken together, these moves highlight how IREN is trying to reposition itself from a Bitcoin miner into a large-scale AI...",
+        "headline": "64 Years of Raises: How DGRO Finds Companies That Never Cut Dividends",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T16:56:00Z",
+        "summary": "The iShares Core Dividend Growth ETF (NYSEARCA:DGRO) was built for investors who want a paycheck that gets bigger every year, not a yield chase. DGRO tracks the Morningstar US Dividend Growth Index, screening for companies with at least five consecutive years of dividend growth and payout ratios under 75%. The fund pays a roughly 2.2% ... 64 Years of Raises: How DGRO Finds Companies That Never Cut Dividends",
+        "bullish_score": 2,
+        "bearish_score": 1,
+        "importance_score": 75,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "If You Put $500 a Month into This Tech ETF Since 2016, You Could Retire Tomorrow",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T16:23:13Z",
+        "summary": "Drop $500 into the VanEck Semiconductor ETF (NYSEARCA:SMH) starting in June, 2016, add another $500 every month, and the math pegs the account at $495,000 this week. Total contributions across those ten years come to $60,500. Everything else is what a single-sector ETF did to your money while you ignored it. The math holds up ... If You Put $500 a Month into This Tech ETF Since 2016, You Could Retire Tomorrow",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "The Momentum Rally Is Back. Mag 7 Stocks Are Finally Joining the Party.",
+        "source": "Barrons.com",
+        "published": "2026-06-15T16:17:10Z",
+        "summary": "The Iran-U.S. deal gave Wall Street a green light to pile into risk assets and chase momentum, and lagging Magnificent Seven stocks were in on the action this time. The Dow rose 721 points, or 1.4%. The S&P 500 jumped 1.",
         "bullish_score": 0,
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Bill Ackman Likes This Indirect AI Play Everyone\u2019s Ignoring",
-        "source": "Insider Monkey",
-        "published": "2026-06-14T13:49:46Z",
-        "summary": "We just covered the Top 10 Stock Picks of 10 Famous Billionaires. Brookfield (NYSE:BN) ranks #9 (see Top 5 Stock Picks of 5 Famous Billionaires). Number of Hedge Funds: 47 Top Pick Of: Bill Ackman \u2014 Pershing Square Capital Brookfield (NYSE:BN) has quietly become an indirect play on the AI infrastructure buildout, thanks to its exposure [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "3 Cloud Computing Stocks to Load up on in June",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-14T13:30:21Z",
-        "summary": "Hyperscaler cloud platforms are doing something rare in the AI era: turning eye-watering capital expenditures into accelerating top-line growth. With Q2 earnings reports landing in July, June is shaping up as a positioning window for the three mega caps that dominate enterprise cloud. Each just printed cloud growth that re-accelerated, each is sitting on contracted ... 3 Cloud Computing Stocks to Load up on in June",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Elon Musk's SpaceX Is Coming To Solana Via Tokenized Shares, Says Foundation President",
-        "source": "Benzinga",
-        "published": "2026-06-14T12:31:17Z",
-        "summary": "Solana Foundation President Lily Liu said on Thursday that tokenized shares of SpaceX will be available on the blockchain as soon as the company lists publicly elsewhere. Solana Set To Welcome SpaceX During an interview with CNBC, Liu said that...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -317,10 +327,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: MSFT\nRating: Drop | Score: 41.4/100 | Confidence: 38.68/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 356.7699890136719 | Resistance: 460.5199890136719\nFundamental Outlook: Quality Compounder | Forward P/E: 20.197561\nNews/Catalyst: Microsoft Weighs Xbox Restructuring As Investors Focus On Cloud And AI\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: MSFT\nRating: Drop | Score: 39.65/100 | Confidence: 33.07/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 356.7699890136719 | Resistance: 460.5199890136719\nFundamental Outlook: Quality Compounder | Forward P/E: 20.65983\nNews/Catalyst: Market Chatter: Microsoft Sued by Shareholders Over Azure Growth, AI Costs\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

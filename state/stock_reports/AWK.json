@@ -1,49 +1,50 @@
 {
   "ticker": "AWK",
-  "generated_at": "2026-06-14T16:13:49.694442",
+  "generated_at": "2026-06-15T17:51:10.066330",
   "score": {
-    "final_score": 41.8,
+    "final_score": 41.05,
     "rating": "Drop",
-    "confidence": 30.4,
+    "confidence": 32.98,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
-      "momentum": 0,
+      "technical": 43.0,
+      "momentum": 10.0,
       "volume": 25.0,
       "fundamental": 57.0,
       "risk": 100,
-      "catalyst": 25.0
+      "catalyst": 10.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 121.12999725341797,
       "resistance": 139.25,
-      "risk_reward": 2.5
+      "risk_reward": 1.81
     },
     "momentum": {
-      "score": 0,
+      "score": 10.0,
       "returns": {
-        "1m": -0.008322251433858341,
-        "3m": -0.08931535929340695,
-        "6m": -0.005002601727922329,
-        "12m": -0.07804584994042496
+        "1m": 0.01262102155518896,
+        "3m": -0.07646230463233206,
+        "6m": -0.005660014721663886,
+        "12m": -0.07352720521386913
       },
-      "acceleration": -0.0868,
-      "evidence": []
+      "acceleration": -0.0736,
+      "evidence": [
+        "1m return is positive"
+      ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2080050.0,
-      "relative_volume": 1.1440590370423789,
+      "average_volume": 1964410.85,
+      "relative_volume": 0.3471356310213823,
       "accumulation_days": 6,
-      "distribution_days": 4,
+      "distribution_days": 3,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -56,25 +57,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014241459866233258,
-        "annualized_volatility": 0.22607616667536237,
-        "maximum_drawdown": -0.1881198580808242,
-        "sharpe_ratio": 0.17163405908470972,
-        "sortino_ratio": 0.27311032713165795,
-        "calmar_ratio": 0.07138308774919065,
-        "beta": -0.2284675352939789,
-        "alpha": 0.08083752410055843
+        "volatility": 0.014260989510052797,
+        "annualized_volatility": 0.22638619015980338,
+        "maximum_drawdown": -0.1881199112595674,
+        "sharpe_ratio": 0.20262071457369454,
+        "sortino_ratio": 0.3225273602865818,
+        "calmar_ratio": 0.10921096828564929,
+        "beta": -0.22367463938529653,
+        "alpha": 0.08824928279757423
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 25.0,
+      "score": 10.0,
       "evidence": [
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Accumulation days exceed distribution days"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Accumulation days exceed distribution days"
   },
   "fundamentals": {
     "ticker": "AWK",
@@ -83,7 +83,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Regulated Water",
     "exchange": "NYQ",
-    "market_cap": 24665882624.0,
+    "market_cap": 24912912384.0,
     "revenue_growth": 0.057,
     "eps_growth": -0.048,
     "fcf_growth": null,
@@ -100,14 +100,14 @@
     "cash_position": 183000000.0,
     "total_debt": 15708999680.0,
     "interest_coverage": null,
-    "forward_pe": 19.258095,
-    "trailing_pe": 22.355751,
+    "forward_pe": 19.450966,
+    "trailing_pe": 22.579645,
     "peg": 2.28,
-    "price_to_book": 2.2348237,
-    "price_to_sales": 4.738882,
+    "price_to_book": 2.2572055,
+    "price_to_sales": 4.786342,
     "enterprise_to_ebitda": 14.172,
     "enterprise_to_revenue": 7.722,
-    "fcf_yield": -0.07689264774796976,
+    "fcf_yield": -0.07613020086796769,
     "institutional_ownership": 1.03367,
     "insider_ownership": 0.00117,
     "short_interest": 11125161.0,
@@ -127,11 +127,11 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 52.50112773372282,
+    "rsi": 58.41629003014473,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1440590370423789,
+    "relative_volume": 0.3471356310213823,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -183,9 +183,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 4,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 1.03367,
     "detail": {
@@ -227,11 +227,10 @@
         "last_surprise_pct": -0.074,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 7.31,
+      "analyst_upside_pct": 6.25,
       "eps_growth_implied": 16.08
     },
     "evidence": [
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -253,6 +252,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Are You Looking for a High-Growth Dividend Stock?",
+        "source": "Zacks",
+        "published": "2026-06-15T15:45:03Z",
+        "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does American Water Works (AWK) have what it takes? Let's find out.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Is Recent Regulatory And Infrastructure Progress Altering The Investment Case For American Water Works Company (AWK)?",
         "source": "Simply Wall St.",
@@ -292,16 +301,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Will Rate Hike Approval Support PPL's Investment and Growth Strategy?",
-        "source": "Zacks",
-        "published": "2026-06-10T17:07:00Z",
-        "summary": "PPL wins new PA distribution rates effective July 1, 2026, adding $275M in annual revenues to fund grid upgrades and support 6-8% earnings growth.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -323,10 +322,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AWK\nRating: Drop | Score: 41.8/100 | Confidence: 30.4/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 121.12999725341797 | Resistance: 139.25\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.258095\nNews/Catalyst: Is Recent Regulatory And Infrastructure Progress Altering The Investment Case For American Water Works Company (AWK)?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AWK\nRating: Drop | Score: 41.05/100 | Confidence: 32.98/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 121.12999725341797 | Resistance: 139.25\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.450966\nNews/Catalyst: Are You Looking for a High-Growth Dividend Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

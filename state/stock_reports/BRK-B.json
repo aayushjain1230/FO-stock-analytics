@@ -1,51 +1,55 @@
 {
   "ticker": "BRK-B",
-  "generated_at": "2026-06-14T16:14:00.836323",
+  "generated_at": "2026-06-15T17:51:21.082586",
   "score": {
-    "final_score": 53.2,
-    "rating": "Hold",
-    "confidence": 43.85,
+    "final_score": 67.2,
+    "rating": "Watch",
+    "confidence": 56.91,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 63.0,
-      "momentum": 30.0,
+      "technical": 75.0,
+      "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 68.0,
       "risk": 100,
-      "catalyst": 20.0
+      "catalyst": 40.0
     },
     "technical": {
-      "score": 63.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 465.3999938964844,
-      "resistance": 492.5799865722656,
-      "risk_reward": 0.14
+      "resistance": 496.1000061035156,
+      "risk_reward": 0.0
     },
     "momentum": {
-      "score": 30.0,
+      "score": 70.0,
       "returns": {
-        "1m": 0.007682507560410778,
-        "3m": -0.0015917367941552518,
-        "6m": -0.002406036933718547,
-        "12m": 0.0022739077278102204
+        "1m": 0.02487296741240108,
+        "3m": 0.007903160675259313,
+        "6m": 0.000504184727080137,
+        "12m": 0.011746971098918424
       },
-      "acceleration": -0.0004,
+      "acceleration": 0.0077,
       "evidence": [
         "1m return is positive",
-        "12m return is positive"
+        "3m return is positive",
+        "6m return is positive",
+        "12m return is positive",
+        "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5238640.0,
-      "relative_volume": 0.875188980346044,
+      "average_volume": 5144993.45,
+      "relative_volume": 0.5456506460664201,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -62,24 +66,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.010898658436658444,
-        "annualized_volatility": 0.17301083908580545,
-        "maximum_drawdown": -0.14948129726959813,
-        "sharpe_ratio": 0.6306139050628053,
-        "sortino_ratio": 0.8404542493280241,
-        "calmar_ratio": 0.6601211735724085,
-        "beta": 0.4223355613165796,
-        "alpha": 0.03139860763385541
+        "volatility": 0.010924891624280607,
+        "annualized_volatility": 0.1734272780290739,
+        "maximum_drawdown": -0.14948129726959902,
+        "sharpe_ratio": 0.6610754877700095,
+        "sortino_ratio": 0.8825103722674316,
+        "calmar_ratio": 0.7004461717073149,
+        "beta": 0.4241132556618489,
+        "alpha": 0.03429345765607088
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 20.0,
+      "score": 40.0,
       "evidence": [
-        "earnings surprise"
+        "earnings surprise",
+        "sector strength"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "BRK-B",
@@ -88,7 +93,7 @@
     "sector": "Financial Services",
     "industry": "Insurance - Diversified",
     "exchange": "NYQ",
-    "market_cap": 1055240683520.0,
+    "market_cap": 1070058307584.0,
     "revenue_growth": 0.044,
     "eps_growth": 1.196,
     "fcf_growth": null,
@@ -105,14 +110,14 @@
     "cash_position": 397383008256.0,
     "total_debt": 128885997568.0,
     "interest_coverage": null,
-    "forward_pe": 22.783737,
-    "trailing_pe": 14.55668,
+    "forward_pe": 23.103664,
+    "trailing_pe": 14.761083,
     "peg": 10.06,
-    "price_to_book": 0.00096773985,
-    "price_to_sales": 2.8110216,
+    "price_to_book": 0.0009813288,
+    "price_to_sales": 2.850494,
     "enterprise_to_ebitda": -2.25,
     "enterprise_to_revenue": -0.707,
-    "fcf_yield": 0.058023017918299905,
+    "fcf_yield": 0.05721954463046263,
     "institutional_ownership": 0.67300004,
     "insider_ownership": 0.00262,
     "short_interest": 11923610.0,
@@ -132,16 +137,16 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 53.15453476951811,
+    "rsi": 62.58573453639182,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.875188980346044,
+    "relative_volume": 0.5456506460664201,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 465.3999938964844,
-    "resistance": 492.5799865722656
+    "resistance": 496.1000061035156
   },
   "earnings": {
     "next_earnings_date": "1777752000",
@@ -187,10 +192,10 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": false,
-    "bullish_news_score": 1,
+    "bullish_news_score": 0,
     "bearish_news_score": 0,
     "institutional_ownership": 0.67300004,
     "detail": {
@@ -232,11 +237,12 @@
         "last_surprise_pct": 0.0417,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 6.35,
+      "analyst_upside_pct": 4.88,
       "eps_growth_implied": -36.11
     },
     "evidence": [
-      "recent earnings surprise or earnings growth is positive"
+      "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive"
     ]
   },
   "analyst": {
@@ -258,50 +264,50 @@
     "available": true,
     "items": [
       {
-        "headline": "Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?",
+        "headline": "Market Correction Ahead: Warren Buffett's Historical Warning for Investors",
         "source": "Motley Fool",
-        "published": "2026-06-14T13:05:00Z",
-        "summary": "Apple stock is up 50% since Berkshire Hathaway started unloading shares in mid-2023.",
+        "published": "2026-06-15T15:35:00Z",
+        "summary": "The Buffett indicator is at an all-time high and far above the level he originally said was \"playing with fire.\"",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Berkshire Hathaway's Greg Abel Just Made a Big Bet on Who Will Win the AI Races -- And He's Even Tipping the Scale in Its Favor",
-        "source": "Motley Fool",
-        "published": "2026-06-14T09:50:00Z",
-        "summary": "Berkshire just made this AI leader its fourth-largest position, and it could get even bigger.",
+        "headline": "The 15% Yield ETF That Steals Warren Buffett\u2019s Playbook",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T15:30:24Z",
+        "summary": "Buffett famously refuses to pay a dividend on Berkshire Hathaway because he can compound your cash better than you can. The VistaShares Target 15 Berkshire Select Income ETF (NYSEARCA:OMAH) disagrees, politely. OMAH holds a Berkshire-style basket of value names and overlays an options strategy designed to push out a 15% annual distribution, paid monthly. You ... The 15% Yield ETF That Steals Warren Buffett\u2019s Playbook",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "How Insurance Companies Turn Their Premiums Into Billions in Profit",
-        "source": "Motley Fool",
-        "published": "2026-06-13T23:35:00Z",
-        "summary": "There's a timing mismatch in the insurance industry that is very profitable for shareholders.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Wall Street\u2019s Top Billionaires Are Changing Their Mind About Apple (AAPL)",
+        "headline": "Greenskeeper Asset Management Views Berkshire Hathaway (BRK.B) as Resilient Against AI Disruption",
         "source": "Insider Monkey",
-        "published": "2026-06-13T15:42:40Z",
-        "summary": "We just covered the Top 10 Stock Picks of 10 Famous Billionaires. Apple Inc. (NASDAQ:AAPL) ranks #4 (see Top 5 Stock Picks of 5 Famous Billionaires). Number of Hedge Funds: 170 Top Pick Of: Warren Buffett\u2019s Berkshire Hathaway Apple was once seen as a laggard in the AI race. Now it is looking like a winner, [\u2026]",
+        "published": "2026-06-15T13:32:13Z",
+        "summary": "Greenskeeper Asset Management, an independent firm that specializes in disciplined value investing, recently released its Q1 2026 scorecard. A copy is available to download here. The Middle East conflict triggered a sharp stock sell-off in the market, resulting in the Greenskeeper Value Fund posting a -8.1% return in Q1. Despite this challenging quarter, the fund [\u2026]",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Greg Abel Era At Berkshire Hathaway Shifts Capital Toward Housing And Tech",
-        "source": "Simply Wall St.",
-        "published": "2026-06-13T14:10:10Z",
-        "summary": "Berkshire Hathaway (NYSE:BRK.B) under new CEO Greg Abel is reshaping its capital deployment approach. The company has agreed to acquire Taylor Morrison Home, increasing its direct ownership in an operating business. Berkshire has also made a large investment in Alphabet, adding a major technology and AI platform to its holdings. Berkshire Hathaway sits at the center of many portfolios, and at a share price of $489.25, NYSE:BRK.B often serves as a reference point for long term compounding...",
+        "headline": "1 Unstoppable Vanguard ETF to Buy and Hold for the Next Decade",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T12:55:56Z",
+        "summary": "Value stocks are having their moment again, and Vanguard Mega Cap Value Index Fund ETF Shares (NYSEARCA:MGV) is the cleanest way to own that rotation without overpaying for it. MGV returned 28% over the past year, a number that catches the eye when you remember the fund holds boring giants like JPMorgan (NYSE:JPM), Berkshire Hathaway (NYSE:BRK.B), ExxonMobil (NYSE:XOM), ... 1 Unstoppable Vanguard ETF to Buy and Hold for the Next Decade",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "After Warren Buffett\u2019s Successor\u2019s Q1 Purge, Just 4 Stocks Make Up Over 50% of Berkshire Hathaway",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T12:44:28Z",
+        "summary": "Warren Buffett stepped down as CEO of Berkshire Hathaway (NYSE: BRK-B) on December 31, 2025, after six decades leading the conglomerate he transformed from a struggling textile mill into a $1 trillion empire. The \u201cOracle of Omaha\u201d left his successor, Greg Abel, with a very concentrated portfolio: 70% of Berkshire\u2019s $381 billion portfolio is invested in ... After Warren Buffett\u2019s Successor\u2019s Q1 Purge, Just 4 Stocks Make Up Over 50% of Berkshire Hathaway",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -324,13 +330,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-15",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: BRK-B\nRating: Hold | Score: 53.2/100 | Confidence: 43.85/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 465.3999938964844 | Resistance: 492.5799865722656\nFundamental Outlook: Fundamentally Average | Forward P/E: 22.783737\nNews/Catalyst: Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BRK-B\nRating: Watch | Score: 67.2/100 | Confidence: 56.91/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 465.3999938964844 | Resistance: 496.1000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 23.103664\nNews/Catalyst: Market Correction Ahead: Warren Buffett's Historical Warning for Investors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

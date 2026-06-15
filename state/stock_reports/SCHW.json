@@ -1,18 +1,18 @@
 {
   "ticker": "SCHW",
-  "generated_at": "2026-06-14T16:14:42.343736",
+  "generated_at": "2026-06-15T17:52:06.559265",
   "score": {
-    "final_score": 52.65,
+    "final_score": 54.4,
     "rating": "Hold",
-    "confidence": 44.5,
+    "confidence": 44.23,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
-      "momentum": 30.0,
+      "momentum": 40.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 80.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 53.0,
@@ -25,27 +25,28 @@
       ],
       "support": 85.3499984741211,
       "resistance": 100.2699966430664,
-      "risk_reward": 1.59
+      "risk_reward": 1.42
     },
     "momentum": {
-      "score": 30.0,
+      "score": 40.0,
       "returns": {
-        "1m": -0.0007677930923559728,
-        "3m": -0.01754894788096839,
-        "6m": -0.042525479524727516,
-        "12m": 0.04361556652874343
+        "1m": 0.02308804512124807,
+        "3m": -0.01918886800488573,
+        "6m": -0.05055683414636192,
+        "12m": 0.047070466453959625
       },
-      "acceleration": 0.0037,
+      "acceleration": 0.0061,
       "evidence": [
+        "1m return is positive",
         "12m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 11839435.0,
-      "relative_volume": 0.9626895202347071,
-      "accumulation_days": 3,
+      "average_volume": 11367114.7,
+      "relative_volume": 0.42364259771215296,
+      "accumulation_days": 2,
       "distribution_days": 4,
       "evidence": []
     },
@@ -60,28 +61,27 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016957736281922885,
-        "annualized_volatility": 0.26919571800351033,
-        "maximum_drawdown": -0.1983442185486478,
-        "sharpe_ratio": 0.5899888449188561,
-        "sortino_ratio": 0.717610351240519,
-        "calmar_ratio": 0.656039309512302,
-        "beta": 0.7485294264546364,
-        "alpha": 0.021102467580398243
+        "volatility": 0.01697260099297688,
+        "annualized_volatility": 0.2694316879760685,
+        "maximum_drawdown": -0.1983442185486477,
+        "sharpe_ratio": 0.6138207469647091,
+        "sortino_ratio": 0.7451244580678756,
+        "calmar_ratio": 0.6931511727022547,
+        "beta": 0.7470070227978385,
+        "alpha": 0.02385028747186544
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 80.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 12m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "SCHW",
@@ -90,7 +90,7 @@
     "sector": "Financial Services",
     "industry": "Capital Markets",
     "exchange": "NYQ",
-    "market_cap": 158435246080.0,
+    "market_cap": 159096127488.0,
     "revenue_growth": 0.158,
     "eps_growth": 0.386,
     "fcf_growth": null,
@@ -107,11 +107,11 @@
     "cash_position": 96474996736.0,
     "total_debt": 59457998848.0,
     "interest_coverage": null,
-    "forward_pe": 12.564858,
-    "trailing_pe": 18.11133,
+    "forward_pe": 12.61727,
+    "trailing_pe": 18.186878,
     "peg": 1.09,
-    "price_to_book": 3.7282586,
-    "price_to_sales": 6.387488,
+    "price_to_book": 3.7438104,
+    "price_to_sales": 6.414132,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 5.168,
     "fcf_yield": null,
@@ -134,11 +134,11 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 52.712727716365954,
+    "rsi": 56.13165322132586,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9626895202347071,
+    "relative_volume": 0.42364259771215296,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -190,10 +190,10 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 0,
+    "bullish_news_score": 0,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.84497,
     "detail": {
       "earnings": {
@@ -234,14 +234,13 @@
         "last_surprise_pct": 0.0248,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.39,
+      "analyst_upside_pct": 26.86,
       "eps_growth_implied": 44.14
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -264,6 +263,36 @@
     "available": true,
     "items": [
       {
+        "headline": "Schwab Stock Gains 2.7% as Client Assets, NNA Surge in May",
+        "source": "Zacks",
+        "published": "2026-06-15T12:17:00Z",
+        "summary": "SCHW shares rise as May client assets hit $13.14T, with core NNA jumping 43% and new brokerage accounts climbing.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Schwab Follows Vanguard With Fee Cuts on 4 ETFs",
+        "source": "The Daily Upside",
+        "published": "2026-06-15T04:01:00Z",
+        "summary": "The reductions aren\u2019t raising stakes in the never-ending game of fee poker between asset managers. Rather, Schwab is calling their bets and refusing to fold.",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Charles Schwab (SCHW) Stock Valuation Check After Recent Momentum Cooldown",
+        "source": "Simply Wall St.",
+        "published": "2026-06-15T02:05:44Z",
+        "summary": "Recent performance snapshot With no single headline event driving trading, Charles Schwab (SCHW) has been moving on its overall business profile and recent returns, as investors weigh how the diversified model fits into their portfolios. The stock is up 2.7% over the past day and 2.5% over the past week, while the move over the past month is close to flat. Over the past 3 months, the share price has declined 2.7%, and year to date it is down 10.3%. Over a longer horizon, Charles Schwab shows...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Here\u2019s Why The Charles Schwab (SCHW) Is One of the Best Bargain Stocks to Buy in June",
         "source": "Insider Monkey",
         "published": "2026-06-14T11:15:07Z",
@@ -278,36 +307,6 @@
         "source": "Benzinga",
         "published": "2026-06-13T16:01:06Z",
         "summary": "Holding cryptocurrency inside a Roth IRA is legal, and for some investors the structure is genuinely compelling. Crypto gains inside a Roth IRA are tax-free if you follow the rules, which means a position that grows 300% doesn\u2019t generate a...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Charles Schwab (SCHW) Stock Is Up, What You Need To Know",
-        "source": "StockStory",
-        "published": "2026-06-12T23:41:20Z",
-        "summary": "Shares of financial services giant Charles Schwab (NYSE:SCHW) jumped 3% in the afternoon session after the company released a strong monthly activity report for May 2026, showing significant growth in client assets and trading activity.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Wall Street Analyst: SpaceX IPO Could Unleash Billions in New Public Offerings",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-12T20:21:06Z",
-        "summary": "Citizens\u2019 JMP Devin Ryan, Head of Financial Technology Research, argued on CNBC\u2019s Squawk Box on June 12 that the real story of the SpaceX listing is the message it sends to every other private company sitting on the sidelines. \u201cIt\u2019s good to be an investment banker, largest deal ever,\u201d Ryan said, before pivoting to the ... Wall Street Analyst: SpaceX IPO Could Unleash Billions in New Public Offerings",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Week\u2019s Best: Investing in Energy as the War Winds Down",
-        "source": "Barrons.com",
-        "published": "2026-06-12T20:08:00Z",
-        "summary": "The Iran war sent oil and gas prices surging and sharpened investors\u2019 focus on energy investments.  Now that the conflict appears likely to end, the question is how to play the sector: Some investors are leaning into traditional oil-patch names, while others favor pipelines and natural gas.  For a recent Barron\u2019s Advisor Big Q, we asked a panel of investment professionals how they\u2019re putting money to work in energy now.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -330,20 +329,13 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Breakout",
-    "evidence": "Price reclaimed a major moving average",
-    "date_of_change": "2026-06-14",
-    "strength": 75,
-    "invalidates": "Close back below the reclaimed moving average",
-    "triggers": [
-      {
-        "reason": "Breakout",
-        "evidence": "Price reclaimed a major moving average",
-        "strength": 75,
-        "invalidates": "Close back below the reclaimed moving average"
-      }
-    ]
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
+    "date_of_change": "2026-06-15",
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: SCHW\nRating: Hold | Score: 52.65/100 | Confidence: 44.5/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.564858\nNews/Catalyst: Here\u2019s Why The Charles Schwab (SCHW) Is One of the Best Bargain Stocks to Buy in June\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: SCHW\nRating: Hold | Score: 54.4/100 | Confidence: 44.23/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.61727\nNews/Catalyst: Schwab Stock Gains 2.7% as Client Assets, NNA Surge in May\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

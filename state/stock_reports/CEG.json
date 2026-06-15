@@ -1,18 +1,18 @@
 {
   "ticker": "CEG",
-  "generated_at": "2026-06-14T16:14:10.035359",
+  "generated_at": "2026-06-15T17:51:31.120760",
   "score": {
-    "final_score": 24.9,
+    "final_score": 28.15,
     "rating": "Avoid",
-    "confidence": 13.84,
+    "confidence": 22.88,
     "risk_level": "High",
     "categories": {
       "technical": 20.0,
-      "momentum": 0,
+      "momentum": 10.0,
       "volume": 0,
       "fundamental": 81.0,
       "risk": 35.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 20.0,
@@ -22,25 +22,27 @@
       ],
       "support": 242.3000030517578,
       "resistance": 322.7799987792969,
-      "risk_reward": 6.02
+      "risk_reward": 2.82
     },
     "momentum": {
-      "score": 0,
+      "score": 10.0,
       "returns": {
-        "1m": -0.07543294843468529,
-        "3m": -0.15778812827918887,
-        "6m": -0.29711150043972756,
-        "12m": -0.12695825778184688
+        "1m": -0.041791624175191666,
+        "3m": -0.13686611496710444,
+        "6m": -0.30240386065060043,
+        "12m": -0.11867726891965569
       },
-      "acceleration": -0.0092,
-      "evidence": []
+      "acceleration": 0.0143,
+      "evidence": [
+        "Momentum is accelerating"
+      ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 4167785.0,
-      "relative_volume": 0.8180604325798956,
+      "average_volume": 4081461.9,
+      "relative_volume": 0.5167849294391307,
       "accumulation_days": 4,
-      "distribution_days": 5,
+      "distribution_days": 4,
       "evidence": []
     },
     "fundamental": {
@@ -54,14 +56,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.037268588559654994,
-        "annualized_volatility": 0.591620502259404,
-        "maximum_drawdown": -0.5070228481407586,
-        "sharpe_ratio": 0.4250064777429511,
-        "sortino_ratio": 0.6030190276052465,
-        "calmar_ratio": 0.16023949677721513,
-        "beta": 1.6348740017708556,
-        "alpha": -0.049353715085995356
+        "volatility": 0.03732117814533588,
+        "annualized_volatility": 0.5924553360509853,
+        "maximum_drawdown": -0.5070227601794522,
+        "sharpe_ratio": 0.4883812322962462,
+        "sortino_ratio": 0.6913236364452121,
+        "calmar_ratio": 0.2414679036592629,
+        "beta": 1.640504940448996,
+        "alpha": -0.021475929606054777
       },
       "evidence": [
         "Volatility is elevated",
@@ -70,14 +72,15 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; revenue growth is strong; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CEG",
@@ -86,7 +89,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Independent Power Producers",
     "exchange": "NMS",
-    "market_cap": 90618208256.0,
+    "market_cap": 94102306816.0,
     "revenue_growth": 0.638,
     "eps_growth": 10.91,
     "fcf_growth": null,
@@ -103,14 +106,14 @@
     "cash_position": 864000000.0,
     "total_debt": 22466000896.0,
     "interest_coverage": null,
-    "forward_pe": 18.640375,
-    "trailing_pe": 22.027777,
+    "forward_pe": 19.357063,
+    "trailing_pe": 22.874704,
     "peg": 3.74,
-    "price_to_book": 2.746231,
-    "price_to_sales": 3.0340579,
+    "price_to_book": 2.8518188,
+    "price_to_sales": 3.1507118,
     "enterprise_to_ebitda": 14.276,
     "enterprise_to_revenue": 3.803,
-    "fcf_yield": -0.04942577460091687,
+    "fcf_yield": -0.04759580596422177,
     "institutional_ownership": 0.83018,
     "insider_ownership": 0.0032300001,
     "short_interest": 11593455.0,
@@ -130,11 +133,11 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 29.215205043317695,
+    "rsi": 30.706754473632643,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8180604325798956,
+    "relative_volume": 0.5167849294391307,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -186,9 +189,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 4,
     "bearish_news_score": 0,
     "institutional_ownership": 0.83018,
     "detail": {
@@ -230,12 +233,13 @@
         "last_surprise_pct": 0.053000003,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 45.19,
+      "analyst_upside_pct": 39.81,
       "eps_growth_implied": 18.17
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -257,6 +261,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Constellation Energy (CEG) Passes Another Regulatory Hurdle For Three Mile Island Nuclear Plant",
+        "source": "Insider Monkey",
+        "published": "2026-06-15T08:38:13Z",
+        "summary": "Constellation Energy Corporation (NASDAQ:CEG) is one of the 10 Stocks That Can Still Skyrocket On The Neo Cloud Boom. Constellation Energy Corporation (NASDAQ:CEG) is one of the energy companies solving the power bottleneck that AI infrastructure currently faces. The company\u2019s stock has underperformed the broader market over the last year, but recent analyst sentiment and [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "How Constellation\u2019s US$3.09 Billion Equity Raise And AI Power Deals At Constellation Energy (CEG) Has Changed Its Investment Story",
+        "source": "Simply Wall St.",
+        "published": "2026-06-14T21:10:42Z",
+        "summary": "Earlier this month, Constellation Energy Corporation completed a US$3.09 billion follow-on equity offering of 11,000,000 common shares at about US$281 each, following an earlier filing to issue 9,000,000 shares. This capital raise comes alongside stronger-than-expected quarterly earnings, new clean energy projects coming online, and growing long-term power contracts with major AI and data center customers like Microsoft and Meta. We\u2019ll now examine how this large equity raise, paired with...",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Constellation Energy (CEG) Completes $90M Limerick Clean Energy Center Outage Upgrade",
         "source": "Insider Monkey",
@@ -286,26 +310,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "3 Nuclear Energy Stocks Powering the AI Boom in June",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-12T14:07:46Z",
-        "summary": "AI hyperscaler CapEx spending is now the single biggest variable in the U.S. power equation. Microsoft (NASDAQ:MSFT), Meta (NASDAQ:META), Amazon (NASDAQ:AMZN) and Alphabet (NASDAQ:GOOGL) are collectively guiding to $710B+ in combined 2026 CapEx, and the EIA\u2019s Annual Energy Outlook 2026 now models data center server electricity use growing to 818 billion kilowatthours in 2050, more ... 3 Nuclear Energy Stocks Powering the AI Boom in June",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Constellation Energy Taps Nuclear Restart And Tech Giants For AI Power",
-        "source": "Simply Wall St.",
-        "published": "2026-06-12T11:10:21Z",
-        "summary": "Constellation Energy (NasdaqGS:CEG) is progressing regulatory steps to restart the Crane Clean Energy Center, including FERC approval for interconnection capacity. The NRC is conducting an environmental review for the former Three Mile Island Unit 1 facility as part of the restart process. Constellation has entered long term, carbon free power agreements with major technology companies, including Microsoft and Meta, aimed at supplying nuclear power for AI and data center...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -327,10 +331,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CEG\nRating: Avoid | Score: 24.9/100 | Confidence: 13.84/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 18.640375\nNews/Catalyst: Constellation Energy (CEG) Completes $90M Limerick Clean Energy Center Outage Upgrade\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CEG\nRating: Avoid | Score: 28.15/100 | Confidence: 22.88/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 19.357063\nNews/Catalyst: Constellation Energy (CEG) Passes Another Regulatory Hurdle For Three Mile Island Nuclear Plant\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,48 +1,54 @@
 {
   "ticker": "ABNB",
-  "generated_at": "2026-06-14T16:13:26.572984",
+  "generated_at": "2026-06-15T17:50:46.291293",
   "score": {
-    "final_score": 48.7,
-    "rating": "Hold",
-    "confidence": 42.78,
+    "final_score": 65.95,
+    "rating": "Watch",
+    "confidence": 58.12,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 30.0,
-      "momentum": 40.0,
+      "technical": 65.0,
+      "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 73.0,
       "risk": 100,
-      "catalyst": 30.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 65.0,
       "evidence": [
+        "Price above SMA20",
+        "Price above SMA50",
         "Price above SMA200",
+        "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 122.87000274658203,
       "resistance": 144.17999267578125,
-      "risk_reward": 1.26
+      "risk_reward": 0.32
     },
     "momentum": {
-      "score": 40.0,
+      "score": 70.0,
       "returns": {
-        "1m": -0.005189158720552256,
-        "3m": 0.04734755014288039,
-        "6m": 0.036920899080818526,
-        "12m": -0.041865847323688365
+        "1m": 0.040023985761963976,
+        "3m": 0.08338525824119625,
+        "6m": 0.08609378337860107,
+        "12m": 0.0015129076980102685
       },
-      "acceleration": 0.0289,
+      "acceleration": 0.0403,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
+        "12m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3748580.0,
-      "relative_volume": 0.6977842276275283,
+      "average_volume": 3725388.05,
+      "relative_volume": 0.6271993598089735,
       "accumulation_days": 3,
       "distribution_days": 2,
       "evidence": [
@@ -59,25 +65,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.022612468693061875,
-        "annualized_volatility": 0.35896181214645284,
-        "maximum_drawdown": -0.34524839771842264,
-        "sharpe_ratio": 0.03956852673706496,
-        "sortino_ratio": 0.052528709914925184,
-        "calmar_ratio": -0.1414901875917489,
-        "beta": 1.2804327538386755,
-        "alpha": -0.22137993765162012
+        "volatility": 0.022723960720880423,
+        "annualized_volatility": 0.3607316932190978,
+        "maximum_drawdown": -0.3452483977184223,
+        "sharpe_ratio": 0.07817529811393226,
+        "sortino_ratio": 0.10425328821404543,
+        "calmar_ratio": -0.10438279930050891,
+        "beta": 1.2873776732303077,
+        "alpha": -0.21571405937044305
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 50.0,
       "evidence": [
         "analyst revision",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; Momentum is accelerating; Accumulation days exceed distribution days"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "ABNB",
@@ -86,7 +93,7 @@
     "sector": "Consumer Cyclical",
     "industry": "Travel Services",
     "exchange": "NMS",
-    "market_cap": 78508826624.0,
+    "market_cap": 82464538624.0,
     "revenue_growth": 0.179,
     "eps_growth": 0.06,
     "fcf_growth": null,
@@ -103,14 +110,14 @@
     "cash_position": 12005000192.0,
     "total_debt": 2534000128.0,
     "interest_coverage": null,
-    "forward_pe": 21.815386,
-    "trailing_pe": 32.661728,
+    "forward_pe": 22.914568,
+    "trailing_pe": 34.307407,
     "peg": 1.22,
-    "price_to_book": 10.306997,
-    "price_to_sales": 6.2077036,
+    "price_to_book": 10.826322,
+    "price_to_sales": 6.520482,
     "enterprise_to_ebitda": 26.36,
     "enterprise_to_revenue": 5.459,
-    "fcf_yield": 0.04064511216404446,
+    "fcf_yield": 0.03869542129556413,
     "institutional_ownership": 0.88677,
     "insider_ownership": 0.011390001,
     "short_interest": 14725573.0,
@@ -130,14 +137,14 @@
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 49.8481400130544,
-    "macd_cross": false,
+    "rsi": 60.76038139752181,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6977842276275283,
-    "price_above_sma50": false,
+    "relative_volume": 0.6271993598089735,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover, trend continuation",
     "support": 122.87000274658203,
     "resistance": 144.17999267578125
   },
@@ -185,10 +192,10 @@
     "earnings_surprise": false,
     "analyst_revision": true,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 0,
     "bearish_news_score": 0,
     "institutional_ownership": 0.88677,
     "detail": {
@@ -230,11 +237,12 @@
         "last_surprise_pct": -0.14130001,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 18.29,
+      "analyst_upside_pct": 12.62,
       "eps_growth_implied": 49.72
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -257,50 +265,50 @@
     "available": true,
     "items": [
       {
-        "headline": "Y Combinator Backs CLARITY Act as Startup Crypto Adoption Widens",
-        "source": "CryptoProwl",
-        "published": "2026-06-12T21:51:00Z",
-        "summary": "Y Combinator is pushing its crypto thesis beyond the startup sector that usually carries the label.",
+        "headline": "Payoneer to be acquired by Nuvei in $2.75B all-cash deal",
+        "source": "Proactive",
+        "published": "2026-06-15T15:27:00Z",
+        "summary": "Nuvei has agreed to acquire Nasdaq-listed Payoneer Global (NASDAQ:PAYO) in an all-cash deal valuing the cross-border payments company at approximately $2.75 billion, sending Payoneer shares up 4.1%. Under the terms of the agreement, Nuvei will pay $7.40 per share for all outstanding common...",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "3 Reasons Airbnb Is a Top Growth Stock to Buy in June",
-        "source": "Motley Fool",
-        "published": "2026-06-12T09:57:00Z",
-        "summary": "Investors don't have to look hard to find reasons to be bullish on this dominant platform.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "SpaceX\u2019s IPO could be largest in history. Here\u2019s how it compares to previous record-holders",
-        "source": "Fortune",
-        "published": "2026-06-12T07:04:00Z",
-        "summary": "The hotly anticipated IPO is set to be the largest in stock market history, and is more than 7.5 times Alibaba's IPO, in second place.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Airbnb Stock In Focus As CEO Chesky Unveils New AI Venture",
-        "source": "Simply Wall St.",
-        "published": "2026-06-12T00:23:12Z",
-        "summary": "Airbnb CEO Brian Chesky is launching a new AI venture focused on user interaction and design, separate from conventional chatbot products. The initiative is positioned as a distinct effort outside typical AI assistants, aiming to rethink how users experience technology. This move introduces a fresh angle to the story around NasdaqGS:ABNB, beyond valuation, analyst commentary, or regulatory themes. Airbnb, traded as NasdaqGS:ABNB, built its business around a global marketplace for short term...",
+        "headline": "Payoneer to be Acquired by Canada's Nuvei in $2.75 Billion Deal",
+        "source": "MT Newswires",
+        "published": "2026-06-15T15:20:14Z",
+        "summary": "Payoneer (PAYO) agreed to be acquired by Canada's Nuvei in an all-cash transaction valued at about $",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Airbnb, Inc. (ABNB) Increases Yet Falls Behind Market: What Investors Need to Know",
-        "source": "Zacks",
-        "published": "2026-06-11T21:45:02Z",
-        "summary": "The latest trading day saw Airbnb, Inc. (ABNB) settling at $130.86, representing a +1.36% change from its previous close.",
+        "headline": "JPMorgan Chase Adds New Sapphire Benefits; Expands Security and Resiliency Initiative to Canada",
+        "source": "MT Newswires",
+        "published": "2026-06-15T13:50:52Z",
+        "summary": "JPMorgan Chase (JPM) said Monday that it has added new features to its Sapphire Preferred card.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Is Airbnb (ABNB) Resilient to AI Transition?",
+        "source": "Insider Monkey",
+        "published": "2026-06-15T12:55:46Z",
+        "summary": "Baron Capital, an investment management company, released its Q4 2025 letter for its \u201cBaron Real Estate Fund\u201d. A copy of the letter is available to download here. Baron Real Estate Fund was recognized as the Best Real Estate Fund Over Three Years at the 2026 LSEG Lipper Funds Awards, reflecting the three-year performance ending December 31, [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Canada's Nuvei to buy Payoneer for $2.75 billion in cross-border payments push",
+        "source": "Reuters",
+        "published": "2026-06-15T12:01:27Z",
+        "summary": "Nuvei will buy cross-border payments firm Payoneer for about $2.75 billion in cash, the companies said on Monday, as \u200cthe Canadian fintech aims to expand its global business.  Nuvei will buy \u200call shares of Payoneer for $7.40 apiece, a premium of about 44% to the stock's closing price \u200bon June 8, before Reuters reported that Nuvei was in advanced talks to acquire the company.  Payoneer's shares rose nearly 4% in early morning trading.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -323,13 +331,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-15",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: ABNB\nRating: Hold | Score: 48.7/100 | Confidence: 42.78/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 122.87000274658203 | Resistance: 144.17999267578125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 21.815386\nNews/Catalyst: Y Combinator Backs CLARITY Act as Startup Crypto Adoption Widens\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABNB\nRating: Watch | Score: 65.95/100 | Confidence: 58.12/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover, trend continuation | Support: 122.87000274658203 | Resistance: 144.17999267578125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 22.914568\nNews/Catalyst: Payoneer to be acquired by Nuvei in $2.75B all-cash deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

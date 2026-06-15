@@ -1,39 +1,40 @@
 {
   "ticker": "ALB",
-  "generated_at": "2026-06-14T16:13:35.787201",
+  "generated_at": "2026-06-15T17:50:55.501898",
   "score": {
-    "final_score": 46.45,
+    "final_score": 45.2,
     "rating": "Hold",
-    "confidence": 42.02,
+    "confidence": 39.05,
     "risk_level": "High",
     "categories": {
-      "technical": 38.0,
+      "technical": 48.0,
       "momentum": 50.0,
-      "volume": 50.0,
+      "volume": 25.0,
       "fundamental": 68.0,
       "risk": 35.0,
       "catalyst": 30.0
     },
     "technical": {
-      "score": 38.0,
+      "score": 48.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA200",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 147.22000122070312,
       "resistance": 215.6199951171875,
-      "risk_reward": 1.95
+      "risk_reward": 1.89
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": -0.1497212010956147,
-        "3m": 0.07985735645146574,
-        "6m": 0.289657149759023,
-        "12m": 1.6713932384024566
+        "1m": -0.10339478525608548,
+        "3m": 0.05479725032447891,
+        "6m": 0.28006669805757345,
+        "12m": 1.7904779095439025
       },
-      "acceleration": -0.065,
+      "acceleration": -0.0852,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -41,13 +42,12 @@
       ]
     },
     "volume": {
-      "score": 50.0,
-      "average_volume": 2192005.0,
-      "relative_volume": 1.4880896713283045,
+      "score": 25.0,
+      "average_volume": 2116915.75,
+      "relative_volume": 0.5106084169858909,
       "accumulation_days": 7,
-      "distribution_days": 4,
+      "distribution_days": 3,
       "evidence": [
-        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -61,14 +61,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.03832341287661163,
-        "annualized_volatility": 0.6083653191765891,
-        "maximum_drawdown": -0.5395645941506568,
-        "sharpe_ratio": 0.7098222846035783,
-        "sortino_ratio": 1.104822213628404,
-        "calmar_ratio": 0.521310995085108,
-        "beta": 1.6367256133306294,
-        "alpha": 0.1306943265732072
+        "volatility": 0.03829305916378566,
+        "annualized_volatility": 0.6078834689235592,
+        "maximum_drawdown": -0.5395645941506566,
+        "sharpe_ratio": 0.7705707362242473,
+        "sortino_ratio": 1.1941159482682258,
+        "calmar_ratio": 0.6104021560687386,
+        "beta": 1.6329348239493573,
+        "alpha": 0.15903149557708274
       },
       "evidence": [
         "Volatility is elevated",
@@ -83,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA200; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; 12m return is positive"
+    "explanation": "Price above SMA20; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
   },
   "fundamentals": {
     "ticker": "ALB",
@@ -92,7 +92,7 @@
     "sector": "Basic Materials",
     "industry": "Specialty Chemicals",
     "exchange": "NYQ",
-    "market_cap": 20098422784.0,
+    "market_cap": 20132034560.0,
     "revenue_growth": 0.327,
     "eps_growth": null,
     "fcf_growth": null,
@@ -109,14 +109,14 @@
     "cash_position": 1089809024.0,
     "total_debt": 2005991040.0,
     "interest_coverage": null,
-    "forward_pe": 14.11133,
+    "forward_pe": 14.13493,
     "trailing_pe": null,
     "peg": 1.04,
-    "price_to_book": 2.638203,
-    "price_to_sales": 3.6578615,
+    "price_to_book": 2.642615,
+    "price_to_sales": 3.6639788,
     "enterprise_to_ebitda": 22.021,
     "enterprise_to_revenue": 4.278,
-    "fcf_yield": 0.03566009888947911,
+    "fcf_yield": 0.035600561973205755,
     "institutional_ownership": 0.96496004,
     "insider_ownership": 0.0018600001,
     "short_interest": 57554.0,
@@ -136,14 +136,14 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 49.130692317543954,
-    "macd_cross": false,
+    "rsi": 47.047347381091136,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.4880896713283045,
+    "relative_volume": 0.5106084169858909,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 147.22000122070312,
     "resistance": 215.6199951171875
   },
@@ -194,7 +194,7 @@
     "sector_strength": false,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 1,
     "bearish_news_score": 1,
     "institutional_ownership": 0.96496004,
     "detail": {
@@ -236,7 +236,7 @@
         "last_surprise_pct": 1.2459999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 25.87,
+      "analyst_upside_pct": 25.66,
       "eps_growth_implied": 452.09
     },
     "evidence": [
@@ -263,6 +263,36 @@
     "available": true,
     "items": [
       {
+        "headline": "Is Albemarle (ALB) Outperforming Other Basic Materials Stocks This Year?",
+        "source": "Zacks",
+        "published": "2026-06-15T13:40:04Z",
+        "summary": "Here is how Albemarle (ALB) and CF Industries (CF) have performed compared to their sector so far this year.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Albemarle (ALB) Is Considered a Good Investment by Brokers: Is That True?",
+        "source": "Zacks",
+        "published": "2026-06-15T13:30:05Z",
+        "summary": "The average brokerage recommendation (ABR) for Albemarle (ALB) is equivalent to a Buy. The overly optimistic recommendations of Wall Street analysts make the effectiveness of this highly sought-after metric questionable. So, is it worth buying the stock?",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "BASF's Tinosorb S Gets FDA Nod as First New UV Filter in 27 Years",
+        "source": "Zacks",
+        "published": "2026-06-15T12:52:00Z",
+        "summary": "BASFY's Tinosorb S wins FDA approval, bringing the first new UV filter to U.S. consumers in 27 years and broadening sun care options.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Albemarle (ALB) Stock After 184% One Year Surge Are Recent Gains Already Priced In",
         "source": "Simply Wall St.",
         "published": "2026-06-13T23:14:16Z",
@@ -281,36 +311,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "ATI and BWX Technologies Extend Strategic Partnership Through 2030",
-        "source": "Zacks",
-        "published": "2026-06-12T14:23:00Z",
-        "summary": "ATI extends its strategic material supply agreement with BWXT through fiscal 2030, supporting the U.S. Naval Nuclear Propulsion Program.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "BHP Advances Lower-Carbon Conveyor Solutions With BOTON Partnership",
-        "source": "Zacks",
-        "published": "2026-06-12T13:53:00Z",
-        "summary": "BHP Group teams up with BOTON to develop smart, lower-carbon mining conveyor technologies, from AI belt systems to lifecycle carbon tracking.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Does Albemarle's Premium Valuation Justify Buying the Stock Now?",
-        "source": "Zacks",
-        "published": "2026-06-12T11:44:00Z",
-        "summary": "ALB trades at a premium, but rising lithium demand, higher prices and productivity gains are boosting growth and supporting its outlook.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -332,10 +332,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ALB\nRating: Hold | Score: 46.45/100 | Confidence: 42.02/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 147.22000122070312 | Resistance: 215.6199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.11133\nNews/Catalyst: Albemarle (ALB) Stock After 184% One Year Surge Are Recent Gains Already Priced In\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALB\nRating: Hold | Score: 45.2/100 | Confidence: 39.05/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 147.22000122070312 | Resistance: 215.6199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.13493\nNews/Catalyst: Is Albemarle (ALB) Outperforming Other Basic Materials Stocks This Year?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

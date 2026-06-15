@@ -1,22 +1,23 @@
 {
   "ticker": "GLW",
-  "generated_at": "2026-06-14T16:14:38.224948",
+  "generated_at": "2026-06-15T17:52:01.444101",
   "score": {
-    "final_score": 61.65,
+    "final_score": 62.65,
     "rating": "Hold",
-    "confidence": 51.09,
+    "confidence": 49.38,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 73.0,
       "momentum": 65.0,
       "volume": 0,
       "fundamental": 81.0,
       "risk": 85.0,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 73.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -25,17 +26,17 @@
       ],
       "support": 124.58000183105469,
       "resistance": 208.27999877929688,
-      "risk_reward": 0.53
+      "risk_reward": 0.34
     },
     "momentum": {
       "score": 65.0,
       "returns": {
-        "1m": -0.1309154327554657,
-        "3m": 0.3899833105674846,
-        "6m": 0.9088070730877007,
-        "12m": 2.590860193642349
+        "1m": -0.09978428272170636,
+        "3m": 0.4198933985866564,
+        "6m": 0.9573498885200322,
+        "12m": 2.7240549721003093
       },
-      "acceleration": -0.0644,
+      "acceleration": -0.0588,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -45,10 +46,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 12862775.0,
-      "relative_volume": 0.7225734726759973,
+      "average_volume": 12253206.2,
+      "relative_volume": 0.41051492302479986,
       "accumulation_days": 1,
-      "distribution_days": 5,
+      "distribution_days": 4,
       "evidence": []
     },
     "fundamental": {
@@ -62,30 +63,29 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.029461388264178226,
-        "annualized_volatility": 0.4676850397543949,
-        "maximum_drawdown": -0.2756765916841748,
-        "sharpe_ratio": 1.940020480817366,
-        "sortino_ratio": 2.758963046943022,
-        "calmar_ratio": 4.430995306296874,
-        "beta": 1.4525896362924142,
-        "alpha": 0.6400603261543657
+        "volatility": 0.029480662689683714,
+        "annualized_volatility": 0.4679910117737019,
+        "maximum_drawdown": -0.27567661150453626,
+        "sharpe_ratio": 1.9709383474772681,
+        "sortino_ratio": 2.798295562148054,
+        "calmar_ratio": 4.551757981014873,
+        "beta": 1.4539510422988537,
+        "alpha": 0.6469070655077335
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "insider buying",
         "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "GLW",
@@ -94,7 +94,7 @@
     "sector": "Technology",
     "industry": "Electronic Components",
     "exchange": "NYQ",
-    "market_cap": 154226294784.0,
+    "market_cap": 161257701376.0,
     "revenue_growth": 0.2,
     "eps_growth": 1.389,
     "fcf_growth": null,
@@ -111,14 +111,14 @@
     "cash_position": 1755000064.0,
     "total_debt": 9923999744.0,
     "interest_coverage": null,
-    "forward_pe": 42.800056,
-    "trailing_pe": 86.15385,
+    "forward_pe": 44.751377,
+    "trailing_pe": 90.08173,
     "peg": 1.4,
-    "price_to_book": 13.76027,
-    "price_to_sales": 9.449561,
+    "price_to_book": 14.387622,
+    "price_to_sales": 9.880381,
     "enterprise_to_ebitda": 41.703,
     "enterprise_to_revenue": 9.983,
-    "fcf_yield": 0.003968194923291973,
+    "fcf_yield": 0.0037951675782170366,
     "institutional_ownership": 0.73797995,
     "insider_ownership": 0.081750005,
     "short_interest": 21390269.0,
@@ -138,11 +138,11 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 43.1999221897982,
+    "rsi": 46.10705921943621,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7225734726759973,
+    "relative_volume": 0.41051492302479986,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -191,7 +191,7 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": true,
     "major_news": false,
@@ -238,12 +238,11 @@
         "last_surprise_pct": 0.0121,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.49,
+      "analyst_upside_pct": 5.67,
       "eps_growth_implied": 101.29
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
@@ -268,54 +267,54 @@
     "available": true,
     "items": [
       {
-        "headline": "Corning Is Riding High on the AI Boom\u2014and Planning Ahead in Case It Goes Bust",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-12T16:00:00Z",
-        "summary": "CEO Wendell Weeks remembers the dot-com crash and other hard times, and those lessons have taught him to hedge even the most optimistic data-center bets.",
+        "headline": "Corning, IBD Stock Of The Day, Boosted By AI Data Center Play",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-15T17:12:11Z",
+        "summary": "Corning stock has gained over 100% in 2026 as Wall Street focuses on the firm's booming optical communications business for AI data centers.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Is Corning Incorporated (GLW) A Good Stock To Buy Now?",
+        "headline": "1 Industrials Stock on Our Watchlist and 2 We Brush Off",
+        "source": "StockStory",
+        "published": "2026-06-15T13:40:07Z",
+        "summary": "Whether you see them or not, industrials businesses play a crucial part in our daily activities. They are also bound to benefit from a friendlier regulatory environment with the Trump administration, and this excitement has led to a six-month gain of 17.8% for the sector - higher than the S&P 500\u2019s 8.4% return.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Corning Lands Multibillion-Dollar Amazon AI Deal. Why Fiber Optics Are Suddenly in Spotlight",
+        "source": "GuruFocus.com",
+        "published": "2026-06-15T12:41:57Z",
+        "summary": "AI Needs More Than Chips. Amazon's Corning Deal Shows What Comes Next",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Jim Cramer Recommends Corning Over Applied Optoelectronics",
         "source": "Insider Monkey",
-        "published": "2026-06-12T13:42:01Z",
-        "summary": "Is GLW a good stock to buy? We came across a bullish thesis on Corning Incorporated on X.com by @MoneyShow. In this article, we will summarize the bulls\u2019 thesis on GLW. Corning Incorporated\u2019s share was trading at $176.55 as of June 11th. GLW\u2019s trailing and forward P/E were 80.85 and 53.19 respectively according to Yahoo Finance. Corning [\u2026]",
+        "published": "2026-06-15T08:28:53Z",
+        "summary": "Applied Optoelectronics, Inc. (NASDAQ:AAOI) was among the stocks Jim Cramer highlighted during Mad Money, as he noted the rotation into defensive sectors. A caller asked for Cramer\u2019s thoughts on the company and expressed interest in starting a position in the stock. He replied: No, no. I want you to, if you\u2019re going to go that [\u2026]",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Corning (GLW) Stock Valuation Check After Strong Year-To-Date Rally And Recent Pullback",
-        "source": "Simply Wall St.",
-        "published": "2026-06-12T02:13:15Z",
-        "summary": "Corning stock snapshot after recent performance moves Corning (GLW) has drawn fresh attention after a sharp swing in recent performance, with the stock up about 95% year to date but down around 11% over the past month. See our latest analysis for Corning. That recent pullback sits against a strong backdrop, with Corning\u2019s share price return up sharply year to date while the 1 year and 3 year total shareholder returns are very large, suggesting momentum has been strong over a longer stretch...",
+        "headline": "Corning\u2019s Amazon Deal Validates the AI Optics Boom. What That Means for GLW Stock.",
+        "source": "Barchart",
+        "published": "2026-06-14T15:00:02Z",
+        "summary": "Corning\u2019s latest Amazon agreement strengthens the case that fiber optics demand is becoming a major AI infrastructure growth driver.",
         "bullish_score": 1,
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "2 Reasons to Like GLW (and 1 Not So Much)",
-        "source": "StockStory",
-        "published": "2026-06-11T16:01:37Z",
-        "summary": "Corning has been on fire lately. In the past six months alone, the company\u2019s stock price has rocketed 71.3%, reaching $164.36 per share. This performance may have investors wondering how to approach the situation.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Photonics Is the New Hot Cake of AI Infrastructure Space: 5 Picks",
-        "source": "Zacks",
-        "published": "2026-06-11T12:01:00Z",
-        "summary": "Photonics is powering AI infrastructure as data-center bandwidth surges, putting GLW, LITE, COHR, MTSI and MRVL in focus.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -334,13 +333,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-15",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: GLW\nRating: Hold | Score: 61.65/100 | Confidence: 51.09/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 124.58000183105469 | Resistance: 208.27999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 42.800056\nNews/Catalyst: Corning Is Riding High on the AI Boom\u2014and Planning Ahead in Case It Goes Bust\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: GLW\nRating: Hold | Score: 62.65/100 | Confidence: 49.38/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 124.58000183105469 | Resistance: 208.27999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 44.751377\nNews/Catalyst: Corning, IBD Stock Of The Day, Boosted By AI Data Center Play\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

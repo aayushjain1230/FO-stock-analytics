@@ -1,39 +1,40 @@
 {
   "ticker": "APD",
-  "generated_at": "2026-06-14T16:13:43.754880",
+  "generated_at": "2026-06-15T17:51:04.007445",
   "score": {
-    "final_score": 43.0,
-    "rating": "Drop",
-    "confidence": 30.81,
+    "final_score": 48.25,
+    "rating": "Hold",
+    "confidence": 36.62,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 32.0,
+      "technical": 50.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 65.0,
       "risk": 100,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
-      "score": 32.0,
+      "score": 50.0,
       "evidence": [
         "Price above SMA200",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 276.510009765625,
       "resistance": 306.20001220703125,
-      "risk_reward": 4.81
+      "risk_reward": 4.14
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.08027438311538815,
-        "3m": -0.015953537593098255,
-        "6m": 0.2059238186029022,
-        "12m": 0.024681409755240136
+        "1m": -0.0586253605179653,
+        "3m": -0.01763755638314013,
+        "6m": 0.17397687361460012,
+        "12m": 0.023239619765192288
       },
-      "acceleration": -0.1189,
+      "acceleration": -0.1046,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -41,10 +42,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 1176315.0,
-      "relative_volume": 1.0537143537232798,
+      "average_volume": 1136857.35,
+      "relative_volume": 0.40079522729918576,
       "accumulation_days": 4,
-      "distribution_days": 7,
+      "distribution_days": 6,
       "evidence": []
     },
     "fundamental": {
@@ -55,25 +56,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016614361948665668,
-        "annualized_volatility": 0.26374481944910305,
-        "maximum_drawdown": -0.30429909078319395,
-        "sharpe_ratio": 0.2043807470531701,
-        "sortino_ratio": 0.3066261691515672,
-        "calmar_ratio": 0.06440781241515184,
-        "beta": 0.570428253849808,
-        "alpha": -0.051047263433542114
+        "volatility": 0.01654975955179498,
+        "annualized_volatility": 0.2627192881917918,
+        "maximum_drawdown": -0.3042990907831933,
+        "sharpe_ratio": 0.2928653600598593,
+        "sortino_ratio": 0.4404286056927521,
+        "calmar_ratio": 0.14342518942375407,
+        "beta": 0.5692705928880271,
+        "alpha": -0.03091607364000984
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; analyst revision"
+    "explanation": "Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive"
   },
   "fundamentals": {
     "ticker": "APD",
@@ -82,7 +84,7 @@
     "sector": "Basic Materials",
     "industry": "Specialty Chemicals",
     "exchange": "NYQ",
-    "market_cap": 62711332864.0,
+    "market_cap": 62834921472.0,
     "revenue_growth": 0.088,
     "eps_growth": null,
     "fcf_growth": null,
@@ -99,14 +101,14 @@
     "cash_position": 954200000.0,
     "total_debt": 18442199040.0,
     "interest_coverage": null,
-    "forward_pe": 19.784243,
-    "trailing_pe": 29.675447,
+    "forward_pe": 19.823233,
+    "trailing_pe": 29.73393,
     "peg": 2.11,
-    "price_to_book": 4.0071144,
-    "price_to_sales": 5.0314374,
+    "price_to_book": 4.0150113,
+    "price_to_sales": 5.041353,
     "enterprise_to_ebitda": 21.327,
     "enterprise_to_revenue": 6.635,
-    "fcf_yield": -0.05611804462252547,
+    "fcf_yield": -0.0560076672900469,
     "institutional_ownership": 0.93412,
     "insider_ownership": 0.0188,
     "short_interest": 3125640.0,
@@ -126,14 +128,14 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 39.98980413827456,
-    "macd_cross": false,
+    "rsi": 40.80504863611587,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0537143537232798,
+    "relative_volume": 0.40079522729918576,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 276.510009765625,
     "resistance": 306.20001220703125
   },
@@ -182,10 +184,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.93412,
     "detail": {
       "earnings": {
@@ -226,11 +228,12 @@
         "last_surprise_pct": 0.0454,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 16.42,
+      "analyst_upside_pct": 16.19,
       "eps_growth_implied": 50.0
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -252,6 +255,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Did a US$70 Million Missouri Expansion Just Shift Air Products and Chemicals' (APD) Investment Narrative?",
+        "source": "Simply Wall St.",
+        "published": "2026-06-15T02:07:10Z",
+        "summary": "Earlier this month, Air Products hosted a ribbon-cutting ceremony for a US$70.00 million expansion of its Missouri Manufacturing and Logistics Center near St. Louis, adding more than 70 new hires to support rising demand in biogas, hydrogen recovery, aerospace nitrogen, and cleaner marine fuels. This marks Air Products Membrane Solutions\u2019 largest single-site investment to date, underscoring how growing applications in cleaner fuels and industrial gases are reshaping the company\u2019s...",
+        "bullish_score": 0,
+        "bearish_score": 2,
+        "importance_score": 60,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
       {
         "headline": "DOW vs. APD: Which Stock Is the Better Value Option?",
         "source": "Zacks",
@@ -291,16 +304,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Air Products and Chemicals (APD) Rallied Amid Improved Demand",
-        "source": "Insider Monkey",
-        "published": "2026-06-10T13:18:16Z",
-        "summary": "The London Company, an investment management company, released its first-quarter 2026 investor letter for its \u201cThe London Company Income Equity Strategy\u201d. A copy of the letter is available to download here. In early 2026, US equities declined, with the Russell 3000 falling 4% and the S&P posting losses. The year began positively on a broad rally, [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -322,10 +325,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APD\nRating: Drop | Score: 43.0/100 | Confidence: 30.81/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 276.510009765625 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.784243\nNews/Catalyst: DOW vs. APD: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APD\nRating: Hold | Score: 48.25/100 | Confidence: 36.62/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 276.510009765625 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.823233\nNews/Catalyst: Did a US$70 Million Missouri Expansion Just Shift Air Products and Chemicals' (APD) Investment Narrative?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,48 +1,49 @@
 {
   "ticker": "COST",
-  "generated_at": "2026-06-14T16:14:22.771912",
+  "generated_at": "2026-06-15T17:51:44.544780",
   "score": {
-    "final_score": 40.65,
+    "final_score": 44.4,
     "rating": "Drop",
-    "confidence": 33.53,
+    "confidence": 34.35,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 32.0,
+      "technical": 50.0,
       "momentum": 15.0,
       "volume": 0,
       "fundamental": 71.0,
       "risk": 100,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 32.0,
+      "score": 50.0,
       "evidence": [
         "Price above SMA200",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 946.1099853515625,
       "resistance": 1094.3199462890625,
-      "risk_reward": 3.09
+      "risk_reward": 2.91
     },
     "momentum": {
       "score": 15.0,
       "returns": {
-        "1m": -0.04910557035922647,
-        "3m": -0.024448517890884647,
-        "6m": 0.12661043375296388,
-        "12m": -0.008928974428114245
+        "1m": -0.05492437209258705,
+        "3m": -0.016223834834761752,
+        "6m": 0.11572246709509693,
+        "12m": -0.013075125302697499
       },
-      "acceleration": -0.0878,
+      "acceleration": -0.0741,
       "evidence": [
         "6m return is positive"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 2529535.0,
-      "relative_volume": 0.6868060730529524,
-      "accumulation_days": 4,
+      "average_volume": 2474389.55,
+      "relative_volume": 0.34921380911910177,
+      "accumulation_days": 3,
       "distribution_days": 8,
       "evidence": []
     },
@@ -57,27 +58,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.013081444635950828,
-        "annualized_volatility": 0.20766149577711457,
-        "maximum_drawdown": -0.20742507313508562,
-        "sharpe_ratio": 0.4928416653149664,
-        "sortino_ratio": 0.6993682153665671,
-        "calmar_ratio": 0.4055193574876684,
-        "beta": 0.43555472262735334,
-        "alpha": 0.022207644704843946
+        "volatility": 0.01307038690064212,
+        "annualized_volatility": 0.20748595967097205,
+        "maximum_drawdown": -0.20742489219927707,
+        "sharpe_ratio": 0.4357305048018803,
+        "sortino_ratio": 0.6178026034266371,
+        "calmar_ratio": 0.3437127050310993,
+        "beta": 0.4321601970696285,
+        "alpha": 0.00852827495635817
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; revenue growth is strong; eps growth is strong"
+    "explanation": "Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; revenue growth is strong"
   },
   "fundamentals": {
     "ticker": "COST",
@@ -86,7 +86,7 @@
     "sector": "Consumer Defensive",
     "industry": "Discount Stores",
     "exchange": "NMS",
-    "market_cap": 435651411968.0,
+    "market_cap": 436303396864.0,
     "revenue_growth": 0.215,
     "eps_growth": 0.455,
     "fcf_growth": null,
@@ -103,14 +103,14 @@
     "cash_position": 11125999616.0,
     "total_debt": 10227999744.0,
     "interest_coverage": null,
-    "forward_pe": 43.4175,
-    "trailing_pe": 49.513607,
+    "forward_pe": 43.482475,
+    "trailing_pe": 49.587708,
     "peg": 4.79,
-    "price_to_book": 26.352003,
-    "price_to_sales": 1.4838921,
+    "price_to_book": 26.391441,
+    "price_to_sales": 1.4861128,
     "enterprise_to_ebitda": 31.467,
     "enterprise_to_revenue": 1.478,
-    "fcf_yield": 0.015963164532359696,
+    "fcf_yield": 0.015939310163490993,
     "institutional_ownership": 0.73794,
     "insider_ownership": 0.00161,
     "short_interest": 7878688.0,
@@ -130,14 +130,14 @@
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 34.55192778837517,
-    "macd_cross": false,
+    "rsi": 42.447768573399536,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6868060730529524,
+    "relative_volume": 0.34921380911910177,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 946.1099853515625,
     "resistance": 1094.3199462890625
   },
@@ -186,9 +186,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.73794,
     "detail": {
@@ -230,13 +230,12 @@
         "last_surprise_pct": 0.0014,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.18,
+      "analyst_upside_pct": 10.01,
       "eps_growth_implied": 14.04
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -259,54 +258,54 @@
     "available": true,
     "items": [
       {
-        "headline": "JPMorgan Expects Kroger (KR) to Reiterate Guidance, Lowers Price Target",
-        "source": "Insider Monkey",
-        "published": "2026-06-14T03:40:17Z",
-        "summary": "The Kroger Co. (NYSE:KR) is included among the 10 Best Value Dividend Stocks to Buy Now According to Warren Buffett. On June 11, JPMorgan lowered its price recommendation on The Kroger Co. (NYSE:KR) to $70 from $72 while keeping a Neutral rating on the stock. The change comes ahead of the company\u2019s fiscal first-quarter earnings [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Costco Wholesale (COST) Stock Valuation After Strong May Sales And Growing Digital And Gas Volumes",
+        "headline": "Costco Leans On Gasoline, E Commerce And Wellness To Deepen Member Value",
         "source": "Simply Wall St.",
-        "published": "2026-06-14T03:09:15Z",
-        "summary": "Costco Wholesale (COST) just reported May net sales of US$24.01b, an increase of 14.5% year over year, alongside strong gains in gas and digital channels. However, the stock has recently faced volatility driven by valuation concerns. See our latest analysis for Costco Wholesale. Despite strong May sales and record gas volumes, Costco's recent pullback, with a 30 day share price return down 6.35%, reflects investors reassessing valuation. This comes even as the year to date share price return...",
-        "bullish_score": 2,
+        "published": "2026-06-15T17:13:12Z",
+        "summary": "Costco Wholesale (NasdaqGS:COST) is reporting record gasoline sales volumes, which are closely tied to member loyalty and in-store spending. Amid elevated fuel prices, Costco is seen outperforming Walmart in market performance and operations, as members seek value on gas and bulk essentials. The company is expanding its U.S. footprint, including a first warehouse in Pensacola, and has plans to add 30 or more locations annually. E-commerce and digital sales are growing, supporting Costco's...",
+        "bullish_score": 1,
         "bearish_score": 0,
-        "importance_score": 60,
+        "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "Costco vs. Walmart vs. Amazon: Which Stock Is the Smartest Buy in 2026?",
-        "source": "Motley Fool",
-        "published": "2026-06-13T17:35:00Z",
-        "summary": "If you can only pick one, here's how you decide between Costco, Walmart, and Amazon.",
+        "headline": "Can Costco Stock Break $1,100 by 2027?",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T16:41:56Z",
+        "summary": "Costco (NASDAQ:COST) is the rare retailer whose stock trades like a high-growth software name. The membership model prints cash, comparable sales keep accelerating, and the digital business is finally getting credit. Yet shares sit at $982.35, up 14.24% year to date but well below their recent peak. Can COST punch through to $1,100 by June ... Can Costco Stock Break $1,100 by 2027?",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Here is What to Know Beyond Why Costco Wholesale Corporation (COST) is a Trending Stock",
+        "source": "Zacks",
+        "published": "2026-06-15T13:00:05Z",
+        "summary": "Costco (COST) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Aldi expands to key area Costco can\u2019t get into",
-        "source": "TheStreet",
-        "published": "2026-06-13T15:33:00Z",
-        "summary": "If checking out at the supermarket makes you sort of queasy these days, you're not alone. A lot of people are feeling the sting of higher grocery prices, which explains why retailers like Aldi and Costco are having a moment. In May, grocery prices rose 2.7% on an annual basis, according to ...",
+        "headline": "Costco\u2019s dominance shows why its Pensacola debut matters",
+        "source": "Pensacola News Journal",
+        "published": "2026-06-15T09:04:36Z",
+        "summary": "Costco\u2019s scale, prices and loyal following help explain why it leads the warehouse club market as it enters Pensacola.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "If Gas Prices Stay High, Costco Stock Could Be a Better Buy Than Walmart",
-        "source": "Motley Fool",
-        "published": "2026-06-13T07:45:00Z",
-        "summary": "Costco members tend to spend more when they buy gas there.",
-        "bullish_score": 0,
+        "headline": "The Zacks Analyst Blog Highlights Costco, Lam Research, KLA, Blue Ridge and AXIL",
+        "source": "Zacks",
+        "published": "2026-06-15T08:27:00Z",
+        "summary": "COST, LRCX and KLAC are highlighted for growth drivers ranging from membership strength to AI-fueled semiconductor demand and cash generation.",
+        "bullish_score": 1,
         "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -328,10 +327,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: COST\nRating: Drop | Score: 40.65/100 | Confidence: 33.53/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 946.1099853515625 | Resistance: 1094.3199462890625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 43.4175\nNews/Catalyst: JPMorgan Expects Kroger (KR) to Reiterate Guidance, Lowers Price Target\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COST\nRating: Drop | Score: 44.4/100 | Confidence: 34.35/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 946.1099853515625 | Resistance: 1094.3199462890625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 43.482475\nNews/Catalyst: Costco Leans On Gasoline, E Commerce And Wellness To Deepen Member Value\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

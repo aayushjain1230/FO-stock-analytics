@@ -1,52 +1,54 @@
 {
   "ticker": "AXP",
-  "generated_at": "2026-06-14T16:13:50.738679",
+  "generated_at": "2026-06-15T17:51:11.134565",
   "score": {
-    "final_score": 61.9,
-    "rating": "Hold",
-    "confidence": 57.96,
+    "final_score": 68.65,
+    "rating": "Watch",
+    "confidence": 62.71,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
-      "momentum": 55.0,
+      "technical": 65.0,
+      "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
       "catalyst": 65.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 292.2699890136719,
-      "resistance": 332.8999938964844,
-      "risk_reward": 0.22
+      "resistance": 337.5050048828125,
+      "risk_reward": 0.0
     },
     "momentum": {
-      "score": 55.0,
+      "score": 70.0,
       "returns": {
-        "1m": 0.05112889712477697,
-        "3m": 0.08837466969405239,
-        "6m": -0.1288067360183479,
-        "12m": 0.09946932961043031
+        "1m": 0.0790837252229446,
+        "3m": 0.1353855769404506,
+        "6m": -0.11838681336937262,
+        "12m": 0.1444772434104693
       },
-      "acceleration": 0.1528,
+      "acceleration": 0.1946,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
         "12m return is positive",
-        "Momentum is accelerating"
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2838240.0,
-      "relative_volume": 0.7827738316703309,
+      "average_volume": 2784507.3,
+      "relative_volume": 0.5656102966582275,
       "accumulation_days": 3,
       "distribution_days": 1,
       "evidence": [
@@ -64,14 +66,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01858041277956892,
-        "annualized_volatility": 0.2949549088299945,
-        "maximum_drawdown": -0.2875741974221576,
-        "sharpe_ratio": 0.8366182454619471,
-        "sortino_ratio": 1.1013140352960742,
-        "calmar_ratio": 0.7838213063071302,
-        "beta": 1.2437458510083714,
-        "alpha": 0.017931059455748632
+        "volatility": 0.0186517908508484,
+        "annualized_volatility": 0.29608800058400814,
+        "maximum_drawdown": -0.28757426506367234,
+        "sharpe_ratio": 0.8519561652736897,
+        "sortino_ratio": 1.1258136091402586,
+        "calmar_ratio": 0.805854724485634,
+        "beta": 1.2474485911031776,
+        "alpha": 0.0159048361420163
       },
       "evidence": []
     },
@@ -79,12 +81,12 @@
       "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "insider buying",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "AXP",
@@ -93,7 +95,7 @@
     "sector": "Financial Services",
     "industry": "Credit Services",
     "exchange": "NYQ",
-    "market_cap": 222056333312.0,
+    "market_cap": 230216941568.0,
     "revenue_growth": 0.116,
     "eps_growth": 0.176,
     "fcf_growth": null,
@@ -110,11 +112,11 @@
     "cash_position": 53866999808.0,
     "total_debt": 60458999808.0,
     "interest_coverage": null,
-    "forward_pe": 16.153986,
-    "trailing_pe": 20.327295,
+    "forward_pe": 16.738909,
+    "trailing_pe": 21.074327,
     "peg": 1.55,
-    "price_to_book": 6.528909,
-    "price_to_sales": 3.2270002,
+    "price_to_book": 6.768848,
+    "price_to_sales": 3.345593,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 3.323,
     "fcf_yield": null,
@@ -133,20 +135,20 @@
     "payout_ratio": 0.21290001,
     "next_earnings_date": "1776947400",
     "eps_current_year": 16.01,
-    "eps_forward": 20.14611,
+    "eps_forward": 20.15663,
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 61.123782589570844,
+    "rsi": 68.4966536245341,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7827738316703309,
+    "relative_volume": 0.5656102966582275,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 292.2699890136719,
-    "resistance": 332.8999938964844
+    "resistance": 337.5050048828125
   },
   "earnings": {
     "next_earnings_date": "1776947400",
@@ -190,13 +192,13 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 0,
-    "bearish_news_score": 1,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.65314,
     "detail": {
       "earnings": {
@@ -237,13 +239,13 @@
         "last_surprise_pct": 0.0718,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 11.22,
-      "eps_growth_implied": 25.83
+      "analyst_upside_pct": 7.27,
+      "eps_growth_implied": 25.9
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -266,50 +268,50 @@
     "available": true,
     "items": [
       {
-        "headline": "American Express Targets Travelers And Sports Fans While Shares Trade Below Estimates",
-        "source": "Simply Wall St.",
-        "published": "2026-06-14T14:11:52Z",
-        "summary": "American Express (NYSE:AXP) introduced new travel benefits and refreshed card designs for Delta SkyMiles Card Members. The company launched rideshare credits and additional baggage allowance on certain Delta SkyMiles products with no fee increase. American Express also announced a global partnership with Fanatics focused on payments and sports related engagement. For American Express, travel and experiences remain central to the value proposition, particularly for premium card members who...",
+        "headline": "American Express buys TheFork from Tripadvisor for $700M",
+        "source": "Quartz",
+        "published": "2026-06-15T16:21:40Z",
+        "summary": "The all-cash deal will expand American Express's dining network to 75,000 bookable venues across Europe",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Is American Express (AXP) One of the Best Value Dividend Stocks to Buy Now According to Warren Buffett?",
-        "source": "Insider Monkey",
-        "published": "2026-06-14T03:48:10Z",
-        "summary": "American Express Company (NYSE:AXP) is included among the 10 Best Value Dividend Stocks to Buy Now According to Warren Buffett. On June 9, BofA analyst Mihir Bhatia reiterated a Buy rating on American Express Company (NYSE:AXP). He also maintained a $387 price target on the stock. The analyst said management\u2019s update at a recent investor [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "\u2018Citibank and Amex Have Screwed an 85-Year-Old Widow\u2019: Dave Ramsey on $45,000 in Credit Card Debt With No Assets",
+        "headline": "The 15% Yield ETF That Steals Warren Buffett\u2019s Playbook",
         "source": "24/7 Wall St.",
-        "published": "2026-06-12T16:01:09Z",
-        "summary": "On a recent episode of The Ramsey Show, a caller named Michelle from New York described a situation many adult children quietly dread. After her father passed away in July, she discovered her 85-year-old widowed mother had accumulated $45,000 across 5 credit cards, including American Express and two Citibank cards. Her mother lives on Social ... \u2018Citibank and Amex Have Screwed an 85-Year-Old Widow\u2019: Dave Ramsey on $45,000 in Credit Card Debt With No Assets",
+        "published": "2026-06-15T15:30:24Z",
+        "summary": "Buffett famously refuses to pay a dividend on Berkshire Hathaway because he can compound your cash better than you can. The VistaShares Target 15 Berkshire Select Income ETF (NYSEARCA:OMAH) disagrees, politely. OMAH holds a Berkshire-style basket of value names and overlays an options strategy designed to push out a 15% annual distribution, paid monthly. You ... The 15% Yield ETF That Steals Warren Buffett\u2019s Playbook",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "American Express Company (AXP) and Delta Refresh SkyMiles Card Benefits",
-        "source": "Insider Monkey",
-        "published": "2026-06-12T15:37:44Z",
-        "summary": "American Express Company (NYSE:AXP) is one of the 7 Best Compounder Stocks to Buy Now. On June 4, 2026, American Express Company (NYSE:AXP) and Delta Air Lines introduced new travel benefits for eligible Delta SkyMiles Card Members, refreshed card designs across the full portfolio, and welcome offers for new Card Members. Jon Gantman, Executive Vice [\u2026]",
+        "headline": "American Express Forks-Over $700 Million For This Reservation Platform",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-15T15:26:53Z",
+        "summary": "Dow Jones financial leader American Express took another step to grow its international business, agreeing to acquire Tripadvisor's European restaurant reservation platform, TheFork, for $700 million.  The all-cash deal adds to American Express' reservations portfolio, which includes its previous acquisitions of Resy and Tock.  Combined, the platforms are expected to give American Express a network of 75,000 venues.",
         "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "South Africa\u2019s Kwik Payments selects ACI orchestration platform",
-        "source": "Electronic Payments",
-        "published": "2026-06-12T11:51:13Z",
-        "summary": "ACI Worldwide said the partnership is a \u201cpivotal milestone\u201d in its expansion across Africa.",
+        "headline": "Tripadvisor to divest restaurant booking platform TheFork for $700m",
+        "source": "Verdict Food Service",
+        "published": "2026-06-15T15:06:15Z",
+        "summary": "The agreement follows Tripadvisor\u2019s move in February 2026 to explore options for TheFork.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "American Express Shares Edge Higher on Planned $700 Million TheFork Acquisition (AXP)",
+        "source": "InvestorsHub",
+        "published": "2026-06-15T13:41:10Z",
+        "summary": "American Express Co. (NYSE:AXP) shares rose 1.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -333,19 +335,19 @@
   },
   "why_now": {
     "send_alert": true,
-    "reason": "Relative strength acceleration",
-    "evidence": "Relative strength moved from lagging to leading",
-    "date_of_change": "2026-06-14",
-    "strength": 80,
-    "invalidates": "Relative strength falls back below its signal line",
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-15",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
     "triggers": [
       {
-        "reason": "Relative strength acceleration",
-        "evidence": "Relative strength moved from lagging to leading",
-        "strength": 80,
-        "invalidates": "Relative strength falls back below its signal line"
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
       }
     ]
   },
-  "report": "Ticker: AXP\nRating: Hold | Score: 61.9/100 | Confidence: 57.96/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 292.2699890136719 | Resistance: 332.8999938964844\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.153986\nNews/Catalyst: American Express Targets Travelers And Sports Fans While Shares Trade Below Estimates\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: AXP\nRating: Watch | Score: 68.65/100 | Confidence: 62.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 292.2699890136719 | Resistance: 337.5050048828125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.738909\nNews/Catalyst: American Express buys TheFork from Tripadvisor for $700M\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

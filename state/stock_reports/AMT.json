@@ -1,55 +1,51 @@
 {
   "ticker": "AMT",
-  "generated_at": "2026-06-14T16:13:40.698806",
+  "generated_at": "2026-06-15T17:51:00.866891",
   "score": {
-    "final_score": 62.2,
+    "final_score": 54.95,
     "rating": "Hold",
-    "confidence": 59.33,
+    "confidence": 52.81,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 75.0,
-      "momentum": 50.0,
+      "technical": 50.0,
+      "momentum": 40.0,
       "volume": 25.0,
       "fundamental": 68.0,
-      "risk": 85.0,
-      "catalyst": 85.0
+      "risk": 100,
+      "catalyst": 70.0
     },
     "technical": {
-      "score": 75.0,
+      "score": 50.0,
       "evidence": [
-        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
-        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 167.27000427246094,
       "resistance": 194.1199951171875,
-      "risk_reward": 0.35
+      "risk_reward": 0.53
     },
     "momentum": {
-      "score": 50.0,
+      "score": 40.0,
       "returns": {
-        "1m": 0.08682783966902807,
-        "3m": 0.03494830290210915,
-        "6m": 0.06907757474810894,
-        "12m": -0.08592651199756907
+        "1m": 0.09433563707311965,
+        "3m": 0.02023984855216976,
+        "6m": 0.04717506387299264,
+        "12m": -0.11129845284586526
       },
-      "acceleration": 0.0004,
+      "acceleration": -0.0033,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
-        "6m return is positive",
-        "Momentum is accelerating"
+        "6m return is positive"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3219850.0,
-      "relative_volume": 0.9272792210817274,
-      "accumulation_days": 5,
+      "average_volume": 3075862.1,
+      "relative_volume": 0.5699676848321646,
+      "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -64,32 +60,29 @@
       ]
     },
     "risk": {
-      "score": 85.0,
+      "score": 100,
       "risk_metrics": {
-        "volatility": 0.016253833066703884,
-        "annualized_volatility": 0.2580216008763408,
-        "maximum_drawdown": -0.27542156244688376,
-        "sharpe_ratio": 0.18417721901921996,
-        "sortino_ratio": 0.25939055871106015,
-        "calmar_ratio": 0.052121512662540455,
-        "beta": -0.02960513643284713,
-        "alpha": 0.052968673771961336
+        "volatility": 0.016238344884320233,
+        "annualized_volatility": 0.2577757336032555,
+        "maximum_drawdown": -0.2754215624468842,
+        "sharpe_ratio": 0.1884797244179219,
+        "sortino_ratio": 0.265782045076181,
+        "calmar_ratio": 0.05628128656633708,
+        "beta": -0.03040206836987975,
+        "alpha": 0.05434565914146455
       },
-      "evidence": [
-        "Short-term volatility is rising"
-      ]
+      "evidence": []
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 70.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
+    "explanation": "Price above SMA50; Price above SMA200; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "AMT",
@@ -98,7 +91,7 @@
     "sector": "Real Estate",
     "industry": "REIT - Specialty",
     "exchange": "NYQ",
-    "market_cap": 87205855232.0,
+    "market_cap": 86113345536.0,
     "revenue_growth": 0.068,
     "eps_growth": 0.769,
     "fcf_growth": null,
@@ -115,14 +108,14 @@
     "cash_position": 1608800000.0,
     "total_debt": 45131198464.0,
     "interest_coverage": null,
-    "forward_pe": 27.103497,
-    "trailing_pe": 30.190323,
+    "forward_pe": 26.763945,
+    "trailing_pe": 29.8121,
     "peg": 1.96,
-    "price_to_book": 24.762533,
-    "price_to_sales": 8.060212,
+    "price_to_book": 24.452309,
+    "price_to_sales": 7.959234,
     "enterprise_to_ebitda": 19.652,
     "enterprise_to_revenue": 12.696,
-    "fcf_yield": 0.05291344958115576,
+    "fcf_yield": 0.05358475617546352,
     "institutional_ownership": 0.96656996,
     "insider_ownership": 0.00083,
     "short_interest": 9063793.0,
@@ -142,11 +135,11 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 54.813515268509065,
+    "rsi": 49.8187032526156,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9272792210817274,
+    "relative_volume": 0.5699676848321646,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -198,9 +191,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 1,
     "bearish_news_score": 1,
     "institutional_ownership": 0.96656996,
     "detail": {
@@ -242,14 +235,13 @@
         "last_surprise_pct": 0.17040001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 15.47,
+      "analyst_upside_pct": 16.93,
       "eps_growth_implied": 11.39
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -271,6 +263,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "AMT vs. PSA: Which Stock Is the Better Value Option?",
+        "source": "Zacks",
+        "published": "2026-06-15T15:40:06Z",
+        "summary": "AMT vs. PSA: Which Stock Is the Better Value Option?",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Bernstein Upgrades American Tower (AMT) on Long-Term 5G and Data Center Demand",
+        "source": "Insider Monkey",
+        "published": "2026-06-15T08:30:50Z",
+        "summary": "American Tower Corporation (NYSE:AMT) ranks among the best 5G stocks to buy right now. On May 19, Bernstein boosted American Tower Corporation (NYSE:AMT) to Outperform with a $207 price target based on long-term 5G/data center demand and diminishing rate sensitivity. The firm said that investor concerns about satellite competition, increased interest rates, and Dish Network [\u2026]",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Vornado Realty Acquires 49% Interest in Park Avenue Plaza for $1.1B",
         "source": "Zacks",
@@ -300,26 +312,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Dear AST SpaceMobile Stock Fans, Mark Your Calendars for June 17",
-        "source": "Barchart",
-        "published": "2026-06-11T15:58:49Z",
-        "summary": "After a volatile week for ASTS stock, investors may want to circle June 17 on their calendars as AST SpaceMobile gears up for a closely watched satellite launch.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "5 Reasons Why Equinix Stock Is a Solid Portfolio Pick Now",
-        "source": "Zacks",
-        "published": "2026-06-10T17:19:00Z",
-        "summary": "EQIX benefits from enterprise AI adoption, strong recurring revenue growth and expanding capacity, with higher 2026 guidance reinforcing its outlook.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -341,10 +333,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMT\nRating: Hold | Score: 62.2/100 | Confidence: 59.33/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 167.27000427246094 | Resistance: 194.1199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 27.103497\nNews/Catalyst: Vornado Realty Acquires 49% Interest in Park Avenue Plaza for $1.1B\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMT\nRating: Hold | Score: 54.95/100 | Confidence: 52.81/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 167.27000427246094 | Resistance: 194.1199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 26.763945\nNews/Catalyst: AMT vs. PSA: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

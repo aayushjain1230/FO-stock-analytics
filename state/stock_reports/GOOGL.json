@@ -1,22 +1,23 @@
 {
   "ticker": "GOOGL",
-  "generated_at": "2026-06-14T16:14:38.980019",
+  "generated_at": "2026-06-15T17:52:02.639254",
   "score": {
-    "final_score": 60.9,
+    "final_score": 64.4,
     "rating": "Hold",
-    "confidence": 46.52,
+    "confidence": 51.71,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 47.0,
+      "technical": 57.0,
       "momentum": 75.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 50.0
+      "catalyst": 70.0
     },
     "technical": {
-      "score": 47.0,
+      "score": 57.0,
       "evidence": [
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -24,17 +25,17 @@
       ],
       "support": 273.5,
       "resistance": 402.6199951171875,
-      "risk_reward": 0.5
+      "risk_reward": 0.32
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": -0.10611787767430048,
-        "3m": 0.19060089514322276,
-        "6m": 0.1247249618546653,
-        "12m": 1.0338656227784782
+        "1m": -0.07283772092815388,
+        "3m": 0.21696881852031247,
+        "6m": 0.19104674915823905,
+        "12m": 1.1212020289289595
       },
-      "acceleration": 0.1282,
+      "acceleration": 0.1214,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 32473505.0,
-      "relative_volume": 0.76076173483583,
+      "average_volume": 32161448.05,
+      "relative_volume": 0.4374355588134036,
       "accumulation_days": 3,
       "distribution_days": 7,
       "evidence": []
@@ -62,26 +63,27 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019286815835430883,
-        "annualized_volatility": 0.3061687096971154,
-        "maximum_drawdown": -0.29805867569941435,
-        "sharpe_ratio": 1.349735357804531,
-        "sortino_ratio": 2.14531824139747,
-        "calmar_ratio": 1.4852314267175535,
-        "beta": 1.0933255393578003,
-        "alpha": 0.21208858016754595
+        "volatility": 0.01935488120758683,
+        "annualized_volatility": 0.3072492139828336,
+        "maximum_drawdown": -0.2980586978516083,
+        "sharpe_ratio": 1.3828365984997877,
+        "sortino_ratio": 2.205686940403059,
+        "calmar_ratio": 1.5401655635798555,
+        "beta": 1.0980272139095169,
+        "alpha": 0.21683657517233754
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 70.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "GOOGL",
@@ -89,7 +91,8 @@
     "company_name": "Alphabet Inc.",
     "sector": "Communication Services",
     "industry": "Internet Content & Information",
-    "market_cap": 4386274148352.0,
+    "exchange": "NMS",
+    "market_cap": 4532491780096.0,
     "revenue_growth": 0.218,
     "eps_growth": 0.82,
     "fcf_growth": null,
@@ -98,18 +101,22 @@
     "operating_margin": 0.36121,
     "net_margin": 0.37919,
     "roe": 0.38884997,
+    "roa": 0.14641,
     "roic": null,
     "debt_to_equity": 0.20026,
-    "cash_position": 126839996416.0,
-    "interest_coverage": null,
     "current_ratio": 1.922,
-    "forward_pe": 24.838732,
-    "trailing_pe": 27.477463,
+    "quick_ratio": 1.707,
+    "cash_position": 126839996416.0,
+    "total_debt": 95875997696.0,
+    "interest_coverage": null,
+    "forward_pe": 25.666737,
+    "trailing_pe": 28.39343,
     "peg": 1.42,
-    "price_to_book": 9.102596,
-    "price_to_sales": 10.3817625,
+    "price_to_book": 9.4060335,
+    "price_to_sales": 10.727841,
     "enterprise_to_ebitda": 26.823,
-    "fcf_yield": 0.006365710184004502,
+    "enterprise_to_revenue": 10.241,
+    "fcf_yield": 0.0061603531502507445,
     "institutional_ownership": 0.8075,
     "insider_ownership": 0.01175,
     "short_interest": 82913646.0,
@@ -121,19 +128,22 @@
     "target_low_price": 340.0,
     "recommendation": "strong_buy",
     "number_of_analysts": 53.0,
+    "dividend_yield": 0.24,
+    "payout_ratio": 0.0641,
     "next_earnings_date": "1777492800",
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "eps_current_year": 13.09,
+    "eps_forward": 14.48061,
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 33.9622752530485,
+    "rsi": 39.03758482484083,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.76076173483583,
-    "price_above_sma50": false,
+    "relative_volume": 0.4374355588134036,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 273.5,
     "resistance": 402.6199951171875
   },
@@ -181,10 +191,10 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.8075,
     "detail": {
@@ -226,11 +236,13 @@
         "last_surprise_pct": 0.9159,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 20.34
+      "analyst_upside_pct": 16.46,
+      "eps_growth_implied": 10.62
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -253,54 +265,54 @@
     "available": true,
     "items": [
       {
-        "headline": "This market is at 'a 10': Wall Street weighs record SpaceX IPO amid AI-driven stock market",
+        "headline": "Nvidia joins Wall Street's AI funding wave",
         "source": "Yahoo Finance",
-        "published": "2026-06-14T11:32:07Z",
-        "summary": "SpaceX's record IPO on Friday is a reassuring sign for Wall Street that the AI bull market has plenty of runway to go.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Bill Ackman Likes This Indirect AI Play Everyone\u2019s Ignoring",
-        "source": "Insider Monkey",
-        "published": "2026-06-14T13:49:46Z",
-        "summary": "We just covered the Top 10 Stock Picks of 10 Famous Billionaires. Brookfield (NYSE:BN) ranks #9 (see Top 5 Stock Picks of 5 Famous Billionaires). Number of Hedge Funds: 47 Top Pick Of: Bill Ackman \u2014 Pershing Square Capital Brookfield (NYSE:BN) has quietly become an indirect play on the AI infrastructure buildout, thanks to its exposure [\u2026]",
+        "published": "2026-06-15T16:32:31Z",
+        "summary": "Nvidia is the latest company to tap Wall Street for the AI boom it helped create.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "3 Cloud Computing Stocks to Load up on in June",
+        "headline": "Should You Buy The Dip In Adobe Stock?",
+        "source": "Trefis",
+        "published": "2026-06-15T17:20:48Z",
+        "summary": "The creative software giant is intentionally shifting its strategic focus to chase a large new audience, a pivot that is temporarily pressuring near-term growth metrics, forcing investors to weigh a long-term vision against near-term uncertainty.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "75% of Enterprise Customers Are Quietly Flocking to This Digital Monopoly: Here Is the 1 Unstoppable Stock I\u2019m Loading Up on This June",
         "source": "24/7 Wall St.",
-        "published": "2026-06-14T13:30:21Z",
-        "summary": "Hyperscaler cloud platforms are doing something rare in the AI era: turning eye-watering capital expenditures into accelerating top-line growth. With Q2 earnings reports landing in July, June is shaping up as a positioning window for the three mega caps that dominate enterprise cloud. Each just printed cloud growth that re-accelerated, each is sitting on contracted ... 3 Cloud Computing Stocks to Load up on in June",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "3 Under-the-Radar Ways to Play Goldman's $1 Trillion AI Spending 2027 Forecast",
-        "source": "Motley Fool",
-        "published": "2026-06-14T13:25:00Z",
-        "summary": "These three stocks are poised to be AI spending beneficiaries.",
+        "published": "2026-06-15T16:42:50Z",
+        "summary": "I keep hitting the buy button on Alphabet (NASDAQ:GOOGL), and June\u2019s volatility has only sharpened the urge. Every time the market panics that the Fed will hold rates higher for longer to fight creeping inflation, cyclical tech gets dragged down with it, and one of the cleanest compounders I own goes on sale. Macro-driven index ... 75% of Enterprise Customers Are Quietly Flocking to This Digital Monopoly: Here Is the 1 Unstoppable Stock I\u2019m Loading Up on This June",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Goldman Sachs resets Apple stock forecast after WWDC",
-        "source": "TheStreet",
-        "published": "2026-06-14T12:03:00Z",
-        "summary": "Apple has spent years trying to convince investors that its next major growth story will not depend only on a new iPhone. That effort has become more urgent as artificial intelligence reshapes the technology industry, with rivals including Google, Microsoft, OpenAI, and Meta moving faster with ...",
-        "bullish_score": 1,
+        "headline": "If You Put $500 a Month into This Tech ETF Since 2016, You Could Retire Tomorrow",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T16:23:13Z",
+        "summary": "Drop $500 into the VanEck Semiconductor ETF (NYSEARCA:SMH) starting in June, 2016, add another $500 every month, and the math pegs the account at $495,000 this week. Total contributions across those ten years come to $60,500. Everything else is what a single-sector ETF did to your money while you ignored it. The math holds up ... If You Put $500 a Month into This Tech ETF Since 2016, You Could Retire Tomorrow",
+        "bullish_score": 0,
         "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Down 53%, Can Zillow Make a Comeback?",
+        "source": "Motley Fool",
+        "published": "2026-06-15T16:20:00Z",
+        "summary": "The real estate platform is facing substantial headwinds as it diversifies and expands its revenue streams.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -317,13 +329,20 @@
     "assessment": "Already held; monitor risk contribution and thesis quality."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-15",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: GOOGL\nRating: Hold | Score: 60.9/100 | Confidence: 46.52/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 273.5 | Resistance: 402.6199951171875\nFundamental Outlook: Quality Compounder | Forward P/E: 24.838732\nNews/Catalyst: This market is at 'a 10': Wall Street weighs record SpaceX IPO amid AI-driven stock market\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: GOOGL\nRating: Hold | Score: 64.4/100 | Confidence: 51.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 273.5 | Resistance: 402.6199951171875\nFundamental Outlook: Quality Compounder | Forward P/E: 25.666737\nNews/Catalyst: Nvidia joins Wall Street's AI funding wave\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

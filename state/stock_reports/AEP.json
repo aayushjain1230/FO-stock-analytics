@@ -1,18 +1,18 @@
 {
   "ticker": "AEP",
-  "generated_at": "2026-06-14T16:13:32.099290",
+  "generated_at": "2026-06-15T17:50:51.797064",
   "score": {
-    "final_score": 50.95,
+    "final_score": 53.95,
     "rating": "Hold",
-    "confidence": 37.41,
+    "confidence": 44.94,
     "risk_level": "Controlled",
     "categories": {
       "technical": 48.0,
       "momentum": 45.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 73.0,
       "risk": 100,
-      "catalyst": 35.0
+      "catalyst": 20.0
     },
     "technical": {
       "score": 48.0,
@@ -24,17 +24,17 @@
       ],
       "support": 123.79000091552734,
       "resistance": 137.14999389648438,
-      "risk_reward": 1.46
+      "risk_reward": 1.25
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": 0.010003898474610029,
-        "3m": -0.025757690093742958,
-        "6m": 0.14924432574305113,
-        "12m": 0.30785225555108764
+        "1m": 0.008864691567205707,
+        "3m": -0.025849922539024406,
+        "6m": 0.1527700357159587,
+        "12m": 0.29924893120306395
       },
-      "acceleration": -0.1004,
+      "acceleration": -0.1022,
       "evidence": [
         "1m return is positive",
         "6m return is positive",
@@ -42,12 +42,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 4971325.0,
-      "relative_volume": 0.8359541973216396,
+      "score": 25.0,
+      "average_volume": 4566096.1,
+      "relative_volume": 0.24548804393319712,
       "accumulation_days": 5,
-      "distribution_days": 5,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 73.0,
@@ -59,22 +61,21 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01190611659682426,
-        "annualized_volatility": 0.18900374157441402,
-        "maximum_drawdown": -0.13101023761972697,
-        "sharpe_ratio": 1.3040141683974094,
-        "sortino_ratio": 1.9666833082165995,
-        "calmar_ratio": 1.9600089845708346,
-        "beta": 0.0030083636016549377,
-        "alpha": 0.24591005581487294
+        "volatility": 0.011917569563518993,
+        "annualized_volatility": 0.18918555178430302,
+        "maximum_drawdown": -0.13101023761972708,
+        "sharpe_ratio": 1.3204532838608167,
+        "sortino_ratio": 1.991447844115051,
+        "calmar_ratio": 1.991811326721905,
+        "beta": 0.004421894239951955,
+        "alpha": 0.24897288426225386
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 35.0,
+      "score": 20.0,
       "evidence": [
-        "analyst revision",
-        "major news"
+        "analyst revision"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; 6m return is positive"
@@ -86,7 +87,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Regulated Electric",
     "exchange": "NMS",
-    "market_cap": 70314688512.0,
+    "market_cap": 70613950464.0,
     "revenue_growth": 0.102,
     "eps_growth": 0.067,
     "fcf_growth": null,
@@ -103,14 +104,14 @@
     "cash_position": 516000000.0,
     "total_debt": 51808002048.0,
     "interest_coverage": null,
-    "forward_pe": 18.851877,
-    "trailing_pe": 19.116863,
+    "forward_pe": 18.93211,
+    "trailing_pe": 19.198223,
     "peg": 2.37,
-    "price_to_book": 2.21008,
-    "price_to_sales": 3.134431,
+    "price_to_book": 2.219486,
+    "price_to_sales": 3.1477714,
     "enterprise_to_ebitda": 13.431,
     "enterprise_to_revenue": 5.473,
-    "fcf_yield": -0.09889043286899173,
+    "fcf_yield": -0.09847133517257285,
     "institutional_ownership": 0.82257,
     "insider_ownership": 0.00024000001,
     "short_interest": 32207249.0,
@@ -130,11 +131,11 @@
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 44.00406590739749,
+    "rsi": 47.025673088133914,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8359541973216396,
+    "relative_volume": 0.24548804393319712,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -186,10 +187,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": false,
     "bullish_news_score": 1,
-    "bearish_news_score": 2,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.82257,
     "detail": {
       "earnings": {
@@ -230,12 +231,11 @@
         "last_surprise_pct": 0.0461,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 11.69,
+      "analyst_upside_pct": 11.21,
       "eps_growth_implied": 1.41
     },
     "evidence": [
-      "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance"
+      "analyst target/recommendation data is supportive"
     ]
   },
   "analyst": {
@@ -256,6 +256,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Entergy Stock: Is ETR Outperforming the Utility Sector?",
+        "source": "Barchart",
+        "published": "2026-06-15T11:29:56Z",
+        "summary": "Having outperformed the broader utility sector over the past year, Entergy has earned a favorable view from Wall Street, with analysts expressing strong confidence in the stock's prospects.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Today\u2019s AI market hits all 5 warning signs that preceded 2000 Nasdaq crash.",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-15T11:04:00Z",
+        "summary": "Although Wall Street has spent the better part of two years cheering an artificial intelligence buildout that has dragged the Nasdaq 100 up roughly 30% over the past year, the technology-packed Nasdaq Composite is starting to wobble at the worst possible moment. The benchmark S&P 500 has slipped, with SPY off about 4% in the ... Today\u2019s AI market hits all 5 warning signs that preceded 2000 Nasdaq crash.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Expert Warning: America\u2019s Grid Is So Far Behind, Blackouts Are Coming Even Without AI",
         "source": "24/7 Wall St.",
@@ -285,26 +305,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "How The Story Is Shifting For American Electric Power Company (AEP) On Data Center Growth And Risk",
-        "source": "Simply Wall St.",
-        "published": "2026-06-07T16:09:10Z",
-        "summary": "The modeled fair value for American Electric Power Company has shifted slightly, moving from US$144.29 to US$144.52, which reflects only a very small adjustment to the price target. This kind of fine tuning lines up with recent Street research that focuses less on big valuation swings and more on how data center demand, rising capital plans, and regulatory or political constraints might shape the story from here. As you read on, you will see how these moving pieces feed into the evolving...",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "How Is American Electric Power's Stock Performance Compared to Other Utility Stocks?",
-        "source": "Barchart",
-        "published": "2026-06-06T20:48:02Z",
-        "summary": "American Electric Power has outperformed its industry peers recently, and analysts remain moderately optimistic about the stock\u2019s prospects.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -326,10 +326,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AEP\nRating: Hold | Score: 50.95/100 | Confidence: 37.41/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.851877\nNews/Catalyst: Expert Warning: America\u2019s Grid Is So Far Behind, Blackouts Are Coming Even Without AI\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AEP\nRating: Hold | Score: 53.95/100 | Confidence: 44.94/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.93211\nNews/Catalyst: Entergy Stock: Is ETR Outperforming the Utility Sector?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

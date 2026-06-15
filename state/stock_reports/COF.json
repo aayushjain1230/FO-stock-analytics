@@ -1,50 +1,52 @@
 {
   "ticker": "COF",
-  "generated_at": "2026-06-14T16:14:19.698098",
+  "generated_at": "2026-06-15T17:51:41.361972",
   "score": {
-    "final_score": 45.75,
+    "final_score": 52.5,
     "rating": "Hold",
-    "confidence": 34.45,
+    "confidence": 39.06,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 46.0,
-      "momentum": 35.0,
+      "technical": 53.0,
+      "momentum": 55.0,
       "volume": 0,
       "fundamental": 55.0,
       "risk": 100,
       "catalyst": 45.0
     },
     "technical": {
-      "score": 46.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
+        "Price above SMA50",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 176.10000610351562,
       "resistance": 206.47000122070312,
-      "risk_reward": 2.52
+      "risk_reward": 0.57
     },
     "momentum": {
-      "score": 35.0,
+      "score": 55.0,
       "returns": {
-        "1m": 0.021939884116502162,
-        "3m": 0.03188703376261626,
-        "6m": -0.2167192381467018,
-        "12m": -0.06522799461272033
+        "1m": 0.056448297003000025,
+        "3m": 0.08578591588028361,
+        "6m": -0.17661183525376134,
+        "12m": 0.0032179384954234003
       },
-      "acceleration": 0.1402,
+      "acceleration": 0.1741,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
+        "12m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 4866500.0,
-      "relative_volume": 0.857310181855543,
+      "average_volume": 4892142.1,
+      "relative_volume": 0.8409898804860964,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": []
@@ -59,14 +61,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.022782471365952822,
-        "annualized_volatility": 0.3616605209145671,
-        "maximum_drawdown": -0.31467081982914447,
-        "sharpe_ratio": 0.655404720784223,
-        "sortino_ratio": 0.9076295695658648,
-        "calmar_ratio": 0.5967292634762117,
-        "beta": 1.421975738205231,
-        "alpha": -0.024591644475536953
+        "volatility": 0.022916119949278436,
+        "annualized_volatility": 0.36378212640190105,
+        "maximum_drawdown": -0.314670819829144,
+        "sharpe_ratio": 0.7123433279765355,
+        "sortino_ratio": 0.9903625284954759,
+        "calmar_ratio": 0.6781614200640631,
+        "beta": 1.4301160045783623,
+        "alpha": -0.01182066476185979
       },
       "evidence": []
     },
@@ -78,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; 3m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "COF",
@@ -87,7 +89,7 @@
     "sector": "Financial Services",
     "industry": "Credit Services",
     "exchange": "NYQ",
-    "market_cap": 114956148736.0,
+    "market_cap": 121477783552.0,
     "revenue_growth": 0.463,
     "eps_growth": -0.032,
     "fcf_growth": null,
@@ -104,11 +106,11 @@
     "cash_position": 79386001408.0,
     "total_debt": 55874998272.0,
     "interest_coverage": null,
-    "forward_pe": 7.6054688,
-    "trailing_pe": 56.84,
+    "forward_pe": 8.037492,
+    "trailing_pe": 60.064617,
     "peg": 0.2,
-    "price_to_book": 1.0646955,
-    "price_to_sales": 3.1658769,
+    "price_to_book": 1.1250973,
+    "price_to_sales": 3.3454816,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 2.667,
     "fcf_yield": null,
@@ -127,18 +129,18 @@
     "payout_ratio": 0.86120003,
     "next_earnings_date": "1776801600",
     "eps_current_year": 3.25,
-    "eps_forward": 24.2891,
+    "eps_forward": 24.28743,
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 46.26099848903619,
-    "macd_cross": true,
+    "rsi": 58.97219792534156,
+    "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.857310181855543,
-    "price_above_sma50": false,
+    "relative_volume": 0.8409898804860964,
+    "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "MACD bullish crossover",
+    "setup_type": "No clear setup",
     "support": 176.10000610351562,
     "resistance": 206.47000122070312
   },
@@ -231,8 +233,8 @@
         "last_surprise_pct": -0.0334,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 37.86,
-      "eps_growth_implied": 647.36
+      "analyst_upside_pct": 30.46,
+      "eps_growth_implied": 647.31
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -325,13 +327,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-15",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: COF\nRating: Hold | Score: 45.75/100 | Confidence: 34.45/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 176.10000610351562 | Resistance: 206.47000122070312\nFundamental Outlook: Fundamentally Average | Forward P/E: 7.6054688\nNews/Catalyst: Capital One Reshapes Card Business With Discover Integration And Policy Shifts\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COF\nRating: Hold | Score: 52.5/100 | Confidence: 39.06/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 176.10000610351562 | Resistance: 206.47000122070312\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.037492\nNews/Catalyst: Capital One Reshapes Card Business With Discover Integration And Policy Shifts\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "CL",
-  "generated_at": "2026-06-14T16:14:14.849823",
+  "generated_at": "2026-06-15T17:51:36.008943",
   "score": {
-    "final_score": 54.05,
+    "final_score": 58.3,
     "rating": "Hold",
-    "confidence": 47.42,
+    "confidence": 49.37,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
+      "technical": 90.0,
       "momentum": 40.0,
       "volume": 25.0,
       "fundamental": 47.0,
@@ -15,28 +15,30 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 81.80999755859375,
       "resistance": 91.66000366210938,
-      "risk_reward": 0.29
+      "risk_reward": 0.12
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": 0.01798104190592631,
-        "3m": 0.013123767824021026,
-        "6m": 0.16457115726154092,
-        "12m": -0.004333434278086745
+        "1m": 0.01997975685554887,
+        "3m": 0.009724808906527382,
+        "6m": 0.1875270896025818,
+        "12m": -0.002519926356506441
       },
-      "acceleration": -0.0692,
+      "acceleration": -0.084,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5240190.0,
-      "relative_volume": 0.7097070907734262,
+      "average_volume": 5133917.55,
+      "relative_volume": 0.5331116001268856,
       "accumulation_days": 6,
       "distribution_days": 5,
       "evidence": [
@@ -63,14 +65,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.013325438792819744,
-        "annualized_volatility": 0.21153478293968278,
-        "maximum_drawdown": -0.29045859606224766,
-        "sharpe_ratio": 0.07843170228225306,
-        "sortino_ratio": 0.11919692945273691,
-        "calmar_ratio": -0.019726043404819673,
-        "beta": 0.019571576331252914,
-        "alpha": 0.01299010914805958
+        "volatility": 0.013336535668584096,
+        "annualized_volatility": 0.21171094038129631,
+        "maximum_drawdown": -0.2904585960622472,
+        "sharpe_ratio": 0.07958543697757034,
+        "sortino_ratio": 0.12104335018769666,
+        "calmar_ratio": -0.01897002479154093,
+        "beta": 0.021798368560257613,
+        "alpha": 0.01271905684074912
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -84,7 +86,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "CL",
@@ -93,7 +95,7 @@
     "sector": "Consumer Defensive",
     "industry": "Household & Personal Products",
     "exchange": "NYQ",
-    "market_cap": 71576928256.0,
+    "market_cap": 72521154560.0,
     "revenue_growth": 0.084,
     "eps_growth": -0.059,
     "fcf_growth": null,
@@ -110,14 +112,14 @@
     "cash_position": 1419000064.0,
     "total_debt": 7973000192.0,
     "interest_coverage": null,
-    "forward_pe": 22.125917,
-    "trailing_pe": 34.670544,
+    "forward_pe": 22.417797,
+    "trailing_pe": 35.127907,
     "peg": 1.6,
-    "price_to_book": 494.19888,
-    "price_to_sales": 3.4420257,
+    "price_to_book": 500.71823,
+    "price_to_sales": 3.4874322,
     "enterprise_to_ebitda": 15.946,
     "enterprise_to_revenue": 3.774,
-    "fcf_yield": 0.04637667629613233,
+    "fcf_yield": 0.04577285141335731,
     "institutional_ownership": 0.88107,
     "insider_ownership": 0.00148,
     "short_interest": 21136595.0,
@@ -137,14 +139,14 @@
     "classification": "Fundamentally Weak"
   },
   "technical_screen": {
-    "rsi": 47.1115449294547,
-    "macd_cross": false,
+    "rsi": 51.86721837162617,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7097070907734262,
+    "relative_volume": 0.5331116001268856,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "MACD bullish crossover, trend continuation",
     "support": 81.80999755859375,
     "resistance": 91.66000366210938
   },
@@ -196,7 +198,7 @@
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 2,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.88107,
     "detail": {
       "earnings": {
@@ -237,7 +239,7 @@
         "last_surprise_pct": 0.027,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.15,
+      "analyst_upside_pct": 5.76,
       "eps_growth_implied": 56.7
     },
     "evidence": [
@@ -265,6 +267,16 @@
     "available": true,
     "items": [
       {
+        "headline": "US and Iran\u2019s peace deal: key details known so far",
+        "source": "Investing.com",
+        "published": "2026-06-15T13:25:51Z",
+        "summary": "Investing.com -- The United States and Iran agreed to a preliminary peace deal on Monday according to statements by leaders and other officials of the two countries, potentially ending the military conflict of nearly four months that disrupted global commerce and sent shockwaves through the markets.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "3 Consumer Staples Stocks to Buy Before the End of June",
         "source": "24/7 Wall St.",
         "published": "2026-06-14T13:00:39Z",
@@ -273,6 +285,16 @@
         "bearish_score": 0,
         "importance_score": 60,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Trump says ships loaded with oil sailing through Strait of Hormuz",
+        "source": "Investing.com",
+        "published": "2026-06-14T04:40:00Z",
+        "summary": "Investing.com - U.S. President Donald Trump has said ships laden with oil are beginning to sail through the Strait of Hormuz.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
         "headline": "Bernstein Calls Colgate\u2019s (CL) Geographic Footprint the \u2018Most Productive,\u2019 Initiates at Market Perform",
@@ -293,26 +315,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "CFTC weighs blocking CME\u2019s 24/7 oil futures contract - Bloomberg",
-        "source": "Investing.com",
-        "published": "2026-06-13T01:05:43Z",
-        "summary": "Investing.com -- The U.S. Commodity Futures Trading Commission is considering whether to block CME Group\u2019s proposal to launch a round-the-clock crude oil futures contract, according to a Bloomberg report citing a senior agency official familiar with the matter.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "US forces in Hormuz help escort oil tankers at night, Burgum says",
-        "source": "Investing.com",
-        "published": "2026-06-12T14:33:01Z",
-        "summary": "Investing.com -- US forces are helping transport millions of barrels of oil through the Strait of Hormuz during nighttime operations, with more than 20 ships moving through the waterway on some nights, Interior Secretary Doug Burgum said Friday.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -334,10 +336,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CL\nRating: Hold | Score: 54.05/100 | Confidence: 47.42/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 81.80999755859375 | Resistance: 91.66000366210938\nFundamental Outlook: Fundamentally Weak | Forward P/E: 22.125917\nNews/Catalyst: 3 Consumer Staples Stocks to Buy Before the End of June\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CL\nRating: Hold | Score: 58.3/100 | Confidence: 49.37/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover, trend continuation | Support: 81.80999755859375 | Resistance: 91.66000366210938\nFundamental Outlook: Fundamentally Weak | Forward P/E: 22.417797\nNews/Catalyst: US and Iran\u2019s peace deal: key details known so far\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

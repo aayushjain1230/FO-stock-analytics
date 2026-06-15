@@ -1,21 +1,21 @@
 {
   "ticker": "C",
-  "generated_at": "2026-06-14T16:14:03.385371",
+  "generated_at": "2026-06-15T17:51:24.283437",
   "score": {
-    "final_score": 75.4,
+    "final_score": 72.15,
     "rating": "Watch",
-    "confidence": 66.43,
+    "confidence": 62.06,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 83.0,
+      "technical": 73.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 76.0,
       "risk": 100,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 83.0,
+      "score": 73.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,21 +23,21 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is extended from SMA20"
       ],
       "support": 107.2699966430664,
-      "resistance": 139.8300018310547,
+      "resistance": 141.99000549316406,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.12675264746448667,
-        "3m": 0.3292784864045182,
-        "6m": 0.27125537019061974,
-        "12m": 0.8244464583568094
+        "1m": 0.13755813043037368,
+        "3m": 0.3289396931649655,
+        "6m": 0.283383591550165,
+        "12m": 0.8561816140127747
       },
-      "acceleration": 0.1937,
+      "acceleration": 0.1872,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +49,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 10844335.0,
-      "relative_volume": 0.9551899678495731,
+      "average_volume": 10785306.5,
+      "relative_volume": 0.6102311510572277,
       "accumulation_days": 8,
       "distribution_days": 4,
       "evidence": [
@@ -68,23 +68,22 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019800228536139358,
-        "annualized_volatility": 0.31431888365321536,
-        "maximum_drawdown": -0.31312769116707095,
-        "sharpe_ratio": 1.598745452261526,
-        "sortino_ratio": 2.1314723353893577,
-        "calmar_ratio": 1.8278139889252498,
-        "beta": 1.28024320410245,
-        "alpha": 0.26696723285561547
+        "volatility": 0.01980931200526584,
+        "annualized_volatility": 0.3144630792553178,
+        "maximum_drawdown": -0.31312770853330973,
+        "sharpe_ratio": 1.6302598096024496,
+        "sortino_ratio": 2.16956319692488,
+        "calmar_ratio": 1.8786639007871213,
+        "beta": 1.2770461631882892,
+        "alpha": 0.2706996231204678
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -97,7 +96,7 @@
     "sector": "Financial Services",
     "industry": "Banks - Diversified",
     "exchange": "NYQ",
-    "market_cap": 238490828800.0,
+    "market_cap": 242123718656.0,
     "revenue_growth": 0.159,
     "eps_growth": 0.561,
     "fcf_growth": null,
@@ -114,11 +113,11 @@
     "cash_position": 1046570008576.0,
     "total_debt": 815575007232.0,
     "interest_coverage": null,
-    "forward_pe": 11.160241,
-    "trailing_pe": 17.262962,
+    "forward_pe": 11.330243,
+    "trailing_pe": 17.525927,
     "peg": 0.77,
-    "price_to_book": 1.2459791,
-    "price_to_sales": 3.0290704,
+    "price_to_book": 1.2649589,
+    "price_to_sales": 3.0752118,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 0.364,
     "fcf_yield": null,
@@ -141,16 +140,16 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 74.71498483842147,
+    "rsi": 75.04140484008565,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 0.9551899678495731,
+    "relative_volume": 0.6102311510572277,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
     "support": 107.2699966430664,
-    "resistance": 139.8300018310547
+    "resistance": 141.99000549316406
   },
   "earnings": {
     "next_earnings_date": "1784032200",
@@ -197,10 +196,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 2,
+    "bullish_news_score": 1,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.81586,
     "detail": {
       "earnings": {
@@ -241,13 +240,12 @@
         "last_surprise_pct": 0.17909999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.08,
+      "analyst_upside_pct": 3.5,
       "eps_growth_implied": 54.68
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -270,54 +268,54 @@
     "available": true,
     "items": [
       {
-        "headline": "Wall Street Is Gaining Access to New Catastrophe Models to Help Predict Wars",
-        "source": "Bloomberg",
-        "published": "2026-06-14T12:14:30Z",
-        "summary": "(Bloomberg) -- As Wall Street races to incorporate war into its risk scenarios, the same people modeling natural catastrophes are now adapting their methodology to help investors, banks and insurers predict military conflicts.Most Read from BloombergWhy Musk Raced to Take SpaceX Public in the World\u2019s Biggest IPOTrump Eyes Sunday Iran Deal But Tehran Says Still Reviewing TextUS Wants to Avoid Congressional Vote on Trade Deal, Carney SaysAnthropic Shuts Down Mythos Access After Sweeping US OrderIr",
+        "headline": "Bullish Spread Targets Citigroup Stock Momentum With Limited Risk",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-15T17:02:06Z",
+        "summary": "Citigroup stock is climbing. This options trade is for investors who want to bet on momentum in the bank stock while limiting downside risk.",
         "bullish_score": 0,
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       },
       {
-        "headline": "Citi resets AMD stock price target on key move",
-        "source": "TheStreet",
-        "published": "2026-06-13T19:38:00Z",
-        "summary": "For months, one of Wall Street's most closely watched chip analysts held a skeptical line on AMD while the stock rode the broader AI rally. On June 12, that changed. Citi analyst Atif Malik upgraded AMD to Buy from Neutral and raised his price target to $575 from $460, and shares jumped 4.73% the ...",
-        "bullish_score": 2,
+        "headline": "C Sheds Polish Arm, Marks Final Exit From Nore-Core Consumer Business",
+        "source": "Zacks",
+        "published": "2026-06-15T15:22:00Z",
+        "summary": "Citigroup completes the sale of its Polish consumer banking business. This marks the final exit from its international consumer banking businesses.",
+        "bullish_score": 0,
         "bearish_score": 0,
-        "importance_score": 60,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Are Finance Stocks Lagging  Ameris Bancorp (ABCB) This Year?",
+        "source": "Zacks",
+        "published": "2026-06-15T13:40:05Z",
+        "summary": "Here is how Ameris Bancorp (ABCB) and Citigroup (C) have performed compared to their sector so far this year.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "These Are 5 Of The Best Stocks To Buy Or Watch Now",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-15T13:26:02Z",
+        "summary": "Buying a stock is easy, but buying the right stock without a good strategy is incredibly hard. Here are five top-performing stocks to buy now or put on a watchlist.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Which is the Better Bank Stock to Buy: JPMorgan or Citigroup?",
+        "source": "Zacks",
+        "published": "2026-06-15T13:03:00Z",
+        "summary": "C's lower valuation, improving turnaround and stronger sentiment test whether investors should favor value over JPM's quality premium.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Citi Expects Lithium Market to Stabilise Before Recovery Driven by Restocking Demand",
-        "source": "InvestorsHub",
-        "published": "2026-06-13T13:00:00Z",
-        "summary": "Citi believes the recent weakness in lithium prices has been driven by a combination of rising inventories on the GFEX exchange, a more responsive supply environment and ongoing concerns about short-term demand from end markets. According to the bank, most of the downward pressure appears to have already played out, suggesting the market may be approaching a period of stabilization.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "The Index Says Euphoria. But Don\u2019t Panic.",
-        "source": "Barrons.com",
-        "published": "2026-06-13T02:40:00Z",
-        "summary": "A Citigroup sentiment indicator hasn\u2019t shown this much market euphoria since the post-Covid rally of 2021. How long can it last?",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Citigroup (C) Is Up 5.6% After Launching Blockchain Platform For Tokenized Private Equity Access",
-        "source": "Simply Wall St.",
-        "published": "2026-06-12T22:13:41Z",
-        "summary": "Earlier this week, Citigroup Inc. launched blockchain-based Digital Depositary Receipts and a tokenized trading platform for late-stage private-company shares, while also issuing several new senior unsecured fixed- and floating-rate notes and redeeming existing 2027 debt as part of its liability management efforts. The move into tokenized private equity access marks a material expansion of Citi\u2019s digital asset capabilities, potentially deepening its role in servicing institutional and...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -339,7 +337,7 @@
     "send_alert": true,
     "reason": "52-week high",
     "evidence": "Price is pressing against 52-week highs",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 65,
     "invalidates": "Failed breakout below prior range high",
     "triggers": [
@@ -351,5 +349,5 @@
       }
     ]
   },
-  "report": "Ticker: C\nRating: Watch | Score: 75.4/100 | Confidence: 66.43/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 107.2699966430664 | Resistance: 139.8300018310547\nFundamental Outlook: Quality Compounder | Forward P/E: 11.160241\nNews/Catalyst: Wall Street Is Gaining Access to New Catastrophe Models to Help Predict Wars\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: C\nRating: Watch | Score: 72.15/100 | Confidence: 62.06/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 107.2699966430664 | Resistance: 141.99000549316406\nFundamental Outlook: Quality Compounder | Forward P/E: 11.330243\nNews/Catalyst: Bullish Spread Targets Citigroup Stock Momentum With Limited Risk\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

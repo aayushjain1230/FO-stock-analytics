@@ -1,42 +1,43 @@
 {
   "ticker": "BAX",
-  "generated_at": "2026-06-14T16:13:53.395917",
+  "generated_at": "2026-06-15T17:51:14.109378",
   "score": {
-    "final_score": 58.0,
+    "final_score": 60.5,
     "rating": "Hold",
-    "confidence": 48.25,
+    "confidence": 52.24,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
+      "technical": 75.0,
       "momentum": 65.0,
       "volume": 25.0,
       "fundamental": 55.0,
       "risk": 75.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 15.800000190734863,
-      "resistance": 20.860000610351562,
+      "resistance": 20.934999465942383,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 65.0,
       "returns": {
-        "1m": 0.20571011467568523,
-        "3m": 0.19947373685438885,
-        "6m": 0.14354318031298363,
-        "12m": -0.329976840357755
+        "1m": 0.17805840700422948,
+        "3m": 0.2263396284345791,
+        "6m": 0.10879226461660751,
+        "12m": -0.3267101983450127
       },
-      "acceleration": 0.1277,
+      "acceleration": 0.1719,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 6887245.0,
-      "relative_volume": 1.1065382456991149,
+      "average_volume": 6744237.65,
+      "relative_volume": 0.37023502574824,
       "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
@@ -63,27 +64,28 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.025466783050633712,
-        "annualized_volatility": 0.40427264786886985,
-        "maximum_drawdown": -0.5982045192002148,
-        "sharpe_ratio": -0.34946013008925925,
-        "sortino_ratio": -0.3939104417067395,
-        "calmar_ratio": -0.33865453206120755,
-        "beta": 0.8675889435178689,
-        "alpha": -0.30090262945127527
+        "volatility": 0.025492130532309417,
+        "annualized_volatility": 0.4046750266661239,
+        "maximum_drawdown": -0.5982044802025326,
+        "sharpe_ratio": -0.3516078446885049,
+        "sortino_ratio": -0.39672576831826983,
+        "calmar_ratio": -0.3402258377447111,
+        "beta": 0.8642109083587494,
+        "alpha": -0.3060255440673532
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "BAX",
@@ -92,7 +94,7 @@
     "sector": "Healthcare",
     "industry": "Medical Instruments & Supplies",
     "exchange": "NYQ",
-    "market_cap": 10773543936.0,
+    "market_cap": 10807113728.0,
     "revenue_growth": 0.029,
     "eps_growth": null,
     "fcf_growth": null,
@@ -109,14 +111,14 @@
     "cash_position": 2016999936.0,
     "total_debt": 9687000064.0,
     "interest_coverage": null,
-    "forward_pe": 10.36326,
+    "forward_pe": 10.395552,
     "trailing_pe": null,
     "peg": 36.68,
-    "price_to_book": 1.7827536,
-    "price_to_sales": 0.95172644,
+    "price_to_book": 1.7883086,
+    "price_to_sales": 0.954692,
     "enterprise_to_ebitda": 9.647,
     "enterprise_to_revenue": 1.627,
-    "fcf_yield": 0.08361918913141564,
+    "fcf_yield": 0.08335944551651525,
     "institutional_ownership": 1.06521,
     "insider_ownership": 0.00339,
     "short_interest": 42412694.0,
@@ -136,16 +138,16 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 70.00001816523827,
+    "rsi": 69.07977263451147,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1065382456991149,
+    "relative_volume": 0.37023502574824,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 15.800000190734863,
-    "resistance": 20.860000610351562
+    "resistance": 20.934999465942383
   },
   "earnings": {
     "next_earnings_date": "1777552200",
@@ -192,9 +194,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 1,
     "bearish_news_score": 1,
     "institutional_ownership": 1.06521,
     "detail": {
@@ -236,11 +238,12 @@
         "last_surprise_pct": 0.1593,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 3.27,
+      "analyst_upside_pct": 2.95,
       "eps_growth_implied": 205.39
     },
     "evidence": [
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -262,6 +265,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Baxter (BAX) Stock After Recent Rebound Is The Discount To DCF Value Warranted",
+        "source": "Simply Wall St.",
+        "published": "2026-06-15T01:11:07Z",
+        "summary": "Wondering whether Baxter International at US$20.86 is a bargain or a value trap? This article breaks down what the current share price might be telling you about the stock. The stock has risen 7.6% over the past week and 20.6% over the past month, yet is still down 7.0% year to date and has declined 31.3% over the last year. This raises questions about how the market now views its risk and potential. Recent coverage has focused on Baxter International's position within the medical equipment...",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Baxter International (BAX) Stock Valuation Check After Recent Double Digit Gains And Ongoing Turnaround Plans",
+        "source": "Simply Wall St.",
+        "published": "2026-06-14T18:04:52Z",
+        "summary": "Baxter International (BAX) has attracted fresh attention after recent trading, with the stock showing double digit returns over the past month and past 3 months. This performance is prompting investors to reassess its current valuation. See our latest analysis for Baxter International. The recent move takes Baxter International's share price to US$20.86, with share price returns of 20.58% over 30 days and 22.13% over 90 days, while the 1 year total shareholder return has declined 31.29%. This...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "3 Unpopular Stocks We\u2019re Skeptical Of",
         "source": "StockStory",
@@ -291,26 +314,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Baxter International (BAX) Faces Tough Road Ahead, Says Citi in Downgrade",
-        "source": "Insider Monkey",
-        "published": "2026-06-10T04:01:24Z",
-        "summary": "With a TTM operating cash flow of $1.25 billion, Baxter International Inc. (NYSE:BAX) is included among the 12 Cash-Rich Stocks to Buy Right Now. On May 28, Citi analyst Joanne Wuensch downgraded Baxter International Inc. (NYSE:BAX) to Sell from Neutral. She lowered the price target on the stock to $17 from $19. In a research note, the [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "FMS and Home Dialysis: How 5008X Could Reset Demand",
-        "source": "Zacks",
-        "published": "2026-06-08T18:51:00Z",
-        "summary": "FMS scales 5008X high-volume HDF and expands home dialysis, aiming for benefits later in 2026 and a bigger payoff in 2027+.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -332,10 +335,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BAX\nRating: Hold | Score: 58.0/100 | Confidence: 48.25/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 15.800000190734863 | Resistance: 20.860000610351562\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.36326\nNews/Catalyst: 3 Unpopular Stocks We\u2019re Skeptical Of\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BAX\nRating: Hold | Score: 60.5/100 | Confidence: 52.24/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 15.800000190734863 | Resistance: 20.934999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.395552\nNews/Catalyst: Baxter (BAX) Stock After Recent Rebound Is The Discount To DCF Value Warranted\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

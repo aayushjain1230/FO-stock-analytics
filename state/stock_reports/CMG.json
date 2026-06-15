@@ -1,48 +1,48 @@
 {
   "ticker": "CMG",
-  "generated_at": "2026-06-14T16:14:16.936495",
+  "generated_at": "2026-06-15T17:51:38.349002",
   "score": {
-    "final_score": 33.8,
+    "final_score": 32.3,
     "rating": "Drop",
-    "confidence": 25.57,
+    "confidence": 22.23,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 36.0,
-      "momentum": 20.0,
+      "technical": 43.0,
+      "momentum": 10.0,
       "volume": 0,
       "fundamental": 42.0,
       "risk": 75.0,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
-      "score": 36.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 28.18000030517578,
       "resistance": 36.04999923706055,
-      "risk_reward": 0.94
+      "risk_reward": 0.77
     },
     "momentum": {
-      "score": 20.0,
+      "score": 10.0,
       "returns": {
-        "1m": 0.003737120199433397,
-        "3m": -0.00891761720311135,
-        "6m": -0.05038300393821993,
-        "12m": -0.3776791084671841
+        "1m": 0.016516010494756372,
+        "3m": -0.04284045835465666,
+        "6m": -0.06452538195929292,
+        "12m": -0.35900964191168727
       },
-      "acceleration": 0.0163,
+      "acceleration": -0.0106,
       "evidence": [
-        "1m return is positive",
-        "Momentum is accelerating"
+        "1m return is positive"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 20751775.0,
-      "relative_volume": 0.9859831267445797,
+      "average_volume": 20597668.8,
+      "relative_volume": 0.4310136300472993,
       "accumulation_days": 3,
       "distribution_days": 6,
       "evidence": []
@@ -57,28 +57,27 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.02304635641746947,
-        "annualized_volatility": 0.36584956624069015,
-        "maximum_drawdown": -0.5889263922279939,
-        "sharpe_ratio": -0.7853186498555698,
-        "sortino_ratio": -0.9809236831787668,
-        "calmar_ratio": -0.5084939537302466,
-        "beta": 0.8842304684319738,
-        "alpha": -0.4499957760947199
+        "volatility": 0.023038000606453352,
+        "annualized_volatility": 0.36571692185298477,
+        "maximum_drawdown": -0.5889263922279936,
+        "sharpe_ratio": -0.8127648501923466,
+        "sortino_ratio": -1.0148380298542705,
+        "calmar_ratio": -0.520215656631704,
+        "beta": 0.8804231623319092,
+        "alpha": -0.4640521611222382
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating; Debt-to-equity is elevated"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Debt-to-equity is elevated"
   },
   "fundamentals": {
     "ticker": "CMG",
@@ -87,7 +86,7 @@
     "sector": "Consumer Cyclical",
     "industry": "Restaurants",
     "exchange": "NYQ",
-    "market_cap": 41342513152.0,
+    "market_cap": 41823539200.0,
     "revenue_growth": 0.074,
     "eps_growth": -0.179,
     "fcf_growth": null,
@@ -104,14 +103,14 @@
     "cash_position": 871422016.0,
     "total_debt": 5245879808.0,
     "interest_coverage": null,
-    "forward_pe": 23.758976,
-    "trailing_pe": 29.568806,
+    "forward_pe": 24.035414,
+    "trailing_pe": 29.912842,
     "peg": 1.73,
-    "price_to_book": 17.226082,
-    "price_to_sales": 3.4058743,
+    "price_to_book": 17.42651,
+    "price_to_sales": 3.4455023,
     "enterprise_to_ebitda": 19.842,
     "enterprise_to_revenue": 3.766,
-    "fcf_yield": 0.02631455315742872,
+    "fcf_yield": 0.026011900972742162,
     "institutional_ownership": 0.92522,
     "insider_ownership": 0.00658,
     "short_interest": 44671409.0,
@@ -131,11 +130,11 @@
     "classification": "Fundamentally Weak"
   },
   "technical_screen": {
-    "rsi": 46.58384896945831,
+    "rsi": 51.63673584150184,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9859831267445797,
+    "relative_volume": 0.4310136300472993,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -187,9 +186,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 0,
     "bearish_news_score": 0,
     "institutional_ownership": 0.92522,
     "detail": {
@@ -231,12 +230,11 @@
         "last_surprise_pct": 0.0139999995,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 33.04,
+      "analyst_upside_pct": 31.51,
       "eps_growth_implied": 24.45
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -258,6 +256,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "KFC makes key change that\u2019s not on the menu",
+        "source": "TheStreet",
+        "published": "2026-06-15T17:33:00Z",
+        "summary": "Funny enough, the next fast-food war may not be fought over chicken sandwiches, sauces, or value meals. It might be fought over the restaurant itself, and that shift isn\u2019t hard to spot. Taco Bell has tested futuristic drive-thrus. Chipotle built newer formats around digital pickup. Chick-fil-A has ...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Chipotle is testing these 5 things to bring back buzz",
+        "source": "Restaurant Dive",
+        "published": "2026-06-15T11:02:13Z",
+        "summary": "From a crispy chicken to renaming its group meals, Chipotle is considering various operational changes that could help drive sales and traffic.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Chipotle and 5 More Restaurant Stocks That Look Appetizing",
         "source": "Barrons.com",
@@ -287,26 +305,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Chipotle Mexican Grill (CMG) Outpaces Stock Market Gains: What You Should Know",
-        "source": "Zacks",
-        "published": "2026-06-11T21:45:03Z",
-        "summary": "In the closing of the recent trading day, Chipotle Mexican Grill (CMG) stood at $31.25, denoting a +2.73% move from the preceding trading day.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "CAVA's Expansion Outlook Improves: Can New Units Keep Driving Growth?",
-        "source": "Zacks",
-        "published": "2026-06-11T13:13:00Z",
-        "summary": "CAVA raises its 2026 restaurant opening target as strong new-unit productivity supports its national expansion strategy.",
-        "bullish_score": 3,
-        "bearish_score": 0,
-        "importance_score": 75,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -328,10 +326,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-14",
+    "date_of_change": "2026-06-15",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CMG\nRating: Drop | Score: 33.8/100 | Confidence: 25.57/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 23.758976\nNews/Catalyst: Chipotle and 5 More Restaurant Stocks That Look Appetizing\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMG\nRating: Drop | Score: 32.3/100 | Confidence: 22.23/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 24.035414\nNews/Catalyst: KFC makes key change that\u2019s not on the menu\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
