@@ -1,14 +1,14 @@
 {
   "ticker": "AVY",
-  "generated_at": "2026-06-15T23:00:00.169621",
+  "generated_at": "2026-06-16T17:58:32.573084",
   "score": {
-    "final_score": 45.0,
+    "final_score": 47.5,
     "rating": "Hold",
-    "confidence": 39.01,
+    "confidence": 41.15,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
-      "momentum": 10.0,
+      "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 60.0,
       "risk": 100,
@@ -18,32 +18,33 @@
       "score": 53.0,
       "evidence": [
         "Price above SMA20",
+        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 153.00999450683594,
       "resistance": 175.30999755859375,
-      "risk_reward": 2.27
+      "risk_reward": 1.32
     },
     "momentum": {
-      "score": 10.0,
+      "score": 20.0,
       "returns": {
-        "1m": 0.010899588873039878,
-        "3m": -0.06458719833972137,
-        "6m": -0.11019908705466896,
-        "12m": -0.08868221028299583
+        "1m": 0.04783493503708991,
+        "3m": -0.043408917799727664,
+        "6m": -0.09916006883343287,
+        "12m": -0.047643661282077976
       },
-      "acceleration": -0.0095,
+      "acceleration": 0.0062,
       "evidence": [
-        "1m return is positive"
+        "1m return is positive",
+        "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 704851.35,
-      "relative_volume": 0.6394639096598169,
+      "average_volume": 693058.3,
+      "relative_volume": 0.20022269410812912,
       "accumulation_days": 6,
       "distribution_days": 3,
       "evidence": [
@@ -58,14 +59,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01477125043466633,
-        "annualized_volatility": 0.2344863312214911,
-        "maximum_drawdown": -0.30559288661677886,
-        "sharpe_ratio": -0.56458952786433,
-        "sortino_ratio": -0.9772031785554993,
-        "calmar_ratio": -0.48297600018565395,
-        "beta": 0.6042921995761705,
-        "alpha": -0.2465604649598827
+        "volatility": 0.01477879726624892,
+        "annualized_volatility": 0.23460613345881523,
+        "maximum_drawdown": -0.3055928866167795,
+        "sharpe_ratio": -0.5252669446017636,
+        "sortino_ratio": -0.9096078426945544,
+        "calmar_ratio": -0.45737924750190945,
+        "beta": 0.6028476000291508,
+        "alpha": -0.23591973112608802
       },
       "evidence": []
     },
@@ -76,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "AVY",
@@ -85,7 +86,7 @@
     "sector": "Consumer Cyclical",
     "industry": "Packaging & Containers",
     "exchange": "NYQ",
-    "market_cap": 12317246464.0,
+    "market_cap": 12438100992.0,
     "revenue_growth": 0.07,
     "eps_growth": 0.043,
     "fcf_growth": null,
@@ -102,15 +103,15 @@
     "cash_position": 301700000.0,
     "total_debt": 3790099968.0,
     "interest_coverage": null,
-    "forward_pe": 14.421342,
-    "trailing_pe": 18.11361,
+    "forward_pe": 14.562841,
+    "trailing_pe": 18.291338,
     "peg": 1.92,
-    "price_to_book": 5.3662357,
-    "price_to_sales": 1.3677167,
-    "enterprise_to_ebitda": 10.859,
-    "enterprise_to_revenue": 1.74,
-    "fcf_yield": 0.06568432208973293,
-    "institutional_ownership": 0.98390996,
+    "price_to_book": 5.4188886,
+    "price_to_sales": 1.3811365,
+    "enterprise_to_ebitda": 10.889,
+    "enterprise_to_revenue": 1.745,
+    "fcf_yield": 0.06504610185432397,
+    "institutional_ownership": 0.98396003,
     "insider_ownership": 0.0064,
     "short_interest": 2144200.0,
     "short_ratio": 3.12,
@@ -121,21 +122,20 @@
     "target_low_price": 175.0,
     "recommendation": "buy",
     "number_of_analysts": 10.0,
-    "dividend_yield": 2.51,
+    "dividend_yield": 2.5,
     "payout_ratio": 0.4234,
     "next_earnings_date": "1777379400",
     "eps_current_year": 8.89,
     "eps_forward": 11.16609,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 50.033451984537066,
+    "rsi": 53.31249552964738,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6394639096598169,
-    "price_above_sma50": false,
+    "relative_volume": 0.20022269410812912,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 153.00999450683594,
@@ -190,7 +190,7 @@
     "guidance_change": true,
     "bullish_news_score": 0,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.98390996,
+    "institutional_ownership": 0.98396003,
     "detail": {
       "earnings": {
         "available": true,
@@ -230,7 +230,7 @@
         "last_surprise_pct": 0.018099999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 25.33,
+      "analyst_upside_pct": 23.18,
       "eps_growth_implied": 25.6
     },
     "evidence": [
@@ -247,7 +247,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0064,
-    "institutional_ownership": 0.98390996,
+    "institutional_ownership": 0.98396003,
     "short_interest": 2144200.0,
     "short_percent_float": 0.0327,
     "days_to_cover": 3.12,
@@ -256,6 +256,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Amcor names new leadership for flexible packaging and investor relations",
+        "source": "Packaging Gateway",
+        "published": "2026-06-16T09:37:17Z",
+        "summary": "Amcor posted attributable net income of $278m for Q3 FY26, up 41.8% from the same quarter of the previous year.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Amcor taps Avery Dennison exec to lead global flexibles",
         "source": "Packaging Dive",
@@ -295,16 +305,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "A Fresh Look At Avery Dennison (AVY) Valuation After Recent Mixed Share Performance",
-        "source": "Simply Wall St.",
-        "published": "2026-06-10T12:08:24Z",
-        "summary": "Recent performance and current snapshot Avery Dennison (AVY) has seen mixed share performance recently, with the stock up 4.1% over the past day and 1.5% over the past week, but down over the past month and the past 3 months. Year to date, the stock is down 12.7%, with a total return decline of 9.5% over the past year and a slight gain of 0.3% across 3 years, while the 5-year total return shows an 18.9% decline. The company last closed at $159.35, giving it a market value of about $11.7b. It...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -323,13 +323,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-16",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: AVY\nRating: Hold | Score: 45.0/100 | Confidence: 39.01/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 153.00999450683594 | Resistance: 175.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.421342\nNews/Catalyst: Amcor taps Avery Dennison exec to lead global flexibles\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AVY\nRating: Hold | Score: 47.5/100 | Confidence: 41.15/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 153.00999450683594 | Resistance: 175.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.562841\nNews/Catalyst: Amcor names new leadership for flexible packaging and investor relations\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

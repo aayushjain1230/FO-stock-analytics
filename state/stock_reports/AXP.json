@@ -1,53 +1,56 @@
 {
   "ticker": "AXP",
-  "generated_at": "2026-06-15T23:00:01.927108",
+  "generated_at": "2026-06-16T17:58:34.654754",
   "score": {
-    "final_score": 60.9,
-    "rating": "Hold",
-    "confidence": 54.38,
+    "final_score": 69.4,
+    "rating": "Watch",
+    "confidence": 65.14,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
-      "momentum": 55.0,
+      "technical": 65.0,
+      "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 45.0
+      "catalyst": 80.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
+        "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is extended from SMA20"
       ],
       "support": 292.2699890136719,
-      "resistance": 335.3800048828125,
+      "resistance": 340.67498779296875,
       "risk_reward": 0.0
     },
     "momentum": {
-      "score": 55.0,
+      "score": 70.0,
       "returns": {
-        "1m": 0.07228959511250377,
-        "3m": 0.12823695894636722,
-        "6m": -0.12393762889650994,
-        "12m": 0.1372713824393359
+        "1m": 0.08675186887060149,
+        "3m": 0.1381490601931703,
+        "6m": -0.10468641714820592,
+        "12m": 0.19617083479864617
       },
-      "acceleration": 0.1902,
+      "acceleration": 0.1905,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
         "12m return is positive",
-        "Momentum is accelerating"
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2833695.55,
-      "relative_volume": 0.9029590352428651,
-      "accumulation_days": 3,
+      "average_volume": 2816253.7,
+      "relative_volume": 0.4015881097644008,
+      "accumulation_days": 4,
       "distribution_days": 1,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -64,26 +67,28 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01862871439025736,
-        "annualized_volatility": 0.2957216731288273,
-        "maximum_drawdown": -0.2875743327051753,
-        "sharpe_ratio": 0.8418608417415391,
-        "sortino_ratio": 1.1110965428555037,
-        "calmar_ratio": 0.7922141358789009,
-        "beta": 1.2456360039345213,
-        "alpha": 0.013612276401812999
+        "volatility": 0.018621806341907195,
+        "annualized_volatility": 0.2956120112609512,
+        "maximum_drawdown": -0.2875741974221574,
+        "sharpe_ratio": 0.8674066097170441,
+        "sortino_ratio": 1.1443873396079223,
+        "calmar_ratio": 0.8242904123345522,
+        "beta": 1.2442486116071283,
+        "alpha": 0.023831345482045824
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
+        "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "AXP",
@@ -92,7 +97,7 @@
     "sector": "Financial Services",
     "industry": "Credit Services",
     "exchange": "NYQ",
-    "market_cap": 230216941568.0,
+    "market_cap": 232478851072.0,
     "revenue_growth": 0.116,
     "eps_growth": 0.176,
     "fcf_growth": null,
@@ -109,15 +114,15 @@
     "cash_position": 53866999808.0,
     "total_debt": 60458999808.0,
     "interest_coverage": null,
-    "forward_pe": 16.738909,
-    "trailing_pe": 21.074327,
+    "forward_pe": 16.909016,
+    "trailing_pe": 21.254833,
     "peg": 1.55,
-    "price_to_book": 6.768848,
-    "price_to_sales": 3.345593,
+    "price_to_book": 6.835353,
+    "price_to_sales": 3.378464,
     "enterprise_to_ebitda": null,
-    "enterprise_to_revenue": 3.323,
+    "enterprise_to_revenue": 3.421,
     "fcf_yield": null,
-    "institutional_ownership": 0.65314,
+    "institutional_ownership": 0.6532,
     "insider_ownership": 0.22332,
     "short_interest": 12044280.0,
     "short_ratio": 3.77,
@@ -128,25 +133,24 @@
     "target_low_price": 285.0,
     "recommendation": "buy",
     "number_of_analysts": 24.0,
-    "dividend_yield": 1.17,
+    "dividend_yield": 1.13,
     "payout_ratio": 0.21290001,
     "next_earnings_date": "1776947400",
-    "eps_current_year": 16.01,
-    "eps_forward": 20.15663,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "eps_current_year": 16.03,
+    "eps_forward": 20.1499,
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 67.54411218727407,
+    "rsi": 69.07327572830718,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9029590352428651,
+    "relative_volume": 0.4015881097644008,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 292.2699890136719,
-    "resistance": 335.3800048828125
+    "resistance": 340.67498779296875
   },
   "earnings": {
     "next_earnings_date": "1776947400",
@@ -192,12 +196,12 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": false,
-    "major_news": false,
+    "sector_strength": true,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 0,
-    "institutional_ownership": 0.65314,
+    "bullish_news_score": 2,
+    "bearish_news_score": 1,
+    "institutional_ownership": 0.6532,
     "detail": {
       "earnings": {
         "available": true,
@@ -237,12 +241,14 @@
         "last_surprise_pct": 0.0718,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.92,
-      "eps_growth_implied": 25.9
+      "analyst_upside_pct": 6.23,
+      "eps_growth_implied": 25.7
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -255,7 +261,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.22332,
-    "institutional_ownership": 0.65314,
+    "institutional_ownership": 0.6532,
     "short_interest": 12044280.0,
     "short_percent_float": 0.0227,
     "days_to_cover": 3.77,
@@ -264,16 +270,6 @@
   "news": {
     "available": true,
     "items": [
-      {
-        "headline": "Amex Gold vs. Chase Sapphire Preferred: Two of the best travel cards for everyday rewards",
-        "source": "Yahoo Personal Finance",
-        "published": "2024-08-22T15:49:59Z",
-        "summary": "Find out if the Amex Gold or Chase Sapphire Preferred is the better travel rewards card for you by comparing benefits, rewards, bonuses, and annual fees.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
       {
         "headline": "Amex Business Platinum vs. Amex Personal Platinum: Is one better than the other?",
         "source": "Yahoo Personal Finance",
@@ -285,30 +281,40 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Stock Market Today: Dow Pops On Trump-Iran Deal; Elon Musk's SpaceX Rockets, Tesla Does This",
-        "source": "Investor's Business Daily",
-        "published": "2026-06-15T20:43:16Z",
-        "summary": "The Dow Jones index jumps Monday with a U.S.-Iran peace agreement. SpaceX flies on the stock market today. An AI stock tests an entry.",
+        "headline": "Tripadvisor sale of TheFork seen as accretive to valuation not outlook, says Jefferies",
+        "source": "Proactive",
+        "published": "2026-06-16T17:28:00Z",
+        "summary": "Tripadvisor Inc (NASDAQ:TRIP) has agreed to sell its European restaurant reservations platform TheFork to American Express for $700 million in cash, a move that Jefferies says simplifies the company\u2019s structure but does not fully offset longer-term pressure in its core business. The deal,...",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Amex Buys TheFork for $700 Million as Tripadvisor Shares Jump 14%",
-        "source": "GuruFocus.com",
-        "published": "2026-06-15T18:43:10Z",
-        "summary": "American Express acquires European restaurant-booking platform TheFork, while Tripadvisor gains flexibility for capital returns and Experiences investments.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
+        "headline": "JPMorgan, Google Records Sought in Probe Into Epstein\u2019s New Mexico Ranch",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-16T15:15:00Z",
+        "summary": "New Mexico\u2019s Justice Department orders banks and other companies to preserve records tied to Jeffrey Epstein and his associates.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "American Express buys TheFork from Tripadvisor for $700M",
-        "source": "Quartz",
-        "published": "2026-06-15T16:21:40Z",
-        "summary": "The all-cash deal will expand American Express's dining network to 75,000 bookable venues across Europe",
+        "headline": "TRIP Stock Gains Premarket As Analysts Raise Tripadvisor Targets \u2013 See Value Creation From TheFork Deal",
+        "source": "Stocktwits",
+        "published": "2026-06-16T08:50:05Z",
+        "summary": "Analysts highlighted the financial flexibility the company could gain from the divestiture of TheFork.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "American Express Expands Dining Ecosystem With TheFork Acquisition From Tripadvisor",
+        "source": "Simply Wall St.",
+        "published": "2026-06-16T06:11:29Z",
+        "summary": "American Express (NYSE:AXP) agreed to acquire TheFork, Tripadvisor's European restaurant reservation platform, for US$700 million in cash. TheFork operates in 11 European countries and connects users with more than 50,000 restaurants. The deal is expected to close by late 2026, subject to regulatory approvals. American Express (NYSE:AXP) is increasing its focus on dining and experiences, adding TheFork's more than 50,000 European restaurants to its existing network. Once completed, the...",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -331,13 +337,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-16",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: AXP\nRating: Hold | Score: 60.9/100 | Confidence: 54.38/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 292.2699890136719 | Resistance: 335.3800048828125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.738909\nNews/Catalyst: Amex Gold vs. Chase Sapphire Preferred: Two of the best travel cards for everyday rewards\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AXP\nRating: Watch | Score: 69.4/100 | Confidence: 65.14/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 292.2699890136719 | Resistance: 340.67498779296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.909016\nNews/Catalyst: Amex Business Platinum vs. Amex Personal Platinum: Is one better than the other?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

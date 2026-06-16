@@ -1,13 +1,13 @@
 {
   "ticker": "LNT",
-  "generated_at": "2026-06-15T23:00:40.282440",
+  "generated_at": "2026-06-16T17:59:23.624306",
   "score": {
-    "final_score": 59.75,
+    "final_score": 61.5,
     "rating": "Hold",
-    "confidence": 50.18,
+    "confidence": 51.14,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
+      "technical": 75.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 65.0,
@@ -15,28 +15,29 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 68.70999908447266,
       "resistance": 74.05999755859375,
-      "risk_reward": 0.11
+      "risk_reward": 0.02
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.015182969632165255,
-        "3m": 0.01465994166335749,
-        "6m": 0.15051824869480845,
-        "12m": 0.2328389131891957
+        "1m": 0.020841990335889182,
+        "3m": 0.02031604680782495,
+        "6m": 0.15693168034618377,
+        "12m": 0.23971115264759257
       },
-      "acceleration": -0.0606,
+      "acceleration": -0.0581,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2373992.9,
-      "relative_volume": 0.6258055784412835,
+      "average_volume": 2340181.1,
+      "relative_volume": 0.3458800688545002,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -62,14 +63,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.011056776860921842,
-        "annualized_volatility": 0.17552089125559556,
-        "maximum_drawdown": -0.10978184529380297,
-        "sharpe_ratio": 1.403346201503963,
-        "sortino_ratio": 1.900666762725077,
-        "calmar_ratio": 2.3646693802564713,
-        "beta": 0.13888411215944876,
-        "alpha": 0.22007650832024803
+        "volatility": 0.011064762967409339,
+        "annualized_volatility": 0.17564766676585314,
+        "maximum_drawdown": -0.10978195883778752,
+        "sharpe_ratio": 1.4184569449122824,
+        "sortino_ratio": 1.9225187271227855,
+        "calmar_ratio": 2.3969221496034705,
+        "beta": 0.1372903581644792,
+        "alpha": 0.22465647740651418
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -82,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "LNT",
@@ -91,7 +92,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Regulated Electric",
     "exchange": "NMS",
-    "market_cap": 19001442304.0,
+    "market_cap": 19102169088.0,
     "revenue_growth": 0.05,
     "eps_growth": 0.049,
     "fcf_growth": null,
@@ -108,14 +109,14 @@
     "cash_position": 115000000.0,
     "total_debt": 11840000000.0,
     "interest_coverage": null,
-    "forward_pe": 19.962393,
-    "trailing_pe": 23.13522,
+    "forward_pe": 20.068214,
+    "trailing_pe": 23.25786,
     "peg": 2.53,
-    "price_to_book": 2.5601141,
-    "price_to_sales": 4.3009152,
-    "enterprise_to_ebitda": 16.491,
-    "enterprise_to_revenue": 6.928,
-    "fcf_yield": -0.06329124940935853,
+    "price_to_book": 2.5736854,
+    "price_to_sales": 4.3237143,
+    "enterprise_to_ebitda": 16.552,
+    "enterprise_to_revenue": 6.954,
+    "fcf_yield": -0.06295751118418746,
     "institutional_ownership": 0.94194,
     "insider_ownership": 0.0015700001,
     "short_interest": 24123748.0,
@@ -127,20 +128,19 @@
     "target_low_price": 74.0,
     "recommendation": "buy",
     "number_of_analysts": 12.0,
-    "dividend_yield": 2.85,
+    "dividend_yield": 2.83,
     "payout_ratio": 0.64699996,
     "next_earnings_date": "1777579200",
     "eps_current_year": 3.18,
     "eps_forward": 3.68543,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 49.44207194681822,
+    "rsi": 51.160857528936035,
     "macd_cross": false,
     "breakout": true,
-    "new_52w_high": false,
-    "relative_volume": 0.6258055784412835,
+    "new_52w_high": true,
+    "relative_volume": 0.3458800688545002,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -236,7 +236,7 @@
         "last_surprise_pct": 0.028499998,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.58,
+      "analyst_upside_pct": 6.98,
       "eps_growth_implied": 15.89
     },
     "evidence": [
@@ -329,13 +329,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "52-week high",
+    "evidence": "Price is pressing against 52-week highs",
+    "date_of_change": "2026-06-16",
+    "strength": 65,
+    "invalidates": "Failed breakout below prior range high",
+    "triggers": [
+      {
+        "reason": "52-week high",
+        "evidence": "Price is pressing against 52-week highs",
+        "strength": 65,
+        "invalidates": "Failed breakout below prior range high"
+      }
+    ]
   },
-  "report": "Ticker: LNT\nRating: Hold | Score: 59.75/100 | Confidence: 50.18/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 68.70999908447266 | Resistance: 74.05999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.962393\nNews/Catalyst: Alliant Energy (LNT) Stock Valuation Check After Recent Mixed Price Performance\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: LNT\nRating: Hold | Score: 61.5/100 | Confidence: 51.14/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 68.70999908447266 | Resistance: 74.05999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.068214\nNews/Catalyst: Alliant Energy (LNT) Stock Valuation Check After Recent Mixed Price Performance\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

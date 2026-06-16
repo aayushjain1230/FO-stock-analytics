@@ -1,21 +1,21 @@
 {
   "ticker": "CMI",
-  "generated_at": "2026-06-15T23:00:21.826279",
+  "generated_at": "2026-06-16T17:59:00.149165",
   "score": {
-    "final_score": 61.55,
-    "rating": "Hold",
-    "confidence": 43.91,
+    "final_score": 70.3,
+    "rating": "Watch",
+    "confidence": 57.56,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
-      "momentum": 75.0,
-      "volume": 0,
+      "technical": 90.0,
+      "momentum": 85.0,
+      "volume": 25.0,
       "fundamental": 52.0,
       "risk": 85.0,
       "catalyst": 45.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,22 +23,24 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 511.70001220703125,
       "resistance": 716.4500122070312,
-      "risk_reward": 0.22
+      "risk_reward": 0.05
     },
     "momentum": {
-      "score": 75.0,
+      "score": 85.0,
       "returns": {
-        "1m": -0.048300889667322267,
-        "3m": 0.2510225725927966,
-        "6m": 0.3070769722640321,
-        "12m": 1.1266088558599012
+        "1m": 0.018133179234082863,
+        "3m": 0.30535529597601374,
+        "6m": 0.395048552365999,
+        "12m": 1.2478670986632254
       },
-      "acceleration": 0.0975,
+      "acceleration": 0.1078,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -47,12 +49,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 976111.8,
-      "relative_volume": 0.8766782657478375,
+      "score": 25.0,
+      "average_volume": 952066.65,
+      "relative_volume": 0.5806662800340712,
       "accumulation_days": 5,
-      "distribution_days": 5,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 52.0,
@@ -62,14 +66,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.020555787958083594,
-        "annualized_volatility": 0.3263130176403924,
-        "maximum_drawdown": -0.3048132000670982,
-        "sharpe_ratio": 1.6507266509037077,
-        "sortino_ratio": 2.401074360764717,
-        "calmar_ratio": 2.0488627017912995,
-        "beta": 1.258232818156464,
-        "alpha": 0.3009293955846299
+        "volatility": 0.02060509415718402,
+        "annualized_volatility": 0.32709572928587377,
+        "maximum_drawdown": -0.3048132564840561,
+        "sharpe_ratio": 1.7052104071655227,
+        "sortino_ratio": 2.4862725907243175,
+        "calmar_ratio": 2.1501491802463764,
+        "beta": 1.2552182641258074,
+        "alpha": 0.323132043371092
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -92,7 +96,7 @@
     "sector": "Industrials",
     "industry": "Specialty Industrial Machinery",
     "exchange": "NYQ",
-    "market_cap": 94554939392.0,
+    "market_cap": 97439604736.0,
     "revenue_growth": 0.027,
     "eps_growth": -0.21,
     "fcf_growth": null,
@@ -109,15 +113,15 @@
     "cash_position": 3182000128.0,
     "total_debt": 8240000000.0,
     "interest_coverage": null,
-    "forward_pe": 20.214548,
-    "trailing_pe": 35.57814,
+    "forward_pe": 20.831251,
+    "trailing_pe": 36.701664,
     "peg": 1.59,
-    "price_to_book": 7.655658,
-    "price_to_sales": 2.789725,
-    "enterprise_to_ebitda": 19.403,
-    "enterprise_to_revenue": 2.865,
-    "fcf_yield": 0.017858665394511048,
-    "institutional_ownership": 0.87952006,
+    "price_to_book": 7.889215,
+    "price_to_sales": 2.8748333,
+    "enterprise_to_ebitda": 19.958,
+    "enterprise_to_revenue": 2.947,
+    "fcf_yield": 0.017329965865267114,
+    "institutional_ownership": 0.87957,
     "insider_ownership": 0.00215,
     "short_interest": 2051172.0,
     "short_ratio": 2.07,
@@ -128,23 +132,22 @@
     "target_low_price": 520.0,
     "recommendation": "buy",
     "number_of_analysts": 19.0,
-    "dividend_yield": 1.21,
+    "dividend_yield": 1.18,
     "payout_ratio": 0.4062,
     "next_earnings_date": "1777984200",
-    "eps_current_year": 19.26,
+    "eps_current_year": 19.24,
     "eps_forward": 33.89811,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 52.61375965736953,
-    "macd_cross": false,
-    "breakout": false,
+    "rsi": 58.28213448939483,
+    "macd_cross": true,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.8766782657478375,
+    "relative_volume": 0.5806662800340712,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "52-week high pressure, MACD bullish crossover, trend continuation",
     "support": 511.70001220703125,
     "resistance": 716.4500122070312
   },
@@ -197,7 +200,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.87952006,
+    "institutional_ownership": 0.87957,
     "detail": {
       "earnings": {
         "available": true,
@@ -237,8 +240,8 @@
         "last_surprise_pct": -0.1625,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 8.89,
-      "eps_growth_implied": 76.0
+      "analyst_upside_pct": 4.81,
+      "eps_growth_implied": 76.19
     },
     "evidence": [
       "technical backdrop is constructive",
@@ -255,7 +258,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00215,
-    "institutional_ownership": 0.87952006,
+    "institutional_ownership": 0.87957,
     "short_interest": 2051172.0,
     "short_percent_float": 0.0171,
     "days_to_cover": 2.07,
@@ -264,6 +267,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Has The AI Power Boom Pushed Bloom Energy Stock Too Far, Too Fast?",
+        "source": "Trefis",
+        "published": "2026-06-16T16:54:55Z",
+        "summary": "The fuel-cell maker is benefiting from a significant AI-driven trend, but its long-term value will be determined by its performance in less favorable market conditions.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "How Did Wall Street Sleep Through CAT Stock's 150% Surge?",
         "source": "Trefis",
@@ -303,16 +316,6 @@
         "bearish_score": 1,
         "importance_score": 75,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Atkore, Cummins, and MasTec Shares Are Falling, What You Need To Know",
-        "source": "StockStory",
-        "published": "2026-06-11T01:29:28Z",
-        "summary": "A number of stocks fell in the afternoon session after the CPI report showed 4.2% annual inflation, the highest in three years, with markets fully pricing a December Fed rate hike.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -331,13 +334,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-16",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: CMI\nRating: Hold | Score: 61.55/100 | Confidence: 43.91/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 511.70001220703125 | Resistance: 716.4500122070312\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.214548\nNews/Catalyst: How Did Wall Street Sleep Through CAT Stock's 150% Surge?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMI\nRating: Watch | Score: 70.3/100 | Confidence: 57.56/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation | Support: 511.70001220703125 | Resistance: 716.4500122070312\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.831251\nNews/Catalyst: Has The AI Power Boom Pushed Bloom Energy Stock Too Far, Too Fast?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

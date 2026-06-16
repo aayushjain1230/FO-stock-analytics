@@ -1,49 +1,50 @@
 {
   "ticker": "COIN",
-  "generated_at": "2026-06-15T23:00:24.167952",
+  "generated_at": "2026-06-16T17:59:03.192984",
   "score": {
-    "final_score": 23.3,
+    "final_score": 27.05,
     "rating": "Avoid",
-    "confidence": 16.09,
+    "confidence": 20.49,
     "risk_level": "High",
     "categories": {
-      "technical": 28.0,
-      "momentum": 10.0,
-      "volume": 0,
+      "technical": 38.0,
+      "momentum": 0,
+      "volume": 25.0,
       "fundamental": 47.0,
       "risk": 35.0,
       "catalyst": 30.0
     },
     "technical": {
-      "score": 28.0,
+      "score": 38.0,
       "evidence": [
+        "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 152.39999389648438,
       "resistance": 216.60000610351562,
-      "risk_reward": 2.73
+      "risk_reward": 2.52
     },
     "momentum": {
-      "score": 10.0,
+      "score": 0,
       "returns": {
-        "1m": -0.19994340119791676,
-        "3m": -0.16574862774469823,
-        "6m": -0.369489249705652,
-        "12m": -0.29632859170399173
+        "1m": -0.12679731723884846,
+        "3m": -0.18827000254688164,
+        "6m": -0.36196066945157923,
+        "12m": -0.29689757663076066
       },
-      "acceleration": 0.019,
-      "evidence": [
-        "Momentum is accelerating"
-      ]
+      "acceleration": -0.0073,
+      "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 8645360.8,
-      "relative_volume": 1.032301162029004,
+      "score": 25.0,
+      "average_volume": 8327609.8,
+      "relative_volume": 0.4823948403538312,
       "accumulation_days": 2,
-      "distribution_days": 2,
-      "evidence": []
+      "distribution_days": 1,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 47.0,
@@ -53,14 +54,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.04944421856238839,
-        "annualized_volatility": 0.7849026365160195,
+        "volatility": 0.04939528953721773,
+        "annualized_volatility": 0.7841259123210532,
         "maximum_drawdown": -0.663895381513711,
-        "sharpe_ratio": 0.1456661223949734,
-        "sortino_ratio": 0.2555897259125472,
-        "calmar_ratio": -0.2555236022356297,
-        "beta": 2.5397976438057777,
-        "alpha": -0.3655229073192864
+        "sharpe_ratio": 0.14942184519317356,
+        "sortino_ratio": 0.26192017112575977,
+        "calmar_ratio": -0.2512349608361196,
+        "beta": 2.538691599007909,
+        "alpha": -0.35738610994231823
       },
       "evidence": [
         "Volatility is elevated",
@@ -75,7 +76,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; analyst revision; guidance change"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Accumulation days exceed distribution days; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "COIN",
@@ -84,7 +85,7 @@
     "sector": "Financial Services",
     "industry": "Financial Data & Stock Exchanges",
     "exchange": "NMS",
-    "market_cap": 45265195008.0,
+    "market_cap": 44982923264.0,
     "revenue_growth": -0.308,
     "eps_growth": null,
     "fcf_growth": null,
@@ -101,15 +102,15 @@
     "cash_position": 10438001664.0,
     "total_debt": 7964423168.0,
     "interest_coverage": null,
-    "forward_pe": 34.713226,
-    "trailing_pe": 63.16544,
+    "forward_pe": 34.496758,
+    "trailing_pe": 63.003174,
     "peg": 0.89,
-    "price_to_book": 3.3571723,
-    "price_to_sales": 7.200994,
-    "enterprise_to_ebitda": 39.525,
-    "enterprise_to_revenue": 6.303,
-    "fcf_yield": 0.053187946093560326,
-    "institutional_ownership": 0.68481004,
+    "price_to_book": 3.3362372,
+    "price_to_sales": 7.156089,
+    "enterprise_to_ebitda": 42.112,
+    "enterprise_to_revenue": 6.716,
+    "fcf_yield": 0.05352170506728231,
+    "institutional_ownership": 0.68483,
     "insider_ownership": 0.0133299995,
     "short_interest": 24369222.0,
     "short_ratio": 2.5,
@@ -123,20 +124,19 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1778184000",
-    "eps_current_year": 2.72,
+    "eps_current_year": 2.71,
     "eps_forward": 4.94941,
-    "classification": "Fundamentally Weak",
-    "from_cache": true
+    "classification": "Fundamentally Weak"
   },
   "technical_screen": {
-    "rsi": 44.515992896520345,
-    "macd_cross": false,
+    "rsi": 48.25197982492529,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.032301162029004,
+    "relative_volume": 0.4823948403538312,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 152.39999389648438,
     "resistance": 216.60000610351562
   },
@@ -189,7 +189,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.68481004,
+    "institutional_ownership": 0.68483,
     "detail": {
       "earnings": {
         "available": true,
@@ -229,8 +229,8 @@
         "last_surprise_pct": -34.5888,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 35.44,
-      "eps_growth_implied": 81.96
+      "analyst_upside_pct": 34.55,
+      "eps_growth_implied": 82.64
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -246,7 +246,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0133299995,
-    "institutional_ownership": 0.68481004,
+    "institutional_ownership": 0.68483,
     "short_interest": 24369222.0,
     "short_percent_float": 0.111,
     "days_to_cover": 2.5,
@@ -255,6 +255,36 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "SpaceX becomes retail's biggest IPO trade: Chart of the Day",
+        "source": "Yahoo Finance",
+        "published": "2026-06-16T10:00:00Z",
+        "summary": "SpaceX's market debut turned into a record retail buying event.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Ethereum Jumps 10% As Crypto Trade Reignites",
+        "source": "CryptoProwl",
+        "published": "2026-06-16T13:29:00Z",
+        "summary": "Ethereum\u2019s (CRYPTO: $ETH) price jumped 10% higher on June 15 and is now trading at $1,800 U.S. as investors r...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Coinbase Global, Inc. (COIN) Is a Trending Stock: Facts to Know Before Betting on It",
+        "source": "Zacks",
+        "published": "2026-06-16T13:00:07Z",
+        "summary": "Recently, Zacks.com users have been paying close attention to Coinbase Global (COIN). This makes it worthwhile to examine what the stock has in store.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Is Coinbase Global, Inc. (COIN) A Good Stock To Buy Now?",
         "source": "Insider Monkey",
@@ -274,36 +304,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Stocks to Watch Recap: SpaceX, Micron Technology, Remy Cointreau",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-15T20:46:17Z",
-        "summary": "\u2197\ufe0f SpaceX (SPCX): Shares of Elon Musk\u2019s rocket company rose nearly 20%, extending the 19% gain the stock recorded on its trading debut. \u2197\ufe0f Micron Technology (MU), Super Micro Computer (SMCI), Marvell Technology (MRVL): Shares of companies tied to the AI buildout were among the biggest winners Monday as the interim deal between the U.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Kraken Launches U.S. Perpetual Futures",
-        "source": "CryptoProwl",
-        "published": "2026-06-15T19:53:00Z",
-        "summary": "Cryptocurrency exchange Kraken has begun offering perpetual futures contracts to its U.S. customers. <...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Coinbase (COIN) Stock Valuation After AI Agents Launch And New Trust Charter Approval",
-        "source": "Simply Wall St.",
-        "published": "2026-06-15T19:08:52Z",
-        "summary": "Coinbase Global (COIN) is back in focus after launching Coinbase for Agents, an AI driven trading product, and receiving conditional U.S. approval for a national trust company charter, against a backdrop of recovering Bitcoin sentiment. See our latest analysis for Coinbase Global. Despite headlines around Coinbase for Agents, the trust charter approval and new partnerships in mortgages and cross border payouts, momentum in Coinbase\u2019s stock has cooled, with the share price down 32.45% year to...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -325,10 +325,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
+    "date_of_change": "2026-06-16",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: COIN\nRating: Avoid | Score: 23.3/100 | Confidence: 16.09/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 152.39999389648438 | Resistance: 216.60000610351562\nFundamental Outlook: Fundamentally Weak | Forward P/E: 34.713226\nNews/Catalyst: Is Coinbase Global, Inc. (COIN) A Good Stock To Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COIN\nRating: Avoid | Score: 27.05/100 | Confidence: 20.49/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 152.39999389648438 | Resistance: 216.60000610351562\nFundamental Outlook: Fundamentally Weak | Forward P/E: 34.496758\nNews/Catalyst: SpaceX becomes retail's biggest IPO trade: Chart of the Day\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

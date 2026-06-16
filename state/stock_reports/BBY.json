@@ -1,13 +1,13 @@
 {
   "ticker": "BBY",
-  "generated_at": "2026-06-15T23:00:04.265020",
+  "generated_at": "2026-06-16T17:58:37.900025",
   "score": {
-    "final_score": 64.45,
-    "rating": "Hold",
-    "confidence": 57.29,
+    "final_score": 66.2,
+    "rating": "Watch",
+    "confidence": 58.31,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 68.0,
+      "technical": 75.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 68.0,
@@ -15,28 +15,29 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 55.52000045776367,
       "resistance": 78.52999877929688,
-      "risk_reward": 0.05
+      "risk_reward": 0.11
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.36573753079250815,
-        "3m": 0.2496207736187388,
-        "6m": 0.06211080710939032,
-        "12m": 0.1272980025407382
+        "1m": 0.3557214766647345,
+        "3m": 0.23701289063002506,
+        "6m": 0.06840005798815096,
+        "12m": 0.15806935983650283
       },
-      "acceleration": 0.2186,
+      "acceleration": 0.2028,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,9 +49,9 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5250682.05,
-      "relative_volume": 0.47407955315062356,
-      "accumulation_days": 9,
+      "average_volume": 5141784.1,
+      "relative_volume": 0.2311419493478927,
+      "accumulation_days": 8,
       "distribution_days": 2,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -66,14 +67,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02539677324637995,
-        "annualized_volatility": 0.4031612766805192,
-        "maximum_drawdown": -0.443422904231606,
-        "sharpe_ratio": 0.11787577517155971,
-        "sortino_ratio": 0.16442817842228089,
-        "calmar_ratio": -0.07483311138694249,
-        "beta": 1.0813716135999616,
-        "alpha": -0.15678598205655425
+        "volatility": 0.025379620664987192,
+        "annualized_volatility": 0.40288898789227107,
+        "maximum_drawdown": -0.4434229042316068,
+        "sharpe_ratio": 0.0997813752440867,
+        "sortino_ratio": 0.1393630983322105,
+        "calmar_ratio": -0.09050090027722904,
+        "beta": 1.0820891402348587,
+        "alpha": -0.16207156106483672
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -89,7 +90,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "BBY",
@@ -98,7 +99,7 @@
     "sector": "Consumer Cyclical",
     "industry": "Specialty Retail",
     "exchange": "NYQ",
-    "market_cap": 16387143680.0,
+    "market_cap": 16083638272.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.379,
     "fcf_growth": null,
@@ -115,15 +116,15 @@
     "cash_position": 1903000064.0,
     "total_debt": 4134000128.0,
     "interest_coverage": null,
-    "forward_pe": 10.993843,
-    "trailing_pe": 14.398148,
+    "forward_pe": 10.790227,
+    "trailing_pe": 14.131481,
     "peg": 1.5,
-    "price_to_book": 5.313696,
-    "price_to_sales": 0.391475,
-    "enterprise_to_ebitda": 7.174,
-    "enterprise_to_revenue": 0.449,
-    "fcf_yield": 0.06979556891271488,
-    "institutional_ownership": 0.9928,
+    "price_to_book": 5.2152815,
+    "price_to_sales": 0.3842245,
+    "enterprise_to_ebitda": 7.084,
+    "enterprise_to_revenue": 0.443,
+    "fcf_yield": 0.07111264234232088,
+    "institutional_ownership": 0.99293,
     "insider_ownership": 0.06461,
     "short_interest": 19027310.0,
     "short_ratio": 4.18,
@@ -134,20 +135,19 @@
     "target_low_price": 60.0,
     "recommendation": "hold",
     "number_of_analysts": 20.0,
-    "dividend_yield": 4.89,
+    "dividend_yield": 4.96,
     "payout_ratio": 0.70559996,
     "next_earnings_date": "1779971400",
     "eps_current_year": 5.4,
     "eps_forward": 7.07214,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 73.37727631287214,
+    "rsi": 69.50896707234435,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.47407955315062356,
+    "relative_volume": 0.2311419493478927,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -203,7 +203,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.9928,
+    "institutional_ownership": 0.99293,
     "detail": {
       "earnings": {
         "available": true,
@@ -243,7 +243,7 @@
         "last_surprise_pct": 0.0432,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 1.6,
+      "analyst_upside_pct": 3.07,
       "eps_growth_implied": 30.97
     },
     "evidence": [
@@ -262,7 +262,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.06461,
-    "institutional_ownership": 0.9928,
+    "institutional_ownership": 0.99293,
     "short_interest": 19027310.0,
     "short_percent_float": 0.1018,
     "days_to_cover": 4.18,
@@ -341,10 +341,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
+    "date_of_change": "2026-06-16",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BBY\nRating: Hold | Score: 64.45/100 | Confidence: 57.29/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 55.52000045776367 | Resistance: 78.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.993843\nNews/Catalyst: Best Buy Leans Into Experiential Tech To Support Growth Narrative\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BBY\nRating: Watch | Score: 66.2/100 | Confidence: 58.31/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 55.52000045776367 | Resistance: 78.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.790227\nNews/Catalyst: Best Buy Leans Into Experiential Tech To Support Growth Narrative\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

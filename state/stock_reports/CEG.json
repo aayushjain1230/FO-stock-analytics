@@ -1,49 +1,52 @@
 {
   "ticker": "CEG",
-  "generated_at": "2026-06-15T23:00:15.943238",
+  "generated_at": "2026-06-16T17:58:52.894786",
   "score": {
-    "final_score": 28.15,
-    "rating": "Avoid",
-    "confidence": 22.88,
+    "final_score": 33.9,
+    "rating": "Drop",
+    "confidence": 34.55,
     "risk_level": "High",
     "categories": {
-      "technical": 20.0,
+      "technical": 28.0,
       "momentum": 10.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 81.0,
       "risk": 35.0,
       "catalyst": 65.0
     },
     "technical": {
-      "score": 20.0,
+      "score": 28.0,
       "evidence": [
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Price above SMA20",
+        "MACD is above signal",
+        "Stock is not materially extended from SMA20"
       ],
       "support": 242.3000030517578,
       "resistance": 322.7799987792969,
-      "risk_reward": 3.01
+      "risk_reward": 1.91
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.04542031471525676,
-        "3m": -0.14013476283373638,
-        "6m": -0.30504562477572006,
-        "12m": -0.12201479710006091
+        "1m": 0.010179644822005507,
+        "3m": -0.12139037990929535,
+        "6m": -0.23091747340108937,
+        "12m": -0.08606220788260244
       },
-      "acceleration": 0.0124,
+      "acceleration": -0.0059,
       "evidence": [
-        "Momentum is accelerating"
+        "1m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 4159162.9,
-      "relative_volume": 0.8807680987921873,
+      "score": 25.0,
+      "average_volume": 4106963.4,
+      "relative_volume": 0.542095894986549,
       "accumulation_days": 4,
-      "distribution_days": 4,
-      "evidence": []
+      "distribution_days": 3,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 81.0,
@@ -56,14 +59,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.03731384282294072,
-        "annualized_volatility": 0.592338891417921,
-        "maximum_drawdown": -0.5070227601794524,
-        "sharpe_ratio": 0.48512664580328835,
-        "sortino_ratio": 0.6865816307056077,
-        "calmar_ratio": 0.23723029388346362,
-        "beta": 1.6397109759015323,
-        "alpha": -0.02243938977577905
+        "volatility": 0.03729704500796527,
+        "annualized_volatility": 0.5920722343719549,
+        "maximum_drawdown": -0.5070228481407586,
+        "sharpe_ratio": 0.5089369453507769,
+        "sortino_ratio": 0.7199550975254154,
+        "calmar_ratio": 0.2686269319351362,
+        "beta": 1.637310239134459,
+        "alpha": -0.004731118320647036
       },
       "evidence": [
         "Volatility is elevated",
@@ -80,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; revenue growth is strong; eps growth is strong; earnings surprise"
+    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Accumulation days exceed distribution days; revenue growth is strong"
   },
   "fundamentals": {
     "ticker": "CEG",
@@ -89,7 +92,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Independent Power Producers",
     "exchange": "NMS",
-    "market_cap": 94102306816.0,
+    "market_cap": 96487178240.0,
     "revenue_growth": 0.638,
     "eps_growth": 10.91,
     "fcf_growth": null,
@@ -106,15 +109,15 @@
     "cash_position": 864000000.0,
     "total_debt": 22466000896.0,
     "interest_coverage": null,
-    "forward_pe": 19.357063,
-    "trailing_pe": 22.874704,
+    "forward_pe": 19.880173,
+    "trailing_pe": 23.454428,
     "peg": 3.74,
-    "price_to_book": 2.8518188,
-    "price_to_sales": 3.1507118,
-    "enterprise_to_ebitda": 14.276,
-    "enterprise_to_revenue": 3.803,
-    "fcf_yield": -0.04759580596422177,
-    "institutional_ownership": 0.83018,
+    "price_to_book": 2.9240935,
+    "price_to_sales": 3.2305615,
+    "enterprise_to_ebitda": 14.666,
+    "enterprise_to_revenue": 3.907,
+    "fcf_yield": -0.04641938149397787,
+    "institutional_ownership": 0.83023,
     "insider_ownership": 0.0032300001,
     "short_interest": 11593455.0,
     "short_ratio": 3.46,
@@ -125,23 +128,22 @@
     "target_low_price": 310.0,
     "recommendation": "strong_buy",
     "number_of_analysts": 19.0,
-    "dividend_yield": 0.67,
+    "dividend_yield": 0.65,
     "payout_ratio": 0.1381,
     "next_earnings_date": "1778502600",
     "eps_current_year": 11.52,
-    "eps_forward": 13.61346,
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "eps_forward": 13.59118,
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 30.00203222366038,
-    "macd_cross": false,
+    "rsi": 39.885708757403584,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8807680987921873,
+    "relative_volume": 0.542095894986549,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 242.3000030517578,
     "resistance": 322.7799987792969
   },
@@ -192,9 +194,9 @@
     "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 4,
-    "bearish_news_score": 0,
-    "institutional_ownership": 0.83018,
+    "bullish_news_score": 3,
+    "bearish_news_score": 1,
+    "institutional_ownership": 0.83023,
     "detail": {
       "earnings": {
         "available": true,
@@ -234,8 +236,8 @@
         "last_surprise_pct": 0.053000003,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 40.43,
-      "eps_growth_implied": 18.17
+      "analyst_upside_pct": 36.36,
+      "eps_growth_implied": 17.98
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -253,7 +255,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0032300001,
-    "institutional_ownership": 0.83018,
+    "institutional_ownership": 0.83023,
     "short_interest": 11593455.0,
     "short_percent_float": 0.036,
     "days_to_cover": 3.46,
@@ -262,6 +264,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Vistra Outperforms Industry in the Past Month: Buy or Hold the Stock?",
+        "source": "Zacks",
+        "published": "2026-06-16T15:17:00Z",
+        "summary": "VST's rally is backed by AI-driven demand, hedged generation, the Cogentrix deal and capital returns, but risks remain.",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
       {
         "headline": "Constellation Energy (CEG) Passes Another Regulatory Hurdle For Three Mile Island Nuclear Plant",
         "source": "Insider Monkey",
@@ -301,16 +313,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Constellation Energy Corporation (CEG) Beats Stock Market Upswing: What Investors Need to Know",
-        "source": "Zacks",
-        "published": "2026-06-12T21:45:03Z",
-        "summary": "In the most recent trading session, Constellation Energy Corporation (CEG) closed at $253.76, indicating a +2.86% shift from the previous trading day.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -332,10 +334,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
+    "date_of_change": "2026-06-16",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CEG\nRating: Avoid | Score: 28.15/100 | Confidence: 22.88/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 19.357063\nNews/Catalyst: Constellation Energy (CEG) Passes Another Regulatory Hurdle For Three Mile Island Nuclear Plant\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CEG\nRating: Drop | Score: 33.9/100 | Confidence: 34.55/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 19.880173\nNews/Catalyst: Vistra Outperforms Industry in the Past Month: Buy or Hold the Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

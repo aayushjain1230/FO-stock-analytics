@@ -1,42 +1,43 @@
 {
   "ticker": "CRL",
-  "generated_at": "2026-06-15T23:00:28.210834",
+  "generated_at": "2026-06-16T17:59:08.442863",
   "score": {
-    "final_score": 57.25,
+    "final_score": 63.5,
     "rating": "Hold",
-    "confidence": 42.49,
+    "confidence": 57.36,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
+      "technical": 75.0,
       "momentum": 70.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 60.0,
       "risk": 75.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 149.92999267578125,
       "resistance": 189.85000610351562,
-      "risk_reward": 0.04
+      "risk_reward": 0.08
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.18445202994067555,
-        "3m": 0.24017898076470856,
-        "6m": -0.03065366291000493,
-        "12m": 0.24083219420664292
+        "1m": 0.237819015899688,
+        "3m": 0.2147875736620466,
+        "6m": -0.032663278846052024,
+        "12m": 0.24941458625912571
       },
-      "acceleration": 0.2555,
+      "acceleration": 0.2311,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,12 +47,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 850972.3,
-      "relative_volume": 0.4956048510627196,
+      "score": 25.0,
+      "average_volume": 790735.5,
+      "relative_volume": 0.19615914550440697,
       "accumulation_days": 3,
-      "distribution_days": 3,
-      "evidence": []
+      "distribution_days": 2,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 60.0,
@@ -61,28 +64,29 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.03145306883811567,
-        "annualized_volatility": 0.4993019886926961,
+        "volatility": 0.0314244488582259,
+        "annualized_volatility": 0.49884766059680014,
         "maximum_drawdown": -0.5933384861581336,
-        "sharpe_ratio": 0.15489231954267174,
-        "sortino_ratio": 0.19271915365068545,
-        "calmar_ratio": -0.0834598242279478,
-        "beta": 1.3852435835275392,
-        "alpha": -0.18438293309566284
+        "sharpe_ratio": 0.14536895098736108,
+        "sortino_ratio": 0.18100249694289489,
+        "calmar_ratio": -0.09079030776758705,
+        "beta": 1.3855274227246865,
+        "alpha": -0.18647642180549073
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "analyst revision",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "CRL",
@@ -91,7 +95,7 @@
     "sector": "Healthcare",
     "industry": "Diagnostics & Research",
     "exchange": "NYQ",
-    "market_cap": 9169690624.0,
+    "market_cap": 8994119680.0,
     "revenue_growth": 0.012,
     "eps_growth": null,
     "fcf_growth": null,
@@ -108,15 +112,15 @@
     "cash_position": 191830000.0,
     "total_debt": 3064531968.0,
     "interest_coverage": null,
-    "forward_pe": 15.465115,
+    "forward_pe": 15.169006,
     "trailing_pe": null,
     "peg": 0.12,
-    "price_to_book": 3.1182637,
-    "price_to_sales": 2.2770276,
-    "enterprise_to_ebitda": 13.435,
-    "enterprise_to_revenue": 2.968,
-    "fcf_yield": 0.05562060541771229,
-    "institutional_ownership": 1.234,
+    "price_to_book": 3.0585587,
+    "price_to_sales": 2.2334297,
+    "enterprise_to_ebitda": 13.487,
+    "enterprise_to_revenue": 2.98,
+    "fcf_yield": 0.056706355057085475,
+    "institutional_ownership": 1.2339801,
     "insider_ownership": 0.00636,
     "short_interest": 3897904.0,
     "short_ratio": 4.01,
@@ -132,15 +136,14 @@
     "next_earnings_date": "1778157000",
     "eps_current_year": -3.71,
     "eps_forward": 12.30964,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 74.53616776731351,
+    "rsi": 68.95081529732973,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4956048510627196,
+    "relative_volume": 0.19615914550440697,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -192,11 +195,11 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 2,
-    "institutional_ownership": 1.234,
+    "bullish_news_score": 2,
+    "bearish_news_score": 1,
+    "institutional_ownership": 1.2339801,
     "detail": {
       "earnings": {
         "available": true,
@@ -236,12 +239,13 @@
         "last_surprise_pct": 0.0542,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.63,
+      "analyst_upside_pct": 13.68,
       "eps_growth_implied": 431.8
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -254,7 +258,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00636,
-    "institutional_ownership": 1.234,
+    "institutional_ownership": 1.2339801,
     "short_interest": 3897904.0,
     "short_percent_float": 0.0934,
     "days_to_cover": 4.01,
@@ -263,6 +267,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "1 S&P 500 Stock on Our Buy List and 2 We Brush Off",
+        "source": "StockStory",
+        "published": "2026-06-16T10:57:04Z",
+        "summary": "The S&P 500 (^GSPC) is often seen as a benchmark for strong businesses, but that doesn\u2019t mean every stock is worth owning. Some companies face significant challenges, whether it\u2019s stagnating growth, heavy debt, or disruptive new competitors.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "LH vs. CRL: Which Stock Is the Better Value Option?",
         "source": "Zacks",
@@ -302,16 +316,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Zacks Analyst Blog Highlights Stantec, CBIZ and Charles River",
-        "source": "Zacks",
-        "published": "2026-06-04T09:12:00Z",
-        "summary": "Stantec, CBIZ and Charles River Associates stand out as consulting services picks despite industry underperformance and weak near-term rankings.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -333,10 +337,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-15",
+    "date_of_change": "2026-06-16",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CRL\nRating: Hold | Score: 57.25/100 | Confidence: 42.49/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 149.92999267578125 | Resistance: 189.85000610351562\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.465115\nNews/Catalyst: LH vs. CRL: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CRL\nRating: Hold | Score: 63.5/100 | Confidence: 57.36/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 149.92999267578125 | Resistance: 189.85000610351562\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.169006\nNews/Catalyst: 1 S&P 500 Stock on Our Buy List and 2 We Brush Off\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
