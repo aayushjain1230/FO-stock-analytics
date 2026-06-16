@@ -1,10 +1,10 @@
 {
   "ticker": "CMCSA",
-  "generated_at": "2026-06-16T17:58:58.472650",
+  "generated_at": "2026-06-16T20:44:40.760549",
   "score": {
-    "final_score": 27.3,
+    "final_score": 28.05,
     "rating": "Avoid",
-    "confidence": 4.5,
+    "confidence": 12.45,
     "risk_level": "Controlled",
     "categories": {
       "technical": 30.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 57.0,
       "risk": 75.0,
-      "catalyst": 0
+      "catalyst": 15.0
     },
     "technical": {
       "score": 30.0,
@@ -23,23 +23,23 @@
       ],
       "support": 23.329999923706055,
       "resistance": 31.639999389648438,
-      "risk_reward": 34.36
+      "risk_reward": 24.18
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.04826331517680216,
-        "3m": -0.207479650160315,
-        "6m": -0.05492423083419207,
-        "12m": -0.250329331278201
+        "1m": -0.04442650934173287,
+        "3m": -0.2042847048028803,
+        "6m": -0.05111427763648424,
+        "12m": -0.24730717465211793
       },
-      "acceleration": -0.18,
+      "acceleration": -0.1787,
       "evidence": []
     },
     "volume": {
       "score": 0,
-      "average_volume": 29310249.3,
-      "relative_volume": 0.3909139728811518,
+      "average_volume": 30106293.35,
+      "relative_volume": 0.9092772292408424,
       "accumulation_days": 2,
       "distribution_days": 3,
       "evidence": []
@@ -52,24 +52,26 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.017831018109439125,
-        "annualized_volatility": 0.28305863724399016,
-        "maximum_drawdown": -0.41425962664365956,
-        "sharpe_ratio": -0.4235262682728475,
-        "sortino_ratio": -0.49940847145816347,
-        "calmar_ratio": -0.3582327812132823,
-        "beta": 0.4929084092613403,
-        "alpha": -0.21202097815604037
+        "volatility": 0.017824576649064904,
+        "annualized_volatility": 0.28295638223060854,
+        "maximum_drawdown": -0.4142596266436597,
+        "sharpe_ratio": -0.4166201064328297,
+        "sortino_ratio": -0.4911578348140391,
+        "calmar_ratio": -0.3540601274986357,
+        "beta": 0.4929774175823843,
+        "alpha": -0.20935848195206846
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 0,
-      "evidence": []
+      "score": 15.0,
+      "evidence": [
+        "major news"
+      ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; major news"
   },
   "fundamentals": {
     "ticker": "CMCSA",
@@ -119,14 +121,15 @@
     "next_earnings_date": "1784809800",
     "eps_current_year": 5.1,
     "eps_forward": 3.78416,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 31.508371459040333,
+    "rsi": 32.1917679964849,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3909139728811518,
+    "relative_volume": 0.9092772292408424,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -178,10 +181,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": false,
-    "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bullish_news_score": 2,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.93671995,
     "detail": {
       "earnings": {
@@ -222,10 +225,12 @@
         "last_surprise_pct": 0.083000004,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 37.57,
+      "analyst_upside_pct": 36.96,
       "eps_growth_implied": -25.8
     },
-    "evidence": []
+    "evidence": [
+      "recent news item has elevated importance"
+    ]
   },
   "analyst": {
     "consensus": "hold",
@@ -245,6 +250,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Rosenblatt Lowers PT on Comcast (CMCSA) Stock",
+        "source": "Insider Monkey",
+        "published": "2026-06-16T19:19:48Z",
+        "summary": "Comcast Corporation (NASDAQ:CMCSA) is one of the Most Undervalued Long Term Stocks to Buy Right Now. On June 5, Rosenblatt reduced its price objective on the company\u2019s stock to $24 from $30 and maintained a \u201cNeutral\u201d rating. The firm noted the decline in the company\u2019s stock price on a YTD basis, which the analyst believes was [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "The Real Engine Behind Netflix Stock Is Not Subscribers",
+        "source": "Trefis",
+        "published": "2026-06-16T18:09:26Z",
+        "summary": "With the stock beaten down, the market seems to be missing the quiet, compounding power of the company's steadily climbing profitability.",
+        "bullish_score": 2,
+        "bearish_score": 1,
+        "importance_score": 75,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Fox Stock Extends Slide to Second Day After Roku Deal",
         "source": "Barrons.com",
@@ -274,26 +299,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Roku For Sale? JPMorgan Sees Comcast As The Most Logical Buyer",
-        "source": "Benzinga",
-        "published": "2026-06-15T15:41:46Z",
-        "summary": "Roku Inc. (NASDAQ:ROKU) shares surged Friday after a report suggested the streaming platform is exploring a potential sale. Now, JPMorgan believes one name stands out from a crowded field of possible buyers. In a note following the report, analyst Cory Carpenter said Roku\u2019s combination of TV operating system ownership and distribution into more than 100 million households makes it a strategic asset. While the firm sees potential logic for combinations involving Amazon.com Inc. (NASDAQ:AMZN), Net",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Spielberg\u2019s \u2019Disclosure Day\u2019 opens to $93.9M globally, beats forecasts",
-        "source": "Investing.com",
-        "published": "2026-06-15T12:25:34Z",
-        "summary": "The result is a positive data point for Comcast Corp (NASDAQ:CMCSA), which distributes the film through its Universal Pictures unit.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -320,5 +325,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CMCSA\nRating: Avoid | Score: 27.3/100 | Confidence: 4.5/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 23.329999923706055 | Resistance: 31.639999389648438\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.2246313\nNews/Catalyst: Fox Stock Extends Slide to Second Day After Roku Deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMCSA\nRating: Avoid | Score: 28.05/100 | Confidence: 12.45/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 23.329999923706055 | Resistance: 31.639999389648438\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.2246313\nNews/Catalyst: Rosenblatt Lowers PT on Comcast (CMCSA) Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

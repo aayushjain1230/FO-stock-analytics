@@ -1,14 +1,14 @@
 {
   "ticker": "APP",
-  "generated_at": "2026-06-16T17:58:28.783920",
+  "generated_at": "2026-06-16T20:44:16.835718",
   "score": {
-    "final_score": 44.65,
-    "rating": "Drop",
-    "confidence": 44.15,
+    "final_score": 50.9,
+    "rating": "Hold",
+    "confidence": 48.1,
     "risk_level": "High",
     "categories": {
       "technical": 30.0,
-      "momentum": 45.0,
+      "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 35.0,
@@ -23,29 +23,31 @@
       ],
       "support": 372.0799865722656,
       "resistance": 613.7000122070312,
-      "risk_reward": 0.89
+      "risk_reward": 0.69
     },
     "momentum": {
-      "score": 45.0,
+      "score": 70.0,
       "returns": {
-        "1m": -0.0024451219631050902,
-        "3m": 0.08862096295526678,
-        "6m": -0.2548123419392174,
-        "12m": 0.3711624661492574
+        "1m": 0.028343337738585328,
+        "3m": 0.12222007954153624,
+        "6m": -0.2318129253802491,
+        "12m": 0.4134819227154809
       },
-      "acceleration": 0.216,
+      "acceleration": 0.2381,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "12m return is positive",
-        "Momentum is accelerating"
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4818555.5,
-      "relative_volume": 0.8346297972494039,
+      "average_volume": 4948259.65,
+      "relative_volume": 1.336549305774607,
       "accumulation_days": 5,
-      "distribution_days": 3,
+      "distribution_days": 4,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -61,14 +63,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.05238553088806609,
-        "annualized_volatility": 0.8315945221674929,
+        "volatility": 0.05235068303933876,
+        "annualized_volatility": 0.8310413297187442,
         "maximum_drawdown": -0.5699723736744687,
-        "sharpe_ratio": 1.5291248143582834,
-        "sortino_ratio": 2.2024465642835636,
-        "calmar_ratio": 2.706463132544364,
-        "beta": 2.258953040498917,
-        "alpha": 0.8493510396155856
+        "sharpe_ratio": 1.5481029538060675,
+        "sortino_ratio": 2.2263790628633475,
+        "calmar_ratio": 2.775331709179214,
+        "beta": 2.2564842163065566,
+        "alpha": 0.8678413797416703
       },
       "evidence": [
         "Volatility is elevated",
@@ -86,7 +88,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive; Momentum is accelerating"
+    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; 12m return is positive"
   },
   "fundamentals": {
     "ticker": "APP",
@@ -136,14 +138,15 @@
     "next_earnings_date": "1778097600",
     "eps_current_year": 11.51,
     "eps_forward": 21.92634,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 36.777984412914634,
+    "rsi": 39.12288270287452,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8346297972494039,
+    "relative_volume": 1.336549305774607,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -239,7 +242,7 @@
         "last_surprise_pct": 0.0339,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 29.68,
+      "analyst_upside_pct": 25.8,
       "eps_growth_implied": 90.5
     },
     "evidence": [
@@ -343,5 +346,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APP\nRating: Drop | Score: 44.65/100 | Confidence: 44.15/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 372.0799865722656 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 22.79359\nNews/Catalyst: AppLovin and Elastic Shares Are Soaring, What You Need To Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APP\nRating: Hold | Score: 50.9/100 | Confidence: 48.1/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 372.0799865722656 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 22.79359\nNews/Catalyst: AppLovin and Elastic Shares Are Soaring, What You Need To Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

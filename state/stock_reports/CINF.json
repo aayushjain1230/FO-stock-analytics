@@ -1,6 +1,6 @@
 {
   "ticker": "CINF",
-  "generated_at": "2026-06-16T17:58:56.954843",
+  "generated_at": "2026-06-16T20:44:39.403381",
   "score": {
     "final_score": 70.45,
     "rating": "Watch",
@@ -27,18 +27,18 @@
         "Stock is not materially extended from SMA20"
       ],
       "support": 153.67999267578125,
-      "resistance": 171.33999633789062,
+      "resistance": 171.7899932861328,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.03647691530065833,
-        "3m": 0.034708206343831094,
-        "6m": 0.04988706802948606,
-        "12m": 0.1822714941597845
+        "1m": 0.03226772729402394,
+        "3m": 0.048758910338349226,
+        "6m": 0.047313257338262416,
+        "12m": 0.20068367467298143
       },
-      "acceleration": 0.0098,
+      "acceleration": 0.0251,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,9 +49,9 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 618286.05,
-      "relative_volume": 0.4216834586515416,
-      "accumulation_days": 4,
+      "average_volume": 643464.1,
+      "relative_volume": 1.0290892685388353,
+      "accumulation_days": 6,
       "distribution_days": 3,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -68,14 +68,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014357910495610785,
-        "annualized_volatility": 0.22792476310746168,
-        "maximum_drawdown": -0.2002595419275276,
-        "sharpe_ratio": 1.1262069316970578,
-        "sortino_ratio": 1.5335905278878421,
-        "calmar_ratio": 1.2948433191234965,
-        "beta": 0.5486757760469575,
-        "alpha": 0.15880838625411478
+        "volatility": 0.014344815901789406,
+        "annualized_volatility": 0.22771689287483707,
+        "maximum_drawdown": -0.2002594926261968,
+        "sharpe_ratio": 1.1308107774790754,
+        "sortino_ratio": 1.538456648790097,
+        "calmar_ratio": 1.3002591201293823,
+        "beta": 0.5452052538886567,
+        "alpha": 0.15634055021868326
       },
       "evidence": []
     },
@@ -137,19 +137,20 @@
     "next_earnings_date": "1777320000",
     "eps_current_year": 17.49,
     "eps_forward": 9.18298,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 56.980530659541934,
+    "rsi": 66.29833850483982,
     "macd_cross": false,
     "breakout": true,
-    "new_52w_high": false,
-    "relative_volume": 0.4216834586515416,
+    "new_52w_high": true,
+    "relative_volume": 1.0290892685388353,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
     "support": 153.67999267578125,
-    "resistance": 171.33999633789062
+    "resistance": 171.7899932861328
   },
   "earnings": {
     "next_earnings_date": "1777320000",
@@ -240,7 +241,7 @@
         "last_surprise_pct": 0.082399994,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.93,
+      "analyst_upside_pct": 5.65,
       "eps_growth_implied": -47.5
     },
     "evidence": [
@@ -334,13 +335,26 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
     "date_of_change": "2026-06-16",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      },
+      {
+        "reason": "52-week high",
+        "evidence": "Price is pressing against 52-week highs",
+        "strength": 65,
+        "invalidates": "Failed breakout below prior range high"
+      }
+    ]
   },
-  "report": "Ticker: CINF\nRating: Watch | Score: 70.45/100 | Confidence: 59.14/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 153.67999267578125 | Resistance: 171.33999633789062\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.658432\nNews/Catalyst: Why Cincinnati Financial (CINF) is a Great Dividend Stock Right Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CINF\nRating: Watch | Score: 70.45/100 | Confidence: 59.14/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 153.67999267578125 | Resistance: 171.7899932861328\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.658432\nNews/Catalyst: Why Cincinnati Financial (CINF) is a Great Dividend Stock Right Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

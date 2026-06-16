@@ -1,6 +1,6 @@
 {
   "ticker": "BKNG",
-  "generated_at": "2026-06-16T17:58:40.503887",
+  "generated_at": "2026-06-16T20:44:25.969177",
   "score": {
     "final_score": 52.4,
     "rating": "Hold",
@@ -30,12 +30,12 @@
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.14225971030993878,
-        "3m": -0.009210922770981678,
-        "6m": -0.1679078528350485,
-        "12m": -0.16436674185288602
+        "1m": 0.1429426382236767,
+        "3m": -0.008618555281032392,
+        "6m": -0.16741036618733418,
+        "12m": -0.16386707735683803
       },
-      "acceleration": 0.0747,
+      "acceleration": 0.0751,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +43,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7408472.3,
-      "relative_volume": 0.5366755572535514,
+      "average_volume": 7566765.55,
+      "relative_volume": 0.9435221631784271,
       "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
@@ -62,14 +62,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019522084122366234,
-        "annualized_volatility": 0.30990347796878215,
-        "maximum_drawdown": -0.3335378104247332,
-        "sharpe_ratio": 0.35192442638532473,
-        "sortino_ratio": 0.48379231219688734,
-        "calmar_ratio": 0.1886696072883711,
-        "beta": 0.9704587705287503,
-        "alpha": -0.07234297212883183
+        "volatility": 0.019522425603230663,
+        "annualized_volatility": 0.3099088988094508,
+        "maximum_drawdown": -0.33353772225807254,
+        "sharpe_ratio": 0.35289609470997885,
+        "sortino_ratio": 0.4851364780632415,
+        "calmar_ratio": 0.18962979864476304,
+        "beta": 0.9696419852952337,
+        "alpha": -0.07055379850138876
       },
       "evidence": []
     },
@@ -132,14 +132,15 @@
     "next_earnings_date": "1777406400",
     "eps_current_year": 7.58,
     "eps_forward": 12.3037,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 59.521617954527315,
+    "rsi": 59.63302165185053,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5366755572535514,
+    "relative_volume": 0.9435221631784271,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -235,7 +236,7 @@
         "last_surprise_pct": 0.056700002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.8,
+      "analyst_upside_pct": 27.71,
       "eps_growth_implied": 62.32
     },
     "evidence": [
@@ -330,13 +331,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
     "date_of_change": "2026-06-16",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: BKNG\nRating: Hold | Score: 52.4/100 | Confidence: 50.19/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 154.1300048828125 | Resistance: 192.02999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 14.271723\nNews/Catalyst: Why Expedia (EXPE) Stock Is Up Today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BKNG\nRating: Hold | Score: 52.4/100 | Confidence: 50.19/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 154.1300048828125 | Resistance: 192.02999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 14.271723\nNews/Catalyst: Why Expedia (EXPE) Stock Is Up Today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }
