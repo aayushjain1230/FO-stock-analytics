@@ -1,10 +1,10 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-16T20:44:33.464659",
+  "generated_at": "2026-06-16T22:51:53.658125",
   "score": {
-    "final_score": 37.2,
+    "final_score": 37.95,
     "rating": "Drop",
-    "confidence": 26.7,
+    "confidence": 29.27,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 78.0,
       "risk": 85.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 10.0,
@@ -55,27 +55,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016562025207886515,
-        "annualized_volatility": 0.26291399944590327,
-        "maximum_drawdown": -0.2751679128485257,
-        "sharpe_ratio": 1.0138175595766994,
-        "sortino_ratio": 1.2920237741365497,
-        "calmar_ratio": 0.9472033514260699,
-        "beta": -0.226582172172297,
-        "alpha": 0.30858970474345576
+        "volatility": 0.01656202563786345,
+        "annualized_volatility": 0.2629140062715755,
+        "maximum_drawdown": -0.2751679128485255,
+        "sharpe_ratio": 1.0138171900236506,
+        "sortino_ratio": 1.292023722107195,
+        "calmar_ratio": 0.9472029307766566,
+        "beta": -0.22658183828929132,
+        "alpha": 0.30858956693941003
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "earnings surprise",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise; major news"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -185,9 +186,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.91808,
     "detail": {
@@ -234,6 +235,7 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -256,6 +258,16 @@
     "available": true,
     "items": [
       {
+        "headline": "SpaceX Options\u2019 First Day of Trading Breaks Records",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-16T21:46:57Z",
+        "summary": "SpaceX options volumes smashed records on their first trading day. About 1.8 million options contracts tied to SpaceX changed hands on Tuesday, show Cboe Global Markets data. Some of the most actively-traded contracts were call options tied to the stock rising to $300 and $380 a share.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Oppenheimer Picks Alphabet, Dumps Meta in Highest-Conviction Stock Picks",
         "source": "GuruFocus.com",
         "published": "2026-06-16T18:52:59Z",
@@ -266,13 +278,13 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "SpaceX Options\u2019 First Day of Trading Is Already Breaking Records",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-16T15:59:51Z",
-        "summary": "SpaceX options volumes are already smashing records just hours into their first trading day.  About 927,000 options contracts tied to SpaceX changed hands by around 11:30 a.m. ET on Tuesday, show Cboe Global Markets data.",
-        "bullish_score": 1,
+        "headline": "SpaceX options debut pulls record demand as investors chase rocket stock",
+        "source": "Reuters",
+        "published": "2026-06-16T13:36:25Z",
+        "summary": "Trading in SpaceX options kicked off with record volume and bullish activity dominating on Tuesday, underscoring strong investor demand for a new way to bet on the future of Elon Musk's aerospace \u200ccompany.  Some 1.8 million SpaceX contracts traded on Tuesday, handily surpassing Meta Platforms' \u2014 then known as Facebook \u2014 options debut in 2012, which held \u200cthe previous first-day volume record of about 365,000 contracts, according to Trade Alert data.  \"We've never seen anything like it,\" said Henry Schwartz, vice president of derivatives market intelligence at Cboe Global Markets.",
+        "bullish_score": 2,
         "bearish_score": 0,
-        "importance_score": 45,
+        "importance_score": 60,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
@@ -290,16 +302,6 @@
         "source": "GuruFocus.com",
         "published": "2026-06-15T13:51:51Z",
         "summary": "SpaceX options begin trading Tuesday after shares opened at $150, above the $135 IPO price.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The First 2X SpaceX ETF Gained 56% on Day One",
-        "source": "Simply Wall St.",
-        "published": "2026-06-15T07:00:49Z",
-        "summary": "The Defiance 2X Space ETF (SPCL) repositioned around SpaceX before its debut and gained 56% before the ETF entered a trading halt.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -330,5 +332,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 37.2/100 | Confidence: 26.7/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 265.239990234375 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.3546\nNews/Catalyst: Oppenheimer Picks Alphabet, Dumps Meta in Highest-Conviction Stock Picks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 37.95/100 | Confidence: 29.27/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 265.239990234375 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.3546\nNews/Catalyst: SpaceX Options\u2019 First Day of Trading Breaks Records\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
