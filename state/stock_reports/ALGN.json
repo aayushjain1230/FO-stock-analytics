@@ -1,43 +1,41 @@
 {
   "ticker": "ALGN",
-  "generated_at": "2026-06-17T16:36:19.785021",
+  "generated_at": "2026-06-17T19:20:47.221867",
   "score": {
-    "final_score": 56.7,
+    "final_score": 50.7,
     "rating": "Hold",
-    "confidence": 54.36,
+    "confidence": 48.9,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 75.0,
+      "technical": 55.0,
       "momentum": 40.0,
       "volume": 25.0,
       "fundamental": 58.0,
       "risk": 75.0,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 75.0,
+      "score": 55.0,
       "evidence": [
         "Price above SMA20",
-        "Price above SMA50",
         "Price above SMA200",
-        "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 155.16000366210938,
       "resistance": 196.0500030517578,
-      "risk_reward": 0.58
+      "risk_reward": 1.23
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": 0.14019394557230846,
-        "3m": 0.05005503996703453,
-        "6m": 0.11251765525300206,
-        "12m": -0.008108760419043182
+        "1m": 0.0925179654512105,
+        "3m": 0.006148120967917503,
+        "6m": 0.06599892936239105,
+        "12m": -0.04958362283538087
       },
-      "acceleration": -0.0062,
+      "acceleration": -0.0269,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +44,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 991018.25,
-      "relative_volume": 0.2812914898388602,
+      "average_volume": 1000576.1,
+      "relative_volume": 0.46965143380898267,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -65,30 +63,29 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.02964794073305913,
-        "annualized_volatility": 0.4706464683891388,
+        "volatility": 0.02968333077063697,
+        "annualized_volatility": 0.47120826781906006,
         "maximum_drawdown": -0.5144068486487459,
-        "sharpe_ratio": -0.06761870483357832,
-        "sortino_ratio": -0.07600268386180464,
-        "calmar_ratio": -0.27619821625569174,
-        "beta": 1.3255555167367963,
-        "alpha": -0.27737058385893487
+        "sharpe_ratio": -0.11255051917090017,
+        "sortino_ratio": -0.1268256874819073,
+        "calmar_ratio": -0.3116476868445514,
+        "beta": 1.3291963750444562,
+        "alpha": -0.2931635357107195
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
-        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "ALGN",
@@ -138,17 +135,18 @@
     "next_earnings_date": "1777492800",
     "eps_current_year": 5.94,
     "eps_forward": 12.37282,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 57.22500405457845,
+    "rsi": 50.18822837645257,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2812914898388602,
-    "price_above_sma50": true,
+    "relative_volume": 0.46965143380898267,
+    "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "No clear setup",
     "support": 155.16000366210938,
     "resistance": 196.0500030517578
   },
@@ -196,11 +194,11 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": true,
-    "sector_strength": true,
+    "sector_strength": false,
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bearish_news_score": 0,
     "institutional_ownership": 1.01641,
     "detail": {
       "earnings": {
@@ -241,14 +239,13 @@
         "last_surprise_pct": 0.1284,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 15.48,
+      "analyst_upside_pct": 20.69,
       "eps_growth_implied": 108.3
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
-      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -270,6 +267,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Is Align Technology Stock Underperforming the Dow?",
+        "source": "Barchart",
+        "published": "2026-06-17T10:27:04Z",
+        "summary": "While Align Technology has underperformed relative to the Dow over the past year, Wall Street analysts maintain a moderately optimistic outlook on the stock\u2019s prospects.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Align Technology (ALGN) Just Overtook the 50-Day Moving Average",
         "source": "Zacks",
@@ -309,16 +316,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Align Technology Pitches AI-Powered Digital Dentistry Platform Beyond Invisalign",
-        "source": "MarketBeat",
-        "published": "2026-06-03T16:02:29Z",
-        "summary": "Align Technology (NASDAQ:ALGN) executives used a William Blair investor presentation to emphasize the company\u2019s broader digital dentistry platform, positioning Invisalign as part of a workflow that spans consumer engagement, scanning, treatment planning, monitoring and retention. President and CEO",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -337,20 +334,13 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Relative strength acceleration",
-    "evidence": "Relative strength moved from lagging to leading",
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
     "date_of_change": "2026-06-17",
-    "strength": 80,
-    "invalidates": "Relative strength falls back below its signal line",
-    "triggers": [
-      {
-        "reason": "Relative strength acceleration",
-        "evidence": "Relative strength moved from lagging to leading",
-        "strength": 80,
-        "invalidates": "Relative strength falls back below its signal line"
-      }
-    ]
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: ALGN\nRating: Hold | Score: 56.7/100 | Confidence: 54.36/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 155.16000366210938 | Resistance: 196.0500030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.632072\nNews/Catalyst: Align Technology (ALGN) Just Overtook the 50-Day Moving Average\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: ALGN\nRating: Hold | Score: 50.7/100 | Confidence: 48.9/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 155.16000366210938 | Resistance: 196.0500030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.632072\nNews/Catalyst: Is Align Technology Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

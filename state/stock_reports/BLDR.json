@@ -1,13 +1,13 @@
 {
   "ticker": "BLDR",
-  "generated_at": "2026-06-17T16:36:48.073597",
+  "generated_at": "2026-06-17T19:21:05.532743",
   "score": {
-    "final_score": 42.55,
+    "final_score": 40.05,
     "rating": "Drop",
-    "confidence": 39.62,
+    "confidence": 38.06,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 43.0,
       "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 47.0,
@@ -15,27 +15,26 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
-        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 66.38999938964844,
       "resistance": 91.31999969482422,
-      "risk_reward": 0.58
+      "risk_reward": 1.23
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.17041890898354128,
-        "3m": -0.05172019412237172,
-        "6m": -0.2151729742449262,
-        "12m": -0.2647032489228116
+        "1m": 0.10558557994432438,
+        "3m": -0.10424851214920705,
+        "6m": -0.2586471085135176,
+        "12m": -0.30543373938067286
       },
-      "acceleration": 0.0559,
+      "acceleration": 0.0251,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +42,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2643334.1,
-      "relative_volume": 0.47000566443719693,
+      "average_volume": 2701599.6,
+      "relative_volume": 0.8912097854915287,
       "accumulation_days": 3,
       "distribution_days": 2,
       "evidence": [
@@ -59,14 +58,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.02895134275264151,
-        "annualized_volatility": 0.45958831826928964,
+        "volatility": 0.02889087685620424,
+        "annualized_volatility": 0.45862845192064805,
         "maximum_drawdown": -0.67105980881266,
-        "sharpe_ratio": -0.4310883620151978,
-        "sortino_ratio": -0.7882295389817943,
-        "calmar_ratio": -0.3891748077867521,
-        "beta": 1.197466206417565,
-        "alpha": -0.41994197377197645
+        "sharpe_ratio": -0.49536560971974214,
+        "sortino_ratio": -0.905280101166811,
+        "calmar_ratio": -0.42028591917768976,
+        "beta": 1.198311280721184,
+        "alpha": -0.4436722379267798
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -80,7 +79,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "BLDR",
@@ -130,15 +129,16 @@
     "next_earnings_date": "1777552200",
     "eps_current_year": 2.62,
     "eps_forward": 5.87982,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 62.60464690452399,
+    "rsi": 52.2597275771104,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.47000566443719693,
-    "price_above_sma50": true,
+    "relative_volume": 0.8912097854915287,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 66.38999938964844,
@@ -233,7 +233,7 @@
         "last_surprise_pct": -0.2761,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 18.74,
+      "analyst_upside_pct": 26.11,
       "eps_growth_implied": 124.42
     },
     "evidence": [
@@ -327,26 +327,13 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Relative strength acceleration",
-    "evidence": "Relative strength moved from lagging to leading",
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
     "date_of_change": "2026-06-17",
-    "strength": 80,
-    "invalidates": "Relative strength falls back below its signal line",
-    "triggers": [
-      {
-        "reason": "Breakout",
-        "evidence": "Price reclaimed a major moving average",
-        "strength": 75,
-        "invalidates": "Close back below the reclaimed moving average"
-      },
-      {
-        "reason": "Relative strength acceleration",
-        "evidence": "Relative strength moved from lagging to leading",
-        "strength": 80,
-        "invalidates": "Relative strength falls back below its signal line"
-      }
-    ]
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: BLDR\nRating: Drop | Score: 42.55/100 | Confidence: 39.62/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 66.38999938964844 | Resistance: 91.31999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.948557\nNews/Catalyst: Is Builders FirstSource Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: BLDR\nRating: Drop | Score: 40.05/100 | Confidence: 38.06/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 66.38999938964844 | Resistance: 91.31999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.948557\nNews/Catalyst: Is Builders FirstSource Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,41 +1,39 @@
 {
   "ticker": "APP",
-  "generated_at": "2026-06-17T16:36:32.653343",
+  "generated_at": "2026-06-17T19:20:55.058008",
   "score": {
-    "final_score": 47.15,
-    "rating": "Hold",
-    "confidence": 45.84,
+    "final_score": 42.15,
+    "rating": "Drop",
+    "confidence": 42.08,
     "risk_level": "High",
     "categories": {
-      "technical": 30.0,
-      "momentum": 55.0,
+      "technical": 20.0,
+      "momentum": 45.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 35.0,
       "catalyst": 80.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 20.0,
       "evidence": [
-        "Price above SMA50",
         "EMA trend is positive",
         "Stock is not materially extended from SMA20"
       ],
       "support": 372.0799865722656,
       "resistance": 613.7000122070312,
-      "risk_reward": 0.95
+      "risk_reward": 1.11
     },
     "momentum": {
-      "score": 55.0,
+      "score": 45.0,
       "returns": {
-        "1m": 0.0075346274534984214,
-        "3m": 0.12092978867799742,
-        "6m": -0.26523157905109096,
-        "12m": 0.33832393057983556
+        "1m": -0.01177100375175677,
+        "3m": 0.09945136350277828,
+        "6m": -0.27931066652817327,
+        "12m": 0.3126799601068362
       },
-      "acceleration": 0.2535,
+      "acceleration": 0.2391,
       "evidence": [
-        "1m return is positive",
         "3m return is positive",
         "12m return is positive",
         "Momentum is accelerating"
@@ -43,8 +41,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4891559.5,
-      "relative_volume": 0.41902587508135186,
+      "average_volume": 4993706.45,
+      "relative_volume": 0.8191368557517031,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -62,14 +60,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.052332275364878306,
-        "annualized_volatility": 0.8307491169457197,
+        "volatility": 0.052368450480879146,
+        "annualized_volatility": 0.8313233791092426,
         "maximum_drawdown": -0.5699723736744687,
-        "sharpe_ratio": 1.523097909002378,
-        "sortino_ratio": 2.1945636580966577,
-        "calmar_ratio": 2.681617274870065,
-        "beta": 2.2569277043680516,
-        "alpha": 0.8472386564779847
+        "sharpe_ratio": 1.5108822567986755,
+        "sortino_ratio": 2.1768027335159554,
+        "calmar_ratio": 2.638656710501423,
+        "beta": 2.2631073522026655,
+        "alpha": 0.8471852670781044
       },
       "evidence": [
         "Volatility is elevated",
@@ -87,7 +85,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; 12m return is positive"
+    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive; Momentum is accelerating; Accumulation days exceed distribution days"
   },
   "fundamentals": {
     "ticker": "APP",
@@ -137,15 +135,16 @@
     "next_earnings_date": "1778097600",
     "eps_current_year": 11.49,
     "eps_forward": 21.92634,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 27.334245119893893,
+    "rsi": 26.2447405217423,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.41902587508135186,
-    "price_above_sma50": true,
+    "relative_volume": 0.8191368557517031,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 372.0799865722656,
@@ -198,7 +197,7 @@
     "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 2,
     "bearish_news_score": 1,
     "institutional_ownership": 0.75058,
     "detail": {
@@ -240,7 +239,7 @@
         "last_surprise_pct": 0.0339,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 30.27,
+      "analyst_upside_pct": 33.41,
       "eps_growth_implied": 90.83
     },
     "evidence": [
@@ -280,6 +279,16 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
+        "headline": "Dan Ives Predicts a Tesla-SpaceX Megamerger. Here\u2019s What Investors Need to Know.",
+        "source": "Barchart",
+        "published": "2026-06-17T11:30:02Z",
+        "summary": "A merger of Elon Musk's companies would be valued at $3.6 trillion.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Wall Street Sees 40% Upside in This Overlooked Tech Stock. Here's Why They're Right.",
         "source": "Motley Fool",
         "published": "2026-06-17T09:50:00Z",
@@ -304,16 +313,6 @@
         "source": "Insider Monkey",
         "published": "2026-06-16T02:04:02Z",
         "summary": "AppLovin Corporation (NASDAQ:APP) is included among the 14 Best S&P 500 Stocks to Buy Now According to Analysts. AppLovin Corporation (NASDAQ:APP) enables businesses to advertise profitably with marketing technologies that attract customers, increase revenue, and track ad performance. The company provides end-to-end software and AI solutions for businesses to reach, monetize, and grow their global [\u2026]",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "3 Reasons We\u2019re Fans of AppLovin (APP)",
-        "source": "StockStory",
-        "published": "2026-06-15T19:40:07Z",
-        "summary": "AppLovin\u2019s stock price has taken a beating over the past six months, shedding 26.6% of its value and falling to $495.84 per share. This may have investors wondering how to approach the situation.",
         "bullish_score": 1,
         "bearish_score": 0,
         "importance_score": 45,
@@ -344,5 +343,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APP\nRating: Hold | Score: 47.15/100 | Confidence: 45.84/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 372.0799865722656 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 22.689148\nNews/Catalyst: AppLovin (APP) Slid Amid Competitive Threat and AI Disruption Risks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APP\nRating: Drop | Score: 42.15/100 | Confidence: 42.08/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 372.0799865722656 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 22.689148\nNews/Catalyst: AppLovin (APP) Slid Amid Competitive Threat and AI Disruption Risks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

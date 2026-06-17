@@ -1,49 +1,51 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-17T16:36:59.406408",
+  "generated_at": "2026-06-17T19:21:13.454355",
   "score": {
-    "final_score": 37.95,
+    "final_score": 40.95,
     "rating": "Drop",
-    "confidence": 29.27,
+    "confidence": 36.89,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 78.0,
       "risk": 85.0,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
       "score": 10.0,
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 249.4647979736328,
+      "support": 251.36500549316406,
       "resistance": 366.70001220703125,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.3174957016100396,
-        "3m": -0.12887178014368428,
-        "6m": 0.01562298589806388,
-        "12m": 0.11633013643612045
+        "1m": -0.312296972929891,
+        "3m": -0.12223627722987518,
+        "6m": 0.02335906165429069,
+        "12m": 0.12483345272365276
       },
-      "acceleration": -0.1367,
+      "acceleration": -0.1339,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1706772.55,
-      "relative_volume": 1.0138732310875282,
+      "score": 25.0,
+      "average_volume": 1761530.4,
+      "relative_volume": 1.6036669023708021,
       "accumulation_days": 3,
       "distribution_days": 10,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.60x"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -55,28 +57,27 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016765021987396534,
-        "annualized_volatility": 0.2661364734190864,
-        "maximum_drawdown": -0.31827742103945,
-        "sharpe_ratio": 0.8871354798732586,
-        "sortino_ratio": 1.1149239088061311,
-        "calmar_ratio": 0.6968370399181034,
-        "beta": -0.2259182009465097,
-        "alpha": 0.27794822548061127
+        "volatility": 0.016716373615959672,
+        "annualized_volatility": 0.26536420446402503,
+        "maximum_drawdown": -0.313084646823218,
+        "sharpe_ratio": 0.9032964993238679,
+        "sortino_ratio": 1.140717842496187,
+        "calmar_ratio": 0.7233179266838052,
+        "beta": -0.21706397481003684,
+        "alpha": 0.2789167113611695
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "earnings surprise",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise; major news"
+    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.60x; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -126,18 +127,19 @@
     "next_earnings_date": "1777638600",
     "eps_current_year": 11.7,
     "eps_forward": 14.71593,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 19.850453821712478,
+    "rsi": 20.09337762928604,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0138732310875282,
+    "relative_volume": 1.6036669023708021,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 249.4647979736328,
+    "setup_type": "volume surge",
+    "support": 251.36500549316406,
     "resistance": 366.70001220703125
   },
   "earnings": {
@@ -185,9 +187,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 4,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.91816,
     "detail": {
@@ -229,12 +231,11 @@
         "last_surprise_pct": 0.096599996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 31.16,
+      "analyst_upside_pct": 29.77,
       "eps_growth_implied": 25.78
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -257,6 +258,36 @@
     "available": true,
     "items": [
       {
+        "headline": "2 Reasons to Buy the Dip on Struggling Carvana Stock",
+        "source": "Schaeffer's Investment Research",
+        "published": "2026-06-17T17:47:38Z",
+        "summary": "Carvana pessimism in the options pits could be another contrarian signal",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Nasdaq Futures Climb as Chip Stocks Rebound Ahead of First Fed Decision Under Warsh",
+        "source": "Barchart",
+        "published": "2026-06-17T10:37:21Z",
+        "summary": "June Nasdaq 100 E-Mini futures (NQM26) are up +0.54% this morning, signaling a rebound from yesterday\u2019s selloff, while investors await the first Federal Reserve rate decision under Kevin Warsh.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Investor FOMO, ETF \u2018Feeding Frenzy\u2019 Fuel SpaceX\u2019s Skyrocketing Price",
+        "source": "The Daily Upside",
+        "published": "2026-06-17T04:01:00Z",
+        "summary": "The shares sold in last week\u2019s IPO represented just 5% of its outstanding stock, leaving retail investors clawing for the limited float",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "SpaceX Options\u2019 First Day of Trading Breaks Records",
         "source": "The Wall Street Journal",
         "published": "2026-06-16T21:46:57Z",
@@ -275,36 +306,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Oppenheimer Picks Alphabet, Dumps Meta in Highest-Conviction Stock Picks",
-        "source": "GuruFocus.com",
-        "published": "2026-06-16T18:52:59Z",
-        "summary": "Top Bank Names Alphabet A Buy, Meta A Sell As Rally Continues",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "SpaceX options debut pulls record demand as investors chase rocket stock",
-        "source": "Reuters",
-        "published": "2026-06-16T13:36:25Z",
-        "summary": "Trading in SpaceX options kicked off with record volume and bullish activity dominating on Tuesday, underscoring strong investor demand for a new way to bet on the future of Elon Musk's aerospace \u200ccompany.  Some 1.8 million SpaceX contracts traded on Tuesday, handily surpassing Meta Platforms' \u2014 then known as Facebook \u2014 options debut in 2012, which held \u200cthe previous first-day volume record of about 365,000 contracts, according to Trade Alert data.  \"We've never seen anything like it,\" said Henry Schwartz, vice president of derivatives market intelligence at Cboe Global Markets.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Chip stocks surge, oil slides closer to $80 on US-Iran deal, Fox to acquire Roku",
-        "source": "Yahoo Finance Video",
-        "published": "2026-06-15T19:54:25Z",
-        "summary": "Yahoo Finance Senior Reporter Brooke DiPalma comes on Market Domination to further discuss today's biggest headlines, including memory chip stocks like Micron Technology (MU) surging as Wall Street leans more bullish on the AI trade, oil prices (CL=F, BZ=F) moving closer to $80 per barrel on news of a US-Iran peace deal, and media giant Fox (FOX, FOXA) striking a deal to acquire Roku (ROKU) for $22 billion.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -331,5 +332,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 37.95/100 | Confidence: 29.27/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 249.4647979736328 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.937428\nNews/Catalyst: SpaceX Options\u2019 First Day of Trading Breaks Records\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 40.95/100 | Confidence: 36.89/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 251.36500549316406 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.937428\nNews/Catalyst: 2 Reasons to Buy the Dip on Struggling Carvana Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

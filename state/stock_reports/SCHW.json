@@ -1,6 +1,6 @@
 {
   "ticker": "SCHW",
-  "generated_at": "2026-06-17T16:37:53.645913",
+  "generated_at": "2026-06-17T19:21:44.961762",
   "score": {
     "final_score": 57.15,
     "rating": "Hold",
@@ -24,17 +24,17 @@
       ],
       "support": 85.3499984741211,
       "resistance": 100.2699966430664,
-      "risk_reward": 0.88
+      "risk_reward": 0.81
     },
     "momentum": {
       "score": 55.0,
       "returns": {
-        "1m": 0.009741330575003149,
-        "3m": 0.0036959024044049826,
-        "6m": -0.014054176876371671,
-        "12m": 0.06185653581932504
+        "1m": 0.013204905604099482,
+        "3m": 0.007138740643377162,
+        "6m": -0.010672224261766616,
+        "12m": 0.06549896690545687
       },
-      "acceleration": 0.0107,
+      "acceleration": 0.0125,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -44,8 +44,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 11672813.2,
-      "relative_volume": 0.34717971842468964,
+      "average_volume": 11838139.1,
+      "relative_volume": 0.6213799261743765,
       "accumulation_days": 3,
       "distribution_days": 4,
       "evidence": []
@@ -61,14 +61,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016989801020524067,
-        "annualized_volatility": 0.26970472994866845,
-        "maximum_drawdown": -0.1983442185486476,
-        "sharpe_ratio": 0.6475990780796241,
-        "sortino_ratio": 0.7888710251474714,
-        "calmar_ratio": 0.7461745650699368,
-        "beta": 0.7415945864064191,
-        "alpha": 0.037287455202789754
+        "volatility": 0.016988571535178833,
+        "annualized_volatility": 0.2696852124738839,
+        "maximum_drawdown": -0.19834421854864825,
+        "sharpe_ratio": 0.6540177631923944,
+        "sortino_ratio": 0.7960207858876865,
+        "calmar_ratio": 0.7561525613961679,
+        "beta": 0.7405426842072397,
+        "alpha": 0.04259460445517427
       },
       "evidence": []
     },
@@ -132,14 +132,15 @@
     "next_earnings_date": "1776342600",
     "eps_current_year": 5.03,
     "eps_forward": 7.25793,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 74.87470768312947,
+    "rsi": 76.4066703577866,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.34717971842468964,
+    "relative_volume": 0.6213799261743765,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -235,7 +236,7 @@
         "last_surprise_pct": 0.0248,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 24.41,
+      "analyst_upside_pct": 24.15,
       "eps_growth_implied": 44.29
     },
     "evidence": [
@@ -331,13 +332,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
     "date_of_change": "2026-06-17",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: SCHW\nRating: Hold | Score: 57.15/100 | Confidence: 47.95/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.864536\nNews/Catalyst: 2 Growth Stocks with Explosive Upside and 1 We Find Risky\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: SCHW\nRating: Hold | Score: 57.15/100 | Confidence: 47.95/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.864536\nNews/Catalyst: 2 Growth Stocks with Explosive Upside and 1 We Find Risky\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

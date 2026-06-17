@@ -1,6 +1,6 @@
 {
   "ticker": "AMP",
-  "generated_at": "2026-06-17T16:36:24.917664",
+  "generated_at": "2026-06-17T19:20:50.819607",
   "score": {
     "final_score": 48.45,
     "rating": "Hold",
@@ -24,17 +24,17 @@
       ],
       "support": 430.3999938964844,
       "resistance": 477.8599853515625,
-      "risk_reward": 0.1
+      "risk_reward": 0.16
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.004743443915027568,
-        "3m": 0.09849710701048164,
-        "6m": -0.030401036748143984,
-        "12m": -0.06467628005212966
+        "1m": 8.491138321620184e-05,
+        "3m": 0.09340388192889382,
+        "6m": -0.03489662051181497,
+        "12m": -0.06901294530089586
       },
-      "acceleration": 0.1137,
+      "acceleration": 0.1109,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,8 +43,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 623121.1,
-      "relative_volume": 0.18988604301796233,
+      "average_volume": 629060.9,
+      "relative_volume": 0.37693965719376293,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": []
@@ -59,14 +59,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01734673733688853,
-        "annualized_volatility": 0.27537091831059546,
-        "maximum_drawdown": -0.2638997188988055,
-        "sharpe_ratio": 0.34950794624655773,
-        "sortino_ratio": 0.4552471437698137,
-        "calmar_ratio": 0.22808758402705814,
-        "beta": 1.0579086388227898,
-        "alpha": -0.09972281205471092
+        "volatility": 0.017345819154012863,
+        "annualized_volatility": 0.27535634260931297,
+        "maximum_drawdown": -0.2638998781833777,
+        "sharpe_ratio": 0.34101947033754093,
+        "sortino_ratio": 0.4443086070584855,
+        "calmar_ratio": 0.21870743282757987,
+        "beta": 1.0563014951199339,
+        "alpha": -0.09692652098838041
       },
       "evidence": []
     },
@@ -127,14 +127,15 @@
     "next_earnings_date": "1776974400",
     "eps_current_year": 40.11,
     "eps_forward": 47.64077,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 78.79387312933468,
+    "rsi": 77.85475979370939,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.18988604301796233,
+    "relative_volume": 0.37693965719376293,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -188,7 +189,7 @@
     "sector_strength": false,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 2,
     "bearish_news_score": 1,
     "institutional_ownership": 0.92151,
     "detail": {
@@ -230,7 +231,7 @@
         "last_surprise_pct": 0.1025,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 14.33,
+      "analyst_upside_pct": 14.83,
       "eps_growth_implied": 18.78
     },
     "evidence": [
@@ -256,6 +257,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "The case for applying an old-school dividend strategy to investing today",
+        "source": "Financial Planning",
+        "published": "2026-06-17T18:17:36Z",
+        "summary": "Portfolio managers from Fidelity, Columbia Threadneedle and JPMorgan said the case for dividend investing remains strong, even if it receives less emphasis than other strategies these days.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Ameriprise (AMP): 10 Most Undervalued Quality Stocks to Invest In",
         "source": "Insider Monkey",
@@ -295,16 +306,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Ameriprise Financial (AMP): Buy, Sell, or Hold Post Q1 Earnings?",
-        "source": "StockStory",
-        "published": "2026-06-08T19:33:50Z",
-        "summary": "Since December 2025, Ameriprise Financial has been in a holding pattern, posting a small loss of 4.7% while floating around $454.49. The stock also fell short of the S&P 500\u2019s 10.7% gain during that period.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -323,13 +324,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
     "date_of_change": "2026-06-17",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: AMP\nRating: Hold | Score: 48.45/100 | Confidence: 35.0/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.929521\nNews/Catalyst: Ameriprise (AMP): 10 Most Undervalued Quality Stocks to Invest In\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMP\nRating: Hold | Score: 48.45/100 | Confidence: 35.0/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.929521\nNews/Catalyst: The case for applying an old-school dividend strategy to investing today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }
