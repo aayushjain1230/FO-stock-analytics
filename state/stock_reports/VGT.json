@@ -1,22 +1,23 @@
 {
   "ticker": "VGT",
-  "generated_at": "2026-06-16T22:52:24.668140",
+  "generated_at": "2026-06-17T16:37:57.270495",
   "score": {
-    "final_score": 61.25,
-    "rating": "Hold",
-    "confidence": 41.91,
+    "final_score": 67.0,
+    "rating": "Watch",
+    "confidence": 53.88,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 72.0,
+      "technical": 80.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 50.0,
       "risk": 85.0,
       "catalyst": 35.0
     },
     "technical": {
-      "score": 72.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +27,17 @@
       ],
       "support": 83.5875015258789,
       "resistance": 125.7699966430664,
-      "risk_reward": 0.23
+      "risk_reward": 0.19
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.0397140596324963,
-        "3m": 0.2970300905156389,
-        "6m": 0.25265905040873116,
-        "12m": 0.5185986038790884
+        "1m": 0.061089862403495454,
+        "3m": 0.3236501565893217,
+        "6m": 0.2793879361060254,
+        "12m": 0.5081290316840661
       },
-      "acceleration": 0.1707,
+      "acceleration": 0.184,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,12 +48,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 5693817.6,
-      "relative_volume": 0.7724083047549679,
+      "score": 25.0,
+      "average_volume": 5523448.35,
+      "relative_volume": 0.26946336883914196,
       "accumulation_days": 6,
-      "distribution_days": 6,
-      "evidence": []
+      "distribution_days": 5,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 50.0,
@@ -62,14 +65,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016707499625799007,
-        "annualized_volatility": 0.2652233342374133,
-        "maximum_drawdown": -0.27228785375331055,
-        "sharpe_ratio": 1.0520901144659787,
-        "sortino_ratio": 1.4038506774646105,
-        "calmar_ratio": 1.0146650350463695,
-        "beta": 1.4488556803864152,
-        "alpha": 0.010200045911040994
+        "volatility": 0.01669543290833199,
+        "annualized_volatility": 0.2650317810360616,
+        "maximum_drawdown": -0.2722879227646883,
+        "sharpe_ratio": 1.0695971640850466,
+        "sortino_ratio": 1.4261803234217796,
+        "calmar_ratio": 1.035728706667117,
+        "beta": 1.4487482694607714,
+        "alpha": 0.015110920349142933
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -82,7 +85,7 @@
         "major news"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "VGT",
@@ -92,11 +95,11 @@
     "note": "Company fundamentals skipped because this symbol is an ETF/fund."
   },
   "technical_screen": {
-    "rsi": 50.57998399206725,
+    "rsi": 50.0409140870749,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7724083047549679,
+    "relative_volume": 0.26946336883914196,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -116,7 +119,7 @@
     "sector_strength": true,
     "major_news": true,
     "guidance_change": false,
-    "bullish_news_score": 3,
+    "bullish_news_score": 2,
     "bearish_news_score": 1,
     "institutional_ownership": null,
     "detail": {
@@ -144,6 +147,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Tech ETFs Are Doing Something Unprecedented Right Now. Should Investors Buy or Wait?",
+        "source": "Motley Fool",
+        "published": "2026-06-17T11:35:00Z",
+        "summary": "When you start seeing things that rarely (if ever) happen, it's often a call for a bit of suspicious scrutiny.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Which Is the Better Tech ETF for Artificial Intelligence (AI) Stocks, State Street's XLK or Vanguard's VGT?",
         "source": "Motley Fool",
@@ -183,16 +196,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AI Has Changed Everything About Tech Investing. VGT and CHAT Show You the 2 Ways to Play It.",
-        "source": "Motley Fool",
-        "published": "2026-06-07T11:57:42Z",
-        "summary": "Compare broad tech exposure with a concentrated AI strategy as two leading ETFs reveal distinct approaches to growth, volatility, and sector focus.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -212,10 +215,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-16",
+    "date_of_change": "2026-06-17",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: VGT\nRating: Hold | Score: 61.25/100 | Confidence: 41.91/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 83.5875015258789 | Resistance: 125.7699966430664\nFundamental Outlook: ETF / Fund | Forward P/E: None\nNews/Catalyst: Which Is the Better Tech ETF for Artificial Intelligence (AI) Stocks, State Street's XLK or Vanguard's VGT?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: VGT\nRating: Watch | Score: 67.0/100 | Confidence: 53.88/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 83.5875015258789 | Resistance: 125.7699966430664\nFundamental Outlook: ETF / Fund | Forward P/E: None\nNews/Catalyst: Tech ETFs Are Doing Something Unprecedented Right Now. Should Investors Buy or Wait?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

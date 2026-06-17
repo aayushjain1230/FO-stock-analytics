@@ -1,40 +1,42 @@
 {
   "ticker": "TECH",
-  "generated_at": "2026-06-16T22:52:23.622122",
+  "generated_at": "2026-06-17T16:37:55.749867",
   "score": {
-    "final_score": 52.5,
+    "final_score": 55.75,
     "rating": "Hold",
-    "confidence": 50.38,
+    "confidence": 49.91,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 46.0,
+      "technical": 63.0,
       "momentum": 55.0,
       "volume": 25.0,
       "fundamental": 60.0,
       "risk": 75.0,
-      "catalyst": 65.0
+      "catalyst": 45.0
     },
     "technical": {
-      "score": 46.0,
+      "score": 63.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 43.29999923706055,
       "resistance": 60.58000183105469,
-      "risk_reward": 0.36
+      "risk_reward": 0.3
     },
     "momentum": {
       "score": 55.0,
       "returns": {
-        "1m": 0.2963904950668428,
-        "3m": 0.0993675836017085,
-        "6m": -0.039322624946064644,
-        "12m": 0.1157798156356249
+        "1m": 0.274026539577634,
+        "3m": 0.11611443100707275,
+        "6m": -0.03244036386655025,
+        "12m": 0.10299588524596492
       },
-      "acceleration": 0.119,
+      "acceleration": 0.1323,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -44,9 +46,9 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2804354.45,
-      "relative_volume": 0.5325963699060937,
-      "accumulation_days": 5,
+      "average_volume": 2672714.4,
+      "relative_volume": 0.26680291766303205,
+      "accumulation_days": 4,
       "distribution_days": 0,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -62,29 +64,28 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.027385806663906127,
-        "annualized_volatility": 0.43473620331354623,
-        "maximum_drawdown": -0.46936991206047074,
-        "sharpe_ratio": -0.10290822568058339,
-        "sortino_ratio": -0.14017708288265468,
-        "calmar_ratio": -0.27861567903815976,
-        "beta": 1.1332504699359427,
-        "alpha": -0.25501539581754473
+        "volatility": 0.02736238342969662,
+        "annualized_volatility": 0.43436437099783115,
+        "maximum_drawdown": -0.4693698623567305,
+        "sharpe_ratio": -0.09090689854834562,
+        "sortino_ratio": -0.12372352589839053,
+        "calmar_ratio": -0.2685598173038186,
+        "beta": 1.1331276685402614,
+        "alpha": -0.24938743698976548
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 45.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "TECH",
@@ -93,7 +94,7 @@
     "sector": "Healthcare",
     "industry": "Biotechnology",
     "exchange": "NMS",
-    "market_cap": 8806209536.0,
+    "market_cap": 8850831360.0,
     "revenue_growth": -0.015,
     "eps_growth": 1.286,
     "fcf_growth": null,
@@ -110,15 +111,15 @@
     "cash_position": 214114000.0,
     "total_debt": 290321984.0,
     "interest_coverage": null,
-    "forward_pe": 27.364103,
-    "trailing_pe": 80.35,
-    "peg": 0.74,
-    "price_to_book": 4.3597393,
-    "price_to_sales": 7.2729845,
-    "enterprise_to_ebitda": 24.234,
-    "enterprise_to_revenue": 7.326,
-    "fcf_yield": 0.03404976622168805,
-    "institutional_ownership": 1.17897,
+    "forward_pe": 27.502762,
+    "trailing_pe": 80.75714,
+    "peg": 0.77,
+    "price_to_book": 4.3818307,
+    "price_to_sales": 7.3098373,
+    "enterprise_to_ebitda": 24.174,
+    "enterprise_to_revenue": 7.308,
+    "fcf_yield": 0.033878102949190074,
+    "institutional_ownership": 1.17844,
     "insider_ownership": 0.0030500002,
     "short_interest": 13846089.0,
     "short_ratio": 4.05,
@@ -134,15 +135,14 @@
     "next_earnings_date": "1778070600",
     "eps_current_year": 0.7,
     "eps_forward": 2.05543,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 71.71772651492876,
+    "rsi": 67.89817112397758,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5325963699060937,
+    "relative_volume": 0.26680291766303205,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -191,14 +191,14 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 2,
-    "institutional_ownership": 1.17897,
+    "institutional_ownership": 1.17844,
     "detail": {
       "earnings": {
         "available": true,
@@ -238,12 +238,11 @@
         "last_surprise_pct": -0.0082,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 10.11,
+      "analyst_upside_pct": 9.13,
       "eps_growth_implied": 193.63
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -257,7 +256,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0030500002,
-    "institutional_ownership": 1.17897,
+    "institutional_ownership": 1.17844,
     "short_interest": 13846089.0,
     "short_percent_float": 0.1009,
     "days_to_cover": 4.05,
@@ -336,10 +335,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-16",
+    "date_of_change": "2026-06-17",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: TECH\nRating: Hold | Score: 52.5/100 | Confidence: 50.38/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 43.29999923706055 | Resistance: 60.58000183105469\nFundamental Outlook: Fundamentally Average | Forward P/E: 27.364103\nNews/Catalyst: Bio-Techne (TECH) Stock Valuation After New Refeyn Bispecific Antibody Analysis Collaboration\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: TECH\nRating: Hold | Score: 55.75/100 | Confidence: 49.91/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 43.29999923706055 | Resistance: 60.58000183105469\nFundamental Outlook: Fundamentally Average | Forward P/E: 27.502762\nNews/Catalyst: Bio-Techne (TECH) Stock Valuation After New Refeyn Bispecific Antibody Analysis Collaboration\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

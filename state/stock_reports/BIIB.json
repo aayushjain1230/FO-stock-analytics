@@ -1,56 +1,58 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2026-06-16T22:51:45.243391",
+  "generated_at": "2026-06-17T16:36:46.348412",
   "score": {
-    "final_score": 61.45,
+    "final_score": 64.7,
     "rating": "Hold",
-    "confidence": 49.6,
+    "confidence": 49.19,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 83.0,
-      "momentum": 60.0,
+      "technical": 90.0,
+      "momentum": 70.0,
       "volume": 0,
       "fundamental": 68.0,
       "risk": 75.0,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 83.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 172.33999633789062,
       "resistance": 204.52999877929688,
-      "risk_reward": 0.38
+      "risk_reward": 0.11
     },
     "momentum": {
-      "score": 60.0,
+      "score": 70.0,
       "returns": {
-        "1m": 0.013785974108218912,
-        "3m": 0.05569651734123693,
-        "6m": 0.12354964820648329,
-        "12m": 0.4972063509267044
+        "1m": 0.04918973613291677,
+        "3m": 0.10443754484063605,
+        "6m": 0.1457266405476909,
+        "12m": 0.5365538493569453
       },
-      "acceleration": -0.0061,
+      "acceleration": 0.0316,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
         "6m return is positive",
-        "12m return is positive"
+        "12m return is positive",
+        "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 987243.65,
-      "relative_volume": 0.8956988479996807,
+      "average_volume": 957543.3,
+      "relative_volume": 0.24402656255858088,
       "accumulation_days": 1,
-      "distribution_days": 1,
+      "distribution_days": 2,
       "evidence": []
     },
     "fundamental": {
@@ -63,30 +65,29 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.019657920414015533,
-        "annualized_volatility": 0.31205981224910984,
+        "volatility": 0.019682263575277335,
+        "annualized_volatility": 0.31244624795405307,
         "maximum_drawdown": -0.5211993420936051,
-        "sharpe_ratio": -0.0812986330853024,
-        "sortino_ratio": -0.13126925299797895,
-        "calmar_ratio": -0.13651296247042416,
-        "beta": 0.5332620185085488,
-        "alpha": -0.12431814000589435
+        "sharpe_ratio": -0.033796133718522595,
+        "sortino_ratio": -0.05463667488334785,
+        "calmar_ratio": -0.11013137245580368,
+        "beta": 0.5329349951324149,
+        "alpha": -0.10928042415747061
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "BIIB",
@@ -95,7 +96,7 @@
     "sector": "Healthcare",
     "industry": "Drug Manufacturers - General",
     "exchange": "NMS",
-    "market_cap": 29100013568.0,
+    "market_cap": 29729685504.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.311,
     "fcf_growth": null,
@@ -112,15 +113,15 @@
     "cash_position": 4282700032.0,
     "total_debt": 6561900032.0,
     "interest_coverage": null,
-    "forward_pe": 11.815614,
-    "trailing_pe": 21.194086,
+    "forward_pe": 12.071282,
+    "trailing_pe": 21.675995,
     "peg": 3.94,
-    "price_to_book": 1.5597823,
-    "price_to_sales": 2.9283328,
-    "enterprise_to_ebitda": 8.929,
-    "enterprise_to_revenue": 3.18,
-    "fcf_yield": 0.06635478198276007,
-    "institutional_ownership": 0.96593004,
+    "price_to_book": 1.5935332,
+    "price_to_sales": 2.9916966,
+    "enterprise_to_ebitda": 8.803,
+    "enterprise_to_revenue": 3.135,
+    "fcf_yield": 0.0649493939564279,
+    "institutional_ownership": 0.96583,
     "insider_ownership": 0.0018799999,
     "short_interest": 4771495.0,
     "short_ratio": 4.01,
@@ -133,26 +134,25 @@
     "number_of_analysts": 30.0,
     "dividend_yield": null,
     "payout_ratio": 0.0,
-    "next_earnings_date": "1777465800",
-    "eps_current_year": 9.3,
+    "next_earnings_date": "1785328200",
+    "eps_current_year": 9.29,
     "eps_forward": 16.68174,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 48.348712544552654,
+    "rsi": 55.35175385478602,
     "macd_cross": false,
-    "breakout": false,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.8956988479996807,
+    "relative_volume": 0.24402656255858088,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 172.33999633789062,
     "resistance": 204.52999877929688
   },
   "earnings": {
-    "next_earnings_date": "1777465800",
+    "next_earnings_date": "1785328200",
     "surprise_tracking": "Available",
     "beat_streak": 4,
     "miss_streak": 0,
@@ -193,14 +193,14 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 3,
     "bearish_news_score": 3,
-    "institutional_ownership": 0.96593004,
+    "institutional_ownership": 0.96583,
     "detail": {
       "earnings": {
         "available": true,
@@ -240,12 +240,11 @@
         "last_surprise_pct": 0.2361,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.53,
-      "eps_growth_implied": 79.37
+      "analyst_upside_pct": 9.31,
+      "eps_growth_implied": 79.57
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
@@ -260,7 +259,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0018799999,
-    "institutional_ownership": 0.96593004,
+    "institutional_ownership": 0.96583,
     "short_interest": 4771495.0,
     "short_percent_float": 0.036,
     "days_to_cover": 4.01,
@@ -336,13 +335,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-16",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-17",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: BIIB\nRating: Hold | Score: 61.45/100 | Confidence: 49.6/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.815614\nNews/Catalyst: Acumen Nominates 2 Therapies to Treat Alzheimer\u2019s Disease\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BIIB\nRating: Hold | Score: 64.7/100 | Confidence: 49.19/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.071282\nNews/Catalyst: Acumen Nominates 2 Therapies to Treat Alzheimer\u2019s Disease\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

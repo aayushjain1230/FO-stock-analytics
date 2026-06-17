@@ -1,40 +1,41 @@
 {
   "ticker": "FIZZ",
-  "generated_at": "2026-06-16T22:52:17.608366",
+  "generated_at": "2026-06-17T16:37:46.489017",
   "score": {
-    "final_score": 46.3,
+    "final_score": 53.8,
     "rating": "Hold",
-    "confidence": 36.61,
+    "confidence": 50.26,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 50.0,
+      "technical": 65.0,
       "momentum": 50.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 62.0,
       "risk": 60.0,
       "catalyst": 60.0
     },
     "technical": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA50",
         "Price above SMA200",
+        "SMA alignment is constructive",
         "EMA trend is positive",
         "Stock is not materially extended from SMA20"
       ],
       "support": 32.93000030517578,
       "resistance": 37.2400016784668,
-      "risk_reward": 0.38
+      "risk_reward": 0.41
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": 0.04825580737731361,
-        "3m": 0.04219661744383951,
-        "6m": 0.06528812404111362,
-        "12m": -0.19526890720461876
+        "1m": 0.021134721471908202,
+        "3m": 0.04788938954401978,
+        "6m": 0.06148626050883865,
+        "12m": -0.19564248196905554
       },
-      "acceleration": 0.0096,
+      "acceleration": 0.0171,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,12 +44,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 315822.75,
-      "relative_volume": 1.000102114239712,
+      "score": 25.0,
+      "average_volume": 308207.5,
+      "relative_volume": 0.40346195339178964,
       "accumulation_days": 7,
-      "distribution_days": 7,
-      "evidence": []
+      "distribution_days": 6,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 62.0,
@@ -58,14 +61,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.017344292526438237,
-        "annualized_volatility": 0.2753321081478705,
+        "volatility": 0.017327062552298052,
+        "annualized_volatility": 0.27505859078784445,
         "maximum_drawdown": -0.40083270711607843,
-        "sharpe_ratio": -0.31237236531755075,
-        "sortino_ratio": -0.517272909365268,
-        "calmar_ratio": -0.28965980912204764,
-        "beta": 0.11136815476501755,
-        "alpha": -0.10667078206279614
+        "sharpe_ratio": -0.3153552819702024,
+        "sortino_ratio": -0.5217644954722871,
+        "calmar_ratio": -0.29111733295426073,
+        "beta": 0.1113821682871032,
+        "alpha": -0.10737362704060362
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -81,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "FIZZ",
@@ -90,7 +93,7 @@
     "sector": "Consumer Defensive",
     "industry": "Beverages - Non-Alcoholic",
     "exchange": "NMS",
-    "market_cap": 3440043776.0,
+    "market_cap": 3371486208.0,
     "revenue_growth": -0.009,
     "eps_growth": 0.048,
     "fcf_growth": null,
@@ -107,14 +110,14 @@
     "cash_position": 313972992.0,
     "total_debt": 62671000.0,
     "interest_coverage": null,
-    "forward_pe": 18.258623,
-    "trailing_pe": 18.37,
+    "forward_pe": 17.894741,
+    "trailing_pe": 18.0039,
     "peg": 4.03,
-    "price_to_book": 5.7703786,
-    "price_to_sales": 2.8737414,
-    "enterprise_to_ebitda": 12.198,
-    "enterprise_to_revenue": 2.645,
-    "fcf_yield": 0.034944466939248624,
+    "price_to_book": 5.6553793,
+    "price_to_sales": 2.81647,
+    "enterprise_to_ebitda": 12.021,
+    "enterprise_to_revenue": 2.606,
+    "fcf_yield": 0.03565504604905683,
     "institutional_ownership": 0.26311,
     "insider_ownership": 0.7468,
     "short_interest": 3020926.0,
@@ -127,22 +130,21 @@
     "recommendation": "none",
     "number_of_analysts": 1.0,
     "dividend_yield": null,
-    "payout_ratio": 0.0,
+    "payout_ratio": null,
     "next_earnings_date": null,
     "eps_current_year": 2.0,
     "eps_forward": 2.0122,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 45.83808720562783,
+    "rsi": 42.57601413598608,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.000102114239712,
+    "relative_volume": 0.40346195339178964,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 32.93000030517578,
     "resistance": 37.2400016784668
   },
@@ -235,7 +237,7 @@
         "last_surprise_pct": -0.008,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": -2.94,
+      "analyst_upside_pct": -2.8,
       "eps_growth_implied": 0.61
     },
     "evidence": [
@@ -331,10 +333,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-16",
+    "date_of_change": "2026-06-17",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: FIZZ\nRating: Hold | Score: 46.3/100 | Confidence: 36.61/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.258623\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: FIZZ\nRating: Hold | Score: 53.8/100 | Confidence: 50.26/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 17.894741\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
