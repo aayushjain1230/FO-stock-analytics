@@ -1,18 +1,18 @@
 {
   "ticker": "CVNA",
-  "generated_at": "2026-06-17T19:21:33.872047",
+  "generated_at": "2026-06-17T21:30:07.766612",
   "score": {
-    "final_score": 36.15,
+    "final_score": 39.15,
     "rating": "Drop",
-    "confidence": 28.74,
+    "confidence": 37.21,
     "risk_level": "High",
     "categories": {
       "technical": 20.0,
       "momentum": 45.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 76.0,
       "risk": 35.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 20.0,
@@ -22,17 +22,17 @@
       ],
       "support": 56.25600051879883,
       "resistance": 83.35800170898438,
-      "risk_reward": 2.95
+      "risk_reward": 3.1
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": -0.044077494405938555,
-        "3m": 0.08373114252126368,
-        "6m": -0.29552151200728605,
-        "12m": 0.08791591857235503
+        "1m": -0.047864225892030765,
+        "3m": 0.0794381179132766,
+        "6m": -0.29831218892528455,
+        "12m": 0.08360631665486618
       },
-      "acceleration": 0.2315,
+      "acceleration": 0.2286,
       "evidence": [
         "3m return is positive",
         "12m return is positive",
@@ -40,12 +40,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 10391809.5,
-      "relative_volume": 1.1794760094476329,
+      "score": 25.0,
+      "average_volume": 10637327.5,
+      "relative_volume": 1.6138687090342945,
       "accumulation_days": 3,
       "distribution_days": 4,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.61x"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -58,14 +60,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.04228091316075963,
-        "annualized_volatility": 0.6711886885685274,
-        "maximum_drawdown": -0.4302386909731666,
-        "sharpe_ratio": 1.132284880757587,
-        "sortino_ratio": 1.5816099438449938,
-        "calmar_ratio": 1.6440940052537698,
-        "beta": 2.188447963063057,
-        "alpha": 0.3646180789905549
+        "volatility": 0.04233621772651516,
+        "annualized_volatility": 0.6720666213326607,
+        "maximum_drawdown": -0.43023869097316725,
+        "sharpe_ratio": 1.1177243231245082,
+        "sortino_ratio": 1.5613515354745395,
+        "calmar_ratio": 1.6070757314691158,
+        "beta": 2.1921451044371336,
+        "alpha": 0.3610314889581764
       },
       "evidence": [
         "Volatility is elevated",
@@ -74,15 +76,14 @@
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; 12m return is positive; Momentum is accelerating; revenue growth is strong"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; 12m return is positive; Momentum is accelerating; Relative volume is 1.61x"
   },
   "fundamentals": {
     "ticker": "CVNA",
@@ -136,14 +137,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 35.305779525616686,
+    "rsi": 35.057636569273384,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1794760094476329,
+    "relative_volume": 1.6138687090342945,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 56.25600051879883,
     "resistance": 83.35800170898438
   },
@@ -192,10 +193,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bearish_news_score": 0,
     "institutional_ownership": 1.08332,
     "detail": {
       "earnings": {
@@ -236,13 +237,12 @@
         "last_surprise_pct": 0.1171,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 46.01,
+      "analyst_upside_pct": 46.51,
       "eps_growth_implied": 25.81
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -265,20 +265,30 @@
     "available": true,
     "items": [
       {
-        "headline": "Update: Equity Markets Mixed Ahead of Fed Decision",
+        "headline": "Dow Retreats From Highs in Broad Sell-Off Following Fed Decision",
         "source": "MT Newswires",
-        "published": "2026-06-17T17:48:23Z",
-        "summary": "(Updates with latest market prices and developments.) US benchmark equity indexes were mixed intr",
+        "published": "2026-06-17T20:48:38Z",
+        "summary": "The Dow Jones Industrial Average fell from record highs Wednesday as markets reacted to the Federal",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "CarMax Earnings Fall Far Less Than Feared, But Shares Sink",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-17T20:41:09Z",
+        "summary": "The earnings report showed some turnaround progress. But the day added a fresh challenge in the form of a possible rate hike.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "2 Reasons to Buy the Dip on Struggling Carvana Stock",
-        "source": "Schaeffer's Investment Research",
-        "published": "2026-06-17T17:47:38Z",
-        "summary": "Carvana pessimism in the options pits could be another contrarian signal",
+        "headline": "US Equity Markets End Lower After Government Bond Yields Rise, Fed's Policy Statement",
+        "source": "MT Newswires",
+        "published": "2026-06-17T20:25:56Z",
+        "summary": "US equity indexes were lower on Wednesday as government bond yields rose and the Federal Reserve ann",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -287,31 +297,21 @@
       {
         "headline": "Intel, SpaceX, Robinhood, Carvana, and More Stocks That Explain Today\u2019s Market",
         "source": "Barrons.com",
-        "published": "2026-06-17T16:56:00Z",
-        "summary": "AI and tech stocks rebound. Investors await Kevin Warsh\u2019s first meeting as Federal Reserve chairman.",
+        "published": "2026-06-17T20:24:00Z",
+        "summary": "FEATURE  Stocks declined Wednesday\u2014although some tech and artificial-intelligence plays mounted a comeback\u2014after the Federal Reserve opted to keep interest rates steady during Kevin Warsh\u2019s first meeting as central bank chairman.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "CarMax Stock Drops After Earnings. Shares of Rival Carvana Also Take a Tumble.",
-        "source": "Barrons.com",
-        "published": "2026-06-17T15:31:00Z",
-        "summary": "CarMax stock falls after the used-vehicle retailer handily tops Wall Street expectations with its first-quarter earnings. Carvana is at the bottom of the S&P 500.",
+        "headline": "Update: Equity Markets Mixed Ahead of Fed Decision",
+        "source": "MT Newswires",
+        "published": "2026-06-17T17:48:23Z",
+        "summary": "(Updates with latest market prices and developments.) US benchmark equity indexes were mixed intr",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "CarMax Earnings Beat. Why CarMax Stock, Carvana Shares Are Sinking.",
-        "source": "Investor's Business Daily",
-        "published": "2026-06-17T14:57:12Z",
-        "summary": "\"Show me\" story CarMax undercuts buy point. Key rival Carvana disrupts auto retailing again.",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
@@ -339,5 +339,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CVNA\nRating: Drop | Score: 36.15/100 | Confidence: 28.74/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 56.25600051879883 | Resistance: 83.35800170898438\nFundamental Outlook: Quality Compounder | Forward P/E: 29.802944\nNews/Catalyst: Update: Equity Markets Mixed Ahead of Fed Decision\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CVNA\nRating: Drop | Score: 39.15/100 | Confidence: 37.21/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: volume surge | Support: 56.25600051879883 | Resistance: 83.35800170898438\nFundamental Outlook: Quality Compounder | Forward P/E: 29.802944\nNews/Catalyst: Dow Retreats From Highs in Broad Sell-Off Following Fed Decision\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

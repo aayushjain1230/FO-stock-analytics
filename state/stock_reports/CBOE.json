@@ -1,6 +1,6 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-17T19:21:13.454355",
+  "generated_at": "2026-06-17T21:29:50.722395",
   "score": {
     "final_score": 40.95,
     "rating": "Drop",
@@ -19,19 +19,19 @@
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 251.36500549316406,
+      "support": 254.69000244140625,
       "resistance": 366.70001220703125,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.312296972929891,
-        "3m": -0.12223627722987518,
-        "6m": 0.02335906165429069,
-        "12m": 0.12483345272365276
+        "1m": -0.30320019964667744,
+        "3m": -0.11062542593511238,
+        "6m": 0.03689587813213713,
+        "12m": 0.13971240625453651
       },
-      "acceleration": -0.1339,
+      "acceleration": -0.1291,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -39,12 +39,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1761530.4,
-      "relative_volume": 1.6036669023708021,
+      "average_volume": 1829339.5,
+      "relative_volume": 2.285573563573082,
       "accumulation_days": 3,
       "distribution_days": 10,
       "evidence": [
-        "Relative volume is 1.60x"
+        "Relative volume is 2.29x"
       ]
     },
     "fundamental": {
@@ -57,14 +57,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016716373615959672,
-        "annualized_volatility": 0.26536420446402503,
-        "maximum_drawdown": -0.313084646823218,
-        "sharpe_ratio": 0.9032964993238679,
-        "sortino_ratio": 1.140717842496187,
-        "calmar_ratio": 0.7233179266838052,
-        "beta": -0.21706397481003684,
-        "alpha": 0.2789167113611695
+        "volatility": 0.016660159236455394,
+        "annualized_volatility": 0.26447182885438025,
+        "maximum_drawdown": -0.30399829270430456,
+        "sharpe_ratio": 0.9417837097976598,
+        "sortino_ratio": 1.1961766115763577,
+        "calmar_ratio": 0.7839083695068287,
+        "beta": -0.2162135024384476,
+        "alpha": 0.2875565185962316
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -77,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.60x; eps growth is strong; earnings surprise"
+    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 2.29x; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -131,15 +131,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 20.09337762928604,
+    "rsi": 20.53306463663283,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.6036669023708021,
+    "relative_volume": 2.285573563573082,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "volume surge",
-    "support": 251.36500549316406,
+    "support": 254.69000244140625,
     "resistance": 366.70001220703125
   },
   "earnings": {
@@ -231,7 +231,7 @@
         "last_surprise_pct": 0.096599996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 29.77,
+      "analyst_upside_pct": 28.36,
       "eps_growth_implied": 25.78
     },
     "evidence": [
@@ -268,6 +268,16 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
+        "headline": "Is Cboe Global Markets Stock Underperforming the S&P 500?",
+        "source": "Barchart",
+        "published": "2026-06-17T13:23:50Z",
+        "summary": "As Cboe Global Markets has struggled to keep pace with the broader S&P 500 Index over the past year, analysts are cautious about its future growth prospects.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Nasdaq Futures Climb as Chip Stocks Rebound Ahead of First Fed Decision Under Warsh",
         "source": "Barchart",
         "published": "2026-06-17T10:37:21Z",
@@ -296,16 +306,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Investors pile into moonshot SpaceX bets as first-day options trading shatters records",
-        "source": "MarketWatch",
-        "published": "2026-06-16T20:53:00Z",
-        "summary": "On Friday, SpaceX clinched the biggest IPO in the history of the U.S. equity market, raising more than $85 billion. On Tuesday, it followed that up with the biggest debut in the history of the U.S. options market.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -324,13 +324,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.29x",
     "date_of_change": "2026-06-17",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.29x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 40.95/100 | Confidence: 36.89/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 251.36500549316406 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.937428\nNews/Catalyst: 2 Reasons to Buy the Dip on Struggling Carvana Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 40.95/100 | Confidence: 36.89/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 254.69000244140625 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.937428\nNews/Catalyst: 2 Reasons to Buy the Dip on Struggling Carvana Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.29x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

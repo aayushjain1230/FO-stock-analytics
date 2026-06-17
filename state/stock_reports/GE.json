@@ -1,43 +1,44 @@
 {
   "ticker": "GE",
-  "generated_at": "2026-06-17T19:21:40.518460",
+  "generated_at": "2026-06-17T21:30:13.702575",
   "score": {
-    "final_score": 69.5,
+    "final_score": 73.25,
     "rating": "Watch",
-    "confidence": 58.45,
+    "confidence": 58.78,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
+      "technical": 90.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 60.0,
       "risk": 100,
-      "catalyst": 45.0
+      "catalyst": 35.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is extended from SMA20"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 273.25,
-      "resistance": 357.7300109863281,
+      "resistance": 357.0299987792969,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.2508480128733199,
-        "3m": 0.18862978848709733,
-        "6m": 0.19164337769648765,
-        "12m": 0.5203497164510282
+        "1m": 0.24840033207701806,
+        "3m": 0.18630385737696264,
+        "6m": 0.189311549543419,
+        "12m": 0.5173745717080738
       },
-      "acceleration": 0.0928,
+      "acceleration": 0.0916,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +50,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4728624.75,
-      "relative_volume": 0.6288287096581305,
+      "average_volume": 4764598.85,
+      "relative_volume": 0.7750866581349236,
       "accumulation_days": 3,
       "distribution_days": 0,
       "evidence": [
@@ -68,26 +69,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.0207270863493251,
-        "annualized_volatility": 0.32903229529965516,
-        "maximum_drawdown": -0.21364273629911046,
-        "sharpe_ratio": 1.3837362100680337,
-        "sortino_ratio": 1.787189114096473,
-        "calmar_ratio": 2.306717110560769,
-        "beta": 1.175007460677401,
-        "alpha": 0.24302042729737516
+        "volatility": 0.020741308905144924,
+        "annualized_volatility": 0.3292580713738971,
+        "maximum_drawdown": -0.21364273629911035,
+        "sharpe_ratio": 1.366189375160815,
+        "sortino_ratio": 1.7657366853314762,
+        "calmar_ratio": 2.268183222417768,
+        "beta": 1.1726603194542766,
+        "alpha": 0.24112107676723932
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 35.0,
       "evidence": [
         "sector strength",
-        "major news",
-        "guidance change"
+        "major news"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "GE",
@@ -141,16 +141,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.01410209439766,
+    "rsi": 69.78472279888041,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 0.6288287096581305,
+    "relative_volume": 0.7750866581349236,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
     "support": 273.25,
-    "resistance": 357.7300109863281
+    "resistance": 357.0299987792969
   },
   "earnings": {
     "next_earnings_date": "1784205000",
@@ -198,8 +198,8 @@
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
-    "guidance_change": true,
-    "bullish_news_score": 6,
+    "guidance_change": false,
+    "bullish_news_score": 2,
     "bearish_news_score": 1,
     "institutional_ownership": 0.8098,
     "detail": {
@@ -241,13 +241,12 @@
         "last_surprise_pct": 0.16309999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -1.71,
+      "analyst_upside_pct": -1.7,
       "eps_growth_implied": 7.91
     },
     "evidence": [
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
-      "news tone or forward EPS implies a catalyst shift"
+      "recent news item has elevated importance"
     ]
   },
   "analyst": {
@@ -269,10 +268,40 @@
     "available": true,
     "items": [
       {
+        "headline": "Old Age space ETFs gain over New Age stocks since SpaceX IPO",
+        "source": "Yahoo Finance Video",
+        "published": "2026-06-17T20:20:22Z",
+        "summary": "SpaceX's (SPCX) IPO may be creating a vacuum, and space-themed ETFs are benefitting from the latest phase in the Space Race. Yahoo Finance Markets and Data Editor Jared Blikre looks at the array of thematic space ETFs and how they have been gaining since SpaceX's mega-IPO last Friday.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "SpaceX is sucking the oxygen out of the new space trade",
         "source": "Yahoo Finance",
         "published": "2026-06-17T17:08:15Z",
         "summary": "SpaceX stock is flying, and so are shares of  older aerospace incumbents like GE Aerospace and Boeing.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "BETA Technologies (BETA) Reports Q1 2026 Results with $3.9B Aircraft Backlog",
+        "source": "Insider Monkey",
+        "published": "2026-06-17T19:37:44Z",
+        "summary": "BETA Technologies Inc. (NYSE:BETA) is one of the best new stocks to buy with the huge upside potential. On May 12, BETA Technologies announced its Q1 2026 financial results, reporting $10.1 million in revenue alongside a net loss of $122.3 million and an adjusted EBITDA of ($97.2) million. The company continues to advance its electric [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Montreal company plans to build a plant for small modular reactor parts east of Toronto in supply chain deal",
+        "source": "Financial Post",
+        "published": "2026-06-17T19:30:20Z",
+        "summary": "SMRs are a class of reactors with a power capacity of up to 300 megawatts per unit, a third of the size of a full reactor",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -286,36 +315,6 @@
         "bullish_score": 2,
         "bearish_score": 1,
         "importance_score": 75,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "GE Vernova Inc. (GEV) is Attracting Investor Attention: Here is What You Should Know",
-        "source": "Zacks",
-        "published": "2026-06-17T13:00:05Z",
-        "summary": "GE Vernova (GEV) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "GE Stock Charts Golden Cross As Strong Aviation Demand, Defense Growth Fuel Momentum",
-        "source": "Stocktwits",
-        "published": "2026-06-17T08:28:58Z",
-        "summary": "A major factor behind GE Aerospace\u2019s growth has been the ongoing strain within the global aircraft production system and defense demand.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "The Zacks Analyst Blog Highlights Applied Materials, GE, AstraZeneca, Team and Applied Energetics",
-        "source": "Zacks",
-        "published": "2026-06-17T07:36:00Z",
-        "summary": "Applied Materials, GE Aerospace and AstraZeneca headline Zacks research picks, backed by strong industry outperformance and key growth drivers.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
@@ -348,5 +347,5 @@
       }
     ]
   },
-  "report": "Ticker: GE\nRating: Watch | Score: 69.5/100 | Confidence: 58.45/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 273.25 | Resistance: 357.7300109863281\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.46832\nNews/Catalyst: SpaceX is sucking the oxygen out of the new space trade\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: GE\nRating: Watch | Score: 73.25/100 | Confidence: 58.78/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 273.25 | Resistance: 357.0299987792969\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.46832\nNews/Catalyst: Old Age space ETFs gain over New Age stocks since SpaceX IPO\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

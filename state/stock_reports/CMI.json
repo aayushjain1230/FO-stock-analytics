@@ -1,18 +1,18 @@
 {
   "ticker": "CMI",
-  "generated_at": "2026-06-17T19:21:23.471733",
+  "generated_at": "2026-06-17T21:29:58.604900",
   "score": {
-    "final_score": 70.3,
-    "rating": "Watch",
-    "confidence": 57.56,
+    "final_score": 80.8,
+    "rating": "Buy Watch",
+    "confidence": 67.55,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 52.0,
       "risk": 85.0,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
       "score": 90.0,
@@ -27,18 +27,18 @@
         "Stock is not materially extended from SMA20"
       ],
       "support": 511.70001220703125,
-      "resistance": 724.0,
+      "resistance": 717.780029296875,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.07140591985746392,
-        "3m": 0.3368072393502688,
-        "6m": 0.4088266397332758,
-        "12m": 1.282256575740484
+        "1m": 0.06220134329300531,
+        "3m": 0.32532256826672734,
+        "6m": 0.39672324135631043,
+        "12m": 1.2626496538524141
       },
-      "acceleration": 0.1324,
+      "acceleration": 0.127,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,13 +49,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1004418.55,
-      "relative_volume": 1.1609413227185021,
+      "score": 100,
+      "average_volume": 1038126.75,
+      "relative_volume": 1.7726496306929767,
       "accumulation_days": 7,
       "distribution_days": 4,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.77x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -66,24 +69,23 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.020601937748839703,
-        "annualized_volatility": 0.32704562285678235,
-        "maximum_drawdown": -0.304813200067098,
-        "sharpe_ratio": 1.7390959749007715,
-        "sortino_ratio": 2.535290862609572,
-        "calmar_ratio": 2.210153789318048,
-        "beta": 1.2463672109565247,
-        "alpha": 0.343598604741846
+        "volatility": 0.020591508619319798,
+        "annualized_volatility": 0.32688006555817906,
+        "maximum_drawdown": -0.30481333763772356,
+        "sharpe_ratio": 1.7075913402027754,
+        "sortino_ratio": 2.4881031224525696,
+        "calmar_ratio": 2.1527347653748907,
+        "beta": 1.2443870401945802,
+        "alpha": 0.3367039850025356
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -141,16 +143,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 60.966616517918396,
+    "rsi": 59.97967976399746,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 1.1609413227185021,
+    "relative_volume": 1.7726496306929767,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 511.70001220703125,
-    "resistance": 724.0
+    "resistance": 717.780029296875
   },
   "earnings": {
     "next_earnings_date": "1777984200",
@@ -197,10 +199,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 1,
+    "bullish_news_score": 0,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.87951,
     "detail": {
       "earnings": {
@@ -241,12 +243,11 @@
         "last_surprise_pct": -0.1625,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 2.91,
+      "analyst_upside_pct": 3.7,
       "eps_growth_implied": 76.09
     },
     "evidence": [
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -269,19 +270,29 @@
     "available": true,
     "items": [
       {
-        "headline": "Stock Market Today: Dow Slips On No Fed Rate Cut; Western Digital, Micron Lead AI Rebound (Live Coverage)",
+        "headline": "Dow Jones Futures Rise After Fed Rate Hike Bets Hit Stocks; SpaceX Falls As Robinhood Jumps",
         "source": "Investor's Business Daily",
-        "published": "2026-06-17T18:41:00Z",
-        "summary": "Stock Market Today: The Dow Jones index rises Wednesday before the Fed's decision and Fed Chair Warsh's comments. SpaceX stock is on the move.",
+        "published": "2026-06-17T21:19:16Z",
+        "summary": "Stocks suffered broad, sharp losses on rate hike bets after the first Warsh Fed meeting. SpaceX fell for the first time while Robinhood jumped.",
         "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Cummins, Stock Of The Day, Breaks Out On Massive AI Data-Center Deal",
+        "headline": "Stock Market Today: Dow Slapped As Fed Chair Warsh Stresses Price Stability; SpaceX Falls 5% (Live Coverage)",
         "source": "Investor's Business Daily",
-        "published": "2026-06-17T17:05:10Z",
+        "published": "2026-06-17T20:52:04Z",
+        "summary": "Stock Market Today: The Dow Jones index rose Wednesday before the Fed's decision and fell after Fed Chair Warsh's comments. SpaceX stock is on the move.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Cummins, Stock Of The Day, Flirts With A Breakout On AI Power Deal",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-17T20:16:55Z",
         "summary": "The AI and related power boom has lifted several stocks across the industrial sector. Cummins is no exception.",
         "bullish_score": 0,
         "bearish_score": 0,
@@ -307,16 +318,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Costco & 2 Earnings Acceleration Stocks to Watch for Solid Upside",
-        "source": "Zacks",
-        "published": "2026-06-16T19:00:00Z",
-        "summary": "COST, CMI and KMT stand out for earnings acceleration, with rising EPS growth trends that often precede stronger stock performance.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -350,5 +351,5 @@
       }
     ]
   },
-  "report": "Ticker: CMI\nRating: Watch | Score: 70.3/100 | Confidence: 57.56/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 511.70001220703125 | Resistance: 724.0\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.486008\nNews/Catalyst: Stock Market Today: Dow Slips On No Fed Rate Cut; Western Digital, Micron Lead AI Rebound (Live Coverage)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: CMI\nRating: Buy Watch | Score: 80.8/100 | Confidence: 67.55/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 511.70001220703125 | Resistance: 717.780029296875\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.486008\nNews/Catalyst: Dow Jones Futures Rise After Fed Rate Hike Bets Hit Stocks; SpaceX Falls As Robinhood Jumps\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

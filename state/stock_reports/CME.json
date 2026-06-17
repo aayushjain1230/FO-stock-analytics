@@ -1,47 +1,50 @@
 {
   "ticker": "CME",
-  "generated_at": "2026-06-17T19:21:22.499250",
+  "generated_at": "2026-06-17T21:29:57.772352",
   "score": {
-    "final_score": 33.9,
+    "final_score": 39.4,
     "rating": "Drop",
-    "confidence": 23.36,
+    "confidence": 33.13,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 20.0,
+      "technical": 30.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 20.0,
+      "score": 30.0,
       "evidence": [
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 250.1699981689453,
+      "support": 250.52999877929688,
       "resistance": 310.7099914550781,
-      "risk_reward": 0.0
+      "risk_reward": 28.94
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.17584194599159508,
-        "3m": -0.1859271323907945,
-        "6m": -0.054013544540086667,
-        "12m": -0.028437125222621984
+        "1m": -0.1680342529105423,
+        "3m": -0.17821498171169625,
+        "6m": -0.04505170540359893,
+        "12m": -0.019232986892221415
       },
-      "acceleration": -0.1589,
+      "acceleration": -0.1557,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3784760.4,
-      "relative_volume": 1.1425843495931738,
+      "score": 25.0,
+      "average_volume": 3886444.05,
+      "relative_volume": 1.6359636001964315,
       "accumulation_days": 4,
       "distribution_days": 11,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.64x"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -54,29 +57,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.012461144779848252,
-        "annualized_volatility": 0.19781454083189517,
-        "maximum_drawdown": -0.21424030943089012,
-        "sharpe_ratio": 0.9215195062313544,
-        "sortino_ratio": 1.1974533156714584,
-        "calmar_ratio": 0.8241884590100071,
-        "beta": -0.11495294902771308,
-        "alpha": 0.20305702769420658
+        "volatility": 0.012415334940481141,
+        "annualized_volatility": 0.197087332176504,
+        "maximum_drawdown": -0.21424030943089045,
+        "sharpe_ratio": 0.950717345751693,
+        "sortino_ratio": 1.2476195614087977,
+        "calmar_ratio": 0.8529925527433058,
+        "beta": -0.11413877983189989,
+        "alpha": 0.20768854328457972
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Relative volume is 1.64x; revenue growth is strong; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "CME",
@@ -130,15 +132,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 32.80322054257199,
+    "rsi": 33.81471510276653,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1425843495931738,
+    "relative_volume": 1.6359636001964315,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 250.1699981689453,
+    "setup_type": "volume surge",
+    "support": 250.52999877929688,
     "resistance": 310.7099914550781
   },
   "earnings": {
@@ -186,9 +188,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 0,
     "bearish_news_score": 1,
     "institutional_ownership": 0.92651004,
     "detail": {
@@ -230,13 +232,12 @@
         "last_surprise_pct": -0.0025,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 22.12,
+      "analyst_upside_pct": 21.14,
       "eps_growth_implied": 12.22
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -259,53 +260,53 @@
     "available": true,
     "items": [
       {
-        "headline": "CME Stock Tumbles After Surprise CEO Transition Plan",
-        "source": "GuruFocus.com",
-        "published": "2026-06-17T15:24:40Z",
-        "summary": "CME Names New CEO, Sending Shares Lower",
+        "headline": "Trading Day: US stocks end lower, dollar jumps as Federal Reserve kicks off Warsh era",
+        "source": "Reuters",
+        "published": "2026-06-17T21:01:37Z",
+        "summary": "By Stephen Culp NEW YORK, June 17 (Reuters) - Wall Street stocks turned sharply lower on Thursday, the dollar extended its gains and Treasury yields crept higher after the U.S.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "NDAQ Outperforms Industry, Trades at a Premium: How to Play the Stock",
-        "source": "Zacks",
-        "published": "2026-06-17T14:11:00Z",
-        "summary": "Nasdaq is expanding through growing non-trading revenues, strategic acquisitions and a diversified business model that supports long-term growth.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "CME Group\u2019s Terry Duffy to Step Down as CEO; Lynne Fitzpatrick to Take Helm",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-17T13:07:00Z",
-        "summary": "Duffy, will hand the reins to Fitzpatrick, currently president and chief financial officer, on March 1, 2027.",
+        "headline": "CME Group chief Terry Duffy to step down next year and transition to executive chairman role",
+        "source": "Chicago Tribune",
+        "published": "2026-06-17T20:55:00Z",
+        "summary": "CME Group Chairman and CEO Terry Duffy, who has been at the helm of the organization for more than 25 years, will step down from his role next year. Lynne Fitzpatrick, who currently serves as president and chief financial officer, will take over as CEO and will join the CME Group board of directors. Duffy will transition to executive chairman on March 1, 2027, the company announced Wednesday. ...",
         "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "What Do Traders Expect From the Fed?",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-17T12:45:02Z",
-        "summary": "With a few hours to go, derivative traders are pricing in a 99.6% chance that the central bank will keep interest rates on hold today, according to CME Group. They're betting there's a roughly 60% chance the Fed will raise its benchmark rate at least once by the end of the year.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Is SNEX Stock Worth Buying After Its Sharp Run and Richer Valuation?",
-        "source": "Zacks",
-        "published": "2026-06-17T12:38:00Z",
-        "summary": "StoneX's record results and acquisition gains support the bull case, but its sharp rally and richer valuation make clean execution crucial.",
-        "bullish_score": 1,
         "bearish_score": 1,
-        "importance_score": 60,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Sector Update: Financial Stocks Softer Late Afternoon",
+        "source": "MT Newswires",
+        "published": "2026-06-17T19:53:54Z",
+        "summary": "Financial stocks fell in late Wednesday afternoon trading with the NYSE Financial Index declining 0.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "CME Group\u2019s Terry Duffy to Step Down as CEO, Ceding Role to Finance Chief",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-17T19:23:00Z",
+        "summary": "The succession will mark the end of an era for the derivatives exchange, which transformed under Duffy\u2019s long run.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "CME Group CFO to take long-time CEO\u2019s seat",
+        "source": "CFO Dive",
+        "published": "2026-06-17T15:59:42Z",
+        "summary": "Lynne Fitzpatrick will succeed the Chicago-based global derivatives marketplace\u2019s long-time CEO Terrence Duffy.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
@@ -333,5 +334,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CME\nRating: Drop | Score: 33.9/100 | Confidence: 23.36/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 250.1699981689453 | Resistance: 310.7099914550781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.320827\nNews/Catalyst: CME Stock Tumbles After Surprise CEO Transition Plan\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CME\nRating: Drop | Score: 39.4/100 | Confidence: 33.13/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 250.52999877929688 | Resistance: 310.7099914550781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.320827\nNews/Catalyst: Trading Day: US stocks end lower, dollar jumps as Federal Reserve kicks off Warsh era\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
