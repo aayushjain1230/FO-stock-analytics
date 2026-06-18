@@ -1,39 +1,41 @@
 {
   "ticker": "AMGN",
-  "generated_at": "2026-06-18T18:42:25.816767",
+  "generated_at": "2026-06-18T20:22:34.084579",
   "score": {
-    "final_score": 47.75,
+    "final_score": 55.0,
     "rating": "Hold",
-    "confidence": 33.15,
+    "confidence": 43.12,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 45.0,
+      "technical": 62.0,
       "momentum": 45.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 60.0,
       "risk": 100,
-      "catalyst": 25.0
+      "catalyst": 10.0
     },
     "technical": {
-      "score": 45.0,
+      "score": 62.0,
       "evidence": [
         "Price above SMA200",
         "SMA alignment is constructive",
+        "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 323.8500061035156,
       "resistance": 355.6000061035156,
-      "risk_reward": 1.74
+      "risk_reward": 1.31
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": 0.014179901561318875,
-        "3m": -0.03414198046052097,
-        "6m": 0.041546549606959804,
-        "12m": 0.19125203356709264
+        "1m": 0.02071052487835412,
+        "3m": -0.02792251693768899,
+        "6m": 0.0482533953767974,
+        "12m": 0.1989228800262881
       },
-      "acceleration": -0.0549,
+      "acceleration": -0.052,
       "evidence": [
         "1m return is positive",
         "6m return is positive",
@@ -41,12 +43,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2747006.5,
-      "relative_volume": 0.8928737518458729,
+      "score": 25.0,
+      "average_volume": 3018635.55,
+      "relative_volume": 2.611912193242407,
       "accumulation_days": 5,
-      "distribution_days": 6,
-      "evidence": []
+      "distribution_days": 7,
+      "evidence": [
+        "Relative volume is 2.61x"
+      ]
     },
     "fundamental": {
       "score": 60.0,
@@ -58,25 +62,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016892025848894994,
-        "annualized_volatility": 0.26815259721750534,
-        "maximum_drawdown": -0.22740567414579904,
-        "sharpe_ratio": 0.421143036257953,
-        "sortino_ratio": 0.6053030209607276,
-        "calmar_ratio": 0.3523890564785331,
-        "beta": 0.47962578227433195,
-        "alpha": 0.02593766931567956
+        "volatility": 0.01688835379137305,
+        "annualized_volatility": 0.26809430511148735,
+        "maximum_drawdown": -0.22740555259514983,
+        "sharpe_ratio": 0.41000078576140847,
+        "sortino_ratio": 0.5894640912714239,
+        "calmar_ratio": 0.3381889512528116,
+        "beta": 0.48110874690782873,
+        "alpha": 0.02174187129446402
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 25.0,
+      "score": 10.0,
       "evidence": [
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; Stock is not materially extended from SMA20; 1m return is positive; 6m return is positive; 12m return is positive"
+    "explanation": "Price above SMA200; SMA alignment is constructive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "AMGN",
@@ -130,14 +133,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.144807582189294,
+    "rsi": 50.52754851927851,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8928737518458729,
+    "relative_volume": 2.611912193242407,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 323.8500061035156,
     "resistance": 355.6000061035156
   },
@@ -186,9 +189,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.85449,
     "detail": {
@@ -230,11 +233,10 @@
         "last_surprise_pct": 0.0804,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.17,
+      "analyst_upside_pct": 4.49,
       "eps_growth_implied": 63.37
     },
     "evidence": [
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -256,6 +258,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Amgen's Diversified Business, Emerging Pipeline Drives Positive View, RBC Says",
+        "source": "MT Newswires",
+        "published": "2026-06-18T19:35:57Z",
+        "summary": "Amgen's (AMGN) well diversified business with no specific product driving over 10% of the top-line,",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Amgen (AMGN) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
         "source": "Zacks",
@@ -295,16 +307,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Morgan Stanley Raises Amgen (AMGN) Price Target Following a Strong Start for Uplizna",
-        "source": "Insider Monkey",
-        "published": "2026-06-14T05:37:25Z",
-        "summary": "With an annual dividend yield of 2.85%, Amgen Inc. (NASDAQ:AMGN) is included among the 12 High Yield Fortune 500 Stocks to Buy Now. Amgen Inc. (NASDAQ:AMGN) discovers, develops, manufactures, and delivers innovative medicines to fight some of the world\u2019s toughest diseases. On June 10, Morgan Stanley analyst Terence Flynn raised the firm\u2019s price target on [\u2026]",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -322,14 +324,52 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.6762,
+    "probability_pct": 67.62,
+    "confidence": "High",
+    "evidence": [
+      "Volume surge above 1.5x",
+      "Composite score 55.0/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: AMGN\nRating: Hold | Score: 47.75/100 | Confidence: 33.15/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 323.8500061035156 | Resistance: 355.6000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.300856\nNews/Catalyst: Amgen (AMGN) Sees a More Significant Dip Than Broader Market: Some Facts to Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 55.0,
+    "technical_score": 62.0,
+    "momentum_score": 45.0,
+    "volume_score": 25.0,
+    "fundamental_score": 60.0,
+    "risk_score": 100,
+    "catalyst_score": 10.0,
+    "revenue_growth": 0.058,
+    "eps_growth": 0.044,
+    "roe": 1.01318,
+    "forward_pe": 14.300856,
+    "relative_volume": 2.611912193242407,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": false,
+    "major_news": false
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.61x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.61x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: AMGN\nRating: Hold | Score: 55.0/100 | Confidence: 43.12/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 323.8500061035156 | Resistance: 355.6000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.300856\nNews/Catalyst: Amgen's Diversified Business, Emerging Pipeline Drives Positive View, RBC Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.61x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

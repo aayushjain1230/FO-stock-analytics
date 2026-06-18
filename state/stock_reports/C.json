@@ -1,21 +1,21 @@
 {
   "ticker": "C",
-  "generated_at": "2026-06-18T18:42:43.538683",
+  "generated_at": "2026-06-18T20:22:52.251308",
   "score": {
-    "final_score": 72.65,
-    "rating": "Watch",
-    "confidence": 62.38,
+    "final_score": 82.15,
+    "rating": "Buy Watch",
+    "confidence": 74.41,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 75.0,
+      "technical": 83.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 76.0,
       "risk": 100,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 75.0,
+      "score": 83.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -26,18 +26,18 @@
         "Stock is not materially extended from SMA20"
       ],
       "support": 107.2699966430664,
-      "resistance": 144.4008026123047,
-      "risk_reward": 0.0
+      "resistance": 143.77999877929688,
+      "risk_reward": 0.02
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.20364091975507592,
-        "3m": 0.3207453768089952,
-        "6m": 0.31056890978202434,
-        "12m": 0.9089263824533185
+        "1m": 0.1924647503788306,
+        "3m": 0.30848185718961063,
+        "6m": 0.2983998817317437,
+        "12m": 0.8912014245967654
       },
-      "acceleration": 0.1655,
+      "acceleration": 0.1593,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,13 +48,15 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 11413395.45,
-      "relative_volume": 0.9672501972232987,
+      "score": 75.0,
+      "average_volume": 12065653.35,
+      "relative_volume": 1.9958610032501887,
       "accumulation_days": 10,
-      "distribution_days": 3,
+      "distribution_days": 4,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 2.00x",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -68,14 +70,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01976517867262368,
-        "annualized_volatility": 0.31376248431911996,
-        "maximum_drawdown": -0.31312775499883105,
-        "sharpe_ratio": 1.6352033832944457,
-        "sortino_ratio": 2.1712951435426295,
-        "calmar_ratio": 1.8818479382312705,
-        "beta": 1.267979015649093,
-        "alpha": 0.28308365801846463
+        "volatility": 0.019786120003246147,
+        "annualized_volatility": 0.3140949176368189,
+        "maximum_drawdown": -0.31312780146435204,
+        "sharpe_ratio": 1.6259999129312623,
+        "sortino_ratio": 2.1624233143925577,
+        "calmar_ratio": 1.8694448344825096,
+        "beta": 1.2667080999710278,
+        "alpha": 0.2785576454746075
       },
       "evidence": []
     },
@@ -141,16 +143,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 81.6569343542144,
+    "rsi": 79.26332549836366,
     "macd_cross": false,
     "breakout": true,
-    "new_52w_high": true,
-    "relative_volume": 0.9672501972232987,
+    "new_52w_high": false,
+    "relative_volume": 1.9958610032501887,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 107.2699966430664,
-    "resistance": 144.4008026123047
+    "resistance": 143.77999877929688
   },
   "earnings": {
     "next_earnings_date": "1784032200",
@@ -199,7 +201,7 @@
     "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 2,
     "bearish_news_score": 2,
     "institutional_ownership": 0.81607,
     "detail": {
@@ -241,7 +243,7 @@
         "last_surprise_pct": 0.17909999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 1.77,
+      "analyst_upside_pct": 2.7,
       "eps_growth_implied": 54.87
     },
     "evidence": [
@@ -269,10 +271,20 @@
     "available": true,
     "items": [
       {
+        "headline": "Sector Update: Financial Stocks Lower Late Afternoon",
+        "source": "MT Newswires",
+        "published": "2026-06-18T19:52:37Z",
+        "summary": "Financial stocks were lower in late Thursday afternoon trading, with the NYSE Financial Index easing",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "SpaceX Bankers Prepare for Bond Sale of at Least $20 Billion",
         "source": "Bloomberg",
         "published": "2026-06-18T16:44:46Z",
-        "summary": "(Bloomberg) -- Bankers for Elon Musk\u2019s SpaceX are preparing to hold calls with investors as soon as next week to discuss a potential bond offering on the heels of the company\u2019s record IPO, according to people with knowledge of the matter.Most Read from BloombergRead the 14-Point Draft Memorandum Between the US and IranModi Warns of \u2018Shortage of Trust\u2019 Ahead of Trump MeetingTrump Blows Through His Iran Red Lines in Justifying Peace DealIran\u2019s Deputy Foreign Minister Confirms Deal Reached With USA",
+        "summary": "(Bloomberg) -- Bankers for Elon Musk\u2019s SpaceX are preparing to hold calls with investors as soon as next week to discuss a potential bond offering on the heels of the company\u2019s record IPO, according to people with knowledge of the matter.Most Read from BloombergRead the 14-Point Draft Memorandum Between the US and IranModi Warns of \u2018Shortage of Trust\u2019 Ahead of Trump MeetingTrump Blows Through His Iran Red Lines in Justifying Peace DealIran\u2019s Deputy Foreign Minister Confirms Deal Reached With USN",
         "bullish_score": 1,
         "bearish_score": 0,
         "importance_score": 45,
@@ -307,16 +319,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Goldman\u2019s Kaplan Says Fed May Need to Hike as Soon as September",
-        "source": "Bloomberg",
-        "published": "2026-06-18T09:07:49Z",
-        "summary": "(Bloomberg) -- The Federal Reserve may need to raise interest rates as soon as September if inflation remains elevated, according to Rob Kaplan, vice chairman at Goldman Sachs Group Inc. and former Dallas Fed president. Most Read from BloombergRead the 14-Point Draft Memorandum Between the US and IranModi Warns of \u2018Shortage of Trust\u2019 Ahead of Trump MeetingTrump Blows Through His Iran Red Lines in Justifying Peace DealIran\u2019s Deputy Foreign Minister Confirms Deal Reached With USApple Plans Camera",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -334,21 +336,55 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.9339,
+    "probability_pct": 93.39,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Breakout pressure detected",
+      "Positive earnings surprise/catalyst",
+      "Composite score 82.15/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 82.15,
+    "technical_score": 83.0,
+    "momentum_score": 85.0,
+    "volume_score": 75.0,
+    "fundamental_score": 76.0,
+    "risk_score": 100,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.159,
+    "eps_growth": 0.561,
+    "roe": 0.07649,
+    "forward_pe": 11.615574,
+    "relative_volume": 1.9958610032501887,
+    "breakout": true,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": false
+  },
   "why_now": {
     "send_alert": true,
-    "reason": "52-week high",
-    "evidence": "Price is pressing against 52-week highs",
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.00x",
     "date_of_change": "2026-06-18",
-    "strength": 65,
-    "invalidates": "Failed breakout below prior range high",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
       {
-        "reason": "52-week high",
-        "evidence": "Price is pressing against 52-week highs",
-        "strength": 65,
-        "invalidates": "Failed breakout below prior range high"
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.00x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
       }
     ]
   },
-  "report": "Ticker: C\nRating: Watch | Score: 72.65/100 | Confidence: 62.38/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 107.2699966430664 | Resistance: 144.4008026123047\nFundamental Outlook: Quality Compounder | Forward P/E: 11.615574\nNews/Catalyst: SpaceX Bankers Prepare for Bond Sale of at Least $20 Billion\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: C\nRating: Buy Watch | Score: 82.15/100 | Confidence: 74.41/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 107.2699966430664 | Resistance: 143.77999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 11.615574\nNews/Catalyst: Sector Update: Financial Stocks Lower Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.00x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

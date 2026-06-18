@@ -1,15 +1,15 @@
 {
   "ticker": "CSCO",
-  "generated_at": "2026-06-18T18:43:02.695884",
+  "generated_at": "2026-06-18T20:23:13.944605",
   "score": {
-    "final_score": 66.4,
+    "final_score": 77.65,
     "rating": "Watch",
-    "confidence": 51.79,
+    "confidence": 74.55,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 75.0,
       "fundamental": 86.0,
       "risk": 85.0,
       "catalyst": 65.0
@@ -25,17 +25,17 @@
       ],
       "support": 77.04000091552734,
       "resistance": 130.0,
-      "risk_reward": 0.24
+      "risk_reward": 0.25
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.03726818472974469,
-        "3m": 0.5326519200824855,
-        "6m": 0.5599275540018627,
-        "12m": 0.874096557083005
+        "1m": 0.03605480812217765,
+        "3m": 0.530859052996858,
+        "6m": 0.5581027803980929,
+        "12m": 0.871904274550712
       },
-      "acceleration": 0.2527,
+      "acceleration": 0.2518,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,12 +46,16 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 23837600.9,
-      "relative_volume": 0.6679329042714194,
-      "accumulation_days": 1,
+      "score": 75.0,
+      "average_volume": 25238995.05,
+      "relative_volume": 1.7407270342168397,
+      "accumulation_days": 2,
       "distribution_days": 1,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.74x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -64,14 +68,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01724362742361571,
-        "annualized_volatility": 0.2737340991812436,
-        "maximum_drawdown": -0.1745780314426223,
-        "sharpe_ratio": 1.9925033921104771,
-        "sortino_ratio": 2.613009771096501,
-        "calmar_ratio": 3.78808762132622,
-        "beta": 0.8915219802045514,
-        "alpha": 0.3837148286518434
+        "volatility": 0.01724685310795331,
+        "annualized_volatility": 0.2737853053326353,
+        "maximum_drawdown": -0.1745781525635205,
+        "sharpe_ratio": 1.9638851442849763,
+        "sortino_ratio": 2.5759600545493577,
+        "calmar_ratio": 3.7147986736156042,
+        "beta": 0.8924491531480219,
+        "alpha": 0.374115938447785
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -140,14 +144,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.043436067824295,
+    "rsi": 48.85833259923013,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6679329042714194,
+    "relative_volume": 1.7407270342168397,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 77.04000091552734,
     "resistance": 130.0
   },
@@ -240,7 +244,7 @@
         "last_surprise_pct": 0.0229,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 6.2,
+      "analyst_upside_pct": 6.28,
       "eps_growth_implied": 59.21
     },
     "evidence": [
@@ -334,6 +338,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.9019,
+    "probability_pct": 90.19,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Positive earnings surprise/catalyst",
+      "Composite score 77.65/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 77.65,
+    "technical_score": 65.0,
+    "momentum_score": 85.0,
+    "volume_score": 75.0,
+    "fundamental_score": 86.0,
+    "risk_score": 85.0,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.12,
+    "eps_growth": 0.371,
+    "roe": 0.25229,
+    "forward_pe": 24.822405,
+    "relative_volume": 1.7407270342168397,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -343,5 +380,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CSCO\nRating: Watch | Score: 66.4/100 | Confidence: 51.79/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 24.822405\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CSCO\nRating: Watch | Score: 77.65/100 | Confidence: 74.55/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 24.822405\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

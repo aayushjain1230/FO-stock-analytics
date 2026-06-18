@@ -1,15 +1,15 @@
 {
   "ticker": "ADP",
-  "generated_at": "2026-06-18T18:42:18.543514",
+  "generated_at": "2026-06-18T20:22:25.778291",
   "score": {
-    "final_score": 38.7,
+    "final_score": 42.45,
     "rating": "Drop",
-    "confidence": 29.8,
+    "confidence": 40.42,
     "risk_level": "Moderate",
     "categories": {
       "technical": 38.0,
       "momentum": 25.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 78.0,
       "risk": 60.0,
       "catalyst": 45.0
@@ -23,29 +23,31 @@
       ],
       "support": 188.7899932861328,
       "resistance": 233.74000549316406,
-      "risk_reward": 0.5
+      "risk_reward": 0.52
     },
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": -0.000300949053126387,
-        "3m": 0.04611060440776682,
-        "6m": -0.15247939655385478,
-        "12m": -0.2692531931038379
+        "1m": -0.0016918009691048175,
+        "3m": 0.044655181461143334,
+        "6m": -0.1536585270672005,
+        "12m": -0.2702698596651434
       },
-      "acceleration": 0.1224,
+      "acceleration": 0.1215,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2470120.15,
-      "relative_volume": 0.505523182748823,
+      "score": 25.0,
+      "average_volume": 2692632.8,
+      "relative_volume": 2.1163138174651963,
       "accumulation_days": 3,
-      "distribution_days": 4,
-      "evidence": []
+      "distribution_days": 5,
+      "evidence": [
+        "Relative volume is 2.12x"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -57,14 +59,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.013756213169749433,
-        "annualized_volatility": 0.2183731141748913,
-        "maximum_drawdown": -0.4077978455095871,
-        "sharpe_ratio": -0.03648960363000054,
-        "sortino_ratio": -0.0494710818475571,
-        "calmar_ratio": -0.0766820549388878,
-        "beta": 0.46281564935415986,
-        "alpha": -0.09191231202044543
+        "volatility": 0.013766807014812189,
+        "annualized_volatility": 0.21854128625167532,
+        "maximum_drawdown": -0.40779784550958753,
+        "sharpe_ratio": -0.055311271212189574,
+        "sortino_ratio": -0.07508504949804805,
+        "calmar_ratio": -0.08653478005720326,
+        "beta": 0.46310957506897316,
+        "alpha": -0.09696593529650233
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -79,7 +81,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; eps growth is strong"
+    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; Relative volume is 2.12x"
   },
   "fundamentals": {
     "ticker": "ADP",
@@ -133,14 +135,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 46.13018840692511,
+    "rsi": 45.785214463036155,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.505523182748823,
+    "relative_volume": 2.1163138174651963,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 188.7899932861328,
     "resistance": 233.74000549316406
   },
@@ -233,7 +235,7 @@
         "last_surprise_pct": 0.0226,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.8,
+      "analyst_upside_pct": 13.0,
       "eps_growth_implied": 13.74
     },
     "evidence": [
@@ -260,6 +262,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Workday Stock: Is WDAY Underperforming the Technology Sector?",
+        "source": "Barchart",
+        "published": "2026-06-18T13:39:23Z",
+        "summary": "Workday has notably underperformed the Technology sector over the past year, but analysts are cautiously optimistic about the stock\u2019s prospects.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Intuit's Discounted Valuation Sparks Debate: Buy, Hold or Sell the Stock?",
         "source": "Zacks",
@@ -299,16 +311,6 @@
         "bearish_score": 1,
         "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Automatic Data Processing And 2 Other Reliable Dividend Stocks To Consider",
-        "source": "Simply Wall St.",
-        "published": "2026-06-15T17:32:23Z",
-        "summary": "In the last week, the United States market has stayed flat, but it is up 24% over the past year with earnings forecast to grow by 19% annually. In such a dynamic environment, reliable dividend stocks like Automatic Data Processing and others can offer stability and consistent income for investors seeking dependable returns.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -326,14 +328,53 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.648,
+    "probability_pct": 64.8,
+    "confidence": "High",
+    "evidence": [
+      "Volume surge above 1.5x",
+      "Positive earnings surprise/catalyst",
+      "Composite score 42.45/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: ADP\nRating: Drop | Score: 38.7/100 | Confidence: 29.8/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 188.7899932861328 | Resistance: 233.74000549316406\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.795633\nNews/Catalyst: Intuit's Discounted Valuation Sparks Debate: Buy, Hold or Sell the Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 42.45,
+    "technical_score": 38.0,
+    "momentum_score": 25.0,
+    "volume_score": 25.0,
+    "fundamental_score": 78.0,
+    "risk_score": 60.0,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.07,
+    "eps_growth": 0.105,
+    "roe": 0.71208,
+    "forward_pe": 17.795633,
+    "relative_volume": 2.1163138174651963,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.12x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.12x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: ADP\nRating: Drop | Score: 42.45/100 | Confidence: 40.42/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 188.7899932861328 | Resistance: 233.74000549316406\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.795633\nNews/Catalyst: Workday Stock: Is WDAY Underperforming the Technology Sector?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.12x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

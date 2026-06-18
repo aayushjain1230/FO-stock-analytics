@@ -1,15 +1,15 @@
 {
   "ticker": "CINF",
-  "generated_at": "2026-06-18T18:42:52.240507",
+  "generated_at": "2026-06-18T20:23:02.262703",
   "score": {
-    "final_score": 68.7,
+    "final_score": 76.2,
     "rating": "Watch",
-    "confidence": 58.23,
+    "confidence": 68.43,
     "risk_level": "Controlled",
     "categories": {
       "technical": 83.0,
       "momentum": 70.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 63.0,
       "risk": 100,
       "catalyst": 45.0
@@ -32,12 +32,12 @@
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.014089902581930547,
-        "3m": 0.08463018987720239,
-        "6m": 0.04047157705286164,
-        "12m": 0.19860223368832997
+        "1m": 0.014000540716556653,
+        "3m": 0.0845346119834065,
+        "6m": 0.04037989042748724,
+        "12m": 0.198496483772705
       },
-      "acceleration": 0.0644,
+      "acceleration": 0.0643,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,13 +47,15 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 649384.15,
-      "relative_volume": 0.6836985473082458,
+      "score": 75.0,
+      "average_volume": 780308.55,
+      "relative_volume": 3.924692354069425,
       "accumulation_days": 6,
-      "distribution_days": 4,
+      "distribution_days": 5,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 3.92x",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -67,14 +69,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01433419243128537,
-        "annualized_volatility": 0.22754825050875238,
-        "maximum_drawdown": -0.20025954192752848,
-        "sharpe_ratio": 1.0959874869933934,
-        "sortino_ratio": 1.493893671050199,
-        "calmar_ratio": 1.2496832521762022,
-        "beta": 0.5426509060132004,
-        "alpha": 0.15096581819953184
+        "volatility": 0.014334466907725298,
+        "annualized_volatility": 0.22755260768715718,
+        "maximum_drawdown": -0.20025957148273255,
+        "sharpe_ratio": 1.064255293047458,
+        "sortino_ratio": 1.4506878502587803,
+        "calmar_ratio": 1.204828007852196,
+        "beta": 0.5435201396048285,
+        "alpha": 0.14255838136511062
       },
       "evidence": []
     },
@@ -140,14 +142,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 77.56951947084387,
+    "rsi": 77.5194119378818,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.6836985473082458,
+    "relative_volume": 3.924692354069425,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 153.67999267578125,
     "resistance": 171.7899932861328
   },
@@ -333,14 +335,53 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8661,
+    "probability_pct": 86.61,
+    "confidence": "High",
+    "evidence": [
+      "Volume surge above 1.5x",
+      "Breakout pressure detected",
+      "Composite score 76.2/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: CINF\nRating: Watch | Score: 68.7/100 | Confidence: 58.23/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 153.67999267578125 | Resistance: 171.7899932861328\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.593094\nNews/Catalyst: ESNT vs. CINF: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 76.2,
+    "technical_score": 83.0,
+    "momentum_score": 70.0,
+    "volume_score": 75.0,
+    "fundamental_score": 63.0,
+    "risk_score": 100,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.116,
+    "eps_growth": null,
+    "roe": 0.18735,
+    "forward_pe": 18.593094,
+    "relative_volume": 3.924692354069425,
+    "breakout": true,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": false,
+    "major_news": true
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 3.92x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 3.92x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: CINF\nRating: Watch | Score: 76.2/100 | Confidence: 68.43/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 153.67999267578125 | Resistance: 171.7899932861328\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.593094\nNews/Catalyst: ESNT vs. CINF: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.92x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

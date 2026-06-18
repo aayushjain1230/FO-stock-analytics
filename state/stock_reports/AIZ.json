@@ -1,6 +1,6 @@
 {
   "ticker": "AIZ",
-  "generated_at": "2026-06-18T18:42:21.406056",
+  "generated_at": "2026-06-18T20:22:29.159128",
   "score": {
     "final_score": 71.9,
     "rating": "Watch",
@@ -33,12 +33,12 @@
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.016264068796810527,
-        "3m": 0.23025226602914795,
-        "6m": 0.12163619033487305,
-        "12m": 0.3299633277115357
+        "1m": 0.016694383179435945,
+        "3m": 0.23077318894729926,
+        "6m": 0.12211119613059651,
+        "12m": 0.33052647105768984
       },
-      "acceleration": 0.1694,
+      "acceleration": 0.1697,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -50,8 +50,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 403682.2,
-      "relative_volume": 0.4165256729179538,
+      "average_volume": 411937.95,
+      "relative_volume": 0.8090029092973833,
       "accumulation_days": 2,
       "distribution_days": 4,
       "evidence": []
@@ -67,14 +67,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015636255094772997,
-        "annualized_volatility": 0.24821785450281625,
-        "maximum_drawdown": -0.20829698642764194,
-        "sharpe_ratio": 1.0633022133941967,
-        "sortino_ratio": 1.457831624306235,
-        "calmar_ratio": 1.2605752700044008,
-        "beta": 0.5939672802203422,
-        "alpha": 0.15619878372221463
+        "volatility": 0.015648866938872092,
+        "annualized_volatility": 0.248418061321177,
+        "maximum_drawdown": -0.20829691792397131,
+        "sharpe_ratio": 1.0505996394506674,
+        "sortino_ratio": 1.4415303627628215,
+        "calmar_ratio": 1.2424855592844388,
+        "beta": 0.5944120866325519,
+        "alpha": 0.15204482796741678
       },
       "evidence": []
     },
@@ -140,11 +140,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 66.83168690784865,
+    "rsi": 67.05989248269472,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.4165256729179538,
+    "relative_volume": 0.8090029092973833,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -240,7 +240,7 @@
         "last_surprise_pct": 0.1171,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.99,
+      "analyst_upside_pct": 7.94,
       "eps_growth_implied": 15.11
     },
     "evidence": [
@@ -332,6 +332,39 @@
     "sector": null,
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
+  },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.9035,
+    "probability_pct": 90.35,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Breakout pressure detected",
+      "Positive earnings surprise/catalyst",
+      "Composite score 71.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 71.9,
+    "technical_score": 90.0,
+    "momentum_score": 85.0,
+    "volume_score": 0,
+    "fundamental_score": 71.0,
+    "risk_score": 100,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.113,
+    "eps_growth": 0.912,
+    "roe": 0.18016,
+    "forward_pe": 11.559368,
+    "relative_volume": 0.8090029092973833,
+    "breakout": true,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,

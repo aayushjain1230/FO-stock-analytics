@@ -1,6 +1,6 @@
 {
   "ticker": "ALB",
-  "generated_at": "2026-06-18T18:42:22.692729",
+  "generated_at": "2026-06-18T20:22:30.412098",
   "score": {
     "final_score": 40.7,
     "rating": "Drop",
@@ -24,17 +24,17 @@
       ],
       "support": 147.22000122070312,
       "resistance": 215.6199951171875,
-      "risk_reward": 4.71
+      "risk_reward": 4.21
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.0555834807211808,
-        "3m": -0.022379060141879403,
-        "6m": 0.22073522598037143,
-        "12m": 1.7032238477770263
+        "1m": -0.04876132202531591,
+        "3m": -0.015317043478717207,
+        "6m": 0.22955342141349466,
+        "12m": 1.7227510602976883
       },
-      "acceleration": -0.1327,
+      "acceleration": -0.1301,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -42,10 +42,10 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2203927.35,
-      "relative_volume": 0.9790009638929341,
+      "average_volume": 2243553.35,
+      "relative_volume": 1.314952907181815,
       "accumulation_days": 7,
-      "distribution_days": 3,
+      "distribution_days": 4,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -60,14 +60,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.038279277058049295,
-        "annualized_volatility": 0.6076646847776318,
-        "maximum_drawdown": -0.5395645969438994,
-        "sharpe_ratio": 0.7189907338948953,
-        "sortino_ratio": 1.1166360254856746,
-        "calmar_ratio": 0.5343758189694449,
-        "beta": 1.619855273169146,
-        "alpha": 0.14310131416138336
+        "volatility": 0.03820931686575555,
+        "annualized_volatility": 0.6065541011547307,
+        "maximum_drawdown": -0.5395645969439,
+        "sharpe_ratio": 0.7754835764897205,
+        "sortino_ratio": 1.204248011571254,
+        "calmar_ratio": 0.6172578732303524,
+        "beta": 1.617040169588524,
+        "alpha": 0.17400366048910385
       },
       "evidence": [
         "Volatility is elevated",
@@ -137,11 +137,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 37.99162788124105,
+    "rsi": 38.610915434698306,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9790009638929341,
+    "relative_volume": 1.314952907181815,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -237,7 +237,7 @@
         "last_surprise_pct": 1.2459999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 34.86,
+      "analyst_upside_pct": 33.78,
       "eps_growth_implied": 453.12
     },
     "evidence": [
@@ -330,6 +330,38 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.5576,
+    "probability_pct": 55.76,
+    "confidence": "High",
+    "evidence": [
+      "Revenue growth above 20%",
+      "Analyst data is supportive",
+      "Composite score 40.7/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 40.7,
+    "technical_score": 42.0,
+    "momentum_score": 35.0,
+    "volume_score": 25.0,
+    "fundamental_score": 68.0,
+    "risk_score": 35.0,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.327,
+    "eps_growth": null,
+    "roe": -0.0182,
+    "forward_pe": 13.289922,
+    "relative_volume": 1.314952907181815,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -339,5 +371,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ALB\nRating: Drop | Score: 40.7/100 | Confidence: 38.33/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 147.22000122070312 | Resistance: 215.6199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.289922\nNews/Catalyst: FMC and Corteva Partner to Expand Access to Rimisoxafen Technology\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALB\nRating: Drop | Score: 40.7/100 | Confidence: 38.33/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 147.22000122070312 | Resistance: 215.6199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.289922\nNews/Catalyst: FMC and Corteva Partner to Expand Access to Rimisoxafen Technology\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "AVY",
-  "generated_at": "2026-06-18T18:42:33.094047",
+  "generated_at": "2026-06-18T20:22:41.546640",
   "score": {
-    "final_score": 48.25,
+    "final_score": 46.5,
     "rating": "Hold",
-    "confidence": 43.92,
+    "confidence": 42.75,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 46.0,
       "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 60.0,
@@ -15,27 +15,26 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 46.0,
       "evidence": [
         "Price above SMA20",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 153.00999450683594,
       "resistance": 175.30999755859375,
-      "risk_reward": 2.06
+      "risk_reward": 2.93
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.045814287351171545,
-        "3m": -0.010201255095539818,
-        "6m": -0.11464220294823713,
-        "12m": -0.05762239900076993
+        "1m": 0.03524516717276205,
+        "3m": -0.020204275721534826,
+        "6m": -0.12358973127244122,
+        "12m": -0.06714617606029827
       },
-      "acceleration": 0.0471,
+      "acceleration": 0.0416,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +42,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 705879.55,
-      "relative_volume": 0.6272897408630126,
+      "average_volume": 718230.8,
+      "relative_volume": 0.9604377868506891,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -59,14 +58,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01476770246020923,
-        "annualized_volatility": 0.23443000887306212,
-        "maximum_drawdown": -0.30559283852967456,
-        "sharpe_ratio": -0.5429148856169239,
-        "sortino_ratio": -0.9397145569002966,
-        "calmar_ratio": -0.4686360862047533,
-        "beta": 0.6039756417858086,
-        "alpha": -0.2368226351705195
+        "volatility": 0.014781185866403706,
+        "annualized_volatility": 0.23464405131076202,
+        "maximum_drawdown": -0.3055927904425644,
+        "sharpe_ratio": -0.5554744718299737,
+        "sortino_ratio": -0.9625904944779763,
+        "calmar_ratio": -0.4773546458019739,
+        "beta": 0.6025720393298295,
+        "alpha": -0.2407774240002653
       },
       "evidence": []
     },
@@ -78,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
+    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "AVY",
@@ -132,11 +131,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 51.94435050747671,
+    "rsi": 49.38580370324803,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6272897408630126,
+    "relative_volume": 0.9604377868506891,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -232,7 +231,7 @@
         "last_surprise_pct": 0.018099999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 24.95,
+      "analyst_upside_pct": 26.23,
       "eps_growth_implied": 25.89
     },
     "evidence": [
@@ -325,6 +324,37 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.6686,
+    "probability_pct": 66.86,
+    "confidence": "High",
+    "evidence": [
+      "Analyst data is supportive",
+      "Composite score 46.5/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 46.5,
+    "technical_score": 46.0,
+    "momentum_score": 20.0,
+    "volume_score": 25.0,
+    "fundamental_score": 60.0,
+    "risk_score": 100,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.07,
+    "eps_growth": 0.043,
+    "roe": 0.30857,
+    "forward_pe": 14.455374,
+    "relative_volume": 0.9604377868506891,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -334,5 +364,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AVY\nRating: Hold | Score: 48.25/100 | Confidence: 43.92/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 153.00999450683594 | Resistance: 175.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.455374\nNews/Catalyst: Is Avery Dennison Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AVY\nRating: Hold | Score: 46.5/100 | Confidence: 42.75/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 153.00999450683594 | Resistance: 175.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.455374\nNews/Catalyst: Is Avery Dennison Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

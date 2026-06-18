@@ -1,15 +1,15 @@
 {
   "ticker": "CSX",
-  "generated_at": "2026-06-18T18:43:03.431995",
+  "generated_at": "2026-06-18T20:23:14.687060",
   "score": {
-    "final_score": 66.7,
+    "final_score": 74.2,
     "rating": "Watch",
-    "confidence": 52.25,
+    "confidence": 69.58,
     "risk_level": "Controlled",
     "categories": {
       "technical": 72.0,
       "momentum": 75.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 78.0,
       "risk": 100,
       "catalyst": 65.0
@@ -26,17 +26,17 @@
       ],
       "support": 38.16999816894531,
       "resistance": 47.56999969482422,
-      "risk_reward": 0.25
+      "risk_reward": 0.26
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": -0.005532822057284781,
-        "3m": 0.19057017798931453,
-        "6m": 0.24934684964752196,
-        "12m": 0.44241356619577443
+        "1m": -0.006730063966663868,
+        "3m": 0.1891368471114725,
+        "6m": 0.24784288754034978,
+        "12m": 0.44067695357642034
       },
-      "acceleration": 0.0659,
+      "acceleration": 0.0652,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -46,12 +46,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 12468588.7,
-      "relative_volume": 0.7208814258184649,
-      "accumulation_days": 3,
+      "score": 50.0,
+      "average_volume": 13026205.05,
+      "relative_volume": 1.5459760477208209,
+      "accumulation_days": 4,
       "distribution_days": 4,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.55x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -63,14 +66,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015240025490674172,
-        "annualized_volatility": 0.24192790453565385,
-        "maximum_drawdown": -0.2709588502697263,
-        "sharpe_ratio": 0.8553864075366535,
-        "sortino_ratio": 1.2696681767150244,
-        "calmar_ratio": 0.7180081496944635,
-        "beta": 0.6935560660859156,
-        "alpha": 0.08114694791651576
+        "volatility": 0.015251259507910004,
+        "annualized_volatility": 0.2421062390306352,
+        "maximum_drawdown": -0.2709589806831233,
+        "sharpe_ratio": 0.836306359678437,
+        "sortino_ratio": 1.2422601434829736,
+        "calmar_ratio": 0.6981871174352469,
+        "beta": 0.6939675304712337,
+        "alpha": 0.07528549352128051
       },
       "evidence": []
     },
@@ -137,14 +140,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 53.22705475206492,
+    "rsi": 52.833099661175375,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7208814258184649,
+    "relative_volume": 1.5459760477208209,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 38.16999816894531,
     "resistance": 47.56999969482422
   },
@@ -237,7 +240,7 @@
         "last_surprise_pct": 0.106000006,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 1.23,
+      "analyst_upside_pct": 1.36,
       "eps_growth_implied": 33.1
     },
     "evidence": [
@@ -331,6 +334,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8906,
+    "probability_pct": 89.06,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Positive earnings surprise/catalyst",
+      "Composite score 74.2/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 74.2,
+    "technical_score": 72.0,
+    "momentum_score": 75.0,
+    "volume_score": 50.0,
+    "fundamental_score": 78.0,
+    "risk_score": 100,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.017,
+    "eps_growth": 0.265,
+    "roe": 0.23684,
+    "forward_pe": 21.291943,
+    "relative_volume": 1.5459760477208209,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -340,5 +376,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CSX\nRating: Watch | Score: 66.7/100 | Confidence: 52.25/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 38.16999816894531 | Resistance: 47.56999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 21.291943\nNews/Catalyst: This Investment Pro Is Leaning Into Risk. Why He Likes Defense, Ag Tech, and Infrastructure.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CSX\nRating: Watch | Score: 74.2/100 | Confidence: 69.58/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 38.16999816894531 | Resistance: 47.56999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 21.291943\nNews/Catalyst: This Investment Pro Is Leaning Into Risk. Why He Likes Defense, Ag Tech, and Infrastructure.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

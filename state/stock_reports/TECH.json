@@ -1,24 +1,25 @@
 {
   "ticker": "TECH",
-  "generated_at": "2026-06-18T18:43:17.479334",
+  "generated_at": "2026-06-18T20:23:28.765748",
   "score": {
-    "final_score": 59.5,
-    "rating": "Hold",
-    "confidence": 52.12,
+    "final_score": 67.25,
+    "rating": "Watch",
+    "confidence": 63.62,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 63.0,
+      "technical": 75.0,
       "momentum": 70.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 60.0,
       "risk": 75.0,
-      "catalyst": 45.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 63.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
@@ -26,17 +27,17 @@
       ],
       "support": 43.29999923706055,
       "resistance": 60.58000183105469,
-      "risk_reward": 0.23
+      "risk_reward": 0.18
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.2616010586854287,
-        "3m": 0.11399847233388671,
-        "6m": 0.001888998848598833,
-        "12m": 0.16590467780194595
+        "1m": 0.27424669169193017,
+        "3m": 0.1251646137650111,
+        "6m": 0.011931480631281355,
+        "12m": 0.17759110004655754
       },
-      "acceleration": 0.1131,
+      "acceleration": 0.1192,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,12 +47,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 2687853.55,
-      "relative_volume": 0.5487542280716894,
-      "accumulation_days": 4,
+      "score": 50.0,
+      "average_volume": 2795553.85,
+      "relative_volume": 1.2981245201196894,
+      "accumulation_days": 5,
       "distribution_days": 0,
       "evidence": [
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -65,28 +67,29 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.027438062628514965,
-        "annualized_volatility": 0.4355657410347949,
-        "maximum_drawdown": -0.4693698623567304,
-        "sharpe_ratio": -0.06991150884419686,
-        "sortino_ratio": -0.09552768194153262,
-        "calmar_ratio": -0.2526148648091541,
-        "beta": 1.1383922851121182,
-        "alpha": -0.23692886573227576
+        "volatility": 0.027502392643632585,
+        "annualized_volatility": 0.4365869483658244,
+        "maximum_drawdown": -0.4693698126529793,
+        "sharpe_ratio": -0.05766383745795621,
+        "sortino_ratio": -0.07896669714745924,
+        "calmar_ratio": -0.24350030299617123,
+        "beta": 1.1400922833714002,
+        "alpha": -0.23412995487688587
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "TECH",
@@ -140,13 +143,13 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 65.71745330448633,
+    "rsi": 66.77385030066819,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5487542280716894,
+    "relative_volume": 1.2981245201196894,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 43.29999923706055,
     "resistance": 60.58000183105469
@@ -195,7 +198,7 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
@@ -240,11 +243,12 @@
         "last_surprise_pct": -0.0082,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 7.43,
+      "analyst_upside_pct": 6.48,
       "eps_growth_implied": 193.63
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -333,14 +337,53 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7897,
+    "probability_pct": 78.97,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Composite score 67.25/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: TECH\nRating: Hold | Score: 59.5/100 | Confidence: 52.12/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 43.29999923706055 | Resistance: 60.58000183105469\nFundamental Outlook: Fundamentally Average | Forward P/E: 27.682774\nNews/Catalyst: Bio-Techne (TECH) Stock Valuation After New Refeyn Bispecific Antibody Analysis Collaboration\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 67.25,
+    "technical_score": 75.0,
+    "momentum_score": 70.0,
+    "volume_score": 50.0,
+    "fundamental_score": 60.0,
+    "risk_score": 75.0,
+    "catalyst_score": 65.0,
+    "revenue_growth": -0.015,
+    "eps_growth": 1.286,
+    "roe": 0.053400002,
+    "forward_pe": 27.682774,
+    "relative_volume": 1.2981245201196894,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-18",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
+  },
+  "report": "Ticker: TECH\nRating: Watch | Score: 67.25/100 | Confidence: 63.62/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 43.29999923706055 | Resistance: 60.58000183105469\nFundamental Outlook: Fundamentally Average | Forward P/E: 27.682774\nNews/Catalyst: Bio-Techne (TECH) Stock Valuation After New Refeyn Bispecific Antibody Analysis Collaboration\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

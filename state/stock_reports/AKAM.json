@@ -1,6 +1,6 @@
 {
   "ticker": "AKAM",
-  "generated_at": "2026-06-18T18:42:22.224668",
+  "generated_at": "2026-06-18T20:22:30.032402",
   "score": {
     "final_score": 48.55,
     "rating": "Hold",
@@ -24,17 +24,17 @@
       ],
       "support": 88.83999633789062,
       "resistance": 161.13999938964844,
-      "risk_reward": 0.99
+      "risk_reward": 1.0
     },
     "momentum": {
       "score": 65.0,
       "returns": {
-        "1m": -0.11461721641419964,
-        "3m": 0.13763635808771313,
-        "6m": 0.4262594305501173,
-        "12m": 0.5904931228300516
+        "1m": -0.11624446796010479,
+        "3m": 0.13554548783735787,
+        "6m": 0.42363809782685724,
+        "12m": 0.5875699437928505
       },
-      "acceleration": -0.0755,
+      "acceleration": -0.0763,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -44,10 +44,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3904166.0,
-      "relative_volume": 0.6029507966618223,
+      "average_volume": 4070658.1,
+      "relative_volume": 1.396300514651427,
       "accumulation_days": 0,
-      "distribution_days": 0,
+      "distribution_days": 1,
       "evidence": []
     },
     "fundamental": {
@@ -58,14 +58,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.030540507812239943,
-        "annualized_volatility": 0.48481553150887324,
-        "maximum_drawdown": -0.3605512303802537,
-        "sharpe_ratio": 0.6024172008618451,
-        "sortino_ratio": 0.7305597900643794,
-        "calmar_ratio": 0.5283337813436532,
-        "beta": 1.0876068872736044,
-        "alpha": 0.0947946944512486
+        "volatility": 0.030571307493394814,
+        "annualized_volatility": 0.48530446128964844,
+        "maximum_drawdown": -0.36055123038025416,
+        "sharpe_ratio": 0.5908169377546858,
+        "sortino_ratio": 0.7171779784511338,
+        "calmar_ratio": 0.510005653883016,
+        "beta": 1.087918658963616,
+        "alpha": 0.08733373573876477
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -133,11 +133,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 27.614684498638184,
+    "rsi": 27.498637359083418,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6029507966618223,
+    "relative_volume": 1.396300514651427,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -233,7 +233,7 @@
         "last_surprise_pct": 0.0034999999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.3,
+      "analyst_upside_pct": 27.53,
       "eps_growth_implied": 141.24
     },
     "evidence": [
@@ -326,6 +326,37 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.616,
+    "probability_pct": 61.6,
+    "confidence": "High",
+    "evidence": [
+      "Analyst data is supportive",
+      "Composite score 48.55/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 48.55,
+    "technical_score": 47.0,
+    "momentum_score": 65.0,
+    "volume_score": 0,
+    "fundamental_score": 47.0,
+    "risk_score": 75.0,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.058,
+    "eps_growth": -0.134,
+    "roe": 0.091680005,
+    "forward_pe": 17.45895,
+    "relative_volume": 1.396300514651427,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -335,5 +366,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AKAM\nRating: Hold | Score: 48.55/100 | Confidence: 35.62/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 88.83999633789062 | Resistance: 161.13999938964844\nFundamental Outlook: Fundamentally Weak | Forward P/E: 17.45895\nNews/Catalyst: Bear of the Day: Akamai Technologies (AKAM)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AKAM\nRating: Hold | Score: 48.55/100 | Confidence: 35.62/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 88.83999633789062 | Resistance: 161.13999938964844\nFundamental Outlook: Fundamentally Weak | Forward P/E: 17.45895\nNews/Catalyst: Bear of the Day: Akamai Technologies (AKAM)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

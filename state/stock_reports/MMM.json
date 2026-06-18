@@ -1,57 +1,58 @@
 {
   "ticker": "MMM",
-  "generated_at": "2026-06-18T18:43:14.333355",
+  "generated_at": "2026-06-18T20:23:25.778179",
   "score": {
-    "final_score": 62.55,
+    "final_score": 64.3,
     "rating": "Hold",
-    "confidence": 53.23,
+    "confidence": 57.08,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
-      "momentum": 70.0,
-      "volume": 25.0,
+      "technical": 75.0,
+      "momentum": 55.0,
+      "volume": 50.0,
       "fundamental": 47.0,
       "risk": 100,
       "catalyst": 45.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 141.1999969482422,
       "resistance": 161.6300048828125,
-      "risk_reward": 0.01
+      "risk_reward": 0.05
     },
     "momentum": {
-      "score": 70.0,
+      "score": 55.0,
       "returns": {
-        "1m": 0.08667034842752597,
-        "3m": 0.1373069997577523,
-        "6m": -0.0010210599274194099,
-        "12m": 0.15667272214534456
+        "1m": 0.0808154039178508,
+        "3m": 0.1311792266169074,
+        "6m": -0.006403432181497193,
+        "12m": 0.15044048137333865
       },
-      "acceleration": 0.1378,
+      "acceleration": 0.1344,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
         "12m return is positive",
-        "Momentum is accelerating",
-        "Outperforming S&P 500 over 3 months"
+        "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 3699554.75,
-      "relative_volume": 0.4894629549677566,
-      "accumulation_days": 4,
+      "score": 50.0,
+      "average_volume": 3898596.25,
+      "relative_volume": 1.4855667600870441,
+      "accumulation_days": 5,
       "distribution_days": 1,
       "evidence": [
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -65,14 +66,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01979880776779436,
-        "annualized_volatility": 0.3142963296549464,
-        "maximum_drawdown": -0.1877121198739069,
-        "sharpe_ratio": 0.9685075870237251,
-        "sortino_ratio": 1.691281678722767,
-        "calmar_ratio": 1.5596106222693285,
-        "beta": 0.9661942647529517,
-        "alpha": 0.1291532766516927
+        "volatility": 0.019810089851883542,
+        "annualized_volatility": 0.3144754271875694,
+        "maximum_drawdown": -0.18771211987390646,
+        "sharpe_ratio": 0.9469807683569669,
+        "sortino_ratio": 1.6546329921901204,
+        "calmar_ratio": 1.5140256617881953,
+        "beta": 0.9661729301560309,
+        "alpha": 0.1207232253639671
       },
       "evidence": []
     },
@@ -84,7 +85,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "MMM",
@@ -138,11 +139,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.62307284804194,
+    "rsi": 69.30226176263243,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4894629549677566,
+    "relative_volume": 1.4855667600870441,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -238,7 +239,7 @@
         "last_surprise_pct": 0.0788,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.88,
+      "analyst_upside_pct": 6.46,
       "eps_growth_implied": 82.38
     },
     "evidence": [
@@ -331,6 +332,36 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7003,
+    "probability_pct": 70.03,
+    "confidence": "High",
+    "evidence": [
+      "Composite score 64.3/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 64.3,
+    "technical_score": 75.0,
+    "momentum_score": 55.0,
+    "volume_score": 50.0,
+    "fundamental_score": 47.0,
+    "risk_score": 100,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.013,
+    "eps_growth": -0.397,
+    "roe": 0.71458,
+    "forward_pe": 17.004553,
+    "relative_volume": 1.4855667600870441,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -340,5 +371,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: MMM\nRating: Hold | Score: 62.55/100 | Confidence: 53.23/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 141.1999969482422 | Resistance: 161.6300048828125\nFundamental Outlook: Fundamentally Weak | Forward P/E: 17.004553\nNews/Catalyst: Do Options Traders Know Something About 3M Stock We Don't?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: MMM\nRating: Hold | Score: 64.3/100 | Confidence: 57.08/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 141.1999969482422 | Resistance: 161.6300048828125\nFundamental Outlook: Fundamentally Weak | Forward P/E: 17.004553\nNews/Catalyst: Do Options Traders Know Something About 3M Stock We Don't?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

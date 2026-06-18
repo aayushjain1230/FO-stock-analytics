@@ -1,15 +1,15 @@
 {
   "ticker": "COIN",
-  "generated_at": "2026-06-18T18:42:58.207751",
+  "generated_at": "2026-06-18T20:23:08.257567",
   "score": {
-    "final_score": 25.05,
+    "final_score": 21.3,
     "rating": "Avoid",
-    "confidence": 19.28,
+    "confidence": 9.25,
     "risk_level": "High",
     "categories": {
       "technical": 30.0,
       "momentum": 0,
-      "volume": 25.0,
+      "volume": 0,
       "fundamental": 47.0,
       "risk": 35.0,
       "catalyst": 30.0
@@ -23,28 +23,26 @@
       ],
       "support": 152.39999389648438,
       "resistance": 216.60000610351562,
-      "risk_reward": 6.32
+      "risk_reward": 4.91
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.16686481927385832,
-        "3m": -0.20570698703781276,
-        "6m": -0.361980927993629,
-        "12m": -0.36509752100134685
+        "1m": -0.1560610127560954,
+        "3m": -0.1954068722077379,
+        "6m": -0.3537073191387111,
+        "12m": -0.3568643270378282
       },
-      "acceleration": -0.0247,
+      "acceleration": -0.0186,
       "evidence": []
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 8433562.15,
-      "relative_volume": 0.6815913486805809,
+      "score": 0,
+      "average_volume": 8629855.85,
+      "relative_volume": 1.1132534734053525,
       "accumulation_days": 2,
-      "distribution_days": 1,
-      "evidence": [
-        "Accumulation days exceed distribution days"
-      ]
+      "distribution_days": 2,
+      "evidence": []
     },
     "fundamental": {
       "score": 47.0,
@@ -54,14 +52,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.04934117807605951,
-        "annualized_volatility": 0.7832669195052354,
+        "volatility": 0.04938154878387894,
+        "annualized_volatility": 0.7839077846240865,
         "maximum_drawdown": -0.6638953815137103,
-        "sharpe_ratio": 0.13693108862971717,
-        "sortino_ratio": 0.24009473187513514,
-        "calmar_ratio": -0.2627870190885342,
-        "beta": 2.5329385942837295,
-        "alpha": -0.35216238836036085
+        "sharpe_ratio": 0.1477474076793446,
+        "sortino_ratio": 0.25903144656390636,
+        "calmar_ratio": -0.2526999986441508,
+        "beta": 2.534431595395126,
+        "alpha": -0.3486870838703914
       },
       "evidence": [
         "Volatility is elevated",
@@ -76,7 +74,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Accumulation days exceed distribution days; analyst revision; guidance change"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "COIN",
@@ -130,11 +128,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 32.949815391057385,
+    "rsi": 33.814844821700646,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6815913486805809,
+    "relative_volume": 1.1132534734053525,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -230,7 +228,7 @@
         "last_surprise_pct": -34.5888,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 42.5,
+      "analyst_upside_pct": 40.72,
       "eps_growth_implied": 81.3
     },
     "evidence": [
@@ -322,6 +320,37 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.4329,
+    "probability_pct": 43.29,
+    "confidence": "High",
+    "evidence": [
+      "Analyst data is supportive",
+      "Composite score 21.3/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 21.3,
+    "technical_score": 30.0,
+    "momentum_score": 0,
+    "volume_score": 0,
+    "fundamental_score": 47.0,
+    "risk_score": 35.0,
+    "catalyst_score": 30.0,
+    "revenue_growth": -0.308,
+    "eps_growth": null,
+    "roe": 0.06686,
+    "forward_pe": 33.275684,
+    "relative_volume": 1.1132534734053525,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": false
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -331,5 +360,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: COIN\nRating: Avoid | Score: 25.05/100 | Confidence: 19.28/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 152.39999389648438 | Resistance: 216.60000610351562\nFundamental Outlook: Fundamentally Weak | Forward P/E: 33.275684\nNews/Catalyst: Coinbase CEO on bitcoin bottom, AI agents, and his war of words with JPMorgan CEO\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COIN\nRating: Avoid | Score: 21.3/100 | Confidence: 9.25/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 152.39999389648438 | Resistance: 216.60000610351562\nFundamental Outlook: Fundamentally Weak | Forward P/E: 33.275684\nNews/Catalyst: Coinbase CEO on bitcoin bottom, AI agents, and his war of words with JPMorgan CEO\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

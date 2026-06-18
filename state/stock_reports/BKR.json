@@ -1,6 +1,6 @@
 {
   "ticker": "BKR",
-  "generated_at": "2026-06-18T18:42:38.747722",
+  "generated_at": "2026-06-18T20:22:47.411929",
   "score": {
     "final_score": 45.2,
     "rating": "Hold",
@@ -20,19 +20,19 @@
         "Price above SMA200",
         "Stock is not materially extended from SMA20"
       ],
-      "support": 58.720001220703125,
+      "support": 58.40999984741211,
       "resistance": 69.66999816894531,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.1031006548670339,
-        "3m": -0.029544336931934256,
-        "6m": 0.3136076374974144,
-        "12m": 0.5084247540042386
+        "1m": -0.10783566888125362,
+        "3m": -0.034667677906305205,
+        "6m": 0.30667257770721323,
+        "12m": 0.5004613048297415
       },
-      "acceleration": -0.1863,
+      "acceleration": -0.188,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -40,12 +40,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7182780.6,
-      "relative_volume": 0.757605209325202,
+      "average_volume": 7675704.1,
+      "relative_volume": 1.9931959075910706,
       "accumulation_days": 3,
-      "distribution_days": 2,
+      "distribution_days": 3,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.99x"
       ]
     },
     "fundamental": {
@@ -58,14 +58,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.021710784405906517,
-        "annualized_volatility": 0.34464801783700705,
+        "volatility": 0.021717842456934405,
+        "annualized_volatility": 0.3447600609235706,
         "maximum_drawdown": -0.28002816620373616,
-        "sharpe_ratio": 1.110533571945429,
-        "sortino_ratio": 1.5393449030848962,
-        "calmar_ratio": 1.3626356167075142,
-        "beta": 1.0167819729025962,
-        "alpha": 0.19832266081705122
+        "sharpe_ratio": 1.067095820309885,
+        "sortino_ratio": 1.4782105585615928,
+        "calmar_ratio": 1.2898054895930398,
+        "beta": 1.0175960379512452,
+        "alpha": 0.1813883013651968
       },
       "evidence": []
     },
@@ -76,7 +76,7 @@
         "analyst revision"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Accumulation days exceed distribution days; eps growth is strong"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.99x; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "BKR",
@@ -130,15 +130,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 35.172412281134456,
+    "rsi": 34.55674335551214,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.757605209325202,
+    "relative_volume": 1.9931959075910706,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
-    "support": 58.720001220703125,
+    "setup_type": "volume surge",
+    "support": 58.40999984741211,
     "resistance": 69.66999816894531
   },
   "earnings": {
@@ -230,7 +230,7 @@
         "last_surprise_pct": 0.17940001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 21.38,
+      "analyst_upside_pct": 21.96,
       "eps_growth_implied": -11.09
     },
     "evidence": [
@@ -322,14 +322,55 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7976,
+    "probability_pct": 79.76,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 45.2/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: BKR\nRating: Hold | Score: 45.2/100 | Confidence: 41.46/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 58.720001220703125 | Resistance: 69.66999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.007467\nNews/Catalyst: Baker Hughes (BKR) Stock Could Be 16% Undervalued After Its Recent Pullback\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 45.2,
+    "technical_score": 22.0,
+    "momentum_score": 35.0,
+    "volume_score": 25.0,
+    "fundamental_score": 68.0,
+    "risk_score": 100,
+    "catalyst_score": 40.0,
+    "revenue_growth": 0.025,
+    "eps_growth": 1.325,
+    "roe": 0.17184,
+    "forward_pe": 21.007467,
+    "relative_volume": 1.9931959075910706,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": false
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.99x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.99x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: BKR\nRating: Hold | Score: 45.2/100 | Confidence: 41.46/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 58.40999984741211 | Resistance: 69.66999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.007467\nNews/Catalyst: Baker Hughes (BKR) Stock Could Be 16% Undervalued After Its Recent Pullback\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.99x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

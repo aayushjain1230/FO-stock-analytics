@@ -1,15 +1,15 @@
 {
   "ticker": "ARES",
-  "generated_at": "2026-06-18T18:42:31.556295",
+  "generated_at": "2026-06-18T20:22:39.819998",
   "score": {
-    "final_score": 49.4,
+    "final_score": 56.9,
     "rating": "Hold",
-    "confidence": 39.62,
+    "confidence": 56.66,
     "risk_level": "Moderate",
     "categories": {
       "technical": 53.0,
       "momentum": 50.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 76.0,
       "risk": 60.0,
       "catalyst": 65.0
@@ -25,17 +25,17 @@
       ],
       "support": 100.45999908447266,
       "resistance": 135.36000061035156,
-      "risk_reward": 0.24
+      "risk_reward": 0.21
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": 0.07345895162521354,
-        "3m": 0.20387643250549825,
-        "6m": -0.23603363896314578,
-        "12m": -0.1920146693617586
+        "1m": 0.07871315072445206,
+        "3m": 0.2097689787064385,
+        "6m": -0.2322941567624367,
+        "12m": -0.18805986905010275
       },
-      "acceleration": 0.3219,
+      "acceleration": 0.3259,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -44,12 +44,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2306152.8,
-      "relative_volume": 0.5581399463209897,
-      "accumulation_days": 3,
+      "score": 50.0,
+      "average_volume": 2421666.5,
+      "relative_volume": 1.4855183403660248,
+      "accumulation_days": 4,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -62,14 +65,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02593880458206561,
-        "annualized_volatility": 0.41176575738268983,
-        "maximum_drawdown": -0.4997175052244923,
-        "sharpe_ratio": 0.22562699189772098,
-        "sortino_ratio": 0.2762927102079952,
-        "calmar_ratio": 0.014638298423230387,
-        "beta": 1.6033721297301473,
-        "alpha": -0.19790883655282285
+        "volatility": 0.02596638828206371,
+        "annualized_volatility": 0.4122036350452937,
+        "maximum_drawdown": -0.49971750522449276,
+        "sharpe_ratio": 0.23446613560104745,
+        "sortino_ratio": 0.28719722895624256,
+        "calmar_ratio": 0.02182581873025123,
+        "beta": 1.6040469086158031,
+        "alpha": -0.1973399013324065
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -139,11 +142,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 50.2637611733894,
+    "rsi": 51.038571077125546,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5581399463209897,
+    "relative_volume": 1.4855183403660248,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -239,7 +242,7 @@
         "last_surprise_pct": -0.0657,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 12.84,
+      "analyst_upside_pct": 12.29,
       "eps_growth_implied": 237.35
     },
     "evidence": [
@@ -333,6 +336,40 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7628,
+    "probability_pct": 76.28,
+    "confidence": "High",
+    "evidence": [
+      "Revenue growth above 20%",
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 56.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 56.9,
+    "technical_score": 53.0,
+    "momentum_score": 50.0,
+    "volume_score": 50.0,
+    "fundamental_score": 76.0,
+    "risk_score": 60.0,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.283,
+    "eps_growth": 7.705,
+    "roe": 0.14182,
+    "forward_pe": 17.811892,
+    "relative_volume": 1.4855183403660248,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": false
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -342,5 +379,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ARES\nRating: Hold | Score: 49.4/100 | Confidence: 39.62/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 100.45999908447266 | Resistance: 135.36000061035156\nFundamental Outlook: Quality Compounder | Forward P/E: 17.811892\nNews/Catalyst: Federated Hermes Touches All-Time High: How to Play the Stock Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ARES\nRating: Hold | Score: 56.9/100 | Confidence: 56.66/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 100.45999908447266 | Resistance: 135.36000061035156\nFundamental Outlook: Quality Compounder | Forward P/E: 17.811892\nNews/Catalyst: Federated Hermes Touches All-Time High: How to Play the Stock Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

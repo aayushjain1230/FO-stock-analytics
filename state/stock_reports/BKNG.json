@@ -1,15 +1,15 @@
 {
   "ticker": "BKNG",
-  "generated_at": "2026-06-18T18:42:38.312391",
+  "generated_at": "2026-06-18T20:22:47.028992",
   "score": {
-    "final_score": 55.4,
+    "final_score": 62.9,
     "rating": "Hold",
-    "confidence": 50.88,
+    "confidence": 60.22,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 35.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 81.0,
       "risk": 100,
       "catalyst": 50.0
@@ -25,17 +25,17 @@
       ],
       "support": 154.1300048828125,
       "resistance": 192.02999877929688,
-      "risk_reward": 0.97
+      "risk_reward": 1.15
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.12495763439991703,
-        "3m": 0.01210526854807581,
-        "6m": -0.19877791852620974,
-        "12m": -0.17525075554133185
+        "1m": 0.11435128763708446,
+        "3m": 0.0025629185871041127,
+        "6m": -0.20633201564977177,
+        "12m": -0.18302667190619926
       },
-      "acceleration": 0.1115,
+      "acceleration": 0.1057,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,12 +43,14 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 7254386.15,
-      "relative_volume": 0.5593061792002897,
-      "accumulation_days": 4,
+      "score": 75.0,
+      "average_volume": 7759461.0,
+      "relative_volume": 1.824265886509385,
+      "accumulation_days": 5,
       "distribution_days": 2,
       "evidence": [
+        "Relative volume is 1.82x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -63,14 +65,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019535636925327594,
-        "annualized_volatility": 0.3101186220460039,
-        "maximum_drawdown": -0.33353772225807266,
-        "sharpe_ratio": 0.32281903998781236,
-        "sortino_ratio": 0.4446783499782308,
-        "calmar_ratio": 0.16006868825915677,
-        "beta": 0.9724872306075449,
-        "alpha": -0.07627430456450489
+        "volatility": 0.01955005905278505,
+        "annualized_volatility": 0.3103475662217773,
+        "maximum_drawdown": -0.3335377663414063,
+        "sharpe_ratio": 0.3082053103223388,
+        "sortino_ratio": 0.4248754114788414,
+        "calmar_ratio": 0.14579187550693226,
+        "beta": 0.9714422384201481,
+        "alpha": -0.08239394052243364
       },
       "evidence": []
     },
@@ -136,14 +138,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 57.44680689483647,
+    "rsi": 55.64202858280551,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5593061792002897,
+    "relative_volume": 1.824265886509385,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 154.1300048828125,
     "resistance": 192.02999877929688
   },
@@ -236,7 +238,7 @@
         "last_surprise_pct": 0.056700002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 29.39,
+      "analyst_upside_pct": 30.64,
       "eps_growth_implied": 62.1
     },
     "evidence": [
@@ -329,14 +331,55 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8611,
+    "probability_pct": 86.11,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 62.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: BKNG\nRating: Hold | Score: 55.4/100 | Confidence: 50.88/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 154.1300048828125 | Resistance: 192.02999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 14.08113\nNews/Catalyst: Booking Holdings Inc. (BKNG) is Attracting Investor Attention: Here is What You Should Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 62.9,
+    "technical_score": 53.0,
+    "momentum_score": 35.0,
+    "volume_score": 75.0,
+    "fundamental_score": 81.0,
+    "risk_score": 100,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.162,
+    "eps_growth": 2.4,
+    "roe": null,
+    "forward_pe": 14.08113,
+    "relative_volume": 1.824265886509385,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": false
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.82x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.82x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: BKNG\nRating: Hold | Score: 62.9/100 | Confidence: 60.22/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 154.1300048828125 | Resistance: 192.02999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 14.08113\nNews/Catalyst: Booking Holdings Inc. (BKNG) is Attracting Investor Attention: Here is What You Should Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.82x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

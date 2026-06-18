@@ -1,6 +1,6 @@
 {
   "ticker": "CFG",
-  "generated_at": "2026-06-18T18:42:49.781438",
+  "generated_at": "2026-06-18T20:22:59.149798",
   "score": {
     "final_score": 72.65,
     "rating": "Watch",
@@ -28,17 +28,17 @@
       ],
       "support": 57.02000045776367,
       "resistance": 67.6500015258789,
-      "risk_reward": 0.05
+      "risk_reward": 0.06
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.09489645395505653,
-        "3m": 0.18550557187894912,
-        "6m": 0.17144826403023483,
-        "12m": 0.7137663582310334
+        "1m": 0.09375509258648784,
+        "3m": 0.18426975614762764,
+        "6m": 0.17022710216692682,
+        "12m": 0.7119798635273817
       },
-      "acceleration": 0.0998,
+      "acceleration": 0.0992,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -50,8 +50,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 4348007.9,
-      "relative_volume": 0.4702746745239354,
+      "average_volume": 4407627.7,
+      "relative_volume": 0.7344436101079953,
       "accumulation_days": 5,
       "distribution_days": 6,
       "evidence": []
@@ -67,14 +67,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01966528617306754,
-        "annualized_volatility": 0.3121767400491229,
-        "maximum_drawdown": -0.29076987594195736,
-        "sharpe_ratio": 1.3322717100497339,
-        "sortino_ratio": 1.8156623801880012,
-        "calmar_ratio": 1.5251792540450348,
-        "beta": 1.152548753458092,
-        "alpha": 0.20685877856826668
+        "volatility": 0.019683706322684826,
+        "annualized_volatility": 0.3124691508591225,
+        "maximum_drawdown": -0.29076981748590747,
+        "sharpe_ratio": 1.3361716100753167,
+        "sortino_ratio": 1.820782667925065,
+        "calmar_ratio": 1.532705206449578,
+        "beta": 1.152329441364623,
+        "alpha": 0.20631492146619665
       },
       "evidence": []
     },
@@ -140,11 +140,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 67.70457175262533,
+    "rsi": 67.5400397405895,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.4702746745239354,
+    "relative_volume": 0.7344436101079953,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -240,7 +240,7 @@
         "last_surprise_pct": 0.0373,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.62,
+      "analyst_upside_pct": 8.69,
       "eps_growth_implied": 51.92
     },
     "evidence": [
@@ -332,6 +332,39 @@
     "sector": null,
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
+  },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.9083,
+    "probability_pct": 90.83,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Breakout pressure detected",
+      "Positive earnings surprise/catalyst",
+      "Composite score 72.65/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 72.65,
+    "technical_score": 90.0,
+    "momentum_score": 85.0,
+    "volume_score": 0,
+    "fundamental_score": 76.0,
+    "risk_score": 100,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.138,
+    "eps_growth": 0.468,
+    "roe": 0.07739,
+    "forward_pe": 10.460228,
+    "relative_volume": 0.7344436101079953,
+    "breakout": true,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,

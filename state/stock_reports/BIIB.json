@@ -1,13 +1,13 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2026-06-18T18:42:37.964092",
+  "generated_at": "2026-06-18T20:22:46.671531",
   "score": {
-    "final_score": 58.2,
+    "final_score": 59.95,
     "rating": "Hold",
-    "confidence": 46.11,
+    "confidence": 47.08,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
+      "technical": 80.0,
       "momentum": 60.0,
       "volume": 0,
       "fundamental": 68.0,
@@ -15,28 +15,29 @@
       "catalyst": 70.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 80.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 172.33999633789062,
       "resistance": 204.52999877929688,
-      "risk_reward": 0.39
+      "risk_reward": 0.33
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.026002318925991252,
-        "3m": 0.0659996482516827,
-        "6m": 0.1400291509600493,
-        "12m": 0.5448404168871008
+        "1m": 0.03159112274132925,
+        "3m": 0.07180632411527554,
+        "6m": 0.1462390777320972,
+        "12m": 0.5532554173765973
       },
-      "acceleration": -0.004,
+      "acceleration": -0.0013,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,10 +47,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 975345.7,
-      "relative_volume": 0.5130632144069533,
+      "average_volume": 1022959.55,
+      "relative_volume": 1.4200864540538283,
       "accumulation_days": 2,
-      "distribution_days": 2,
+      "distribution_days": 3,
       "evidence": []
     },
     "fundamental": {
@@ -62,14 +63,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.01965581760815793,
-        "annualized_volatility": 0.31202643124098184,
-        "maximum_drawdown": -0.521199342093605,
-        "sharpe_ratio": -0.06152479650749577,
-        "sortino_ratio": -0.099334783568817,
-        "calmar_ratio": -0.125459169122554,
-        "beta": 0.5260920047364456,
-        "alpha": -0.11461818127630884
+        "volatility": 0.019664473246081657,
+        "annualized_volatility": 0.31216383523329067,
+        "maximum_drawdown": -0.5211993420936051,
+        "sharpe_ratio": -0.06689851886135884,
+        "sortino_ratio": -0.10803710270791683,
+        "calmar_ratio": -0.12855510148698518,
+        "beta": 0.5272591822967596,
+        "alpha": -0.11751869628138659
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -84,7 +85,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "BIIB",
@@ -138,11 +139,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.47765150407115,
+    "rsi": 50.63933181575214,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5130632144069533,
+    "relative_volume": 1.4200864540538283,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -238,7 +239,7 @@
         "last_surprise_pct": 0.2361,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.59,
+      "analyst_upside_pct": 11.98,
       "eps_growth_implied": 79.57
     },
     "evidence": [
@@ -332,6 +333,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8082,
+    "probability_pct": 80.82,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 59.95/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 59.95,
+    "technical_score": 80.0,
+    "momentum_score": 60.0,
+    "volume_score": 0,
+    "fundamental_score": 68.0,
+    "risk_score": 75.0,
+    "catalyst_score": 70.0,
+    "revenue_growth": 0.019,
+    "eps_growth": 0.311,
+    "roe": 0.077010006,
+    "forward_pe": 11.604904,
+    "relative_volume": 1.4200864540538283,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": false
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -341,5 +375,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BIIB\nRating: Hold | Score: 58.2/100 | Confidence: 46.11/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.604904\nNews/Catalyst: Sector Update: Healthcare Stocks Decline Thursday Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BIIB\nRating: Hold | Score: 59.95/100 | Confidence: 47.08/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.604904\nNews/Catalyst: Sector Update: Healthcare Stocks Decline Thursday Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "CIEN",
-  "generated_at": "2026-06-18T18:42:51.765132",
+  "generated_at": "2026-06-18T20:23:01.899932",
   "score": {
     "final_score": 38.9,
     "rating": "Avoid",
@@ -23,17 +23,17 @@
       ],
       "support": 365.0,
       "resistance": 627.0,
-      "risk_reward": 3.24
+      "risk_reward": 3.14
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": -0.21232834284116908,
-        "3m": 0.03459941072920203,
-        "6m": 1.0341928061178263,
-        "12m": 4.811504815815294
+        "1m": -0.209809538815813,
+        "3m": 0.03790783643766993,
+        "6m": 1.0406977158499875,
+        "12m": 4.830088754427802
       },
-      "acceleration": -0.4825,
+      "acceleration": -0.4824,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -42,10 +42,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3387587.3,
-      "relative_volume": 0.46834099301293286,
+      "average_volume": 3521220.55,
+      "relative_volume": 1.207822952186281,
       "accumulation_days": 3,
-      "distribution_days": 8,
+      "distribution_days": 9,
       "evidence": []
     },
     "fundamental": {
@@ -59,14 +59,14 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.03871296928676195,
-        "annualized_volatility": 0.614549335473922,
+        "volatility": 0.03874727502690403,
+        "annualized_volatility": 0.6150939222156697,
         "maximum_drawdown": -0.45508250322158916,
-        "sharpe_ratio": 2.1254269605319185,
-        "sortino_ratio": 2.7208438266083728,
-        "calmar_ratio": 4.498832763352331,
-        "beta": 1.9658369847174284,
-        "alpha": 0.9496227502157728
+        "sharpe_ratio": 2.123668775924236,
+        "sortino_ratio": 2.7207752296198255,
+        "calmar_ratio": 4.497110207403872,
+        "beta": 1.9664873191426178,
+        "alpha": 0.9458404407407953
       },
       "evidence": [
         "Volatility is elevated",
@@ -138,11 +138,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 27.345915392445377,
+    "rsi": 27.45662843227656,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.46834099301293286,
+    "relative_volume": 1.207822952186281,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -238,7 +238,7 @@
         "last_surprise_pct": 0.1234,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 32.48,
+      "analyst_upside_pct": 31.92,
       "eps_growth_implied": 219.58
     },
     "evidence": [
@@ -332,6 +332,40 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7021,
+    "probability_pct": 70.21,
+    "confidence": "High",
+    "evidence": [
+      "Revenue growth above 20%",
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 38.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 38.9,
+    "technical_score": 32.0,
+    "momentum_score": 50.0,
+    "volume_score": 0,
+    "fundamental_score": 81.0,
+    "risk_score": 20.0,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.395,
+    "eps_growth": 23.833,
+    "roe": 0.15464,
+    "forward_pe": 44.669468,
+    "relative_volume": 1.207822952186281,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -341,5 +375,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CIEN\nRating: Avoid | Score: 38.9/100 | Confidence: 29.52/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 44.669468\nNews/Catalyst: Zacks.com featured highlights include Sterling Infrastructure, Dell and Ciena\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CIEN\nRating: Avoid | Score: 38.9/100 | Confidence: 29.52/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 44.669468\nNews/Catalyst: Zacks.com featured highlights include Sterling Infrastructure, Dell and Ciena\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

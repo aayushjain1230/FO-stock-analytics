@@ -1,13 +1,13 @@
 {
   "ticker": "DE",
-  "generated_at": "2026-06-18T18:43:07.595666",
+  "generated_at": "2026-06-18T20:23:18.717453",
   "score": {
-    "final_score": 58.85,
+    "final_score": 60.6,
     "rating": "Hold",
-    "confidence": 50.16,
+    "confidence": 51.15,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
+      "technical": 75.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 39.0,
@@ -15,28 +15,29 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 529.1199951171875,
       "resistance": 618.0,
-      "risk_reward": 0.4
+      "risk_reward": 0.48
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.06153343732798411,
-        "3m": 0.04679980138289963,
-        "6m": 0.22815980479106646,
-        "12m": 0.14729722094364472
+        "1m": 0.05585317702273085,
+        "3m": 0.041198380692554215,
+        "6m": 0.22158792759686086,
+        "12m": 0.14115790415586527
       },
-      "acceleration": -0.0673,
+      "acceleration": -0.0696,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1582487.2,
-      "relative_volume": 0.37753480723256405,
+      "average_volume": 1592154.6,
+      "relative_volume": 0.49668041030688853,
       "accumulation_days": 7,
       "distribution_days": 4,
       "evidence": [
@@ -64,14 +65,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.018554417774346074,
-        "annualized_volatility": 0.2945422509150976,
+        "volatility": 0.01857030943546016,
+        "annualized_volatility": 0.29479452321446314,
         "maximum_drawdown": -0.1989802433467357,
-        "sharpe_ratio": 0.938971725326113,
-        "sortino_ratio": 1.6267318671033735,
-        "calmar_ratio": 1.322867508731611,
-        "beta": 0.697275271275375,
-        "alpha": 0.15009737522498728
+        "sharpe_ratio": 0.9363288798223768,
+        "sortino_ratio": 1.6225849298894939,
+        "calmar_ratio": 1.3189669388115843,
+        "beta": 0.6964640793465563,
+        "alpha": 0.14837756747155925
       },
       "evidence": []
     },
@@ -83,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "DE",
@@ -137,11 +138,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.09358162120246,
+    "rsi": 69.31536183407894,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.37753480723256405,
+    "relative_volume": 0.49668041030688853,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -237,7 +238,7 @@
         "last_surprise_pct": 0.1407,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.82,
+      "analyst_upside_pct": 9.33,
       "eps_growth_implied": 29.27
     },
     "evidence": [
@@ -330,6 +331,36 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7014,
+    "probability_pct": 70.14,
+    "confidence": "High",
+    "evidence": [
+      "Composite score 60.6/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 60.6,
+    "technical_score": 75.0,
+    "momentum_score": 60.0,
+    "volume_score": 25.0,
+    "fundamental_score": 39.0,
+    "risk_score": 100,
+    "catalyst_score": 45.0,
+    "revenue_growth": -0.111,
+    "eps_growth": -0.085,
+    "roe": 0.18349001,
+    "forward_pe": 25.879868,
+    "relative_volume": 0.49668041030688853,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -339,5 +370,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DE\nRating: Hold | Score: 58.85/100 | Confidence: 50.16/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 529.1199951171875 | Resistance: 618.0\nFundamental Outlook: Fundamentally Weak | Forward P/E: 25.879868\nNews/Catalyst: Does CAT Stock's Surge Offer Your Portfolio Real Power Or Just More Market Risk?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DE\nRating: Hold | Score: 60.6/100 | Confidence: 51.15/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 529.1199951171875 | Resistance: 618.0\nFundamental Outlook: Fundamentally Weak | Forward P/E: 25.879868\nNews/Catalyst: Does CAT Stock's Surge Offer Your Portfolio Real Power Or Just More Market Risk?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

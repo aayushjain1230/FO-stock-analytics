@@ -1,13 +1,13 @@
 {
   "ticker": "CBRE",
-  "generated_at": "2026-06-18T18:42:47.073046",
+  "generated_at": "2026-06-18T20:22:55.714329",
   "score": {
-    "final_score": 45.9,
+    "final_score": 47.9,
     "rating": "Hold",
-    "confidence": 37.57,
+    "confidence": 38.93,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 45.0,
+      "technical": 53.0,
       "momentum": 20.0,
       "volume": 0,
       "fundamental": 76.0,
@@ -15,8 +15,9 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 45.0,
+      "score": 53.0,
       "evidence": [
+        "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20",
@@ -24,17 +25,17 @@
       ],
       "support": 124.63999938964844,
       "resistance": 153.52000427246094,
-      "risk_reward": 3.89
+      "risk_reward": 3.18
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.018650015633859596,
-        "3m": -0.02004364006579118,
-        "6m": -0.1876789311441196,
-        "12m": -0.01300469750597355
+        "1m": 0.02653148121114901,
+        "3m": -0.012461553775573564,
+        "6m": -0.18139386714408545,
+        "12m": -0.005368149739651051
       },
-      "acceleration": 0.0738,
+      "acceleration": 0.0782,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -42,8 +43,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2591050.6,
-      "relative_volume": 0.6095257267457455,
+      "average_volume": 2624764.95,
+      "relative_volume": 0.858590785433949,
       "accumulation_days": 2,
       "distribution_days": 5,
       "evidence": []
@@ -59,14 +60,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019515783737437963,
-        "annualized_volatility": 0.30980346245867707,
+        "volatility": 0.019522859678876243,
+        "annualized_volatility": 0.3099157895467011,
         "maximum_drawdown": -0.27370200485781015,
-        "sharpe_ratio": 0.7836203091073513,
-        "sortino_ratio": 1.0295748918386298,
-        "calmar_ratio": 0.7846066268297729,
-        "beta": 0.9135396668798389,
-        "alpha": 0.07707349770985972
+        "sharpe_ratio": 0.7697673387006604,
+        "sortino_ratio": 1.010887420173721,
+        "calmar_ratio": 0.7658417427386414,
+        "beta": 0.9155725502808988,
+        "alpha": 0.07075807005405943
       },
       "evidence": []
     },
@@ -79,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; Momentum is accelerating"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "CBRE",
@@ -133,11 +134,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 59.737937045130906,
+    "rsi": 61.3217278233698,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6095257267457455,
+    "relative_volume": 0.858590785433949,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -233,7 +234,7 @@
         "last_surprise_pct": 0.42049998,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 35.66,
+      "analyst_upside_pct": 34.68,
       "eps_growth_implied": 102.33
     },
     "evidence": [
@@ -327,6 +328,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8014,
+    "probability_pct": 80.14,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 47.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 47.9,
+    "technical_score": 53.0,
+    "momentum_score": 20.0,
+    "volume_score": 0,
+    "fundamental_score": 76.0,
+    "risk_score": 100,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.186,
+    "eps_growth": 0.981,
+    "roe": 0.15597,
+    "forward_pe": 14.745543,
+    "relative_volume": 0.858590785433949,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -336,5 +370,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBRE\nRating: Hold | Score: 45.9/100 | Confidence: 37.57/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.63999938964844 | Resistance: 153.52000427246094\nFundamental Outlook: Quality Compounder | Forward P/E: 14.745543\nNews/Catalyst: CBRE Stock: How To Find & Own America's Greatest Opportunities\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBRE\nRating: Hold | Score: 47.9/100 | Confidence: 38.93/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.63999938964844 | Resistance: 153.52000427246094\nFundamental Outlook: Quality Compounder | Forward P/E: 14.745543\nNews/Catalyst: CBRE Stock: How To Find & Own America's Greatest Opportunities\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

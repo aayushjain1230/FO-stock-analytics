@@ -1,15 +1,15 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-18T18:42:46.767888",
+  "generated_at": "2026-06-18T20:22:55.315612",
   "score": {
-    "final_score": 33.45,
+    "final_score": 40.95,
     "rating": "Drop",
-    "confidence": 23.99,
+    "confidence": 36.89,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
-      "momentum": 20.0,
-      "volume": 0,
+      "momentum": 35.0,
+      "volume": 25.0,
       "fundamental": 78.0,
       "risk": 85.0,
       "catalyst": 30.0
@@ -19,30 +19,33 @@
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 247.75,
+      "support": 249.10000610351562,
       "resistance": 366.70001220703125,
       "risk_reward": 0.0
     },
     "momentum": {
-      "score": 20.0,
+      "score": 35.0,
       "returns": {
-        "1m": -0.3160060676098355,
-        "3m": -0.1270725954924563,
-        "6m": -0.000432478847474993,
-        "12m": 0.10413171885434203
+        "1m": -0.3122789395230773,
+        "3m": -0.12231595644498405,
+        "6m": 0.005014230554873711,
+        "12m": 0.1101482054720555
       },
-      "acceleration": -0.1269,
+      "acceleration": -0.1248,
       "evidence": [
+        "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1846820.25,
-      "relative_volume": 0.6879960299330701,
+      "score": 25.0,
+      "average_volume": 1934018.6,
+      "relative_volume": 1.5587088976290093,
       "accumulation_days": 3,
-      "distribution_days": 9,
-      "evidence": []
+      "distribution_days": 10,
+      "evidence": [
+        "Relative volume is 1.56x"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -54,14 +57,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016691238438692507,
-        "annualized_volatility": 0.26496519589477435,
-        "maximum_drawdown": -0.32296351906400966,
-        "sharpe_ratio": 0.8864265167721613,
-        "sortino_ratio": 1.1271469507772656,
-        "calmar_ratio": 0.6833502930554431,
-        "beta": -0.21938933298827357,
-        "alpha": 0.2746642834216092
+        "volatility": 0.016675499101596623,
+        "annualized_volatility": 0.26471534166423405,
+        "maximum_drawdown": -0.3192743025894733,
+        "sharpe_ratio": 0.8660860548613233,
+        "sortino_ratio": 1.1020851171459143,
+        "calmar_ratio": 0.6701449632954596,
+        "beta": -0.21792982222383891,
+        "alpha": 0.2692081689328562
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -74,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 12m return is positive; eps growth is strong; earnings surprise; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.56x; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -128,15 +131,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 21.051204313190624,
+    "rsi": 21.244716930985476,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6879960299330701,
+    "relative_volume": 1.5587088976290093,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 247.75,
+    "setup_type": "volume surge",
+    "support": 249.10000610351562,
     "resistance": 366.70001220703125
   },
   "earnings": {
@@ -228,7 +231,7 @@
         "last_surprise_pct": 0.096599996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 31.78,
+      "analyst_upside_pct": 31.24,
       "eps_growth_implied": 25.78
     },
     "evidence": [
@@ -255,10 +258,20 @@
     "available": true,
     "items": [
       {
-        "headline": "SpaceX Looks Like Meme Stock To Some. Is That A Good Or Bad Thing?",
+        "headline": "Some Call SpaceX A Meme Stock. PitchBook Sees An AI Infrastructure Boom.",
         "source": "Investor's Business Daily",
-        "published": "2026-06-18T13:17:24Z",
+        "published": "2026-06-18T19:11:30Z",
         "summary": "Elon Musk's SpaceX pulled off the biggest IPO ever. For investors, there are still issues to sort out. For one, is SPCX a meme stock?",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Tax-Exempt Muni Income or Corporate Bond Yield? SMB vs. VCSH",
+        "source": "Motley Fool",
+        "published": "2026-06-18T18:48:58Z",
+        "summary": "The VanEck Short Muni ETF (SMB) and the Vanguard Short-Term Corporate Bond ETF (VCSH) both appeal to short-term bond investors, but the higher yield is not the only number that matters as taxes and account type can also affect the comparison.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -293,16 +306,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Investor FOMO, ETF \u2018Feeding Frenzy\u2019 Fuel SpaceX\u2019s Skyrocketing Price",
-        "source": "The Daily Upside",
-        "published": "2026-06-17T04:01:00Z",
-        "summary": "The shares sold in last week\u2019s IPO represented just 5% of its outstanding stock, leaving retail investors clawing for the limited float",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -320,6 +323,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7472,
+    "probability_pct": 74.72,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Positive earnings surprise/catalyst",
+      "Composite score 40.95/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 40.95,
+    "technical_score": 10.0,
+    "momentum_score": 35.0,
+    "volume_score": 25.0,
+    "fundamental_score": 78.0,
+    "risk_score": 85.0,
+    "catalyst_score": 30.0,
+    "revenue_growth": 0.065,
+    "eps_growth": 0.544,
+    "roe": 0.2514,
+    "forward_pe": 16.94779,
+    "relative_volume": 1.5587088976290093,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": false
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -329,5 +365,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 33.45/100 | Confidence: 23.99/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 247.75 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.94779\nNews/Catalyst: SpaceX Looks Like Meme Stock To Some. Is That A Good Or Bad Thing?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 40.95/100 | Confidence: 36.89/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 249.10000610351562 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.94779\nNews/Catalyst: Some Call SpaceX A Meme Stock. PitchBook Sees An AI Infrastructure Boom.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

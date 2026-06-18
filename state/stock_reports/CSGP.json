@@ -1,15 +1,15 @@
 {
   "ticker": "CSGP",
-  "generated_at": "2026-06-18T18:43:03.048936",
+  "generated_at": "2026-06-18T20:23:14.279719",
   "score": {
-    "final_score": 25.45,
+    "final_score": 29.2,
     "rating": "Avoid",
-    "confidence": 14.59,
+    "confidence": 24.55,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 63.0,
       "risk": 75.0,
       "catalyst": 45.0
@@ -19,28 +19,30 @@
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 29.854999542236328,
+      "support": 30.1200008392334,
       "resistance": 42.90999984741211,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.11671596993702471,
-        "3m": -0.3027790809198676,
-        "6m": -0.5307293297159466,
-        "12m": -0.6262986635332892
+        "1m": -0.1088756947009678,
+        "3m": -0.2965903537156238,
+        "6m": -0.5265639524533534,
+        "12m": -0.6229815863143425
       },
-      "acceleration": -0.0374,
+      "acceleration": -0.0333,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 6890803.95,
-      "relative_volume": 0.9360125533683192,
+      "score": 25.0,
+      "average_volume": 7276281.95,
+      "relative_volume": 1.9459717335444924,
       "accumulation_days": 0,
-      "distribution_days": 3,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Relative volume is 1.95x"
+      ]
     },
     "fundamental": {
       "score": 63.0,
@@ -52,14 +54,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.022464628437299364,
-        "annualized_volatility": 0.3566149208433821,
-        "maximum_drawdown": -0.6916761439876228,
-        "sharpe_ratio": -1.0730453472875865,
-        "sortino_ratio": -1.25785827634655,
-        "calmar_ratio": -0.5219352405711952,
-        "beta": 0.736361957490611,
-        "alpha": -0.5162228650669454
+        "volatility": 0.022474564025687673,
+        "annualized_volatility": 0.3567726434194095,
+        "maximum_drawdown": -0.688939375506926,
+        "sharpe_ratio": -1.069029854845196,
+        "sortino_ratio": -1.253471811099758,
+        "calmar_ratio": -0.5228878939703542,
+        "beta": 0.7378050010915578,
+        "alpha": -0.5166245774418871
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -73,7 +75,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; revenue growth is strong; analyst revision; major news; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Relative volume is 1.95x; revenue growth is strong; analyst revision; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "CSGP",
@@ -127,15 +129,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 36.53071348252074,
+    "rsi": 37.677715211366724,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9360125533683192,
+    "relative_volume": 1.9459717335444924,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 29.854999542236328,
+    "setup_type": "volume surge",
+    "support": 30.1200008392334,
     "resistance": 42.90999984741211
   },
   "earnings": {
@@ -227,7 +229,7 @@
         "last_surprise_pct": 0.248,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 63.41,
+      "analyst_upside_pct": 62.18,
       "eps_growth_implied": 2469.21
     },
     "evidence": [
@@ -320,14 +322,54 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.6989,
+    "probability_pct": 69.89,
+    "confidence": "High",
+    "evidence": [
+      "Revenue growth above 20%",
+      "Volume surge above 1.5x",
+      "Analyst data is supportive",
+      "Composite score 29.2/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: CSGP\nRating: Avoid | Score: 25.45/100 | Confidence: 14.59/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 29.854999542236328 | Resistance: 42.90999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.647669\nNews/Catalyst: Why These 2 Hotel Stocks Are Beating Travel Peers\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 29.2,
+    "technical_score": 10.0,
+    "momentum_score": 0,
+    "volume_score": 25.0,
+    "fundamental_score": 63.0,
+    "risk_score": 75.0,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.225,
+    "eps_growth": null,
+    "roe": 0.00303,
+    "forward_pe": 16.647669,
+    "relative_volume": 1.9459717335444924,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": true
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.95x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.95x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: CSGP\nRating: Avoid | Score: 29.2/100 | Confidence: 24.55/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 30.1200008392334 | Resistance: 42.90999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.647669\nNews/Catalyst: Why These 2 Hotel Stocks Are Beating Travel Peers\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.95x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

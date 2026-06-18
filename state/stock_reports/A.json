@@ -1,15 +1,15 @@
 {
   "ticker": "A",
-  "generated_at": "2026-06-18T18:42:14.484518",
+  "generated_at": "2026-06-18T20:22:21.219788",
   "score": {
-    "final_score": 56.45,
+    "final_score": 60.2,
     "rating": "Hold",
-    "confidence": 53.07,
+    "confidence": 58.41,
     "risk_level": "Controlled",
     "categories": {
       "technical": 30.0,
       "momentum": 70.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 78.0,
       "risk": 85.0,
       "catalyst": 65.0
@@ -28,10 +28,10 @@
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.14918153922500332,
-        "3m": 0.1396415069163368,
-        "6m": -0.08339284566390659,
-        "12m": 0.10352301612474779
+        "1m": 0.14913627484202152,
+        "3m": 0.13959661829963843,
+        "6m": -0.0834289493219117,
+        "12m": 0.1034794770408265
       },
       "acceleration": 0.1813,
       "evidence": [
@@ -43,12 +43,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 2629531.05,
-      "relative_volume": 0.4564011518327574,
-      "accumulation_days": 6,
+      "score": 50.0,
+      "average_volume": 2751544.3,
+      "relative_volume": 1.3230337596236412,
+      "accumulation_days": 7,
       "distribution_days": 1,
       "evidence": [
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -62,14 +63,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01980611908607778,
-        "annualized_volatility": 0.3144123932345502,
-        "maximum_drawdown": -0.3479623460247493,
-        "sharpe_ratio": 0.08350624916936301,
-        "sortino_ratio": 0.14185465040809928,
-        "calmar_ratio": -0.06325361604928594,
-        "beta": 0.966631763564966,
-        "alpha": -0.1490690556213138
+        "volatility": 0.01981258365076751,
+        "annualized_volatility": 0.3145150150175701,
+        "maximum_drawdown": -0.3479624118981509,
+        "sharpe_ratio": 0.10935858698160462,
+        "sortino_ratio": 0.18546934863243697,
+        "calmar_ratio": -0.04037000916285028,
+        "beta": 0.9658957991174462,
+        "alpha": -0.14263324644939102
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -138,11 +139,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 35.47277975979739,
+    "rsi": 35.4616931893183,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4564011518327574,
+    "relative_volume": 1.3230337596236412,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -238,7 +239,7 @@
         "last_surprise_pct": 0.058000002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 26.06,
+      "analyst_upside_pct": 26.2,
       "eps_growth_implied": 32.66
     },
     "evidence": [
@@ -332,6 +333,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8232,
+    "probability_pct": 82.32,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 60.2/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 60.2,
+    "technical_score": 30.0,
+    "momentum_score": 70.0,
+    "volume_score": 50.0,
+    "fundamental_score": 78.0,
+    "risk_score": 85.0,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.1,
+    "eps_growth": 0.6,
+    "roe": 0.21330999,
+    "forward_pe": 19.078585,
+    "relative_volume": 1.3230337596236412,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -341,5 +375,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: A\nRating: Hold | Score: 56.45/100 | Confidence: 53.07/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 110.23999786376953 | Resistance: 138.3699951171875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.078585\nNews/Catalyst: 3 Large-Cap Stocks We Keep Off Our Radar\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: A\nRating: Hold | Score: 60.2/100 | Confidence: 58.41/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 110.23999786376953 | Resistance: 138.3699951171875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.078585\nNews/Catalyst: 3 Large-Cap Stocks We Keep Off Our Radar\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

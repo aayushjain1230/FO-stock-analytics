@@ -1,13 +1,13 @@
 {
   "ticker": "CMS",
-  "generated_at": "2026-06-18T18:42:56.098210",
+  "generated_at": "2026-06-18T20:23:05.929949",
   "score": {
-    "final_score": 46.2,
+    "final_score": 48.7,
     "rating": "Hold",
-    "confidence": 32.44,
+    "confidence": 34.07,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 43.0,
+      "technical": 53.0,
       "momentum": 45.0,
       "volume": 0,
       "fundamental": 68.0,
@@ -15,26 +15,27 @@
       "catalyst": 25.0
     },
     "technical": {
-      "score": 43.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 70.22000122070312,
       "resistance": 79.94000244140625,
-      "risk_reward": 1.92
+      "risk_reward": 2.08
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": 0.003273843966127954,
-        "3m": -0.042979308942689864,
-        "6m": 0.06817208521092377,
-        "12m": 0.0965395636384152
+        "1m": 0.0009548451392085155,
+        "3m": -0.0451913967721963,
+        "6m": 0.06570307854096025,
+        "12m": 0.09400486304611588
       },
-      "acceleration": -0.0771,
+      "acceleration": -0.078,
       "evidence": [
         "1m return is positive",
         "6m return is positive",
@@ -43,8 +44,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3456323.9,
-      "relative_volume": 0.6951541781139204,
+      "average_volume": 3490401.7,
+      "relative_volume": 0.8836329640797504,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": []
@@ -59,14 +60,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01066007230773739,
-        "annualized_volatility": 0.16922340170543723,
-        "maximum_drawdown": -0.11476882497732033,
-        "sharpe_ratio": 0.9236231349217514,
-        "sortino_ratio": 1.3230754831613474,
-        "calmar_ratio": 1.328768213030185,
-        "beta": 0.03369336332037916,
-        "alpha": 0.15018745857501203
+        "volatility": 0.010663226713320604,
+        "annualized_volatility": 0.16927347634168172,
+        "maximum_drawdown": -0.11476882497732066,
+        "sharpe_ratio": 0.8910134893401557,
+        "sortino_ratio": 1.2767405348061105,
+        "calmar_ratio": 1.2738994035986864,
+        "beta": 0.033941175748198917,
+        "alpha": 0.14460425491633175
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -79,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; 6m return is positive"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "CMS",
@@ -133,11 +134,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 53.729086649422136,
+    "rsi": 53.12258456166522,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6951541781139204,
+    "relative_volume": 0.8836329640797504,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -233,7 +234,7 @@
         "last_surprise_pct": 0.0271,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.55,
+      "analyst_upside_pct": 8.73,
       "eps_growth_implied": 15.58
     },
     "evidence": [
@@ -325,6 +326,36 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.5951,
+    "probability_pct": 59.51,
+    "confidence": "High",
+    "evidence": [
+      "Composite score 48.7/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 48.7,
+    "technical_score": 53.0,
+    "momentum_score": 45.0,
+    "volume_score": 0,
+    "fundamental_score": 68.0,
+    "risk_score": 85.0,
+    "catalyst_score": 25.0,
+    "revenue_growth": 0.116,
+    "eps_growth": 0.089,
+    "roe": 0.103719994,
+    "forward_pe": 17.726458,
+    "relative_volume": 0.8836329640797504,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": false,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -334,5 +365,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CMS\nRating: Hold | Score: 46.2/100 | Confidence: 32.44/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 70.22000122070312 | Resistance: 79.94000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 17.726458\nNews/Catalyst: CMS VS EVRG: Which Electric Utility Stock Offers Better Return?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMS\nRating: Hold | Score: 48.7/100 | Confidence: 34.07/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 70.22000122070312 | Resistance: 79.94000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 17.726458\nNews/Catalyst: CMS VS EVRG: Which Electric Utility Stock Offers Better Return?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

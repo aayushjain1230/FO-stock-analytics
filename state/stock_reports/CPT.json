@@ -1,6 +1,6 @@
 {
   "ticker": "CPT",
-  "generated_at": "2026-06-18T18:43:01.258429",
+  "generated_at": "2026-06-18T20:23:12.352299",
   "score": {
     "final_score": 60.0,
     "rating": "Hold",
@@ -26,17 +26,17 @@
       ],
       "support": 96.95999908447266,
       "resistance": 115.4000015258789,
-      "risk_reward": 0.47
+      "risk_reward": 0.53
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": 0.04226158904039545,
-        "3m": 0.11054691114964843,
-        "6m": 0.06074470829894496,
-        "12m": -0.016583607479355833
+        "1m": 0.037407199662116364,
+        "3m": 0.10537447921293186,
+        "6m": 0.055804232799149256,
+        "12m": -0.021163922191589468
       },
-      "acceleration": 0.0802,
+      "acceleration": 0.0775,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1220513.85,
-      "relative_volume": 0.5280374327583419,
+      "average_volume": 1236759.95,
+      "relative_volume": 0.7838214683455751,
       "accumulation_days": 6,
       "distribution_days": 4,
       "evidence": [
@@ -65,14 +65,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01306140599534987,
-        "annualized_volatility": 0.20734339221926296,
-        "maximum_drawdown": -0.20326134850519273,
-        "sharpe_ratio": 0.28342326017863634,
-        "sortino_ratio": 0.42440130174461044,
-        "calmar_ratio": 0.18688550753642447,
-        "beta": 0.43210223908754647,
-        "alpha": -0.019607327207882615
+        "volatility": 0.013074850575662609,
+        "annualized_volatility": 0.2075568183151978,
+        "maximum_drawdown": -0.20326134850519462,
+        "sharpe_ratio": 0.2779107271303579,
+        "sortino_ratio": 0.41675193840648367,
+        "calmar_ratio": 0.18113060808149764,
+        "beta": 0.4314304398287889,
+        "alpha": -0.02138976068302252
       },
       "evidence": []
     },
@@ -139,11 +139,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.60656360135971,
+    "rsi": 57.02718385339561,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5280374327583419,
+    "relative_volume": 0.7838214683455751,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -239,7 +239,7 @@
         "last_surprise_pct": -1.9642999,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 4.06,
+      "analyst_upside_pct": 4.54,
       "eps_growth_implied": -55.4
     },
     "evidence": [
@@ -332,6 +332,37 @@
     "sector": null,
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
+  },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7224,
+    "probability_pct": 72.24,
+    "confidence": "High",
+    "evidence": [
+      "Positive earnings surprise/catalyst",
+      "Composite score 60.0/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 60.0,
+    "technical_score": 72.0,
+    "momentum_score": 50.0,
+    "volume_score": 25.0,
+    "fundamental_score": 50.0,
+    "risk_score": 100,
+    "catalyst_score": 65.0,
+    "revenue_growth": -0.005,
+    "eps_growth": 0.121,
+    "roe": 0.09064999,
+    "forward_pe": 68.87394,
+    "relative_volume": 0.7838214683455751,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
   },
   "why_now": {
     "send_alert": false,

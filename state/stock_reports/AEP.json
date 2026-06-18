@@ -1,14 +1,14 @@
 {
   "ticker": "AEP",
-  "generated_at": "2026-06-18T18:42:19.804350",
+  "generated_at": "2026-06-18T20:22:27.139678",
   "score": {
-    "final_score": 58.7,
+    "final_score": 54.95,
     "rating": "Hold",
-    "confidence": 52.46,
+    "confidence": 49.58,
     "risk_level": "Controlled",
     "categories": {
       "technical": 57.0,
-      "momentum": 50.0,
+      "momentum": 35.0,
       "volume": 25.0,
       "fundamental": 73.0,
       "risk": 100,
@@ -25,31 +25,30 @@
       ],
       "support": 123.79000091552734,
       "resistance": 137.14999389648438,
-      "risk_reward": 2.19
+      "risk_reward": 2.43
     },
     "momentum": {
-      "score": 50.0,
+      "score": 35.0,
       "returns": {
-        "1m": -0.0072913033304568,
-        "3m": 0.0014717662024281708,
-        "6m": 0.13405526115979582,
-        "12m": 0.29928051814466783
+        "1m": -0.009540767491535318,
+        "3m": -0.0007975549528735915,
+        "6m": 0.1314855076407424,
+        "12m": 0.29633636648108386
       },
-      "acceleration": -0.0656,
+      "acceleration": -0.0665,
       "evidence": [
-        "3m return is positive",
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4700548.65,
-      "relative_volume": 0.6362178593769048,
+      "average_volume": 4983933.35,
+      "relative_volume": 1.73705513136527,
       "accumulation_days": 5,
-      "distribution_days": 4,
+      "distribution_days": 5,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.74x"
       ]
     },
     "fundamental": {
@@ -62,14 +61,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.011906357359134553,
-        "annualized_volatility": 0.1890075635576027,
-        "maximum_drawdown": -0.13101030463531327,
-        "sharpe_ratio": 1.2863136487767537,
-        "sortino_ratio": 1.9419003351886128,
-        "calmar_ratio": 1.928036042197941,
-        "beta": 0.0056772157883811375,
-        "alpha": 0.2420932942029487
+        "volatility": 0.011919271063055834,
+        "annualized_volatility": 0.18921256225208527,
+        "maximum_drawdown": -0.1310102945319349,
+        "sharpe_ratio": 1.27142798800989,
+        "sortino_ratio": 1.9231556511089303,
+        "calmar_ratio": 1.9033149023589946,
+        "beta": 0.005546687618981276,
+        "alpha": 0.2395535574178818
       },
       "evidence": []
     },
@@ -81,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive"
+    "explanation": "Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive"
   },
   "fundamentals": {
     "ticker": "AEP",
@@ -135,14 +134,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 53.84165503613556,
+    "rsi": 52.941186823243676,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6362178593769048,
+    "relative_volume": 1.73705513136527,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 123.79000091552734,
     "resistance": 137.14999389648438
   },
@@ -235,7 +234,7 @@
         "last_surprise_pct": 0.0461,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.78,
+      "analyst_upside_pct": 13.03,
       "eps_growth_implied": 1.41
     },
     "evidence": [
@@ -328,6 +327,38 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7551,
+    "probability_pct": 75.51,
+    "confidence": "High",
+    "evidence": [
+      "Volume surge above 1.5x",
+      "Analyst data is supportive",
+      "Composite score 54.95/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 54.95,
+    "technical_score": 57.0,
+    "momentum_score": 35.0,
+    "volume_score": 25.0,
+    "fundamental_score": 73.0,
+    "risk_score": 100,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.102,
+    "eps_growth": 0.067,
+    "roe": 0.12585,
+    "forward_pe": 18.86063,
+    "relative_volume": 1.73705513136527,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": true,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -337,5 +368,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AEP\nRating: Hold | Score: 58.7/100 | Confidence: 52.46/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.86063\nNews/Catalyst: 3 Utility Stocks For Years of Passive Income\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AEP\nRating: Hold | Score: 54.95/100 | Confidence: 49.58/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.86063\nNews/Catalyst: 3 Utility Stocks For Years of Passive Income\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

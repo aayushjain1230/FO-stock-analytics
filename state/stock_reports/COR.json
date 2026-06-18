@@ -1,6 +1,6 @@
 {
   "ticker": "COR",
-  "generated_at": "2026-06-18T18:42:59.351299",
+  "generated_at": "2026-06-18T20:23:09.793745",
   "score": {
     "final_score": 39.95,
     "rating": "Drop",
@@ -24,27 +24,27 @@
       ],
       "support": 252.74000549316406,
       "resistance": 327.55999755859375,
-      "risk_reward": 3.13
+      "risk_reward": 2.92
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": 0.017639014801775543,
-        "3m": -0.18162161055710135,
-        "6m": -0.20416238031887823,
-        "12m": -0.06920223482809873
+        "1m": 0.021264503358744857,
+        "3m": -0.17870601726415536,
+        "6m": -0.20132709183112152,
+        "12m": -0.0658862289471579
       },
-      "acceleration": -0.0795,
+      "acceleration": -0.078,
       "evidence": [
         "1m return is positive"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 1442245.5,
-      "relative_volume": 0.7219367299117938,
+      "average_volume": 1467070.7,
+      "relative_volume": 1.0481526214108154,
       "accumulation_days": 1,
-      "distribution_days": 1,
+      "distribution_days": 2,
       "evidence": []
     },
     "fundamental": {
@@ -58,14 +58,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016265693339899873,
-        "annualized_volatility": 0.25820987687648805,
-        "maximum_drawdown": -0.3244224428918435,
-        "sharpe_ratio": 0.423195897672916,
-        "sortino_ratio": 0.4492590199386372,
-        "calmar_ratio": 0.2396090216137922,
-        "beta": 0.0029365038375608354,
-        "alpha": 0.10874074733043143
+        "volatility": 0.016270018216711434,
+        "annualized_volatility": 0.25827853216745433,
+        "maximum_drawdown": -0.32442244289184285,
+        "sharpe_ratio": 0.4432303558569806,
+        "sortino_ratio": 0.4700136264009349,
+        "calmar_ratio": 0.25686913169519365,
+        "beta": 0.0028188804128287913,
+        "alpha": 0.11396024487531932
       },
       "evidence": []
     },
@@ -132,11 +132,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 52.042899396028204,
+    "rsi": 53.442987810843896,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7219367299117938,
+    "relative_volume": 1.0481526214108154,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -232,7 +232,7 @@
         "last_surprise_pct": 0.0047999998,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 29.3,
+      "analyst_upside_pct": 28.97,
       "eps_growth_implied": 51.5
     },
     "evidence": [
@@ -326,6 +326,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7509,
+    "probability_pct": 75.09,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 39.95/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 39.95,
+    "technical_score": 45.0,
+    "momentum_score": 10.0,
+    "volume_score": 0,
+    "fundamental_score": 53.0,
+    "risk_score": 100,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.038,
+    "eps_growth": 1.283,
+    "roe": 1.0713401,
+    "forward_pe": 13.868644,
+    "relative_volume": 1.0481526214108154,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -335,5 +368,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: COR\nRating: Drop | Score: 39.95/100 | Confidence: 32.12/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 252.74000549316406 | Resistance: 327.55999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.868644\nNews/Catalyst: COR Stock Down Nearly 18% YTD: Should You Buy, Hold or Sell?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COR\nRating: Drop | Score: 39.95/100 | Confidence: 32.12/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 252.74000549316406 | Resistance: 327.55999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.868644\nNews/Catalyst: COR Stock Down Nearly 18% YTD: Should You Buy, Hold or Sell?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

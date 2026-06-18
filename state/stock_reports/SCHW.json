@@ -1,6 +1,6 @@
 {
   "ticker": "SCHW",
-  "generated_at": "2026-06-18T18:43:16.309277",
+  "generated_at": "2026-06-18T20:23:27.532744",
   "score": {
     "final_score": 53.9,
     "rating": "Hold",
@@ -25,25 +25,25 @@
       ],
       "support": 85.3499984741211,
       "resistance": 100.2699966430664,
-      "risk_reward": 1.51
+      "risk_reward": 1.35
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": -0.005554890756972908,
-        "3m": -0.025134396743929255,
-        "6m": -0.042322554313575234,
-        "12m": 0.03932271609750404
+        "1m": -0.0011981332455799354,
+        "3m": -0.020863418888934726,
+        "6m": -0.03812687939275228,
+        "12m": 0.043876177284091655
       },
-      "acceleration": -0.004,
+      "acceleration": -0.0018,
       "evidence": [
         "12m return is positive"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 11807064.4,
-      "relative_volume": 0.6315954370503815,
+      "average_volume": 12030668.2,
+      "relative_volume": 0.9913883253799652,
       "accumulation_days": 4,
       "distribution_days": 3,
       "evidence": [
@@ -61,14 +61,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017062979525567706,
-        "annualized_volatility": 0.2708664027026342,
-        "maximum_drawdown": -0.19834421854864748,
-        "sharpe_ratio": 0.6051709490156354,
-        "sortino_ratio": 0.736901714891895,
-        "calmar_ratio": 0.6825540894486206,
-        "beta": 0.7326960731224104,
-        "alpha": 0.031026500415201427
+        "volatility": 0.017063536930743996,
+        "annualized_volatility": 0.27087525123548994,
+        "maximum_drawdown": -0.1983442185486478,
+        "sharpe_ratio": 0.6178124517938988,
+        "sortino_ratio": 0.7529793192441966,
+        "calmar_ratio": 0.7022036819636928,
+        "beta": 0.7329534511056018,
+        "alpha": 0.033015318825251966
       },
       "evidence": []
     },
@@ -136,11 +136,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 61.20251047365003,
+    "rsi": 62.62332451134026,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6315954370503815,
+    "relative_volume": 0.9913883253799652,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -236,7 +236,7 @@
         "last_surprise_pct": 0.0248,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.17,
+      "analyst_upside_pct": 26.67,
       "eps_growth_implied": 44.29
     },
     "evidence": [
@@ -330,6 +330,39 @@
     "sector": null,
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
+  },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8273,
+    "probability_pct": 82.73,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 53.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 53.9,
+    "technical_score": 53.0,
+    "momentum_score": 20.0,
+    "volume_score": 25.0,
+    "fundamental_score": 86.0,
+    "risk_score": 100,
+    "catalyst_score": 80.0,
+    "revenue_growth": 0.158,
+    "eps_growth": 0.386,
+    "roe": 0.19083,
+    "forward_pe": 12.788082,
+    "relative_volume": 0.9913883253799652,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": true
   },
   "why_now": {
     "send_alert": false,

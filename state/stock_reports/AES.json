@@ -1,6 +1,6 @@
 {
   "ticker": "AES",
-  "generated_at": "2026-06-18T18:42:20.219141",
+  "generated_at": "2026-06-18T20:22:27.893352",
   "score": {
     "final_score": 53.7,
     "rating": "Hold",
@@ -25,17 +25,17 @@
       ],
       "support": 14.0,
       "resistance": 14.729999542236328,
-      "risk_reward": 0.17
+      "risk_reward": 0.18
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.0037749009147418633,
-        "3m": 0.04631295921191181,
-        "6m": 0.09989960959126098,
-        "12m": 0.4602933551585686
+        "1m": 0.0034317221538875398,
+        "3m": 0.04595523719228267,
+        "6m": 0.09952356692996345,
+        "12m": 0.45979409814023664
       },
-      "acceleration": -0.0036,
+      "acceleration": -0.0038,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,8 +45,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 8117736.25,
-      "relative_volume": 0.30829099676649385,
+      "average_volume": 8178716.7,
+      "relative_volume": 0.4550510962190437,
       "accumulation_days": 1,
       "distribution_days": 2,
       "evidence": []
@@ -62,14 +62,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.02779806181664963,
-        "annualized_volatility": 0.44128055097873176,
-        "maximum_drawdown": -0.5029139011682009,
-        "sharpe_ratio": 0.042251583016518275,
-        "sortino_ratio": 0.05356514383283319,
-        "calmar_ratio": -0.1497372618593035,
-        "beta": 0.848544021402741,
-        "alpha": -0.13526129140194845
+        "volatility": 0.027824851099643576,
+        "annualized_volatility": 0.44170581766235406,
+        "maximum_drawdown": -0.5029139011682007,
+        "sharpe_ratio": 0.04792271654090827,
+        "sortino_ratio": 0.060727661609677824,
+        "calmar_ratio": -0.14543663803370296,
+        "beta": 0.8482899671197996,
+        "alpha": -0.1343057727932898
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -137,11 +137,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 44.57829110346127,
+    "rsi": 43.90239931149181,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.30829099676649385,
+    "relative_volume": 0.4550510962190437,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -237,7 +237,7 @@
         "last_surprise_pct": 1.0827,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 2.56,
+      "analyst_upside_pct": 2.6,
       "eps_growth_implied": 23.93
     },
     "evidence": [
@@ -264,6 +264,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "AES Corporation Stock: Is AES Outperforming the Utilities Sector?",
+        "source": "Barchart",
+        "published": "2026-06-18T13:53:45Z",
+        "summary": "AES Corporation has rallied the utilities sector over the past year, yet analysts remain unsure about its prospects.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "AES Corporation (AES) Prices $600M 2029 Notes And $400M 2033 Notes In $1 Billion Offering",
         "source": "Insider Monkey",
@@ -303,16 +313,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AI Data Center Supplier Fluence Soars On Nvidia Partnership",
-        "source": "Investor's Business Daily",
-        "published": "2026-06-01T20:04:31Z",
-        "summary": "A new power architecture from Fluence, nVent and Siemens aims to make Nvidia's AI data centers speedier and more efficient.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -330,6 +330,38 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.7147,
+    "probability_pct": 71.47,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Composite score 53.7/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 53.7,
+    "technical_score": 65.0,
+    "momentum_score": 60.0,
+    "volume_score": 0,
+    "fundamental_score": 58.0,
+    "risk_score": 75.0,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.087,
+    "eps_growth": 9.511,
+    "roe": 0.052600004,
+    "forward_pe": 6.1419435,
+    "relative_volume": 0.4550510962190437,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": false
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -339,5 +371,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AES\nRating: Hold | Score: 53.7/100 | Confidence: 40.29/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 14.0 | Resistance: 14.729999542236328\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.1419435\nNews/Catalyst: AES Corporation (AES) Prices $600M 2029 Notes And $400M 2033 Notes In $1 Billion Offering\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AES\nRating: Hold | Score: 53.7/100 | Confidence: 40.29/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 14.0 | Resistance: 14.729999542236328\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.1419435\nNews/Catalyst: AES Corporation Stock: Is AES Outperforming the Utilities Sector?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,22 +1,23 @@
 {
   "ticker": "ABT",
-  "generated_at": "2026-06-18T18:42:16.146827",
+  "generated_at": "2026-06-18T20:22:22.905897",
   "score": {
-    "final_score": 31.8,
+    "final_score": 37.55,
     "rating": "Drop",
-    "confidence": 18.57,
+    "confidence": 29.98,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 45.0,
+      "technical": 53.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 47.0,
       "risk": 75.0,
       "catalyst": 45.0
     },
     "technical": {
-      "score": 45.0,
+      "score": 53.0,
       "evidence": [
+        "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20",
@@ -24,26 +25,28 @@
       ],
       "support": 82.55999755859375,
       "resistance": 105.45999908447266,
-      "risk_reward": 2.94
+      "risk_reward": 2.91
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.005066392139026377,
-        "3m": -0.17040391376173136,
-        "6m": -0.29548436862677263,
-        "12m": -0.3183002330748804
+        "1m": -0.0046160328093171055,
+        "3m": -0.17002839489858734,
+        "6m": -0.2951655106333634,
+        "12m": -0.31799174015020093
       },
-      "acceleration": -0.0227,
+      "acceleration": -0.0224,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 11918048.5,
-      "relative_volume": 0.47996700130898107,
+      "score": 25.0,
+      "average_volume": 13185551.35,
+      "relative_volume": 2.3563312731704618,
       "accumulation_days": 4,
-      "distribution_days": 5,
-      "evidence": []
+      "distribution_days": 6,
+      "evidence": [
+        "Relative volume is 2.36x"
+      ]
     },
     "fundamental": {
       "score": 47.0,
@@ -53,14 +56,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.01440519308367845,
-        "annualized_volatility": 0.228675350923685,
-        "maximum_drawdown": -0.39639989790235697,
-        "sharpe_ratio": -0.1544820786912396,
-        "sortino_ratio": -0.19504137669578128,
-        "calmar_ratio": -0.15097700002075715,
-        "beta": 0.216290565972505,
-        "alpha": -0.07455630725681729
+        "volatility": 0.01437614534220731,
+        "annualized_volatility": 0.2282142323232006,
+        "maximum_drawdown": -0.3963998979023575,
+        "sharpe_ratio": -0.20889742804782363,
+        "sortino_ratio": -0.26317803877571194,
+        "calmar_ratio": -0.17984645999163137,
+        "beta": 0.21787767315356324,
+        "alpha": -0.08760571136999695
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -74,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; major news"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Relative volume is 2.36x"
   },
   "fundamentals": {
     "ticker": "ABT",
@@ -128,14 +131,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.08524075565278,
+    "rsi": 58.221195247723124,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.47996700130898107,
+    "relative_volume": 2.3563312731704618,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 82.55999755859375,
     "resistance": 105.45999908447266
   },
@@ -228,7 +231,7 @@
         "last_surprise_pct": 0.0033000002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 31.88,
+      "analyst_upside_pct": 31.82,
       "eps_growth_implied": 69.73
     },
     "evidence": [
@@ -321,14 +324,53 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.6202,
+    "probability_pct": 62.02,
+    "confidence": "High",
+    "evidence": [
+      "Volume surge above 1.5x",
+      "Analyst data is supportive",
+      "Composite score 37.55/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: ABT\nRating: Drop | Score: 31.8/100 | Confidence: 18.57/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 82.55999755859375 | Resistance: 105.45999908447266\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.630355\nNews/Catalyst: Living Longer Is Big Business. These Stocks Will Benefit.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 37.55,
+    "technical_score": 53.0,
+    "momentum_score": 0,
+    "volume_score": 25.0,
+    "fundamental_score": 47.0,
+    "risk_score": 75.0,
+    "catalyst_score": 45.0,
+    "revenue_growth": 0.078,
+    "eps_growth": -0.197,
+    "roe": 0.123339996,
+    "forward_pe": 14.630355,
+    "relative_volume": 2.3563312731704618,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": false,
+    "analyst_revision": true,
+    "major_news": true
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.36x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.36x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: ABT\nRating: Drop | Score: 37.55/100 | Confidence: 29.98/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 82.55999755859375 | Resistance: 105.45999908447266\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.630355\nNews/Catalyst: Living Longer Is Big Business. These Stocks Will Benefit.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.36x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

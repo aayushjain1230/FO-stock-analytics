@@ -1,22 +1,23 @@
 {
   "ticker": "AFL",
-  "generated_at": "2026-06-18T18:42:20.593749",
+  "generated_at": "2026-06-18T20:22:28.310945",
   "score": {
-    "final_score": 61.4,
+    "final_score": 64.9,
     "rating": "Hold",
-    "confidence": 48.51,
+    "confidence": 53.31,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 62.0,
+      "technical": 72.0,
       "momentum": 60.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 60.0
+      "catalyst": 80.0
     },
     "technical": {
-      "score": 62.0,
+      "score": 72.0,
       "evidence": [
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -25,17 +26,17 @@
       ],
       "support": 106.19999694824219,
       "resistance": 118.66999816894531,
-      "risk_reward": 0.43
+      "risk_reward": 0.35
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.02436335035849735,
-        "3m": 0.07796153627625846,
-        "6m": 0.06072644749880762,
-        "12m": 0.1497867711481553
+        "1m": -0.019779301958345097,
+        "3m": 0.08302636021210441,
+        "6m": 0.06571029202375755,
+        "12m": 0.1551891555643754
       },
-      "acceleration": 0.0476,
+      "acceleration": 0.0502,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2861622.7,
-      "relative_volume": 0.47813920402574384,
+      "average_volume": 2900709.35,
+      "relative_volume": 0.741193529093151,
       "accumulation_days": 6,
       "distribution_days": 6,
       "evidence": []
@@ -62,27 +63,28 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.012568100977918509,
-        "annualized_volatility": 0.19951241783952037,
-        "maximum_drawdown": -0.1355921321338296,
-        "sharpe_ratio": 0.849780163925716,
-        "sortino_ratio": 1.105747529181284,
-        "calmar_ratio": 1.1895299468757266,
-        "beta": 0.3683802664354857,
-        "alpha": 0.1027261072569487
+        "volatility": 0.012568498457648587,
+        "annualized_volatility": 0.1995187276346222,
+        "maximum_drawdown": -0.1355921321338318,
+        "sharpe_ratio": 0.8413300833365506,
+        "sortino_ratio": 1.0947400214342307,
+        "calmar_ratio": 1.175147249432559,
+        "beta": 0.3694168098021731,
+        "alpha": 0.10015486067881725
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 60.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 3m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "AFL",
@@ -136,14 +138,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 57.34347370540392,
+    "rsi": 59.21450053567049,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.47813920402574384,
-    "price_above_sma50": false,
+    "relative_volume": 0.741193529093151,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 106.19999694824219,
     "resistance": 118.66999816894531
   },
@@ -191,7 +193,7 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 4,
@@ -236,12 +238,13 @@
         "last_surprise_pct": -0.0255,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": -2.15,
+      "analyst_upside_pct": -2.63,
       "eps_growth_implied": -13.1
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -330,6 +333,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8812,
+    "probability_pct": 88.12,
+    "confidence": "High",
+    "evidence": [
+      "Revenue growth above 20%",
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Composite score 64.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 64.9,
+    "technical_score": 72.0,
+    "momentum_score": 60.0,
+    "volume_score": 0,
+    "fundamental_score": 86.0,
+    "risk_score": 100,
+    "catalyst_score": 80.0,
+    "revenue_growth": 0.279,
+    "eps_growth": 38.6,
+    "roe": 0.16469,
+    "forward_pe": 15.15843,
+    "relative_volume": 0.741193529093151,
+    "breakout": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -339,5 +375,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AFL\nRating: Hold | Score: 61.4/100 | Confidence: 48.51/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 106.19999694824219 | Resistance: 118.66999816894531\nFundamental Outlook: Quality Compounder | Forward P/E: 15.15843\nNews/Catalyst: UNM Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AFL\nRating: Hold | Score: 64.9/100 | Confidence: 53.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 106.19999694824219 | Resistance: 118.66999816894531\nFundamental Outlook: Quality Compounder | Forward P/E: 15.15843\nNews/Catalyst: UNM Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

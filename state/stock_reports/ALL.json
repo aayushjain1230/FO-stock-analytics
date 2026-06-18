@@ -1,6 +1,6 @@
 {
   "ticker": "ALL",
-  "generated_at": "2026-06-18T18:42:23.429972",
+  "generated_at": "2026-06-18T20:22:31.428164",
   "score": {
     "final_score": 63.7,
     "rating": "Hold",
@@ -27,17 +27,17 @@
       ],
       "support": 202.7100067138672,
       "resistance": 224.5800018310547,
-      "risk_reward": 0.3
+      "risk_reward": 0.18
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.017202576937309977,
-        "3m": 0.08157317203061631,
-        "6m": 0.05882052541297922,
-        "12m": 0.13012351017816015
+        "1m": -0.009995870485418057,
+        "3m": 0.08950418627033208,
+        "6m": 0.06658461941480809,
+        "12m": 0.13841053678314963
       },
-      "acceleration": 0.0522,
+      "acceleration": 0.0562,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -47,10 +47,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 1549440.95,
-      "relative_volume": 0.8217925310415992,
+      "average_volume": 1583942.45,
+      "relative_volume": 1.2395330398525528,
       "accumulation_days": 1,
-      "distribution_days": 3,
+      "distribution_days": 4,
       "evidence": []
     },
     "fundamental": {
@@ -63,14 +63,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015694534878976513,
-        "annualized_volatility": 0.24914301739560635,
-        "maximum_drawdown": -0.14106952640506687,
-        "sharpe_ratio": 0.8421732424797029,
-        "sortino_ratio": 1.1417038833364543,
-        "calmar_ratio": 1.3864312533129293,
-        "beta": 0.3209936374776351,
-        "alpha": 0.1516008241234815
+        "volatility": 0.015689748922024252,
+        "annualized_volatility": 0.24906704268431948,
+        "maximum_drawdown": -0.14106960082264164,
+        "sharpe_ratio": 0.8268275933106464,
+        "sortino_ratio": 1.1189908989308595,
+        "calmar_ratio": 1.3537405068034865,
+        "beta": 0.32278396993512487,
+        "alpha": 0.1467760644936891
       },
       "evidence": []
     },
@@ -137,14 +137,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 65.92576048631868,
+    "rsi": 68.53491912799798,
     "macd_cross": false,
-    "breakout": false,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.8217925310415992,
+    "relative_volume": 1.2395330398525528,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 202.7100067138672,
     "resistance": 224.5800018310547
   },
@@ -237,7 +237,7 @@
         "last_surprise_pct": 0.4701,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 9.56,
+      "analyst_upside_pct": 8.76,
       "eps_growth_implied": -41.85
     },
     "evidence": [
@@ -331,6 +331,39 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.8638,
+    "probability_pct": 86.38,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Breakout pressure detected",
+      "Positive earnings surprise/catalyst",
+      "Composite score 63.7/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 63.7,
+    "technical_score": 75.0,
+    "momentum_score": 60.0,
+    "volume_score": 0,
+    "fundamental_score": 78.0,
+    "risk_score": 100,
+    "catalyst_score": 65.0,
+    "revenue_growth": 0.03,
+    "eps_growth": 3.384,
+    "roe": 0.45221,
+    "forward_pe": 8.340687,
+    "relative_volume": 1.2395330398525528,
+    "breakout": true,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": true
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
@@ -340,5 +373,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ALL\nRating: Hold | Score: 63.7/100 | Confidence: 50.28/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 202.7100067138672 | Resistance: 224.5800018310547\nFundamental Outlook: Fundamentally Strong | Forward P/E: 8.340687\nNews/Catalyst: Inflation Is Heating Up Again. Here's What It Means for Auto Insurers Progressive and Allstate.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALL\nRating: Hold | Score: 63.7/100 | Confidence: 50.28/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 202.7100067138672 | Resistance: 224.5800018310547\nFundamental Outlook: Fundamentally Strong | Forward P/E: 8.340687\nNews/Catalyst: Inflation Is Heating Up Again. Here's What It Means for Auto Insurers Progressive and Allstate.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

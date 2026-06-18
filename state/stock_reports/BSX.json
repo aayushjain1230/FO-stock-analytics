@@ -1,6 +1,6 @@
 {
   "ticker": "BSX",
-  "generated_at": "2026-06-18T18:42:42.068456",
+  "generated_at": "2026-06-18T20:22:50.606513",
   "score": {
     "final_score": 28.65,
     "rating": "Avoid",
@@ -22,23 +22,23 @@
       ],
       "support": 44.95000076293945,
       "resistance": 70.16999816894531,
-      "risk_reward": 70.04
+      "risk_reward": 73.18
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.20251717637740219,
-        "3m": -0.35176705249927354,
-        "6m": -0.5125873933013338,
-        "12m": -0.5546544892344394
+        "1m": -0.20278120364876018,
+        "3m": -0.3519816667470833,
+        "6m": -0.5127487638246357,
+        "12m": -0.5548019323599037
       },
-      "acceleration": -0.0955,
+      "acceleration": -0.0956,
       "evidence": []
     },
     "volume": {
       "score": 0,
-      "average_volume": 22518654.6,
-      "relative_volume": 0.7472867406563445,
+      "average_volume": 22776512.0,
+      "relative_volume": 0.9648641547924458,
       "accumulation_days": 1,
       "distribution_days": 5,
       "evidence": []
@@ -54,14 +54,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.018661428194033543,
-        "annualized_volatility": 0.2962409886642118,
-        "maximum_drawdown": -0.584335111738107,
-        "sharpe_ratio": -0.7317339865887497,
-        "sortino_ratio": -0.7596672146126369,
-        "calmar_ratio": -0.3947814249972645,
-        "beta": 0.5850345533606414,
-        "alpha": -0.32288122170390654
+        "volatility": 0.018674538336669443,
+        "annualized_volatility": 0.29644910572661487,
+        "maximum_drawdown": -0.5843351117381061,
+        "sharpe_ratio": -0.7486227204867641,
+        "sortino_ratio": -0.7777466632230609,
+        "calmar_ratio": -0.4016466452844496,
+        "beta": 0.5857185087917476,
+        "alpha": -0.32927828572043416
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -130,11 +130,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 29.11742328848831,
+    "rsi": 28.969345864106387,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7472867406563445,
+    "relative_volume": 0.9648641547924458,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -230,7 +230,7 @@
         "last_surprise_pct": 0.0162,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 70.07,
+      "analyst_upside_pct": 70.24,
       "eps_growth_implied": 55.85
     },
     "evidence": [
@@ -322,6 +322,39 @@
     "sector": null,
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
+  },
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.6951,
+    "probability_pct": 69.51,
+    "confidence": "High",
+    "evidence": [
+      "EPS growth above 15%",
+      "Positive earnings surprise/catalyst",
+      "Analyst data is supportive",
+      "Composite score 28.65/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
+  },
+  "features": {
+    "final_score": 28.65,
+    "technical_score": 20.0,
+    "momentum_score": 0,
+    "volume_score": 0,
+    "fundamental_score": 81.0,
+    "risk_score": 60.0,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.116,
+    "eps_growth": 1.0,
+    "roe": 0.14661,
+    "forward_pe": 12.085342,
+    "relative_volume": 0.9648641547924458,
+    "breakout": false,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "earnings_surprise": true,
+    "analyst_revision": true,
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,

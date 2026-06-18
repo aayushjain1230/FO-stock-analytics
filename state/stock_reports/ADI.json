@@ -1,21 +1,21 @@
 {
   "ticker": "ADI",
-  "generated_at": "2026-06-18T18:42:17.655287",
+  "generated_at": "2026-06-18T20:22:24.738231",
   "score": {
-    "final_score": 70.15,
-    "rating": "Watch",
-    "confidence": 59.83,
+    "final_score": 83.9,
+    "rating": "Buy Watch",
+    "confidence": 75.35,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 90.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 81.0,
       "risk": 70.0,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,21 +23,22 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 303.1000061035156,
       "resistance": 437.6700134277344,
-      "risk_reward": 0.06
+      "risk_reward": 0.02
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.03945453974713842,
-        "3m": 0.387245136899415,
-        "6m": 0.5517416239896953,
-        "12m": 0.9136705282426227
+        "1m": 0.05150740175160329,
+        "3m": 0.40333076023555536,
+        "6m": 0.5697346452766885,
+        "12m": 0.9358603814096615
       },
-      "acceleration": 0.1114,
+      "acceleration": 0.1185,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,13 +49,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 4801110.9,
-      "relative_volume": 0.6167776711843919,
-      "accumulation_days": 6,
+      "score": 100,
+      "average_volume": 5147459.75,
+      "relative_volume": 1.9207522700881732,
+      "accumulation_days": 7,
       "distribution_days": 3,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.92x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -68,14 +72,14 @@
     "risk": {
       "score": 70.0,
       "risk_metrics": {
-        "volatility": 0.02358327681788198,
-        "annualized_volatility": 0.37437291336066253,
-        "maximum_drawdown": -0.3219746766594942,
-        "sharpe_ratio": 1.0340440819496113,
-        "sortino_ratio": 1.5951363834936656,
-        "calmar_ratio": 1.1617386130096932,
-        "beta": 1.6034105016205689,
-        "alpha": 0.0962968299793616
+        "volatility": 0.023618569347780095,
+        "annualized_volatility": 0.37493316490415485,
+        "maximum_drawdown": -0.32197463327385367,
+        "sharpe_ratio": 1.084239413414951,
+        "sortino_ratio": 1.6728681177023508,
+        "calmar_ratio": 1.2443561824963671,
+        "beta": 1.6037094549268747,
+        "alpha": 0.11259146814989154
       },
       "evidence": [
         "Beta indicates elevated market sensitivity",
@@ -144,14 +148,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 54.864010855427104,
-    "macd_cross": false,
+    "rsi": 56.22094702742217,
+    "macd_cross": true,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.6167776711843919,
+    "relative_volume": 1.9207522700881732,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, MACD bullish crossover, trend continuation, volume surge",
     "support": 303.1000061035156,
     "resistance": 437.6700134277344
   },
@@ -244,7 +248,7 @@
         "last_surprise_pct": 0.0622,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.01,
+      "analyst_upside_pct": 3.81,
       "eps_growth_implied": 119.19
     },
     "evidence": [
@@ -271,6 +275,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Stocks Rally as President Trump Signs a Preliminary Deal to End the US-Iran War",
+        "source": "Barchart",
+        "published": "2026-06-18T14:18:58Z",
+        "summary": "The S&P 500 Index ($SPX ) (SPY ) today is up +0.73%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is up +0.53%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is up +1.62%. June E-mini S&P futures (ESM26 ) are up +0.80%, and June E-mini Nasdaq futures...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Texas Instruments Stock And The Industrial Recovery Hiding In Plain Sight",
         "source": "Trefis",
@@ -310,16 +324,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Stocks Supported by Lower Crude Oil Prices and Bond Yields",
-        "source": "Barchart",
-        "published": "2026-06-16T14:18:10Z",
-        "summary": "The S&P 500 Index ($SPX ) (SPY ) today is up +0.11%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is up +0.57%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is down -0.18%. June E-mini S&P futures (ESM26 ) are up +0.09%, and June E-mini Nasdaq futures...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -337,14 +341,56 @@
     "current_sector_weight": 0,
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "probability": {
+    "model": "rules_to_probability_v1",
+    "probability_of_outperformance": 0.9421,
+    "probability_pct": 94.21,
+    "confidence": "High",
+    "evidence": [
+      "Revenue growth above 20%",
+      "EPS growth above 15%",
+      "Volume surge above 1.5x",
+      "Breakout pressure detected",
+      "Positive earnings surprise/catalyst",
+      "Composite score 83.9/100"
+    ],
+    "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
-  "report": "Ticker: ADI\nRating: Watch | Score: 70.15/100 | Confidence: 59.83/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 303.1000061035156 | Resistance: 437.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 29.30619\nNews/Catalyst: Texas Instruments Stock And The Industrial Recovery Hiding In Plain Sight\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "features": {
+    "final_score": 83.9,
+    "technical_score": 90.0,
+    "momentum_score": 85.0,
+    "volume_score": 100,
+    "fundamental_score": 81.0,
+    "risk_score": 70.0,
+    "catalyst_score": 50.0,
+    "revenue_growth": 0.372,
+    "eps_growth": 1.105,
+    "roe": 0.09639,
+    "forward_pe": 29.30619,
+    "relative_volume": 1.9207522700881732,
+    "breakout": true,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "earnings_surprise": true,
+    "analyst_revision": false,
+    "major_news": false
+  },
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.92x",
+    "date_of_change": "2026-06-18",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.92x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: ADI\nRating: Buy Watch | Score: 83.9/100 | Confidence: 75.35/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation, volume surge | Support: 303.1000061035156 | Resistance: 437.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 29.30619\nNews/Catalyst: Stocks Rally as President Trump Signs a Preliminary Deal to End the US-Iran War\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.92x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
