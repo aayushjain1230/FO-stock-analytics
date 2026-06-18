@@ -421,6 +421,8 @@ def store_news_events(ticker: str, events):
             rows,
         )
 
+
+
 def store_stock_intelligence_report(ticker: str, date: str, payload: Dict):
     initialize_database()
     with connect() as conn:
@@ -489,6 +491,7 @@ def iter_signals_without_outcomes():
             FROM signals s
             LEFT JOIN signal_outcomes o ON o.signal_id = s.id
             WHERE o.signal_id IS NULL
+               OR o.return_6m IS NULL
             """
         ).fetchall()
     return [dict(row) for row in rows]
