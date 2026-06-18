@@ -70,6 +70,7 @@ QUANT_RESEARCH_FILE = os.path.join(STATE_DIR, "latest_quant_research.json")
 PORTFOLIO_REPORT_FILE = os.path.join(STATE_DIR, "latest_portfolio_report.json")
 STOCK_DISCOVERY_FILE = os.path.join(STATE_DIR, "latest_stock_discovery.json")
 SIGNAL_PERFORMANCE_FILE = os.path.join(STATE_DIR, "latest_signal_performance.json")
+EARNINGS_ALERTS_FILE = os.path.join(STATE_DIR, "latest_earnings_alerts.json")
 STOCK_REPORT_DIR = os.path.join(STATE_DIR, "stock_reports")
 
 DEFAULT_CONFIG = {
@@ -902,6 +903,63 @@ def run_trade_journal_summary():
     print(json.dumps(payload, indent=2, default=str))
 
 
+def run_watchlist_intelligence_update(args):
+    record = watchlist_intelligence.update_watchlist_record(
+        args.set_watchlist_intel,
+        thesis=args.thesis,
+        entry_zone=args.entry_zone,
+        stop_loss=args.stop_loss,
+        target_price=args.target_price,
+        time_horizon=args.time_horizon,
+        status=args.watch_status,
+        reason_added=args.reason_added,
+        invalidation=args.invalidation,
+        risk_budget_pct=args.risk_budget_pct,
+    )
+    watchlist_intelligence.build_watchlist_report(load_watchlist_data())
+    print(json.dumps(record, indent=2, default=str))
+
+
+def _load_stock_reports_for_earnings():
+    reports = []
+    report_dir = Path(STOCK_REPORT_DIR)
+    if report_dir.exists():
+        for path in sorted(report_dir.glob("*.json")):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    reports.append(json.load(f))
+            except Exception as exc:
+                logger.warning(f"Could not read stock report {path}: {exc}")
+    return [item for item in reports if isinstance(item, dict)]
+
+
+def run_earnings_calendar(days_ahead=2):
+    reports = _load_stock_reports_for_earnings()
+    payload = earnings_alerts.build_earnings_alerts(reports, days_ahead=days_ahead)
+    print(json.dumps(payload, indent=2, default=str))
+    return payload
+
+
+def run_signal_outcome_update():
+    if yf is None:
+        raise RuntimeError("Signal outcome updates require yfinance.")
+    database.initialize_database()
+    signals = database.iter_signals_without_outcomes()
+    tickers = sorted({signal.get("ticker") for signal in signals if signal.get("ticker")})
+    if not tickers:
+        print("No pending signal outcomes to update.")
+        return 0
+    config = load_config()
+    benchmark_symbol = config.get("benchmark", "SPY")
+    raw = yf.download(tickers, period="2y", interval="1d", group_by="ticker", threads=True, progress=False, auto_adjust=False)
+    price_lookup = {ticker: _extract_downloaded_ticker(raw, ticker) for ticker in tickers}
+    benchmark_raw = yf.download(benchmark_symbol, period="2y", interval="1d", progress=False, auto_adjust=False)
+    benchmark_df = _normalize_benchmark_data(benchmark_raw) if not benchmark_raw.empty else None
+    updated = signal_validation.update_signal_outcomes(price_lookup, benchmark_df=benchmark_df)
+    print(f"Updated {updated} signal outcome record(s).")
+    return updated
+
+
 def run_intraday_monitor(send_alert=True):
     if yf is None:
         raise RuntimeError("Intraday monitor requires yfinance.")
@@ -925,6 +983,9 @@ def main():
     parser.add_argument("--dashboard", action="store_true", help="Generate the static quant research dashboard HTML")
     parser.add_argument("--init-db", action="store_true", help="Create or migrate the SQLite research database")
     parser.add_argument("--signal-performance", action="store_true", help="Print historical signal validation summary")
+    parser.add_argument("--update-signal-outcomes", action="store_true", help="Update stored signal outcomes before EV/statistical analysis")
+    parser.add_argument("--earnings-calendar", action="store_true", help="Generate earnings calendar from saved stock intelligence reports")
+    parser.add_argument("--earnings-days", type=int, default=2, help="Days ahead for earnings alert calendar")
     parser.add_argument("--portfolio-report", action="store_true", help="Generate portfolio risk, performance, and intelligence report")
     parser.add_argument("--stock-discovery", action="store_true", help="Run stock discovery and screening intelligence")
     parser.add_argument("--screener", default="quality_momentum", help="Saved screener name for stock discovery")
@@ -938,7 +999,19 @@ def main():
     parser.add_argument("--market-price", type=float, help="Option lab observed market option price")
     parser.add_argument("--option-type", choices=["call", "put"], default="call", help="Option lab contract type")
     parser.add_argument("--trade-journal", action="store_true", help="Summarize trade journal performance")
-    parser.add_argument("--log-trade", nargs=5, metavar=("TICKER", "ACTION", "SHARES", "PRICE", "REASON"), help="Log a trade journal entry")
+    parser.add_argument("--log-trade", nargs="+", metavar="TRADE_FIELD", help="Log a trade journal entry: TICKER ACTION SHARES PRICE [REASON...]")
+    parser.add_argument("--trade-reason", help="Optional multi-word trade journal reason")
+    parser.add_argument("--trade-date", help="Optional trade date as YYYY-MM-DD")
+    parser.add_argument("--set-watchlist-intel", metavar="TICKER", help="Create or update watchlist thesis, stop, target, horizon, and status for one ticker")
+    parser.add_argument("--thesis", help="Watchlist thesis for --set-watchlist-intel")
+    parser.add_argument("--entry-zone", help="Entry zone for --set-watchlist-intel")
+    parser.add_argument("--stop-loss", help="Stop level for --set-watchlist-intel")
+    parser.add_argument("--target-price", help="Target price for --set-watchlist-intel")
+    parser.add_argument("--time-horizon", help="Time horizon for --set-watchlist-intel")
+    parser.add_argument("--watch-status", help="Status for --set-watchlist-intel, such as watching, active, paused, removed")
+    parser.add_argument("--reason-added", help="Reason this ticker is on the watchlist")
+    parser.add_argument("--invalidation", help="What would invalidate the watchlist thesis")
+    parser.add_argument("--risk-budget-pct", help="Risk budget percentage for this watchlist idea")
     parser.add_argument("--intraday-monitor", action="store_true", help="Run lightweight intraday price/volume alert monitor")
 
     args = parser.parse_args()
@@ -954,6 +1027,9 @@ def main():
         database.initialize_database()
         print("SQLite research database initialized at state/jfo_quant.db")
 
+    if args.update_signal_outcomes:
+        run_signal_outcome_update()
+
     if args.signal_performance:
         payload = signal_validation.summarize_signal_performance()
         os.makedirs(os.path.dirname(SIGNAL_PERFORMANCE_FILE), exist_ok=True)
@@ -967,9 +1043,18 @@ def main():
     if args.option_lab:
         run_option_lab(args)
 
+    if args.set_watchlist_intel:
+        run_watchlist_intelligence_update(args)
+
+    if args.earnings_calendar:
+        run_earnings_calendar(days_ahead=args.earnings_days)
+
     if args.log_trade:
-        ticker_value, action_value, shares_value, price_value, reason_value = args.log_trade
-        trade = trade_journal.log_trade(ticker_value, action_value, float(shares_value), float(price_value), reason_value)
+        if len(args.log_trade) < 4:
+            raise SystemExit("--log-trade requires at least TICKER ACTION SHARES PRICE")
+        ticker_value, action_value, shares_value, price_value = args.log_trade[:4]
+        reason_value = args.trade_reason or " ".join(args.log_trade[4:])
+        trade = trade_journal.log_trade(ticker_value, action_value, float(shares_value), float(price_value), reason_value, trade_date=args.trade_date)
         print(json.dumps(trade, indent=2, default=str))
 
     if args.trade_journal:
