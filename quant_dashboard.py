@@ -202,19 +202,24 @@ def _section_portfolio_risk(portfolio):
     mc = portfolio.get("monte_carlo", {})
     mc_html = ""
     if mc and not mc.get("message"):
+        horizon = mc.get("horizon_days", 126)
+        horizon_label = f"{max(1, round(horizon / 21))}M" if horizon else "6M"
+        expected_return = mc.get("expected_return")
+        probability_of_loss = mc.get("probability_of_loss")
+        probability_of_large_drawdown = mc.get("probability_of_large_drawdown")
         mc_html = f"""
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px;">
           <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;">
-            <div style="color:#8b949e;font-size:12px;">Expected 6M Return</div>
-            <div style="color:#2ea043;font-size:20px;font-weight:700;">{_pct(mc.get('expected_return_6m'), multiply=True)}</div>
+            <div style="color:#8b949e;font-size:12px;">Expected {horizon_label} Return</div>
+            <div style="color:#2ea043;font-size:20px;font-weight:700;">{_pct(expected_return, multiply=True)}</div>
           </div>
           <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;">
             <div style="color:#8b949e;font-size:12px;">Probability of Loss</div>
-            <div style="color:#da3633;font-size:20px;font-weight:700;">{_pct(mc.get('probability_of_loss'), multiply=True)}</div>
+            <div style="color:#da3633;font-size:20px;font-weight:700;">{_pct(probability_of_loss, multiply=True)}</div>
           </div>
           <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;">
             <div style="color:#8b949e;font-size:12px;">15% Drawdown Risk</div>
-            <div style="color:#d29922;font-size:20px;font-weight:700;">{_pct(mc.get('probability_large_drawdown'), multiply=True)}</div>
+            <div style="color:#d29922;font-size:20px;font-weight:700;">{_pct(probability_of_large_drawdown, multiply=True)}</div>
           </div>
         </div>"""
 
@@ -493,6 +498,152 @@ def _section_research_notes(rows):
     </section>"""
 
 
+
+
+def _section_watchlist_intelligence(payload):
+    items = payload.get("items", []) if payload else []
+    if not items:
+        return ""
+    rows = ""
+    for item in items[:20]:
+        flags = ", ".join(item.get("flags", [])) or "OK"
+        rows += f"""<tr>
+          <td style="font-weight:700;color:#e6edf3;">{html.escape(str(item.get('ticker','')))}</td>
+          <td>{html.escape(str(item.get('thesis','N/A')))}</td>
+          <td>{html.escape(str(item.get('entry_zone','N/A')))}</td>
+          <td>{html.escape(str(item.get('stop_loss','N/A')))}</td>
+          <td>{html.escape(str(item.get('target_price','N/A')))}</td>
+          <td>{html.escape(str(item.get('time_horizon','N/A')))}</td>
+          <td>{html.escape(flags)}</td>
+        </tr>"""
+    return f"""
+    <section id="watchlist-intelligence">
+      <h2>Watchlist Intelligence</h2>
+      <p>{html.escape(str(payload.get('summary','')))}</p>
+      <div style="overflow-x:auto;margin-top:16px;">
+        <table><thead><tr><th>Ticker</th><th>Thesis</th><th>Entry</th><th>Stop</th><th>Target</th><th>Horizon</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
+      </div>
+    </section>"""
+
+
+
+def _section_signal_performance(payload):
+    if not payload:
+        return ""
+    if payload.get("message"):
+        return f"""
+    <section id="signal-performance">
+      <h2>Signal Expected Value</h2>
+      <p>{html.escape(str(payload.get('message')))}</p>
+    </section>"""
+    rows = ""
+    for signal_type, item in payload.get("signal_types", {}).items():
+        ev = item.get("expected_value")
+        variance = item.get("variance")
+        p_value = item.get("p_value")
+        attr = html.escape(str(item.get("attractiveness", "N/A")))
+        ci = item.get("confidence_interval_95", {})
+        train_test = item.get("train_test", {})
+        ci_text = f"{_pct(ci.get('low'), multiply=True)} to {_pct(ci.get('high'), multiply=True)}"
+        test_text = _pct(train_test.get("test_average_return"), multiply=True) if train_test.get("available") else "N/A"
+        color = "#2ea043" if "attractive" in attr.lower() or attr == "Constructive" else "#d29922" if ev and ev > 0 else "#da3633"
+        rows += f"""<tr>
+          <td style="font-weight:700;color:#e6edf3;">{html.escape(str(signal_type))}</td>
+          <td>{item.get('sample_size', 0)}</td>
+          <td>{_pct(item.get('win_rate'), multiply=True)}</td>
+          <td style="color:#2ea043;">{_pct(item.get('average_win'), multiply=True)}</td>
+          <td style="color:#da3633;">{_pct(item.get('average_loss'), multiply=True)}</td>
+          <td style="color:{color};font-weight:700;">{_pct(ev, multiply=True)}</td>
+          <td>{ci_text}</td>
+          <td>{_fmt(variance, 4)}</td>
+          <td>{_pct(item.get('standard_deviation'), multiply=True)}</td>
+          <td>{_fmt(item.get('sharpe_like'), 2)}</td>
+          <td>{_fmt(p_value, 4)}</td>
+          <td>{test_text}</td>
+          <td style="color:{color};font-weight:700;">{attr}</td>
+        </tr>"""
+    regression = payload.get("regression", {})
+    regression_note = regression.get("message") if not regression.get("available") else f"Regression sample size {regression.get('sample_size')} | R? {_fmt(regression.get('r_squared'), 3)}"
+    return f"""
+    <section id="signal-performance">
+      <h2>Signal Expected Value</h2>
+      <p>{html.escape(str(payload.get('interpretation','')))}</p>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Signal</th><th>N</th><th>Win Rate</th><th>Avg Win</th><th>Avg Loss</th><th>EV</th><th>95% CI</th><th>Variance</th><th>Std Dev</th><th>Sharpe-like</th><th>p-value</th><th>Test Avg</th><th>Read</th></tr></thead><tbody>{rows or '<tr><td colspan="13">No completed signal outcomes yet.</td></tr>'}</tbody></table></div>
+      <p style="font-size:12px;color:#8b949e;">{html.escape(str(regression_note or ''))}</p>
+    </section>"""
+
+def _section_trade_journal(payload):
+    if not payload:
+        return ""
+    rows = ""
+    for item in payload.get("closed_trades", [])[-10:]:
+        pnl = item.get("pnl", 0)
+        color = "#2ea043" if pnl >= 0 else "#da3633"
+        rows += f"""<tr>
+          <td>{html.escape(str(item.get('ticker','')))}</td>
+          <td>{_fmt(item.get('shares'), 2)}</td>
+          <td>${_fmt(item.get('entry_price'), 2)}</td>
+          <td>${_fmt(item.get('exit_price'), 2)}</td>
+          <td style="color:{color};font-weight:700;">${_fmt(pnl, 2)}</td>
+          <td>{html.escape(str(item.get('entry_reason','')))}</td>
+          <td>{html.escape(str(item.get('exit_reason','')))}</td>
+        </tr>"""
+    return f"""
+    <section id="trade-journal">
+      <h2>Trade Journal</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px;">
+        <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;"><div style="color:#8b949e;font-size:12px;">Closed Trades</div><div style="color:#e6edf3;font-size:20px;font-weight:700;">{payload.get('closed_trade_count',0)}</div></div>
+        <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;"><div style="color:#8b949e;font-size:12px;">Realized P&L</div><div style="color:{'#2ea043' if payload.get('realized_pnl',0) >= 0 else '#da3633'};font-size:20px;font-weight:700;">${_fmt(payload.get('realized_pnl'),2)}</div></div>
+        <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;"><div style="color:#8b949e;font-size:12px;">Win Rate</div><div style="color:#58a6ff;font-size:20px;font-weight:700;">{_pct(payload.get('win_rate'), multiply=True)}</div></div>
+      </div>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit</th><th>P&L</th><th>Entry Reason</th><th>Exit Reason</th></tr></thead><tbody>{rows or '<tr><td colspan="7">No closed trades logged yet.</td></tr>'}</tbody></table></div>
+    </section>"""
+
+
+def _section_earnings_alerts(payload):
+    if not payload:
+        return ""
+    rows = ""
+    for item in (payload.get("alerts") or payload.get("upcoming") or [])[:12]:
+        rows += f"""<tr>
+          <td style="font-weight:700;color:#e6edf3;">{html.escape(str(item.get('ticker','')))}</td>
+          <td>{html.escape(str(item.get('next_earnings_date','N/A')))}</td>
+          <td>{html.escape(str(item.get('days_until','N/A')))}</td>
+          <td>{_fmt(item.get('score'), 1)}</td>
+          <td>{html.escape(str(item.get('rating','N/A')))}</td>
+          <td>{html.escape(str(item.get('expected_move','Unavailable')))}</td>
+        </tr>"""
+    return f"""
+    <section id="earnings-alerts">
+      <h2>Earnings Calendar</h2>
+      <p>{html.escape(str(payload.get('summary','')))}</p>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Ticker</th><th>Date</th><th>Days</th><th>Score</th><th>Rating</th><th>Expected Move</th></tr></thead><tbody>{rows or '<tr><td colspan="6">No upcoming earnings data available.</td></tr>'}</tbody></table></div>
+    </section>"""
+
+
+def _section_benchmark_and_drift(portfolio):
+    if not portfolio:
+        return ""
+    bench = portfolio.get("benchmark_comparison", {})
+    drift = portfolio.get("drift_monitor", {})
+    period_rows = ""
+    for label, item in bench.get("periods", {}).items():
+        rel = item.get("relative_return")
+        color = "#2ea043" if (rel or 0) >= 0 else "#da3633"
+        period_rows += f"<tr><td>{label}</td><td>{_pct(item.get('portfolio_return'), multiply=True)}</td><td>{_pct(item.get('benchmark_return'), multiply=True)}</td><td style='color:{color};font-weight:700;'>{_pct(rel, multiply=True)}</td></tr>"
+    drift_rows = ""
+    for item in drift.get("positions", [])[:12]:
+        color = "#d29922" if item.get("status") == "rebalance_watch" else "#2ea043"
+        drift_rows += f"<tr><td>{html.escape(str(item.get('ticker','')))}</td><td>{_fmt(item.get('current_weight_pct'),2)}%</td><td>{_fmt(item.get('target_weight_pct'),2)}%</td><td style='color:{color};font-weight:700;'>{_fmt(item.get('drift_pct'),2)}%</td><td>{html.escape(str(item.get('status','')))}</td></tr>"
+    return f"""
+    <section id="benchmark-drift">
+      <h2>Benchmark & Drift</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:16px;">
+        <div><div style="color:#8b949e;font-size:12px;margin-bottom:8px;letter-spacing:1px;">PORTFOLIO VS SPY</div><table><thead><tr><th>Period</th><th>Portfolio</th><th>SPY</th><th>Relative</th></tr></thead><tbody>{period_rows or '<tr><td colspan="4">Benchmark comparison unavailable.</td></tr>'}</tbody></table></div>
+        <div><div style="color:#8b949e;font-size:12px;margin-bottom:8px;letter-spacing:1px;">TARGET WEIGHT DRIFT</div><table><thead><tr><th>Ticker</th><th>Current</th><th>Target</th><th>Drift</th><th>Status</th></tr></thead><tbody>{drift_rows or '<tr><td colspan="5">Drift monitor unavailable.</td></tr>'}</tbody></table></div>
+      </div>
+    </section>"""
+
 # ---------------------------------------------------------------------------
 # Main generator
 # ---------------------------------------------------------------------------
@@ -510,6 +661,10 @@ def generate_dashboard(
     portfolio = _load_json(portfolio_path, {})
     discovery = _load_json(discovery_path, {})
     comparison = _load_json(comparison_path, {"tickers": []})
+    watchlist_payload = _load_json(os.path.join(STATE_DIR, "latest_watchlist_intelligence.json"), {})
+    trade_payload = _load_json(os.path.join(STATE_DIR, "latest_trade_journal.json"), {})
+    earnings_payload = _load_json(os.path.join(STATE_DIR, "latest_earnings_alerts.json"), {})
+    signal_payload = _load_json(os.path.join(STATE_DIR, "latest_signal_performance.json"), {})
 
     rows = quant.get("tickers") or comparison.get("tickers", [])
 
@@ -519,9 +674,14 @@ def generate_dashboard(
     sec_overview = _section_portfolio_overview(portfolio)
     sec_exec_chart = _section_executive_chart()
     sec_risk = _section_portfolio_risk(portfolio)
+    sec_benchmark_drift = _section_benchmark_and_drift(portfolio)
     sec_watchlist = _section_watchlist(rows)
+    sec_watchlist_intel = _section_watchlist_intelligence(watchlist_payload)
     sec_charts = _section_stock_charts(rows)
+    sec_earnings = _section_earnings_alerts(earnings_payload)
     sec_discovery = _section_stock_discovery(discovery)
+    sec_trade = _section_trade_journal(trade_payload)
+    sec_signal_perf = _section_signal_performance(signal_payload)
     sec_notes = _section_research_notes(rows)
 
     nav_links = "".join(
@@ -529,9 +689,14 @@ def generate_dashboard(
         for label, anchor in [
             ("Portfolio", "portfolio-overview"),
             ("Risk", "portfolio-risk"),
+            ("Benchmark", "benchmark-drift"),
             ("Watchlist", "watchlist"),
+            ("Thesis", "watchlist-intelligence"),
             ("Charts", "stock-charts"),
+            ("Earnings", "earnings-alerts"),
             ("Discovery", "stock-discovery"),
+            ("Journal", "trade-journal"),
+            ("Signal EV", "signal-performance"),
             ("Research", "research-notes"),
         ]
     )
@@ -562,6 +727,7 @@ def generate_dashboard(
     tr:hover td{{background:#21262d;}}
     code{{background:#21262d;color:var(--blue);padding:2px 6px;border-radius:4px;font-size:12px;}}
     .disclaimer{{background:#161b22;border:1px solid var(--border);border-radius:6px;padding:12px;color:var(--muted);font-size:12px;margin-top:32px;}}
+    @media (max-width: 760px){{header{{padding:16px;}}nav{{padding:8px 16px;}}main{{padding:16px;}}section{{margin-bottom:32px;}}table{{display:block;overflow-x:auto;white-space:nowrap;}}}}
   </style>
 </head>
 <body>
@@ -574,9 +740,14 @@ def generate_dashboard(
     {sec_overview}
     {sec_exec_chart}
     {sec_risk}
+    {sec_benchmark_drift}
     {sec_watchlist}
+    {sec_watchlist_intel}
     {sec_charts}
+    {sec_earnings}
     {sec_discovery}
+    {sec_trade}
+    {sec_signal_perf}
     {sec_notes}
     <div class="disclaimer">
       ⚠ This dashboard is for educational and research purposes only. Nothing here constitutes financial advice,
