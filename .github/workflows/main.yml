@@ -68,8 +68,7 @@ jobs:
           MANUAL_TICKERS: ${{ github.event.inputs.manual_tickers }}
         if: |
           github.event_name == 'schedule' ||
-          github.event.inputs.action == 'Run Stocks' ||
-          github.event.inputs.action == ''
+          github.event_name == 'workflow_dispatch'
         run: |
           python main.py --init-db
           python main.py --analyze
