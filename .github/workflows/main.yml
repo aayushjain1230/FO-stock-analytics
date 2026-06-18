@@ -72,7 +72,6 @@ jobs:
           github.event.inputs.action == ''
         run: |
           python main.py --init-db
-          python main.py --intraday-monitor
           python main.py --analyze
           python main.py --quant-report
           python main.py --portfolio-report
