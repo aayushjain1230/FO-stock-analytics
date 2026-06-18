@@ -9,7 +9,7 @@ STATE_FILE = os.path.join("state", "latest_trade_journal.json")
 
 def load_trades(path: str = TRADE_FILE) -> List[Dict]:
     if os.path.exists(path):
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8-sig") as f:
             payload = json.load(f)
         return payload.get("trades", payload if isinstance(payload, list) else [])
     return []
@@ -55,20 +55,38 @@ def summarize_trades(path: str = TRADE_FILE) -> Dict:
                 lot = lots[0]
                 matched = min(remaining, lot["shares"])
                 pnl = (price - lot["price"]) * matched
-                realized.append({"ticker": ticker, "shares": matched, "entry_price": lot["price"], "exit_price": price, "pnl": pnl, "entry_reason": lot.get("reason"), "exit_reason": trade.get("reason")})
+                return_pct = (price / lot["price"] - 1) if lot["price"] else None
+                realized.append({
+                    "ticker": ticker,
+                    "shares": matched,
+                    "entry_price": lot["price"],
+                    "exit_price": price,
+                    "pnl": pnl,
+                    "return_pct": return_pct,
+                    "entry_reason": lot.get("reason"),
+                    "exit_reason": trade.get("reason"),
+                })
                 lot["shares"] -= matched
                 remaining -= matched
                 if lot["shares"] <= 0:
                     lots.pop(0)
     wins = [item for item in realized if item["pnl"] > 0]
+    losses = [item for item in realized if item["pnl"] <= 0]
     total_pnl = sum(item["pnl"] for item in realized)
+    win_rate = len(wins) / len(realized) if realized else None
+    average_win = sum(item["return_pct"] for item in wins if item.get("return_pct") is not None) / len(wins) if wins else 0.0
+    average_loss = sum(item["return_pct"] for item in losses if item.get("return_pct") is not None) / len(losses) if losses else 0.0
+    expected_value = (win_rate * average_win + (1 - win_rate) * average_loss) if win_rate is not None else None
     payload = {
         "generated_at": datetime.now().isoformat(),
         "trade_count": len(trades),
         "closed_trade_count": len(realized),
         "open_positions": {ticker: sum(lot["shares"] for lot in lots) for ticker, lots in open_lots.items() if sum(lot["shares"] for lot in lots) > 0},
         "realized_pnl": round(total_pnl, 2),
-        "win_rate": round(len(wins) / len(realized), 4) if realized else None,
+        "win_rate": round(win_rate, 4) if win_rate is not None else None,
+        "average_win": average_win,
+        "average_loss": average_loss,
+        "expected_value": expected_value,
         "closed_trades": realized[-20:],
         "summary": f"{len(realized)} closed journal entries; realized P&L ${total_pnl:.2f}.",
     }
