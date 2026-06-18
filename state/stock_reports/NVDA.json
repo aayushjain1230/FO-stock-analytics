@@ -1,22 +1,23 @@
 {
   "ticker": "NVDA",
-  "generated_at": "2026-06-18T16:12:29.647755",
+  "generated_at": "2026-06-18T16:23:13.898482",
   "score": {
-    "final_score": 55.4,
+    "final_score": 58.9,
     "rating": "Hold",
-    "confidence": 41.31,
+    "confidence": 46.07,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 55.0,
+      "technical": 65.0,
       "momentum": 75.0,
       "volume": 0,
       "fundamental": 76.0,
       "risk": 60.0,
-      "catalyst": 50.0
+      "catalyst": 70.0
     },
     "technical": {
-      "score": 55.0,
+      "score": 65.0,
       "evidence": [
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -24,17 +25,17 @@
       ],
       "support": 165.1699981689453,
       "resistance": 235.74000549316406,
-      "risk_reward": 0.6
+      "risk_reward": 0.59
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": -0.05070581354589754,
-        "3m": 0.1728483203768496,
-        "6m": 0.17845563291394417,
-        "12m": 0.4533625020341936
+        "1m": -0.048890504343654384,
+        "3m": 0.17509112600991483,
+        "6m": 0.18070905975911367,
+        "12m": 0.4561418816082805
       },
-      "acceleration": 0.0836,
+      "acceleration": 0.0847,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 167359905.75,
-      "relative_volume": 0.4503433164726194,
+      "average_volume": 167489947.7,
+      "relative_volume": 0.46552199144307216,
       "accumulation_days": 1,
       "distribution_days": 8,
       "evidence": []
@@ -63,14 +64,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.030339873880434628,
-        "annualized_volatility": 0.4816305665801655,
-        "maximum_drawdown": -0.3688103246724097,
-        "sharpe_ratio": 0.6955387928163613,
-        "sortino_ratio": 0.9847573829124918,
-        "calmar_ratio": 0.6636489634977103,
-        "beta": 2.013112392661226,
-        "alpha": -0.029428474018322836
+        "volatility": 0.030342675753438263,
+        "annualized_volatility": 0.4816750449352023,
+        "maximum_drawdown": -0.36881024670706675,
+        "sharpe_ratio": 0.6975158445322629,
+        "sortino_ratio": 0.987647612824378,
+        "calmar_ratio": 0.666894296541895,
+        "beta": 2.013263054757672,
+        "alpha": -0.029434794634084327
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -78,14 +79,15 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 70.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "NVDA",
@@ -135,17 +137,18 @@
     "next_earnings_date": "1787774400",
     "eps_current_year": 6.53,
     "eps_forward": 12.72715,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 48.7176087667955,
+    "rsi": 48.98464110266888,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4503433164726194,
-    "price_above_sma50": false,
+    "relative_volume": 0.46552199144307216,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 165.1699981689453,
     "resistance": 235.74000549316406
   },
@@ -193,10 +196,10 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.70875,
     "detail": {
@@ -238,12 +241,13 @@
         "last_surprise_pct": 0.0554,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 42.89,
+      "analyst_upside_pct": 42.48,
       "eps_growth_implied": 94.9
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -276,10 +280,10 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "How SpaceX and 'MANGOS' are fueling the latest ETF trends",
-        "source": "Yahoo Finance Video",
-        "published": "2026-06-17T16:18:39Z",
-        "summary": "AllianceBernstein Global head of ETF strategy and partnerships, Julie Gunts, joins Yahoo Finance to explain how \"MANGOS\" stocks \u2014 Meta (META), Amazon (AMZN), Nvidia (NVDA), Alphabet (GOOG, GOOGL), OpenAI (OPAI.PVT), and SpaceX (SPCX) \u2014 are ushering in the latest trends in exchange-traded funds (ETFs).",
+        "headline": "Why Lockheed Martin Stock Dropped Today",
+        "source": "Motley Fool",
+        "published": "2026-06-18T16:11:36Z",
+        "summary": "Peace isn't as bad news for Lockheed Martin stock as you might think.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -296,20 +300,20 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
+        "headline": "These 3 Stocks Just Raised Their Dividends",
+        "source": "Motley Fool",
+        "published": "2026-06-18T16:05:00Z",
+        "summary": "Each name will be familiar to most investors.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "SanDisk Jumps 11%, Western Digital Rises 7% After Apple Flags \u201cUnavoidable\u201d Memory Price Hikes",
         "source": "24/7 Wall St.",
         "published": "2026-06-18T15:59:42Z",
         "summary": "SanDisk (NASDAQ:SNDK) stock is surging in Thursday trading, up 11% to $2,170. Western Digital (NASDAQ:WDC) stock is also flying, up 7% to roughly $764. The catalyst landed before the open and hit memory and storage names broadly. The trigger came from Apple (NASDAQ:AAPL) CEO Tim Cook, who told the Wall Street Journal that surging memory ... SanDisk Jumps 11%, Western Digital Rises 7% After Apple Flags \u201cUnavoidable\u201d Memory Price Hikes",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Why Intel Stock Rocketed Higher on Thursday",
-        "source": "Motley Fool",
-        "published": "2026-06-18T15:54:26Z",
-        "summary": "A report suggests the semiconductor specialist has inked an important deal.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -330,13 +334,20 @@
     "assessment": "Already held; monitor risk contribution and thesis quality."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: NVDA\nRating: Hold | Score: 55.4/100 | Confidence: 41.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 165.1699981689453 | Resistance: 235.74000549316406\nFundamental Outlook: Quality Compounder | Forward P/E: 16.438873\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: NVDA\nRating: Hold | Score: 58.9/100 | Confidence: 46.07/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 165.1699981689453 | Resistance: 235.74000549316406\nFundamental Outlook: Quality Compounder | Forward P/E: 16.438873\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }
