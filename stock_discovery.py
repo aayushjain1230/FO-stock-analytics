@@ -10,6 +10,7 @@ import pandas as pd
 import fundamentals_fetcher
 import intelligence_scoring
 import portfolio_engine
+import probability_engine
 import quant_analytics
 import why_now
 
@@ -220,7 +221,9 @@ def build_stock_intelligence(
     sentiment = {"available": False, "note": "Social sentiment sources are not configured."}
     earnings = earnings_snapshot(fundamentals, yf_module=yf_module, ticker=ticker)
     portfolio_fit = portfolio_fit_snapshot(ticker, portfolio_context)
-    report = stock_report_text(ticker, score, fundamentals, tech, why_payload, news, portfolio_fit)
+    probability = probability_engine.probability_of_outperformance(score, fundamentals, tech, catalysts, market_payload)
+    features = probability_engine.feature_snapshot(score, fundamentals, tech, catalysts)
+    report = stock_report_text(ticker, score, fundamentals, tech, why_payload, news, portfolio_fit, probability=probability)
     return {
         "ticker": ticker,
         "generated_at": datetime.now().isoformat(),
@@ -235,6 +238,8 @@ def build_stock_intelligence(
         "sentiment": sentiment,
         "options_flow": options_flow,
         "portfolio_fit": portfolio_fit,
+        "probability": probability,
+        "features": features,
         "why_now": why_payload,
         "report": report,
     }
@@ -327,7 +332,7 @@ def insider_short_snapshot(fundamentals: Dict) -> Dict:
     }
 
 
-def stock_report_text(ticker: str, score: Dict, fundamentals: Dict, technical: Dict, why_payload: Dict, news: Dict, portfolio_fit: Dict) -> str:
+def stock_report_text(ticker: str, score: Dict, fundamentals: Dict, technical: Dict, why_payload: Dict, news: Dict, portfolio_fit: Dict, probability: Optional[Dict] = None) -> str:
     bull = []
     bear = []
     if score.get("categories", {}).get("momentum", 0) >= 60:
