@@ -1,13 +1,13 @@
 {
   "ticker": "ARE",
-  "generated_at": "2026-06-17T22:59:16.632108",
+  "generated_at": "2026-06-18T16:11:23.112984",
   "score": {
-    "final_score": 37.8,
+    "final_score": 41.55,
     "rating": "Drop",
-    "confidence": 26.9,
+    "confidence": 29.16,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 38.0,
+      "technical": 53.0,
       "momentum": 40.0,
       "volume": 0,
       "fundamental": 52.0,
@@ -15,25 +15,27 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 38.0,
+      "score": 53.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 40.40999984741211,
       "resistance": 53.16999816894531,
-      "risk_reward": 0.45
+      "risk_reward": 0.2
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": 0.05419877383797611,
-        "3m": 0.03472384369959025,
-        "6m": 0.0699385727601185,
-        "12m": -0.2775932202288812
+        "1m": 0.11300175148196079,
+        "3m": 0.04656927129219968,
+        "6m": 0.11968369277475732,
+        "12m": -0.23608893558742894
       },
-      "acceleration": -0.0002,
+      "acceleration": -0.0133,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -42,8 +44,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2030813.5,
-      "relative_volume": 0.4601948923424037,
+      "average_volume": 2003146.65,
+      "relative_volume": 0.30114270465419996,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -56,14 +58,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.023752009746418883,
-        "annualized_volatility": 0.37705146556204017,
-        "maximum_drawdown": -0.6531317991493428,
-        "sharpe_ratio": -0.7961461940881001,
-        "sortino_ratio": -0.9409712189895116,
-        "calmar_ratio": -0.4770986792063593,
-        "beta": 0.7984103661411015,
-        "alpha": -0.4422876601223979
+        "volatility": 0.02378881409162716,
+        "annualized_volatility": 0.3776357164295662,
+        "maximum_drawdown": -0.6531317764334272,
+        "sharpe_ratio": -0.74433691888332,
+        "sortino_ratio": -0.8811005103478159,
+        "calmar_ratio": -0.4569740010337407,
+        "beta": 0.8019349467947813,
+        "alpha": -0.42625750180571453
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -77,7 +79,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "ARE",
@@ -86,7 +88,7 @@
     "sector": "Real Estate",
     "industry": "REIT - Office",
     "exchange": "NYQ",
-    "market_cap": 8575800320.0,
+    "market_cap": 8894713856.0,
     "revenue_growth": -0.115,
     "eps_growth": null,
     "fcf_growth": null,
@@ -103,14 +105,14 @@
     "cash_position": 418720000.0,
     "total_debt": 12878605312.0,
     "interest_coverage": null,
-    "forward_pe": -55.920452,
+    "forward_pe": -58.0,
     "trailing_pe": null,
     "peg": 3.24,
-    "price_to_book": 0.53392214,
-    "price_to_sales": 2.9267454,
+    "price_to_book": 0.5537774,
+    "price_to_sales": 3.035584,
     "enterprise_to_ebitda": 13.496,
     "enterprise_to_revenue": 8.569,
-    "fcf_yield": 0.1642672426402764,
+    "fcf_yield": 0.15837755939160816,
     "institutional_ownership": 0.96969,
     "insider_ownership": 0.01381,
     "short_interest": 7021195.0,
@@ -130,11 +132,11 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 47.86109125689386,
+    "rsi": 53.14554037696017,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4601948923424037,
+    "relative_volume": 0.30114270465419996,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -230,7 +232,7 @@
         "last_surprise_pct": 13.5996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 4.65,
+      "analyst_upside_pct": 0.9,
       "eps_growth_implied": 85.96
     },
     "evidence": [
@@ -326,10 +328,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
+    "date_of_change": "2026-06-18",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ARE\nRating: Drop | Score: 37.8/100 | Confidence: 26.9/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 40.40999984741211 | Resistance: 53.16999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: -55.920452\nNews/Catalyst: Alexandria Stock Soars 10.9% in a Month: Will the Trend Continue?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ARE\nRating: Drop | Score: 41.55/100 | Confidence: 29.16/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 40.40999984741211 | Resistance: 53.16999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: -58.0\nNews/Catalyst: Alexandria Stock Soars 10.9% in a Month: Will the Trend Continue?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

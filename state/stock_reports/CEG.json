@@ -1,48 +1,49 @@
 {
   "ticker": "CEG",
-  "generated_at": "2026-06-17T22:59:40.794406",
+  "generated_at": "2026-06-18T16:11:50.676345",
   "score": {
-    "final_score": 34.4,
+    "final_score": 37.65,
     "rating": "Drop",
-    "confidence": 34.92,
+    "confidence": 36.13,
     "risk_level": "High",
     "categories": {
-      "technical": 30.0,
-      "momentum": 10.0,
+      "technical": 36.0,
+      "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 81.0,
       "risk": 35.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 36.0,
       "evidence": [
+        "Price above SMA20",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 242.3000030517578,
       "resistance": 322.7799987792969,
-      "risk_reward": 2.24
+      "risk_reward": 1.07
     },
     "momentum": {
-      "score": 10.0,
+      "score": 20.0,
       "returns": {
-        "1m": 0.01973287567837545,
-        "3m": -0.15646834718563496,
-        "6m": -0.24975164907414293,
-        "12m": -0.128033015640298
+        "1m": 0.078374924707038,
+        "3m": -0.11038408144020062,
+        "6m": -0.22895310862712392,
+        "12m": -0.07563700275931495
       },
-      "acceleration": -0.0316,
+      "acceleration": 0.0041,
       "evidence": [
-        "1m return is positive"
+        "1m return is positive",
+        "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4151747.3,
-      "relative_volume": 0.7840665061671745,
-      "accumulation_days": 4,
+      "average_volume": 4090580.1,
+      "relative_volume": 0.6791217705283414,
+      "accumulation_days": 3,
       "distribution_days": 2,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -59,14 +60,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.037248370782738224,
-        "annualized_volatility": 0.5912995550006979,
-        "maximum_drawdown": -0.5070227608015521,
-        "sharpe_ratio": 0.4669948142798287,
-        "sortino_ratio": 0.6601828440703136,
-        "calmar_ratio": 0.213908463243283,
-        "beta": 1.6308224834782514,
-        "alpha": -0.01411688334515403
+        "volatility": 0.03728091350523737,
+        "annualized_volatility": 0.5918161547050043,
+        "maximum_drawdown": -0.5070228487628663,
+        "sharpe_ratio": 0.5099697663373164,
+        "sortino_ratio": 0.7215658119387085,
+        "calmar_ratio": 0.27005816790590215,
+        "beta": 1.6351998981955327,
+        "alpha": 0.005798277880825108
       },
       "evidence": [
         "Volatility is elevated",
@@ -75,15 +76,14 @@
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; Accumulation days exceed distribution days; revenue growth is strong"
+    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating; Accumulation days exceed distribution days"
   },
   "fundamentals": {
     "ticker": "CEG",
@@ -92,7 +92,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Independent Power Producers",
     "exchange": "NMS",
-    "market_cap": 95406948352.0,
+    "market_cap": 100256391168.0,
     "revenue_growth": 0.638,
     "eps_growth": 10.91,
     "fcf_growth": null,
@@ -109,14 +109,14 @@
     "cash_position": 864000000.0,
     "total_debt": 22466000896.0,
     "interest_coverage": null,
-    "forward_pe": 19.724447,
-    "trailing_pe": 23.232176,
+    "forward_pe": 20.727022,
+    "trailing_pe": 24.413044,
     "peg": 3.74,
-    "price_to_book": 2.8913565,
-    "price_to_sales": 3.1943934,
+    "price_to_book": 3.0383213,
+    "price_to_sales": 3.3567615,
     "enterprise_to_ebitda": 14.922,
     "enterprise_to_revenue": 3.976,
-    "fcf_yield": -0.04694495750430435,
+    "fcf_yield": -0.04467421062957206,
     "institutional_ownership": 0.83021003,
     "insider_ownership": 0.0032300001,
     "short_interest": 11593455.0,
@@ -136,11 +136,11 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 39.28091539125456,
+    "rsi": 46.73282961451627,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7840665061671745,
+    "relative_volume": 0.6791217705283414,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -192,10 +192,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
-    "bearish_news_score": 2,
+    "bullish_news_score": 2,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.83021003,
     "detail": {
       "earnings": {
@@ -236,13 +236,12 @@
         "last_surprise_pct": 0.053000003,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 35.78,
+      "analyst_upside_pct": 29.27,
       "eps_growth_implied": 17.78
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -265,6 +264,46 @@
     "available": true,
     "items": [
       {
+        "headline": "Goldman starts Talen at buy, sees PJM power tightness boosting earnings",
+        "source": "Investing.com",
+        "published": "2026-06-18T13:57:22Z",
+        "summary": "Investing.com -- Goldman Sachs initiated coverage of two major U.S. independent power producers, arguing that tightening electricity supply and surging demand from data centers in the PJM power market will support higher power prices and earnings growth through the end of the decade.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "4 Nuclear Energy Stocks to Buy and Hold for the Next Two Decades",
+        "source": "Motley Fool",
+        "published": "2026-06-18T13:50:00Z",
+        "summary": "Nuclear energy may move slowly, but these four stocks are positioned to benefit from what could be decades of growing demand as AI, data centers, and global electrification drive a new nuclear renaissance.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "SpaceX initiated, Salesforce upgraded: Wall Street's top analyst calls",
+        "source": "The Fly",
+        "published": "2026-06-18T13:35:08Z",
+        "summary": "SpaceX initiated, Salesforce upgraded: Wall Street's top analyst calls",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "The Invisible Energy Crisis Threatening to Derail the AI Boom",
+        "source": "Oilprice.com",
+        "published": "2026-06-18T00:00:00Z",
+        "summary": "Nearly every AI bull case in 2026 makes the same assumption: the electricity will be there when they need it. It won\u2019t. One company already has what the rest of the industry is still waiting for.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Jim Cramer Recommends Buying Constellation Energy",
         "source": "Insider Monkey",
         "published": "2026-06-17T16:53:51Z",
@@ -273,46 +312,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Lyft upgraded, Leidos downgraded: Wall Street's top analyst calls",
-        "source": "The Fly",
-        "published": "2026-06-17T13:47:56Z",
-        "summary": "Lyft upgraded, Leidos downgraded: Wall Street's top analyst calls",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Vistra Outperforms Industry in the Past Month: Buy or Hold the Stock?",
-        "source": "Zacks",
-        "published": "2026-06-16T15:17:00Z",
-        "summary": "VST's rally is backed by AI-driven demand, hedged generation, the Cogentrix deal and capital returns, but risks remain.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Constellation Energy (CEG) Passes Another Regulatory Hurdle For Three Mile Island Nuclear Plant",
-        "source": "Insider Monkey",
-        "published": "2026-06-15T08:38:13Z",
-        "summary": "Constellation Energy Corporation (NASDAQ:CEG) is one of the 10 Stocks That Can Still Skyrocket On The Neo Cloud Boom. Constellation Energy Corporation (NASDAQ:CEG) is one of the energy companies solving the power bottleneck that AI infrastructure currently faces. The company\u2019s stock has underperformed the broader market over the last year, but recent analyst sentiment and [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "How Constellation\u2019s US$3.09 Billion Equity Raise And AI Power Deals At Constellation Energy (CEG) Has Changed Its Investment Story",
-        "source": "Simply Wall St.",
-        "published": "2026-06-14T21:10:42Z",
-        "summary": "Earlier this month, Constellation Energy Corporation completed a US$3.09 billion follow-on equity offering of 11,000,000 common shares at about US$281 each, following an earlier filing to issue 9,000,000 shares. This capital raise comes alongside stronger-than-expected quarterly earnings, new clean energy projects coming online, and growing long-term power contracts with major AI and data center customers like Microsoft and Meta. We\u2019ll now examine how this large equity raise, paired with...",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -334,10 +333,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
+    "date_of_change": "2026-06-18",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CEG\nRating: Drop | Score: 34.4/100 | Confidence: 34.92/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 19.724447\nNews/Catalyst: Jim Cramer Recommends Buying Constellation Energy\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CEG\nRating: Drop | Score: 37.65/100 | Confidence: 36.13/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 20.727022\nNews/Catalyst: Goldman starts Talen at buy, sees PJM power tightness boosting earnings\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

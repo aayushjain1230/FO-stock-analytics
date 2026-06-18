@@ -1,43 +1,46 @@
 {
   "ticker": "ADI",
-  "generated_at": "2026-06-17T22:58:58.949448",
+  "generated_at": "2026-06-18T16:11:02.407110",
   "score": {
-    "final_score": 65.9,
+    "final_score": 72.65,
     "rating": "Watch",
-    "confidence": 57.52,
+    "confidence": 61.14,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
-      "momentum": 75.0,
+      "technical": 90.0,
+      "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 81.0,
       "risk": 70.0,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 303.1000061035156,
       "resistance": 437.6700134277344,
-      "risk_reward": 0.21
+      "risk_reward": 0.04
     },
     "momentum": {
-      "score": 75.0,
+      "score": 85.0,
       "returns": {
-        "1m": -0.007154553234470118,
-        "3m": 0.3467229854857894,
-        "6m": 0.4865443997482417,
-        "12m": 0.811964931608177
+        "1m": 0.04761081392493183,
+        "3m": 0.3981304149521854,
+        "6m": 0.5639176544502802,
+        "12m": 0.9286865014453629
       },
-      "acceleration": 0.1035,
+      "acceleration": 0.1162,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -47,10 +50,10 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5153882.7,
-      "relative_volume": 0.6336880736536747,
+      "average_volume": 4735323.4,
+      "relative_volume": 0.34748798783204543,
       "accumulation_days": 6,
-      "distribution_days": 4,
+      "distribution_days": 3,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -66,14 +69,14 @@
     "risk": {
       "score": 70.0,
       "risk_metrics": {
-        "volatility": 0.023555542740565462,
-        "annualized_volatility": 0.3739326485321344,
-        "maximum_drawdown": -0.3219746126712685,
-        "sharpe_ratio": 0.9884528680449022,
-        "sortino_ratio": 1.5230135838009744,
-        "calmar_ratio": 1.0884676760779168,
-        "beta": 1.6005657080186941,
-        "alpha": 0.08474913350049934
+        "volatility": 0.023610005453777765,
+        "annualized_volatility": 0.37479721730144794,
+        "maximum_drawdown": -0.321974633273854,
+        "sharpe_ratio": 1.0437859890204888,
+        "sortino_ratio": 1.611989602078321,
+        "calmar_ratio": 1.1785496128232968,
+        "beta": 1.6040996599691602,
+        "alpha": 0.10082789860786706
       },
       "evidence": [
         "Beta indicates elevated market sensitivity",
@@ -88,7 +91,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "ADI",
@@ -97,7 +100,7 @@
     "sector": "Technology",
     "industry": "Semiconductors",
     "exchange": "NMS",
-    "market_cap": 201873227776.0,
+    "market_cap": 210884345856.0,
     "revenue_growth": 0.372,
     "eps_growth": 1.105,
     "fcf_growth": null,
@@ -114,14 +117,14 @@
     "cash_position": 3439308032.0,
     "total_debt": 8708730880.0,
     "interest_coverage": null,
-    "forward_pe": 28.053934,
-    "trailing_pe": 61.4911,
+    "forward_pe": 29.30619,
+    "trailing_pe": 64.23591,
     "peg": 0.91,
-    "price_to_book": 5.9828506,
-    "price_to_sales": 15.845382,
+    "price_to_book": 6.24991,
+    "price_to_sales": 16.552681,
     "enterprise_to_ebitda": 33.808,
     "enterprise_to_revenue": 16.318,
-    "fcf_yield": 0.01916526855305955,
+    "fcf_yield": 0.018346333903047844,
     "institutional_ownership": 0.9354,
     "insider_ownership": 0.00243,
     "short_interest": 9480279.0,
@@ -141,14 +144,14 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 48.4880637356286,
-    "macd_cross": false,
-    "breakout": false,
+    "rsi": 55.791273352358765,
+    "macd_cross": true,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.6336880736536747,
+    "relative_volume": 0.34748798783204543,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "52-week high pressure, MACD bullish crossover, trend continuation",
     "support": 303.1000061035156,
     "resistance": 437.6700134277344
   },
@@ -241,7 +244,7 @@
         "last_surprise_pct": 0.0622,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.83,
+      "analyst_upside_pct": 4.18,
       "eps_growth_implied": 119.19
     },
     "evidence": [
@@ -338,10 +341,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
+    "date_of_change": "2026-06-18",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ADI\nRating: Watch | Score: 65.9/100 | Confidence: 57.52/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 303.1000061035156 | Resistance: 437.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 28.053934\nNews/Catalyst: Texas Instruments Stock And The Industrial Recovery Hiding In Plain Sight\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ADI\nRating: Watch | Score: 72.65/100 | Confidence: 61.14/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation | Support: 303.1000061035156 | Resistance: 437.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 29.30619\nNews/Catalyst: Texas Instruments Stock And The Industrial Recovery Hiding In Plain Sight\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

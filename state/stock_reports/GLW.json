@@ -1,41 +1,45 @@
 {
   "ticker": "GLW",
-  "generated_at": "2026-06-17T23:00:12.290252",
+  "generated_at": "2026-06-18T16:12:24.826972",
   "score": {
-    "final_score": 58.9,
-    "rating": "Hold",
-    "confidence": 48.7,
+    "final_score": 67.65,
+    "rating": "Watch",
+    "confidence": 54.33,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 55.0,
-      "momentum": 65.0,
+      "technical": 80.0,
+      "momentum": 75.0,
       "volume": 0,
       "fundamental": 81.0,
       "risk": 85.0,
       "catalyst": 80.0
     },
     "technical": {
-      "score": 55.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 124.58000183105469,
       "resistance": 208.27999877929688,
-      "risk_reward": 0.65
+      "risk_reward": 0.31
     },
     "momentum": {
-      "score": 65.0,
+      "score": 75.0,
       "returns": {
-        "1m": -0.016136539369126512,
-        "3m": 0.3527554813008702,
-        "6m": 0.9974655937187733,
-        "12m": 2.491874149910425
+        "1m": 0.07358737222809042,
+        "3m": 0.41846148192763466,
+        "6m": 1.1916929925565949,
+        "12m": 2.7745712603506036
       },
-      "acceleration": -0.146,
+      "acceleration": -0.1774,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -44,8 +48,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 12108810.75,
-      "relative_volume": 0.6520471054517059,
+      "average_volume": 11921789.0,
+      "relative_volume": 0.581882467471954,
       "accumulation_days": 1,
       "distribution_days": 4,
       "evidence": []
@@ -61,14 +65,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.02954922708712106,
-        "annualized_volatility": 0.4690794378401752,
-        "maximum_drawdown": -0.2756766635813208,
-        "sharpe_ratio": 1.8539157892548788,
-        "sortino_ratio": 2.630300967855784,
-        "calmar_ratio": 4.128708257315018,
-        "beta": 1.4590742342361496,
-        "alpha": 0.6099504964234668
+        "volatility": 0.0296901796048087,
+        "annualized_volatility": 0.4713169896909947,
+        "maximum_drawdown": -0.2756766635813207,
+        "sharpe_ratio": 1.9210158372083317,
+        "sortino_ratio": 2.7385019648144544,
+        "calmar_ratio": 4.402247928845485,
+        "beta": 1.4656963743999794,
+        "alpha": 0.6400815020619237
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -78,13 +82,13 @@
       "score": 80.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "insider buying",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "GLW",
@@ -93,7 +97,7 @@
     "sector": "Technology",
     "industry": "Electronic Components",
     "exchange": "NYQ",
-    "market_cap": 150955868160.0,
+    "market_cap": 162049490944.0,
     "revenue_growth": 0.2,
     "eps_growth": 1.389,
     "fcf_growth": null,
@@ -110,14 +114,14 @@
     "cash_position": 1755000064.0,
     "total_debt": 9923999744.0,
     "interest_coverage": null,
-    "forward_pe": 41.892467,
-    "trailing_pe": 89.03553,
+    "forward_pe": 44.971107,
+    "trailing_pe": 95.578674,
     "peg": 1.39,
-    "price_to_book": 13.468478,
-    "price_to_sales": 9.24918,
+    "price_to_book": 14.458266,
+    "price_to_sales": 9.928894,
     "enterprise_to_ebitda": 41.311,
     "enterprise_to_revenue": 9.889,
-    "fcf_yield": 0.004054165018290866,
+    "fcf_yield": 0.0037766240204450316,
     "institutional_ownership": 0.73761004,
     "insider_ownership": 0.081750005,
     "short_interest": 21390269.0,
@@ -137,14 +141,14 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 46.70955081085283,
+    "rsi": 52.897859021598734,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6520471054517059,
-    "price_above_sma50": false,
+    "relative_volume": 0.581882467471954,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 124.58000183105469,
     "resistance": 208.27999877929688
   },
@@ -190,9 +194,9 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
@@ -237,13 +241,13 @@
         "last_surprise_pct": 0.0121,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.88,
+      "analyst_upside_pct": 5.16,
       "eps_growth_implied": 112.53
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -266,6 +270,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Stock Market Today: Dow Pops On Iran Peace Deal; Moderna Breaks Out, AI Stocks Jam (Live Coverage)",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-18T15:38:43Z",
+        "summary": "Stock Market Today; The Dow Jones index rises Thursday following reports of a signed U.S.-Iran peace deal. Moderna breaks out past a buy point.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Coherent's Good News Gets A Cold Shoulder",
+        "source": "Trefis",
+        "published": "2026-06-18T01:01:08Z",
+        "summary": "The company announced a government-backed expansion for its AI business, and investors promptly headed for the exits.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Corning vs. QuantumScape: Which Technology Stock Is a Better Buy in 2026?",
         "source": "Motley Fool",
@@ -295,26 +319,6 @@
         "bearish_score": 1,
         "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "1 Industrials Stock on Our Watchlist and 2 We Brush Off",
-        "source": "StockStory",
-        "published": "2026-06-15T13:40:07Z",
-        "summary": "Whether you see them or not, industrials businesses play a crucial part in our daily activities. They are also bound to benefit from a friendlier regulatory environment with the Trump administration, and this excitement has led to a six-month gain of 17.8% for the sector - higher than the S&P 500\u2019s 8.4% return.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Corning Lands Multibillion-Dollar Amazon AI Deal. Why Fiber Optics Are Suddenly in Spotlight",
-        "source": "GuruFocus.com",
-        "published": "2026-06-15T12:41:57Z",
-        "summary": "AI Needs More Than Chips. Amazon's Corning Deal Shows What Comes Next",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -333,13 +337,26 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-18",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: GLW\nRating: Hold | Score: 58.9/100 | Confidence: 48.7/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.58000183105469 | Resistance: 208.27999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 41.892467\nNews/Catalyst: Corning vs. QuantumScape: Which Technology Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: GLW\nRating: Watch | Score: 67.65/100 | Confidence: 54.33/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 124.58000183105469 | Resistance: 208.27999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 44.971107\nNews/Catalyst: Stock Market Today: Dow Pops On Iran Peace Deal; Moderna Breaks Out, AI Stocks Jam (Live Coverage)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

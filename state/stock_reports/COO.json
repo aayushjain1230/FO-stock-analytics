@@ -1,6 +1,6 @@
 {
   "ticker": "COO",
-  "generated_at": "2026-06-17T22:59:51.823999",
+  "generated_at": "2026-06-18T16:12:04.435195",
   "score": {
     "final_score": 43.75,
     "rating": "Drop",
@@ -25,17 +25,17 @@
       ],
       "support": 58.97999954223633,
       "resistance": 71.7300033569336,
-      "risk_reward": 1.1
+      "risk_reward": 0.85
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.06744346107102595,
-        "3m": -0.08599122206887921,
-        "6m": -0.20213413435894556,
-        "12m": -0.06724971258492407
+        "1m": 0.07209107299393636,
+        "3m": -0.0683071969112119,
+        "6m": -0.1870681575869122,
+        "12m": -0.0418848864650484
       },
-      "acceleration": 0.0151,
+      "acceleration": 0.0252,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,9 +43,9 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3683924.85,
-      "relative_volume": 1.0416056668474114,
-      "accumulation_days": 6,
+      "average_volume": 3540824.1,
+      "relative_volume": 0.20585094865345047,
+      "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -59,14 +59,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.019875811835648398,
-        "annualized_volatility": 0.31551873133583913,
+        "volatility": 0.019864742407783124,
+        "annualized_volatility": 0.31534300961611544,
         "maximum_drawdown": -0.4697473904323153,
-        "sharpe_ratio": -0.38836652928232007,
-        "sortino_ratio": -0.5009091563718547,
-        "calmar_ratio": -0.33789432342052067,
-        "beta": 0.6638975277505432,
-        "alpha": -0.24069614422134836
+        "sharpe_ratio": -0.3674553162573978,
+        "sortino_ratio": -0.47367424629614946,
+        "calmar_ratio": -0.32581482898219055,
+        "beta": 0.6648798432198632,
+        "alpha": -0.23623352845293324
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -89,7 +89,7 @@
     "sector": "Healthcare",
     "industry": "Medical Instruments & Supplies",
     "exchange": "NMS",
-    "market_cap": 12686742528.0,
+    "market_cap": 12852518912.0,
     "revenue_growth": 0.079,
     "eps_growth": null,
     "fcf_growth": null,
@@ -106,14 +106,14 @@
     "cash_position": 138800000.0,
     "total_debt": 2726599936.0,
     "interest_coverage": null,
-    "forward_pe": 13.010287,
-    "trailing_pe": 55.127125,
+    "forward_pe": 13.18029,
+    "trailing_pe": 55.84746,
     "peg": 0.67,
-    "price_to_book": 1.5388438,
-    "price_to_sales": 2.998521,
+    "price_to_book": 1.5589516,
+    "price_to_sales": 3.0377023,
     "enterprise_to_ebitda": 17.738,
     "enterprise_to_revenue": 3.716,
-    "fcf_yield": 0.03344239130443556,
+    "fcf_yield": 0.03301103938496192,
     "institutional_ownership": 1.07249,
     "insider_ownership": 0.0061299996,
     "short_interest": 5195074.0,
@@ -133,11 +133,11 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 62.2033099451593,
+    "rsi": 63.66297666490924,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0416056668474114,
+    "relative_volume": 0.20585094865345047,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -233,7 +233,7 @@
         "last_surprise_pct": 0.10520001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 23.86,
+      "analyst_upside_pct": 22.26,
       "eps_growth_implied": 323.72
     },
     "evidence": [
@@ -327,13 +327,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-18",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: COO\nRating: Drop | Score: 43.75/100 | Confidence: 40.84/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 58.97999954223633 | Resistance: 71.7300033569336\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.010287\nNews/Catalyst: 3 Value Stocks We Find Risky\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COO\nRating: Drop | Score: 43.75/100 | Confidence: 40.84/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 58.97999954223633 | Resistance: 71.7300033569336\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.18029\nNews/Catalyst: 3 Value Stocks We Find Risky\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

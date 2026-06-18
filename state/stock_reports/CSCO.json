@@ -1,18 +1,18 @@
 {
   "ticker": "CSCO",
-  "generated_at": "2026-06-17T22:59:59.759359",
+  "generated_at": "2026-06-18T16:12:10.983341",
   "score": {
-    "final_score": 63.15,
-    "rating": "Hold",
-    "confidence": 47.77,
+    "final_score": 66.4,
+    "rating": "Watch",
+    "confidence": 51.79,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
-      "momentum": 75.0,
+      "momentum": 85.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 65.0,
@@ -25,18 +25,19 @@
       ],
       "support": 77.04000091552734,
       "resistance": 130.0,
-      "risk_reward": 0.31
+      "risk_reward": 0.28
     },
     "momentum": {
-      "score": 75.0,
+      "score": 85.0,
       "returns": {
-        "1m": -0.013038319802945009,
-        "3m": 0.5201774944965438,
-        "6m": 0.51561672769733,
-        "12m": 0.8322490204726751
+        "1m": 0.027214417268114577,
+        "3m": 0.5177966239970815,
+        "6m": 0.5448078876361098,
+        "12m": 0.8559316829847345
       },
-      "acceleration": 0.2624,
+      "acceleration": 0.2454,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -46,10 +47,10 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 24269726.95,
-      "relative_volume": 0.6949414402043778,
+      "average_volume": 23644936.9,
+      "relative_volume": 0.5104110893186609,
       "accumulation_days": 1,
-      "distribution_days": 2,
+      "distribution_days": 1,
       "evidence": []
     },
     "fundamental": {
@@ -63,28 +64,29 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01724232443825405,
-        "annualized_volatility": 0.2737134149298701,
-        "maximum_drawdown": -0.17457803144262152,
-        "sharpe_ratio": 1.9597592749265134,
-        "sortino_ratio": 2.5698741107540077,
-        "calmar_ratio": 3.7030188753774156,
-        "beta": 0.8901117631108435,
-        "alpha": 0.37799199109415615
+        "volatility": 0.01722879410652776,
+        "annualized_volatility": 0.2734986275724463,
+        "maximum_drawdown": -0.1745780920030714,
+        "sharpe_ratio": 1.9760363547922788,
+        "sortino_ratio": 2.5891863547622482,
+        "calmar_ratio": 3.741580272440389,
+        "beta": 0.8903901858304748,
+        "alpha": 0.37926143307193844
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "CSCO",
@@ -93,7 +95,7 @@
     "sector": "Technology",
     "industry": "Communication Equipment",
     "exchange": "NMS",
-    "market_cap": 462448525312.0,
+    "market_cap": 467296485376.0,
     "revenue_growth": 0.12,
     "eps_growth": 0.371,
     "fcf_growth": null,
@@ -110,14 +112,14 @@
     "cash_position": 16640000000.0,
     "total_debt": 33001000960.0,
     "interest_coverage": null,
-    "forward_pe": 24.564886,
-    "trailing_pe": 39.11,
+    "forward_pe": 24.822405,
+    "trailing_pe": 39.52,
     "peg": 1.66,
-    "price_to_book": 9.461334,
-    "price_to_sales": 7.612823,
+    "price_to_book": 9.560519,
+    "price_to_sales": 7.69263,
     "enterprise_to_ebitda": 28.673,
     "enterprise_to_revenue": 8.027,
-    "fcf_yield": 0.020085209028904167,
+    "fcf_yield": 0.019876835342611896,
     "institutional_ownership": 0.82878,
     "insider_ownership": 0.00055,
     "short_interest": 61949954.0,
@@ -137,11 +139,11 @@
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 48.28129423036807,
+    "rsi": 47.468014797610564,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6949414402043778,
+    "relative_volume": 0.5104110893186609,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -193,10 +195,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 1,
+    "bullish_news_score": 3,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.82878,
     "detail": {
       "earnings": {
@@ -237,12 +239,13 @@
         "last_surprise_pct": 0.0229,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.28,
+      "analyst_upside_pct": 7.16,
       "eps_growth_implied": 59.21
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -265,6 +268,36 @@
     "available": true,
     "items": [
       {
+        "headline": "Intel jumps after Trump says Apple, Intel reached US chip deal",
+        "source": "Yahoo Finance Video",
+        "published": "2026-06-18T14:45:20Z",
+        "summary": "Intel (INTC) surged 9% in premarket trading after President Trump said in a Truth Social post that Intel and Apple (AAPL) have agreed on a deal to design and build semiconductors in the US.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Nvidia Claims No. 1 Spot in $10 Billion AI Networking Market",
+        "source": "GuruFocus.com",
+        "published": "2026-06-18T12:15:40Z",
+        "summary": "Nvidia Wins One of the Biggest Battles in the AI Infrastructure Race",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Zacks Investment Ideas feature highlights: Dell and Cisco",
+        "source": "Zacks",
+        "published": "2026-06-18T06:11:00Z",
+        "summary": "DELL and CSCO stand out on Zacks' AI screen after record-breaking results, surging demand, and strong growth tied to AI infrastructure.",
+        "bullish_score": 3,
+        "bearish_score": 0,
+        "importance_score": 75,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Equinix Strengthens AI Infrastructure With Cisco & NVIDIA Partnerships",
         "source": "Zacks",
         "published": "2026-06-17T17:35:00Z",
@@ -279,36 +312,6 @@
         "source": "Zacks",
         "published": "2026-06-17T15:30:00Z",
         "summary": "This Zacks Thematic investing screen features a diverse set of companies involved with AI, ranging from creators of software and hardware that power AI to those applying and utilizing the technology through other means.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Is Cisco Systems (CSCO) Stock Outpacing Its Computer and Technology Peers This Year?",
-        "source": "Zacks",
-        "published": "2026-06-17T13:40:04Z",
-        "summary": "Here is how Cisco Systems (CSCO) and Arteris, Inc. (AIP) have performed compared to their sector so far this year.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Cisco Systems (CSCO) Stock After 87% One-Year Rally Is The Price Still Reasonable",
-        "source": "Simply Wall St.",
-        "published": "2026-06-17T02:11:01Z",
-        "summary": "With Cisco Systems stock on many investors' watchlists, the key question is whether the current share price fairly reflects what the company may be worth over the long run. The stock most recently closed at US$119.57, with returns of 57.2% year to date and 87.2% over the past year, while the return over the last 7 days declined 0.7% and the return over the last 30 days was 1.2%. These moves can change how investors think about both upside potential and risk. Recent news coverage has focused...",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Arista\u2019s Very Good, Very Bad Year",
-        "source": "Trefis",
-        "published": "2026-06-17T00:31:53Z",
-        "summary": "The networking company is drowning in the best demand its CEO has ever seen, and that\u2019s precisely the problem.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -334,10 +337,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
+    "date_of_change": "2026-06-18",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CSCO\nRating: Hold | Score: 63.15/100 | Confidence: 47.77/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 24.564886\nNews/Catalyst: Equinix Strengthens AI Infrastructure With Cisco & NVIDIA Partnerships\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CSCO\nRating: Watch | Score: 66.4/100 | Confidence: 51.79/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 24.822405\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

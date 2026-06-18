@@ -1,25 +1,24 @@
 {
   "ticker": "BRK-B",
-  "generated_at": "2026-06-17T22:59:30.960712",
+  "generated_at": "2026-06-18T16:11:38.724722",
   "score": {
-    "final_score": 64.2,
+    "final_score": 60.2,
     "rating": "Hold",
-    "confidence": 57.31,
+    "confidence": 51.62,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 75.0,
+      "technical": 63.0,
       "momentum": 55.0,
       "volume": 25.0,
       "fundamental": 68.0,
       "risk": 100,
-      "catalyst": 55.0
+      "catalyst": 35.0
     },
     "technical": {
-      "score": 75.0,
+      "score": 63.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
-        "Price above SMA200",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
@@ -27,17 +26,17 @@
       ],
       "support": 465.3999938964844,
       "resistance": 495.5199890136719,
-      "risk_reward": 0.16
+      "risk_reward": 0.33
     },
     "momentum": {
       "score": 55.0,
       "returns": {
-        "1m": 0.005937986542221774,
-        "3m": 0.014056592857008221,
-        "6m": -0.029819514905629174,
-        "12m": 0.002141826835236449
+        "1m": 0.01566206142096216,
+        "3m": 0.013510372636049262,
+        "6m": -0.02371761178213949,
+        "12m": 0.009317808932873817
       },
-      "acceleration": 0.029,
+      "acceleration": 0.0254,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5273374.05,
-      "relative_volume": 1.0239328651454187,
+      "average_volume": 5218129.3,
+      "relative_volume": 0.6771748641797741,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -65,26 +64,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.010916907196874407,
-        "annualized_volatility": 0.17330052917340558,
+        "volatility": 0.010910646930285617,
+        "annualized_volatility": 0.17320115052219615,
         "maximum_drawdown": -0.14948129726959802,
-        "sharpe_ratio": 0.6273802649505823,
-        "sortino_ratio": 0.839344484923023,
-        "calmar_ratio": 0.6569809263387014,
-        "beta": 0.4241497349632345,
-        "alpha": 0.03323596219865541
+        "sharpe_ratio": 0.6070094550956943,
+        "sortino_ratio": 0.8132798543125932,
+        "calmar_ratio": 0.6307855800058709,
+        "beta": 0.4231178164442601,
+        "alpha": 0.02854034906269814
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 55.0,
+      "score": 35.0,
       "evidence": [
         "earnings surprise",
-        "sector strength",
         "major news"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "BRK-B",
@@ -93,7 +91,7 @@
     "sector": "Financial Services",
     "industry": "Insurance - Diversified",
     "exchange": "NYQ",
-    "market_cap": 1059619143680.0,
+    "market_cap": 1053029302272.0,
     "revenue_growth": 0.044,
     "eps_growth": 1.196,
     "fcf_growth": null,
@@ -110,14 +108,14 @@
     "cash_position": 397383008256.0,
     "total_debt": 128885997568.0,
     "interest_coverage": null,
-    "forward_pe": 22.878271,
-    "trailing_pe": 14.617078,
+    "forward_pe": 22.73599,
+    "trailing_pe": 14.526174,
     "peg": 10.06,
-    "price_to_book": 0.0009717552,
-    "price_to_sales": 2.8226852,
+    "price_to_book": 0.0009657118,
+    "price_to_sales": 2.8051307,
     "enterprise_to_ebitda": -2.25,
     "enterprise_to_revenue": -0.707,
-    "fcf_yield": 0.057783260573565705,
+    "fcf_yield": 0.058144867342147896,
     "institutional_ownership": 0.67302,
     "insider_ownership": 0.00262,
     "short_interest": 11923610.0,
@@ -137,13 +135,13 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 64.73213416841507,
+    "rsi": 64.24725972754065,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0239328651454187,
+    "relative_volume": 0.6771748641797741,
     "price_above_sma50": true,
-    "price_above_sma200": true,
+    "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 465.3999938964844,
     "resistance": 495.5199890136719
@@ -192,7 +190,7 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": true,
+    "sector_strength": false,
     "major_news": true,
     "guidance_change": false,
     "bullish_news_score": 2,
@@ -237,12 +235,11 @@
         "last_surprise_pct": 0.0417,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.91,
+      "analyst_upside_pct": 6.58,
       "eps_growth_implied": -36.11
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "technical backdrop is constructive",
       "recent news item has elevated importance"
     ]
   },
@@ -264,6 +261,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "What is the point of Berkshire Hathaway?",
+        "source": "Financial Times",
+        "published": "2026-06-18T04:00:15Z",
+        "summary": "Berkshire Hathaway is very important \u2014 for both its sheer size and its symbolic position in American business. It is worth over a trillion dollars...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Chart of the Day: JPMorgan\u2019s Bull Market May Be Far From Over",
         "source": "Barrons.com",
@@ -303,16 +310,6 @@
         "bearish_score": 0,
         "importance_score": 60,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Is Lennar Finally Turning the Corner After Its Housing Slump?",
-        "source": "MarketBeat",
-        "published": "2026-06-16T15:40:00Z",
-        "summary": "Berkshire holding Lennar is coming out of its most difficult period in years, but the homebuilder still has a lot to prove to show its recovery is sustainable.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -334,10 +331,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
+    "date_of_change": "2026-06-18",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BRK-B\nRating: Hold | Score: 64.2/100 | Confidence: 57.31/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 465.3999938964844 | Resistance: 495.5199890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 22.878271\nNews/Catalyst: Chart of the Day: JPMorgan\u2019s Bull Market May Be Far From Over\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BRK-B\nRating: Hold | Score: 60.2/100 | Confidence: 51.62/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 465.3999938964844 | Resistance: 495.5199890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 22.73599\nNews/Catalyst: What is the point of Berkshire Hathaway?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

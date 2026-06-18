@@ -1,50 +1,54 @@
 {
   "ticker": "BF-B",
-  "generated_at": "2026-06-17T22:59:25.799800",
+  "generated_at": "2026-06-18T16:11:32.730526",
   "score": {
-    "final_score": 43.05,
-    "rating": "Drop",
-    "confidence": 35.24,
+    "final_score": 53.05,
+    "rating": "Hold",
+    "confidence": 41.54,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 28.0,
-      "momentum": 45.0,
+      "technical": 43.0,
+      "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 62.0,
       "risk": 75.0,
       "catalyst": 10.0
     },
     "technical": {
-      "score": 28.0,
+      "score": 43.0,
       "evidence": [
+        "Price above SMA20",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 22.799999237060547,
       "resistance": 30.309999465942383,
-      "risk_reward": 1.77
+      "risk_reward": 1.04
     },
     "momentum": {
-      "score": 45.0,
+      "score": 70.0,
       "returns": {
-        "1m": -0.01971895299086568,
-        "3m": 0.1217252474141024,
-        "6m": -0.14488412006849838,
-        "12m": 0.017705657651811535
+        "1m": 0.030510525266838506,
+        "3m": 0.1458959560854829,
+        "6m": -0.11353644285958653,
+        "12m": 0.060905563509695115
       },
-      "acceleration": 0.1942,
+      "acceleration": 0.2027,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "12m return is positive",
-        "Momentum is accelerating"
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2765447.4,
-      "relative_volume": 0.8705455760973795,
+      "average_volume": 2717016.55,
+      "relative_volume": 0.34281388532579976,
       "accumulation_days": 4,
-      "distribution_days": 2,
+      "distribution_days": 3,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -57,14 +61,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.023533726534849378,
-        "annualized_volatility": 0.37358632700287975,
-        "maximum_drawdown": -0.5189176531988613,
-        "sharpe_ratio": -0.45523110783449044,
-        "sortino_ratio": -0.6118948928785464,
-        "calmar_ratio": -0.41185359855935927,
-        "beta": 0.3887625896520445,
-        "alpha": -0.23925934985560196
+        "volatility": 0.02357366954928908,
+        "annualized_volatility": 0.37422040269981005,
+        "maximum_drawdown": -0.5189176531988623,
+        "sharpe_ratio": -0.4024436581605674,
+        "sortino_ratio": -0.5418592467757971,
+        "calmar_ratio": -0.3824007929566718,
+        "beta": 0.3926283176269772,
+        "alpha": -0.22167769040211055
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -76,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive; Momentum is accelerating; Accumulation days exceed distribution days"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "BF-B",
@@ -85,7 +89,7 @@
     "sector": "Consumer Defensive",
     "industry": "Beverages - Wineries & Distilleries",
     "exchange": "NYQ",
-    "market_cap": 11705627648.0,
+    "market_cap": 12150725632.0,
     "revenue_growth": 0.02,
     "eps_growth": -0.627,
     "fcf_growth": null,
@@ -102,14 +106,14 @@
     "cash_position": 308000000.0,
     "total_debt": 2611000064.0,
     "interest_coverage": null,
-    "forward_pe": 14.937609,
-    "trailing_pe": 16.673203,
+    "forward_pe": 15.505601,
+    "trailing_pe": 17.30719,
     "peg": 4.27,
-    "price_to_book": 2.9107714,
-    "price_to_sales": 2.9800477,
+    "price_to_book": 3.0214515,
+    "price_to_sales": 3.0933619,
     "enterprise_to_ebitda": 12.248,
     "enterprise_to_revenue": 3.695,
-    "fcf_yield": 0.06318542210988326,
+    "fcf_yield": 0.060870852194385226,
     "institutional_ownership": 0.71925,
     "insider_ownership": 0.02943,
     "short_interest": 35315913.0,
@@ -129,11 +133,11 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 45.79440051994001,
+    "rsi": 56.25000588204108,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8705455760973795,
+    "relative_volume": 0.34281388532579976,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -229,7 +233,7 @@
         "last_surprise_pct": -0.6265,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 8.88,
+      "analyst_upside_pct": 4.89,
       "eps_growth_implied": 11.62
     },
     "evidence": [
@@ -324,10 +328,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-17",
+    "date_of_change": "2026-06-18",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BF-B\nRating: Drop | Score: 43.05/100 | Confidence: 35.24/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 22.799999237060547 | Resistance: 30.309999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.937609\nNews/Catalyst: 1 Unpopular Stock That Deserves Some Love and 2 We Avoid\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BF-B\nRating: Hold | Score: 53.05/100 | Confidence: 41.54/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 22.799999237060547 | Resistance: 30.309999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.505601\nNews/Catalyst: 1 Unpopular Stock That Deserves Some Love and 2 We Avoid\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

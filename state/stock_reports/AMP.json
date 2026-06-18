@@ -1,15 +1,15 @@
 {
   "ticker": "AMP",
-  "generated_at": "2026-06-17T22:59:10.392522",
+  "generated_at": "2026-06-18T16:11:15.682597",
   "score": {
-    "final_score": 48.45,
+    "final_score": 52.2,
     "rating": "Hold",
-    "confidence": 35.0,
+    "confidence": 45.47,
     "risk_level": "Controlled",
     "categories": {
       "technical": 46.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 78.0,
       "risk": 100,
       "catalyst": 30.0
@@ -24,17 +24,17 @@
       ],
       "support": 430.3999938964844,
       "resistance": 477.8599853515625,
-      "risk_reward": 0.14
+      "risk_reward": 0.22
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.0016766597843755893,
-        "3m": 0.0951441580405239,
-        "6m": -0.03336048876272746,
-        "12m": -0.06753117396433217
+        "1m": 0.011708626361564667,
+        "3m": 0.08488121459360531,
+        "6m": -0.02939745996168197,
+        "12m": -0.06173687713829101
       },
-      "acceleration": 0.1118,
+      "acceleration": 0.0996,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -42,12 +42,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 633049.85,
-      "relative_volume": 0.5005877499220638,
+      "score": 25.0,
+      "average_volume": 618264.35,
+      "relative_volume": 0.4201875783392654,
       "accumulation_days": 5,
-      "distribution_days": 5,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -59,14 +61,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017357347889066444,
-        "annualized_volatility": 0.2755393556046105,
-        "maximum_drawdown": -0.26389985263854887,
-        "sharpe_ratio": 0.3252711531601957,
-        "sortino_ratio": 0.42393717697502414,
-        "calmar_ratio": 0.201408051477576,
-        "beta": 1.0542179847389914,
-        "alpha": -0.09800272430238474
+        "volatility": 0.01734222953983051,
+        "annualized_volatility": 0.2752993592507379,
+        "maximum_drawdown": -0.26389974444365094,
+        "sharpe_ratio": 0.3141428113861302,
+        "sortino_ratio": 0.409750180215284,
+        "calmar_ratio": 0.189155754084407,
+        "beta": 1.0528742703399259,
+        "alpha": -0.10411196663807167
       },
       "evidence": []
     },
@@ -86,7 +88,7 @@
     "sector": "Financial Services",
     "industry": "Asset Management",
     "exchange": "NYQ",
-    "market_cap": 42428727296.0,
+    "market_cap": 42178813952.0,
     "revenue_growth": 0.09,
     "eps_growth": 0.66,
     "fcf_growth": null,
@@ -103,14 +105,14 @@
     "cash_position": 8496000000.0,
     "total_debt": 3494000128.0,
     "interest_coverage": null,
-    "forward_pe": 9.906851,
-    "trailing_pe": 11.766891,
+    "forward_pe": 9.848497,
+    "trailing_pe": 11.697581,
     "peg": 1.58,
-    "price_to_book": 6.844013,
-    "price_to_sales": 2.1965585,
+    "price_to_book": 6.803701,
+    "price_to_sales": 2.1836205,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 1.935,
-    "fcf_yield": 0.07908851322807305,
+    "fcf_yield": 0.0795571199279985,
     "institutional_ownership": 0.92151,
     "insider_ownership": 0.00191,
     "short_interest": 4116305.0,
@@ -130,11 +132,11 @@
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 78.25476287118826,
+    "rsi": 71.83781626662474,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5005877499220638,
+    "relative_volume": 0.4201875783392654,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -230,7 +232,7 @@
         "last_surprise_pct": 0.1025,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 14.59,
+      "analyst_upside_pct": 15.27,
       "eps_growth_implied": 18.78
     },
     "evidence": [
@@ -323,20 +325,13 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Relative strength acceleration",
-    "evidence": "Relative strength moved from lagging to leading",
-    "date_of_change": "2026-06-17",
-    "strength": 80,
-    "invalidates": "Relative strength falls back below its signal line",
-    "triggers": [
-      {
-        "reason": "Relative strength acceleration",
-        "evidence": "Relative strength moved from lagging to leading",
-        "strength": 80,
-        "invalidates": "Relative strength falls back below its signal line"
-      }
-    ]
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
+    "date_of_change": "2026-06-18",
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: AMP\nRating: Hold | Score: 48.45/100 | Confidence: 35.0/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.906851\nNews/Catalyst: The case for applying an old-school dividend strategy to investing today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: AMP\nRating: Hold | Score: 52.2/100 | Confidence: 45.47/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.848497\nNews/Catalyst: The case for applying an old-school dividend strategy to investing today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
