@@ -1,4 +1,5 @@
 import json
+import math
 from datetime import datetime
 from typing import Dict
 
@@ -177,7 +178,7 @@ def _p_value_vs_zero(returns: pd.Series):
         return 0.0 if values.mean() != 0 else 1.0
     t_stat = values.mean() / (std / np.sqrt(len(values)))
     # Normal approximation fallback.
-    return float(2 * (1 - 0.5 * (1 + np.math.erf(abs(t_stat) / np.sqrt(2)))))
+    return float(2 * (1 - 0.5 * (1 + math.erf(abs(t_stat) / np.sqrt(2)))))
 
 
 def _confidence_label(sample_size: int, p_value):
