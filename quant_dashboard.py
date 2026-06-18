@@ -423,6 +423,7 @@ def _section_stock_discovery(discovery):
         rating = html.escape(str(score_data.get("rating", "N/A")))
         why = item.get("why_now", {})
         tech = item.get("technical_screen", {})
+        probability = item.get("probability", {})
         report_text = item.get("report", "")
         bull = ""
         bear = ""
@@ -442,6 +443,7 @@ def _section_stock_discovery(discovery):
               {_score_badge(final_score, rating)}
             </div>
           </div>
+          <div style="background:#0d1117;border-radius:4px;padding:8px;margin-top:8px;"><span style="color:#58a6ff;font-size:12px;font-weight:700;">PROBABILITY: </span><span style="color:#e6edf3;font-size:13px;">{_fmt(probability.get('probability_pct'), 1)}% outperformance | Confidence: {html.escape(str(probability.get('confidence','N/A')))}</span></div>
           {f'<div style="background:#1a2840;border-radius:4px;padding:8px;margin-top:8px;"><span style="color:#58a6ff;font-size:12px;font-weight:700;">WHY NOW: </span><span style="color:#e6edf3;font-size:13px;">{html.escape(str(why.get("reason","")))} — {html.escape(str(why.get("evidence","")))} </span></div>' if why.get("send_alert") else ""}
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
             {f'<div style="background:#0a2a14;border-radius:4px;padding:8px;font-size:12px;"><span style="color:#2ea043;font-weight:700;">▲ BULL: </span><span style="color:#8b949e;">{bull}</span></div>' if bull else ""}
