@@ -599,12 +599,12 @@ def run_analytics_engine(force=False):
 
     state_manager.save_current_state(new_state)
 
-    if watchlist_data_for_plot:
-        current_chart_names = {f"{ticker}_analysis.png" for ticker in watchlist_data_for_plot}
-        for chart_path in Path("plots").glob("*_analysis.png"):
-            if chart_path.name not in current_chart_names:
-                chart_path.unlink(missing_ok=True)
+    current_chart_names = {f"{ticker}_analysis.png" for ticker in watchlist}
+    for chart_path in Path("plots").glob("*_analysis.png"):
+        if chart_path.name not in current_chart_names:
+            chart_path.unlink(missing_ok=True)
 
+    if watchlist_data_for_plot:
         for ticker, analyzed in watchlist_data_for_plot.items():
             score = next((row.get("score") for row in comparison_rows if row.get("ticker") == ticker), None)
             plotting.create_chart(ticker, analyzed, benchmark_data, score=score)
