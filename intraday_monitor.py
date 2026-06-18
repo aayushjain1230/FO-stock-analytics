@@ -1,4 +1,5 @@
 import json
+import math
 import os
 from datetime import datetime
 from typing import Dict, Iterable
@@ -112,7 +113,7 @@ def _return_z_score(df, lookback=252):
 
 
 def _normal_percentile(abs_z):
-    return float((2 * (0.5 * (1 + np.math.erf(abs_z / np.sqrt(2)))) - 1) * 100)
+    return float((2 * (0.5 * (1 + math.erf(abs_z / np.sqrt(2)))) - 1) * 100)
 
 
 def _abnormality_label(z_score):
