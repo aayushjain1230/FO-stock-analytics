@@ -20,6 +20,15 @@ def save_watchlist_intelligence(payload: Dict, path: str = WATCHLIST_INTEL_FILE)
         json.dump(payload, f, indent=2, default=str)
 
 
+def _as_float(value):
+    if value in (None, ""):
+        return None
+    try:
+        return float(value)
+    except Exception:
+        return value
+
+
 def ensure_watchlist_records(watchlist: Iterable[str], path: str = WATCHLIST_INTEL_FILE) -> Dict:
     payload = load_watchlist_intelligence(path)
     tickers = payload.setdefault("tickers", {})
@@ -47,6 +56,57 @@ def ensure_watchlist_records(watchlist: Iterable[str], path: str = WATCHLIST_INT
     if changed:
         save_watchlist_intelligence(payload, path)
     return payload
+
+
+def update_watchlist_record(
+    ticker: str,
+    thesis=None,
+    entry_zone=None,
+    stop_loss=None,
+    target_price=None,
+    time_horizon=None,
+    status=None,
+    reason_added=None,
+    invalidation=None,
+    risk_budget_pct=None,
+    path: str = WATCHLIST_INTEL_FILE,
+) -> Dict:
+    payload = load_watchlist_intelligence(path)
+    tickers = payload.setdefault("tickers", {})
+    ticker = ticker.upper()
+    record = tickers.setdefault(
+        ticker,
+        {
+            "ticker": ticker,
+            "reason_added": "Research watchlist candidate.",
+            "thesis": "Thesis not set yet.",
+            "entry_zone": None,
+            "stop_loss": None,
+            "target_price": None,
+            "time_horizon": "Unspecified",
+            "risk_budget_pct": None,
+            "date_added": datetime.now().date().isoformat(),
+            "status": "watching",
+            "what_would_change_my_mind": "Define invalidation criteria.",
+        },
+    )
+    updates = {
+        "thesis": thesis,
+        "entry_zone": entry_zone,
+        "stop_loss": _as_float(stop_loss),
+        "target_price": _as_float(target_price),
+        "time_horizon": time_horizon,
+        "status": status,
+        "reason_added": reason_added,
+        "what_would_change_my_mind": invalidation,
+        "risk_budget_pct": _as_float(risk_budget_pct),
+    }
+    for key, value in updates.items():
+        if value is not None:
+            record[key] = value
+    record["updated_at"] = datetime.now().isoformat()
+    save_watchlist_intelligence(payload, path)
+    return record
 
 
 def build_watchlist_report(watchlist: Iterable[str], quant_rows: List[Dict] = None, path: str = WATCHLIST_INTEL_FILE) -> Dict:
