@@ -243,7 +243,7 @@ def create_comparison_chart(all_stock_data: dict, benchmark_df: pd.DataFrame):
     path = os.path.join(PLOTS_DIR, "executive_dashboard.png")
     plt.savefig(path, dpi=150)
     plt.close()
-    print(f"Executive dashboard saved → {path}")
+    print(f"Executive dashboard saved -> {path}")
 
 
 # ------------------------------------------------------------------
