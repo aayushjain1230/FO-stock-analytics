@@ -69,6 +69,7 @@ COMPARISON_FILE = os.path.join(STATE_DIR, "latest_comparison.json")
 QUANT_RESEARCH_FILE = os.path.join(STATE_DIR, "latest_quant_research.json")
 PORTFOLIO_REPORT_FILE = os.path.join(STATE_DIR, "latest_portfolio_report.json")
 STOCK_DISCOVERY_FILE = os.path.join(STATE_DIR, "latest_stock_discovery.json")
+SIGNAL_PERFORMANCE_FILE = os.path.join(STATE_DIR, "latest_signal_performance.json")
 STOCK_REPORT_DIR = os.path.join(STATE_DIR, "stock_reports")
 
 DEFAULT_CONFIG = {
@@ -954,7 +955,11 @@ def main():
         print("SQLite research database initialized at state/jfo_quant.db")
 
     if args.signal_performance:
-        print(json.dumps(signal_validation.summarize_signal_performance(), indent=2))
+        payload = signal_validation.summarize_signal_performance()
+        os.makedirs(os.path.dirname(SIGNAL_PERFORMANCE_FILE), exist_ok=True)
+        with open(SIGNAL_PERFORMANCE_FILE, "w") as f:
+            json.dump(payload, f, indent=2, default=str)
+        print(json.dumps(payload, indent=2, default=str))
 
     if args.quant_report:
         run_quant_research_report()
