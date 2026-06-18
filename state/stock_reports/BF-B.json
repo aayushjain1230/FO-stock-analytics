@@ -1,15 +1,15 @@
 {
   "ticker": "BF-B",
-  "generated_at": "2026-06-18T20:22:45.802562",
+  "generated_at": "2026-06-18T21:20:25.073673",
   "score": {
-    "final_score": 53.05,
+    "final_score": 60.55,
     "rating": "Hold",
-    "confidence": 41.54,
+    "confidence": 50.02,
     "risk_level": "Controlled",
     "categories": {
       "technical": 43.0,
       "momentum": 70.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 62.0,
       "risk": 75.0,
       "catalyst": 10.0
@@ -44,12 +44,14 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 2788510.45,
-      "relative_volume": 0.8467994086233386,
-      "accumulation_days": 4,
+      "score": 75.0,
+      "average_volume": 3027817.35,
+      "relative_volume": 2.360593844935858,
+      "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
+        "Relative volume is 2.36x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -61,14 +63,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.02361847616036795,
-        "annualized_volatility": 0.37493168559984774,
-        "maximum_drawdown": -0.5189176922589773,
-        "sharpe_ratio": -0.38664470265282175,
-        "sortino_ratio": -0.5209288162480065,
-        "calmar_ratio": -0.3740697710109674,
-        "beta": 0.39380538388052333,
-        "alpha": -0.2171415042664008
+        "volatility": 0.0236184739369437,
+        "annualized_volatility": 0.374931650304082,
+        "maximum_drawdown": -0.5189176141387403,
+        "sharpe_ratio": -0.3866445353320585,
+        "sortino_ratio": -0.5209288200944375,
+        "calmar_ratio": -0.37406968124178486,
+        "beta": 0.3938052942676688,
+        "alpha": -0.21714138200588087
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -138,10 +140,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8467994086233386,
+    "relative_volume": 2.360593844935858,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 22.799999237060547,
     "resistance": 30.309999465942383
   },
@@ -327,19 +329,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5936,
-    "probability_pct": 59.36,
+    "probability_of_outperformance": 0.6926,
+    "probability_pct": 69.26,
     "confidence": "High",
     "evidence": [
-      "Composite score 53.05/100"
+      "Volume surge above 1.5x",
+      "Composite score 60.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 53.05,
+    "final_score": 60.55,
     "technical_score": 43.0,
     "momentum_score": 70.0,
-    "volume_score": 25.0,
+    "volume_score": 75.0,
     "fundamental_score": 62.0,
     "risk_score": 75.0,
     "catalyst_score": 10.0,
@@ -347,7 +350,7 @@
     "eps_growth": -0.627,
     "roe": 0.17846,
     "forward_pe": 15.505601,
-    "relative_volume": 0.8467994086233386,
+    "relative_volume": 2.360593844935858,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -356,13 +359,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.36x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.36x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: BF-B\nRating: Hold | Score: 53.05/100 | Confidence: 41.54/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 22.799999237060547 | Resistance: 30.309999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.505601\nNews/Catalyst: 1 Unpopular Stock That Deserves Some Love and 2 We Avoid\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BF-B\nRating: Hold | Score: 60.55/100 | Confidence: 50.02/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 22.799999237060547 | Resistance: 30.309999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.505601\nNews/Catalyst: 1 Unpopular Stock That Deserves Some Love and 2 We Avoid\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.36x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

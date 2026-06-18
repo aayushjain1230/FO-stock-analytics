@@ -1,6 +1,6 @@
 {
   "ticker": "CSCO",
-  "generated_at": "2026-06-18T20:23:13.944605",
+  "generated_at": "2026-06-18T21:21:01.612793",
   "score": {
     "final_score": 77.65,
     "rating": "Watch",
@@ -47,12 +47,12 @@
     },
     "volume": {
       "score": 75.0,
-      "average_volume": 25238995.05,
-      "relative_volume": 1.7407270342168397,
+      "average_volume": 25631890.3,
+      "relative_volume": 2.0206120342205116,
       "accumulation_days": 2,
       "distribution_days": 1,
       "evidence": [
-        "Relative volume is 1.74x",
+        "Relative volume is 2.02x",
         "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
@@ -68,14 +68,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01724685310795331,
-        "annualized_volatility": 0.2737853053326353,
-        "maximum_drawdown": -0.1745781525635205,
-        "sharpe_ratio": 1.9638851442849763,
-        "sortino_ratio": 2.5759600545493577,
-        "calmar_ratio": 3.7147986736156042,
-        "beta": 0.8924491531480219,
-        "alpha": 0.374115938447785
+        "volatility": 0.017246852414851778,
+        "annualized_volatility": 0.27378529432998955,
+        "maximum_drawdown": -0.1745780920030715,
+        "sharpe_ratio": 1.9638853728121426,
+        "sortino_ratio": 2.575960373389058,
+        "calmar_ratio": 3.714800371738693,
+        "beta": 0.8924498905723264,
+        "alpha": 0.3741159110059787
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -148,7 +148,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.7407270342168397,
+    "relative_volume": 2.0206120342205116,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation, volume surge",
@@ -363,7 +363,7 @@
     "eps_growth": 0.371,
     "roe": 0.25229,
     "forward_pe": 24.822405,
-    "relative_volume": 1.7407270342168397,
+    "relative_volume": 2.0206120342205116,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -372,13 +372,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.02x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.02x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CSCO\nRating: Watch | Score: 77.65/100 | Confidence: 74.55/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 24.822405\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CSCO\nRating: Watch | Score: 77.65/100 | Confidence: 74.55/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 24.822405\nNews/Catalyst: Intel jumps after Trump says Apple, Intel reached US chip deal\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.02x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

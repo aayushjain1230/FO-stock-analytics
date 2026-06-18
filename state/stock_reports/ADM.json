@@ -1,15 +1,15 @@
 {
   "ticker": "ADM",
-  "generated_at": "2026-06-18T20:22:25.150817",
+  "generated_at": "2026-06-18T21:19:55.993030",
   "score": {
-    "final_score": 48.0,
+    "final_score": 51.75,
     "rating": "Hold",
-    "confidence": 32.76,
+    "confidence": 43.24,
     "risk_level": "Controlled",
     "categories": {
       "technical": 47.0,
       "momentum": 50.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 50.0,
       "risk": 100,
       "catalyst": 25.0
@@ -42,12 +42,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3370895.65,
-      "relative_volume": 0.8698913595856935,
+      "score": 25.0,
+      "average_volume": 3638883.3,
+      "relative_volume": 2.278739194521572,
       "accumulation_days": 0,
-      "distribution_days": 3,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Relative volume is 2.28x"
+      ]
     },
     "fundamental": {
       "score": 50.0,
@@ -57,14 +59,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017090621762637825,
-        "annualized_volatility": 0.2713052096124483,
-        "maximum_drawdown": -0.345396789063235,
-        "sharpe_ratio": 0.6523340112162568,
-        "sortino_ratio": 0.9707022025331766,
-        "calmar_ratio": 0.43551046129036486,
-        "beta": 0.28206817052054217,
-        "alpha": 0.1252845170428118
+        "volatility": 0.017090626860210515,
+        "annualized_volatility": 0.27130529053390606,
+        "maximum_drawdown": -0.34539685133244624,
+        "sharpe_ratio": 0.6523337749250334,
+        "sortino_ratio": 0.9707016415264986,
+        "calmar_ratio": 0.4355102701747746,
+        "beta": 0.28206755670393624,
+        "alpha": 0.12528463932102962
       },
       "evidence": []
     },
@@ -133,10 +135,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8698913595856935,
+    "relative_volume": 2.278739194521572,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 66.16999816894531,
     "resistance": 84.11000061035156
   },
@@ -323,19 +325,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5866,
-    "probability_pct": 58.66,
+    "probability_of_outperformance": 0.6341,
+    "probability_pct": 63.41,
     "confidence": "High",
     "evidence": [
-      "Composite score 48.0/100"
+      "Volume surge above 1.5x",
+      "Composite score 51.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 48.0,
+    "final_score": 51.75,
     "technical_score": 47.0,
     "momentum_score": 50.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 50.0,
     "risk_score": 100,
     "catalyst_score": 25.0,
@@ -343,7 +346,7 @@
     "eps_growth": 0.009,
     "roe": 0.047659997,
     "forward_pe": 14.079975,
-    "relative_volume": 0.8698913595856935,
+    "relative_volume": 2.278739194521572,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -352,13 +355,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.28x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.28x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: ADM\nRating: Hold | Score: 48.0/100 | Confidence: 32.76/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 66.16999816894531 | Resistance: 84.11000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.079975\nNews/Catalyst: Mission Produce's Valuation Looks Expensive: Buy Now or Wait?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ADM\nRating: Hold | Score: 51.75/100 | Confidence: 43.24/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 66.16999816894531 | Resistance: 84.11000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.079975\nNews/Catalyst: Mission Produce's Valuation Looks Expensive: Buy Now or Wait?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.28x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

@@ -1,15 +1,15 @@
 {
   "ticker": "CCI",
-  "generated_at": "2026-06-18T20:22:56.225855",
+  "generated_at": "2026-06-18T21:20:40.699741",
   "score": {
-    "final_score": 32.55,
+    "final_score": 36.3,
     "rating": "Drop",
-    "confidence": 17.51,
+    "confidence": 27.48,
     "risk_level": "Controlled",
     "categories": {
       "technical": 30.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 57.0,
       "risk": 100,
       "catalyst": 30.0
@@ -30,19 +30,21 @@
       "returns": {
         "1m": -0.10106743069616164,
         "3m": -0.02424547827718526,
-        "6m": -0.043857289197470006,
+        "6m": -0.04385737420489688,
         "12m": -0.12967239962666688
       },
       "acceleration": -0.0023,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 4223934.95,
-      "relative_volume": 1.2227695409939965,
+      "score": 25.0,
+      "average_volume": 4331069.35,
+      "relative_volume": 1.6872477463331315,
       "accumulation_days": 6,
       "distribution_days": 7,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.69x"
+      ]
     },
     "fundamental": {
       "score": 57.0,
@@ -52,14 +54,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016949746363627474,
-        "annualized_volatility": 0.269068881982678,
-        "maximum_drawdown": -0.30764304452465363,
-        "sharpe_ratio": 0.026001432981326053,
-        "sortino_ratio": 0.037786341231201184,
-        "calmar_ratio": -0.09335057111127633,
-        "beta": 0.09786089792373329,
-        "alpha": -0.010939645467504682
+        "volatility": 0.01694974447009089,
+        "annualized_volatility": 0.2690688519237166,
+        "maximum_drawdown": -0.3076430445246533,
+        "sharpe_ratio": 0.02600156590405262,
+        "sortino_ratio": 0.03778657093641371,
+        "calmar_ratio": -0.0933504314644877,
+        "beta": 0.09785965075473749,
+        "alpha": -0.010939374584505484
       },
       "evidence": []
     },
@@ -70,7 +72,7 @@
         "guidance change"
       ]
     },
-    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; guidance change"
+    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Relative volume is 1.69x; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "CCI",
@@ -128,10 +130,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.2227695409939965,
+    "relative_volume": 1.6872477463331315,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 76.95999908447266,
     "resistance": 94.48999786376953
   },
@@ -318,20 +320,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6476,
-    "probability_pct": 64.76,
+    "probability_of_outperformance": 0.6918,
+    "probability_pct": 69.18,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 32.55/100"
+      "Composite score 36.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 32.55,
+    "final_score": 36.3,
     "technical_score": 30.0,
     "momentum_score": 0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 57.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -339,7 +342,7 @@
     "eps_growth": null,
     "roe": null,
     "forward_pe": 28.412853,
-    "relative_volume": 1.2227695409939965,
+    "relative_volume": 1.6872477463331315,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -356,5 +359,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CCI\nRating: Drop | Score: 32.55/100 | Confidence: 17.51/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 76.95999908447266 | Resistance: 94.48999786376953\nFundamental Outlook: Fundamentally Average | Forward P/E: 28.412853\nNews/Catalyst: Crown Castle (CCI) Stock After Fiber Exit And Buyback Reset How Fair Is The New Tower Valuation\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CCI\nRating: Drop | Score: 36.3/100 | Confidence: 27.48/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 76.95999908447266 | Resistance: 94.48999786376953\nFundamental Outlook: Fundamentally Average | Forward P/E: 28.412853\nNews/Catalyst: Crown Castle (CCI) Stock After Fiber Exit And Buyback Reset How Fair Is The New Tower Valuation\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

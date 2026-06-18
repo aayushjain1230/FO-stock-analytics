@@ -1,15 +1,15 @@
 {
   "ticker": "FIX",
-  "generated_at": "2026-06-18T20:23:22.437248",
+  "generated_at": "2026-06-18T21:21:18.786091",
   "score": {
-    "final_score": 63.7,
-    "rating": "Hold",
-    "confidence": 54.02,
+    "final_score": 67.45,
+    "rating": "Watch",
+    "confidence": 59.44,
     "risk_level": "High",
     "categories": {
       "technical": 90.0,
       "momentum": 75.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 68.0,
       "risk": 35.0,
       "catalyst": 65.0
@@ -48,12 +48,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 454733.4,
-      "relative_volume": 1.4405539597487231,
+      "score": 50.0,
+      "average_volume": 456525.75,
+      "relative_volume": 1.5134195606710026,
       "accumulation_days": 5,
       "distribution_days": 6,
       "evidence": [
+        "Relative volume is 1.51x",
         "Price advanced on above-average volume"
       ]
     },
@@ -67,14 +68,14 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.03524236772312436,
-        "annualized_volatility": 0.5594552436508602,
-        "maximum_drawdown": -0.46048977530926505,
-        "sharpe_ratio": 1.9196841484905547,
-        "sortino_ratio": 2.4858152910229974,
-        "calmar_ratio": 3.2487372478440624,
-        "beta": 1.9563373130394033,
-        "alpha": 0.7154223272166137
+        "volatility": 0.03524236946865986,
+        "annualized_volatility": 0.5594552713603771,
+        "maximum_drawdown": -0.4604898354176259,
+        "sharpe_ratio": 1.9196841495298198,
+        "sortino_ratio": 2.485815245979305,
+        "calmar_ratio": 3.248737083977209,
+        "beta": 1.956340187010038,
+        "alpha": 0.7154220005830325
       },
       "evidence": [
         "Volatility is elevated",
@@ -149,10 +150,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.4405539597487231,
+    "relative_volume": 1.5134195606710026,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 1273.1800537109375,
     "resistance": 2042.3599853515625
   },
@@ -341,21 +342,22 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7539,
-    "probability_pct": 75.39,
+    "probability_of_outperformance": 0.8,
+    "probability_pct": 80.0,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 63.7/100"
+      "Composite score 67.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 63.7,
+    "final_score": 67.45,
     "technical_score": 90.0,
     "momentum_score": 75.0,
-    "volume_score": 25.0,
+    "volume_score": 50.0,
     "fundamental_score": 68.0,
     "risk_score": 35.0,
     "catalyst_score": 65.0,
@@ -363,7 +365,7 @@
     "eps_growth": 0.388,
     "roe": 0.53294,
     "forward_pe": 36.922455,
-    "relative_volume": 1.4405539597487231,
+    "relative_volume": 1.5134195606710026,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -380,5 +382,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: FIX\nRating: Hold | Score: 63.7/100 | Confidence: 54.02/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated\nTechnical Outlook: trend continuation | Support: 1273.1800537109375 | Resistance: 2042.3599853515625\nFundamental Outlook: Fundamentally Average | Forward P/E: 36.922455\nNews/Catalyst: GE Vernova Supplier Breaks Out As Data Centers Lift Construction Sector\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: FIX\nRating: Watch | Score: 67.45/100 | Confidence: 59.44/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated\nTechnical Outlook: trend continuation, volume surge | Support: 1273.1800537109375 | Resistance: 2042.3599853515625\nFundamental Outlook: Fundamentally Average | Forward P/E: 36.922455\nNews/Catalyst: GE Vernova Supplier Breaks Out As Data Centers Lift Construction Sector\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

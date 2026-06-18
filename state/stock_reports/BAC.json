@@ -1,15 +1,15 @@
 {
   "ticker": "BAC",
-  "generated_at": "2026-06-18T20:22:43.789934",
+  "generated_at": "2026-06-18T21:20:21.948079",
   "score": {
-    "final_score": 69.45,
+    "final_score": 76.95,
     "rating": "Watch",
-    "confidence": 55.75,
+    "confidence": 73.25,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 68.0,
       "risk": 100,
       "catalyst": 85.0
@@ -48,12 +48,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 37671796.15,
-      "relative_volume": 0.8410648346534971,
+      "score": 50.0,
+      "average_volume": 39581547.15,
+      "relative_volume": 1.7654550676147585,
       "accumulation_days": 3,
-      "distribution_days": 4,
-      "evidence": []
+      "distribution_days": 5,
+      "evidence": [
+        "Relative volume is 1.77x",
+        "High-volume breakout behavior"
+      ]
     },
     "fundamental": {
       "score": 68.0,
@@ -65,14 +68,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016050821859071678,
-        "annualized_volatility": 0.2547988978638185,
-        "maximum_drawdown": -0.27509396818470333,
-        "sharpe_ratio": 0.8919793433079091,
-        "sortino_ratio": 1.129956838381923,
-        "calmar_ratio": 0.7807769927589985,
-        "beta": 0.9110372505980282,
-        "alpha": 0.06030159511243302
+        "volatility": 0.016050815266494427,
+        "annualized_volatility": 0.25479879320989907,
+        "maximum_drawdown": -0.2750938855389822,
+        "sharpe_ratio": 0.8919794062023176,
+        "sortino_ratio": 1.1299567269669009,
+        "calmar_ratio": 0.7807770050804909,
+        "beta": 0.9110378728017632,
+        "alpha": 0.060301471895280366
       },
       "evidence": []
     },
@@ -144,10 +147,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.8410648346534971,
+    "relative_volume": 1.7654550676147585,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 46.970001220703125,
     "resistance": 56.84000015258789
   },
@@ -198,7 +201,7 @@
     "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.70639,
     "detail": {
@@ -270,6 +273,16 @@
     "available": true,
     "items": [
       {
+        "headline": "SpaceX Bankers Prepare for Bond Sale of at Least $20 Billion",
+        "source": "Bloomberg",
+        "published": "2026-06-18T20:45:44Z",
+        "summary": "(Bloomberg) -- Bankers for Elon Musk\u2019s SpaceX are preparing to hold calls with investors as soon as next week to discuss a potential bond offering on the heels of the company\u2019s record IPO, according to people with knowledge of the matter.Most Read from BloombergRead the 14-Point Draft Memorandum Between the US and IranModi Warns of \u2018Shortage of Trust\u2019 Ahead of Trump MeetingTrump Blows Through His Iran Red Lines in Justifying Peace DealIran\u2019s Deputy Foreign Minister Confirms Deal Reached With USN",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Sector Update: Financial Stocks Lower Late Afternoon",
         "source": "MT Newswires",
         "published": "2026-06-18T19:52:37Z",
@@ -308,16 +321,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Bank Of America (BAC) Faces Fresh Scrutiny As Regulators Ready Debanking Findings",
-        "source": "Simply Wall St.",
-        "published": "2026-06-18T18:16:48Z",
-        "summary": "U.S. regulators are preparing to release findings on alleged improper client distinctions and discrimination at Bank of America (NYSE:BAC). The Department of Justice and the Office of the Comptroller of the Currency are increasing scrutiny of the bank's debanking practices. These reviews could influence Bank of America's future compliance requirements, operating environment, and reputational standing. Bank of America is one of the largest U.S. consumer and corporate banks, with a broad...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -337,23 +340,24 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9118,
-    "probability_pct": 91.18,
+    "probability_of_outperformance": 0.931,
+    "probability_pct": 93.1,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 69.45/100"
+      "Composite score 76.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 69.45,
+    "final_score": 76.95,
     "technical_score": 75.0,
     "momentum_score": 85.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 68.0,
     "risk_score": 100,
     "catalyst_score": 85.0,
@@ -361,7 +365,7 @@
     "eps_growth": 0.244,
     "roe": 0.10644,
     "forward_pe": 11.176597,
-    "relative_volume": 0.8410648346534971,
+    "relative_volume": 1.7654550676147585,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -378,5 +382,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BAC\nRating: Watch | Score: 69.45/100 | Confidence: 55.75/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 46.970001220703125 | Resistance: 56.84000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.176597\nNews/Catalyst: Sector Update: Financial Stocks Lower Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BAC\nRating: Watch | Score: 76.95/100 | Confidence: 73.25/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 46.970001220703125 | Resistance: 56.84000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.176597\nNews/Catalyst: SpaceX Bankers Prepare for Bond Sale of at Least $20 Billion\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

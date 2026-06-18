@@ -1,6 +1,6 @@
 {
   "ticker": "AEP",
-  "generated_at": "2026-06-18T20:22:27.139678",
+  "generated_at": "2026-06-18T21:19:58.698642",
   "score": {
     "final_score": 54.95,
     "rating": "Hold",
@@ -43,12 +43,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4983933.35,
-      "relative_volume": 1.73705513136527,
+      "average_volume": 5054494.4,
+      "relative_volume": 1.9920069552357205,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": [
-        "Relative volume is 1.74x"
+        "Relative volume is 1.99x"
       ]
     },
     "fundamental": {
@@ -61,14 +61,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.011919271063055834,
-        "annualized_volatility": 0.18921256225208527,
-        "maximum_drawdown": -0.1310102945319349,
-        "sharpe_ratio": 1.27142798800989,
-        "sortino_ratio": 1.9231556511089303,
-        "calmar_ratio": 1.9033149023589946,
-        "beta": 0.005546687618981276,
-        "alpha": 0.2395535574178818
+        "volatility": 0.011919266914970663,
+        "annualized_volatility": 0.1892124964032746,
+        "maximum_drawdown": -0.13101030463531183,
+        "sharpe_ratio": 1.2714283638668789,
+        "sortino_ratio": 1.9231575724103245,
+        "calmar_ratio": 1.9033147555773595,
+        "beta": 0.0055458867557608375,
+        "alpha": 0.23955369200871923
       },
       "evidence": []
     },
@@ -138,7 +138,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.73705513136527,
+    "relative_volume": 1.9920069552357205,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "volume surge",
@@ -351,7 +351,7 @@
     "eps_growth": 0.067,
     "roe": 0.12585,
     "forward_pe": 18.86063,
-    "relative_volume": 1.73705513136527,
+    "relative_volume": 1.9920069552357205,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -360,13 +360,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.99x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.99x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: AEP\nRating: Hold | Score: 54.95/100 | Confidence: 49.58/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.86063\nNews/Catalyst: 3 Utility Stocks For Years of Passive Income\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AEP\nRating: Hold | Score: 54.95/100 | Confidence: 49.58/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.86063\nNews/Catalyst: 3 Utility Stocks For Years of Passive Income\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.99x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

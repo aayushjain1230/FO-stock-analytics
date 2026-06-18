@@ -1,6 +1,6 @@
 {
   "ticker": "ABNB",
-  "generated_at": "2026-06-18T20:22:22.441092",
+  "generated_at": "2026-06-18T21:19:52.769158",
   "score": {
     "final_score": 78.7,
     "rating": "Watch",
@@ -48,12 +48,12 @@
     },
     "volume": {
       "score": 100,
-      "average_volume": 3783295.55,
-      "relative_volume": 1.5258419342892733,
+      "average_volume": 3865226.6,
+      "relative_volume": 1.9174379064865175,
       "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
-        "Relative volume is 1.53x",
+        "Relative volume is 1.92x",
         "Price advanced on above-average volume",
         "Accumulation days exceed distribution days",
         "High-volume breakout behavior"
@@ -75,8 +75,8 @@
         "sharpe_ratio": 0.12710981725339543,
         "sortino_ratio": 0.16922706393720197,
         "calmar_ratio": -0.05450259203757215,
-        "beta": 1.2829461446661086,
-        "alpha": -0.1893152308962702
+        "beta": 1.2829464480448238,
+        "alpha": -0.18931519053806012
       },
       "evidence": []
     },
@@ -145,7 +145,7 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 1.5258419342892733,
+    "relative_volume": 1.9174379064865175,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation, volume surge",
@@ -357,7 +357,7 @@
     "eps_growth": 0.06,
     "roe": 0.32325,
     "forward_pe": 23.578363,
-    "relative_volume": 1.5258419342892733,
+    "relative_volume": 1.9174379064865175,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -366,13 +366,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.92x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.92x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: ABNB\nRating: Watch | Score: 78.7/100 | Confidence: 68.8/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 122.87000274658203 | Resistance: 144.17999267578125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.578363\nNews/Catalyst: SpaceX Joins Nvidia, Alphabet, Apple, Microsoft, Amazon, and Taiwan Semiconductor in the $2 Trillion Club. But Will It Last?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABNB\nRating: Watch | Score: 78.7/100 | Confidence: 68.8/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 122.87000274658203 | Resistance: 144.17999267578125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.578363\nNews/Catalyst: SpaceX Joins Nvidia, Alphabet, Apple, Microsoft, Amazon, and Taiwan Semiconductor in the $2 Trillion Club. But Will It Last?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.92x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

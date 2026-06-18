@@ -1,18 +1,18 @@
 {
   "ticker": "MSFT",
-  "generated_at": "2026-06-18T20:23:26.604600",
+  "generated_at": "2026-06-18T21:21:25.500810",
   "score": {
-    "final_score": 40.15,
+    "final_score": 43.15,
     "rating": "Drop",
-    "confidence": 40.69,
+    "confidence": 42.93,
     "risk_level": "Controlled",
     "categories": {
       "technical": 20.0,
       "momentum": 10.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 20.0,
@@ -38,12 +38,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 38629427.85,
-      "relative_volume": 1.3819789722823967,
+      "score": 50.0,
+      "average_volume": 38883497.0,
+      "relative_volume": 1.5036312191776373,
       "accumulation_days": 4,
       "distribution_days": 4,
       "evidence": [
+        "Relative volume is 1.50x",
         "Price advanced on above-average volume"
       ]
     },
@@ -58,29 +59,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01617337897940152,
-        "annualized_volatility": 0.2567444318345764,
+        "volatility": 0.016173377191745168,
+        "annualized_volatility": 0.25674440345641153,
         "maximum_drawdown": -0.339100884143132,
-        "sharpe_ratio": -0.1571858250515309,
-        "sortino_ratio": -0.21015530723758036,
+        "sharpe_ratio": -0.1571858726071457,
+        "sortino_ratio": -0.21015538022481647,
         "calmar_ratio": -0.2084622779062092,
-        "beta": 0.920785738007911,
-        "alpha": -0.20911703430474637
+        "beta": 0.9207849073924848,
+        "alpha": -0.2091168209472599
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; Price advanced on above-average volume; revenue growth is strong; eps growth is strong"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; Relative volume is 1.50x; Price advanced on above-average volume; revenue growth is strong"
   },
   "fundamentals": {
     "ticker": "MSFT",
@@ -138,10 +138,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.3819789722823967,
+    "relative_volume": 1.5036312191776373,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 356.7699890136719,
     "resistance": 460.5199890136719
   },
@@ -190,9 +190,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 0,
     "bearish_news_score": 1,
     "institutional_ownership": 0.75781,
     "detail": {
@@ -240,7 +240,6 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -263,10 +262,40 @@
     "available": true,
     "items": [
       {
-        "headline": "Gaming gets hit by memory shortage: A look at Sandisk's $3K PlayStation 5 SSD",
-        "source": "Yahoo Finance Video",
-        "published": "2026-06-17T20:36:04Z",
-        "summary": "The memory shortage is hitting the gaming sphere, with Sandisk's (SNDK) PlayStation 5 storage SSD costing nearly $3,000. Yahoo Finance Technology Editor Dan Howley breaks down the details.",
+        "headline": "SpaceX stock drops after breaking 3-day winning streak",
+        "source": "Yahoo Finance",
+        "published": "2026-06-18T12:48:09Z",
+        "summary": "SpaceX opened lower on Thursday, extending losses from the prior session.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Stock Market Forecast For Next Six Months: Why More Gains May Lie Ahead",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-18T21:02:51Z",
+        "summary": "Thanks to AI fervor, equities have climbed despite headwinds from the Mideast conflict. Analysts detail the climate for stocks in the rest of 2026, including IPOs, small caps and more.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Microsoft warns new malware turns copy-paste against you",
+        "source": "TheStreet",
+        "published": "2026-06-18T20:28:49Z",
+        "summary": "Ctrl+C and Ctrl+V, the universally loved shortcut pair, is now a big threat to your crypto wallet. Microsoft (NASDAQ: MSFT) has uncovered a new strain of malware built to quietly drain cryptocurrency from Windows users. In a report on June 17, Microsoft Threat Intelligence and Microsoft ...",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Take-Two Stock Rises As 'GTA 6' Game Presales Set To Begin",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-18T20:12:48Z",
+        "summary": "Take-Two Interactive Software shares rose after the video game publisher announced a presales date for \"Grand Theft Auto 6.\"",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -281,36 +310,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Microsoft Builds $1 Billion-Plus AI Business With ByteDance",
-        "source": "GuruFocus.com",
-        "published": "2026-06-18T18:02:29Z",
-        "summary": "ByteDance is on track to spend more than $1 billion annually on Microsoft AI and cloud services.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Microsoft Faces AI Expectations Test",
-        "source": "GuruFocus.com",
-        "published": "2026-06-18T18:00:38Z",
-        "summary": "Strong growth continues, but valuation and spending remain key investor concerns.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "EU Cloud Probe Puts Microsoft, Amazon on Watch",
-        "source": "GuruFocus.com",
-        "published": "2026-06-18T17:59:53Z",
-        "summary": "Azure and AWS could face DMA obligations on interoperability, customer lock-in, and self-preferencing if EU regulators proceed.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -328,36 +327,37 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7813,
-    "probability_pct": 78.13,
+    "probability_of_outperformance": 0.8146,
+    "probability_pct": 81.46,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 40.15/100"
+      "Composite score 43.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.15,
+    "final_score": 43.15,
     "technical_score": 20.0,
     "momentum_score": 10.0,
-    "volume_score": 25.0,
+    "volume_score": 50.0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.183,
     "eps_growth": 0.234,
     "roe": 0.34013999,
     "forward_pe": 19.4894,
-    "relative_volume": 1.3819789722823967,
+    "relative_volume": 1.5036312191776373,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,
@@ -368,5 +368,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: MSFT\nRating: Drop | Score: 40.15/100 | Confidence: 40.69/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 356.7699890136719 | Resistance: 460.5199890136719\nFundamental Outlook: Quality Compounder | Forward P/E: 19.4894\nNews/Catalyst: Gaming gets hit by memory shortage: A look at Sandisk's $3K PlayStation 5 SSD\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: MSFT\nRating: Drop | Score: 43.15/100 | Confidence: 42.93/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 356.7699890136719 | Resistance: 460.5199890136719\nFundamental Outlook: Quality Compounder | Forward P/E: 19.4894\nNews/Catalyst: SpaceX stock drops after breaking 3-day winning streak\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

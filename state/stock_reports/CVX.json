@@ -1,6 +1,6 @@
 {
   "ticker": "CVX",
-  "generated_at": "2026-06-18T20:23:17.446797",
+  "generated_at": "2026-06-18T21:21:06.543488",
   "score": {
     "final_score": 41.55,
     "rating": "Drop",
@@ -29,8 +29,8 @@
       "returns": {
         "1m": -0.11974648982097591,
         "3m": -0.13016129182676883,
-        "6m": 0.2056858620048434,
-        "12m": 0.2153315909938065
+        "6m": 0.20568573425405678,
+        "12m": 0.21533146119077973
       },
       "acceleration": -0.233,
       "evidence": [
@@ -40,12 +40,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 9061739.25,
-      "relative_volume": 1.7563940608862698,
+      "average_volume": 9181527.4,
+      "relative_volume": 1.9944119537235165,
       "accumulation_days": 1,
       "distribution_days": 5,
       "evidence": [
-        "Relative volume is 1.76x"
+        "Relative volume is 1.99x"
       ]
     },
     "fundamental": {
@@ -56,14 +56,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015029670965115132,
-        "annualized_volatility": 0.23858862996493663,
-        "maximum_drawdown": -0.2063971945709221,
-        "sharpe_ratio": 0.5182065143524007,
-        "sortino_ratio": 0.6387807643364348,
-        "calmar_ratio": 0.4826625416944452,
-        "beta": 0.39983973301143055,
-        "alpha": 0.05035606022626621
+        "volatility": 0.01502966810949357,
+        "annualized_volatility": 0.2385885846333497,
+        "maximum_drawdown": -0.20639733781029534,
+        "sharpe_ratio": 0.5182065642551378,
+        "sortino_ratio": 0.6387810137711514,
+        "calmar_ratio": 0.48266220672752913,
+        "beta": 0.3998400112076215,
+        "alpha": 0.050356027560918275
       },
       "evidence": []
     },
@@ -74,7 +74,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.76x; analyst revision"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.99x; analyst revision"
   },
   "fundamentals": {
     "ticker": "CVX",
@@ -132,7 +132,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.7563940608862698,
+    "relative_volume": 1.9944119537235165,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "volume surge",
@@ -344,7 +344,7 @@
     "eps_growth": -0.445,
     "roe": 0.06638,
     "forward_pe": 13.789574,
-    "relative_volume": 1.7563940608862698,
+    "relative_volume": 1.9944119537235165,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -353,13 +353,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.99x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.99x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CVX\nRating: Drop | Score: 41.55/100 | Confidence: 36.5/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 173.6300048828125 | Resistance: 211.14999389648438\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.789574\nNews/Catalyst: The SLB Paradox: Short-Term Friction, Long-Cycle Fuel\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CVX\nRating: Drop | Score: 41.55/100 | Confidence: 36.5/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 173.6300048828125 | Resistance: 211.14999389648438\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.789574\nNews/Catalyst: The SLB Paradox: Short-Term Friction, Long-Cycle Fuel\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.99x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

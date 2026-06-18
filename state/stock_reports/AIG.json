@@ -1,15 +1,15 @@
 {
   "ticker": "AIG",
-  "generated_at": "2026-06-18T20:22:28.704177",
+  "generated_at": "2026-06-18T21:20:00.681992",
   "score": {
-    "final_score": 44.2,
-    "rating": "Drop",
-    "confidence": 36.22,
+    "final_score": 47.95,
+    "rating": "Hold",
+    "confidence": 46.75,
     "risk_level": "Controlled",
     "categories": {
       "technical": 38.0,
       "momentum": 25.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 68.0,
       "risk": 100,
       "catalyst": 65.0
@@ -40,12 +40,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3620551.35,
-      "relative_volume": 0.6773352351431225,
+      "score": 25.0,
+      "average_volume": 3786340.75,
+      "relative_volume": 1.5234009247582907,
       "accumulation_days": 2,
-      "distribution_days": 3,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Relative volume is 1.52x"
+      ]
     },
     "fundamental": {
       "score": 68.0,
@@ -57,14 +59,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01520654906716109,
-        "annualized_volatility": 0.2413964827872569,
-        "maximum_drawdown": -0.1697655686950048,
-        "sharpe_ratio": 0.1902282321109122,
-        "sortino_ratio": 0.24807454262487516,
-        "calmar_ratio": 0.09912982747361737,
-        "beta": 0.5342268998903766,
-        "alpha": -0.05199200639811409
+        "volatility": 0.015206546153485039,
+        "annualized_volatility": 0.2413964365340835,
+        "maximum_drawdown": -0.16976556869500492,
+        "sharpe_ratio": 0.19022799985337277,
+        "sortino_ratio": 0.2480742849024224,
+        "calmar_ratio": 0.09912950584815738,
+        "beta": 0.534226323674435,
+        "alpha": -0.05199192569603643
       },
       "evidence": []
     },
@@ -77,7 +79,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; Momentum is accelerating; eps growth is strong"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; Momentum is accelerating; Relative volume is 1.52x"
   },
   "fundamentals": {
     "ticker": "AIG",
@@ -135,10 +137,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6773352351431225,
+    "relative_volume": 1.5234009247582907,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 72.55000305175781,
     "resistance": 78.7699966430664
   },
@@ -327,22 +329,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.781,
-    "probability_pct": 78.1,
+    "probability_of_outperformance": 0.8133,
+    "probability_pct": 81.33,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 44.2/100"
+      "Composite score 47.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 44.2,
+    "final_score": 47.95,
     "technical_score": 38.0,
     "momentum_score": 25.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 68.0,
     "risk_score": 100,
     "catalyst_score": 65.0,
@@ -350,7 +353,7 @@
     "eps_growth": 0.216,
     "roe": 0.07723,
     "forward_pe": 8.330899,
-    "relative_volume": 0.6773352351431225,
+    "relative_volume": 1.5234009247582907,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -367,5 +370,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AIG\nRating: Drop | Score: 44.2/100 | Confidence: 36.22/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 72.55000305175781 | Resistance: 78.7699966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.330899\nNews/Catalyst: AIG vs. AXAHY: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AIG\nRating: Hold | Score: 47.95/100 | Confidence: 46.75/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 72.55000305175781 | Resistance: 78.7699966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.330899\nNews/Catalyst: AIG vs. AXAHY: Which Stock Is the Better Value Option?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,10 +1,10 @@
 {
   "ticker": "BR",
-  "generated_at": "2026-06-18T20:22:49.478294",
+  "generated_at": "2026-06-18T21:20:30.195834",
   "score": {
-    "final_score": 24.7,
+    "final_score": 25.45,
     "rating": "Avoid",
-    "confidence": 12.16,
+    "confidence": 14.53,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 78.0,
       "risk": 60.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 10.0,
@@ -29,7 +29,7 @@
         "1m": -0.07292767003960365,
         "3m": -0.20557165119010257,
         "6m": -0.3876378098674218,
-        "12m": -0.41183358154007144
+        "12m": -0.41183354317799614
       },
       "acceleration": -0.0118,
       "evidence": []
@@ -52,14 +52,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.014894694651141441,
-        "annualized_volatility": 0.2364459474069853,
-        "maximum_drawdown": -0.47382588728223785,
-        "sharpe_ratio": -0.6013642576103728,
-        "sortino_ratio": -0.7715662003982706,
-        "calmar_ratio": -0.3304071760927347,
-        "beta": 0.4929829264024888,
-        "alpha": -0.2325434307313338
+        "volatility": 0.014894695749315902,
+        "annualized_volatility": 0.2364459648399644,
+        "maximum_drawdown": -0.4738259486853684,
+        "sharpe_ratio": -0.6013640262439625,
+        "sortino_ratio": -0.7715659317641073,
+        "calmar_ratio": -0.3304070623082226,
+        "beta": 0.49298261653300496,
+        "alpha": -0.2325432928429364
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -67,13 +67,14 @@
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "earnings surprise",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; eps growth is strong; earnings surprise; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; eps growth is strong; earnings surprise; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "BR",
@@ -183,10 +184,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bullish_news_score": 2,
+    "bearish_news_score": 1,
     "institutional_ownership": 1.00181,
     "detail": {
       "earnings": {
@@ -232,6 +233,7 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -253,6 +255,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Broadridge Financial Solutions (BR) Stock Could Be 32.4% Undervalued After Wealth And AI Updates",
+        "source": "Simply Wall St.",
+        "published": "2026-06-18T20:17:04Z",
+        "summary": "Recent product and client news has put Broadridge Financial Solutions (BR) in focus, as its Wealth Platform rollout with Aviso, LTX BondGPT upgrades and Distributed Ledger Repo volumes highlight ongoing activity across wealth, trading and post trade infrastructure. See our latest analysis for Broadridge Financial Solutions. Despite the stream of product launches, client wins and partnerships around AI trading tools and tokenized repo, Broadridge Financial Solutions\u2019 share price has been weak,...",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Broadridge and\u00a0Fispoke\u00a0partner to expand advisor lending tools",
         "source": "Private Banker International",
@@ -292,16 +304,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Is Broadridge Financial Solutions, Inc. (BR) A Good Stock To Buy Now?",
-        "source": "Insider Monkey",
-        "published": "2026-06-13T20:55:30Z",
-        "summary": "Is BR a good stock to buy? We came across a bullish thesis on Broadridge Financial Solutions, Inc. on Bob\u2019s Payment Stock Substack by Bob Hammel. In this article, we will summarize the bulls\u2019 thesis on BR. Broadridge Financial Solutions, Inc.\u2019s share was trading at $148.98 as of June 8th. BR\u2019s trailing and forward P/E were 16.19 [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -321,24 +323,24 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6342,
-    "probability_pct": 63.42,
+    "probability_of_outperformance": 0.648,
+    "probability_pct": 64.8,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 24.7/100"
+      "Composite score 25.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 24.7,
+    "final_score": 25.45,
     "technical_score": 10.0,
     "momentum_score": 0,
     "volume_score": 0,
     "fundamental_score": 78.0,
     "risk_score": 60.0,
-    "catalyst_score": 30.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.078,
     "eps_growth": 0.151,
     "roe": 0.42314,
@@ -349,7 +351,7 @@
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": false,
@@ -360,5 +362,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BR\nRating: Avoid | Score: 24.7/100 | Confidence: 12.16/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 137.60000610351562 | Resistance: 174.36000061035156\nFundamental Outlook: Fundamentally Strong | Forward P/E: 13.15438\nNews/Catalyst: Broadridge and\u00a0Fispoke\u00a0partner to expand advisor lending tools\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BR\nRating: Avoid | Score: 25.45/100 | Confidence: 14.53/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 137.60000610351562 | Resistance: 174.36000061035156\nFundamental Outlook: Fundamentally Strong | Forward P/E: 13.15438\nNews/Catalyst: Broadridge Financial Solutions (BR) Stock Could Be 32.4% Undervalued After Wealth And AI Updates\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

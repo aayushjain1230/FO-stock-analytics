@@ -1,6 +1,6 @@
 {
   "ticker": "ACGL",
-  "generated_at": "2026-06-18T20:22:23.293321",
+  "generated_at": "2026-06-18T21:19:53.806271",
   "score": {
     "final_score": 51.25,
     "rating": "Hold",
@@ -42,12 +42,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2548313.75,
-      "relative_volume": 1.6619127060001933,
+      "average_volume": 2607945.45,
+      "relative_volume": 2.0812202954628516,
       "accumulation_days": 2,
       "distribution_days": 4,
       "evidence": [
-        "Relative volume is 1.66x"
+        "Relative volume is 2.08x"
       ]
     },
     "fundamental": {
@@ -66,8 +66,8 @@
         "sharpe_ratio": -0.02127972636889991,
         "sortino_ratio": -0.028009709359082053,
         "calmar_ratio": -0.14626512758634494,
-        "beta": 0.34586032459697846,
-        "alpha": -0.0684403459448203
+        "beta": 0.34585994667152337,
+        "alpha": -0.06844025080968935
       },
       "evidence": []
     },
@@ -138,7 +138,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.6619127060001933,
+    "relative_volume": 2.0812202954628516,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "volume surge",
@@ -354,7 +354,7 @@
     "eps_growth": 0.946,
     "roe": 0.21305999,
     "forward_pe": 9.238244,
-    "relative_volume": 1.6619127060001933,
+    "relative_volume": 2.0812202954628516,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -363,13 +363,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.08x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.08x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: ACGL\nRating: Hold | Score: 51.25/100 | Confidence: 49.4/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 87.62000274658203 | Resistance: 98.8499984741211\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.238244\nNews/Catalyst: ACGL Outperforms Industry, Trades at a Premium: How to Play the Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ACGL\nRating: Hold | Score: 51.25/100 | Confidence: 49.4/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 87.62000274658203 | Resistance: 98.8499984741211\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.238244\nNews/Catalyst: ACGL Outperforms Industry, Trades at a Premium: How to Play the Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.08x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
