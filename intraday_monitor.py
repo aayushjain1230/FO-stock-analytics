@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 from typing import Dict, Iterable
 
+import numpy as np
 import pandas as pd
 
 STATE_FILE = os.path.join("state", "intraday_monitor_state.json")
@@ -47,15 +48,20 @@ def _session_vwap(df):
     return (typical * volume).cumsum() / volume.cumsum().replace(0, pd.NA)
 
 
-def _ticker_reasons(df, price_move_pct, volume_ratio, breakout_lookback):
+def _ticker_reasons(df, price_move_pct, volume_ratio, breakout_lookback, z_threshold=2.0):
     latest = df.iloc[-1]
     close = float(latest["Close"])
     prev_close = float(df["Close"].dropna().iloc[-2]) if len(df.dropna(subset=["Close"])) > 1 else close
     move = (close - prev_close) / prev_close * 100 if prev_close else 0
     avg_vol = df["Volume"].tail(20).mean() if "Volume" in df.columns else 0
     vol_ratio = float(latest.get("Volume", 0) / avg_vol) if avg_vol else 0
+    z_score = _return_z_score(df)
+    abnormality = _abnormality_label(z_score)
     reasons = []
 
+    if z_score is not None and abs(z_score) >= z_threshold:
+        percentile = _normal_percentile(abs(z_score))
+        reasons.append(f"abnormal move z-score {z_score:+.2f} ({abnormality}; larger than ~{percentile:.1f}% of normal bars)")
     if abs(move) >= price_move_pct:
         reasons.append(f"5m price move {move:+.2f}%")
     if vol_ratio >= volume_ratio:
@@ -88,7 +94,37 @@ def _ticker_reasons(df, price_move_pct, volume_ratio, breakout_lookback):
         if df["Close"].iloc[-2] >= vwap.iloc[-2] and close < vwap.iloc[-1]:
             reasons.append("price lost session VWAP")
 
-    return close, move, vol_ratio, reasons
+    return close, move, vol_ratio, z_score, abnormality, reasons
+
+
+def _return_z_score(df, lookback=252):
+    close = pd.to_numeric(df["Close"], errors="coerce").dropna()
+    returns = close.pct_change().dropna()
+    if len(returns) < 30:
+        return None
+    sample = returns.tail(lookback)
+    current = sample.iloc[-1]
+    history = sample.iloc[:-1]
+    std = history.std(ddof=1)
+    if not std or pd.isna(std):
+        return None
+    return float((current - history.mean()) / std)
+
+
+def _normal_percentile(abs_z):
+    return float((2 * (0.5 * (1 + np.math.erf(abs_z / np.sqrt(2)))) - 1) * 100)
+
+
+def _abnormality_label(z_score):
+    if z_score is None:
+        return "Normal"
+    magnitude = abs(z_score)
+    direction = "upside" if z_score > 0 else "downside"
+    if magnitude >= 3:
+        return f"extremely unusual {direction} move"
+    if magnitude >= 2:
+        return f"unusual {direction} move"
+    return "normal range"
 
 
 def _earnings_alerts_for_ticker(ticker):
@@ -132,11 +168,11 @@ def scan(
             df = _normalize_download(raw)
             if df.empty:
                 continue
-            close, move, vol_ratio, reasons = _ticker_reasons(df, price_move_pct, volume_ratio, breakout_lookback)
+            close, move, vol_ratio, z_score, abnormality, reasons = _ticker_reasons(df, price_move_pct, volume_ratio, breakout_lookback)
             reasons.extend(_earnings_alerts_for_ticker(ticker))
             alert_key = f"{ticker}:{df.index[-1]}:{'|'.join(sorted(set(reasons)))}"
             if reasons and state.get(ticker, {}).get("last_alert_key") != alert_key:
-                alerts.append({"ticker": ticker, "price": close, "move_pct": move, "volume_ratio": vol_ratio, "reasons": sorted(set(reasons))})
+                alerts.append({"ticker": ticker, "price": close, "move_pct": move, "volume_ratio": vol_ratio, "z_score": z_score, "abnormality": abnormality, "reasons": sorted(set(reasons))})
                 new_state[ticker] = {"last_alert_key": alert_key, "last_price": close, "updated_at": datetime.now().isoformat()}
             else:
                 new_state[ticker] = {**state.get(ticker, {}), "last_price": close, "updated_at": datetime.now().isoformat()}
@@ -162,7 +198,8 @@ def format_telegram(payload: Dict) -> str:
         if item.get("ticker") == "PORTFOLIO":
             lines.append(f"PORTFOLIO: {', '.join(item['reasons'])}")
         else:
-            lines.append(f"{item['ticker']}: ${item['price']:.2f} | {', '.join(item['reasons'])}")
+            z_text = f" | Z {item.get('z_score'):+.2f}" if item.get("z_score") is not None else ""
+            lines.append(f"{item['ticker']}: ${item['price']:.2f}{z_text} | {', '.join(item['reasons'])}")
     lines.append("\nWhy it matters: a fast trigger changed before the next full 30-minute research cycle.")
     lines.append("Educational research alert only, not financial advice.")
     return "\n".join(lines)
