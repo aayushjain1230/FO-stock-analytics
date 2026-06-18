@@ -7,13 +7,46 @@ STATE_FILE = os.path.join("state", "latest_earnings_alerts.json")
 
 
 def _parse_date(value):
-    if not value:
+    if value in (None, "", [], {}):
         return None
-    text = str(value).split(" ")[0]
+    if isinstance(value, (list, tuple)):
+        for item in value:
+            parsed = _parse_date(item)
+            if parsed:
+                return parsed
+        return None
+    if isinstance(value, dict):
+        for key in ("date", "fmt", "raw", "earningsDate"):
+            parsed = _parse_date(value.get(key))
+            if parsed:
+                return parsed
+        return None
+    if isinstance(value, datetime):
+        return value.date()
+    if isinstance(value, date):
+        return value
     try:
-        return datetime.fromisoformat(text).date()
+        numeric = float(value)
+        if numeric > 1_000_000_000:
+            return datetime.fromtimestamp(numeric).date()
     except Exception:
+        pass
+    text = str(value).strip()
+    if not text:
         return None
+    text = text.replace("Z", "+00:00")
+    candidates = [text, text.split(" ")[0], text.split("T")[0]]
+    for candidate in candidates:
+        try:
+            return datetime.fromisoformat(candidate).date()
+        except Exception:
+            continue
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%b %d, %Y", "%B %d, %Y"):
+        try:
+            return datetime.strptime(text, fmt).date()
+        except Exception:
+            continue
+    return None
 
 
 def build_earnings_alerts(stock_reports: Iterable[Dict], days_ahead: int = 2) -> Dict:
