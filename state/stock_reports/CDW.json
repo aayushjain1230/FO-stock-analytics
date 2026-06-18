@@ -1,13 +1,13 @@
 {
   "ticker": "CDW",
-  "generated_at": "2026-06-18T16:22:36.672535",
+  "generated_at": "2026-06-18T18:42:48.665306",
   "score": {
-    "final_score": 41.75,
+    "final_score": 43.75,
     "rating": "Drop",
-    "confidence": 37.82,
+    "confidence": 38.95,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 45.0,
+      "technical": 53.0,
       "momentum": 35.0,
       "volume": 25.0,
       "fundamental": 50.0,
@@ -15,8 +15,9 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 45.0,
+      "score": 53.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
@@ -24,17 +25,17 @@
       ],
       "support": 99.30000305175781,
       "resistance": 142.44000244140625,
-      "risk_reward": 0.54
+      "risk_reward": 0.49
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.22745566548221618,
-        "3m": 0.0704972565353521,
-        "6m": -0.1123220630868712,
-        "12m": -0.24010069097327258
+        "1m": 0.23709562187765276,
+        "3m": 0.07890452301725892,
+        "6m": -0.10535058798950236,
+        "12m": -0.23413280895207256
       },
-      "acceleration": 0.1267,
+      "acceleration": 0.1316,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,8 +44,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2044607.45,
-      "relative_volume": 0.21722947355982686,
+      "average_volume": 2054341.4,
+      "relative_volume": 0.3109648668911604,
       "accumulation_days": 3,
       "distribution_days": 2,
       "evidence": [
@@ -61,14 +62,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.0231123142220431,
-        "annualized_volatility": 0.3668966139282439,
-        "maximum_drawdown": -0.5749838763813633,
-        "sharpe_ratio": -0.5818510834859613,
-        "sortino_ratio": -0.6860482600317253,
-        "calmar_ratio": -0.4279773256430324,
-        "beta": 0.9799189031895699,
-        "alpha": -0.39133618946372467
+        "volatility": 0.02311897941715492,
+        "annualized_volatility": 0.3670024206204775,
+        "maximum_drawdown": -0.5749838484591945,
+        "sharpe_ratio": -0.5708660485066824,
+        "sortino_ratio": -0.6732901098464927,
+        "calmar_ratio": -0.422807751098981,
+        "beta": 0.9808911775917971,
+        "alpha": -0.38742000202903476
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -82,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "CDW",
@@ -136,11 +137,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 52.117122906813464,
+    "rsi": 53.17181197136187,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.21722947355982686,
+    "relative_volume": 0.3109648668911604,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -236,7 +237,7 @@
         "last_surprise_pct": -0.0026,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 15.64,
+      "analyst_upside_pct": 14.69,
       "eps_growth_implied": 41.77
     },
     "evidence": [
@@ -329,13 +330,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: CDW\nRating: Drop | Score: 41.75/100 | Confidence: 37.82/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 99.30000305175781 | Resistance: 142.44000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.951005\nNews/Catalyst: CDW (CDW): Buy, Sell, or Hold Post Q1 Earnings?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CDW\nRating: Drop | Score: 43.75/100 | Confidence: 38.95/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 99.30000305175781 | Resistance: 142.44000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.951005\nNews/Catalyst: CDW (CDW): Buy, Sell, or Hold Post Q1 Earnings?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

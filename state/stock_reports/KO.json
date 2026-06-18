@@ -1,40 +1,42 @@
 {
   "ticker": "KO",
-  "generated_at": "2026-06-18T16:23:10.832373",
+  "generated_at": "2026-06-18T18:43:13.537551",
   "score": {
-    "final_score": 54.15,
+    "final_score": 59.4,
     "rating": "Hold",
-    "confidence": 41.28,
+    "confidence": 47.33,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 55.0,
+      "technical": 72.0,
       "momentum": 50.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 45.0
+      "catalyst": 65.0
     },
     "technical": {
-      "score": 55.0,
+      "score": 72.0,
       "evidence": [
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 74.62999725341797,
       "resistance": 83.58999633789062,
-      "risk_reward": 1.11
+      "risk_reward": 0.92
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": -0.030831213158615256,
-        "3m": 0.05088420359576373,
-        "6m": 0.13599859807719028,
-        "12m": 0.16516922572072734
+        "1m": -0.02585546155851326,
+        "3m": 0.05627948543785144,
+        "6m": 0.1418308606498615,
+        "12m": 0.1711512514710245
       },
-      "acceleration": -0.0171,
+      "acceleration": -0.0146,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -43,8 +45,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 16348918.5,
-      "relative_volume": 0.5694180933130225,
+      "average_volume": 16505731.55,
+      "relative_volume": 0.7540187456883727,
       "accumulation_days": 4,
       "distribution_days": 7,
       "evidence": []
@@ -60,28 +62,29 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01067361617969654,
-        "annualized_volatility": 0.16943840400739407,
-        "maximum_drawdown": -0.15502977794176087,
-        "sharpe_ratio": 0.9380140469014926,
-        "sortino_ratio": 1.6287811956188307,
-        "calmar_ratio": 1.0036096900291631,
-        "beta": -0.01782483942190349,
-        "alpha": 0.16217084261633877
+        "volatility": 0.010662992757839539,
+        "annualized_volatility": 0.16926976241355718,
+        "maximum_drawdown": -0.15502968448805177,
+        "sharpe_ratio": 0.9540046995074578,
+        "sortino_ratio": 1.657567485408607,
+        "calmar_ratio": 1.0228344296819913,
+        "beta": -0.01716499986880461,
+        "alpha": 0.1645974794304741
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "KO",
@@ -135,14 +138,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.570299017751395,
+    "rsi": 50.990094736149196,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5694180933130225,
-    "price_above_sma50": false,
+    "relative_volume": 0.7540187456883727,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 74.62999725341797,
     "resistance": 83.58999633789062
   },
@@ -190,10 +193,10 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 4,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.68268996,
     "detail": {
@@ -235,12 +238,13 @@
         "last_surprise_pct": 0.0588,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.95,
+      "analyst_upside_pct": 8.42,
       "eps_growth_implied": 9.54
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -262,6 +266,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "3 Dividend Aristocrats: Buy, Sell or Hold?",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-18T16:30:16Z",
+        "summary": "Three Dividend Aristocrats, three different setups. PepsiCo (NASDAQ:PEP) trades at $146.12 and screens as the most attractive of the three. Coca-Cola (NYSE:KO) at $80.28 looks fully valued. Procter & Gamble (NYSE:PG) at $152.49 faces a tougher near-term setup. With the S&P 500 up 10.03% year to date, each name is pricing in a different story ... 3 Dividend Aristocrats: Buy, Sell or Hold?",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "The Kraft Heinz Company's Taste Elevation: Can It Fuel Growth?",
         "source": "Zacks",
@@ -301,16 +315,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Do Women-Run Companies Make Better Investments? 5 Stocks to Buy",
-        "source": "Zacks",
-        "published": "2026-06-17T15:40:00Z",
-        "summary": "NEM, PBI, KO, AAPL and OXY stocks show how women-led companies are redefining growth with discipline, agility and results.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -337,5 +341,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: KO\nRating: Hold | Score: 54.15/100 | Confidence: 41.28/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 22.671293\nNews/Catalyst: The Kraft Heinz Company's Taste Elevation: Can It Fuel Growth?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: KO\nRating: Hold | Score: 59.4/100 | Confidence: 47.33/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 22.671293\nNews/Catalyst: 3 Dividend Aristocrats: Buy, Sell or Hold?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

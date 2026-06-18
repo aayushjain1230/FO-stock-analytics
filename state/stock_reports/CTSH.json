@@ -1,15 +1,15 @@
 {
   "ticker": "CTSH",
-  "generated_at": "2026-06-18T16:22:58.569060",
+  "generated_at": "2026-06-18T18:43:04.597147",
   "score": {
-    "final_score": 20.5,
+    "final_score": 24.25,
     "rating": "Avoid",
-    "confidence": 9.09,
+    "confidence": 18.94,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 50.0,
       "risk": 60.0,
       "catalyst": 30.0
@@ -19,28 +19,30 @@
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 43.8203010559082,
+      "support": 44.21500015258789,
       "resistance": 62.540000915527344,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.1387519627359266,
-        "3m": -0.2830334339929248,
-        "6m": -0.46964188544253016,
-        "12m": -0.43863943611534306
+        "1m": -0.13099451209925528,
+        "3m": -0.2765755583249443,
+        "6m": -0.464864833170217,
+        "12m": -0.4335830825985587
       },
-      "acceleration": -0.0482,
+      "acceleration": -0.0441,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 9523100.15,
-      "relative_volume": 1.4117149655304213,
+      "score": 25.0,
+      "average_volume": 9732901.2,
+      "relative_volume": 1.812401424561877,
       "accumulation_days": 7,
       "distribution_days": 7,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.81x"
+      ]
     },
     "fundamental": {
       "score": 50.0,
@@ -52,14 +54,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.01888749041302751,
-        "annualized_volatility": 0.29982961513792455,
-        "maximum_drawdown": -0.5030752741813055,
-        "sharpe_ratio": -0.47093971395861206,
-        "sortino_ratio": -0.58257943670357,
-        "calmar_ratio": -0.3381074712299865,
-        "beta": 0.7518643193914788,
-        "alpha": -0.2776663639459933
+        "volatility": 0.01880356018103281,
+        "annualized_volatility": 0.29849726400989696,
+        "maximum_drawdown": -0.49859936380022063,
+        "sharpe_ratio": -0.45941855601268927,
+        "sortino_ratio": -0.5730193293426674,
+        "calmar_ratio": -0.3336185701956734,
+        "beta": 0.7533139938868456,
+        "alpha": -0.2737687694846566
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -73,7 +75,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Debt-to-equity is elevated; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Relative volume is 1.81x; Debt-to-equity is elevated; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "CTSH",
@@ -127,15 +129,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 15.250555450206662,
+    "rsi": 15.609172184361839,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.4117149655304213,
+    "relative_volume": 1.812401424561877,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 43.8203010559082,
+    "setup_type": "volume surge",
+    "support": 44.21500015258789,
     "resistance": 62.540000915527344
   },
   "earnings": {
@@ -227,7 +229,7 @@
         "last_surprise_pct": 0.0498,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 62.48,
+      "analyst_upside_pct": 61.47,
       "eps_growth_implied": 33.75
     },
     "evidence": [
@@ -320,13 +322,20 @@
     "assessment": "Potential diversifier; evaluate correlation and volatility before adding."
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.81x",
     "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.81x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CTSH\nRating: Avoid | Score: 20.5/100 | Confidence: 9.09/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 43.8203010559082 | Resistance: 62.540000915527344\nFundamental Outlook: Fundamentally Average | Forward P/E: 7.11583\nNews/Catalyst: Is ServiceNow (NOW) Quietly Becoming the Core Orchestrator of Enterprise AI Governance?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CTSH\nRating: Avoid | Score: 24.25/100 | Confidence: 18.94/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 44.21500015258789 | Resistance: 62.540000915527344\nFundamental Outlook: Fundamentally Average | Forward P/E: 7.11583\nNews/Catalyst: Is ServiceNow (NOW) Quietly Becoming the Core Orchestrator of Enterprise AI Governance?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.81x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
