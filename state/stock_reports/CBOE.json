@@ -1,6 +1,6 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-19T20:54:19.997926",
+  "generated_at": "2026-06-19T22:02:22.192922",
   "score": {
     "final_score": 41.7,
     "rating": "Drop",
@@ -19,19 +19,19 @@
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 249.10000610351562,
+      "support": 254.69000244140625,
       "resistance": 366.70001220703125,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.3122789395230773,
-        "3m": -0.12231595644498405,
-        "6m": 0.005014230554873711,
-        "12m": 0.1101482054720555
+        "1m": -0.30320019964667744,
+        "3m": -0.11062542593511238,
+        "6m": 0.03689581371840833,
+        "12m": 0.1397124840758852
       },
-      "acceleration": -0.1248,
+      "acceleration": -0.1291,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -39,12 +39,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1935850.0,
-      "relative_volume": 1.5761551773122917,
+      "average_volume": 1831120.0,
+      "relative_volume": 2.3027982873869544,
       "accumulation_days": 3,
       "distribution_days": 10,
       "evidence": [
-        "Relative volume is 1.58x"
+        "Relative volume is 2.30x"
       ]
     },
     "fundamental": {
@@ -57,14 +57,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01667549749588717,
-        "annualized_volatility": 0.26471531617438665,
-        "maximum_drawdown": -0.3192743025894733,
-        "sharpe_ratio": 0.8660861117013504,
-        "sortino_ratio": 1.1020854127898874,
-        "calmar_ratio": 0.6701449632954596,
-        "beta": -0.21880614419658856,
-        "alpha": 0.26965507771718633
+        "volatility": 0.016660712225741215,
+        "annualized_volatility": 0.26448060728714806,
+        "maximum_drawdown": -0.3039982927043049,
+        "sharpe_ratio": 0.9105007511572637,
+        "sortino_ratio": 1.156481449465598,
+        "calmar_ratio": 0.7503962529127675,
+        "beta": -0.21526837722890263,
+        "alpha": 0.2794949360177891
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -78,7 +78,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.58x; eps growth is strong; earnings surprise"
+    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 2.30x; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -128,19 +128,18 @@
     "next_earnings_date": "1777638600",
     "eps_current_year": 11.7,
     "eps_forward": 14.71593,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 21.244716930985476,
+    "rsi": 20.53306463663283,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.5761551773122917,
+    "relative_volume": 2.3027982873869544,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "volume surge",
-    "support": 249.10000610351562,
+    "support": 254.69000244140625,
     "resistance": 366.70001220703125
   },
   "earnings": {
@@ -350,7 +349,7 @@
     "eps_growth": 0.544,
     "roe": 0.2514,
     "forward_pe": 16.927235,
-    "relative_volume": 1.5761551773122917,
+    "relative_volume": 2.3027982873869544,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -359,13 +358,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.30x",
     "date_of_change": "2026-06-19",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.30x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 41.7/100 | Confidence: 39.56/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 249.10000610351562 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.927235\nNews/Catalyst: Charles Schwab Planning to Roll Out S&P 500 Prediction Markets With Cboe: WSJ\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 41.7/100 | Confidence: 39.56/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 254.69000244140625 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.927235\nNews/Catalyst: Charles Schwab Planning to Roll Out S&P 500 Prediction Markets With Cboe: WSJ\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.30x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

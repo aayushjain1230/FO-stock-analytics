@@ -1,41 +1,45 @@
 {
   "ticker": "CI",
-  "generated_at": "2026-06-19T20:54:24.454356",
+  "generated_at": "2026-06-19T22:02:32.676152",
   "score": {
-    "final_score": 53.95,
-    "rating": "Hold",
-    "confidence": 51.29,
+    "final_score": 65.45,
+    "rating": "Watch",
+    "confidence": 61.29,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 50.0,
-      "momentum": 40.0,
+      "technical": 82.0,
+      "momentum": 50.0,
       "volume": 25.0,
       "fundamental": 63.0,
       "risk": 100,
-      "catalyst": 65.0
+      "catalyst": 85.0
     },
     "technical": {
-      "score": 50.0,
+      "score": 82.0,
       "evidence": [
+        "Price above SMA50",
+        "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 258.0799865722656,
       "resistance": 300.7099914550781,
-      "risk_reward": 1.01
+      "risk_reward": 0.58
     },
     "momentum": {
-      "score": 40.0,
+      "score": 50.0,
       "returns": {
-        "1m": -0.03567523194970523,
-        "3m": 0.06167939462670291,
-        "6m": 0.022910848291808117,
-        "12m": -0.08656698987261413
+        "1m": 0.00018233158738967248,
+        "3m": 0.08364118454751823,
+        "6m": 0.040309907112054955,
+        "12m": -0.07325441863953397
       },
-      "acceleration": 0.0502,
+      "acceleration": 0.0635,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "Momentum is accelerating"
@@ -43,12 +47,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1556940.0,
-      "relative_volume": 1.5708376687605174,
+      "average_volume": 1499225.0,
+      "relative_volume": 0.698761026530374,
       "accumulation_days": 3,
-      "distribution_days": 3,
+      "distribution_days": 2,
       "evidence": [
-        "Relative volume is 1.57x"
+        "Accumulation days exceed distribution days"
       ]
     },
     "fundamental": {
@@ -61,27 +65,28 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019304232243826165,
-        "annualized_volatility": 0.3064451866091905,
-        "maximum_drawdown": -0.32102608915328124,
-        "sharpe_ratio": -0.09125324610447112,
-        "sortino_ratio": -0.10622608644264342,
-        "calmar_ratio": -0.22807421487568957,
-        "beta": 0.16234165685927587,
-        "alpha": -0.057930313864203685
+        "volatility": 0.019302129081868003,
+        "annualized_volatility": 0.3064117999481414,
+        "maximum_drawdown": -0.32102614769502213,
+        "sharpe_ratio": -0.0577995907012527,
+        "sortino_ratio": -0.06716108722731921,
+        "calmar_ratio": -0.1982900676213773,
+        "beta": 0.16607357517945204,
+        "alpha": -0.04755499128075061
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 85.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "CI",
@@ -131,18 +136,17 @@
     "next_earnings_date": "1785414600",
     "eps_current_year": 25.01,
     "eps_forward": 33.45162,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 51.71213662222123,
+    "rsi": 50.68199045695333,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.5708376687605174,
-    "price_above_sma50": false,
-    "price_above_sma200": false,
-    "setup_type": "volume surge",
+    "relative_volume": 0.698761026530374,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
+    "setup_type": "trend continuation",
     "support": 258.0799865722656,
     "resistance": 300.7099914550781
   },
@@ -190,7 +194,7 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 3,
@@ -241,6 +245,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -331,34 +336,33 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8046,
-    "probability_pct": 80.46,
+    "probability_of_outperformance": 0.8394,
+    "probability_pct": 83.94,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 53.95/100"
+      "Composite score 65.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 53.95,
-    "technical_score": 50.0,
-    "momentum_score": 40.0,
+    "final_score": 65.45,
+    "technical_score": 82.0,
+    "momentum_score": 50.0,
     "volume_score": 25.0,
     "fundamental_score": 63.0,
     "risk_score": 100,
-    "catalyst_score": 65.0,
+    "catalyst_score": 85.0,
     "revenue_growth": 0.046,
     "eps_growth": 0.291,
     "roe": 0.16268998,
     "forward_pe": 8.3484745,
-    "relative_volume": 1.5708376687605174,
+    "relative_volume": 0.698761026530374,
     "breakout": false,
-    "price_above_sma50": false,
-    "price_above_sma200": false,
+    "price_above_sma50": true,
+    "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
     "major_news": true
@@ -372,5 +376,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CI\nRating: Hold | Score: 53.95/100 | Confidence: 51.29/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 258.0799865722656 | Resistance: 300.7099914550781\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.3484745\nNews/Catalyst: Why Did UnitedHealth Stock Choose Pain Over Growth?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CI\nRating: Watch | Score: 65.45/100 | Confidence: 61.29/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 258.0799865722656 | Resistance: 300.7099914550781\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.3484745\nNews/Catalyst: Why Did UnitedHealth Stock Choose Pain Over Growth?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
