@@ -1,18 +1,18 @@
 {
   "ticker": "CHD",
-  "generated_at": "2026-06-18T23:18:45.560848",
+  "generated_at": "2026-06-19T16:00:01.635082",
   "score": {
-    "final_score": 60.0,
+    "final_score": 63.0,
     "rating": "Hold",
-    "confidence": 44.11,
+    "confidence": 51.96,
     "risk_level": "Controlled",
     "categories": {
       "technical": 82.0,
       "momentum": 50.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 65.0,
       "risk": 100,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
       "score": 82.0,
@@ -45,12 +45,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1922039.1,
-      "relative_volume": 1.168697348560703,
+      "score": 25.0,
+      "average_volume": 2083555.0,
+      "relative_volume": 2.628488328841811,
       "accumulation_days": 5,
       "distribution_days": 5,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.63x"
+      ]
     },
     "fundamental": {
       "score": 65.0,
@@ -60,22 +62,21 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.013505115711746427,
-        "annualized_volatility": 0.21438706560259269,
-        "maximum_drawdown": -0.27277287942686446,
-        "sharpe_ratio": -0.14130416497751172,
-        "sortino_ratio": -0.21181931953378802,
-        "calmar_ratio": -0.1900774886269095,
-        "beta": 0.019307902950855504,
-        "alpha": -0.03383251452281304
+        "volatility": 0.01350511780151576,
+        "annualized_volatility": 0.2143870987766524,
+        "maximum_drawdown": -0.2727728296138192,
+        "sharpe_ratio": -0.14130444683622373,
+        "sortino_ratio": -0.2118195759802625,
+        "calmar_ratio": -0.1900777748489216,
+        "beta": 0.018464489506636848,
+        "alpha": -0.033702161529717264
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -107,7 +108,7 @@
     "interest_coverage": null,
     "forward_pe": 23.383245,
     "trailing_pe": 31.457237,
-    "peg": 3.07,
+    "peg": 2.98,
     "price_to_book": 5.4116917,
     "price_to_sales": 3.6514835,
     "enterprise_to_ebitda": 18.151,
@@ -136,10 +137,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.168697348560703,
+    "relative_volume": 2.628488328841811,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 90.72000122070312,
     "resistance": 98.41999816894531
   },
@@ -188,10 +189,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 2,
+    "bullish_news_score": 1,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.94311994,
     "detail": {
       "earnings": {
@@ -237,7 +238,6 @@
     },
     "evidence": [
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -259,6 +259,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "3 Profitable Stocks We Think Twice About",
+        "source": "StockStory",
+        "published": "2026-06-19T15:24:58Z",
+        "summary": "While profitability is essential, it doesn\u2019t guarantee long-term success. Some companies that rest on their margins will lose ground as competition intensifies \u2014 as Jeff Bezos said, \u201cYour margin is my opportunity\u201d.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Is Church & Dwight Stock Underperforming the Nasdaq?",
         "source": "Barchart",
@@ -298,16 +308,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Is It Time To Reconsider Church & Dwight (CHD) After Recent Share Price Weakness?",
-        "source": "Simply Wall St.",
-        "published": "2026-06-04T06:10:27Z",
-        "summary": "Investors may be wondering if Church & Dwight at around US$92.89 is offering value right now, or if the price already reflects what they might expect from the stock. The stock is up 12.4% year to date, even though it is flat over the past month and has declined 5.5% over the last year. This can change how investors think about both upside potential and risk. Recent attention on Church & Dwight has focused on its role within the Household Products sector and how its share price compares with...",
-        "bullish_score": 0,
-        "bearish_score": 2,
-        "importance_score": 60,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -327,42 +327,50 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7224,
-    "probability_pct": 72.24,
+    "probability_of_outperformance": 0.7496,
+    "probability_pct": 74.96,
     "confidence": "High",
     "evidence": [
-      "Composite score 60.0/100"
+      "Volume surge above 1.5x",
+      "Composite score 63.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.0,
+    "final_score": 63.0,
     "technical_score": 82.0,
     "momentum_score": 50.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 65.0,
     "risk_score": 100,
-    "catalyst_score": 45.0,
+    "catalyst_score": 30.0,
     "revenue_growth": 0.002,
     "eps_growth": 0.022,
     "roe": 0.16779,
     "forward_pe": 23.383245,
-    "relative_volume": 1.168697348560703,
+    "relative_volume": 2.628488328841811,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.63x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.63x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CHD\nRating: Hold | Score: 60.0/100 | Confidence: 44.11/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 90.72000122070312 | Resistance: 98.41999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 23.383245\nNews/Catalyst: Is Church & Dwight Stock Underperforming the Nasdaq?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CHD\nRating: Hold | Score: 63.0/100 | Confidence: 51.96/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 90.72000122070312 | Resistance: 98.41999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 23.383245\nNews/Catalyst: 3 Profitable Stocks We Think Twice About\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.63x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

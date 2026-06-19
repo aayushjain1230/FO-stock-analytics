@@ -1,15 +1,15 @@
 {
   "ticker": "MMM",
-  "generated_at": "2026-06-18T23:19:32.775027",
+  "generated_at": "2026-06-19T16:00:36.441779",
   "score": {
-    "final_score": 60.55,
-    "rating": "Hold",
-    "confidence": 51.85,
+    "final_score": 71.8,
+    "rating": "Watch",
+    "confidence": 64.56,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
       "momentum": 55.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 47.0,
       "risk": 100,
       "catalyst": 45.0
@@ -46,13 +46,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 3750215.45,
-      "relative_volume": 0.7530258028242084,
-      "accumulation_days": 4,
+      "score": 100,
+      "average_volume": 3955740.0,
+      "relative_volume": 1.7530221905383063,
+      "accumulation_days": 5,
       "distribution_days": 1,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.75x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -65,14 +68,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019810086303058874,
-        "annualized_volatility": 0.3144753708517242,
-        "maximum_drawdown": -0.1877121198739068,
-        "sharpe_ratio": 0.9469807670860304,
-        "sortino_ratio": 1.6546334301937924,
-        "calmar_ratio": 1.5140253927231055,
-        "beta": 0.9661720864939595,
-        "alpha": 0.1207232696891114
+        "volatility": 0.019810086047082398,
+        "annualized_volatility": 0.3144753667882237,
+        "maximum_drawdown": -0.18771211987390668,
+        "sharpe_ratio": 0.9469806534994064,
+        "sortino_ratio": 1.654632549109933,
+        "calmar_ratio": 1.5140251236580349,
+        "beta": 0.9657732961586378,
+        "alpha": 0.1195325579912226
       },
       "evidence": []
     },
@@ -112,7 +115,7 @@
     "interest_coverage": null,
     "forward_pe": 16.966522,
     "trailing_pe": 30.944124,
-    "peg": 1.71,
+    "peg": 1.7,
     "price_to_book": 25.671356,
     "price_to_sales": 3.3473349,
     "enterprise_to_ebitda": 14.689,
@@ -141,10 +144,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7530258028242084,
+    "relative_volume": 1.7530221905383063,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 141.1999969482422,
     "resistance": 161.6300048828125
   },
@@ -332,19 +335,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6861,
-    "probability_pct": 68.61,
+    "probability_of_outperformance": 0.7993,
+    "probability_pct": 79.93,
     "confidence": "High",
     "evidence": [
-      "Composite score 60.55/100"
+      "Volume surge above 1.5x",
+      "Composite score 71.8/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.55,
+    "final_score": 71.8,
     "technical_score": 75.0,
     "momentum_score": 55.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 47.0,
     "risk_score": 100,
     "catalyst_score": 45.0,
@@ -352,7 +356,7 @@
     "eps_growth": -0.397,
     "roe": 0.71458,
     "forward_pe": 16.966522,
-    "relative_volume": 0.7530258028242084,
+    "relative_volume": 1.7530221905383063,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,10 +368,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: MMM\nRating: Hold | Score: 60.55/100 | Confidence: 51.85/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 141.1999969482422 | Resistance: 161.6300048828125\nFundamental Outlook: Fundamentally Weak | Forward P/E: 16.966522\nNews/Catalyst: Do Options Traders Know Something About 3M Stock We Don't?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: MMM\nRating: Watch | Score: 71.8/100 | Confidence: 64.56/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 141.1999969482422 | Resistance: 161.6300048828125\nFundamental Outlook: Fundamentally Weak | Forward P/E: 16.966522\nNews/Catalyst: Do Options Traders Know Something About 3M Stock We Don't?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,18 +1,18 @@
 {
   "ticker": "ABT",
-  "generated_at": "2026-06-18T23:17:36.218427",
+  "generated_at": "2026-06-19T15:59:12.016000",
   "score": {
-    "final_score": 33.8,
+    "final_score": 36.8,
     "rating": "Drop",
-    "confidence": 19.74,
+    "confidence": 27.42,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 47.0,
       "risk": 75.0,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
       "score": 53.0,
@@ -32,19 +32,21 @@
       "returns": {
         "1m": -0.0046160328093171055,
         "3m": -0.17002839489858734,
-        "6m": -0.2951655106333634,
-        "12m": -0.31799165987193534
+        "6m": -0.29516546776242536,
+        "12m": -0.3179915795936509
       },
       "acceleration": -0.0224,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 12152427.95,
-      "relative_volume": 0.8563769349482134,
+      "score": 25.0,
+      "average_volume": 13730265.0,
+      "relative_volume": 3.056299350376704,
       "accumulation_days": 4,
-      "distribution_days": 5,
-      "evidence": []
+      "distribution_days": 6,
+      "evidence": [
+        "Relative volume is 3.06x"
+      ]
     },
     "fundamental": {
       "score": 47.0,
@@ -54,28 +56,27 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.014376149882973565,
-        "annualized_volatility": 0.22821430440563023,
-        "maximum_drawdown": -0.3963999652386123,
-        "sharpe_ratio": -0.20889745598142306,
-        "sortino_ratio": -0.2631781244306219,
-        "calmar_ratio": -0.179846517431384,
-        "beta": 0.21787655766157213,
-        "alpha": -0.08760554110936214
+        "volatility": 0.014376146838270387,
+        "annualized_volatility": 0.22821425607246568,
+        "maximum_drawdown": -0.39639996523861254,
+        "sharpe_ratio": -0.20889738475295025,
+        "sortino_ratio": -0.26317812034860805,
+        "calmar_ratio": -0.17984642944120213,
+        "beta": 0.21767370457358026,
+        "alpha": -0.0878531728547535
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Relative volume is 3.06x"
   },
   "fundamentals": {
     "ticker": "ABT",
@@ -103,7 +104,7 @@
     "interest_coverage": null,
     "forward_pe": 14.590747,
     "trailing_pe": 24.764708,
-    "peg": 1.34,
+    "peg": 1.31,
     "price_to_book": 2.9579446,
     "price_to_sales": 3.4119225,
     "enterprise_to_ebitda": 15.78,
@@ -132,10 +133,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8563769349482134,
+    "relative_volume": 3.056299350376704,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 82.55999755859375,
     "resistance": 105.45999908447266
   },
@@ -184,10 +185,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 3,
+    "bullish_news_score": 1,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.82671,
     "detail": {
       "earnings": {
@@ -233,7 +234,6 @@
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -255,6 +255,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Citi Believes Abbott (ABT) Shares are Undervalued Relative to Business Segments",
+        "source": "Insider Monkey",
+        "published": "2026-06-19T03:37:33Z",
+        "summary": "Abbott Laboratories (NYSE:ABT) is included among the Dividend Stock Portfolio: Top 10 Stocks to Buy According to Reddit. On June 17, Citi reiterated its Buy rating on Abbott Laboratories (NYSE:ABT). It said that the company\u2019s individual businesses may be worth more than the market currently values the company as a whole. According to the firm\u2019s [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Living Longer Is Big Business. These Stocks Will Benefit.",
         "source": "Barrons.com",
@@ -294,16 +304,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "How Investors May Respond To Abbott (ABT) Dividend And CE Mark For Dual Glucose\u2011Ketone Sensor",
-        "source": "Simply Wall St.",
-        "published": "2026-06-14T22:09:30Z",
-        "summary": "Earlier this month, Abbott\u2019s board declared a quarterly dividend of US$0.63 per share, payable on August 17, 2026, to shareholders of record on July 15, marking the company\u2019s 410th consecutive quarterly payout since 1924. At the same time, Abbott secured CE Mark for its Libre Duo dual glucose\u2011ketone sensors and expanded a commercialization agreement with MiniMed, underscoring how its diabetes technology is targeting diabetic ketoacidosis risks highlighted by recent company-backed...",
-        "bullish_score": 1,
-        "bearish_score": 2,
-        "importance_score": 75,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -323,43 +323,51 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5721,
-    "probability_pct": 57.21,
+    "probability_of_outperformance": 0.6059,
+    "probability_pct": 60.59,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 33.8/100"
+      "Composite score 36.8/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 33.8,
+    "final_score": 36.8,
     "technical_score": 53.0,
     "momentum_score": 0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 47.0,
     "risk_score": 75.0,
-    "catalyst_score": 45.0,
+    "catalyst_score": 30.0,
     "revenue_growth": 0.078,
     "eps_growth": -0.197,
     "roe": 0.123339996,
     "forward_pe": 14.590747,
-    "relative_volume": 0.8563769349482134,
+    "relative_volume": 3.056299350376704,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 3.06x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 3.06x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: ABT\nRating: Drop | Score: 33.8/100 | Confidence: 19.74/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 82.55999755859375 | Resistance: 105.45999908447266\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.590747\nNews/Catalyst: Living Longer Is Big Business. These Stocks Will Benefit.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABT\nRating: Drop | Score: 36.8/100 | Confidence: 27.42/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 82.55999755859375 | Resistance: 105.45999908447266\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.590747\nNews/Catalyst: Citi Believes Abbott (ABT) Shares are Undervalued Relative to Business Segments\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.06x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

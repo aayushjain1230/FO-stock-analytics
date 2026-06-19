@@ -1,15 +1,15 @@
 {
   "ticker": "AOS",
-  "generated_at": "2026-06-18T23:18:00.751091",
+  "generated_at": "2026-06-19T15:59:30.167372",
   "score": {
-    "final_score": 39.35,
-    "rating": "Drop",
-    "confidence": 34.08,
+    "final_score": 46.85,
+    "rating": "Hold",
+    "confidence": 41.83,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 10.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 49.0,
       "risk": 75.0,
       "catalyst": 25.0
@@ -41,12 +41,14 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1617831.35,
-      "relative_volume": 0.9901693399624132,
-      "accumulation_days": 7,
+      "score": 75.0,
+      "average_volume": 1748965.0,
+      "relative_volume": 2.4154857301318207,
+      "accumulation_days": 8,
       "distribution_days": 4,
       "evidence": [
+        "Relative volume is 2.42x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -58,14 +60,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.016437053422696118,
-        "annualized_volatility": 0.26093013385882186,
-        "maximum_drawdown": -0.36930920549237534,
-        "sharpe_ratio": -0.4994939310130719,
-        "sortino_ratio": -0.7192025474582309,
-        "calmar_ratio": -0.41075336181031347,
-        "beta": 0.6113910221058667,
-        "alpha": -0.24238802963947315
+        "volatility": 0.016437047961565417,
+        "annualized_volatility": 0.26093004716605955,
+        "maximum_drawdown": -0.369309205492377,
+        "sharpe_ratio": -0.49949382107272977,
+        "sortino_ratio": -0.7192026483799028,
+        "calmar_ratio": -0.41075314289381115,
+        "beta": 0.6112146831379855,
+        "alpha": -0.24315544298435723
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -106,7 +108,7 @@
     "interest_coverage": null,
     "forward_pe": 13.955774,
     "trailing_pe": 15.525333,
-    "peg": 1.58,
+    "peg": 1.53,
     "price_to_book": 4.2730274,
     "price_to_sales": 2.1050875,
     "enterprise_to_ebitda": 11.009,
@@ -135,10 +137,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9901693399624132,
+    "relative_volume": 2.4154857301318207,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 55.779998779296875,
     "resistance": 67.2699966430664
   },
@@ -325,19 +327,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5126,
-    "probability_pct": 51.26,
+    "probability_of_outperformance": 0.6186,
+    "probability_pct": 61.86,
     "confidence": "High",
     "evidence": [
-      "Composite score 39.35/100"
+      "Volume surge above 1.5x",
+      "Composite score 46.85/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 39.35,
+    "final_score": 46.85,
     "technical_score": 53.0,
     "momentum_score": 10.0,
-    "volume_score": 25.0,
+    "volume_score": 75.0,
     "fundamental_score": 49.0,
     "risk_score": 75.0,
     "catalyst_score": 25.0,
@@ -345,7 +348,7 @@
     "eps_growth": -0.105,
     "roe": 0.28267,
     "forward_pe": 13.955774,
-    "relative_volume": 0.9901693399624132,
+    "relative_volume": 2.4154857301318207,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -354,13 +357,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.42x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.42x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: AOS\nRating: Drop | Score: 39.35/100 | Confidence: 34.08/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 55.779998779296875 | Resistance: 67.2699966430664\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.955774\nNews/Catalyst: Everpure Stock's 26.83X P/E Beats Industry: Is It Worth the Premium?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AOS\nRating: Hold | Score: 46.85/100 | Confidence: 41.83/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 55.779998779296875 | Resistance: 67.2699966430664\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.955774\nNews/Catalyst: Everpure Stock's 26.83X P/E Beats Industry: Is It Worth the Premium?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.42x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

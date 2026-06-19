@@ -1,6 +1,6 @@
 {
   "ticker": "FIZZ",
-  "generated_at": "2026-06-18T23:19:26.998424",
+  "generated_at": "2026-06-19T16:00:32.091614",
   "score": {
     "final_score": 53.8,
     "rating": "Hold",
@@ -45,12 +45,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 338809.45,
-      "relative_volume": 1.7602490131252242,
+      "average_volume": 339720.0,
+      "relative_volume": 1.8091369363004828,
       "accumulation_days": 7,
       "distribution_days": 7,
       "evidence": [
-        "Relative volume is 1.76x"
+        "Relative volume is 1.81x"
       ]
     },
     "fundamental": {
@@ -67,8 +67,8 @@
         "sharpe_ratio": -0.2531404531955916,
         "sortino_ratio": -0.4197600641245654,
         "calmar_ratio": -0.25356259422066024,
-        "beta": 0.10313864248459596,
-        "alpha": -0.08863882098099532
+        "beta": 0.10242877891036227,
+        "alpha": -0.08864275114267792
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -141,7 +141,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.7602490131252242,
+    "relative_volume": 1.8091369363004828,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation, volume surge",
@@ -352,7 +352,7 @@
     "eps_growth": 0.048,
     "roe": 0.37949002,
     "forward_pe": 18.034986,
-    "relative_volume": 1.7602490131252242,
+    "relative_volume": 1.8091369363004828,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -361,13 +361,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.81x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.81x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: FIZZ\nRating: Hold | Score: 53.8/100 | Confidence: 50.26/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.034986\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: FIZZ\nRating: Hold | Score: 53.8/100 | Confidence: 50.26/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.034986\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.81x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

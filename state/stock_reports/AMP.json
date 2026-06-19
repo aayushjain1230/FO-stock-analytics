@@ -1,10 +1,10 @@
 {
   "ticker": "AMP",
-  "generated_at": "2026-06-18T23:17:56.823629",
+  "generated_at": "2026-06-19T15:59:27.256858",
   "score": {
-    "final_score": 53.95,
+    "final_score": 55.7,
     "rating": "Hold",
-    "confidence": 46.68,
+    "confidence": 53.0,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 78.0,
       "risk": 100,
-      "catalyst": 30.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 53.0,
@@ -44,12 +44,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 632090.95,
-      "relative_volume": 0.8484839088425488,
+      "average_volume": 668740.0,
+      "relative_volume": 1.8980470736011006,
       "accumulation_days": 5,
-      "distribution_days": 4,
+      "distribution_days": 5,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.90x"
       ]
     },
     "fundamental": {
@@ -62,21 +62,23 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01735550074761079,
-        "annualized_volatility": 0.27551003314304234,
-        "maximum_drawdown": -0.26389966480134974,
-        "sharpe_ratio": 0.2861539184504885,
-        "sortino_ratio": 0.3736946212327996,
-        "calmar_ratio": 0.15863703631083972,
-        "beta": 1.0529559213495006,
-        "alpha": -0.11414621957168153
+        "volatility": 0.017355501412328115,
+        "annualized_volatility": 0.2755100436951028,
+        "maximum_drawdown": -0.26389982408593426,
+        "sharpe_ratio": 0.2861537903278837,
+        "sortino_ratio": 0.3736945203382155,
+        "calmar_ratio": 0.15863679963977018,
+        "beta": 1.0516973842324369,
+        "alpha": -0.11529178652734373
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
+        "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
@@ -108,7 +110,7 @@
     "interest_coverage": null,
     "forward_pe": 9.811554,
     "trailing_pe": 11.653702,
-    "peg": 1.58,
+    "peg": 1.57,
     "price_to_book": 6.778179,
     "price_to_sales": 2.1754293,
     "enterprise_to_ebitda": null,
@@ -123,7 +125,7 @@
     "target_mean_price": 540.8182,
     "target_high_price": 636.0,
     "target_low_price": 467.0,
-    "recommendation": "none",
+    "recommendation": "buy",
     "number_of_analysts": 11.0,
     "dividend_yield": 1.44,
     "payout_ratio": 0.1595,
@@ -137,10 +139,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8484839088425488,
+    "relative_volume": 1.8980470736011006,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 430.3999938964844,
     "resistance": 477.8599853515625
   },
@@ -186,12 +188,12 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 4,
     "bearish_news_score": 1,
     "institutional_ownership": 0.92151,
     "detail": {
@@ -238,11 +240,13 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
-    "consensus": "none",
+    "consensus": "buy",
     "target_mean_price": 540.8182,
     "target_high_price": 636.0,
     "target_low_price": 467.0,
@@ -259,6 +263,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Are Investors Undervaluing Ameriprise Financial (AMP) Right Now?",
+        "source": "Zacks",
+        "published": "2026-06-19T13:40:03Z",
+        "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "2 Profitable Stocks on Our Watchlist and 1 Facing Challenges",
+        "source": "StockStory",
+        "published": "2026-06-19T13:16:58Z",
+        "summary": "While profitability is essential, it doesn\u2019t guarantee long-term success. Some companies that rest on their margins will lose ground as competition intensifies \u2014 as Jeff Bezos said, \u201cYour margin is my opportunity\u201d.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "The case for applying an old-school dividend strategy to investing today",
         "source": "Financial Planning",
@@ -288,26 +312,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "How Raymond James Financial's Stock Performance Compared to Other Financial Stocks?",
-        "source": "Barchart",
-        "published": "2026-06-12T13:52:35Z",
-        "summary": "Raymond James Financial has underperformed the Financial industry over the past year, but analysts are cautiously optimistic about the stock\u2019s prospects.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Wells Fargo\u2019s FiNet Recruits $650 Million Team From Stifel",
-        "source": "Barrons.com",
-        "published": "2026-06-10T18:50:00Z",
-        "summary": "Wells Fargo  Advisors has notched another recruiting win for its FiNet independent channel, bringing on an advisory team that oversaw more than $650 million in client assets from  Stifel  Independent Advisors.  The Rebich Investments team, based in Edinboro, Pa., joined Wells Fargo on Monday, according to registration records.  The 10-person team is led by Eli Rebich, and includes advisors Brian Long, Greg Keil, Zane Wright, and Rebich\u2019s daughter, Allison Rebich.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -327,44 +331,53 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7535,
-    "probability_pct": 75.35,
+    "probability_of_outperformance": 0.8344,
+    "probability_pct": 83.44,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 53.95/100"
+      "Analyst data is supportive",
+      "Composite score 55.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 53.95,
+    "final_score": 55.7,
     "technical_score": 53.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 78.0,
     "risk_score": 100,
-    "catalyst_score": 30.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.09,
     "eps_growth": 0.66,
     "roe": 0.66936,
     "forward_pe": 9.811554,
-    "relative_volume": 0.8484839088425488,
+    "relative_volume": 1.8980470736011006,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": true,
-    "analyst_revision": false,
-    "major_news": false
+    "analyst_revision": true,
+    "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.90x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.90x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: AMP\nRating: Hold | Score: 53.95/100 | Confidence: 46.68/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.811554\nNews/Catalyst: The case for applying an old-school dividend strategy to investing today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMP\nRating: Hold | Score: 55.7/100 | Confidence: 53.0/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.811554\nNews/Catalyst: Are Investors Undervaluing Ameriprise Financial (AMP) Right Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.90x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "CMI",
-  "generated_at": "2026-06-18T23:18:54.707020",
+  "generated_at": "2026-06-19T16:00:08.584980",
   "score": {
     "final_score": 77.05,
     "rating": "Watch",
@@ -35,8 +35,8 @@
       "returns": {
         "1m": 0.09045505035668788,
         "3m": 0.33109637257171953,
-        "6m": 0.40230697634657053,
-        "12m": 1.3136589499288815
+        "6m": 0.4023070600613121,
+        "12m": 1.3136591778132054
       },
       "acceleration": 0.1299,
       "evidence": [
@@ -50,12 +50,12 @@
     },
     "volume": {
       "score": 75.0,
-      "average_volume": 1102415.3,
-      "relative_volume": 1.7769220002661428,
+      "average_volume": 1108220.0,
+      "relative_volume": 1.8723719117142805,
       "accumulation_days": 7,
       "distribution_days": 5,
       "evidence": [
-        "Relative volume is 1.78x",
+        "Relative volume is 1.87x",
         "Accumulation days exceed distribution days",
         "High-volume breakout behavior"
       ]
@@ -68,14 +68,14 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.0205821242893722,
-        "annualized_volatility": 0.3267310939386051,
-        "maximum_drawdown": -0.30481320006709745,
-        "sharpe_ratio": 1.680926420947702,
-        "sortino_ratio": 2.4494713518430613,
-        "calmar_ratio": 2.1045975792870935,
-        "beta": 1.2439759455345605,
-        "alpha": 0.3212165128797828
+        "volatility": 0.02058212590065293,
+        "annualized_volatility": 0.32673111951689376,
+        "maximum_drawdown": -0.30481320006709756,
+        "sharpe_ratio": 1.680926488812666,
+        "sortino_ratio": 2.4494708884965037,
+        "calmar_ratio": 2.1045978881927496,
+        "beta": 1.2428672144321165,
+        "alpha": 0.31979343196429477
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -116,7 +116,7 @@
     "interest_coverage": null,
     "forward_pe": 21.147491,
     "trailing_pe": 37.23948,
-    "peg": 1.68,
+    "peg": 1.72,
     "price_to_book": 8.008982,
     "price_to_sales": 2.9184763,
     "enterprise_to_ebitda": 20.517,
@@ -145,7 +145,7 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 1.7769220002661428,
+    "relative_volume": 1.8723719117142805,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation, volume surge",
@@ -357,7 +357,7 @@
     "eps_growth": -0.21,
     "roe": 0.21993999,
     "forward_pe": 21.147491,
-    "relative_volume": 1.7769220002661428,
+    "relative_volume": 1.8723719117142805,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -367,12 +367,18 @@
   },
   "why_now": {
     "send_alert": true,
-    "reason": "52-week high",
-    "evidence": "Price is pressing against 52-week highs",
-    "date_of_change": "2026-06-18",
-    "strength": 65,
-    "invalidates": "Failed breakout below prior range high",
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.87x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.87x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      },
       {
         "reason": "52-week high",
         "evidence": "Price is pressing against 52-week highs",
@@ -381,5 +387,5 @@
       }
     ]
   },
-  "report": "Ticker: CMI\nRating: Watch | Score: 77.05/100 | Confidence: 64.1/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 511.70001220703125 | Resistance: 717.780029296875\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.147491\nNews/Catalyst: These Four Stocks Hit New Highs, And They're Not Tech Names\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: CMI\nRating: Watch | Score: 77.05/100 | Confidence: 64.1/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 511.70001220703125 | Resistance: 717.780029296875\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.147491\nNews/Catalyst: These Four Stocks Hit New Highs, And They're Not Tech Names\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.87x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

@@ -1,15 +1,15 @@
 {
   "ticker": "BNY",
-  "generated_at": "2026-06-18T23:18:26.869508",
+  "generated_at": "2026-06-19T15:59:48.297857",
   "score": {
-    "final_score": 70.15,
+    "final_score": 77.65,
     "rating": "Watch",
-    "confidence": 51.99,
+    "confidence": 68.95,
     "risk_level": "Controlled",
     "categories": {
       "technical": 80.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 76.0,
       "risk": 100,
       "catalyst": 50.0
@@ -48,12 +48,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3456887.35,
-      "relative_volume": 0.8381375227630717,
+      "score": 50.0,
+      "average_volume": 3667365.0,
+      "relative_volume": 1.9378763771808916,
       "accumulation_days": 2,
-      "distribution_days": 4,
-      "evidence": []
+      "distribution_days": 5,
+      "evidence": [
+        "Relative volume is 1.94x",
+        "High-volume breakout behavior"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -66,14 +69,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014091224074671331,
-        "annualized_volatility": 0.22369124742039959,
-        "maximum_drawdown": -0.17582915082298045,
-        "sharpe_ratio": 2.2233454155205536,
-        "sortino_ratio": 3.039271498761488,
-        "calmar_ratio": 3.4299973583162906,
-        "beta": 0.8433838739969511,
-        "alpha": 0.34276852715308853
+        "volatility": 0.014091227124236846,
+        "annualized_volatility": 0.22369129583075134,
+        "maximum_drawdown": -0.1758291508229809,
+        "sharpe_ratio": 2.223344984116207,
+        "sortino_ratio": 3.039272490862477,
+        "calmar_ratio": 3.4299973583162844,
+        "beta": 0.8418866385943782,
+        "alpha": 0.34194129964153674
       },
       "evidence": []
     },
@@ -113,7 +116,7 @@
     "interest_coverage": null,
     "forward_pe": 14.859301,
     "trailing_pe": 17.820099,
-    "peg": 1.57,
+    "peg": 1.56,
     "price_to_book": 2.4988692,
     "price_to_sales": 4.750151,
     "enterprise_to_ebitda": null,
@@ -128,7 +131,7 @@
     "target_mean_price": 142.84615,
     "target_high_price": 156.0,
     "target_low_price": 120.0,
-    "recommendation": "none",
+    "recommendation": "buy",
     "number_of_analysts": 13.0,
     "dividend_yield": 1.47,
     "payout_ratio": 0.2556,
@@ -142,10 +145,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.8381375227630717,
+    "relative_volume": 1.9378763771808916,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 114.66000366210938,
     "resistance": 146.07000732421875
   },
@@ -248,7 +251,7 @@
     ]
   },
   "analyst": {
-    "consensus": "none",
+    "consensus": "buy",
     "target_mean_price": 142.84615,
     "target_high_price": 156.0,
     "target_low_price": 120.0,
@@ -265,6 +268,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Should BNY Mellon US Large Cap Core Equity ETF (BKLC) Be on Your Investing Radar?",
+        "source": "Zacks",
+        "published": "2026-06-19T10:20:01Z",
+        "summary": "Style Box ETF report for BKLC",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "How America Got to SpaceX: The Long Trail of Big IPOs That Began in 1783",
         "source": "Barrons.com",
@@ -304,16 +317,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Bank of New York Mellon Insiders Sold US$8.5m Of Shares Suggesting Hesitancy",
-        "source": "Simply Wall St.",
-        "published": "2026-06-12T11:00:10Z",
-        "summary": "The fact that multiple The Bank of New York Mellon Corporation ( NYSE:BNY ) insiders offloaded a considerable amount of...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -333,22 +336,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8985,
-    "probability_pct": 89.85,
+    "probability_of_outperformance": 0.9204,
+    "probability_pct": 92.04,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 70.15/100"
+      "Composite score 77.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 70.15,
+    "final_score": 77.65,
     "technical_score": 80.0,
     "momentum_score": 85.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 76.0,
     "risk_score": 100,
     "catalyst_score": 50.0,
@@ -356,7 +360,7 @@
     "eps_growth": 0.418,
     "roe": 0.13472,
     "forward_pe": 14.859301,
-    "relative_volume": 0.8381375227630717,
+    "relative_volume": 1.9378763771808916,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -365,13 +369,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.94x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.94x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: BNY\nRating: Watch | Score: 70.15/100 | Confidence: 51.99/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 114.66000366210938 | Resistance: 146.07000732421875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 14.859301\nNews/Catalyst: How America Got to SpaceX: The Long Trail of Big IPOs That Began in 1783\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BNY\nRating: Watch | Score: 77.65/100 | Confidence: 68.95/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 114.66000366210938 | Resistance: 146.07000732421875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 14.859301\nNews/Catalyst: Should BNY Mellon US Large Cap Core Equity ETF (BKLC) Be on Your Investing Radar?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.94x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

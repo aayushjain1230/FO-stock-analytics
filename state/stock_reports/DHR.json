@@ -1,15 +1,15 @@
 {
   "ticker": "DHR",
-  "generated_at": "2026-06-18T23:19:21.262366",
+  "generated_at": "2026-06-19T16:00:27.995320",
   "score": {
-    "final_score": 35.75,
+    "final_score": 39.5,
     "rating": "Drop",
-    "confidence": 35.14,
+    "confidence": 39.56,
     "risk_level": "Controlled",
     "categories": {
       "technical": 18.0,
       "momentum": 20.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 60.0,
       "risk": 75.0,
       "catalyst": 45.0
@@ -38,12 +38,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 3928151.45,
-      "relative_volume": 0.7962597776111713,
+      "score": 50.0,
+      "average_volume": 4134685.0,
+      "relative_volume": 1.7555146280792853,
       "accumulation_days": 4,
-      "distribution_days": 0,
+      "distribution_days": 1,
       "evidence": [
+        "Relative volume is 1.76x",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -55,14 +56,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.018341230933010787,
-        "annualized_volatility": 0.2911580147253103,
-        "maximum_drawdown": -0.41720765650331804,
-        "sharpe_ratio": -0.420379126582424,
-        "sortino_ratio": -0.5967881737947509,
-        "calmar_ratio": -0.36415702226977903,
-        "beta": 0.8156097814588409,
-        "alpha": -0.2718807319356683
+        "volatility": 0.018341232165230505,
+        "annualized_volatility": 0.2911580342861919,
+        "maximum_drawdown": -0.41720765650331904,
+        "sharpe_ratio": -0.42037897329087753,
+        "sortino_ratio": -0.5967880200739335,
+        "calmar_ratio": -0.364156958642895,
+        "beta": 0.8148591728542606,
+        "alpha": -0.27280940826083033
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -76,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating; Accumulation days exceed distribution days; analyst revision; insider buying"
+    "explanation": "Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating; Relative volume is 1.76x; Accumulation days exceed distribution days; analyst revision"
   },
   "fundamentals": {
     "ticker": "DHR",
@@ -104,7 +105,7 @@
     "interest_coverage": null,
     "forward_pe": 19.1531,
     "trailing_pe": 34.268856,
-    "peg": 1.16,
+    "peg": 1.13,
     "price_to_book": 2.368013,
     "price_to_sales": 5.0607686,
     "enterprise_to_ebitda": 17.939,
@@ -133,10 +134,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7962597776111713,
+    "relative_volume": 1.7555146280792853,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 161.91000366210938,
     "resistance": 198.61000061035156
   },
@@ -324,20 +325,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5911,
-    "probability_pct": 59.11,
+    "probability_of_outperformance": 0.6537,
+    "probability_pct": 65.37,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 35.75/100"
+      "Composite score 39.5/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.75,
+    "final_score": 39.5,
     "technical_score": 18.0,
     "momentum_score": 20.0,
-    "volume_score": 25.0,
+    "volume_score": 50.0,
     "fundamental_score": 60.0,
     "risk_score": 75.0,
     "catalyst_score": 45.0,
@@ -345,7 +347,7 @@
     "eps_growth": 0.098,
     "roe": 0.0708,
     "forward_pe": 19.1531,
-    "relative_volume": 0.7962597776111713,
+    "relative_volume": 1.7555146280792853,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -357,10 +359,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DHR\nRating: Drop | Score: 35.75/100 | Confidence: 35.14/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 161.91000366210938 | Resistance: 198.61000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.1531\nNews/Catalyst: Medtech M&A maintains momentum following decade-high 2025: PwC\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DHR\nRating: Drop | Score: 39.5/100 | Confidence: 39.56/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 161.91000366210938 | Resistance: 198.61000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.1531\nNews/Catalyst: Medtech M&A maintains momentum following decade-high 2025: PwC\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

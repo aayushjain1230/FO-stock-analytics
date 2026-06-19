@@ -1,18 +1,18 @@
 {
   "ticker": "DAL",
-  "generated_at": "2026-06-18T23:19:17.146523",
+  "generated_at": "2026-06-19T16:00:24.638605",
   "score": {
-    "final_score": 68.95,
-    "rating": "Watch",
-    "confidence": 56.57,
+    "final_score": 80.95,
+    "rating": "Buy Watch",
+    "confidence": 73.32,
     "risk_level": "Moderate",
     "categories": {
       "technical": 90.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 68.0,
       "risk": 60.0,
-      "catalyst": 45.0
+      "catalyst": 60.0
     },
     "technical": {
       "score": 90.0,
@@ -36,7 +36,7 @@
         "1m": 0.2423258212999042,
         "3m": 0.29831307942959917,
         "6m": 0.18966347838556752,
-        "12m": 0.8002984115365779
+        "12m": 0.8002985584089763
       },
       "acceleration": 0.2035,
       "evidence": [
@@ -49,13 +49,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 7544821.2,
-      "relative_volume": 0.8963266087737108,
-      "accumulation_days": 7,
+      "score": 100,
+      "average_volume": 7947900.0,
+      "relative_volume": 1.8651719322085079,
+      "accumulation_days": 8,
       "distribution_days": 3,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.87x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -68,14 +71,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02871331597026301,
-        "annualized_volatility": 0.45580976024001124,
-        "maximum_drawdown": -0.4791856088600287,
-        "sharpe_ratio": 0.833694984403357,
-        "sortino_ratio": 1.4778683791307303,
-        "calmar_ratio": 0.6700696061517446,
-        "beta": 1.717689432505487,
-        "alpha": 0.06519025721672556
+        "volatility": 0.02871331668438557,
+        "annualized_volatility": 0.4558097715763555,
+        "maximum_drawdown": -0.47918560886002903,
+        "sharpe_ratio": 0.8336951506722364,
+        "sortino_ratio": 1.4778687270528454,
+        "calmar_ratio": 0.6700698249699107,
+        "beta": 1.7173803897636282,
+        "alpha": 0.06299970657959728
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -83,10 +86,11 @@
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 60.0,
       "evidence": [
         "insider buying",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -130,7 +134,7 @@
     "short_ratio": 3.15,
     "short_percent_float": 0.0372,
     "days_to_cover": 3.15,
-    "target_mean_price": 81.812,
+    "target_mean_price": 82.012,
     "target_high_price": 105.0,
     "target_low_price": 48.0,
     "recommendation": "strong_buy",
@@ -147,10 +151,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 0.8963266087737108,
+    "relative_volume": 1.8651719322085079,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 63.189998626708984,
     "resistance": 84.18000030517578
   },
@@ -199,9 +203,9 @@
     "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 1,
     "bearish_news_score": 2,
     "institutional_ownership": 0.83643997,
     "detail": {
@@ -243,18 +247,19 @@
         "last_surprise_pct": 0.11350001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -2.81,
+      "analyst_upside_pct": -2.58,
       "eps_growth_implied": 17.66
     },
     "evidence": [
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
     "consensus": "strong_buy",
-    "target_mean_price": 81.812,
+    "target_mean_price": 82.012,
     "target_high_price": 105.0,
     "target_low_price": 48.0,
     "number_of_analysts": 25.0
@@ -271,6 +276,36 @@
     "available": true,
     "items": [
       {
+        "headline": "What Does Berkshire Hathaway See in This Housing Stock?",
+        "source": "Motley Fool",
+        "published": "2026-06-19T14:43:00Z",
+        "summary": "The seemingly unlikely acquisition actually makes a lot of sense. Here's why.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "U.S. Global Investors sees tailwind for airline stocks as oil prices slide",
+        "source": "Proactive",
+        "published": "2026-06-19T13:17:00Z",
+        "summary": "U.S. Global Investors (NASDAQ:GROW) said falling oil prices are providing a boost to airline stocks, pointing to gains in Delta Air Lines and United Airlines as carriers benefit from steady travel demand and lower fuel costs. The investment advisory firm, which specializes in gold mining...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Delta Shares Are Flying With Ed Bastian in the Cockpit",
+        "source": "Barrons.com",
+        "published": "2026-06-19T05:00:00Z",
+        "summary": "Under Bastian, employees get a generous cut of pretax profits. The move pays for itself in enhanced customer satisfaction.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Stocks Supported as Geopolitical Risks Recede",
         "source": "Barchart",
         "published": "2026-06-18T15:17:09Z",
@@ -285,36 +320,6 @@
         "source": "Barchart",
         "published": "2026-06-18T13:43:05Z",
         "summary": "Southwest Airlines has outperformed the S&P 500 over the past year, and analysts are moderately optimistic about the stock\u2019s prospects.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Trump Administration Clears Delta in CrowdStrike Outage Probe, Ends Investigation Into Travel Meltdown That Impacted 1.3 Million Passengers",
-        "source": "Benzinga",
-        "published": "2026-06-18T09:45:54Z",
-        "summary": "The Donald Trump administration has closed a federal investigation into Delta Air Lines\u2019 handling of the CrowdStrike Holdings Inc.-related outage. Delta Cleared After Review of CrowdStrike Outage Response On Monday, the U.S. Department of Transportation said it had concluded its...",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "After Chapter 11 shutdown, Spirit Airlines may make a comeback",
-        "source": "TheStreet",
-        "published": "2026-06-17T17:54:05Z",
-        "summary": "Spirit Airlines had the lowest rating on the annual American Customer Satisfaction Index (ACSI) survey. The airline scored a 66 on the 100-point scale in 2026, dropping below low-cost rival Frontier Airlines, an airline that doesn't even offer internet service, and putting it 13 points behind ...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Consumer Discretionary - Travel and Vacation Providers Stocks Q1 Results: Benchmarking Delta (NYSE:DAL)",
-        "source": "StockStory",
-        "published": "2026-06-17T17:16:51Z",
-        "summary": "As the craze of earnings season draws to a close, here\u2019s a look back at some of the most exciting (and some less so) results from Q1. Today, we are looking at consumer discretionary - travel and vacation providers stocks, starting with Delta (NYSE:DAL).",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -338,43 +343,50 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7773,
-    "probability_pct": 77.73,
+    "probability_of_outperformance": 0.871,
+    "probability_pct": 87.1,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
-      "Composite score 68.95/100"
+      "Composite score 80.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 68.95,
+    "final_score": 80.95,
     "technical_score": 90.0,
     "momentum_score": 85.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 68.0,
     "risk_score": 60.0,
-    "catalyst_score": 45.0,
+    "catalyst_score": 60.0,
     "revenue_growth": 0.129,
     "eps_growth": null,
     "roe": 0.2499,
     "forward_pe": 10.44413,
-    "relative_volume": 0.8963266087737108,
+    "relative_volume": 1.8651719322085079,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": true,
-    "reason": "52-week high",
-    "evidence": "Price is pressing against 52-week highs",
-    "date_of_change": "2026-06-18",
-    "strength": 65,
-    "invalidates": "Failed breakout below prior range high",
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.87x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.87x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      },
       {
         "reason": "52-week high",
         "evidence": "Price is pressing against 52-week highs",
@@ -383,5 +395,5 @@
       }
     ]
   },
-  "report": "Ticker: DAL\nRating: Watch | Score: 68.95/100 | Confidence: 56.57/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 63.189998626708984 | Resistance: 84.18000030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.44413\nNews/Catalyst: Stocks Supported as Geopolitical Risks Recede\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: DAL\nRating: Buy Watch | Score: 80.95/100 | Confidence: 73.32/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 63.189998626708984 | Resistance: 84.18000030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.44413\nNews/Catalyst: What Does Berkshire Hathaway See in This Housing Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.87x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

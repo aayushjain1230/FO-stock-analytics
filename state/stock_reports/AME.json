@@ -1,15 +1,15 @@
 {
   "ticker": "AME",
-  "generated_at": "2026-06-18T23:17:55.216874",
+  "generated_at": "2026-06-19T15:59:26.104305",
   "score": {
-    "final_score": 69.65,
-    "rating": "Watch",
-    "confidence": 60.87,
+    "final_score": 80.9,
+    "rating": "Buy Watch",
+    "confidence": 74.98,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
       "momentum": 70.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 81.0,
       "risk": 100,
       "catalyst": 50.0
@@ -34,8 +34,8 @@
       "returns": {
         "1m": 0.07454791736187394,
         "3m": 0.12423618764989941,
-        "6m": 0.1802629983007824,
-        "12m": 0.3609487552343571
+        "6m": 0.18026290877248563,
+        "12m": 0.3609488742725582
       },
       "acceleration": 0.0341,
       "evidence": [
@@ -47,13 +47,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1188033.8,
-      "relative_volume": 0.9220916105248858,
-      "accumulation_days": 5,
+      "score": 100,
+      "average_volume": 1255220.0,
+      "relative_volume": 1.9432450088430713,
+      "accumulation_days": 6,
       "distribution_days": 1,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.94x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -67,14 +70,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01480764140314759,
-        "annualized_volatility": 0.2350640199369123,
-        "maximum_drawdown": -0.23041216298886724,
-        "sharpe_ratio": 0.8798440250613406,
-        "sortino_ratio": 1.306305384334544,
-        "calmar_ratio": 0.8521233729227754,
-        "beta": 0.8154651077657274,
-        "alpha": 0.057362209060931826
+        "volatility": 0.014807645681833858,
+        "annualized_volatility": 0.23506408785895114,
+        "maximum_drawdown": -0.2304122411692351,
+        "sharpe_ratio": 0.8798436357986291,
+        "sortino_ratio": 1.3063059622284032,
+        "calmar_ratio": 0.85212284376741,
+        "beta": 0.8160186149143257,
+        "alpha": 0.05619293063164791
       },
       "evidence": []
     },
@@ -114,7 +117,7 @@
     "interest_coverage": null,
     "forward_pe": 26.938953,
     "trailing_pe": 35.918304,
-    "peg": 3.0,
+    "peg": 3.07,
     "price_to_book": 4.9836273,
     "price_to_sales": 7.1624603,
     "enterprise_to_ebitda": 22.777,
@@ -143,10 +146,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.9220916105248858,
+    "relative_volume": 1.9432450088430713,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 208.3699951171875,
     "resistance": 241.3800048828125
   },
@@ -334,21 +337,22 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8539,
-    "probability_pct": 85.39,
+    "probability_of_outperformance": 0.9141,
+    "probability_pct": 91.41,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 69.65/100"
+      "Composite score 80.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 69.65,
+    "final_score": 80.9,
     "technical_score": 75.0,
     "momentum_score": 70.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 81.0,
     "risk_score": 100,
     "catalyst_score": 50.0,
@@ -356,7 +360,7 @@
     "eps_growth": 0.145,
     "roe": 0.14626999,
     "forward_pe": 26.938953,
-    "relative_volume": 0.9220916105248858,
+    "relative_volume": 1.9432450088430713,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -368,7 +372,7 @@
     "send_alert": true,
     "reason": "Relative strength acceleration",
     "evidence": "Relative strength moved from lagging to leading",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 80,
     "invalidates": "Relative strength falls back below its signal line",
     "triggers": [
@@ -377,8 +381,14 @@
         "evidence": "Relative strength moved from lagging to leading",
         "strength": 80,
         "invalidates": "Relative strength falls back below its signal line"
+      },
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.94x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
       }
     ]
   },
-  "report": "Ticker: AME\nRating: Watch | Score: 69.65/100 | Confidence: 60.87/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 208.3699951171875 | Resistance: 241.3800048828125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 26.938953\nNews/Catalyst: Giverny Capital Asset Management Sold Ametek (AME) Due to Valuation Gap\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: AME\nRating: Buy Watch | Score: 80.9/100 | Confidence: 74.98/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 208.3699951171875 | Resistance: 241.3800048828125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 26.938953\nNews/Catalyst: Giverny Capital Asset Management Sold Ametek (AME) Due to Valuation Gap\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

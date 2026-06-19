@@ -1,15 +1,15 @@
 {
   "ticker": "LNT",
-  "generated_at": "2026-06-18T23:19:31.930428",
+  "generated_at": "2026-06-19T16:00:35.787986",
   "score": {
-    "final_score": 65.0,
+    "final_score": 76.25,
     "rating": "Watch",
-    "confidence": 52.97,
+    "confidence": 65.9,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 50.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 65.0,
       "risk": 100,
       "catalyst": 30.0
@@ -46,13 +46,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 2429324.5,
-      "relative_volume": 1.2092209171726545,
+      "score": 100,
+      "average_volume": 2496025.0,
+      "relative_volume": 1.7113610640919061,
       "accumulation_days": 6,
       "distribution_days": 4,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.71x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -63,14 +66,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.011001528452228132,
-        "annualized_volatility": 0.17464384995718185,
-        "maximum_drawdown": -0.10978173834431093,
-        "sharpe_ratio": 1.3094464625462072,
-        "sortino_ratio": 1.7660613048281377,
-        "calmar_ratio": 2.166037118991544,
-        "beta": 0.14321551077188988,
-        "alpha": 0.20243840492847526
+        "volatility": 0.011001529451622048,
+        "annualized_volatility": 0.17464386582206845,
+        "maximum_drawdown": -0.10978190536305465,
+        "sharpe_ratio": 1.3094468202918597,
+        "sortino_ratio": 1.7660609236609468,
+        "calmar_ratio": 2.1660347305075454,
+        "beta": 0.14317735484993196,
+        "alpha": 0.20225812672894294
       },
       "evidence": []
     },
@@ -109,7 +112,7 @@
     "interest_coverage": null,
     "forward_pe": 19.80773,
     "trailing_pe": 22.955975,
-    "peg": 2.55,
+    "peg": 2.53,
     "price_to_book": 2.5402792,
     "price_to_sales": 4.267593,
     "enterprise_to_ebitda": 16.593,
@@ -138,10 +141,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 1.2092209171726545,
+    "relative_volume": 1.7113610640919061,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 68.70999908447266,
     "resistance": 74.05999755859375
   },
@@ -328,20 +331,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.766,
-    "probability_pct": 76.6,
+    "probability_of_outperformance": 0.8564,
+    "probability_pct": 85.64,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
-      "Composite score 65.0/100"
+      "Composite score 76.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 65.0,
+    "final_score": 76.25,
     "technical_score": 90.0,
     "momentum_score": 50.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 65.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -349,7 +353,7 @@
     "eps_growth": 0.049,
     "roe": 0.113120005,
     "forward_pe": 19.80773,
-    "relative_volume": 1.2092209171726545,
+    "relative_volume": 1.7113610640919061,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -361,10 +365,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: LNT\nRating: Watch | Score: 65.0/100 | Confidence: 52.97/100\nBull Case: price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 68.70999908447266 | Resistance: 74.05999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.80773\nNews/Catalyst: Alliant Energy (LNT) Stock Valuation Check After Recent Mixed Price Performance\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: LNT\nRating: Watch | Score: 76.25/100 | Confidence: 65.9/100\nBull Case: price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 68.70999908447266 | Resistance: 74.05999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.80773\nNews/Catalyst: Alliant Energy (LNT) Stock Valuation Check After Recent Mixed Price Performance\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

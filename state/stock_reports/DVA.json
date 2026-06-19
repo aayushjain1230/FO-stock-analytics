@@ -1,15 +1,15 @@
 {
   "ticker": "DVA",
-  "generated_at": "2026-06-18T23:19:22.807406",
+  "generated_at": "2026-06-19T16:00:29.060847",
   "score": {
-    "final_score": 71.45,
+    "final_score": 78.95,
     "rating": "Watch",
-    "confidence": 63.33,
+    "confidence": 74.64,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 58.0,
       "risk": 75.0,
       "catalyst": 80.0
@@ -49,13 +49,15 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 734435.1,
-      "relative_volume": 0.7875467825543742,
+      "score": 75.0,
+      "average_volume": 774965.0,
+      "relative_volume": 1.7923390088584645,
       "accumulation_days": 3,
-      "distribution_days": 0,
+      "distribution_days": 1,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.79x",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -75,8 +77,8 @@
         "sharpe_ratio": 0.7093230289355977,
         "sortino_ratio": 1.0979694932793407,
         "calmar_ratio": 0.5298079447696945,
-        "beta": 0.3724582798721817,
-        "alpha": 0.19807385315286052
+        "beta": 0.37154714072311235,
+        "alpha": 0.1977546579003103
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -149,10 +151,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.7875467825543742,
+    "relative_volume": 1.7923390088584645,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 144.57000732421875,
     "resistance": 210.5800018310547
   },
@@ -342,22 +344,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8674,
-    "probability_pct": 86.74,
+    "probability_of_outperformance": 0.9098,
+    "probability_pct": 90.98,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 71.45/100"
+      "Composite score 78.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 71.45,
+    "final_score": 78.95,
     "technical_score": 90.0,
     "momentum_score": 85.0,
-    "volume_score": 25.0,
+    "volume_score": 75.0,
     "fundamental_score": 58.0,
     "risk_score": 75.0,
     "catalyst_score": 80.0,
@@ -365,7 +368,7 @@
     "eps_growth": 0.435,
     "roe": 0.80981004,
     "forward_pe": 12.100679,
-    "relative_volume": 0.7875467825543742,
+    "relative_volume": 1.7923390088584645,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -377,10 +380,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DVA\nRating: Watch | Score: 71.45/100 | Confidence: 63.33/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 144.57000732421875 | Resistance: 210.5800018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.100679\nNews/Catalyst: DaVita HealthCare (DVA) Stock Dips While Market Gains: Key Facts\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DVA\nRating: Watch | Score: 78.95/100 | Confidence: 74.64/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 144.57000732421875 | Resistance: 210.5800018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.100679\nNews/Catalyst: DaVita HealthCare (DVA) Stock Dips While Market Gains: Key Facts\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,15 +1,15 @@
 {
   "ticker": "DRI",
-  "generated_at": "2026-06-18T23:19:22.042825",
+  "generated_at": "2026-06-19T16:00:28.538618",
   "score": {
-    "final_score": 59.8,
-    "rating": "Hold",
-    "confidence": 50.06,
+    "final_score": 71.05,
+    "rating": "Watch",
+    "confidence": 62.65,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 40.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 42.0,
       "risk": 100,
       "catalyst": 45.0
@@ -46,13 +46,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1087349.7,
-      "relative_volume": 0.9427454663389341,
-      "accumulation_days": 8,
+      "score": 100,
+      "average_volume": 1130340.0,
+      "relative_volume": 1.6675513562290991,
+      "accumulation_days": 9,
       "distribution_days": 4,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.67x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -65,14 +68,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017645373709543128,
-        "annualized_volatility": 0.2801116237574903,
-        "maximum_drawdown": -0.23919575519665282,
-        "sharpe_ratio": 0.8368354397804871,
-        "sortino_ratio": 1.4417897596153877,
-        "calmar_ratio": 0.9040192679607326,
-        "beta": 0.5550824930186646,
-        "alpha": 0.13267248199853396
+        "volatility": 0.01764537426169457,
+        "annualized_volatility": 0.2801116325226228,
+        "maximum_drawdown": -0.23919580818733543,
+        "sharpe_ratio": 0.8368354223867038,
+        "sortino_ratio": 1.441789706319631,
+        "calmar_ratio": 0.9040190676871678,
+        "beta": 0.5550729740454453,
+        "alpha": 0.13194788875166075
       },
       "evidence": []
     },
@@ -112,7 +115,7 @@
     "interest_coverage": null,
     "forward_pe": 18.762476,
     "trailing_pe": 22.492098,
-    "peg": 1.83,
+    "peg": 1.87,
     "price_to_book": 11.635957,
     "price_to_sales": 1.9153776,
     "enterprise_to_ebitda": 15.861,
@@ -131,7 +134,7 @@
     "number_of_analysts": 26.0,
     "dividend_yield": 2.87,
     "payout_ratio": 0.6217,
-    "next_earnings_date": "1773923400",
+    "next_earnings_date": null,
     "eps_current_year": 9.49,
     "eps_forward": 11.37643,
     "classification": "Fundamentally Weak"
@@ -141,22 +144,22 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9427454663389341,
+    "relative_volume": 1.6675513562290991,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 190.6300048828125,
     "resistance": 213.4499969482422
   },
   "earnings": {
-    "next_earnings_date": "1773923400",
+    "next_earnings_date": null,
     "surprise_tracking": "Available",
     "beat_streak": 1,
     "miss_streak": 0,
     "average_surprise_pct": -0.01,
     "last_surprise_pct": 0.0029,
     "last_surprise_direction": "beat",
-    "risk_score": 65,
+    "risk_score": 35,
     "history": [
       {
         "date": "2026-02-28",
@@ -265,6 +268,16 @@
     "available": true,
     "items": [
       {
+        "headline": "Countdown to Darden Restaurants (DRI) Q4 Earnings: A Look at Estimates Beyond Revenue and EPS",
+        "source": "Zacks",
+        "published": "2026-06-19T13:15:05Z",
+        "summary": "Beyond analysts' top-and-bottom-line estimates for Darden Restaurants (DRI), evaluate projections for some of its key metrics to gain a better insight into how the business might have performed for the quarter ended May 2026.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Buyers Push Micron Stock To Nose-Bleed Levels As Earnings Approach; Darden, FedEx Results Also On Tap",
         "source": "Investor's Business Daily",
         "published": "2026-06-18T19:12:03Z",
@@ -303,16 +316,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "CarMax (KMX) Q1 Earnings and Revenues Top Estimates",
-        "source": "Zacks",
-        "published": "2026-06-17T11:05:01Z",
-        "summary": "CarMax (KMX) delivered earnings and revenue surprises of +39.61% and +5.43%, respectively, for the quarter ended May 2026. Do the numbers hold clues to what lies ahead for the stock?",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -332,19 +335,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7064,
-    "probability_pct": 70.64,
+    "probability_of_outperformance": 0.8143,
+    "probability_pct": 81.43,
     "confidence": "High",
     "evidence": [
-      "Composite score 59.8/100"
+      "Volume surge above 1.5x",
+      "Composite score 71.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.8,
+    "final_score": 71.05,
     "technical_score": 90.0,
     "momentum_score": 40.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 42.0,
     "risk_score": 100,
     "catalyst_score": 45.0,
@@ -352,7 +356,7 @@
     "eps_growth": -0.033,
     "roe": 0.51539004,
     "forward_pe": 18.762476,
-    "relative_volume": 0.9427454663389341,
+    "relative_volume": 1.6675513562290991,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,10 +368,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DRI\nRating: Hold | Score: 59.8/100 | Confidence: 50.06/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.762476\nNews/Catalyst: Buyers Push Micron Stock To Nose-Bleed Levels As Earnings Approach; Darden, FedEx Results Also On Tap\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DRI\nRating: Watch | Score: 71.05/100 | Confidence: 62.65/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.762476\nNews/Catalyst: Countdown to Darden Restaurants (DRI) Q4 Earnings: A Look at Estimates Beyond Revenue and EPS\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

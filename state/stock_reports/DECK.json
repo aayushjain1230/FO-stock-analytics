@@ -1,15 +1,15 @@
 {
   "ticker": "DECK",
-  "generated_at": "2026-06-18T23:19:19.678890",
+  "generated_at": "2026-06-19T16:00:26.786912",
   "score": {
-    "final_score": 59.8,
-    "rating": "Hold",
-    "confidence": 52.88,
+    "final_score": 67.3,
+    "rating": "Watch",
+    "confidence": 63.02,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
       "momentum": 70.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 57.0,
       "risk": 75.0,
       "catalyst": 50.0
@@ -45,12 +45,14 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 2172971.35,
-      "relative_volume": 0.7795901220694879,
-      "accumulation_days": 4,
+      "score": 75.0,
+      "average_volume": 2280310.0,
+      "relative_volume": 1.6843323934026513,
+      "accumulation_days": 5,
       "distribution_days": 2,
       "evidence": [
+        "Relative volume is 1.68x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -68,8 +70,8 @@
         "sharpe_ratio": -0.17562893843250743,
         "sortino_ratio": -0.22522948860977,
         "calmar_ratio": -0.29203968433800465,
-        "beta": 1.3382805227198722,
-        "alpha": -0.33126516484565777
+        "beta": 1.3387379406784188,
+        "alpha": -0.3331008044155823
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -111,7 +113,7 @@
     "interest_coverage": null,
     "forward_pe": 13.149792,
     "trailing_pe": 15.542735,
-    "peg": 1.37,
+    "peg": 1.36,
     "price_to_book": 6.110209,
     "price_to_sales": 2.769094,
     "enterprise_to_ebitda": 10.285,
@@ -140,10 +142,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7795901220694879,
+    "relative_volume": 1.6843323934026513,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 93.55999755859375,
     "resistance": 114.37000274658203
   },
@@ -331,20 +333,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6923,
-    "probability_pct": 69.23,
+    "probability_of_outperformance": 0.7763,
+    "probability_pct": 77.63,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 59.8/100"
+      "Composite score 67.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.8,
+    "final_score": 67.3,
     "technical_score": 65.0,
     "momentum_score": 70.0,
-    "volume_score": 25.0,
+    "volume_score": 75.0,
     "fundamental_score": 57.0,
     "risk_score": 75.0,
     "catalyst_score": 50.0,
@@ -352,7 +355,7 @@
     "eps_growth": -0.048,
     "roe": 0.40859002,
     "forward_pe": 13.149792,
-    "relative_volume": 0.7795901220694879,
+    "relative_volume": 1.6843323934026513,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,7 +367,7 @@
     "send_alert": true,
     "reason": "Relative strength acceleration",
     "evidence": "Relative strength moved from lagging to leading",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 80,
     "invalidates": "Relative strength falls back below its signal line",
     "triggers": [
@@ -382,5 +385,5 @@
       }
     ]
   },
-  "report": "Ticker: DECK\nRating: Hold | Score: 59.8/100 | Confidence: 52.88/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 93.55999755859375 | Resistance: 114.37000274658203\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.149792\nNews/Catalyst: 4 Big Themes From Footwear Earnings Season So Far\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: DECK\nRating: Watch | Score: 67.3/100 | Confidence: 63.02/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 93.55999755859375 | Resistance: 114.37000274658203\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.149792\nNews/Catalyst: 4 Big Themes From Footwear Earnings Season So Far\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

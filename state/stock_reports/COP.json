@@ -1,10 +1,10 @@
 {
   "ticker": "COP",
-  "generated_at": "2026-06-18T23:19:01.521812",
+  "generated_at": "2026-06-19T16:00:13.649005",
   "score": {
-    "final_score": 41.1,
+    "final_score": 41.85,
     "rating": "Drop",
-    "confidence": 36.02,
+    "confidence": 38.67,
     "risk_level": "Controlled",
     "categories": {
       "technical": 22.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 44.0,
       "risk": 100,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 22.0,
@@ -40,8 +40,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7779497.85,
-      "relative_volume": 2.940916938488517,
+      "average_volume": 7780205.0,
+      "relative_volume": 2.9424674542637375,
       "accumulation_days": 3,
       "distribution_days": 6,
       "evidence": [
@@ -56,21 +56,22 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01979083984400728,
-        "annualized_volatility": 0.3141698427861096,
-        "maximum_drawdown": -0.27519006493738696,
-        "sharpe_ratio": 0.20687479613944132,
-        "sortino_ratio": 0.27923089467053064,
-        "calmar_ratio": 0.05639897706757628,
-        "beta": 0.5536344369703733,
-        "alpha": -0.036475631705353104
+        "volatility": 0.019790845538604378,
+        "annualized_volatility": 0.31416993318503605,
+        "maximum_drawdown": -0.2751901154598796,
+        "sharpe_ratio": 0.20687470938643618,
+        "sortino_ratio": 0.2792307491054927,
+        "calmar_ratio": 0.05639883092233106,
+        "beta": 0.551774976807564,
+        "alpha": -0.03685686538029476
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
@@ -102,7 +103,7 @@
     "interest_coverage": null,
     "forward_pe": 11.7167015,
     "trailing_pe": 18.261017,
-    "peg": 0.94,
+    "peg": 0.91,
     "price_to_book": 2.0337126,
     "price_to_sales": 2.210566,
     "enterprise_to_ebitda": 6.537,
@@ -131,7 +132,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 2.940916938488517,
+    "relative_volume": 2.9424674542637375,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "volume surge",
@@ -183,9 +184,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 1,
     "bearish_news_score": 2,
     "institutional_ownership": 0.87551004,
     "detail": {
@@ -232,6 +233,7 @@
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -253,6 +255,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "ConocoPhillips vs. Viper Energy: Which Energy Stock Is a Better Buy in 2026?",
+        "source": "Motley Fool",
+        "published": "2026-06-19T14:32:59Z",
+        "summary": "Global scale meets Permian royalties as these two energy players reveal sharply contrasting growth, risk, and valuation profiles for 2026.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "ConocoPhillips (COP) Stock Slides as Market Rises: Facts to Know Before You Trade",
         "source": "Zacks",
@@ -292,16 +304,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Western Midstream Expands Permian Water Recycling With New Treatment Plant",
-        "source": "Oilprice.com",
-        "published": "2026-06-18T03:15:00Z",
-        "summary": "Western Midstream and a consortium of major oil producers have commissioned a second produced-water treatment facility in the Permian Basin designed to significantly expand freshwater recovery from oilfield wastewater.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -321,41 +323,41 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6748,
-    "probability_pct": 67.48,
+    "probability_of_outperformance": 0.6878,
+    "probability_pct": 68.78,
     "confidence": "High",
     "evidence": [
       "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 41.1/100"
+      "Composite score 41.85/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.1,
+    "final_score": 41.85,
     "technical_score": 22.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 44.0,
     "risk_score": 100,
-    "catalyst_score": 30.0,
+    "catalyst_score": 45.0,
     "revenue_growth": -0.053,
     "eps_growth": -0.202,
     "roe": 0.112840004,
     "forward_pe": 11.7167015,
-    "relative_volume": 2.940916938488517,
+    "relative_volume": 2.9424674542637375,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 2.94x",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -367,5 +369,5 @@
       }
     ]
   },
-  "report": "Ticker: COP\nRating: Drop | Score: 41.1/100 | Confidence: 36.02/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 107.73999786376953 | Resistance: 133.8000030517578\nFundamental Outlook: Cheap but Weak | Forward P/E: 11.7167015\nNews/Catalyst: ConocoPhillips (COP) Stock Slides as Market Rises: Facts to Know Before You Trade\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.94x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: COP\nRating: Drop | Score: 41.85/100 | Confidence: 38.67/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 107.73999786376953 | Resistance: 133.8000030517578\nFundamental Outlook: Cheap but Weak | Forward P/E: 11.7167015\nNews/Catalyst: ConocoPhillips vs. Viper Energy: Which Energy Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.94x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

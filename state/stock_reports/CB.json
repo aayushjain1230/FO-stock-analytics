@@ -1,18 +1,18 @@
 {
   "ticker": "CB",
-  "generated_at": "2026-06-18T23:18:37.446299",
+  "generated_at": "2026-06-19T15:59:55.715536",
   "score": {
-    "final_score": 59.15,
+    "final_score": 62.15,
     "rating": "Hold",
-    "confidence": 45.54,
+    "confidence": 53.51,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
       "momentum": 50.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 50.0
+      "catalyst": 35.0
     },
     "technical": {
       "score": 65.0,
@@ -33,7 +33,7 @@
       "returns": {
         "1m": -0.017329477145559324,
         "3m": 0.002376171130480831,
-        "6m": 0.046060673303949695,
+        "6m": 0.04606057004593622,
         "12m": 0.1464648191250224
       },
       "acceleration": -0.0207,
@@ -44,12 +44,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1695341.45,
-      "relative_volume": 0.8091756383352746,
+      "score": 25.0,
+      "average_volume": 1774760.0,
+      "relative_volume": 1.6679438346593343,
       "accumulation_days": 3,
-      "distribution_days": 4,
-      "evidence": []
+      "distribution_days": 5,
+      "evidence": [
+        "Relative volume is 1.67x"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -62,23 +64,22 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.012054893763524302,
-        "annualized_volatility": 0.19136550587753268,
-        "maximum_drawdown": -0.14351439785333064,
-        "sharpe_ratio": 0.6558199189819138,
-        "sortino_ratio": 0.9383061452541093,
-        "calmar_ratio": 0.788240034428545,
-        "beta": 0.16838671808083217,
-        "alpha": 0.09463959534890612
+        "volatility": 0.012054891912250388,
+        "annualized_volatility": 0.19136547648947036,
+        "maximum_drawdown": -0.14351450056088577,
+        "sharpe_ratio": 0.6558199914135783,
+        "sortino_ratio": 0.9383063421193254,
+        "calmar_ratio": 0.7882394703168548,
+        "beta": 0.167600564479284,
+        "alpha": 0.09456436162683295
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 35.0,
       "evidence": [
         "earnings surprise",
-        "insider buying",
-        "major news"
+        "insider buying"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
@@ -109,7 +110,7 @@
     "interest_coverage": null,
     "forward_pe": 11.055314,
     "trailing_pe": 11.435643,
-    "peg": 2.89,
+    "peg": 2.84,
     "price_to_book": 1.7027056,
     "price_to_sales": 2.056699,
     "enterprise_to_ebitda": 10.444,
@@ -138,10 +139,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8091756383352746,
+    "relative_volume": 1.6679438346593343,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 309.7799987792969,
     "resistance": 332.94000244140625
   },
@@ -190,10 +191,10 @@
     "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": false,
-    "bullish_news_score": 2,
-    "bearish_news_score": 1,
+    "bullish_news_score": 1,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.84893996,
     "detail": {
       "earnings": {
@@ -239,8 +240,7 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "insider ownership or purchase data is supportive",
-      "recent news item has elevated importance"
+      "insider ownership or purchase data is supportive"
     ]
   },
   "analyst": {
@@ -261,6 +261,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Evan Greenberg\u2019s Chubb Is a P&C Insurance \u2018Masterpiece\u2019",
+        "source": "Barrons.com",
+        "published": "2026-06-19T05:00:00Z",
+        "summary": "Underwriting discipline has propelled the property and casualty insurer to No. 1 in industry profitability under Greenberg\u2019s leadership.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Chubb (CB) Stock Falls Amid Market Uptick: What Investors Need to Know",
         "source": "Zacks",
@@ -300,16 +310,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Will Strong Results And Bigger Buybacks Change Chubb's (CB) Capital Allocation Narrative?",
-        "source": "Simply Wall St.",
-        "published": "2026-06-12T05:12:00Z",
-        "summary": "In recent days, Chubb reported strong quarterly results, raised its dividend for the 33rd consecutive year, and approved a multi-billion dollar share repurchase program, signaling continued focus on shareholder returns. This combination of robust operations and larger capital returns offers fresh insight into how Chubb is prioritizing cash distribution while maintaining its insurance franchise. Next, we\u2019ll examine how Chubb\u2019s larger share buyback authorization shapes the existing...",
-        "bullish_score": 2,
-        "bearish_score": 1,
-        "importance_score": 75,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -329,44 +329,45 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8055,
-    "probability_pct": 80.55,
+    "probability_of_outperformance": 0.8265,
+    "probability_pct": 82.65,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 59.15/100"
+      "Composite score 62.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.15,
+    "final_score": 62.15,
     "technical_score": 65.0,
     "momentum_score": 50.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 100,
-    "catalyst_score": 50.0,
+    "catalyst_score": 35.0,
     "revenue_growth": 0.102,
     "eps_growth": 0.787,
     "roe": 0.15433,
     "forward_pe": 11.055314,
-    "relative_volume": 0.8091756383352746,
+    "relative_volume": 1.6679438346593343,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CB\nRating: Hold | Score: 59.15/100 | Confidence: 45.54/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 309.7799987792969 | Resistance: 332.94000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.055314\nNews/Catalyst: Chubb (CB) Stock Falls Amid Market Uptick: What Investors Need to Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CB\nRating: Hold | Score: 62.15/100 | Confidence: 53.51/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 309.7799987792969 | Resistance: 332.94000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.055314\nNews/Catalyst: Evan Greenberg\u2019s Chubb Is a P&C Insurance \u2018Masterpiece\u2019\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

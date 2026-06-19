@@ -1,18 +1,18 @@
 {
   "ticker": "CPAY",
-  "generated_at": "2026-06-18T23:19:04.097535",
+  "generated_at": "2026-06-19T16:00:15.455291",
   "score": {
-    "final_score": 66.15,
+    "final_score": 68.9,
     "rating": "Watch",
-    "confidence": 54.0,
+    "confidence": 62.09,
     "risk_level": "Controlled",
     "categories": {
       "technical": 57.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 76.0,
       "risk": 100,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 57.0,
@@ -46,12 +46,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 554471.55,
-      "relative_volume": 1.3694679194992059,
+      "score": 25.0,
+      "average_volume": 619035.0,
+      "relative_volume": 3.3125752178794414,
       "accumulation_days": 3,
       "distribution_days": 4,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 3.31x"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -71,16 +73,15 @@
         "sharpe_ratio": 0.5628997042730178,
         "sortino_ratio": 0.8079737419650577,
         "calmar_ratio": 0.42923316103035664,
-        "beta": 1.250286950073257,
-        "alpha": -0.026701181552313658
+        "beta": 1.248256287066079,
+        "alpha": -0.027962408932771955
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "sector strength",
         "major news",
         "guidance change"
@@ -114,7 +115,7 @@
     "interest_coverage": null,
     "forward_pe": 11.281434,
     "trailing_pe": 20.687836,
-    "peg": 0.87,
+    "peg": 0.83,
     "price_to_book": 6.5053883,
     "price_to_sales": 4.7176986,
     "enterprise_to_ebitda": 12.482,
@@ -129,7 +130,7 @@
     "target_mean_price": 395.14285,
     "target_high_price": 450.0,
     "target_low_price": 340.0,
-    "recommendation": "buy",
+    "recommendation": "none",
     "number_of_analysts": 14.0,
     "dividend_yield": null,
     "payout_ratio": 0.0,
@@ -143,10 +144,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.3694679194992059,
+    "relative_volume": 3.3125752178794414,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 284.92999267578125,
     "resistance": 364.1300048828125
   },
@@ -192,7 +193,7 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
@@ -244,14 +245,13 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
-    "consensus": "buy",
+    "consensus": "none",
     "target_mean_price": 395.14285,
     "target_high_price": 450.0,
     "target_low_price": 340.0,
@@ -336,46 +336,53 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9058,
-    "probability_pct": 90.58,
+    "probability_of_outperformance": 0.9023,
+    "probability_pct": 90.23,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Analyst data is supportive",
-      "Composite score 66.15/100"
+      "Composite score 68.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.15,
+    "final_score": 68.9,
     "technical_score": 57.0,
     "momentum_score": 85.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 76.0,
     "risk_score": 100,
-    "catalyst_score": 85.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.254,
     "eps_growth": 0.491,
     "roe": 0.32124,
     "forward_pe": 11.281434,
-    "relative_volume": 1.3694679194992059,
+    "relative_volume": 3.3125752178794414,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 3.31x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 3.31x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CPAY\nRating: Watch | Score: 66.15/100 | Confidence: 54.0/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 284.92999267578125 | Resistance: 364.1300048828125\nFundamental Outlook: Quality Compounder | Forward P/E: 11.281434\nNews/Catalyst: ACN Q3 Earnings Beat Estimates on Growth in Managed Services\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CPAY\nRating: Watch | Score: 68.9/100 | Confidence: 62.09/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 284.92999267578125 | Resistance: 364.1300048828125\nFundamental Outlook: Quality Compounder | Forward P/E: 11.281434\nNews/Catalyst: ACN Q3 Earnings Beat Estimates on Growth in Managed Services\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.31x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

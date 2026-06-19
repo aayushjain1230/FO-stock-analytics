@@ -1,15 +1,15 @@
 {
   "ticker": "CFG",
-  "generated_at": "2026-06-18T23:18:44.735116",
+  "generated_at": "2026-06-19T16:00:00.926958",
   "score": {
-    "final_score": 72.65,
-    "rating": "Watch",
-    "confidence": 53.42,
+    "final_score": 83.9,
+    "rating": "Buy Watch",
+    "confidence": 75.43,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 75.0,
       "fundamental": 76.0,
       "risk": 100,
       "catalyst": 50.0
@@ -35,7 +35,7 @@
       "returns": {
         "1m": 0.09375509258648784,
         "3m": 0.18426975614762764,
-        "6m": 0.17022710216692682,
+        "6m": 0.17022702429027214,
         "12m": 0.7119798635273817
       },
       "acceleration": 0.0992,
@@ -49,12 +49,16 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 4407627.7,
-      "relative_volume": 0.7344436101079953,
-      "accumulation_days": 5,
+      "score": 75.0,
+      "average_volume": 4640040.0,
+      "relative_volume": 1.6994250049568538,
+      "accumulation_days": 6,
       "distribution_days": 6,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.70x",
+        "Price advanced on above-average volume",
+        "High-volume breakout behavior"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -67,14 +71,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019683709625184165,
-        "annualized_volatility": 0.31246920328467426,
-        "maximum_drawdown": -0.29076993439799825,
-        "sharpe_ratio": 1.336171249420406,
-        "sortino_ratio": 1.8207814553770392,
-        "calmar_ratio": 1.532704294102618,
-        "beta": 1.1523287943371354,
-        "alpha": 0.20631492996098572
+        "volatility": 0.01968369827534795,
+        "annualized_volatility": 0.31246902311160996,
+        "maximum_drawdown": -0.2907697350640711,
+        "sharpe_ratio": 1.3361720321206865,
+        "sortino_ratio": 1.8207830732777608,
+        "calmar_ratio": 1.532705640911497,
+        "beta": 1.1515774801623093,
+        "alpha": 0.20494573787473044
       },
       "evidence": []
     },
@@ -143,10 +147,10 @@
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.7344436101079953,
+    "relative_volume": 1.6994250049568538,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 57.02000045776367,
     "resistance": 67.6500015258789
   },
@@ -197,7 +201,7 @@
     "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.98723,
     "detail": {
@@ -267,6 +271,16 @@
     "available": true,
     "items": [
       {
+        "headline": "Is Regions Financial Poised to Maintain Capital Return Strategy?",
+        "source": "Zacks",
+        "published": "2026-06-19T14:32:00Z",
+        "summary": "Can RF's solid liquidity and capital position continue to support its dividend growth and share buyback efforts? Let us discuss.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Is Citizens Financial Stock Outperforming the Dow?",
         "source": "Barchart",
         "published": "2026-06-18T14:57:39Z",
@@ -305,16 +319,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Goldman Sachs Sees S&P 500 at 8000 Year-End: 5 of Its Top Picks Pay Big Passive Income Dividends",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-05T12:44:52Z",
-        "summary": "Goldman Sachs is a leading investment firm on Wall Street and worldwide. The firm\u2019s top-tier research department continues to provide institutional and high-net-worth clients with the best ideas across the investment spectrum and is likely to do so for years to come. Founded in 1869, it is the world\u2019s second-largest investment bank by revenue and, ... Goldman Sachs Sees S&P 500 at 8000 Year-End: 5 of Its Top Picks Pay Big Passive Income Dividends",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -334,22 +338,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9083,
-    "probability_pct": 90.83,
+    "probability_of_outperformance": 0.9386,
+    "probability_pct": 93.86,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 72.65/100"
+      "Composite score 83.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 72.65,
+    "final_score": 83.9,
     "technical_score": 90.0,
     "momentum_score": 85.0,
-    "volume_score": 0,
+    "volume_score": 75.0,
     "fundamental_score": 76.0,
     "risk_score": 100,
     "catalyst_score": 50.0,
@@ -357,7 +362,7 @@
     "eps_growth": 0.468,
     "roe": 0.07739,
     "forward_pe": 10.463347,
-    "relative_volume": 0.7344436101079953,
+    "relative_volume": 1.6994250049568538,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -369,10 +374,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CFG\nRating: Watch | Score: 72.65/100 | Confidence: 53.42/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 57.02000045776367 | Resistance: 67.6500015258789\nFundamental Outlook: Fundamentally Strong | Forward P/E: 10.463347\nNews/Catalyst: Is Citizens Financial Stock Outperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CFG\nRating: Buy Watch | Score: 83.9/100 | Confidence: 75.43/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 57.02000045776367 | Resistance: 67.6500015258789\nFundamental Outlook: Fundamentally Strong | Forward P/E: 10.463347\nNews/Catalyst: Is Regions Financial Poised to Maintain Capital Return Strategy?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

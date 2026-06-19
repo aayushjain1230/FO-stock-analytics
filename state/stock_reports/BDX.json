@@ -1,15 +1,15 @@
 {
   "ticker": "BDX",
-  "generated_at": "2026-06-18T23:18:19.539488",
+  "generated_at": "2026-06-19T15:59:42.880079",
   "score": {
-    "final_score": 36.75,
+    "final_score": 44.25,
     "rating": "Drop",
-    "confidence": 25.89,
+    "confidence": 40.5,
     "risk_level": "Controlled",
     "categories": {
       "technical": 28.0,
       "momentum": 20.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 55.0,
       "risk": 100,
       "catalyst": 30.0
@@ -29,7 +29,7 @@
       "returns": {
         "1m": -0.013303640023728747,
         "3m": -0.0736917757231923,
-        "6m": -0.054882933516189336,
+        "6m": -0.05488283885124856,
         "12m": 0.10413156239293198
       },
       "acceleration": -0.0463,
@@ -38,12 +38,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2266806.3,
-      "relative_volume": 1.0138607784882194,
+      "score": 50.0,
+      "average_volume": 2463490.0,
+      "relative_volume": 2.5297037942106524,
       "accumulation_days": 1,
       "distribution_days": 2,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.53x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 55.0,
@@ -53,14 +56,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.0168706316723773,
-        "annualized_volatility": 0.2678129751940803,
-        "maximum_drawdown": -0.3339423384602771,
-        "sharpe_ratio": -0.2764671104094843,
-        "sortino_ratio": -0.3324596028092612,
-        "calmar_ratio": -0.3143695153263254,
-        "beta": 0.4650162588915011,
-        "alpha": -0.15926910014844683
+        "volatility": 0.016870633178041106,
+        "annualized_volatility": 0.26781299909575224,
+        "maximum_drawdown": -0.3339422713231033,
+        "sharpe_ratio": -0.2764672236226855,
+        "sortino_ratio": -0.332459809704953,
+        "calmar_ratio": -0.31436969340679427,
+        "beta": 0.46543915113159057,
+        "alpha": -0.15995569431966133
       },
       "evidence": []
     },
@@ -71,7 +74,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 12m return is positive; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 12m return is positive; Relative volume is 2.53x; Price advanced on above-average volume; analyst revision"
   },
   "fundamentals": {
     "ticker": "BDX",
@@ -128,10 +131,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0138607784882194,
+    "relative_volume": 2.5297037942106524,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 141.61000061035156,
     "resistance": 158.63999938964844
   },
@@ -318,20 +321,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6424,
-    "probability_pct": 64.24,
+    "probability_of_outperformance": 0.7011,
+    "probability_pct": 70.11,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 36.75/100"
+      "Composite score 44.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 36.75,
+    "final_score": 44.25,
     "technical_score": 28.0,
     "momentum_score": 20.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 55.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -339,7 +343,7 @@
     "eps_growth": null,
     "roe": 0.06672,
     "forward_pe": 10.752872,
-    "relative_volume": 1.0138607784882194,
+    "relative_volume": 2.5297037942106524,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -348,13 +352,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.53x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.53x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: BDX\nRating: Drop | Score: 36.75/100 | Confidence: 25.89/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 141.61000061035156 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.752872\nNews/Catalyst: Here's Why You Should Retain BDX Stock in Your Portfolio Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BDX\nRating: Drop | Score: 44.25/100 | Confidence: 40.5/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 141.61000061035156 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.752872\nNews/Catalyst: Here's Why You Should Retain BDX Stock in Your Portfolio Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.53x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

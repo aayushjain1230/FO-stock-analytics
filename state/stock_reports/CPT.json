@@ -1,15 +1,15 @@
 {
   "ticker": "CPT",
-  "generated_at": "2026-06-18T23:19:06.648278",
+  "generated_at": "2026-06-19T16:00:17.268489",
   "score": {
-    "final_score": 60.0,
+    "final_score": 63.75,
     "rating": "Hold",
-    "confidence": 54.57,
+    "confidence": 60.0,
     "risk_level": "Controlled",
     "categories": {
       "technical": 72.0,
       "momentum": 50.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 50.0,
       "risk": 100,
       "catalyst": 65.0
@@ -45,12 +45,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1236759.95,
-      "relative_volume": 0.7838214683455751,
+      "score": 50.0,
+      "average_volume": 1329735.0,
+      "relative_volume": 2.1274163649148137,
       "accumulation_days": 6,
-      "distribution_days": 4,
+      "distribution_days": 5,
       "evidence": [
+        "Relative volume is 2.13x",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -65,14 +66,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.013074852292057506,
-        "annualized_volatility": 0.2075568455621221,
-        "maximum_drawdown": -0.20326129782483993,
-        "sharpe_ratio": 0.2779105357744779,
-        "sortino_ratio": 0.41675150901412056,
-        "calmar_ratio": 0.18113045989744855,
-        "beta": 0.43143046212396524,
-        "alpha": -0.021389822166552223
+        "volatility": 0.013074852746358816,
+        "annualized_volatility": 0.20755685277393182,
+        "maximum_drawdown": -0.2032612978248396,
+        "sharpe_ratio": 0.2779108988209594,
+        "sortino_ratio": 0.41675213707256276,
+        "calmar_ratio": 0.18113084659031406,
+        "beta": 0.4309403345478509,
+        "alpha": -0.02186382147741066
       },
       "evidence": []
     },
@@ -125,9 +126,9 @@
     "short_ratio": 5.39,
     "short_percent_float": 0.081199996,
     "days_to_cover": 5.39,
-    "target_mean_price": 113.94318,
+    "target_mean_price": 114.26136,
     "target_high_price": 134.0,
-    "target_low_price": 95.0,
+    "target_low_price": 102.0,
     "recommendation": "buy",
     "number_of_analysts": 22.0,
     "dividend_yield": null,
@@ -142,10 +143,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7838214683455751,
+    "relative_volume": 2.1274163649148137,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 96.95999908447266,
     "resistance": 115.4000015258789
   },
@@ -238,7 +239,7 @@
         "last_surprise_pct": -1.9642999,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 4.54,
+      "analyst_upside_pct": 4.84,
       "eps_growth_implied": -55.4
     },
     "evidence": [
@@ -250,9 +251,9 @@
   },
   "analyst": {
     "consensus": "buy",
-    "target_mean_price": 113.94318,
+    "target_mean_price": 114.26136,
     "target_high_price": 134.0,
-    "target_low_price": 95.0,
+    "target_low_price": 102.0,
     "number_of_analysts": 22.0
   },
   "insider_short_interest": {
@@ -334,20 +335,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7224,
-    "probability_pct": 72.24,
+    "probability_of_outperformance": 0.7726,
+    "probability_pct": 77.26,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 60.0/100"
+      "Composite score 63.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.0,
+    "final_score": 63.75,
     "technical_score": 72.0,
     "momentum_score": 50.0,
-    "volume_score": 25.0,
+    "volume_score": 50.0,
     "fundamental_score": 50.0,
     "risk_score": 100,
     "catalyst_score": 65.0,
@@ -355,7 +357,7 @@
     "eps_growth": 0.121,
     "roe": 0.09064999,
     "forward_pe": 68.26637,
-    "relative_volume": 0.7838214683455751,
+    "relative_volume": 2.1274163649148137,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,13 +366,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.13x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.13x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CPT\nRating: Hold | Score: 60.0/100 | Confidence: 54.57/100\nBull Case: No decisive bull case yet.\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 96.95999908447266 | Resistance: 115.4000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 68.26637\nNews/Catalyst: Camden Property Trust vs. Invitation Homes: Which Real Estate Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CPT\nRating: Hold | Score: 63.75/100 | Confidence: 60.0/100\nBull Case: No decisive bull case yet.\nBear Case: valuation is demanding\nTechnical Outlook: trend continuation, volume surge | Support: 96.95999908447266 | Resistance: 115.4000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 68.26637\nNews/Catalyst: Camden Property Trust vs. Invitation Homes: Which Real Estate Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.13x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

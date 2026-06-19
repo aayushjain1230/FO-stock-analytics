@@ -1,15 +1,15 @@
 {
   "ticker": "DVN",
-  "generated_at": "2026-06-18T23:19:23.606981",
+  "generated_at": "2026-06-19T16:00:29.708982",
   "score": {
-    "final_score": 35.6,
+    "final_score": 39.35,
     "rating": "Drop",
-    "confidence": 25.12,
+    "confidence": 35.64,
     "risk_level": "Controlled",
     "categories": {
       "technical": 30.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 44.0,
       "risk": 75.0,
       "catalyst": 30.0
@@ -29,8 +29,8 @@
       "returns": {
         "1m": -0.14631543056485496,
         "3m": -0.13056804515579412,
-        "6m": 0.21519368361506053,
-        "12m": 0.24499981958983752
+        "6m": 0.2151935498746398,
+        "12m": 0.2449999599714907
       },
       "acceleration": -0.2382,
       "evidence": [
@@ -39,12 +39,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 14769475.35,
-      "relative_volume": 1.1136554691497556,
+      "score": 25.0,
+      "average_volume": 15826295.0,
+      "relative_volume": 2.374813561860183,
       "accumulation_days": 4,
       "distribution_days": 6,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.37x"
+      ]
     },
     "fundamental": {
       "score": 44.0,
@@ -54,14 +56,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.023692385753616946,
-        "annualized_volatility": 0.3761049640192804,
-        "maximum_drawdown": -0.4353769675164949,
-        "sharpe_ratio": 0.14740700163156312,
-        "sortino_ratio": 0.2019482429830056,
-        "calmar_ratio": -0.035142669111521335,
-        "beta": 0.8005412351469213,
-        "alpha": -0.09128172991441029
+        "volatility": 0.023692390547809417,
+        "annualized_volatility": 0.3761050401247265,
+        "maximum_drawdown": -0.4353770144005116,
+        "sharpe_ratio": 0.14740704687600253,
+        "sortino_ratio": 0.20194844819246838,
+        "calmar_ratio": -0.03514266532715262,
+        "beta": 0.7994250838899898,
+        "alpha": -0.09212322192987658
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -74,7 +76,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; analyst revision; guidance change"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 2.37x; analyst revision"
   },
   "fundamentals": {
     "ticker": "DVN",
@@ -131,10 +133,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1136554691497556,
+    "relative_volume": 2.374813561860183,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 42.119998931884766,
     "resistance": 52.06999969482422
   },
@@ -321,20 +323,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.549,
-    "probability_pct": 54.9,
+    "probability_of_outperformance": 0.5979,
+    "probability_pct": 59.79,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 35.6/100"
+      "Composite score 39.35/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.6,
+    "final_score": 39.35,
     "technical_score": 30.0,
     "momentum_score": 35.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 44.0,
     "risk_score": 75.0,
     "catalyst_score": 30.0,
@@ -342,7 +345,7 @@
     "eps_growth": -0.753,
     "roe": 0.15178001,
     "forward_pe": 7.783079,
-    "relative_volume": 1.1136554691497556,
+    "relative_volume": 2.374813561860183,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -351,13 +354,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.37x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.37x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: DVN\nRating: Drop | Score: 35.6/100 | Confidence: 25.12/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 42.119998931884766 | Resistance: 52.06999969482422\nFundamental Outlook: Cheap but Weak | Forward P/E: 7.783079\nNews/Catalyst: Devon Energy (DVN) Stock Falls Amid Market Uptick: What Investors Need to Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DVN\nRating: Drop | Score: 39.35/100 | Confidence: 35.64/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 42.119998931884766 | Resistance: 52.06999969482422\nFundamental Outlook: Cheap but Weak | Forward P/E: 7.783079\nNews/Catalyst: Devon Energy (DVN) Stock Falls Amid Market Uptick: What Investors Need to Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.37x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

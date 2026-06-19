@@ -1,15 +1,15 @@
 {
   "ticker": "AFL",
-  "generated_at": "2026-06-18T23:17:45.498477",
+  "generated_at": "2026-06-19T15:59:18.984495",
   "score": {
-    "final_score": 64.9,
-    "rating": "Hold",
-    "confidence": 53.31,
+    "final_score": 68.65,
+    "rating": "Watch",
+    "confidence": 64.56,
     "risk_level": "Controlled",
     "categories": {
       "technical": 72.0,
       "momentum": 60.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
       "catalyst": 80.0
@@ -34,7 +34,7 @@
         "1m": -0.019779301958345097,
         "3m": 0.08302636021210441,
         "6m": 0.06571029202375755,
-        "12m": 0.15518906739310956
+        "12m": 0.1551891555643754
       },
       "acceleration": 0.0502,
       "evidence": [
@@ -45,12 +45,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2900709.35,
-      "relative_volume": 0.741193529093151,
+      "score": 25.0,
+      "average_volume": 3112215.0,
+      "relative_volume": 2.0500190378878065,
       "accumulation_days": 6,
-      "distribution_days": 6,
-      "evidence": []
+      "distribution_days": 7,
+      "evidence": [
+        "Relative volume is 2.05x"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -63,14 +65,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.012568491528988437,
-        "annualized_volatility": 0.19951861764555218,
-        "maximum_drawdown": -0.13559213213383148,
-        "sharpe_ratio": 0.8413306584957501,
-        "sortino_ratio": 1.0947412324597232,
-        "calmar_ratio": 1.175147631228254,
-        "beta": 0.3694169217761567,
-        "alpha": 0.10015484075168185
+        "volatility": 0.012568491508169513,
+        "annualized_volatility": 0.19951861731506199,
+        "maximum_drawdown": -0.13559219149054713,
+        "sharpe_ratio": 0.8413306595411687,
+        "sortino_ratio": 1.0947412948286523,
+        "calmar_ratio": 1.1751471167966852,
+        "beta": 0.3688015830456502,
+        "alpha": 0.09978502418213211
       },
       "evidence": []
     },
@@ -141,10 +143,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.741193529093151,
+    "relative_volume": 2.0500190378878065,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 106.19999694824219,
     "resistance": 118.66999816894531
   },
@@ -334,22 +336,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8812,
-    "probability_pct": 88.12,
+    "probability_of_outperformance": 0.9006,
+    "probability_pct": 90.06,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 64.9/100"
+      "Composite score 68.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 64.9,
+    "final_score": 68.65,
     "technical_score": 72.0,
     "momentum_score": 60.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 100,
     "catalyst_score": 80.0,
@@ -357,7 +360,7 @@
     "eps_growth": 38.6,
     "roe": 0.16469,
     "forward_pe": 15.186048,
-    "relative_volume": 0.741193529093151,
+    "relative_volume": 2.0500190378878065,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -366,13 +369,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.05x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.05x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: AFL\nRating: Hold | Score: 64.9/100 | Confidence: 53.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 106.19999694824219 | Resistance: 118.66999816894531\nFundamental Outlook: Quality Compounder | Forward P/E: 15.186048\nNews/Catalyst: UNM Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AFL\nRating: Watch | Score: 68.65/100 | Confidence: 64.56/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 106.19999694824219 | Resistance: 118.66999816894531\nFundamental Outlook: Quality Compounder | Forward P/E: 15.186048\nNews/Catalyst: UNM Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.05x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

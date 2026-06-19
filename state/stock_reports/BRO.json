@@ -1,15 +1,15 @@
 {
   "ticker": "BRO",
-  "generated_at": "2026-06-18T23:18:29.206721",
+  "generated_at": "2026-06-19T15:59:50.069849",
   "score": {
-    "final_score": 40.5,
-    "rating": "Drop",
-    "confidence": 28.02,
+    "final_score": 48.0,
+    "rating": "Hold",
+    "confidence": 43.04,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 20.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 65.0,
       "risk": 75.0,
       "catalyst": 25.0
@@ -33,7 +33,7 @@
         "1m": 0.017386784625240015,
         "3m": -0.10947638783572444,
         "6m": -0.2662779425087958,
-        "12m": -0.448499701017381
+        "12m": -0.44849966175341727
       },
       "acceleration": 0.0237,
       "evidence": [
@@ -42,12 +42,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2999368.95,
-      "relative_volume": 1.0838876624364602,
+      "score": 50.0,
+      "average_volume": 3124045.0,
+      "relative_volume": 1.8388019378722138,
       "accumulation_days": 3,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.84x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 65.0,
@@ -59,14 +62,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.01593968596336965,
-        "annualized_volatility": 0.25303467021325865,
-        "maximum_drawdown": -0.5584660959890368,
-        "sharpe_ratio": -0.7434304985974349,
-        "sortino_ratio": -0.8670716265510038,
-        "calmar_ratio": -0.3545615965267527,
-        "beta": 0.2501833155243193,
-        "alpha": -0.23396698827304965
+        "volatility": 0.015939687026889023,
+        "annualized_volatility": 0.25303468709610527,
+        "maximum_drawdown": -0.5584660959890377,
+        "sharpe_ratio": -0.7434302684632959,
+        "sortino_ratio": -0.8670713426895872,
+        "calmar_ratio": -0.3545615362203659,
+        "beta": 0.2500730066835165,
+        "alpha": -0.2342739581712775
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -136,10 +139,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0838876624364602,
+    "relative_volume": 1.8388019378722138,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 54.380001068115234,
     "resistance": 68.94999694824219
   },
@@ -259,6 +262,16 @@
     "available": true,
     "items": [
       {
+        "headline": "3 Services Stocks for Long-Term Investors",
+        "source": "StockStory",
+        "published": "2026-06-19T14:52:58Z",
+        "summary": "Business services providers play a critical role for enterprises, assisting them with everything from new hardware integrations to consulting and marketing. Furthermore, the demand for their offerings is rising as more clients outsource non-core functions, a trend that has enabled the industry to return 8.6% over the past six months, almost identical to the S&P 500.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Is Erie Indemnity Stock Underperforming the Dow?",
         "source": "Barchart",
         "published": "2026-06-18T12:51:27Z",
@@ -297,16 +310,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Is Willis Towers Watson Stock Underperforming the Dow?",
-        "source": "Barchart",
-        "published": "2026-06-12T12:07:59Z",
-        "summary": "While Willis Towers Watson has underperformed relative to the Dow over the past year, Wall Street analysts maintain a moderately optimistic outlook on the stock\u2019s prospects.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -326,20 +329,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6126,
-    "probability_pct": 61.26,
+    "probability_of_outperformance": 0.6737,
+    "probability_pct": 67.37,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
-      "Composite score 40.5/100"
+      "Volume surge above 1.5x",
+      "Composite score 48.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.5,
+    "final_score": 48.0,
     "technical_score": 53.0,
     "momentum_score": 20.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 65.0,
     "risk_score": 75.0,
     "catalyst_score": 25.0,
@@ -347,7 +351,7 @@
     "eps_growth": -0.079,
     "roe": 0.11926,
     "forward_pe": 12.140484,
-    "relative_volume": 1.0838876624364602,
+    "relative_volume": 1.8388019378722138,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -356,13 +360,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.84x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.84x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: BRO\nRating: Drop | Score: 40.5/100 | Confidence: 28.02/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 54.380001068115234 | Resistance: 68.94999694824219\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.140484\nNews/Catalyst: Is Erie Indemnity Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BRO\nRating: Hold | Score: 48.0/100 | Confidence: 43.04/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 54.380001068115234 | Resistance: 68.94999694824219\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.140484\nNews/Catalyst: 3 Services Stocks for Long-Term Investors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.84x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

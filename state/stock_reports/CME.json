@@ -1,18 +1,18 @@
 {
   "ticker": "CME",
-  "generated_at": "2026-06-18T23:18:53.108794",
+  "generated_at": "2026-06-19T16:00:07.054020",
   "score": {
-    "final_score": 30.65,
+    "final_score": 35.15,
     "rating": "Drop",
-    "confidence": 19.19,
+    "confidence": 31.43,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 10.0,
@@ -29,18 +29,20 @@
         "1m": -0.18094567357681424,
         "3m": -0.20293048712052375,
         "6m": -0.07097313773863667,
-        "12m": -0.05092561842986776
+        "12m": -0.05092572999925704
       },
       "acceleration": -0.1674,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 4047901.45,
-      "relative_volume": 1.422102062292055,
+      "score": 25.0,
+      "average_volume": 4107750.0,
+      "relative_volume": 1.6927758505264439,
       "accumulation_days": 4,
       "distribution_days": 11,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.69x"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -53,28 +55,29 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.012459178110870559,
-        "annualized_volatility": 0.1977833209297382,
-        "maximum_drawdown": -0.2232497266877893,
-        "sharpe_ratio": 0.8598008218489199,
-        "sortino_ratio": 1.1288494440077648,
-        "calmar_ratio": 0.7269362422651805,
-        "beta": -0.116630294587256,
-        "alpha": 0.1914301220321332
+        "volatility": 0.012459183804699247,
+        "annualized_volatility": 0.19778341131646648,
+        "maximum_drawdown": -0.22324972668778864,
+        "sharpe_ratio": 0.8598003061270201,
+        "sortino_ratio": 1.1288497382790568,
+        "calmar_ratio": 0.7269360232576382,
+        "beta": -0.11768509034433151,
+        "alpha": 0.19177741618268027
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Relative volume is 1.69x; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision"
   },
   "fundamentals": {
     "ticker": "CME",
@@ -102,7 +105,7 @@
     "interest_coverage": null,
     "forward_pe": 19.074251,
     "trailing_pe": 21.405735,
-    "peg": 4.59,
+    "peg": 4.32,
     "price_to_book": 3.348783,
     "price_to_sales": 13.201065,
     "enterprise_to_ebitda": 20.035,
@@ -131,10 +134,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.422102062292055,
+    "relative_volume": 1.6927758505264439,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 246.3800048828125,
     "resistance": 310.5799865722656
   },
@@ -183,10 +186,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 2,
+    "bullish_news_score": 2,
+    "bearish_news_score": 4,
     "institutional_ownership": 0.92651004,
     "detail": {
       "earnings": {
@@ -233,6 +236,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -255,50 +259,50 @@
     "available": true,
     "items": [
       {
-        "headline": "Stocks to Watch Recap: Intel, Accenture, Apple, SpaceX",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-18T21:10:01Z",
-        "summary": "\u2197\ufe0f Intel (INTC): Shares in the tech giant surged more than 10% after President Trump said Apple agreed to work with it to design and build chips in the U.S. \u2198\ufe0f Accenture (ACN): Shares in the consultancy and IT-services provider tumbled 18% after it cut its guidance; other software stocks are also down.",
+        "headline": "CME Stock Nears 52-Week Low After a 19.8% Drop: Time to Hold or Exit?",
+        "source": "Zacks",
+        "published": "2026-06-19T14:40:00Z",
+        "summary": "CME Group expands its product lineup and global reach while benefiting from electronic trading growth and strong capital returns.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "US CFTC, SEC Push to Clarify Derivatives Products Definitions amid CME Lawsuit",
+        "source": "CoinGape",
+        "published": "2026-06-19T08:17:08Z",
+        "summary": "The SEC and CFTC are seeking public input to clarify and harmonize how derivatives products are defined and regulated in the US. The move comes amid ongoing tensions, including CME lawsuit, over the oversight of futures, swaps, and emerging crypto-linked products. Ad Ad CFTC and SEC Seek Input to Clarify Swaps & Other Derivatives Definitions",
         "bullish_score": 0,
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       },
       {
-        "headline": "Hyperion CEO Says HYPE Rally Still Undervalues Hyperliquid\u2019s Ecosystem Shift",
-        "source": "CryptoProwl",
-        "published": "2026-06-18T20:11:00Z",
-        "summary": "Hyperliquid\u2019s HYPE token (CRYPTO: $HYPE) has already become one of crypto\u2019s strongest trades of th...",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "CME Sues CFTC to Stop Kalshi From Offering Crypto-Style Perp Futures",
-        "source": "CryptoProwl",
-        "published": "2026-06-18T20:09:00Z",
-        "summary": "CME Group (NASDAQ: $CME) has moved its fight against crypto-style perpetual futures into court, suing the U.S. Comm...",
+        "headline": "Is the Stock Market Open Today? Here Are the Trading Hours for Juneteenth.",
+        "source": "Barrons.com",
+        "published": "2026-06-19T04:01:00Z",
+        "summary": "SpaceX and the AI trade take a break Friday as the stock market celebrates the ending of slavery in the U.S. with the Juneteenth holiday.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "CME Group Sues CFTC Over Perpetual Futures Approval",
-        "source": "Bankless",
-        "published": "2026-06-18T18:23:06Z",
-        "summary": "The world's largest derivatives exchange is taking the CFTC to court over its decision to greenlight perpetual futures in the U.S.",
+        "headline": "Top futures exchange sues regulator over crypto product",
+        "source": "TheStreet",
+        "published": "2026-06-18T23:19:06Z",
+        "summary": "Terrence Duffy, who is stepping down as CME Group's chief executive, has told CNBC that the company is suing the Commodity Futures Trading Commission (CFTC), with the filing scheduled to be submitted this week. CME Group (Chicago Mercantile Exchange Group) is the world's largest derivatives ...",
         "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+        "bearish_score": 2,
+        "importance_score": 60,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       },
       {
-        "headline": "CME Group Sues CFTC Over Perpetual Future Decision That 'Went Outside the Law'",
-        "source": "MT Newswires",
-        "published": "2026-06-18T16:27:36Z",
-        "summary": "CME Group Inc. is suing the Commodity Futures Trading Commission, or CFTC, after the regulator 'went",
+        "headline": "Stocks to Watch Recap: Intel, Accenture, Apple, SpaceX",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-18T21:10:01Z",
+        "summary": "\u2197\ufe0f Intel (INTC): Shares in the tech giant surged more than 10% after President Trump said Apple agreed to work with it to design and build chips in the U.S. \u2198\ufe0f Accenture (ACN): Shares in the consultancy and IT-services provider tumbled 18% after it cut its guidance; other software stocks are also down.",
         "bullish_score": 0,
         "bearish_score": 1,
         "importance_score": 45,
@@ -322,45 +326,46 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7709,
-    "probability_pct": 77.09,
+    "probability_of_outperformance": 0.8135,
+    "probability_pct": 81.35,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 30.65/100"
+      "Composite score 35.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 30.65,
+    "final_score": 35.15,
     "technical_score": 10.0,
     "momentum_score": 0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.144,
     "eps_growth": 0.213,
     "roe": 0.15919,
     "forward_pe": 19.074251,
-    "relative_volume": 1.422102062292055,
+    "relative_volume": 1.6927758505264439,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CME\nRating: Drop | Score: 30.65/100 | Confidence: 19.19/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 246.3800048828125 | Resistance: 310.5799865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.074251\nNews/Catalyst: Stocks to Watch Recap: Intel, Accenture, Apple, SpaceX\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CME\nRating: Drop | Score: 35.15/100 | Confidence: 31.43/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 246.3800048828125 | Resistance: 310.5799865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.074251\nNews/Catalyst: CME Stock Nears 52-Week Low After a 19.8% Drop: Time to Hold or Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

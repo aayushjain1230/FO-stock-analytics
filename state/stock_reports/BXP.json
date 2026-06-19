@@ -1,15 +1,15 @@
 {
   "ticker": "BXP",
-  "generated_at": "2026-06-18T23:18:31.618459",
+  "generated_at": "2026-06-19T15:59:51.705176",
   "score": {
-    "final_score": 50.95,
+    "final_score": 58.45,
     "rating": "Hold",
-    "confidence": 44.28,
+    "confidence": 52.96,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 50.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 58.0,
       "risk": 75.0,
       "catalyst": 30.0
@@ -44,12 +44,14 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1390432.35,
-      "relative_volume": 1.1665774318326239,
+      "score": 75.0,
+      "average_volume": 1477640.0,
+      "relative_volume": 2.2780920927966215,
       "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
+        "Relative volume is 2.28x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -64,14 +66,14 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.01895437711395082,
-        "annualized_volatility": 0.3008914085978883,
-        "maximum_drawdown": -0.39025157771898655,
-        "sharpe_ratio": 0.4121457942161695,
-        "sortino_ratio": 0.569309431398948,
-        "calmar_ratio": 0.20947269275237898,
-        "beta": 0.9122756224525722,
-        "alpha": -0.04318965053913443
+        "volatility": 0.018954370009934416,
+        "annualized_volatility": 0.300891295825124,
+        "maximum_drawdown": -0.39025157771898744,
+        "sharpe_ratio": 0.41214583255227577,
+        "sortino_ratio": 0.5693093398845199,
+        "calmar_ratio": 0.20947269275237623,
+        "beta": 0.9127435052847672,
+        "alpha": -0.044469808334397704
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -112,7 +114,7 @@
     "interest_coverage": null,
     "forward_pe": 30.444336,
     "trailing_pe": 32.51256,
-    "peg": 2.52,
+    "peg": 2.48,
     "price_to_book": 1.9926697,
     "price_to_sales": 3.6525135,
     "enterprise_to_ebitda": 18.094,
@@ -124,7 +126,7 @@
     "short_ratio": 7.55,
     "short_percent_float": 0.094,
     "days_to_cover": 7.55,
-    "target_mean_price": 69.3,
+    "target_mean_price": 69.55,
     "target_high_price": 89.0,
     "target_low_price": 58.0,
     "recommendation": "buy",
@@ -141,10 +143,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1665774318326239,
+    "relative_volume": 2.2780920927966215,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 51.02000045776367,
     "resistance": 66.61000061035156
   },
@@ -237,7 +239,7 @@
         "last_surprise_pct": 0.9757,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.11,
+      "analyst_upside_pct": 7.5,
       "eps_growth_implied": 6.79
     },
     "evidence": [
@@ -247,7 +249,7 @@
   },
   "analyst": {
     "consensus": "buy",
-    "target_mean_price": 69.3,
+    "target_mean_price": 69.55,
     "target_high_price": 89.0,
     "target_low_price": 58.0,
     "number_of_analysts": 20.0
@@ -331,21 +333,22 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6364,
-    "probability_pct": 63.64,
+    "probability_of_outperformance": 0.7297,
+    "probability_pct": 72.97,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 50.95/100"
+      "Composite score 58.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 50.95,
+    "final_score": 58.45,
     "technical_score": 53.0,
     "momentum_score": 50.0,
-    "volume_score": 25.0,
+    "volume_score": 75.0,
     "fundamental_score": 58.0,
     "risk_score": 75.0,
     "catalyst_score": 30.0,
@@ -353,7 +356,7 @@
     "eps_growth": 0.655,
     "roe": 0.05525,
     "forward_pe": 30.444336,
-    "relative_volume": 1.1665774318326239,
+    "relative_volume": 2.2780920927966215,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -362,13 +365,20 @@
     "major_news": false
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.28x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.28x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: BXP\nRating: Hold | Score: 50.95/100 | Confidence: 44.28/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 51.02000045776367 | Resistance: 66.61000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 30.444336\nNews/Catalyst: What BXP's 343 Madison Lease Means for Office Investors in 2026\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BXP\nRating: Hold | Score: 58.45/100 | Confidence: 52.96/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 51.02000045776367 | Resistance: 66.61000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 30.444336\nNews/Catalyst: What BXP's 343 Madison Lease Means for Office Investors in 2026\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.28x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

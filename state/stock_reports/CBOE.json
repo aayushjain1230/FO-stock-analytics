@@ -1,10 +1,10 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-18T23:18:38.218315",
+  "generated_at": "2026-06-19T15:59:56.282954",
   "score": {
-    "final_score": 40.95,
+    "final_score": 41.7,
     "rating": "Drop",
-    "confidence": 36.89,
+    "confidence": 39.56,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 78.0,
       "risk": 85.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 10.0,
@@ -39,12 +39,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1934018.6,
-      "relative_volume": 1.5587088976290093,
+      "average_volume": 1935850.0,
+      "relative_volume": 1.5761551773122917,
       "accumulation_days": 3,
       "distribution_days": 10,
       "evidence": [
-        "Relative volume is 1.56x"
+        "Relative volume is 1.58x"
       ]
     },
     "fundamental": {
@@ -57,27 +57,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016675501884296794,
-        "annualized_volatility": 0.2647153858382298,
-        "maximum_drawdown": -0.3192743025894733,
-        "sharpe_ratio": 0.8660859538230471,
-        "sortino_ratio": 1.1020853650480371,
-        "calmar_ratio": 0.6701449632954596,
-        "beta": -0.21792983091153434,
-        "alpha": 0.26920819479298924
+        "volatility": 0.01667550054787004,
+        "annualized_volatility": 0.26471536462311274,
+        "maximum_drawdown": -0.31927430258947354,
+        "sharpe_ratio": 0.8660858295570762,
+        "sortino_ratio": 1.1020853678993416,
+        "calmar_ratio": 0.6701447908350153,
+        "beta": -0.21880666187916867,
+        "alpha": 0.2696551673470771
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "earnings surprise",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.56x; eps growth is strong; earnings surprise"
+    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.58x; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -105,7 +106,7 @@
     "interest_coverage": null,
     "forward_pe": 16.927235,
     "trailing_pe": 21.2906,
-    "peg": 2.41,
+    "peg": 2.26,
     "price_to_book": 4.8523455,
     "price_to_sales": 5.440162,
     "enterprise_to_ebitda": 15.249,
@@ -134,7 +135,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.5587088976290093,
+    "relative_volume": 1.5761551773122917,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "volume surge",
@@ -186,10 +187,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bullish_news_score": 2,
+    "bearish_news_score": 3,
     "institutional_ownership": 0.91816,
     "detail": {
       "earnings": {
@@ -235,6 +236,7 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -257,50 +259,50 @@
     "available": true,
     "items": [
       {
+        "headline": "Charles Schwab Breaks Into the Prediction Market Business",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-19T15:12:00Z",
+        "summary": "The brokerage is working with Cboe to offer yes-or-no contracts tied to the performance of the S&P 500 index.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "CME Stock Nears 52-Week Low After a 19.8% Drop: Time to Hold or Exit?",
+        "source": "Zacks",
+        "published": "2026-06-19T14:40:00Z",
+        "summary": "CME Group expands its product lineup and global reach while benefiting from electronic trading growth and strong capital returns.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "MarketAxess Expands Bond Market Transparency With New TraX Tape",
+        "source": "Zacks",
+        "published": "2026-06-19T13:39:00Z",
+        "summary": "MKTX launches TraX Tape, a new bond market data feed that combines trading activity, analytics and AI-powered pricing insights in one view.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Cboe (CBOE) Faces New ETF Rivals As Perpetual Futures Threaten Its Core Business",
+        "source": "Simply Wall St.",
+        "published": "2026-06-19T09:14:39Z",
+        "summary": "Cboe Global Markets is confronting rising competition after new leveraged single-stock ETFs and other rival products were launched. Recent regulatory changes, including the Commodity Futures Trading Commission\u2019s approval of perpetual futures, are challenging Cboe\u2019s existing business model. The company is reported to be restructuring its organization to respond, which may introduce execution risks and near-term revenue pressure. Cboe Global Markets (BATS:CBOE) is coming under pressure as new...",
+        "bullish_score": 0,
+        "bearish_score": 3,
+        "importance_score": 75,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
         "headline": "Some Call SpaceX A Meme Stock. PitchBook Sees An AI Infrastructure Boom.",
         "source": "Investor's Business Daily",
         "published": "2026-06-18T19:11:30Z",
         "summary": "Elon Musk's SpaceX pulled off the biggest IPO ever. For investors, there are still issues to sort out. For one, is SPCX a meme stock?",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Tax-Exempt Muni Income or Corporate Bond Yield? SMB vs. VCSH",
-        "source": "Motley Fool",
-        "published": "2026-06-18T18:48:58Z",
-        "summary": "The VanEck Short Muni ETF (SMB) and the Vanguard Short-Term Corporate Bond ETF (VCSH) both appeal to short-term bond investors, but the higher yield is not the only number that matters as taxes and account type can also affect the comparison.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "2 Reasons to Buy the Dip on Struggling Carvana Stock",
-        "source": "Schaeffer's Investment Research",
-        "published": "2026-06-17T17:47:38Z",
-        "summary": "Carvana pessimism in the options pits could be another contrarian signal",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Is Cboe Global Markets Stock Underperforming the S&P 500?",
-        "source": "Barchart",
-        "published": "2026-06-17T13:23:50Z",
-        "summary": "As Cboe Global Markets has struggled to keep pace with the broader S&P 500 Index over the past year, analysts are cautious about its future growth prospects.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Nasdaq Futures Climb as Chip Stocks Rebound Ahead of First Fed Decision Under Warsh",
-        "source": "Barchart",
-        "published": "2026-06-17T10:37:21Z",
-        "summary": "June Nasdaq 100 E-Mini futures (NQM26) are up +0.54% this morning, signaling a rebound from yesterday\u2019s selloff, while investors await the first Federal Reserve rate decision under Kevin Warsh.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -324,45 +326,45 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7472,
-    "probability_pct": 74.72,
+    "probability_of_outperformance": 0.7583,
+    "probability_pct": 75.83,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 40.95/100"
+      "Composite score 41.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.95,
+    "final_score": 41.7,
     "technical_score": 10.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 78.0,
     "risk_score": 85.0,
-    "catalyst_score": 30.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.065,
     "eps_growth": 0.544,
     "roe": 0.2514,
     "forward_pe": 16.927235,
-    "relative_volume": 1.5587088976290093,
+    "relative_volume": 1.5761551773122917,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
+    "date_of_change": "2026-06-19",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 40.95/100 | Confidence: 36.89/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 249.10000610351562 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.927235\nNews/Catalyst: Some Call SpaceX A Meme Stock. PitchBook Sees An AI Infrastructure Boom.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 41.7/100 | Confidence: 39.56/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 249.10000610351562 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.927235\nNews/Catalyst: Charles Schwab Breaks Into the Prediction Market Business\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

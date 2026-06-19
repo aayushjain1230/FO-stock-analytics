@@ -1,10 +1,10 @@
 {
   "ticker": "AVY",
-  "generated_at": "2026-06-18T23:18:11.305158",
+  "generated_at": "2026-06-19T15:59:37.096479",
   "score": {
-    "final_score": 46.5,
+    "final_score": 45.5,
     "rating": "Hold",
-    "confidence": 42.75,
+    "confidence": 39.03,
     "risk_level": "Controlled",
     "categories": {
       "technical": 46.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 60.0,
       "risk": 100,
-      "catalyst": 45.0
+      "catalyst": 25.0
     },
     "technical": {
       "score": 46.0,
@@ -42,12 +42,12 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 718230.8,
-      "relative_volume": 0.9604377868506891,
+      "average_volume": 759030.0,
+      "relative_volume": 1.9838478057520783,
       "accumulation_days": 5,
-      "distribution_days": 4,
+      "distribution_days": 5,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.98x"
       ]
     },
     "fundamental": {
@@ -58,21 +58,20 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014781181067413584,
-        "annualized_volatility": 0.23464397512915558,
-        "maximum_drawdown": -0.3055928866167781,
-        "sharpe_ratio": -0.5554745749822708,
-        "sortino_ratio": -0.9625895736386323,
-        "calmar_ratio": -0.47735439650370115,
-        "beta": 0.6025711354363147,
-        "alpha": -0.24077727549234323
+        "volatility": 0.014781181539025634,
+        "annualized_volatility": 0.23464398261576477,
+        "maximum_drawdown": -0.3055928385296748,
+        "sharpe_ratio": -0.5554748546557775,
+        "sortino_ratio": -0.9625910449078495,
+        "calmar_ratio": -0.47735466975529,
+        "beta": 0.6018862377611836,
+        "alpha": -0.24143941585005899
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 25.0,
       "evidence": [
-        "analyst revision",
         "major news",
         "guidance change"
       ]
@@ -120,7 +119,7 @@
     "target_mean_price": 200.3,
     "target_high_price": 221.0,
     "target_low_price": 175.0,
-    "recommendation": "buy",
+    "recommendation": "none",
     "number_of_analysts": 10.0,
     "dividend_yield": null,
     "payout_ratio": null,
@@ -134,10 +133,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9604377868506891,
+    "relative_volume": 1.9838478057520783,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 153.00999450683594,
     "resistance": 175.30999755859375
   },
@@ -183,7 +182,7 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
     "major_news": true,
@@ -234,13 +233,12 @@
       "eps_growth_implied": 25.89
     },
     "evidence": [
-      "analyst target/recommendation data is supportive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
-    "consensus": "buy",
+    "consensus": "none",
     "target_mean_price": 200.3,
     "target_high_price": 221.0,
     "target_low_price": 175.0,
@@ -325,43 +323,50 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6686,
-    "probability_pct": 66.86,
+    "probability_of_outperformance": 0.6597,
+    "probability_pct": 65.97,
     "confidence": "High",
     "evidence": [
-      "Analyst data is supportive",
-      "Composite score 46.5/100"
+      "Volume surge above 1.5x",
+      "Composite score 45.5/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 46.5,
+    "final_score": 45.5,
     "technical_score": 46.0,
     "momentum_score": 20.0,
     "volume_score": 25.0,
     "fundamental_score": 60.0,
     "risk_score": 100,
-    "catalyst_score": 45.0,
+    "catalyst_score": 25.0,
     "revenue_growth": 0.07,
     "eps_growth": 0.043,
     "roe": 0.30857,
     "forward_pe": 14.210882,
-    "relative_volume": 0.9604377868506891,
+    "relative_volume": 1.9838478057520783,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.98x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.98x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: AVY\nRating: Hold | Score: 46.5/100 | Confidence: 42.75/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 153.00999450683594 | Resistance: 175.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.210882\nNews/Catalyst: Is Avery Dennison Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AVY\nRating: Hold | Score: 45.5/100 | Confidence: 39.03/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 153.00999450683594 | Resistance: 175.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.210882\nNews/Catalyst: Is Avery Dennison Stock Underperforming the Dow?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.98x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

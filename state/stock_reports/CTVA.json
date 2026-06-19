@@ -1,6 +1,6 @@
 {
   "ticker": "CTVA",
-  "generated_at": "2026-06-18T23:19:13.809581",
+  "generated_at": "2026-06-19T16:00:22.254859",
   "score": {
     "final_score": 63.4,
     "rating": "Hold",
@@ -44,12 +44,12 @@
     },
     "volume": {
       "score": 50.0,
-      "average_volume": 3831636.75,
-      "relative_volume": 1.5490599415510877,
+      "average_volume": 4202880.0,
+      "relative_volume": 3.1788440307598598,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": [
-        "Relative volume is 1.55x",
+        "Relative volume is 3.18x",
         "Price advanced on above-average volume"
       ]
     },
@@ -64,14 +64,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015505607879331489,
-        "annualized_volatility": 0.24614389425356842,
-        "maximum_drawdown": -0.20710126079043656,
-        "sharpe_ratio": 0.9972570480105949,
-        "sortino_ratio": 1.2559785235495777,
-        "calmar_ratio": 1.1575478336483231,
-        "beta": 0.5455195758999913,
-        "alpha": 0.14548656146344283
+        "volatility": 0.015505603559526553,
+        "annualized_volatility": 0.24614382567879098,
+        "maximum_drawdown": -0.20710118158910185,
+        "sharpe_ratio": 0.9972571044963693,
+        "sortino_ratio": 1.2559787349150582,
+        "calmar_ratio": 1.1575480520215806,
+        "beta": 0.5457786054196356,
+        "alpha": 0.14472485416517927
       },
       "evidence": []
     },
@@ -112,7 +112,7 @@
     "interest_coverage": null,
     "forward_pe": 19.12924,
     "trailing_pe": 42.48108,
-    "peg": 1.29,
+    "peg": 1.32,
     "price_to_book": 2.1615005,
     "price_to_sales": 2.9382615,
     "enterprise_to_ebitda": 12.81,
@@ -141,7 +141,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.5490599415510877,
+    "relative_volume": 3.1788440307598598,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "volume surge",
@@ -356,7 +356,7 @@
     "eps_growth": 0.121,
     "roe": 0.051370002,
     "forward_pe": 19.12924,
-    "relative_volume": 1.5490599415510877,
+    "relative_volume": 3.1788440307598598,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -365,13 +365,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 3.18x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 3.18x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CTVA\nRating: Hold | Score: 63.4/100 | Confidence: 61.56/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 74.45999908447266 | Resistance: 85.45999908447266\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.12924\nNews/Catalyst: FMC and Corteva Partner to Expand Access to Rimisoxafen Technology\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CTVA\nRating: Hold | Score: 63.4/100 | Confidence: 61.56/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 74.45999908447266 | Resistance: 85.45999908447266\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.12924\nNews/Catalyst: FMC and Corteva Partner to Expand Access to Rimisoxafen Technology\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.18x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

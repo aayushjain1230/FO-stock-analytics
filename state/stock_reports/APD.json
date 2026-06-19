@@ -1,15 +1,15 @@
 {
   "ticker": "APD",
-  "generated_at": "2026-06-18T23:18:02.366548",
+  "generated_at": "2026-06-19T15:59:31.342605",
   "score": {
-    "final_score": 50.0,
+    "final_score": 53.75,
     "rating": "Hold",
-    "confidence": 37.75,
+    "confidence": 48.44,
     "risk_level": "Controlled",
     "categories": {
       "technical": 57.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 65.0,
       "risk": 100,
       "catalyst": 45.0
@@ -33,7 +33,7 @@
         "1m": -0.03962024195042235,
         "3m": -0.007683011758765734,
         "6m": 0.17244590511253133,
-        "12m": 0.038540100016049905
+        "12m": 0.038539982549844476
       },
       "acceleration": -0.0939,
       "evidence": [
@@ -42,12 +42,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1235284.25,
-      "relative_volume": 1.0501914842676898,
+      "score": 25.0,
+      "average_volume": 1298860.0,
+      "relative_volume": 1.97773432086599,
       "accumulation_days": 5,
       "distribution_days": 6,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.98x"
+      ]
     },
     "fundamental": {
       "score": 65.0,
@@ -57,14 +59,14 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016534433524501842,
-        "annualized_volatility": 0.2624759950509664,
-        "maximum_drawdown": -0.3042990907831936,
-        "sharpe_ratio": 0.2856929496230542,
-        "sortino_ratio": 0.4298834243990284,
-        "calmar_ratio": 0.13694896132644055,
-        "beta": 0.5663490899918875,
-        "alpha": -0.028812238970459685
+        "volatility": 0.01653443276978805,
+        "annualized_volatility": 0.2624759830702564,
+        "maximum_drawdown": -0.3042990259036582,
+        "sharpe_ratio": 0.2856929491331512,
+        "sortino_ratio": 0.4298835037627376,
+        "calmar_ratio": 0.13694899052530674,
+        "beta": 0.565653305477825,
+        "alpha": -0.029424905193362483
       },
       "evidence": []
     },
@@ -104,7 +106,7 @@
     "interest_coverage": null,
     "forward_pe": 19.685188,
     "trailing_pe": 29.558018,
-    "peg": 2.1,
+    "peg": 2.08,
     "price_to_book": 3.9870517,
     "price_to_sales": 5.0062466,
     "enterprise_to_ebitda": 21.262,
@@ -133,10 +135,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0501914842676898,
+    "relative_volume": 1.97773432086599,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 276.510009765625,
     "resistance": 306.20001220703125
   },
@@ -324,20 +326,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6977,
-    "probability_pct": 69.77,
+    "probability_of_outperformance": 0.7382,
+    "probability_pct": 73.82,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 50.0/100"
+      "Composite score 53.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 50.0,
+    "final_score": 53.75,
     "technical_score": 57.0,
     "momentum_score": 35.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 65.0,
     "risk_score": 100,
     "catalyst_score": 45.0,
@@ -345,7 +348,7 @@
     "eps_growth": null,
     "roe": 0.12353,
     "forward_pe": 19.685188,
-    "relative_volume": 1.0501914842676898,
+    "relative_volume": 1.97773432086599,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -354,13 +357,20 @@
     "major_news": true
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-18",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.98x",
+    "date_of_change": "2026-06-19",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.98x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: APD\nRating: Hold | Score: 50.0/100 | Confidence: 37.75/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 276.510009765625 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.685188\nNews/Catalyst: Has The AI Power Boom Pushed Bloom Energy Stock Too Far, Too Fast?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APD\nRating: Hold | Score: 53.75/100 | Confidence: 48.44/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 276.510009765625 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.685188\nNews/Catalyst: Has The AI Power Boom Pushed Bloom Energy Stock Too Far, Too Fast?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.98x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
