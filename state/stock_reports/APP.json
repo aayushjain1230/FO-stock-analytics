@@ -1,10 +1,10 @@
 {
   "ticker": "APP",
-  "generated_at": "2026-06-19T19:29:53.641613",
+  "generated_at": "2026-06-19T20:54:03.739474",
   "score": {
-    "final_score": 42.15,
+    "final_score": 41.4,
     "rating": "Drop",
-    "confidence": 42.08,
+    "confidence": 40.23,
     "risk_level": "High",
     "categories": {
       "technical": 20.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 35.0,
-      "catalyst": 80.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 20.0,
@@ -66,8 +66,8 @@
         "sharpe_ratio": 1.5011109634949265,
         "sortino_ratio": 2.1612518515405843,
         "calmar_ratio": 2.605122589152179,
-        "beta": 2.255549020033666,
-        "alpha": 0.8325084477474545
+        "beta": 2.2555503843562246,
+        "alpha": 0.8325082155441027
       },
       "evidence": [
         "Volatility is elevated",
@@ -76,12 +76,11 @@
       ]
     },
     "catalyst": {
-      "score": 80.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
-        "major news",
         "guidance change"
       ]
     },
@@ -195,10 +194,10 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
-    "bearish_news_score": 2,
+    "bullish_news_score": 2,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.75058,
     "detail": {
       "earnings": {
@@ -246,7 +245,6 @@
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -268,6 +266,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "AppLovin Could Hit $600+ With 28% Upside as AI Ad-Tech Story Rebounds",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-19T19:40:07Z",
+        "summary": "AppLovin (NASDAQ:APP) has had a wild ride in 2026. After a blistering 2025 that pushed shares higher, the stock has cooled meaningfully, leaving investors wondering whether the AI ad-tech story is broken or simply digesting gains. My read leans toward the latter, and the 24/7 Wall St. price target reflects that. Our price target for ... AppLovin Could Hit $600+ With 28% Upside as AI Ad-Tech Story Rebounds",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "1 Growth Stock to Add to Your Roster and 2 We Avoid",
         "source": "StockStory",
@@ -307,16 +315,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AppLovin (APP) Slid Amid Competitive Threat and AI Disruption Risks",
-        "source": "Insider Monkey",
-        "published": "2026-06-17T14:10:17Z",
-        "summary": "Renaissance Investment Management, an investment management company, released its Q1 2026 \u201cLarge Cap Growth Strategy.\u201d A copy of the letter can be downloaded here. Stocks fell sharply in the first quarter due to the Iran conflict. The Energy and Materials sectors outperformed, Financials and Consumer Discretionary lagged. Large-cap stocks underperformed smaller-cap stocks, and Value outperformed Growth. [\u2026]",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -336,8 +334,8 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7637,
-    "probability_pct": 76.37,
+    "probability_of_outperformance": 0.7527,
+    "probability_pct": 75.27,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
@@ -345,18 +343,18 @@
       "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 42.15/100"
+      "Composite score 41.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 42.15,
+    "final_score": 41.4,
     "technical_score": 20.0,
     "momentum_score": 45.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 35.0,
-    "catalyst_score": 80.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.59,
     "eps_growth": 1.131,
     "roe": 2.66444,
@@ -367,7 +365,7 @@
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,
@@ -378,5 +376,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APP\nRating: Drop | Score: 42.15/100 | Confidence: 42.08/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: volume surge | Support: 372.0799865722656 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 21.42218\nNews/Catalyst: 1 Growth Stock to Add to Your Roster and 2 We Avoid\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APP\nRating: Drop | Score: 41.4/100 | Confidence: 40.23/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: volume surge | Support: 372.0799865722656 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 21.42218\nNews/Catalyst: AppLovin Could Hit $600+ With 28% Upside as AI Ad-Tech Story Rebounds\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
