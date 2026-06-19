@@ -1,10 +1,10 @@
 {
   "ticker": "ACN",
-  "generated_at": "2026-06-19T15:59:13.281098",
+  "generated_at": "2026-06-19T17:54:45.120778",
   "score": {
-    "final_score": 25.75,
+    "final_score": 26.5,
     "rating": "Avoid",
-    "confidence": 20.13,
+    "confidence": 22.49,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 60.0,
       "risk": 60.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 10.0,
@@ -52,14 +52,14 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02153491871550071,
-        "annualized_volatility": 0.3418562365512324,
-        "maximum_drawdown": -0.6726829097913791,
-        "sharpe_ratio": -1.0645162797954322,
-        "sortino_ratio": -1.2447042177665646,
-        "calmar_ratio": -0.5136815951422055,
-        "beta": 0.6623735022269037,
-        "alpha": -0.48617729653271446
+        "volatility": 0.02153491743718033,
+        "annualized_volatility": 0.34185621625852547,
+        "maximum_drawdown": -0.6726829097913792,
+        "sharpe_ratio": -1.0645163626402778,
+        "sortino_ratio": -1.2447041762722904,
+        "calmar_ratio": -0.5136815951422056,
+        "beta": 0.662373921203961,
+        "alpha": -0.486177344329822
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -67,13 +67,14 @@
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Relative volume is 6.09x; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Relative volume is 6.09x; analyst revision; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "ACN",
@@ -123,7 +124,8 @@
     "next_earnings_date": "1781785800",
     "eps_current_year": 12.2,
     "eps_forward": 14.84602,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 15.973737237589617,
@@ -182,10 +184,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 0,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.85204005,
     "detail": {
       "earnings": {
@@ -231,6 +233,7 @@
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -252,16 +255,6 @@
   "news": {
     "available": true,
     "items": [
-      {
-        "headline": "Why Accenture, Pfizer, and Kroger are moving today",
-        "source": "Yahoo Finance Video",
-        "published": "2026-06-18T16:01:11Z",
-        "summary": "Market Catalyst Host Julie Hyman breaks down today's Trending Tickers, giving us the latest on Accenture (ACN), Pfizer (PFE), and Kroger (KR).",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
       {
         "headline": "Paychex Gears Up to Report Q4 Earnings: What's in Store?",
         "source": "Zacks",
@@ -301,6 +294,16 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "India's Nifty IT index at three-year low as bellwether Accenture flags weak outlook",
+        "source": "Reuters",
+        "published": "2026-06-19T03:57:49Z",
+        "summary": "India's Nifty IT index fell to a three-year low on Friday after bellwether Accenture forecast quarterly sales below Wall \u200cStreet view, cut its annual revenue outlook and reported softer bookings in \u200cits managed services business. Shares of Indian IT companies, including TCS, Infosys, and HCLTech fell 4% to 8% \u200bafter Accenture flagged deal delays and a $400 million hit to its Middle East business from the Iran conflict. India's $315 billion IT sector faces concerns that AI could disrupt its labour-intensive model, while geopolitical and economic uncertainty weighs on demand as clients defer non-essential tech \u200cspending.",
+        "bullish_score": 0,
+        "bearish_score": 2,
+        "importance_score": 60,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -320,24 +323,24 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5766,
-    "probability_pct": 57.66,
+    "probability_of_outperformance": 0.5911,
+    "probability_pct": 59.11,
     "confidence": "High",
     "evidence": [
       "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 25.75/100"
+      "Composite score 26.5/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 25.75,
+    "final_score": 26.5,
     "technical_score": 10.0,
     "momentum_score": 0,
     "volume_score": 25.0,
     "fundamental_score": 60.0,
     "risk_score": 60.0,
-    "catalyst_score": 30.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.083,
     "eps_growth": 0.04,
     "roe": 0.24763,
@@ -348,7 +351,7 @@
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": true,
@@ -366,5 +369,5 @@
       }
     ]
   },
-  "report": "Ticker: ACN\nRating: Avoid | Score: 25.75/100 | Confidence: 20.13/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 127.9800033569336 | Resistance: 201.3300018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.620493\nNews/Catalyst: Why Accenture, Pfizer, and Kroger are moving today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 6.09x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: ACN\nRating: Avoid | Score: 26.5/100 | Confidence: 22.49/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 127.9800033569336 | Resistance: 201.3300018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.620493\nNews/Catalyst: Paychex Gears Up to Report Q4 Earnings: What's in Store?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 6.09x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

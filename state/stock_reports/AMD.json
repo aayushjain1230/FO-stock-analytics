@@ -1,10 +1,10 @@
 {
   "ticker": "AMD",
-  "generated_at": "2026-06-19T15:59:25.550431",
+  "generated_at": "2026-06-19T17:54:57.003514",
   "score": {
-    "final_score": 60.4,
+    "final_score": 59.65,
     "rating": "Avoid",
-    "confidence": 49.73,
+    "confidence": 47.29,
     "risk_level": "High",
     "categories": {
       "technical": 80.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 61.0,
       "risk": 20.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 80.0,
@@ -75,8 +75,8 @@
         "sharpe_ratio": 1.290834934090073,
         "sortino_ratio": 2.0954684030149004,
         "calmar_ratio": 1.4461096097241488,
-        "beta": 2.2218037708409395,
-        "alpha": 0.37745239530277946
+        "beta": 2.2218038304643017,
+        "alpha": 0.3774525059236879
       },
       "evidence": [
         "Volatility is elevated",
@@ -86,11 +86,10 @@
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -144,7 +143,8 @@
     "next_earnings_date": "1778011200",
     "eps_current_year": 2.99,
     "eps_forward": 13.1035,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 53.11612131920642,
@@ -203,10 +203,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bullish_news_score": 0,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.72162,
     "detail": {
       "earnings": {
@@ -253,7 +253,6 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -276,10 +275,20 @@
     "available": true,
     "items": [
       {
-        "headline": "Amazon CEO Jassy says company could sell AI chips, raising stakes for Nvidia, AMD",
-        "source": "Yahoo Finance",
-        "published": "2026-04-09T14:28:35Z",
-        "summary": "Amazon CEO Andy Jassy laid out plans to potentially sell AI chips and robots in his annual shareholder newsletter.",
+        "headline": "Analyst Warns Intel Valuation \u2018Doesn\u2019t Make Sense.\u2019 Suggests NVIDIA, AMD, Micron, and Broadcom as Alternatives.",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-19T17:36:48Z",
+        "summary": "D.A. Davidson\u2019s head of technology research, Gil Luria, used a CNBC \u201cClosing Bell Overtime\u201d appearance to argue that the chip rally has produced a valuation contradiction investors should not ignore. His framing: both major semiconductor ETFs are up more than 80% this year, while memory names have surged 300% or more, yet the multiples investors ... Analyst Warns Intel Valuation \u2018Doesn\u2019t Make Sense.\u2019 Suggests NVIDIA, AMD, Micron, and Broadcom as Alternatives.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "AI And Post\u2011Quantum Push Could Be A Game Changer For TD SYNNEX (SNX)",
+        "source": "Simply Wall St.",
+        "published": "2026-06-19T16:14:11Z",
+        "summary": "Earlier this week, TD SYNNEX expanded its role in artificial intelligence and security distribution by adding new independent software vendor solutions to the HPE Unleash AI portfolio and collaborating with EigenQ to help AMD EPYC-based environments prepare for post-quantum security requirements. Together, these moves deepen TD SYNNEX\u2019s position at the intersection of AI infrastructure and quantum-resilient cybersecurity, areas that many enterprise and public-sector buyers are actively...",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -314,16 +323,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Buy, Hold, or Sell: AMD Rested Near All-Time Highs as Kevin Warsh Opened His First Fed Meeting. Is AMD Stock a Buy at $507?",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-19T13:51:30Z",
-        "summary": "At $507.29, Advanced Micro Devices (NASDAQ:AMD) screens as fully valued, with a more attractive risk/reward profile emerging only on a macro-induced, index-wide technical pullback at or below $440. The stock is pressed against record territory just as Kevin Warsh gavels in his first Fed meeting. Systemic multiple compression could mask AMD\u2019s enterprise market share gains ... Buy, Hold, or Sell: AMD Rested Near All-Time Highs as Kevin Warsh Opened His First Fed Meeting. Is AMD Stock a Buy at $507",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -341,26 +340,26 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8195,
-    "probability_pct": 81.95,
+    "probability_of_outperformance": 0.8105,
+    "probability_pct": 81.05,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 60.4/100"
+      "Composite score 59.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.4,
+    "final_score": 59.65,
     "technical_score": 80.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 61.0,
     "risk_score": 20.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.378,
     "eps_growth": 0.912,
     "roe": 0.08063,
@@ -371,7 +370,7 @@
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "why_now": {
     "send_alert": false,
@@ -382,5 +381,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMD\nRating: Avoid | Score: 60.4/100 | Confidence: 49.73/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: risk score is elevated\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 196.0399932861328 | Resistance: 547.260009765625\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.00965\nNews/Catalyst: Amazon CEO Jassy says company could sell AI chips, raising stakes for Nvidia, AMD\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMD\nRating: Avoid | Score: 59.65/100 | Confidence: 47.29/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: risk score is elevated\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 196.0399932861328 | Resistance: 547.260009765625\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.00965\nNews/Catalyst: Analyst Warns Intel Valuation \u2018Doesn\u2019t Make Sense.\u2019 Suggests NVIDIA, AMD, Micron, and Broadcom as Alternatives.\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

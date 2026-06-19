@@ -1,10 +1,10 @@
 {
   "ticker": "CB",
-  "generated_at": "2026-06-19T15:59:55.715536",
+  "generated_at": "2026-06-19T17:55:28.135584",
   "score": {
-    "final_score": 62.15,
+    "final_score": 63.4,
     "rating": "Hold",
-    "confidence": 53.51,
+    "confidence": 58.28,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 35.0
+      "catalyst": 60.0
     },
     "technical": {
       "score": 65.0,
@@ -33,7 +33,7 @@
       "returns": {
         "1m": -0.017329477145559324,
         "3m": 0.002376171130480831,
-        "6m": 0.04606057004593622,
+        "6m": 0.046060673303949695,
         "12m": 0.1464648191250224
       },
       "acceleration": -0.0207,
@@ -64,22 +64,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.012054891912250388,
-        "annualized_volatility": 0.19136547648947036,
-        "maximum_drawdown": -0.14351450056088577,
-        "sharpe_ratio": 0.6558199914135783,
-        "sortino_ratio": 0.9383063421193254,
-        "calmar_ratio": 0.7882394703168548,
-        "beta": 0.167600564479284,
-        "alpha": 0.09456436162683295
+        "volatility": 0.012054894181043786,
+        "annualized_volatility": 0.191365512505449,
+        "maximum_drawdown": -0.14351439785333053,
+        "sharpe_ratio": 0.6558199038077616,
+        "sortino_ratio": 0.9383059832625876,
+        "calmar_ratio": 0.7882400344285346,
+        "beta": 0.1676009363955326,
+        "alpha": 0.09456430900592501
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 35.0,
+      "score": 60.0,
       "evidence": [
         "earnings surprise",
-        "insider buying"
+        "insider buying",
+        "major news",
+        "guidance change"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
@@ -132,7 +134,8 @@
     "next_earnings_date": "1776801600",
     "eps_current_year": 28.28,
     "eps_forward": 29.2529,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 63.56658946806759,
@@ -191,9 +194,9 @@
     "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": false,
-    "guidance_change": false,
-    "bullish_news_score": 1,
+    "major_news": true,
+    "guidance_change": true,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.84893996,
     "detail": {
@@ -240,7 +243,9 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "insider ownership or purchase data is supportive"
+      "insider ownership or purchase data is supportive",
+      "recent news item has elevated importance",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -282,6 +287,16 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
+        "headline": "Can Trupanion Turn Pet Insurance Loyalty Into Real Earnings?",
+        "source": "MarketBeat",
+        "published": "2026-06-18T16:25:00Z",
+        "summary": "Trupanion is showing stronger earnings, record operating margins, and loyal subscribers, but investors question competition and veterinary inflation.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Jim Cramer on Progressive Corporation: \u201cThat Group Is Under a Lot of Pressure\u201d",
         "source": "Insider Monkey",
         "published": "2026-06-17T16:38:21Z",
@@ -296,16 +311,6 @@
         "source": "24/7 Wall St.",
         "published": "2026-06-15T11:04:00Z",
         "summary": "Although Wall Street has spent the better part of two years cheering an artificial intelligence buildout that has dragged the Nasdaq 100 up roughly 30% over the past year, the technology-packed Nasdaq Composite is starting to wobble at the worst possible moment. The benchmark S&P 500 has slipped, with SPY off about 4% in the ... Today\u2019s AI market hits all 5 warning signs that preceded 2000 Nasdaq crash.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Chubb (CB) Gets Lower Price Target from Barclays Amid Margin Pressure Concerns",
-        "source": "Insider Monkey",
-        "published": "2026-06-14T03:57:24Z",
-        "summary": "Chubb Limited (NYSE:CB) is included among the 10 Best S&P 500 Dividend Stocks to Buy Right Now. Barclays lowered its price recommendation on Chubb Limited (NYSE:CB) to $368 from $375 on June 12. The firm reiterated an Equal Weight rating on the stock. It said earnings upside in the property and casualty insurance sector is [\u2026]",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -329,25 +334,25 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8265,
-    "probability_pct": 82.65,
+    "probability_of_outperformance": 0.8404,
+    "probability_pct": 84.04,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 62.15/100"
+      "Composite score 63.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 62.15,
+    "final_score": 63.4,
     "technical_score": 65.0,
     "momentum_score": 50.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 100,
-    "catalyst_score": 35.0,
+    "catalyst_score": 60.0,
     "revenue_growth": 0.102,
     "eps_growth": 0.787,
     "roe": 0.15433,
@@ -358,7 +363,7 @@
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": false,
@@ -369,5 +374,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CB\nRating: Hold | Score: 62.15/100 | Confidence: 53.51/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 309.7799987792969 | Resistance: 332.94000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.055314\nNews/Catalyst: Evan Greenberg\u2019s Chubb Is a P&C Insurance \u2018Masterpiece\u2019\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CB\nRating: Hold | Score: 63.4/100 | Confidence: 58.28/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 309.7799987792969 | Resistance: 332.94000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.055314\nNews/Catalyst: Evan Greenberg\u2019s Chubb Is a P&C Insurance \u2018Masterpiece\u2019\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
