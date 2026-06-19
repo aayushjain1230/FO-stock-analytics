@@ -1,10 +1,10 @@
 {
   "ticker": "ADBE",
-  "generated_at": "2026-06-19T17:54:45.768939",
+  "generated_at": "2026-06-19T19:29:39.659207",
   "score": {
-    "final_score": 29.95,
-    "rating": "Avoid",
-    "confidence": 25.4,
+    "final_score": 30.7,
+    "rating": "Drop",
+    "confidence": 28.27,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 78.0,
       "risk": 60.0,
-      "catalyst": 10.0
+      "catalyst": 25.0
     },
     "technical": {
       "score": 10.0,
@@ -38,8 +38,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 8047480.0,
-      "relative_volume": 1.9680322287225318,
+      "average_volume": 8048220.0,
+      "relative_volume": 1.9696901923655168,
       "accumulation_days": 4,
       "distribution_days": 6,
       "evidence": [
@@ -62,8 +62,8 @@
         "sharpe_ratio": -1.258650516738549,
         "sortino_ratio": -1.4733882869752026,
         "calmar_ratio": -0.5867306932275917,
-        "beta": 0.8302845028996423,
-        "alpha": -0.5885834295924911
+        "beta": 0.830282654160986,
+        "alpha": -0.5885830393244199
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -71,12 +71,13 @@
       ]
     },
     "catalyst": {
-      "score": 10.0,
+      "score": 25.0,
       "evidence": [
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Momentum is accelerating; Relative volume is 1.97x; revenue growth is strong; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Momentum is accelerating; Relative volume is 1.97x; revenue growth is strong; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "ADBE",
@@ -134,7 +135,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.9680322287225318,
+    "relative_volume": 1.9696901923655168,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "volume surge",
@@ -186,10 +187,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bullish_news_score": 3,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.881,
     "detail": {
       "earnings": {
@@ -234,6 +235,7 @@
       "eps_growth_implied": 57.55
     },
     "evidence": [
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -255,6 +257,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Citi resets Adobe stock price target",
+        "source": "TheStreet",
+        "published": "2026-06-19T18:03:00Z",
+        "summary": "Wall Street is adjusting its expectations for Adobe after the software giant delivered a mixed earnings report that raised more questions than it answered about the company's near-term growth trajectory. Citi analyst Tyler Radke lowered his price target on Adobe (ADBE) to $228 from $264, while ...",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Michael Burry Just Backed Up the Truck on These 3 Undervalued Tech Stocks",
         "source": "24/7 Wall St.",
@@ -294,16 +306,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Adobe (ADBE) Downgraded to Hold by Freedom Broker",
-        "source": "Insider Monkey",
-        "published": "2026-06-18T15:03:22Z",
-        "summary": "Adobe Inc. (NASDAQ:ADBE) is one of the 8 Best Generative AI Software Stocks to Buy in June. On June 12, TheFly reported that Freedom Broker analyst Egor Tolmachev downgraded Adobe to Hold from Buy, reducing its price target to $250 from $510 following the company\u2019s second-quarter earnings report. The analyst noted a shift in the [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -323,34 +325,34 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5672,
-    "probability_pct": 56.72,
+    "probability_of_outperformance": 0.5818,
+    "probability_pct": 58.18,
     "confidence": "High",
     "evidence": [
       "Volume surge above 1.5x",
-      "Composite score 29.95/100"
+      "Composite score 30.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 29.95,
+    "final_score": 30.7,
     "technical_score": 10.0,
     "momentum_score": 10.0,
     "volume_score": 25.0,
     "fundamental_score": 78.0,
     "risk_score": 60.0,
-    "catalyst_score": 10.0,
+    "catalyst_score": 25.0,
     "revenue_growth": 0.127,
     "eps_growth": 0.079,
     "roe": 0.62953997,
     "forward_pe": 7.086649,
-    "relative_volume": 1.9680322287225318,
+    "relative_volume": 1.9696901923655168,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "why_now": {
     "send_alert": true,
@@ -368,5 +370,5 @@
       }
     ]
   },
-  "report": "Ticker: ADBE\nRating: Avoid | Score: 29.95/100 | Confidence: 25.4/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 195.16000366210938 | Resistance: 274.0299987792969\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.086649\nNews/Catalyst: Michael Burry Just Backed Up the Truck on These 3 Undervalued Tech Stocks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.97x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: ADBE\nRating: Drop | Score: 30.7/100 | Confidence: 28.27/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 195.16000366210938 | Resistance: 274.0299987792969\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.086649\nNews/Catalyst: Citi resets Adobe stock price target\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.97x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
