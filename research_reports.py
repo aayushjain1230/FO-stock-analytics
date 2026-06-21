@@ -13,6 +13,7 @@ def stock_research_note(ticker: str, latest, rating: Dict, quant_payload: Dict) 
     volume = quant_payload.get("volume", {})
     trend = quant_payload.get("trend", {})
     quant_score = quant_payload.get("quant_score", {})
+    capm = quant_payload.get("capm", {})
 
     close = latest.get("Close")
     sma50 = latest.get("SMA50") or trend.get("sma50")
@@ -26,6 +27,8 @@ def stock_research_note(ticker: str, latest, rating: Dict, quant_payload: Dict) 
         f"{ticker} is {trend_text}. Momentum is {momentum_text} {volume_text}. "
         f"Annualized volatility is {_pct(risk.get('annualized_volatility'))}, max drawdown is {_pct(risk.get('maximum_drawdown'))}, "
         f"and the research score is {quant_score.get('score', 0)}/100 ({quant_score.get('label', 'N/A')}). "
+        f"CAPM expected return is {_pct(capm.get('capm_expected_return'))}, actual annualized return is {_pct(capm.get('actual_return'))}, "
+        f"and estimated alpha is {_pct(capm.get('alpha'))}. "
         f"The current volatility regime is {vol_text}. This is an educational research summary, not financial advice."
     )
 
