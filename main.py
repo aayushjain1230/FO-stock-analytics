@@ -28,6 +28,11 @@ except ModuleNotFoundError:
 from dotenv import load_dotenv
 
 import benchmark_comparison
+import stat_arb
+import ml_research
+import microstructure
+import factor_models
+import advanced_derivatives
 import earnings_alerts
 import intraday_monitor
 import trade_journal
@@ -69,6 +74,8 @@ COMPARISON_FILE = os.path.join(STATE_DIR, "latest_comparison.json")
 QUANT_RESEARCH_FILE = os.path.join(STATE_DIR, "latest_quant_research.json")
 PORTFOLIO_REPORT_FILE = os.path.join(STATE_DIR, "latest_portfolio_report.json")
 STOCK_DISCOVERY_FILE = os.path.join(STATE_DIR, "latest_stock_discovery.json")
+ADVANCED_QUANT_FILE = os.path.join(STATE_DIR, "latest_advanced_quant.json")
+PAIRS_SCAN_FILE = os.path.join(STATE_DIR, "latest_pairs_scan.json")
 SIGNAL_PERFORMANCE_FILE = os.path.join(STATE_DIR, "latest_signal_performance.json")
 EARNINGS_ALERTS_FILE = os.path.join(STATE_DIR, "latest_earnings_alerts.json")
 STOCK_REPORT_DIR = os.path.join(STATE_DIR, "stock_reports")
@@ -278,6 +285,12 @@ def _build_comparison_row(ticker, latest, rating, quant_payload=None, intelligen
         "annualized_volatility": quant_payload.get("risk", {}).get("annualized_volatility"),
         "max_drawdown": quant_payload.get("risk", {}).get("maximum_drawdown"),
         "sharpe_ratio": quant_payload.get("risk", {}).get("sharpe_ratio"),
+        "beta": quant_payload.get("capm", {}).get("beta"),
+        "capm_expected_return": quant_payload.get("capm", {}).get("capm_expected_return"),
+        "actual_return": quant_payload.get("capm", {}).get("actual_return"),
+        "alpha": quant_payload.get("capm", {}).get("alpha"),
+        "capm_interpretation": quant_payload.get("capm", {}).get("interpretation"),
+        "factor_decomposition": quant_payload.get("factor_decomposition"),
         "volatility_regime": quant_payload.get("volatility_regime"),
         "final_score": intelligence_payload.get("final_score"),
         "confidence": intelligence_payload.get("confidence"),
@@ -960,6 +973,61 @@ def run_signal_outcome_update():
     return updated
 
 
+def run_pairs_scan():
+    if yf is None:
+        raise RuntimeError("Pairs scan requires yfinance.")
+    tickers = [ticker.upper() for ticker in load_watchlist_data()]
+    if len(tickers) < 2:
+        print("Need at least two watchlist tickers for pairs scan.")
+        return {}
+    raw = yf.download(tickers, period="2y", interval="1d", group_by="ticker", threads=True, progress=False, auto_adjust=False)
+    prices = {}
+    for ticker in tickers:
+        df = _extract_downloaded_ticker(raw, ticker)
+        if not df.empty:
+            prices[ticker] = df["Close"]
+    price_frame = pd.DataFrame(prices).dropna(how="all")
+    payload = stat_arb.pairs_scan(price_frame)
+    os.makedirs(os.path.dirname(PAIRS_SCAN_FILE), exist_ok=True)
+    with open(PAIRS_SCAN_FILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, default=str)
+    print(json.dumps(payload, indent=2, default=str))
+    return payload
+
+
+def run_advanced_quant_models():
+    payload = {
+        "generated_at": datetime.now().isoformat(),
+        "factor_models": {
+            "implemented": ["market model", "multi-factor regression", "PCA factor compression"],
+            "module": "factor_models.py",
+        },
+        "statistical_arbitrage": {
+            "implemented": ["OLS hedge ratio", "spread z-score", "half-life", "pairs scan"],
+            "module": "stat_arb.py",
+        },
+        "machine_learning": {
+            "implemented": ["time-series train/test split", "linear return model", "logistic probability model"],
+            "module": "ml_research.py",
+            "alternative_data": ml_research.alternative_data_placeholder(),
+        },
+        "derivatives": {
+            "implemented": ["Black-Scholes", "volatility surface builder", "Dupire local-vol approximation", "Heston Monte Carlo"],
+            "module": "advanced_derivatives.py",
+        },
+        "market_microstructure": {
+            "implemented": ["order-book imbalance", "microprice", "VWAP", "TWAP", "participation schedule", "implementation shortfall"],
+            "module": "microstructure.py",
+        },
+        "note": "These are implemented research engines. They still need sufficient clean market data before they should drive alerts.",
+    }
+    os.makedirs(os.path.dirname(ADVANCED_QUANT_FILE), exist_ok=True)
+    with open(ADVANCED_QUANT_FILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, default=str)
+    print(json.dumps(payload, indent=2, default=str))
+    return payload
+
+
 def run_intraday_monitor(send_alert=True):
     if yf is None:
         raise RuntimeError("Intraday monitor requires yfinance.")
@@ -985,6 +1053,8 @@ def main():
     parser.add_argument("--signal-performance", action="store_true", help="Print historical signal validation summary")
     parser.add_argument("--update-signal-outcomes", action="store_true", help="Update stored signal outcomes before EV/statistical analysis")
     parser.add_argument("--earnings-calendar", action="store_true", help="Generate earnings calendar from saved stock intelligence reports")
+    parser.add_argument("--advanced-quant", action="store_true", help="Generate advanced quant model implementation snapshot")
+    parser.add_argument("--pairs-scan", action="store_true", help="Run statistical-arbitrage pairs scan on the watchlist")
     parser.add_argument("--earnings-days", type=int, default=2, help="Days ahead for earnings alert calendar")
     parser.add_argument("--portfolio-report", action="store_true", help="Generate portfolio risk, performance, and intelligence report")
     parser.add_argument("--stock-discovery", action="store_true", help="Run stock discovery and screening intelligence")
@@ -1048,6 +1118,12 @@ def main():
 
     if args.earnings_calendar:
         run_earnings_calendar(days_ahead=args.earnings_days)
+
+    if args.advanced_quant:
+        run_advanced_quant_models()
+
+    if args.pairs_scan:
+        run_pairs_scan()
 
     if args.log_trade:
         if len(args.log_trade) < 4:
