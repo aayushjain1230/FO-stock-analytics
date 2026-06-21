@@ -1,46 +1,50 @@
 {
   "ticker": "ADSK",
-  "generated_at": "2026-06-19T22:01:10.425949",
+  "generated_at": "2026-06-21T17:05:36.040635",
   "score": {
-    "final_score": 27.65,
-    "rating": "Avoid",
-    "confidence": 18.18,
+    "final_score": 37.65,
+    "rating": "Drop",
+    "confidence": 34.64,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 10.0,
+      "technical": 20.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 86.0,
       "risk": 60.0,
       "catalyst": 65.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 20.0,
       "evidence": [
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 193.07000732421875,
       "resistance": 251.0399932861328,
-      "risk_reward": 0.0
+      "risk_reward": 76.29
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.20707214682929087,
-        "3m": -0.22299577171627916,
-        "6m": -0.3439909995385708,
-        "12m": -0.35492811493942067
+        "1m": -0.20617625975938159,
+        "3m": -0.21736316535007105,
+        "6m": -0.34070344893880367,
+        "12m": -0.3470776373956648
       },
-      "acceleration": -0.051,
+      "acceleration": -0.047,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2981620.0,
-      "relative_volume": 1.0536553953890837,
-      "accumulation_days": 5,
+      "score": 50.0,
+      "average_volume": 3356715.0,
+      "relative_volume": 2.744677459957131,
+      "accumulation_days": 6,
       "distribution_days": 8,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.74x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -53,14 +57,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.019387550725081262,
-        "annualized_volatility": 0.30776782649529005,
+        "volatility": 0.01936900872402364,
+        "annualized_volatility": 0.3074734813536422,
         "maximum_drawdown": -0.40919244078516914,
-        "sharpe_ratio": -0.22674588936218604,
-        "sortino_ratio": -0.29672167957285267,
-        "calmar_ratio": -0.27030415776226663,
-        "beta": 0.8976944902879653,
-        "alpha": -0.23110669861532387
+        "sharpe_ratio": -0.22014152247290775,
+        "sortino_ratio": -0.28780363140858906,
+        "calmar_ratio": -0.26554222035344344,
+        "beta": 0.8969228911846926,
+        "alpha": -0.23324823935454786,
+        "capm_expected_return": 0.16556055904931186,
+        "actual_return": -0.06768768030523602,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -76,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision; major news"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Relative volume is 2.74x; Price advanced on above-average volume; revenue growth is strong; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "ADSK",
@@ -102,15 +109,15 @@
     "cash_position": 2924000000.0,
     "total_debt": 2724000000.0,
     "interest_coverage": null,
-    "forward_pe": 13.595021,
-    "trailing_pe": 28.294891,
+    "forward_pe": 13.5859585,
+    "trailing_pe": 28.336258,
     "peg": 0.74,
     "price_to_book": 12.823873,
     "price_to_sales": 5.4514685,
-    "enterprise_to_ebitda": 19.771,
-    "enterprise_to_revenue": 5.634,
+    "enterprise_to_ebitda": 19.026,
+    "enterprise_to_revenue": 5.421,
     "fcf_yield": 0.074796868570939,
-    "institutional_ownership": 0.97287005,
+    "institutional_ownership": 0.97536004,
     "insider_ownership": 0.00215,
     "short_interest": 6533650.0,
     "short_ratio": 2.95,
@@ -124,19 +131,19 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1779998400",
-    "eps_current_year": 6.85,
-    "eps_forward": 14.25669,
+    "eps_current_year": 6.84,
+    "eps_forward": 14.2662,
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 24.947685641522938,
+    "rsi": 28.37199467747041,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0536553953890837,
+    "relative_volume": 2.744677459957131,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 193.07000732421875,
     "resistance": 251.0399932861328
   },
@@ -189,7 +196,7 @@
     "guidance_change": true,
     "bullish_news_score": 1,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.97287005,
+    "institutional_ownership": 0.97536004,
     "detail": {
       "earnings": {
         "available": true,
@@ -230,7 +237,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 64.34,
-      "eps_growth_implied": 108.13
+      "eps_growth_implied": 108.57
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -248,7 +255,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00215,
-    "institutional_ownership": 0.97287005,
+    "institutional_ownership": 0.97536004,
     "short_interest": 6533650.0,
     "short_percent_float": 0.0345,
     "days_to_cover": 2.95,
@@ -257,6 +264,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "MaintainX Acquisition to Bolster Autodesk, Inc. (ADSK) Prospects as One of the Best  Falling Stocks to Invest In",
+        "source": "Insider Monkey",
+        "published": "2026-06-20T12:18:50Z",
+        "summary": "Autodesk, Inc. (NASDAQ:ADSK) is one of the best falling stocks to invest in, according to analysts. On June 15, Autodesk, Inc. (NASDAQ:ADSK) amended its credit agreements to obtain access to significant capital to complete the acquisition of MaintainX Inc. The regulatory filing indicates the company increased its unsecured revolving credit facility to $2 billion from [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "APPS or ADSK: Which Is the Better Value Stock Right Now?",
         "source": "Zacks",
@@ -296,16 +313,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Autodesk Stock At Recent Lows Spurs Unusual Put Options Activity - Is ADSK Too Cheap?",
-        "source": "Barchart",
-        "published": "2026-06-15T17:30:02Z",
-        "summary": "Autodesk stock has tanked recently, spurring unusually large put options activity. But is ADSK too cheap? After all, its free cash flow and FCF margins are very high. In fact, ADSK could be worth 22% more.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -325,30 +332,31 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7191,
-    "probability_pct": 71.91,
+    "probability_of_outperformance": 0.7697,
+    "probability_pct": 76.97,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 27.65/100"
+      "Composite score 37.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 27.65,
-    "technical_score": 10.0,
+    "final_score": 37.65,
+    "technical_score": 20.0,
     "momentum_score": 0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 86.0,
     "risk_score": 60.0,
     "catalyst_score": 65.0,
     "revenue_growth": 0.184,
     "eps_growth": 2.314,
     "roe": 0.50396,
-    "forward_pe": 13.595021,
-    "relative_volume": 1.0536553953890837,
+    "forward_pe": 13.5859585,
+    "relative_volume": 2.744677459957131,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -356,14 +364,91 @@
     "analyst_revision": true,
     "major_news": true
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "quant_model": {
+    "returns": {
+      "daily": 0.0038846012925277673,
+      "weekly": -0.05715814360734184,
+      "monthly": -0.20617625975938159,
+      "annual": -0.3470776373956648
+    },
+    "risk": {
+      "volatility": 0.01936900872402364,
+      "annualized_volatility": 0.3074734813536422,
+      "maximum_drawdown": -0.40919244078516914,
+      "sharpe_ratio": -0.22014152247290775,
+      "sortino_ratio": -0.28780363140858906,
+      "calmar_ratio": -0.26554222035344344,
+      "beta": 0.8969228911846926,
+      "alpha": -0.23324823935454786,
+      "capm_expected_return": 0.16556055904931186,
+      "actual_return": -0.06768768030523602,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.8969228911846926,
+      "alpha": -0.23324823935454786,
+      "capm_expected_return": 0.16556055904931186,
+      "actual_return": -0.06768768030523602,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 16.56%; realized alpha is -23.32%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.06768768030523602,
+      "components": {
+        "market_component": 0.16556055904931186,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.011494696270728445,
+        "alpha_component": -0.23324823935454786
+      },
+      "component_weights_pct": {
+        "market_component": 40.35,
+        "momentum_component": 0.0,
+        "volatility_drag": 2.8,
+        "alpha_component": 56.85
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 223.39800186157225,
+      "sma50": 232.51940093994142,
+      "sma200": 269.77125007629394,
+      "ema20": 217.56159879290044,
+      "ema50": 229.72135515875394,
+      "ema200": 256.9232431772336
+    },
+    "momentum": {
+      "3m": -0.21736316535007105,
+      "6m": -0.34070344893880367,
+      "12m": -0.3470776373956648,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 3356715.0,
+      "relative_volume": 2.744677459957131,
+      "volume_spike": true
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 20,
+      "label": "High risk / weak setup"
+    }
   },
-  "report": "Ticker: ADSK\nRating: Avoid | Score: 27.65/100 | Confidence: 18.18/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 193.07000732421875 | Resistance: 251.0399932861328\nFundamental Outlook: Quality Compounder | Forward P/E: 13.595021\nNews/Catalyst: APPS or ADSK: Which Is the Better Value Stock Right Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.74x",
+    "date_of_change": "2026-06-21",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.74x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: ADSK\nRating: Drop | Score: 37.65/100 | Confidence: 34.64/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 193.07000732421875 | Resistance: 251.0399932861328\nFundamental Outlook: Quality Compounder | Forward P/E: 13.5859585\nNews/Catalyst: MaintainX Acquisition to Bolster Autodesk, Inc. (ADSK) Prospects as One of the Best  Falling Stocks to Invest In\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.74x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

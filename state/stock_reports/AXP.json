@@ -1,6 +1,6 @@
 {
   "ticker": "AXP",
-  "generated_at": "2026-06-19T22:01:42.143904",
+  "generated_at": "2026-06-21T17:05:57.699948",
   "score": {
     "final_score": 78.65,
     "rating": "Watch",
@@ -69,14 +69,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.018624957562019064,
-        "annualized_volatility": 0.2956620353294058,
-        "maximum_drawdown": -0.2875742650636731,
-        "sharpe_ratio": 0.8394181432369944,
-        "sortino_ratio": 1.110303990883948,
-        "calmar_ratio": 0.7889973726536879,
-        "beta": 1.2363431545282557,
-        "alpha": 0.019970889273529902
+        "volatility": 0.018624959089483833,
+        "annualized_volatility": 0.2956620595771573,
+        "maximum_drawdown": -0.28757431253634647,
+        "sharpe_ratio": 0.8394182108164117,
+        "sortino_ratio": 1.110304173213892,
+        "calmar_ratio": 0.7889973880516526,
+        "beta": 1.2363419237202093,
+        "alpha": 0.01997112118033273,
+        "capm_expected_return": 0.22821299587621996,
+        "actual_return": 0.2481841170565527,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -116,15 +119,15 @@
     "total_debt": 60458999808.0,
     "interest_coverage": null,
     "forward_pe": 16.774277,
-    "trailing_pe": 21.111805,
+    "trailing_pe": 21.098625,
     "peg": 1.61,
     "price_to_book": 6.780885,
     "price_to_sales": 3.3515427,
     "enterprise_to_ebitda": null,
-    "enterprise_to_revenue": 3.475,
+    "enterprise_to_revenue": 3.447,
     "fcf_yield": null,
     "institutional_ownership": 0.65323997,
-    "insider_ownership": 0.22332,
+    "insider_ownership": 0.2233,
     "short_interest": 12044280.0,
     "short_ratio": 3.77,
     "short_percent_float": 0.0227,
@@ -137,7 +140,7 @@
     "dividend_yield": 1.12,
     "payout_ratio": 0.21290001,
     "next_earnings_date": "1776947400",
-    "eps_current_year": 16.01,
+    "eps_current_year": 16.02,
     "eps_forward": 20.1499,
     "classification": "Fundamentally Strong"
   },
@@ -243,7 +246,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 7.43,
-      "eps_growth_implied": 25.86
+      "eps_growth_implied": 25.78
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -260,7 +263,7 @@
     "number_of_analysts": 24.0
   },
   "insider_short_interest": {
-    "insider_ownership": 0.22332,
+    "insider_ownership": 0.2233,
     "institutional_ownership": 0.65323997,
     "short_interest": 12044280.0,
     "short_percent_float": 0.0227,
@@ -270,6 +273,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Better Payments Stock for the Long Haul: American Express or Visa?",
+        "source": "Motley Fool",
+        "published": "2026-06-20T12:35:00Z",
+        "summary": "American Express is focused on a select customer base, while Visa aims to serve everyone, acting as a middleman.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "American Express Just Signed a Multiyear Payments Deal With the NFL. Here's the Bigger Play.",
         "source": "Motley Fool",
@@ -309,16 +322,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "American Express Stock Is Powering the Financial Sector to a Fresh Breakout",
-        "source": "Barchart",
-        "published": "2026-06-18T14:50:03Z",
-        "summary": "American Express (AXP) appears to be among a set of giant financial stocks poised to benefit from the future path in interest rates. That\u2019s how I interpret the signal that includes a fresh breakout through a significant technical resistance level, which makes AXP the Chart of the Day. The stock\u2019s...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -369,14 +372,84 @@
     "analyst_revision": false,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.0074587669031165316,
+      "weekly": 0.06125784283288671,
+      "monthly": 0.09275485004642103,
+      "annual": 0.16643195326345706
+    },
+    "risk": {
+      "volatility": 0.018624959089483833,
+      "annualized_volatility": 0.2956620595771573,
+      "maximum_drawdown": -0.28757431253634647,
+      "sharpe_ratio": 0.8394182108164117,
+      "sortino_ratio": 1.110304173213892,
+      "calmar_ratio": 0.7889973880516526,
+      "beta": 1.2363419237202093,
+      "alpha": 0.01997112118033273,
+      "capm_expected_return": 0.22821299587621996,
+      "actual_return": 0.2481841170565527,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.2363419237202093,
+      "alpha": 0.01997112118033273,
+      "capm_expected_return": 0.22821299587621996,
+      "actual_return": 0.2481841170565527,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.24: Moves roughly in line with the market. CAPM expected return is 22.82%; realized alpha is 2.00%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.2481841170565527,
+      "components": {
+        "market_component": 0.22821299587621996,
+        "momentum_component": 0.041607988315864264,
+        "volatility_drag": -0.00913241191543146,
+        "alpha_component": 0.01997112118033273
+      },
+      "component_weights_pct": {
+        "market_component": 76.34,
+        "momentum_component": 13.92,
+        "volatility_drag": 3.06,
+        "alpha_component": 6.68
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 318.3605010986328,
+      "sma50": 318.7943988037109,
+      "sma200": 336.1991954040527,
+      "ema20": 322.5386358967285,
+      "ema50": 319.16218888478136,
+      "ema200": 323.3039589486778
+    },
+    "momentum": {
+      "3m": 0.14965771589848664,
+      "6m": -0.10749374815212598,
+      "12m": 0.16643195326345706,
+      "24m": 0.0,
+      "score": 50.0
+    },
+    "volume": {
+      "average_volume": 2991500.0,
+      "relative_volume": 1.50118669563764,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 43,
+      "label": "Neutral"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AXP\nRating: Watch | Score: 78.65/100 | Confidence: 75.62/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 292.2699890136719 | Resistance: 340.739990234375\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.774277\nNews/Catalyst: American Express Just Signed a Multiyear Payments Deal With the NFL. Here's the Bigger Play.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AXP\nRating: Watch | Score: 78.65/100 | Confidence: 75.62/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 292.2699890136719 | Resistance: 340.739990234375\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.774277\nNews/Catalyst: Better Payments Stock for the Long Haul: American Express or Visa?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

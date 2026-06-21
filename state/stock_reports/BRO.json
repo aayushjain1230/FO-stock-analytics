@@ -1,15 +1,15 @@
 {
   "ticker": "BRO",
-  "generated_at": "2026-06-19T22:01:58.904513",
+  "generated_at": "2026-06-21T17:06:08.714078",
   "score": {
-    "final_score": 40.5,
-    "rating": "Drop",
-    "confidence": 28.02,
+    "final_score": 48.0,
+    "rating": "Hold",
+    "confidence": 43.04,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 20.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 65.0,
       "risk": 75.0,
       "catalyst": 25.0
@@ -25,29 +25,32 @@
       ],
       "support": 54.380001068115234,
       "resistance": 68.94999694824219,
-      "risk_reward": 2.13
+      "risk_reward": 2.09
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.005963576367491674,
-        "3m": -0.11727668962118765,
-        "6m": -0.27913081995296674,
-        "12m": -0.4439681884910155
+        "1m": 0.017386784625240015,
+        "3m": -0.10947638783572444,
+        "6m": -0.2662779425087958,
+        "12m": -0.44849966175341727
       },
-      "acceleration": 0.0223,
+      "acceleration": 0.0237,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2948395.0,
-      "relative_volume": 1.0320869490010667,
-      "accumulation_days": 2,
+      "score": 50.0,
+      "average_volume": 3124045.0,
+      "relative_volume": 1.8388019378722138,
+      "accumulation_days": 3,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.84x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 65.0,
@@ -59,14 +62,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.015955484544380387,
-        "annualized_volatility": 0.2532854649117913,
-        "maximum_drawdown": -0.558466068637672,
-        "sharpe_ratio": -0.7462091054551013,
-        "sortino_ratio": -0.8711751714418213,
-        "calmar_ratio": -0.35593266158956516,
-        "beta": 0.2501849724860698,
-        "alpha": -0.23396380662304272
+        "volatility": 0.0159396859438428,
+        "annualized_volatility": 0.2530346699032795,
+        "maximum_drawdown": -0.5584660959890364,
+        "sharpe_ratio": -0.7434306673374937,
+        "sortino_ratio": -0.867072050305556,
+        "calmar_ratio": -0.35456165683313345,
+        "beta": 0.2500732741259231,
+        "alpha": -0.2342740795895306,
+        "capm_expected_return": 0.04616034608381309,
+        "actual_return": -0.1881137335057175,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -110,10 +116,10 @@
     "peg": 1.51,
     "price_to_book": 1.5726869,
     "price_to_sales": 3.2009935,
-    "enterprise_to_ebitda": 11.012,
-    "enterprise_to_revenue": 4.374,
+    "enterprise_to_ebitda": 10.93,
+    "enterprise_to_revenue": 4.342,
     "fcf_yield": 0.07600408453556791,
-    "institutional_ownership": 0.86843,
+    "institutional_ownership": 0.86844003,
     "insider_ownership": 0.13111,
     "short_interest": 16341902.0,
     "short_ratio": 4.5,
@@ -124,7 +130,7 @@
     "target_low_price": 60.0,
     "recommendation": "hold",
     "number_of_analysts": 16.0,
-    "dividend_yield": 1.08,
+    "dividend_yield": 1.09,
     "payout_ratio": 0.2052,
     "next_earnings_date": "1777320000",
     "eps_current_year": 3.07,
@@ -132,14 +138,14 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 59.18196763750335,
+    "rsi": 62.44540320834236,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0320869490010667,
+    "relative_volume": 1.8388019378722138,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 54.380001068115234,
     "resistance": 68.94999694824219
   },
@@ -192,7 +198,7 @@
     "guidance_change": true,
     "bullish_news_score": 0,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.86843,
+    "institutional_ownership": 0.86844003,
     "detail": {
       "earnings": {
         "available": true,
@@ -232,7 +238,7 @@
         "last_surprise_pct": 0.023,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 21.1,
+      "analyst_upside_pct": 20.98,
       "eps_growth_implied": 58.57
     },
     "evidence": [
@@ -249,7 +255,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.13111,
-    "institutional_ownership": 0.86843,
+    "institutional_ownership": 0.86844003,
     "short_interest": 16341902.0,
     "short_percent_float": 0.0636,
     "days_to_cover": 4.5,
@@ -326,20 +332,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6126,
-    "probability_pct": 61.26,
+    "probability_of_outperformance": 0.6737,
+    "probability_pct": 67.37,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
-      "Composite score 40.5/100"
+      "Volume surge above 1.5x",
+      "Composite score 48.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.5,
+    "final_score": 48.0,
     "technical_score": 53.0,
     "momentum_score": 20.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 65.0,
     "risk_score": 75.0,
     "catalyst_score": 25.0,
@@ -347,7 +354,7 @@
     "eps_growth": -0.079,
     "roe": 0.11926,
     "forward_pe": 12.140484,
-    "relative_volume": 1.0320869490010667,
+    "relative_volume": 1.8388019378722138,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -355,14 +362,91 @@
     "analyst_revision": false,
     "major_news": false
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "quant_model": {
+    "returns": {
+      "daily": 0.0010162187951112678,
+      "weekly": -0.014178520066739031,
+      "monthly": 0.017386784625240015,
+      "annual": -0.44849966175341727
+    },
+    "risk": {
+      "volatility": 0.0159396859438428,
+      "annualized_volatility": 0.2530346699032795,
+      "maximum_drawdown": -0.5584660959890364,
+      "sharpe_ratio": -0.7434306673374937,
+      "sortino_ratio": -0.867072050305556,
+      "calmar_ratio": -0.35456165683313345,
+      "beta": 0.2500732741259231,
+      "alpha": -0.2342740795895306,
+      "capm_expected_return": 0.04616034608381309,
+      "actual_return": -0.1881137335057175,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.2500732741259231,
+      "alpha": -0.2342740795895306,
+      "capm_expected_return": 0.04616034608381309,
+      "actual_return": -0.1881137335057175,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.25: Moves roughly 75% less than the market. CAPM expected return is 4.62%; realized alpha is -23.43%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.1881137335057175,
+      "components": {
+        "market_component": 0.04616034608381309,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.0006069339806558994,
+        "alpha_component": -0.2342740795895306
+      },
+      "component_weights_pct": {
+        "market_component": 16.42,
+        "momentum_component": 0.0,
+        "volatility_drag": 0.22,
+        "alpha_component": 83.36
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 58.12650032043457,
+      "sma50": 60.26597602844238,
+      "sma200": 74.40540231704712,
+      "ema20": 58.70499595910222,
+      "ema50": 60.44578480411785,
+      "ema200": 73.29892404715073
+    },
+    "momentum": {
+      "3m": -0.10947638783572444,
+      "6m": -0.2662779425087958,
+      "12m": -0.44849966175341727,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 3124045.0,
+      "relative_volume": 1.8388019378722138,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 10,
+      "label": "High risk / weak setup"
+    }
   },
-  "report": "Ticker: BRO\nRating: Drop | Score: 40.5/100 | Confidence: 28.02/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 54.380001068115234 | Resistance: 68.94999694824219\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.140484\nNews/Catalyst: 3 Services Stocks for Long-Term Investors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.84x",
+    "date_of_change": "2026-06-21",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.84x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: BRO\nRating: Hold | Score: 48.0/100 | Confidence: 43.04/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 54.380001068115234 | Resistance: 68.94999694824219\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.140484\nNews/Catalyst: 3 Services Stocks for Long-Term Investors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.84x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

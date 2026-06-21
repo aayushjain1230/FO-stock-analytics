@@ -1,6 +1,6 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2026-06-19T22:01:50.852034",
+  "generated_at": "2026-06-21T17:06:03.272572",
   "score": {
     "final_score": 63.7,
     "rating": "Hold",
@@ -71,8 +71,11 @@
         "sharpe_ratio": -0.06689851886135884,
         "sortino_ratio": -0.10803710270791683,
         "calmar_ratio": -0.12855510148698518,
-        "beta": 0.5263804294009468,
-        "alpha": -0.11804641605103151
+        "beta": 0.5263801833905124,
+        "alpha": -0.11804638580579704,
+        "capm_expected_return": 0.09716308758660863,
+        "actual_return": -0.020883298219188405,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -113,15 +116,15 @@
     "cash_position": 4282700032.0,
     "total_debt": 6561900032.0,
     "interest_coverage": null,
-    "forward_pe": 11.7841425,
-    "trailing_pe": 21.160387,
+    "forward_pe": 11.824659,
+    "trailing_pe": 21.137634,
     "peg": 3.94,
     "price_to_book": 1.5556277,
     "price_to_sales": 2.9205332,
-    "enterprise_to_ebitda": 8.803,
-    "enterprise_to_revenue": 3.135,
+    "enterprise_to_ebitda": 8.843,
+    "enterprise_to_revenue": 3.15,
     "fcf_yield": 0.06653199159277531,
-    "institutional_ownership": 0.96583,
+    "institutional_ownership": 0.96228,
     "insider_ownership": 0.0018799999,
     "short_interest": 4771495.0,
     "short_ratio": 4.01,
@@ -135,8 +138,8 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1785328200",
-    "eps_current_year": 9.29,
-    "eps_forward": 16.68174,
+    "eps_current_year": 9.3,
+    "eps_forward": 16.62458,
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
@@ -200,7 +203,7 @@
     "guidance_change": true,
     "bullish_news_score": 1,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.96583,
+    "institutional_ownership": 0.96228,
     "detail": {
       "earnings": {
         "available": true,
@@ -240,8 +243,8 @@
         "last_surprise_pct": 0.2361,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.86,
-      "eps_growth_implied": 79.57
+      "analyst_upside_pct": 12.04,
+      "eps_growth_implied": 78.76
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -259,7 +262,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0018799999,
-    "institutional_ownership": 0.96583,
+    "institutional_ownership": 0.96228,
     "short_interest": 4771495.0,
     "short_percent_float": 0.036,
     "days_to_cover": 4.01,
@@ -268,6 +271,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Biogen (BIIB) Stock Could Be 10.3% Undervalued on Its Pipeline Narrative",
+        "source": "Simply Wall St.",
+        "published": "2026-06-20T01:10:30Z",
+        "summary": "Biogen Stock Performance Snapshot Biogen (BIIB) has drawn investor attention after a recent move in its share price, with the stock closing at US$196.58. That level sits against a backdrop of mixed short and longer term returns. See our latest analysis for Biogen. Short term momentum for Biogen looks softer, with the 1 day and 7 day share price returns both slightly negative, while the 1 month and year to date share price returns remain positive and the 1 year total shareholder return is...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Biogen to acquire RayThera for up to $1bn",
         "source": "Pharmaceutical Technology",
@@ -303,16 +316,6 @@
         "source": "Quartz",
         "published": "2026-06-18T13:40:30Z",
         "summary": "The deal adds multiple small-molecule anti-inflammatory drug candidates to Biogen's pipeline, with the lead asset set to begin human trials this summer",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Biogen adds more immune drugs in $1B buyout of secretive startup RayThera",
-        "source": "BioPharma Dive",
-        "published": "2026-06-18T11:12:00Z",
-        "summary": "The companies didn\u2019t specify the drugs Biogen is acquiring in the deal, though patents RayThera secured provide important clues.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -359,7 +362,7 @@
     "revenue_growth": 0.019,
     "eps_growth": 0.311,
     "roe": 0.077010006,
-    "forward_pe": 11.7841425,
+    "forward_pe": 11.824659,
     "relative_volume": 1.668378640355319,
     "breakout": false,
     "price_above_sma50": true,
@@ -368,14 +371,84 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.010519939382660715,
+      "weekly": -0.016903404527531918,
+      "monthly": 0.03159112274132925,
+      "annual": 0.5532554173765973
+    },
+    "risk": {
+      "volatility": 0.019664473246081657,
+      "annualized_volatility": 0.31216383523329067,
+      "maximum_drawdown": -0.5211993420936051,
+      "sharpe_ratio": -0.06689851886135884,
+      "sortino_ratio": -0.10803710270791683,
+      "calmar_ratio": -0.12855510148698518,
+      "beta": 0.5263801833905124,
+      "alpha": -0.11804638580579704,
+      "capm_expected_return": 0.09716308758660863,
+      "actual_return": -0.020883298219188405,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.5263801833905124,
+      "alpha": -0.11804638580579704,
+      "capm_expected_return": 0.09716308758660863,
+      "actual_return": -0.020883298219188405,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.72%; realized alpha is -11.80%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.020883298219188405,
+      "components": {
+        "market_component": 0.09716308758660863,
+        "momentum_component": 0.13831385434414933,
+        "volatility_drag": -0.012432767046658133,
+        "alpha_component": -0.11804638580579704
+      },
+      "component_weights_pct": {
+        "market_component": 26.55,
+        "momentum_component": 37.8,
+        "volatility_drag": 3.4,
+        "alpha_component": 32.26
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 195.49750061035155,
+      "sma50": 190.47880065917968,
+      "sma200": 174.69850028991698,
+      "ema20": 195.63850218847136,
+      "ema50": 192.0118686546577,
+      "ema200": 177.38775062917605
+    },
+    "momentum": {
+      "3m": 0.07180632411527554,
+      "6m": 0.1462390777320972,
+      "12m": 0.5532554173765973,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 1036815.0,
+      "relative_volume": 1.668378640355319,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 55,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BIIB\nRating: Hold | Score: 63.7/100 | Confidence: 58.48/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.7841425\nNews/Catalyst: Biogen to acquire RayThera for up to $1bn\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BIIB\nRating: Hold | Score: 63.7/100 | Confidence: 58.48/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.824659\nNews/Catalyst: Biogen (BIIB) Stock Could Be 10.3% Undervalued on Its Pipeline Narrative\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "XYZ",
-  "generated_at": "2026-06-19T22:03:28.446783",
+  "generated_at": "2026-06-21T17:06:57.498466",
   "score": {
     "final_score": 69.25,
     "rating": "Watch",
@@ -72,8 +72,11 @@
         "sharpe_ratio": 0.4317324689769836,
         "sortino_ratio": 0.5626208926345349,
         "calmar_ratio": 0.17467247205195918,
-        "beta": 1.7343705731987904,
-        "alpha": -0.09920163156790661
+        "beta": 1.7343704341710042,
+        "alpha": -0.09920165587283242,
+        "capm_expected_return": 0.32014272520202763,
+        "actual_return": 0.22094106932919522,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -119,11 +122,11 @@
     "peg": 0.83,
     "price_to_book": 2.027712,
     "price_to_sales": 1.8182163,
-    "enterprise_to_ebitda": 28.701,
-    "enterprise_to_revenue": 1.848,
+    "enterprise_to_ebitda": 28.739,
+    "enterprise_to_revenue": 1.85,
     "fcf_yield": -0.01785225647889836,
-    "institutional_ownership": 0.84378,
-    "insider_ownership": 0.01328,
+    "institutional_ownership": 0.84391,
+    "insider_ownership": 0.01327,
     "short_interest": 19687079.0,
     "short_ratio": 3.19,
     "short_percent_float": 0.0427,
@@ -157,7 +160,7 @@
     "surprise_tracking": "Available",
     "beat_streak": 2,
     "miss_streak": 0,
-    "average_surprise_pct": 0.0,
+    "average_surprise_pct": -0.0,
     "last_surprise_pct": 0.2555,
     "last_surprise_direction": "beat",
     "risk_score": 65,
@@ -185,9 +188,9 @@
       },
       {
         "date": "2025-06-30",
-        "eps_estimate": 0.65916,
+        "eps_estimate": 0.67402,
         "eps_actual": 0.62,
-        "surprise_pct": -0.0594,
+        "surprise_pct": -0.0801,
         "beat": false
       }
     ]
@@ -201,7 +204,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.84378,
+    "institutional_ownership": 0.84391,
     "detail": {
       "earnings": {
         "available": true,
@@ -229,15 +232,15 @@
           },
           {
             "date": "2025-06-30",
-            "eps_estimate": 0.65916,
+            "eps_estimate": 0.67402,
             "eps_actual": 0.62,
-            "surprise_pct": -0.0594,
+            "surprise_pct": -0.0801,
             "beat": false
           }
         ],
         "beat_streak": 2,
         "miss_streak": 0,
-        "average_surprise_pct": 0.0,
+        "average_surprise_pct": -0.0,
         "last_surprise_pct": 0.2555,
         "last_surprise_direction": "beat"
       },
@@ -258,8 +261,8 @@
     "number_of_analysts": 40.0
   },
   "insider_short_interest": {
-    "insider_ownership": 0.01328,
-    "institutional_ownership": 0.84378,
+    "insider_ownership": 0.01327,
+    "institutional_ownership": 0.84391,
     "short_interest": 19687079.0,
     "short_percent_float": 0.0427,
     "days_to_cover": 3.19,
@@ -268,6 +271,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Block Inc. (XYZ) A High-Growth  Large-Cap Stock To Invest In For Financial Services Exposure",
+        "source": "Insider Monkey",
+        "published": "2026-06-20T18:49:37Z",
+        "summary": "Block Inc. (NYSE:XYZ) is one of the high-growth large-cap stocks to invest in now. On June 12, Block Inc.\u2019s (NYSE:XYZ) financial services unit, Square Financial Services, launched a higher-yield savings tier, offering a 3.50% annual percentage yield. The 3.50% annual percentage yield applies to Square sellers who maintain a daily balance of more than $10,000 [\u2026]",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Block (XYZ) Launches Builderbot To Speed Software Development Across Its Engineering Teams",
         "source": "Simply Wall St.",
@@ -303,16 +316,6 @@
         "source": "Simply Wall St.",
         "published": "2026-06-19T07:13:22Z",
         "summary": "Recent client wins are putting Block (XYZ) back in focus for investors, as Sofive Soccer Centers and Coffee Dose adopt Square\u2019s unified commerce platform to run complex, multi-location operations across sports facilities and quick-service restaurant formats. See our latest analysis for Block. These new multi-location clients arrive at a time when Block\u2019s recent momentum has been strong, with a 90-day share price return of 25.96% and a 1-year total shareholder return of 18.53%. However, the...",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Cathie Wood Goes Bargain Hunting: 3 Stocks She Just Bought",
-        "source": "Motley Fool",
-        "published": "2026-06-18T14:27:00Z",
-        "summary": "After a few days of purging, the Ark Invest growth investor is buying stocks again.",
         "bullish_score": 1,
         "bearish_score": 0,
         "importance_score": 45,
@@ -365,14 +368,84 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.026633752593931526,
+      "weekly": 0.0823563864959378,
+      "monthly": 0.08110453605404655,
+      "annual": 0.18098545703892976
+    },
+    "risk": {
+      "volatility": 0.032237508501882124,
+      "annualized_volatility": 0.5117545823058631,
+      "maximum_drawdown": -0.5296198984978917,
+      "sharpe_ratio": 0.4317324689769836,
+      "sortino_ratio": 0.5626208926345349,
+      "calmar_ratio": 0.17467247205195918,
+      "beta": 1.7343704341710042,
+      "alpha": -0.09920165587283242,
+      "capm_expected_return": 0.32014272520202763,
+      "actual_return": 0.22094106932919522,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.7343704341710042,
+      "alpha": -0.09920165587283242,
+      "capm_expected_return": 0.32014272520202763,
+      "actual_return": 0.22094106932919522,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.73: Moves roughly 73% more than the market. CAPM expected return is 32.01%; realized alpha is -9.92%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.22094106932919522,
+      "components": {
+        "market_component": 0.32014272520202763,
+        "momentum_component": 0.04524636425973244,
+        "volatility_drag": -0.052350916461172625,
+        "alpha_component": -0.09920165587283242
+      },
+      "component_weights_pct": {
+        "market_component": 61.93,
+        "momentum_component": 8.75,
+        "volatility_drag": 10.13,
+        "alpha_component": 19.19
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 71.32899932861328,
+      "sma50": 70.57319961547852,
+      "sma200": 67.2994499206543,
+      "ema20": 71.48748864013723,
+      "ema50": 69.66190764931174,
+      "ema200": 67.28471661400224
+    },
+    "momentum": {
+      "3m": 0.26767243009918285,
+      "6m": 0.15848172337554178,
+      "12m": 0.18098545703892976,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 6249650.0,
+      "relative_volume": 1.3862376293072411,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 55,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: XYZ\nRating: Watch | Score: 69.25/100 | Confidence: 60.17/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 55.97999954223633 | Resistance: 76.0999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.022127\nNews/Catalyst: Block (XYZ) Launches Builderbot To Speed Software Development Across Its Engineering Teams\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: XYZ\nRating: Watch | Score: 69.25/100 | Confidence: 60.17/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 55.97999954223633 | Resistance: 76.0999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.022127\nNews/Catalyst: Block Inc. (XYZ) A High-Growth  Large-Cap Stock To Invest In For Financial Services Exposure\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

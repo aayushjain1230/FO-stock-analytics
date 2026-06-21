@@ -1,6 +1,6 @@
 {
   "ticker": "APH",
-  "generated_at": "2026-06-19T22:01:32.196656",
+  "generated_at": "2026-06-21T17:05:50.670364",
   "score": {
     "final_score": 79.65,
     "rating": "Watch",
@@ -36,7 +36,7 @@
         "1m": 0.3755034472447196,
         "3m": 0.2574365259950748,
         "6m": 0.27223773323398803,
-        "12m": 0.776173927891552
+        "12m": 0.7761737810925537
       },
       "acceleration": 0.1213,
       "evidence": [
@@ -69,14 +69,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.025133969508997524,
-        "annualized_volatility": 0.39898939668412586,
-        "maximum_drawdown": -0.2818917334659574,
-        "sharpe_ratio": 1.324254560880355,
-        "sortino_ratio": 1.6292170633895449,
-        "calmar_ratio": 2.002769345512596,
-        "beta": 1.4468661657714939,
-        "alpha": 0.2612904763805407
+        "volatility": 0.025133971194410798,
+        "annualized_volatility": 0.39898942343923216,
+        "maximum_drawdown": -0.281891733465957,
+        "sharpe_ratio": 1.3242546415405543,
+        "sortino_ratio": 1.6292176296800158,
+        "calmar_ratio": 2.0027696618822923,
+        "beta": 1.4468660928244415,
+        "alpha": 0.26129051577416973,
+        "capm_expected_return": 0.267073080140823,
+        "actual_return": 0.5283635959149927,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -121,8 +124,8 @@
     "peg": 1.4,
     "price_to_book": 14.420405,
     "price_to_sales": 7.7868595,
-    "enterprise_to_ebitda": 25.657,
-    "enterprise_to_revenue": 8.094,
+    "enterprise_to_ebitda": 26.433,
+    "enterprise_to_revenue": 8.338,
     "fcf_yield": 0.017667632681972644,
     "institutional_ownership": 0.97893,
     "insider_ownership": 0.00476,
@@ -135,7 +138,7 @@
     "target_low_price": 135.0,
     "recommendation": "buy",
     "number_of_analysts": 18.0,
-    "dividend_yield": 0.63,
+    "dividend_yield": 0.61,
     "payout_ratio": 0.2385,
     "next_earnings_date": "1785328200",
     "eps_current_year": 3.48,
@@ -373,11 +376,81 @@
     "analyst_revision": true,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.01768981498801203,
+      "weekly": 0.07542961756247912,
+      "monthly": 0.3755034472447196,
+      "annual": 0.7761737810925537
+    },
+    "risk": {
+      "volatility": 0.025133971194410798,
+      "annualized_volatility": 0.39898942343923216,
+      "maximum_drawdown": -0.281891733465957,
+      "sharpe_ratio": 1.3242546415405543,
+      "sortino_ratio": 1.6292176296800158,
+      "calmar_ratio": 2.0027696618822923,
+      "beta": 1.4468660928244415,
+      "alpha": 0.26129051577416973,
+      "capm_expected_return": 0.267073080140823,
+      "actual_return": 0.5283635959149927,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.4468660928244415,
+      "alpha": 0.26129051577416973,
+      "capm_expected_return": 0.267073080140823,
+      "actual_return": 0.5283635959149927,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 26.71%; realized alpha is 26.13%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.5283635959149927,
+      "components": {
+        "market_component": 0.267073080140823,
+        "momentum_component": 0.19404344527313844,
+        "volatility_drag": -0.029797884687846433,
+        "alpha_component": 0.26129051577416973
+      },
+      "component_weights_pct": {
+        "market_component": 35.51,
+        "momentum_component": 25.8,
+        "volatility_drag": 3.96,
+        "alpha_component": 34.74
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 147.83600006103515,
+      "sma50": 142.66380020141602,
+      "sma200": 136.26173706054686,
+      "ema20": 149.4844206211877,
+      "ema50": 143.33846047618584,
+      "ema200": 131.78428143735613
+    },
+    "momentum": {
+      "3m": 0.2574365259950748,
+      "6m": 0.27223773323398803,
+      "12m": 0.7761737810925537,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 10854935.0,
+      "relative_volume": 1.1809743678796787,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 83,
+      "label": "Research priority"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []

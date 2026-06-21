@@ -1,6 +1,6 @@
 {
   "ticker": "ANET",
-  "generated_at": "2026-06-19T22:01:27.950453",
+  "generated_at": "2026-06-21T17:05:47.553815",
   "score": {
     "final_score": 77.4,
     "rating": "Watch",
@@ -76,8 +76,11 @@
         "sharpe_ratio": 0.9220291766412694,
         "sortino_ratio": 1.1779047352348189,
         "calmar_ratio": 0.8258357990832129,
-        "beta": 1.7828651917248797,
-        "alpha": 0.16463281994185333
+        "beta": 1.782863668793486,
+        "alpha": 0.1646330496907905,
+        "capm_expected_return": 0.32909395959811166,
+        "actual_return": 0.4937270092889022,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -120,15 +123,15 @@
     "cash_position": 12353200128.0,
     "total_debt": 0.0,
     "interest_coverage": null,
-    "forward_pe": 38.131092,
-    "trailing_pe": 58.30584,
+    "forward_pe": 38.08983,
+    "trailing_pe": 58.106163,
     "peg": 2.18,
     "price_to_book": 15.840724,
     "price_to_sales": 22.002623,
-    "enterprise_to_ebitda": 47.013,
-    "enterprise_to_revenue": 20.516,
+    "enterprise_to_ebitda": 47.507,
+    "enterprise_to_revenue": 20.731,
     "fcf_yield": 0.020418324258517227,
-    "institutional_ownership": 0.72877,
+    "institutional_ownership": 0.72830003,
     "insider_ownership": 0.1727,
     "short_interest": 21269942.0,
     "short_ratio": 1.68,
@@ -142,8 +145,8 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1778011200",
-    "eps_current_year": 2.91,
-    "eps_forward": 4.44965,
+    "eps_current_year": 2.92,
+    "eps_forward": 4.45447,
     "classification": "Quality Compounder"
   },
   "technical_screen": {
@@ -207,7 +210,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.72877,
+    "institutional_ownership": 0.72830003,
     "detail": {
       "earnings": {
         "available": true,
@@ -248,7 +251,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 12.03,
-      "eps_growth_implied": 52.91
+      "eps_growth_implied": 52.55
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -267,7 +270,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.1727,
-    "institutional_ownership": 0.72877,
+    "institutional_ownership": 0.72830003,
     "short_interest": 21269942.0,
     "short_percent_float": 0.020399999,
     "days_to_cover": 1.68,
@@ -367,7 +370,7 @@
     "revenue_growth": 0.351,
     "eps_growth": 0.25,
     "roe": 0.31520998,
-    "forward_pe": 38.131092,
+    "forward_pe": 38.08983,
     "relative_volume": 1.2764037212769312,
     "breakout": false,
     "price_above_sma50": true,
@@ -376,14 +379,84 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.028739499809970592,
+      "weekly": 0.0848465779432439,
+      "monthly": 0.1984037009083388,
+      "annual": 0.8919491256865328
+    },
+    "risk": {
+      "volatility": 0.03373198911052572,
+      "annualized_volatility": 0.5354787264839395,
+      "maximum_drawdown": -0.5041596124253696,
+      "sharpe_ratio": 0.9220291766412694,
+      "sortino_ratio": 1.1779047352348189,
+      "calmar_ratio": 0.8258357990832129,
+      "beta": 1.782863668793486,
+      "alpha": 0.1646330496907905,
+      "capm_expected_return": 0.32909395959811166,
+      "actual_return": 0.4937270092889022,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.782863668793486,
+      "alpha": 0.1646330496907905,
+      "capm_expected_return": 0.32909395959811166,
+      "actual_return": 0.4937270092889022,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.78: Moves roughly 78% more than the market. CAPM expected return is 32.91%; realized alpha is 16.46%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.4937270092889022,
+      "components": {
+        "market_component": 0.32909395959811166,
+        "momentum_component": 0.2229872814216332,
+        "volatility_drag": -0.057095745296787896,
+        "alpha_component": 0.1646330496907905
+      },
+      "component_weights_pct": {
+        "market_component": 42.53,
+        "momentum_component": 28.82,
+        "volatility_drag": 7.38,
+        "alpha_component": 21.28
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 161.09999771118163,
+      "sma50": 158.53499908447264,
+      "sma200": 142.16814945220946,
+      "ema20": 160.82002329527558,
+      "ema50": 155.42509102889744,
+      "ema200": 139.96328388281438
+    },
+    "momentum": {
+      "3m": 0.245193050117386,
+      "6m": 0.3451994122226738,
+      "12m": 0.8919491256865328,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 8720125.0,
+      "relative_volume": 1.2764037212769312,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 55,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ANET\nRating: Watch | Score: 77.4/100 | Confidence: 72.19/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 38.131092\nNews/Catalyst: Cisco is Overvalued at 7.01X P/S: Should You Still Buy the Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ANET\nRating: Watch | Score: 77.4/100 | Confidence: 72.19/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 38.08983\nNews/Catalyst: Cisco is Overvalued at 7.01X P/S: Should You Still Buy the Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

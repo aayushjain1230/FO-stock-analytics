@@ -1,6 +1,6 @@
 {
   "ticker": "CIEN",
-  "generated_at": "2026-06-19T22:02:33.525991",
+  "generated_at": "2026-06-21T17:06:22.262893",
   "score": {
     "final_score": 38.9,
     "rating": "Avoid",
@@ -65,8 +65,11 @@
         "sharpe_ratio": 2.123668775924236,
         "sortino_ratio": 2.7207752296198255,
         "calmar_ratio": 4.497110207403872,
-        "beta": 1.963863274859859,
-        "alpha": 0.9437516284435348
+        "beta": 1.9638617596322148,
+        "alpha": 0.943751851555854,
+        "capm_expected_return": 0.3625039053143343,
+        "actual_return": 1.3062557568701882,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Volatility is elevated",
@@ -111,14 +114,14 @@
     "total_debt": 1580579968.0,
     "interest_coverage": null,
     "forward_pe": 44.51717,
-    "trailing_pe": 142.26578,
+    "trailing_pe": 142.74,
     "peg": 0.93,
     "price_to_book": 20.964457,
     "price_to_sales": 10.88421,
-    "enterprise_to_ebitda": 78.0,
-    "enterprise_to_revenue": 11.005,
+    "enterprise_to_ebitda": 77.626,
+    "enterprise_to_revenue": 10.952,
     "fcf_yield": 0.011563452654671893,
-    "institutional_ownership": 0.97963,
+    "institutional_ownership": 0.97913,
     "insider_ownership": 0.00662,
     "short_interest": 4505490.0,
     "short_ratio": 2.25,
@@ -132,7 +135,7 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1780576200",
-    "eps_current_year": 3.01,
+    "eps_current_year": 3.0,
     "eps_forward": 9.61921,
     "classification": "Quality Compounder"
   },
@@ -196,8 +199,8 @@
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 2,
-    "institutional_ownership": 0.97963,
+    "bearish_news_score": 3,
+    "institutional_ownership": 0.97913,
     "detail": {
       "earnings": {
         "available": true,
@@ -238,7 +241,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 31.92,
-      "eps_growth_implied": 219.58
+      "eps_growth_implied": 220.64
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -256,7 +259,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00662,
-    "institutional_ownership": 0.97963,
+    "institutional_ownership": 0.97913,
     "short_interest": 4505490.0,
     "short_percent_float": 0.050100002,
     "days_to_cover": 2.25,
@@ -265,6 +268,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Ciena (CIEN) Sets A New Bar For Quantum Safe 800GbE Across The Atlantic",
+        "source": "Simply Wall St.",
+        "published": "2026-06-20T11:06:19Z",
+        "summary": "Ciena (NYSE:CIEN) and Colt Technology Services completed a transatlantic trial of quantum-safe data transmission at 800GbE. The trial used Ciena\u2019s WaveLogic 6 Extreme encryption for live data across the Atlantic. The companies report this as the fastest and most secure quantum-protected transmission achieved on this route to date. Ciena focuses on high-capacity optical networking and related software, with customers that rely on secure traffic across long-haul routes. This trial with Colt...",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
       {
         "headline": "Bet on These 4 Top-Performing Liquid Stocks to Maximize Returns",
         "source": "Zacks",
@@ -300,16 +313,6 @@
         "source": "Zacks",
         "published": "2026-06-17T07:22:00Z",
         "summary": "Sterling Infrastructure, Dell and Ciena made a momentum screen as markets rallied on a U.S.-Iran peace deal and falling oil prices.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Arista\u2019s Very Good, Very Bad Year",
-        "source": "Trefis",
-        "published": "2026-06-17T00:31:53Z",
-        "summary": "The networking company is drowning in the best demand its CEO has ever seen, and that\u2019s precisely the problem.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -365,14 +368,84 @@
     "analyst_revision": true,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.019463271607073507,
+      "weekly": -0.03818336991462523,
+      "monthly": -0.209809538815813,
+      "annual": 4.830088754427802
+    },
+    "risk": {
+      "volatility": 0.03874727502690403,
+      "annualized_volatility": 0.6150939222156697,
+      "maximum_drawdown": -0.45508250322158916,
+      "sharpe_ratio": 2.123668775924236,
+      "sortino_ratio": 2.7207752296198255,
+      "calmar_ratio": 4.497110207403872,
+      "beta": 1.9638617596322148,
+      "alpha": 0.943751851555854,
+      "capm_expected_return": 0.3625039053143343,
+      "actual_return": 1.3062557568701882,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.9638617596322148,
+      "alpha": 0.943751851555854,
+      "capm_expected_return": 0.3625039053143343,
+      "actual_return": 1.3062557568701882,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.96: Moves roughly 96% more than the market. CAPM expected return is 36.25%; realized alpha is 94.38%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 1.3062557568701882,
+      "components": {
+        "market_component": 0.3625039053143343,
+        "momentum_component": 1.2075221886069505,
+        "volatility_drag": -0.07301878444313395,
+        "alpha_component": 0.943751851555854
+      },
+      "component_weights_pct": {
+        "market_component": 14.01,
+        "momentum_component": 46.68,
+        "volatility_drag": 2.82,
+        "alpha_component": 36.48
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 516.8589981079101,
+      "sma50": 521.1963995361328,
+      "sma200": 310.0396496963501,
+      "ema20": 489.7737350194255,
+      "ema50": 491.7503861427925,
+      "ema200": 344.9407554223227
+    },
+    "momentum": {
+      "3m": 0.03790783643766993,
+      "6m": 1.0406977158499875,
+      "12m": 4.830088754427802,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 3523435.0,
+      "relative_volume": 1.2196336813365367,
+      "volume_spike": false
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 45,
+      "label": "Neutral"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CIEN\nRating: Avoid | Score: 38.9/100 | Confidence: 29.52/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 44.51717\nNews/Catalyst: Bet on These 4 Top-Performing Liquid Stocks to Maximize Returns\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CIEN\nRating: Avoid | Score: 38.9/100 | Confidence: 29.52/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 44.51717\nNews/Catalyst: Ciena (CIEN) Sets A New Bar For Quantum Safe 800GbE Across The Atlantic\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "CCL",
-  "generated_at": "2026-06-19T22:02:24.477316",
+  "generated_at": "2026-06-21T17:06:16.801470",
   "score": {
     "final_score": 63.5,
     "rating": "Hold",
@@ -73,8 +73,11 @@
         "sharpe_ratio": 0.9296076145078004,
         "sortino_ratio": 1.4714991487258549,
         "calmar_ratio": 0.9392257129480129,
-        "beta": 1.8560367355309584,
-        "alpha": 0.10919173633068789
+        "beta": 1.8560340471717638,
+        "alpha": 0.10919217909468365,
+        "capm_expected_return": 0.3426002808986601,
+        "actual_return": 0.4517924599933438,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -116,15 +119,15 @@
     "cash_position": 1424000000.0,
     "total_debt": 26606999552.0,
     "interest_coverage": null,
-    "forward_pe": 11.831893,
+    "forward_pe": 11.829037,
     "trailing_pe": 13.599119,
     "peg": 1.08,
     "price_to_book": 3.2809012,
     "price_to_sales": 1.5850265,
-    "enterprise_to_ebitda": 9.373,
-    "enterprise_to_revenue": 2.521,
+    "enterprise_to_ebitda": 9.367,
+    "enterprise_to_revenue": 2.519,
     "fcf_yield": 0.050842793443834015,
-    "institutional_ownership": 0.73226,
+    "institutional_ownership": 0.72712,
     "insider_ownership": 0.00261,
     "short_interest": 37988213.0,
     "short_ratio": 1.19,
@@ -139,7 +142,7 @@
     "payout_ratio": 0.0661,
     "next_earnings_date": "1782217800",
     "eps_current_year": 2.27,
-    "eps_forward": 2.60905,
+    "eps_forward": 2.60968,
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
@@ -203,7 +206,7 @@
     "guidance_change": true,
     "bullish_news_score": 3,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.73226,
+    "institutional_ownership": 0.72712,
     "detail": {
       "earnings": {
         "available": true,
@@ -244,7 +247,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 13.54,
-      "eps_growth_implied": 14.94
+      "eps_growth_implied": 14.96
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -262,7 +265,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00261,
-    "institutional_ownership": 0.73226,
+    "institutional_ownership": 0.72712,
     "short_interest": 37988213.0,
     "short_percent_float": 0.033299997,
     "days_to_cover": 1.19,
@@ -359,7 +362,7 @@
     "revenue_growth": 0.061,
     "eps_growth": null,
     "roe": 0.27853,
-    "forward_pe": 11.831893,
+    "forward_pe": 11.829037,
     "relative_volume": 1.2375850725239335,
     "breakout": false,
     "price_above_sma50": true,
@@ -368,14 +371,84 @@
     "analyst_revision": true,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.03209632219053149,
+      "weekly": 0.0977951606659686,
+      "monthly": 0.2921725252370413,
+      "annual": 0.34031996213097404
+    },
+    "risk": {
+      "volatility": 0.03061533640394066,
+      "annualized_volatility": 0.4860033985764569,
+      "maximum_drawdown": -0.4233063510528652,
+      "sharpe_ratio": 0.9296076145078004,
+      "sortino_ratio": 1.4714991487258549,
+      "calmar_ratio": 0.9392257129480129,
+      "beta": 1.8560340471717638,
+      "alpha": 0.10919217909468365,
+      "capm_expected_return": 0.3426002808986601,
+      "actual_return": 0.4517924599933438,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.8560340471717638,
+      "alpha": 0.10919217909468365,
+      "capm_expected_return": 0.3426002808986601,
+      "actual_return": 0.4517924599933438,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.86: Moves roughly 86% more than the market. CAPM expected return is 34.26%; realized alpha is 10.92%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.4517924599933438,
+      "components": {
+        "market_component": 0.3426002808986601,
+        "momentum_component": 0.08507999053274351,
+        "volatility_drag": -0.047200679715291384,
+        "alpha_component": 0.10919217909468365
+      },
+      "component_weights_pct": {
+        "market_component": 58.66,
+        "momentum_component": 14.57,
+        "volatility_drag": 8.08,
+        "alpha_component": 18.69
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 28.013000011444092,
+      "sma50": 27.09504222869873,
+      "sma200": 28.139960117340088,
+      "ema20": 28.262626871658355,
+      "ema50": 27.447375679997176,
+      "ema200": 27.288722596644572
+    },
+    "momentum": {
+      "3m": 0.245351966760597,
+      "6m": 0.10647684719984585,
+      "12m": 0.34031996213097404,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 25437120.0,
+      "relative_volume": 1.2375850725239335,
+      "volume_spike": false
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 35,
+      "label": "Neutral"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CCL\nRating: Hold | Score: 63.5/100 | Confidence: 55.21/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 23.889999389648438 | Resistance: 30.899999618530273\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.831893\nNews/Catalyst: Can Royal Caribbean Protect 2026 Earnings From a 62-Cent Fuel Hit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CCL\nRating: Hold | Score: 63.5/100 | Confidence: 55.21/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 23.889999389648438 | Resistance: 30.899999618530273\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.829037\nNews/Catalyst: Can Royal Caribbean Protect 2026 Earnings From a 62-Cent Fuel Hit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

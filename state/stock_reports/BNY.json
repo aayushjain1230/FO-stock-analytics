@@ -1,6 +1,6 @@
 {
   "ticker": "BNY",
-  "generated_at": "2026-06-19T22:01:56.243485",
+  "generated_at": "2026-06-21T17:06:06.489873",
   "score": {
     "final_score": 77.65,
     "rating": "Watch",
@@ -69,14 +69,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014091224844878403,
-        "annualized_volatility": 0.2236912596470578,
-        "maximum_drawdown": -0.17582913536323574,
-        "sharpe_ratio": 2.2233454551071437,
-        "sortino_ratio": 3.0392769961989643,
-        "calmar_ratio": 3.4299979711973045,
-        "beta": 0.8418877693647221,
-        "alpha": 0.34194119426513203
+        "volatility": 0.0140912266687766,
+        "annualized_volatility": 0.2236912886005441,
+        "maximum_drawdown": -0.175829150822981,
+        "sharpe_ratio": 2.2233450471942646,
+        "sortino_ratio": 3.0392720260440447,
+        "calmar_ratio": 3.429997358316271,
+        "beta": 0.841887166087785,
+        "alpha": 0.3419412544944118,
+        "capm_expected_return": 0.15540166411611075,
+        "actual_return": 0.4973429186105226,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -114,15 +117,15 @@
     "cash_position": 247720001536.0,
     "total_debt": 80384000000.0,
     "interest_coverage": null,
-    "forward_pe": 14.859301,
+    "forward_pe": 14.840601,
     "trailing_pe": 17.820099,
     "peg": 1.56,
     "price_to_book": 2.4988692,
     "price_to_sales": 4.750151,
     "enterprise_to_ebitda": null,
-    "enterprise_to_revenue": -3.003,
+    "enterprise_to_revenue": -3.03,
     "fcf_yield": null,
-    "institutional_ownership": 0.87631,
+    "institutional_ownership": 0.8763,
     "insider_ownership": 0.00241,
     "short_interest": 50439.0,
     "short_ratio": 0.01,
@@ -133,11 +136,11 @@
     "target_low_price": 120.0,
     "recommendation": "buy",
     "number_of_analysts": 13.0,
-    "dividend_yield": 1.47,
+    "dividend_yield": 1.48,
     "payout_ratio": 0.2556,
     "next_earnings_date": null,
     "eps_current_year": 8.06,
-    "eps_forward": 9.666,
+    "eps_forward": 9.67818,
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
@@ -201,7 +204,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.87631,
+    "institutional_ownership": 0.8763,
     "detail": {
       "earnings": {
         "available": true,
@@ -241,8 +244,8 @@
         "last_surprise_pct": 0.16540001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -2.21,
-      "eps_growth_implied": 19.93
+      "analyst_upside_pct": -0.55,
+      "eps_growth_implied": 20.08
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -259,7 +262,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00241,
-    "institutional_ownership": 0.87631,
+    "institutional_ownership": 0.8763,
     "short_interest": 50439.0,
     "short_percent_float": 0.0001,
     "days_to_cover": 0.01,
@@ -359,7 +362,7 @@
     "revenue_growth": 0.134,
     "eps_growth": 0.418,
     "roe": 0.13472,
-    "forward_pe": 14.859301,
+    "forward_pe": 14.840601,
     "relative_volume": 1.9378763771808916,
     "breakout": true,
     "price_above_sma50": true,
@@ -368,11 +371,81 @@
     "analyst_revision": false,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.016704335723009778,
+      "weekly": 0.010838261556849638,
+      "monthly": 0.0536238055005962,
+      "annual": 0.6300435714492283
+    },
+    "risk": {
+      "volatility": 0.0140912266687766,
+      "annualized_volatility": 0.2236912886005441,
+      "maximum_drawdown": -0.175829150822981,
+      "sharpe_ratio": 2.2233450471942646,
+      "sortino_ratio": 3.0392720260440447,
+      "calmar_ratio": 3.429997358316271,
+      "beta": 0.841887166087785,
+      "alpha": 0.3419412544944118,
+      "capm_expected_return": 0.15540166411611075,
+      "actual_return": 0.4973429186105226,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.841887166087785,
+      "alpha": 0.3419412544944118,
+      "capm_expected_return": 0.15540166411611075,
+      "actual_return": 0.4973429186105226,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.84: Moves roughly in line with the market. CAPM expected return is 15.54%; realized alpha is 34.19%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.4973429186105226,
+      "components": {
+        "market_component": 0.15540166411611075,
+        "momentum_component": 0.15751089286230707,
+        "volatility_drag": -0.0,
+        "alpha_component": 0.3419412544944118
+      },
+      "component_weights_pct": {
+        "market_component": 23.73,
+        "momentum_component": 24.05,
+        "volatility_drag": 0.0,
+        "alpha_component": 52.22
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 141.8629997253418,
+      "sma50": 136.73536972045898,
+      "sma200": 118.97411849975586,
+      "ema20": 141.45884431036822,
+      "ema50": 136.27349788879323,
+      "ema200": 119.91040247537181
+    },
+    "momentum": {
+      "3m": 0.25500550676908285,
+      "6m": 0.26662776466130267,
+      "12m": 0.6300435714492283,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 3667365.0,
+      "relative_volume": 1.9378763771808916,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 90,
+      "label": "Research priority"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 1.94x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -384,5 +457,5 @@
       }
     ]
   },
-  "report": "Ticker: BNY\nRating: Watch | Score: 77.65/100 | Confidence: 68.95/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 114.66000366210938 | Resistance: 146.07000732421875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 14.859301\nNews/Catalyst: Should BNY Mellon US Large Cap Core Equity ETF (BKLC) Be on Your Investing Radar?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.94x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: BNY\nRating: Watch | Score: 77.65/100 | Confidence: 68.95/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 114.66000366210938 | Resistance: 146.07000732421875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 14.840601\nNews/Catalyst: Should BNY Mellon US Large Cap Core Equity ETF (BKLC) Be on Your Investing Radar?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.94x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

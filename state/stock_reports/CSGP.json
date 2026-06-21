@@ -1,6 +1,6 @@
 {
   "ticker": "CSGP",
-  "generated_at": "2026-06-19T22:02:55.382185",
+  "generated_at": "2026-06-21T17:06:35.746685",
   "score": {
     "final_score": 28.45,
     "rating": "Avoid",
@@ -60,8 +60,11 @@
         "sharpe_ratio": -1.069029854845196,
         "sortino_ratio": -1.253471811099758,
         "calmar_ratio": -0.5228878939703542,
-        "beta": 0.7368012171418272,
-        "alpha": -0.5174047203566374
+        "beta": 0.7368011158091565,
+        "alpha": -0.5174047228793581,
+        "capm_expected_return": 0.13600411567197002,
+        "actual_return": -0.38140060720738816,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -100,15 +103,15 @@
     "cash_position": 1215000064.0,
     "total_debt": 1155000064.0,
     "interest_coverage": null,
-    "forward_pe": 16.747755,
+    "forward_pe": 16.744963,
     "trailing_pe": 430.28574,
     "peg": 0.11,
     "price_to_book": 1.5496218,
     "price_to_sales": 3.6048284,
-    "enterprise_to_ebitda": 47.916,
-    "enterprise_to_revenue": 3.82,
+    "enterprise_to_ebitda": 45.139,
+    "enterprise_to_revenue": 3.598,
     "fcf_yield": 0.01643945926873976,
-    "institutional_ownership": 1.04026,
+    "institutional_ownership": 1.04012,
     "insider_ownership": 0.01212,
     "short_interest": 15095773.0,
     "short_ratio": 1.75,
@@ -120,10 +123,10 @@
     "recommendation": "buy",
     "number_of_analysts": 20.0,
     "dividend_yield": null,
-    "payout_ratio": null,
+    "payout_ratio": 0.0,
     "next_earnings_date": "1777406400",
     "eps_current_year": 0.07,
-    "eps_forward": 1.79845,
+    "eps_forward": 1.79875,
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
@@ -186,8 +189,8 @@
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 2,
-    "institutional_ownership": 1.04026,
+    "bearish_news_score": 1,
+    "institutional_ownership": 1.04012,
     "detail": {
       "earnings": {
         "available": true,
@@ -228,7 +231,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 60.19,
-      "eps_growth_implied": 2469.21
+      "eps_growth_implied": 2469.64
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -244,7 +247,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.01212,
-    "institutional_ownership": 1.04026,
+    "institutional_ownership": 1.04012,
     "short_interest": 15095773.0,
     "short_percent_float": 0.0372,
     "days_to_cover": 1.75,
@@ -253,6 +256,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Here is Why CoStar Group (CSGP) is One of the Best NASDAQ Stocks with High Upside Potential",
+        "source": "Insider Monkey",
+        "published": "2026-06-19T23:58:22Z",
+        "summary": "CoStar Group Inc. (NASDAQ:CSGP) is one of the best NASDAQ stocks with high upside potential. On June 16, CoStar Group launched \u201cApartments.com Ai,\u201d a conversational search tool designed to act as a personalized rental advisor. By replacing traditional filters with NL processing, the platform allows users to describe their specific lifestyle and budget needs, such [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Is CoStar Group, Inc. (CSGP) A Good Stock To Buy Now?",
         "source": "Insider Monkey",
@@ -292,16 +305,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "2 Cash-Producing Stocks to Research Further and 1 Facing Challenges",
-        "source": "StockStory",
-        "published": "2026-06-09T09:18:14Z",
-        "summary": "Generating cash is essential for any business, but not all cash-rich companies are great investments. Some produce plenty of cash but fail to allocate it effectively, leading to missed opportunities.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -343,7 +346,7 @@
     "revenue_growth": 0.225,
     "eps_growth": null,
     "roe": 0.00303,
-    "forward_pe": 16.747755,
+    "forward_pe": 16.744963,
     "relative_volume": 2.1884791908180627,
     "breakout": false,
     "price_above_sma50": false,
@@ -352,11 +355,81 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.011162122634881366,
+      "weekly": -0.0774885319573474,
+      "monthly": -0.1088756947009678,
+      "annual": -0.6229815863143425
+    },
+    "risk": {
+      "volatility": 0.022474564025687673,
+      "annualized_volatility": 0.3567726434194095,
+      "maximum_drawdown": -0.688939375506926,
+      "sharpe_ratio": -1.069029854845196,
+      "sortino_ratio": -1.253471811099758,
+      "calmar_ratio": -0.5228878939703542,
+      "beta": 0.7368011158091565,
+      "alpha": -0.5174047228793581,
+      "capm_expected_return": 0.13600411567197002,
+      "actual_return": -0.38140060720738816,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.7368011158091565,
+      "alpha": -0.5174047228793581,
+      "capm_expected_return": 0.13600411567197002,
+      "actual_return": -0.38140060720738816,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.74: Moves roughly 26% less than the market. CAPM expected return is 13.60%; realized alpha is -51.74%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.38140060720738816,
+      "components": {
+        "market_component": 0.13600411567197002,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.021354528683881904,
+        "alpha_component": -0.5174047228793581
+      },
+      "component_weights_pct": {
+        "market_component": 20.16,
+        "momentum_component": 0.0,
+        "volatility_drag": 3.16,
+        "alpha_component": 76.68
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 32.866000175476074,
+      "sma50": 34.55320014953613,
+      "sma200": 56.85620004653931,
+      "ema20": 32.74480133079406,
+      "ema50": 35.40644320492975,
+      "ema200": 51.97351067617267
+    },
+    "momentum": {
+      "3m": -0.2965903537156238,
+      "6m": -0.5265639524533534,
+      "12m": -0.6229815863143425,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 7375350.0,
+      "relative_volume": 2.1884791908180627,
+      "volume_spike": true
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 20,
+      "label": "High risk / weak setup"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 2.19x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -368,5 +441,5 @@
       }
     ]
   },
-  "report": "Ticker: CSGP\nRating: Avoid | Score: 28.45/100 | Confidence: 22.1/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 30.1200008392334 | Resistance: 42.90999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.747755\nNews/Catalyst: Is CoStar Group, Inc. (CSGP) A Good Stock To Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.19x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: CSGP\nRating: Avoid | Score: 28.45/100 | Confidence: 22.1/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 30.1200008392334 | Resistance: 42.90999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.744963\nNews/Catalyst: Here is Why CoStar Group (CSGP) is One of the Best NASDAQ Stocks with High Upside Potential\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.19x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

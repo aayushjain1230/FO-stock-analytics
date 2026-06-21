@@ -1,6 +1,6 @@
 {
   "ticker": "ADI",
-  "generated_at": "2026-06-19T22:01:07.867969",
+  "generated_at": "2026-06-21T17:05:34.454017",
   "score": {
     "final_score": 84.65,
     "rating": "Buy Watch",
@@ -36,7 +36,7 @@
         "1m": 0.05150740175160329,
         "3m": 0.40333076023555536,
         "6m": 0.5697346452766885,
-        "12m": 0.9358601181718447
+        "12m": 0.9358602497907442
       },
       "acceleration": 0.1185,
       "evidence": [
@@ -72,14 +72,17 @@
     "risk": {
       "score": 70.0,
       "risk_metrics": {
-        "volatility": 0.023618569782257758,
-        "annualized_volatility": 0.37493317180127395,
-        "maximum_drawdown": -0.3219746332738541,
-        "sharpe_ratio": 1.0842394011299399,
-        "sortino_ratio": 1.6728678979875458,
-        "calmar_ratio": 1.2443561824963654,
-        "beta": 1.6046154891805644,
-        "alpha": 0.11032575136493558
+        "volatility": 0.02361856975092613,
+        "annualized_volatility": 0.37493317130389975,
+        "maximum_drawdown": -0.32197467665949475,
+        "sharpe_ratio": 1.084239486156163,
+        "sortino_ratio": 1.6728682250024463,
+        "calmar_ratio": 1.2443561650821224,
+        "beta": 1.6046150108370296,
+        "alpha": 0.11032582477153968,
+        "capm_expected_return": 0.29619152422590117,
+        "actual_return": 0.40651734899744085,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Beta indicates elevated market sensitivity",
@@ -121,15 +124,15 @@
     "cash_position": 3439308032.0,
     "total_debt": 8708730880.0,
     "interest_coverage": null,
-    "forward_pe": 29.4084,
-    "trailing_pe": 64.45994,
+    "forward_pe": 29.392544,
+    "trailing_pe": 64.55572,
     "peg": 0.95,
     "price_to_book": 6.271707,
     "price_to_sales": 16.610409,
-    "enterprise_to_ebitda": 33.808,
-    "enterprise_to_revenue": 16.318,
+    "enterprise_to_ebitda": 35.27,
+    "enterprise_to_revenue": 17.024,
     "fcf_yield": 0.018282571820967528,
-    "institutional_ownership": 0.9354,
+    "institutional_ownership": 0.93533,
     "insider_ownership": 0.00243,
     "short_interest": 9480279.0,
     "short_ratio": 2.14,
@@ -140,11 +143,11 @@
     "target_low_price": 363.0,
     "recommendation": "buy",
     "number_of_analysts": 30.0,
-    "dividend_yield": null,
-    "payout_ratio": null,
+    "dividend_yield": 1.01,
+    "payout_ratio": 0.6057,
     "next_earnings_date": "1779280200",
-    "eps_current_year": 6.74,
-    "eps_forward": 14.77333,
+    "eps_current_year": 6.73,
+    "eps_forward": 14.7813,
     "classification": "Quality Compounder"
   },
   "technical_screen": {
@@ -208,7 +211,7 @@
     "guidance_change": true,
     "bullish_news_score": 3,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.9354,
+    "institutional_ownership": 0.93533,
     "detail": {
       "earnings": {
         "available": true,
@@ -249,7 +252,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 3.75,
-      "eps_growth_implied": 119.19
+      "eps_growth_implied": 119.63
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -267,7 +270,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00243,
-    "institutional_ownership": 0.9354,
+    "institutional_ownership": 0.93533,
     "short_interest": 9480279.0,
     "short_percent_float": 0.0217,
     "days_to_cover": 2.14,
@@ -368,7 +371,7 @@
     "revenue_growth": 0.372,
     "eps_growth": 1.105,
     "roe": 0.09639,
-    "forward_pe": 29.4084,
+    "forward_pe": 29.392544,
     "relative_volume": 2.2622442133512246,
     "breakout": true,
     "price_above_sma50": true,
@@ -377,11 +380,81 @@
     "analyst_revision": false,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.048280802650938925,
+      "weekly": 0.054181899662013366,
+      "monthly": 0.05150740175160329,
+      "annual": 0.9358602497907442
+    },
+    "risk": {
+      "volatility": 0.02361856975092613,
+      "annualized_volatility": 0.37493317130389975,
+      "maximum_drawdown": -0.32197467665949475,
+      "sharpe_ratio": 1.084239486156163,
+      "sortino_ratio": 1.6728682250024463,
+      "calmar_ratio": 1.2443561650821224,
+      "beta": 1.6046150108370296,
+      "alpha": 0.11032582477153968,
+      "capm_expected_return": 0.29619152422590117,
+      "actual_return": 0.40651734899744085,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.6046150108370296,
+      "alpha": 0.11032582477153968,
+      "capm_expected_return": 0.29619152422590117,
+      "actual_return": 0.40651734899744085,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.60: Moves roughly 60% more than the market. CAPM expected return is 29.62%; realized alpha is 11.03%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.40651734899744085,
+      "components": {
+        "market_component": 0.29619152422590117,
+        "momentum_component": 0.23396506244768606,
+        "volatility_drag": -0.02498663426077995,
+        "alpha_component": 0.11032582477153968
+      },
+      "component_weights_pct": {
+        "market_component": 44.51,
+        "momentum_component": 35.16,
+        "volatility_drag": 3.75,
+        "alpha_component": 16.58
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 413.02324829101565,
+      "sma50": 400.00716369628907,
+      "sma200": 308.9265797424316,
+      "ema20": 413.8466573417777,
+      "ema50": 396.08356534923587,
+      "ema200": 326.2690867785314
+    },
+    "momentum": {
+      "3m": 0.40333076023555536,
+      "6m": 0.5697346452766885,
+      "12m": 0.9358602497907442,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 5246560.0,
+      "relative_volume": 2.2622442133512246,
+      "volume_spike": true
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 93,
+      "label": "Research priority"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 2.26x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -393,5 +466,5 @@
       }
     ]
   },
-  "report": "Ticker: ADI\nRating: Buy Watch | Score: 84.65/100 | Confidence: 78.89/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation, volume surge | Support: 303.1000061035156 | Resistance: 437.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 29.4084\nNews/Catalyst: Reflecting On Analog Semiconductors Stocks\u2019 Q1 Earnings: Analog Devices (NASDAQ:ADI)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.26x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: ADI\nRating: Buy Watch | Score: 84.65/100 | Confidence: 78.89/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation, volume surge | Support: 303.1000061035156 | Resistance: 437.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 29.392544\nNews/Catalyst: Reflecting On Analog Semiconductors Stocks\u2019 Q1 Earnings: Analog Devices (NASDAQ:ADI)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.26x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

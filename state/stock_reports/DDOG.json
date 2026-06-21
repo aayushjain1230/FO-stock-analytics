@@ -1,6 +1,6 @@
 {
   "ticker": "DDOG",
-  "generated_at": "2026-06-19T22:03:02.947769",
+  "generated_at": "2026-06-21T17:06:40.730872",
   "score": {
     "final_score": 60.65,
     "rating": "Hold",
@@ -70,8 +70,11 @@
         "sharpe_ratio": 0.8629099203602062,
         "sortino_ratio": 1.5410698489870325,
         "calmar_ratio": 0.8014261344530885,
-        "beta": 1.27332612242621,
-        "alpha": 0.23669978264265903
+        "beta": 1.2733261894698191,
+        "alpha": 0.23669973358239016,
+        "capm_expected_return": 0.23503982098428028,
+        "actual_return": 0.47173955456667044,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -113,15 +116,15 @@
     "total_debt": 1285052032.0,
     "interest_coverage": null,
     "forward_pe": 78.062645,
-    "trailing_pe": 571.7949,
+    "trailing_pe": 586.8421,
     "peg": 1.39,
     "price_to_book": 19.896502,
     "price_to_sales": 21.617226,
-    "enterprise_to_ebitda": 2274.673,
-    "enterprise_to_revenue": 21.457,
+    "enterprise_to_ebitda": 2191.332,
+    "enterprise_to_revenue": 20.671,
     "fcf_yield": 0.01180066655424644,
-    "institutional_ownership": 0.91941,
-    "insider_ownership": 0.00621,
+    "institutional_ownership": 0.91898,
+    "insider_ownership": 0.0062,
     "short_interest": 14139488.0,
     "short_ratio": 2.03,
     "short_percent_float": 0.0493,
@@ -134,7 +137,7 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1778157000",
-    "eps_current_year": 0.39,
+    "eps_current_year": 0.38,
     "eps_forward": 2.85668,
     "classification": "Fundamentally Strong"
   },
@@ -199,7 +202,7 @@
     "guidance_change": true,
     "bullish_news_score": 3,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.91941,
+    "institutional_ownership": 0.91898,
     "detail": {
       "earnings": {
         "available": true,
@@ -240,7 +243,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 8.23,
-      "eps_growth_implied": 632.48
+      "eps_growth_implied": 651.76
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -257,8 +260,8 @@
     "number_of_analysts": 46.0
   },
   "insider_short_interest": {
-    "insider_ownership": 0.00621,
-    "institutional_ownership": 0.91941,
+    "insider_ownership": 0.0062,
+    "institutional_ownership": 0.91898,
     "short_interest": 14139488.0,
     "short_percent_float": 0.0493,
     "days_to_cover": 2.03,
@@ -308,10 +311,10 @@
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "The Contracted Revenue Datadog Stock Bears Are Ignoring",
-        "source": "Trefis",
-        "published": "2026-06-18T00:06:16Z",
-        "summary": "Beyond the impressive sales figures, one number in Datadog's filings offers a clearer view of its future growth and a surprising answer to the biggest risk.",
+        "headline": "Street Calls of the Week",
+        "source": "Investing.com",
+        "published": "2026-06-18T10:11:23Z",
+        "summary": "Investing.com -- Here is your Pro Recap of the top takeaways from Wall Street analysts for the past week. InvestingPro subscribers always get first dibs on market-moving AI analyst comments. Upgrade today! Datadog What happened? On Monday, Truist upgraded Datadog Inc (NASDAQ:DDOG) to Buy with a $300 price target. *TLDR: AI urgency drives Truist\u2019s $300 price target. What\u2019s the full story? The consensus likes the stock, but they\u2019re missing the engine under the hood. Truist did the fieldwork, and t",
         "bullish_score": 1,
         "bearish_score": 1,
         "importance_score": 60,
@@ -366,11 +369,81 @@
     "analyst_revision": false,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.016017318115884693,
+      "weekly": -0.047984995003306885,
+      "monthly": 0.03648620184155105,
+      "annual": 0.786286499051398
+    },
+    "risk": {
+      "volatility": 0.03443789205424261,
+      "annualized_volatility": 0.5466845883168794,
+      "maximum_drawdown": -0.4862057017996231,
+      "sharpe_ratio": 0.8629099203602062,
+      "sortino_ratio": 1.5410698489870325,
+      "calmar_ratio": 0.8014261344530885,
+      "beta": 1.2733261894698191,
+      "alpha": 0.23669973358239016,
+      "capm_expected_return": 0.23503982098428028,
+      "actual_return": 0.47173955456667044,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.2733261894698191,
+      "alpha": 0.23669973358239016,
+      "capm_expected_return": 0.23503982098428028,
+      "actual_return": 0.47173955456667044,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.27: Moves roughly 27% more than the market. CAPM expected return is 23.50%; realized alpha is 23.67%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.47173955456667044,
+      "components": {
+        "market_component": 0.23503982098428028,
+        "momentum_component": 0.1965716247628495,
+        "volatility_drag": -0.05933691766337588,
+        "alpha_component": 0.23669973358239016
+      },
+      "component_weights_pct": {
+        "market_component": 32.3,
+        "momentum_component": 27.01,
+        "volatility_drag": 8.15,
+        "alpha_component": 32.53
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 234.8845001220703,
+      "sma50": 186.0574003601074,
+      "sma200": 151.4420004272461,
+      "ema20": 225.88635087292673,
+      "ema50": 197.85678927390808,
+      "ema200": 156.0973758907972
+    },
+    "momentum": {
+      "3m": 0.7161766646922854,
+      "6m": 0.5922884337073997,
+      "12m": 0.786286499051398,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 6097865.0,
+      "relative_volume": 1.3910278433517305,
+      "volume_spike": false
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 55,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []

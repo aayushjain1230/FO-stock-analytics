@@ -1,10 +1,10 @@
 {
   "ticker": "DXCM",
-  "generated_at": "2026-06-19T22:03:09.896261",
+  "generated_at": "2026-06-21T17:06:45.249485",
   "score": {
-    "final_score": 60.9,
+    "final_score": 60.15,
     "rating": "Hold",
-    "confidence": 61.9,
+    "confidence": 59.92,
     "risk_level": "Controlled",
     "categories": {
       "technical": 50.0,
@@ -12,7 +12,7 @@
       "volume": 50.0,
       "fundamental": 86.0,
       "risk": 75.0,
-      "catalyst": 85.0
+      "catalyst": 70.0
     },
     "technical": {
       "score": 50.0,
@@ -70,20 +70,22 @@
         "sharpe_ratio": -0.18834271268799377,
         "sortino_ratio": -0.19384320863821927,
         "calmar_ratio": -0.3988406239934763,
-        "beta": 0.8192918732841735,
-        "alpha": -0.24592953781658927
+        "beta": 0.8192881366251805,
+        "alpha": -0.24592887168088162,
+        "capm_expected_return": 0.15123017068164313,
+        "actual_return": -0.09469870099923848,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 70.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -118,10 +120,10 @@
     "peg": 1.35,
     "price_to_book": 9.458365,
     "price_to_sales": 5.804233,
-    "enterprise_to_ebitda": 21.048,
-    "enterprise_to_revenue": 5.646,
+    "enterprise_to_ebitda": 20.842,
+    "enterprise_to_revenue": 5.59,
     "fcf_yield": 0.03778534433437656,
-    "institutional_ownership": 1.02724,
+    "institutional_ownership": 1.02469,
     "insider_ownership": 0.00279,
     "short_interest": 17394929.0,
     "short_ratio": 2.38,
@@ -133,7 +135,7 @@
     "recommendation": "strong_buy",
     "number_of_analysts": 24.0,
     "dividend_yield": null,
-    "payout_ratio": null,
+    "payout_ratio": 0.0,
     "next_earnings_date": "1777579200",
     "eps_current_year": 2.33,
     "eps_forward": 3.08259,
@@ -196,11 +198,11 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 3,
-    "institutional_ownership": 1.02724,
+    "bullish_news_score": 1,
+    "bearish_news_score": 1,
+    "institutional_ownership": 1.02469,
     "detail": {
       "earnings": {
         "available": true,
@@ -247,7 +249,6 @@
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -260,7 +261,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00279,
-    "institutional_ownership": 1.02724,
+    "institutional_ownership": 1.02469,
     "short_interest": 17394929.0,
     "short_percent_float": 0.0519,
     "days_to_cover": 2.38,
@@ -269,6 +270,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "3 Non-Pharma Firms That Could Benefit From the GLP-1 Trend",
+        "source": "MarketBeat",
+        "published": "2026-06-20T12:45:00Z",
+        "summary": "With GLP-1 usage continuing to rise, a group of unlikely beneficiaries is emerging; stocks in the broader health care sector and even in retail could stand out.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Living Longer Is Big Business. These Stocks Will Benefit.",
         "source": "Barrons.com",
@@ -308,16 +319,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "1 Cash-Producing Stock with Impressive Fundamentals and 2 We Find Risky",
-        "source": "StockStory",
-        "published": "2026-06-16T16:49:04Z",
-        "summary": "While strong cash flow is a key indicator of stability, it doesn\u2019t always translate to superior returns. Some cash-heavy businesses struggle with inefficient spending, slowing demand, or weak competitive positioning.",
-        "bullish_score": 1,
-        "bearish_score": 2,
-        "importance_score": 75,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -337,25 +338,25 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7836,
-    "probability_pct": 78.36,
+    "probability_of_outperformance": 0.7732,
+    "probability_pct": 77.32,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 60.9/100"
+      "Composite score 60.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.9,
+    "final_score": 60.15,
     "technical_score": 50.0,
     "momentum_score": 50.0,
     "volume_score": 50.0,
     "fundamental_score": 86.0,
     "risk_score": 75.0,
-    "catalyst_score": 85.0,
+    "catalyst_score": 70.0,
     "revenue_growth": 0.15,
     "eps_growth": 0.922,
     "roe": 0.35624,
@@ -366,16 +367,86 @@
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
+  },
+  "quant_model": {
+    "returns": {
+      "daily": 0.017408364528019193,
+      "weekly": -0.03694350537271596,
+      "monthly": 0.0824496568196762,
+      "annual": -0.11438348284136812
+    },
+    "risk": {
+      "volatility": 0.03167341784116824,
+      "annualized_volatility": 0.5027999206750049,
+      "maximum_drawdown": -0.5298353871780379,
+      "sharpe_ratio": -0.18834271268799377,
+      "sortino_ratio": -0.19384320863821927,
+      "calmar_ratio": -0.3988406239934763,
+      "beta": 0.8192881366251805,
+      "alpha": -0.24592887168088162,
+      "capm_expected_return": 0.15123017068164313,
+      "actual_return": -0.09469870099923848,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.8192881366251805,
+      "alpha": -0.24592887168088162,
+      "capm_expected_return": 0.15123017068164313,
+      "actual_return": -0.09469870099923848,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.82: Moves roughly in line with the market. CAPM expected return is 15.12%; realized alpha is -24.59%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.09469870099923848,
+      "components": {
+        "market_component": 0.15123017068164313,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.050559984135000985,
+        "alpha_component": -0.24592887168088162
+      },
+      "component_weights_pct": {
+        "market_component": 33.78,
+        "momentum_component": 0.0,
+        "volatility_drag": 11.29,
+        "alpha_component": 54.93
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 73.508500289917,
+      "sma50": 66.60300003051758,
+      "sma200": 67.51670007705688,
+      "ema20": 72.20910333276552,
+      "ema50": 69.13159695133986,
+      "ema200": 69.49125923708449
+    },
+    "momentum": {
+      "3m": 0.07730050300474756,
+      "6m": 0.09190896823392447,
+      "12m": -0.11438348284136812,
+      "24m": 0.0,
+      "score": 50.0
+    },
+    "volume": {
+      "average_volume": 5894995.0,
+      "relative_volume": 1.454063998357929,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 15,
+      "label": "High risk / weak setup"
+    }
   },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DXCM\nRating: Hold | Score: 60.9/100 | Confidence: 61.9/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 57.560001373291016 | Resistance: 78.19000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.50945\nNews/Catalyst: Living Longer Is Big Business. These Stocks Will Benefit.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DXCM\nRating: Hold | Score: 60.15/100 | Confidence: 59.92/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 57.560001373291016 | Resistance: 78.19000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.50945\nNews/Catalyst: 3 Non-Pharma Firms That Could Benefit From the GLP-1 Trend\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "CVNA",
-  "generated_at": "2026-06-19T22:02:59.538154",
+  "generated_at": "2026-06-21T17:06:38.606456",
   "score": {
     "final_score": 41.9,
     "rating": "Drop",
@@ -66,8 +66,11 @@
         "sharpe_ratio": 1.1662173747819706,
         "sortino_ratio": 1.6301396922187126,
         "calmar_ratio": 1.7392783501330942,
-        "beta": 2.197796696828516,
-        "alpha": 0.37939695998288625
+        "beta": 2.197795261742124,
+        "alpha": 0.379397161562464,
+        "capm_expected_return": 0.40568505474237887,
+        "actual_return": 0.7850822163048429,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Volatility is elevated",
@@ -115,10 +118,10 @@
     "peg": null,
     "price_to_book": 12.792619,
     "price_to_sales": 3.2415144,
-    "enterprise_to_ebitda": 22.972,
-    "enterprise_to_revenue": 2.389,
+    "enterprise_to_ebitda": 21.907,
+    "enterprise_to_revenue": 2.278,
     "fcf_yield": 0.0026950067252903176,
-    "institutional_ownership": 1.08332,
+    "institutional_ownership": 1.08305,
     "insider_ownership": 0.02164,
     "short_interest": 72224125.0,
     "short_ratio": 6.0,
@@ -197,7 +200,7 @@
     "guidance_change": true,
     "bullish_news_score": 3,
     "bearish_news_score": 0,
-    "institutional_ownership": 1.08332,
+    "institutional_ownership": 1.08305,
     "detail": {
       "earnings": {
         "available": true,
@@ -256,7 +259,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.02164,
-    "institutional_ownership": 1.08332,
+    "institutional_ownership": 1.08305,
     "short_interest": 72224125.0,
     "short_percent_float": 0.1359,
     "days_to_cover": 6.0,
@@ -364,11 +367,81 @@
     "analyst_revision": true,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.05886091174540775,
+      "weekly": -0.01857862196844906,
+      "monthly": 0.05067086285383193,
+      "annual": 0.1320497301664263
+    },
+    "risk": {
+      "volatility": 0.04240678632918551,
+      "annualized_volatility": 0.6731868631708711,
+      "maximum_drawdown": -0.430238690973167,
+      "sharpe_ratio": 1.1662173747819706,
+      "sortino_ratio": 1.6301396922187126,
+      "calmar_ratio": 1.7392783501330942,
+      "beta": 2.197795261742124,
+      "alpha": 0.379397161562464,
+      "capm_expected_return": 0.40568505474237887,
+      "actual_return": 0.7850822163048429,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 2.197795261742124,
+      "alpha": 0.379397161562464,
+      "capm_expected_return": 0.40568505474237887,
+      "actual_return": 0.7850822163048429,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 2.20: Moves roughly 120% more than the market. CAPM expected return is 40.57%; realized alpha is 37.94%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.7850822163048429,
+      "components": {
+        "market_component": 0.40568505474237887,
+        "momentum_component": 0.03301243254160657,
+        "volatility_drag": -0.08463737263417422,
+        "alpha_component": 0.379397161562464
+      },
+      "component_weights_pct": {
+        "market_component": 44.94,
+        "momentum_component": 3.66,
+        "volatility_drag": 9.38,
+        "alpha_component": 42.03
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 68.09249992370606,
+      "sma50": 72.14259994506835,
+      "sma200": 73.52196996688843,
+      "ema20": 68.05757458753055,
+      "ema50": 69.70962242966996,
+      "ema200": 70.02288101859898
+    },
+    "momentum": {
+      "3m": 0.13128015527470271,
+      "6m": -0.26886072232184466,
+      "12m": 0.1320497301664263,
+      "24m": 0.0,
+      "score": 50.0
+    },
+    "volume": {
+      "average_volume": 10824295.0,
+      "relative_volume": 1.339745452244234,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 35,
+      "label": "Neutral"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []

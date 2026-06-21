@@ -1,6 +1,6 @@
 {
   "ticker": "BKR",
-  "generated_at": "2026-06-19T22:01:52.445573",
+  "generated_at": "2026-06-21T17:06:04.292628",
   "score": {
     "final_score": 45.2,
     "rating": "Hold",
@@ -58,14 +58,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02171784496458058,
-        "annualized_volatility": 0.3447601007312195,
-        "maximum_drawdown": -0.28002816620373616,
-        "sharpe_ratio": 1.0670956495555133,
-        "sortino_ratio": 1.4782102555370966,
-        "calmar_ratio": 1.2898053420922095,
-        "beta": 1.0154915305105836,
-        "alpha": 0.18044521092113966
+        "volatility": 0.02171784531119424,
+        "annualized_volatility": 0.3447601062335408,
+        "maximum_drawdown": -0.2800280858757541,
+        "sharpe_ratio": 1.067095641170883,
+        "sortino_ratio": 1.478210136259036,
+        "calmar_ratio": 1.2898057120817341,
+        "beta": 1.015490816214372,
+        "alpha": 0.18044531649536663,
+        "capm_expected_return": 0.18744669011605528,
+        "actual_return": 0.3678920066114219,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -107,10 +110,10 @@
     "peg": 2.34,
     "price_to_book": 2.9993837,
     "price_to_sales": 2.077465,
-    "enterprise_to_ebitda": 12.744,
-    "enterprise_to_revenue": 2.203,
+    "enterprise_to_ebitda": 12.104,
+    "enterprise_to_revenue": 2.092,
     "fcf_yield": 0.05438184161602573,
-    "institutional_ownership": 0.99806,
+    "institutional_ownership": 0.9992,
     "insider_ownership": 0.00151,
     "short_interest": 25243845.0,
     "short_ratio": 3.16,
@@ -121,7 +124,7 @@
     "target_low_price": 48.0,
     "recommendation": "buy",
     "number_of_analysts": 21.0,
-    "dividend_yield": 1.5,
+    "dividend_yield": 1.58,
     "payout_ratio": 0.29389998,
     "next_earnings_date": "1776974400",
     "eps_current_year": 3.13,
@@ -189,7 +192,7 @@
     "guidance_change": false,
     "bullish_news_score": 1,
     "bearish_news_score": 2,
-    "institutional_ownership": 0.99806,
+    "institutional_ownership": 0.9992,
     "detail": {
       "earnings": {
         "available": true,
@@ -246,7 +249,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00151,
-    "institutional_ownership": 0.99806,
+    "institutional_ownership": 0.9992,
     "short_interest": 25243845.0,
     "short_percent_float": 0.0291,
     "days_to_cover": 3.16,
@@ -255,6 +258,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Is Cactus (WHD) One of the Best American Oil Stocks to Buy Now?",
+        "source": "Insider Monkey",
+        "published": "2026-06-21T01:18:09Z",
+        "summary": "Cactus, Inc. (NYSE:WHD) is included among the 12 Best American Oil Stocks to Buy Now. Cactus, Inc. (NYSE:WHD) designs, manufactures, sells, and rents engineered pressure control and spoolable pipe technologies in the United States, Australia, Canada, the Middle East, and internationally. On June 6, Stifel upped its price target on Cactus, Inc. (NYSE:WHD) from $66 [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Stocks Supported as Geopolitical Risks Recede",
         "source": "Barchart",
@@ -294,16 +307,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Patterson-UTI, ProFrac, and ProPetro Shares Are Falling, What You Need To Know",
-        "source": "StockStory",
-        "published": "2026-06-16T01:16:07Z",
-        "summary": "A number of stocks fell in the morning session after the price of oil fell sharply as the U.S. and Iran announced a peace deal to end their conflict.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -355,11 +358,81 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.027634424102638055,
+      "weekly": -0.07986767062672873,
+      "monthly": -0.10783566888125362,
+      "annual": 0.5004613048297415
+    },
+    "risk": {
+      "volatility": 0.02171784531119424,
+      "annualized_volatility": 0.3447601062335408,
+      "maximum_drawdown": -0.2800280858757541,
+      "sharpe_ratio": 1.067095641170883,
+      "sortino_ratio": 1.478210136259036,
+      "calmar_ratio": 1.2898057120817341,
+      "beta": 1.015490816214372,
+      "alpha": 0.18044531649536663,
+      "capm_expected_return": 0.18744669011605528,
+      "actual_return": 0.3678920066114219,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.015490816214372,
+      "alpha": 0.18044531649536663,
+      "capm_expected_return": 0.18744669011605528,
+      "actual_return": 0.3678920066114219,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.02: Moves roughly in line with the market. CAPM expected return is 18.74%; realized alpha is 18.04%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.3678920066114219,
+      "components": {
+        "market_component": 0.18744669011605528,
+        "momentum_component": 0.12511532620743537,
+        "volatility_drag": -0.018952021246708164,
+        "alpha_component": 0.18044531649536663
+      },
+      "component_weights_pct": {
+        "market_component": 36.61,
+        "momentum_component": 24.44,
+        "volatility_drag": 3.7,
+        "alpha_component": 35.25
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 63.56749992370605,
+      "sma50": 64.21215774536132,
+      "sma200": 54.849694900512695,
+      "ema20": 62.99348385408341,
+      "ema50": 63.21067874115009,
+      "ema200": 56.1079274828077
+    },
+    "momentum": {
+      "3m": -0.034667677906305205,
+      "6m": 0.30667268921532553,
+      "12m": 0.5004613048297415,
+      "24m": 0.0,
+      "score": 50.0
+    },
+    "volume": {
+      "average_volume": 7791100.0,
+      "relative_volume": 2.259899115657609,
+      "volume_spike": true
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 63,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 2.26x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -371,5 +444,5 @@
       }
     ]
   },
-  "report": "Ticker: BKR\nRating: Hold | Score: 45.2/100 | Confidence: 41.46/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 58.40999984741211 | Resistance: 69.66999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.9895\nNews/Catalyst: Stocks Supported as Geopolitical Risks Recede\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.26x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: BKR\nRating: Hold | Score: 45.2/100 | Confidence: 41.46/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 58.40999984741211 | Resistance: 69.66999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.9895\nNews/Catalyst: Is Cactus (WHD) One of the Best American Oil Stocks to Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.26x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

@@ -1,15 +1,15 @@
 {
   "ticker": "ALL",
-  "generated_at": "2026-06-19T22:01:19.771109",
+  "generated_at": "2026-06-21T17:05:42.248040",
   "score": {
-    "final_score": 66.2,
+    "final_score": 71.2,
     "rating": "Watch",
-    "confidence": 51.93,
+    "confidence": 67.38,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
-      "momentum": 70.0,
-      "volume": 0,
+      "momentum": 60.0,
+      "volume": 50.0,
       "fundamental": 78.0,
       "risk": 100,
       "catalyst": 65.0
@@ -27,19 +27,18 @@
       ],
       "support": 202.7100067138672,
       "resistance": 224.5800018310547,
-      "risk_reward": 0.15
+      "risk_reward": 0.18
     },
     "momentum": {
-      "score": 70.0,
+      "score": 60.0,
       "returns": {
-        "1m": 0.007313029171471808,
-        "3m": 0.09026185419815103,
-        "6m": 0.056691653300454226,
-        "12m": 0.13281634120388808
+        "1m": -0.009995870485418057,
+        "3m": 0.08950418627033208,
+        "6m": 0.06658461941480809,
+        "12m": 0.13841053678314963
       },
-      "acceleration": 0.0619,
+      "acceleration": 0.0562,
       "evidence": [
-        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -47,12 +46,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1546810.0,
-      "relative_volume": 1.0196468861721866,
+      "score": 50.0,
+      "average_volume": 1737010.0,
+      "relative_volume": 2.892729460394586,
       "accumulation_days": 1,
-      "distribution_days": 3,
-      "evidence": []
+      "distribution_days": 4,
+      "evidence": [
+        "Relative volume is 2.89x",
+        "High-volume breakout behavior"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -64,14 +66,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015704905321484074,
-        "annualized_volatility": 0.24930764306677053,
-        "maximum_drawdown": -0.14106952640506676,
-        "sharpe_ratio": 0.8321629290682319,
-        "sortino_ratio": 1.1264965977929557,
-        "calmar_ratio": 1.366142640195593,
-        "beta": 0.3234474227737413,
-        "alpha": 0.14933894749210117
+        "volatility": 0.01568974946888766,
+        "annualized_volatility": 0.24906705136550697,
+        "maximum_drawdown": -0.14106952640506687,
+        "sharpe_ratio": 0.8268275718114476,
+        "sortino_ratio": 1.118991134312427,
+        "calmar_ratio": 1.3537412209342445,
+        "beta": 0.3223983961822214,
+        "alpha": 0.14642486148186395,
+        "capm_expected_return": 0.059510643816915273,
+        "actual_return": 0.20593550529877921,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -110,13 +115,13 @@
     "cash_position": 5401999872.0,
     "total_debt": 7491999744.0,
     "interest_coverage": null,
-    "forward_pe": 8.415262,
-    "trailing_pe": 4.8931413,
+    "forward_pe": 8.411982,
+    "trailing_pe": 4.8920593,
     "peg": 2.65,
     "price_to_book": 1.9273738,
     "price_to_sales": 0.8351246,
-    "enterprise_to_ebitda": 4.144,
-    "enterprise_to_revenue": 0.902,
+    "enterprise_to_ebitda": 4.111,
+    "enterprise_to_revenue": 0.895,
     "fcf_yield": 0.21830622272902225,
     "institutional_ownership": 0.85514,
     "insider_ownership": 0.00504,
@@ -129,22 +134,22 @@
     "target_low_price": 176.0,
     "recommendation": "buy",
     "number_of_analysts": 22.0,
-    "dividend_yield": 1.94,
+    "dividend_yield": 1.95,
     "payout_ratio": 0.090299994,
     "next_earnings_date": "1777492800",
-    "eps_current_year": 45.2,
-    "eps_forward": 26.28201,
+    "eps_current_year": 45.21,
+    "eps_forward": 26.29226,
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 67.37556040500347,
+    "rsi": 68.53491912799798,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 1.0196468861721866,
+    "relative_volume": 2.892729460394586,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 202.7100067138672,
     "resistance": 224.5800018310547
   },
@@ -238,7 +243,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 8.9,
-      "eps_growth_implied": -41.85
+      "eps_growth_implied": -41.84
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -333,30 +338,31 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8799,
-    "probability_pct": 87.99,
+    "probability_of_outperformance": 0.8923,
+    "probability_pct": 89.23,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 66.2/100"
+      "Composite score 71.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.2,
+    "final_score": 71.2,
     "technical_score": 75.0,
-    "momentum_score": 70.0,
-    "volume_score": 0,
+    "momentum_score": 60.0,
+    "volume_score": 50.0,
     "fundamental_score": 78.0,
     "risk_score": 100,
     "catalyst_score": 65.0,
     "revenue_growth": 0.03,
     "eps_growth": 3.384,
     "roe": 0.45221,
-    "forward_pe": 8.415262,
-    "relative_volume": 1.0196468861721866,
+    "forward_pe": 8.411982,
+    "relative_volume": 2.892729460394586,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,14 +370,91 @@
     "analyst_revision": false,
     "major_news": true
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "quant_model": {
+    "returns": {
+      "daily": -0.0022106175451978016,
+      "weekly": 0.007286928047344876,
+      "monthly": -0.009995870485418057,
+      "annual": 0.13841053678314963
+    },
+    "risk": {
+      "volatility": 0.01568974946888766,
+      "annualized_volatility": 0.24906705136550697,
+      "maximum_drawdown": -0.14106952640506687,
+      "sharpe_ratio": 0.8268275718114476,
+      "sortino_ratio": 1.118991134312427,
+      "calmar_ratio": 1.3537412209342445,
+      "beta": 0.3223983961822214,
+      "alpha": 0.14642486148186395,
+      "capm_expected_return": 0.059510643816915273,
+      "actual_return": 0.20593550529877921,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.3223983961822214,
+      "alpha": 0.14642486148186395,
+      "capm_expected_return": 0.059510643816915273,
+      "actual_return": 0.20593550529877921,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.32: Moves roughly 68% less than the market. CAPM expected return is 5.95%; realized alpha is 14.64%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.20593550529877921,
+      "components": {
+        "market_component": 0.059510643816915273,
+        "momentum_component": 0.03460263419578741,
+        "volatility_drag": -0.0,
+        "alpha_component": 0.14642486148186395
+      },
+      "component_weights_pct": {
+        "market_component": 24.74,
+        "momentum_component": 14.39,
+        "volatility_drag": 0.0,
+        "alpha_component": 60.87
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 215.1387596130371,
+      "sma50": 215.07840423583986,
+      "sma200": 205.74885734558106,
+      "ema20": 217.57426695524214,
+      "ema50": 214.55928190128424,
+      "ema200": 206.49176882981277
+    },
+    "momentum": {
+      "3m": 0.08950418627033208,
+      "6m": 0.06658461941480809,
+      "12m": 0.13841053678314963,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 1737010.0,
+      "relative_volume": 2.892729460394586,
+      "volume_spike": true
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 90,
+      "label": "Research priority"
+    }
   },
-  "report": "Ticker: ALL\nRating: Watch | Score: 66.2/100 | Confidence: 51.93/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 202.7100067138672 | Resistance: 224.5800018310547\nFundamental Outlook: Fundamentally Strong | Forward P/E: 8.415262\nNews/Catalyst: Inflation Is Heating Up Again. Here's What It Means for Auto Insurers Progressive and Allstate.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.89x",
+    "date_of_change": "2026-06-21",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.89x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: ALL\nRating: Watch | Score: 71.2/100 | Confidence: 67.38/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 202.7100067138672 | Resistance: 224.5800018310547\nFundamental Outlook: Fundamentally Strong | Forward P/E: 8.411982\nNews/Catalyst: Inflation Is Heating Up Again. Here's What It Means for Auto Insurers Progressive and Allstate.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.89x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

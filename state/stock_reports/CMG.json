@@ -1,6 +1,6 @@
 {
   "ticker": "CMG",
-  "generated_at": "2026-06-19T22:02:38.548027",
+  "generated_at": "2026-06-21T17:06:25.584988",
   "score": {
     "final_score": 36.8,
     "rating": "Drop",
@@ -65,8 +65,11 @@
         "sharpe_ratio": -0.7608844619485776,
         "sortino_ratio": -0.9555008536778872,
         "calmar_ratio": -0.506979082178316,
-        "beta": 0.8817478755450792,
-        "alpha": -0.43911956839588534
+        "beta": 0.8817457941580602,
+        "alpha": -0.4391192096017074,
+        "capm_expected_return": 0.16275905995371404,
+        "actual_return": -0.2763601496479934,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -111,10 +114,10 @@
     "peg": 1.75,
     "price_to_book": 17.365046,
     "price_to_sales": 3.43335,
-    "enterprise_to_ebitda": 20.054,
-    "enterprise_to_revenue": 3.806,
+    "enterprise_to_ebitda": 19.987,
+    "enterprise_to_revenue": 3.794,
     "fcf_yield": 0.026103968186340937,
-    "institutional_ownership": 0.92528,
+    "institutional_ownership": 0.92554003,
     "insider_ownership": 0.0066299997,
     "short_interest": 44671409.0,
     "short_ratio": 2.49,
@@ -191,9 +194,9 @@
     "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 1,
     "bearish_news_score": 2,
-    "institutional_ownership": 0.92528,
+    "institutional_ownership": 0.92554003,
     "detail": {
       "earnings": {
         "available": true,
@@ -251,7 +254,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0066299997,
-    "institutional_ownership": 0.92528,
+    "institutional_ownership": 0.92554003,
     "short_interest": 44671409.0,
     "short_percent_float": 0.0394,
     "days_to_cover": 2.49,
@@ -260,6 +263,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "North Rock Real Estate invested $8.98M to buy a Rochester commercial center",
+        "source": "Post-Bulletin, Rochester, Minn.",
+        "published": "2026-06-20T17:18:00Z",
+        "summary": "Jun. 20\u2014ROCHESTER \u2014 North Rock Real Estate and a group of investors recently paid $8.98 million for the Rochester Crossings commercial center in northwest Rochester. Under the corporate name of Rochester Crossings LLC, the group purchased the 23-year-old center at 3780 Marketplace Drive NW, on June 11. Olmsted County estimated the total market value of the property at $7.12 million for ...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "AI, Loyalty and Innovation: Are These CAVA's Biggest Growth Drivers?",
         "source": "Zacks",
@@ -299,16 +312,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "BofA says investors may be too skeptical of Chipotle",
-        "source": "TheStreet",
-        "published": "2026-06-17T11:03:00Z",
-        "summary": "Chipotle\u2019s (CMG) biggest stock-market problem may not be burritos, menu prices or slowing comparable sales. It might be investor skepticism. Bank of America thinks the restaurant business is demonstrating a demand pattern that might be significant for the beaten-down growth brands, including ...",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -357,14 +360,84 @@
     "analyst_revision": true,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.019774044445891814,
+      "weekly": 0.03968005371093741,
+      "monthly": -0.016646465551460432,
+      "annual": -0.3676527636619875
+    },
+    "risk": {
+      "volatility": 0.022880021769874238,
+      "annualized_volatility": 0.36320908556898684,
+      "maximum_drawdown": -0.5740628968357387,
+      "sharpe_ratio": -0.7608844619485776,
+      "sortino_ratio": -0.9555008536778872,
+      "calmar_ratio": -0.506979082178316,
+      "beta": 0.8817457941580602,
+      "alpha": -0.4391192096017074,
+      "capm_expected_return": 0.16275905995371404,
+      "actual_return": -0.2763601496479934,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.8817457941580602,
+      "alpha": -0.4391192096017074,
+      "capm_expected_return": 0.16275905995371404,
+      "actual_return": -0.2763601496479934,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 16.28%; realized alpha is -43.91%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.2763601496479934,
+      "components": {
+        "market_component": 0.16275905995371404,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.02264181711379737,
+        "alpha_component": -0.4391192096017074
+      },
+      "component_weights_pct": {
+        "market_component": 26.06,
+        "momentum_component": 0.0,
+        "volatility_drag": 3.63,
+        "alpha_component": 70.31
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 31.188999938964844,
+      "sma50": 32.66660022735596,
+      "sma200": 35.82160008430481,
+      "ema20": 31.541982336145846,
+      "ema50": 32.3774958220555,
+      "ema200": 36.89671476816194
+    },
+    "momentum": {
+      "3m": -0.01366111010937665,
+      "6m": -0.08889506961608595,
+      "12m": -0.3676527636619875,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 22019670.0,
+      "relative_volume": 1.4295809156086354,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 10,
+      "label": "High risk / weak setup"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CMG\nRating: Drop | Score: 36.8/100 | Confidence: 35.01/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 23.950642\nNews/Catalyst: AI, Loyalty and Innovation: Are These CAVA's Biggest Growth Drivers?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMG\nRating: Drop | Score: 36.8/100 | Confidence: 35.01/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 23.950642\nNews/Catalyst: North Rock Real Estate invested $8.98M to buy a Rochester commercial center\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

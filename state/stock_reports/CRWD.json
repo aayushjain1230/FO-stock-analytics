@@ -1,6 +1,6 @@
 {
   "ticker": "CRWD",
-  "generated_at": "2026-06-19T22:02:53.816709",
+  "generated_at": "2026-06-21T17:06:34.735647",
   "score": {
     "final_score": 61.2,
     "rating": "Hold",
@@ -71,8 +71,11 @@
         "sharpe_ratio": 0.8513299664242909,
         "sortino_ratio": 1.2239907833089818,
         "calmar_ratio": 0.7692843557835781,
-        "beta": 1.4881726133231898,
-        "alpha": 0.1354709029004983
+        "beta": 1.4881705344050327,
+        "alpha": 0.13547124376769437,
+        "capm_expected_return": 0.27469735476522233,
+        "actual_return": 0.4101685985329167,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -117,11 +120,11 @@
     "peg": 5.57,
     "price_to_book": 37.619335,
     "price_to_sales": 34.223484,
-    "enterprise_to_ebitda": 2853.795,
-    "enterprise_to_revenue": 33.231,
+    "enterprise_to_ebitda": 2876.84,
+    "enterprise_to_revenue": 33.499,
     "fcf_yield": 0.011049392806570017,
-    "institutional_ownership": 0.74878997,
-    "insider_ownership": 0.015360001,
+    "institutional_ownership": 0.74862,
+    "insider_ownership": 0.01538,
     "short_interest": 7511431.0,
     "short_ratio": 2.4,
     "short_percent_float": 0.03,
@@ -132,7 +135,7 @@
     "recommendation": "buy",
     "number_of_analysts": 51.0,
     "dividend_yield": null,
-    "payout_ratio": null,
+    "payout_ratio": 0.0,
     "next_earnings_date": "1780516800",
     "eps_current_year": -0.14,
     "eps_forward": 6.24983,
@@ -199,7 +202,7 @@
     "guidance_change": true,
     "bullish_news_score": 0,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.74878997,
+    "institutional_ownership": 0.74862,
     "detail": {
       "earnings": {
         "available": true,
@@ -255,8 +258,8 @@
     "number_of_analysts": 51.0
   },
   "insider_short_interest": {
-    "insider_ownership": 0.015360001,
-    "institutional_ownership": 0.74878997,
+    "insider_ownership": 0.01538,
+    "institutional_ownership": 0.74862,
     "short_interest": 7511431.0,
     "short_percent_float": 0.03,
     "days_to_cover": 2.4,
@@ -362,11 +365,81 @@
     "analyst_revision": false,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.002781954020410149,
+      "weekly": -0.00964534244752091,
+      "monthly": 0.11019968215968357,
+      "annual": 0.39190697122262397
+    },
+    "risk": {
+      "volatility": 0.030350385926264694,
+      "annualized_volatility": 0.4817974401343867,
+      "maximum_drawdown": -0.4443707693970673,
+      "sharpe_ratio": 0.8513299664242909,
+      "sortino_ratio": 1.2239907833089818,
+      "calmar_ratio": 0.7692843557835781,
+      "beta": 1.4881705344050327,
+      "alpha": 0.13547124376769437,
+      "capm_expected_return": 0.27469735476522233,
+      "actual_return": 0.4101685985329167,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.4881705344050327,
+      "alpha": 0.13547124376769437,
+      "capm_expected_return": 0.27469735476522233,
+      "actual_return": 0.4101685985329167,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.49: Moves roughly 49% more than the market. CAPM expected return is 27.47%; realized alpha is 13.55%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.4101685985329167,
+      "components": {
+        "market_component": 0.27469735476522233,
+        "momentum_component": 0.09797674280565599,
+        "volatility_drag": -0.04635948802687734,
+        "alpha_component": 0.13547124376769437
+      },
+      "component_weights_pct": {
+        "market_component": 49.54,
+        "momentum_component": 17.67,
+        "volatility_drag": 8.36,
+        "alpha_component": 24.43
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 689.2724975585937,
+      "sma50": 565.5541998291015,
+      "sma200": 489.4061004638672,
+      "ema20": 666.3404051414406,
+      "ema50": 595.0543359123013,
+      "ema200": 496.6712766082157
+    },
+    "momentum": {
+      "3m": 0.5994675068111832,
+      "6m": 0.40187908022606744,
+      "12m": 0.39190697122262397,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 3614620.0,
+      "relative_volume": 1.4882338945725968,
+      "volume_spike": false
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 55,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []

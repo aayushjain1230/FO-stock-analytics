@@ -1,6 +1,6 @@
 {
   "ticker": "BA",
-  "generated_at": "2026-06-19T22:01:43.831636",
+  "generated_at": "2026-06-21T17:05:58.872261",
   "score": {
     "final_score": 53.95,
     "rating": "Hold",
@@ -68,8 +68,11 @@
         "sharpe_ratio": 0.5064556837806825,
         "sortino_ratio": 0.7545882264973608,
         "calmar_ratio": 0.4411855320322021,
-        "beta": 1.1515285603437475,
-        "alpha": -0.03068291968068555
+        "beta": 1.1515284582321335,
+        "alpha": -0.0306829340080306,
+        "capm_expected_return": 0.21255750876676685,
+        "actual_return": 0.18187457475873625,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -107,12 +110,12 @@
     "total_debt": 49614000128.0,
     "interest_coverage": null,
     "forward_pe": 53.264076,
-    "trailing_pe": 88.031624,
+    "trailing_pe": 87.68504,
     "peg": 24.13,
     "price_to_book": 29.340008,
     "price_to_sales": 1.904568,
-    "enterprise_to_ebitda": -64.06,
-    "enterprise_to_revenue": 2.265,
+    "enterprise_to_ebitda": -62.907,
+    "enterprise_to_revenue": 2.224,
     "fcf_yield": 0.014548270352655402,
     "institutional_ownership": 0.75417,
     "insider_ownership": 0.00051,
@@ -126,9 +129,9 @@
     "recommendation": "buy",
     "number_of_analysts": 25.0,
     "dividend_yield": null,
-    "payout_ratio": null,
+    "payout_ratio": 0.0,
     "next_earnings_date": "1776861000",
-    "eps_current_year": 2.53,
+    "eps_current_year": 2.54,
     "eps_forward": 4.18143,
     "classification": "Fundamentally Average"
   },
@@ -192,7 +195,7 @@
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 0,
-    "bearish_news_score": 0,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.75417,
     "detail": {
       "earnings": {
@@ -234,7 +237,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 21.23,
-      "eps_growth_implied": 65.27
+      "eps_growth_implied": 64.62
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -260,14 +263,24 @@
     "available": true,
     "items": [
       {
-        "headline": "Trump Displays Refitted Qatar-Gifted Jet to Be Air Force One",
-        "source": "Bloomberg",
-        "published": "2026-06-19T20:28:59Z",
-        "summary": "(Bloomberg) -- President Donald Trump on Friday unveiled the Boeing Co. 747-8 that will serve as the new US presidential jet, proclaiming the gifted plane from the Qatari government \u201cvirtually double the size\u201d of the previous model.Most Read from BloombergRead the 14-Point Draft Memorandum Between the US and IranUS-Iran Nuclear Talks Stall Over Lebanon Before They BeginUS Tells ASML It\u2019s Concerned China May Have Top Chip ToolIran Floats \u2018Insurance Fees\u2019 and Asserts Control Over HormuzModi Warns",
+        "headline": "Brazil\u2019s jet champion weighs gamble to take on Boeing and Airbus",
+        "source": "The Telegraph",
+        "published": "2026-06-20T13:00:00Z",
+        "summary": "During the century that Christ the Redeemer has towered over Rio de Janeiro, the art deco statue has become deeply symbolic of Brazil\u2019s status as the world\u2019s largest Catholic country.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Trump Displays Refitted Qatar-Gifted Jet to Be Air Force One",
+        "source": "Bloomberg",
+        "published": "2026-06-19T20:28:59Z",
+        "summary": "(Bloomberg) -- President Donald Trump on Friday unveiled the Boeing Co. 747-8 that will serve as the new US presidential jet, proclaiming the gifted plane from the Qatari government \u201cvirtually double the size\u201d of the previous model.Most Read from BloombergIran Says Hormuz Closed Again as Talks With US Set to OpenDOJ Rejects Judge Request to Certify $1.8 Billion Fund NixedTrump\u2019s Fears About Economy Undercut US Leverage in Iran TalksUkraine Targets Oil Refinery 2,000 Kilometers Inside RussiaMelon",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       },
       {
         "headline": "Boeing's Quantum Space Bet Moves Forward",
@@ -294,16 +307,6 @@
         "source": "Barrons.com",
         "published": "2026-06-19T05:00:00Z",
         "summary": "Ricks has led a $50 billion manufacturing Marshall Plan in pharma to safeguard Lilly\u2019s lead in obesity and diabetes treatments.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Overlooked Signal In GE Stock's Shipping Delays",
-        "source": "Trefis",
-        "published": "2026-06-18T16:42:10Z",
-        "summary": "Before the stock took flight, the clearest signal was hidden in what GE was struggling to ship.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -356,14 +359,84 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.012897237065703115,
+      "weekly": 0.0049180901226211216,
+      "monthly": 0.03585882940721641,
+      "annual": 0.11215423614275855
+    },
+    "risk": {
+      "volatility": 0.0226219621327656,
+      "annualized_volatility": 0.35911251582970866,
+      "maximum_drawdown": -0.2833683527601345,
+      "sharpe_ratio": 0.5064556837806825,
+      "sortino_ratio": 0.7545882264973608,
+      "calmar_ratio": 0.4411855320322021,
+      "beta": 1.1515284582321335,
+      "alpha": -0.0306829340080306,
+      "capm_expected_return": 0.21255750876676685,
+      "actual_return": 0.18187457475873625,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.1515284582321335,
+      "alpha": -0.0306829340080306,
+      "capm_expected_return": 0.21255750876676685,
+      "actual_return": 0.18187457475873625,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.15: Moves roughly in line with the market. CAPM expected return is 21.26%; realized alpha is -3.07%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.18187457475873625,
+      "components": {
+        "market_component": 0.21255750876676685,
+        "momentum_component": 0.028038559035689636,
+        "volatility_drag": -0.021822503165941733,
+        "alpha_component": -0.0306829340080306
+      },
+      "component_weights_pct": {
+        "market_component": 72.52,
+        "momentum_component": 9.57,
+        "volatility_drag": 7.45,
+        "alpha_component": 10.47
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 220.6055000305176,
+      "sma50": 224.2756005859375,
+      "sma200": 218.63630058288575,
+      "ema20": 221.77154822994012,
+      "ema50": 222.0227962031891,
+      "ema200": 217.37840169581608
+    },
+    "momentum": {
+      "3m": 0.10706834341939486,
+      "6m": 0.07745147301454702,
+      "12m": 0.11215423614275855,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 6595000.0,
+      "relative_volume": 1.3377558756633814,
+      "volume_spike": false
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 53,
+      "label": "Neutral"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BA\nRating: Hold | Score: 53.95/100 | Confidence: 37.39/100\nBull Case: momentum and relative strength are constructive\nBear Case: valuation is demanding\nTechnical Outlook: No clear setup | Support: 189.2100067138672 | Resistance: 240.60000610351562\nFundamental Outlook: Fundamentally Average | Forward P/E: 53.264076\nNews/Catalyst: Trump Displays Refitted Qatar-Gifted Jet to Be Air Force One\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BA\nRating: Hold | Score: 53.95/100 | Confidence: 37.39/100\nBull Case: momentum and relative strength are constructive\nBear Case: valuation is demanding\nTechnical Outlook: No clear setup | Support: 189.2100067138672 | Resistance: 240.60000610351562\nFundamental Outlook: Fundamentally Average | Forward P/E: 53.264076\nNews/Catalyst: Brazil\u2019s jet champion weighs gamble to take on Boeing and Airbus\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

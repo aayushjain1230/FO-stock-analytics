@@ -1,6 +1,6 @@
 {
   "ticker": "AKAM",
-  "generated_at": "2026-06-19T22:01:17.423050",
+  "generated_at": "2026-06-21T17:05:40.622604",
   "score": {
     "final_score": 48.55,
     "rating": "Hold",
@@ -65,8 +65,11 @@
         "sharpe_ratio": 0.5908169377546858,
         "sortino_ratio": 0.7171779784511338,
         "calmar_ratio": 0.510005653883016,
-        "beta": 1.0859833746736738,
-        "alpha": 0.08626740707043891
+        "beta": 1.0859838968753295,
+        "alpha": 0.08626727939117854,
+        "capm_expected_return": 0.200458816306659,
+        "actual_return": 0.2867260956978375,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -111,10 +114,10 @@
     "peg": 1.48,
     "price_to_book": 3.7036707,
     "price_to_sales": 4.2562933,
-    "enterprise_to_ebitda": 21.076,
-    "enterprise_to_revenue": 5.666,
+    "enterprise_to_ebitda": 20.138,
+    "enterprise_to_revenue": 5.413,
     "fcf_yield": 0.03858588316989456,
-    "institutional_ownership": 1.1159999,
+    "institutional_ownership": 1.11582,
     "insider_ownership": 0.02102,
     "short_interest": 19582009.0,
     "short_ratio": 2.73,
@@ -193,7 +196,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 0,
-    "institutional_ownership": 1.1159999,
+    "institutional_ownership": 1.11582,
     "detail": {
       "earnings": {
         "available": true,
@@ -251,7 +254,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.02102,
-    "institutional_ownership": 1.1159999,
+    "institutional_ownership": 1.11582,
     "short_interest": 19582009.0,
     "short_percent_float": 0.158,
     "days_to_cover": 2.73,
@@ -358,11 +361,81 @@
     "analyst_revision": true,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.023072086142344017,
+      "weekly": -0.056998359271315135,
+      "monthly": -0.11624446796010479,
+      "annual": 0.5875699437928505
+    },
+    "risk": {
+      "volatility": 0.030571307493394814,
+      "annualized_volatility": 0.48530446128964844,
+      "maximum_drawdown": -0.36055123038025416,
+      "sharpe_ratio": 0.5908169377546858,
+      "sortino_ratio": 0.7171779784511338,
+      "calmar_ratio": 0.510005653883016,
+      "beta": 1.0859838968753295,
+      "alpha": 0.08626727939117854,
+      "capm_expected_return": 0.200458816306659,
+      "actual_return": 0.2867260956978375,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.0859838968753295,
+      "alpha": 0.08626727939117854,
+      "capm_expected_return": 0.200458816306659,
+      "actual_return": 0.2867260956978375,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.09: Moves roughly in line with the market. CAPM expected return is 20.05%; realized alpha is 8.63%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.2867260956978375,
+      "components": {
+        "market_component": 0.200458816306659,
+        "momentum_component": 0.14689248594821264,
+        "volatility_drag": -0.04706089225792969,
+        "alpha_component": 0.08626727939117854
+      },
+      "component_weights_pct": {
+        "market_component": 41.7,
+        "momentum_component": 30.56,
+        "volatility_drag": 9.79,
+        "alpha_component": 17.95
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 142.83300018310547,
+      "sma50": 126.45520034790039,
+      "sma200": 99.0848498916626,
+      "ema20": 137.33334455403514,
+      "ema50": 130.55003032237133,
+      "ema200": 106.70378573351623
+    },
+    "momentum": {
+      "3m": 0.13554548783735787,
+      "6m": 0.42363809782685724,
+      "12m": 0.5875699437928505,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 4109885.0,
+      "relative_volume": 1.5738639888950665,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 55,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []

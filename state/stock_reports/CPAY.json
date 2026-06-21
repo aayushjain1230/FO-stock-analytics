@@ -1,6 +1,6 @@
 {
   "ticker": "CPAY",
-  "generated_at": "2026-06-19T22:02:49.220908",
+  "generated_at": "2026-06-21T17:06:32.084772",
   "score": {
     "final_score": 68.9,
     "rating": "Watch",
@@ -73,8 +73,11 @@
         "sharpe_ratio": 0.5628997042730178,
         "sortino_ratio": 0.8079737419650577,
         "calmar_ratio": 0.42923316103035664,
-        "beta": 1.248258811037294,
-        "alpha": -0.027962758521071326
+        "beta": 1.248256906843055,
+        "alpha": -0.027962442993706677,
+        "capm_expected_return": 0.23041235023128148,
+        "actual_return": 0.2024499072375748,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -114,14 +117,14 @@
     "total_debt": 10483340288.0,
     "interest_coverage": null,
     "forward_pe": 11.281434,
-    "trailing_pe": 20.687836,
+    "trailing_pe": 20.663076,
     "peg": 0.83,
     "price_to_book": 6.5053883,
     "price_to_sales": 4.7176986,
-    "enterprise_to_ebitda": 12.482,
-    "enterprise_to_revenue": 6.655,
+    "enterprise_to_ebitda": 12.096,
+    "enterprise_to_revenue": 6.449,
     "fcf_yield": 0.09283621150510667,
-    "institutional_ownership": 1.02375,
+    "institutional_ownership": 1.0238401,
     "insider_ownership": 0.03907,
     "short_interest": 3062866.0,
     "short_ratio": 5.35,
@@ -135,7 +138,7 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1778184000",
-    "eps_current_year": 16.69,
+    "eps_current_year": 16.71,
     "eps_forward": 30.60604,
     "classification": "Quality Compounder"
   },
@@ -200,7 +203,7 @@
     "guidance_change": true,
     "bullish_news_score": 5,
     "bearish_news_score": 1,
-    "institutional_ownership": 1.02375,
+    "institutional_ownership": 1.0238401,
     "detail": {
       "earnings": {
         "available": true,
@@ -241,7 +244,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 14.44,
-      "eps_growth_implied": 83.38
+      "eps_growth_implied": 83.16
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -259,7 +262,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.03907,
-    "institutional_ownership": 1.02375,
+    "institutional_ownership": 1.0238401,
     "short_interest": 3062866.0,
     "short_percent_float": 0.048699997,
     "days_to_cover": 5.35,
@@ -368,11 +371,81 @@
     "analyst_revision": false,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.022783200121403557,
+      "weekly": -0.015875750968564528,
+      "monthly": 0.006236475023327914,
+      "annual": 0.05474100143452021
+    },
+    "risk": {
+      "volatility": 0.022656159382969963,
+      "annualized_volatility": 0.35965538034708666,
+      "maximum_drawdown": -0.34539851626045215,
+      "sharpe_ratio": 0.5628997042730178,
+      "sortino_ratio": 0.8079737419650577,
+      "calmar_ratio": 0.42923316103035664,
+      "beta": 1.248256906843055,
+      "alpha": -0.027962442993706677,
+      "capm_expected_return": 0.23041235023128148,
+      "actual_return": 0.2024499072375748,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.248256906843055,
+      "alpha": -0.027962442993706677,
+      "capm_expected_return": 0.23041235023128148,
+      "actual_return": 0.2024499072375748,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.25: Moves roughly in line with the market. CAPM expected return is 23.04%; realized alpha is -2.80%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.2024499072375748,
+      "components": {
+        "market_component": 0.23041235023128148,
+        "momentum_component": 0.013685250358630052,
+        "volatility_drag": -0.021931076069417334,
+        "alpha_component": -0.027962442993706677
+      },
+      "component_weights_pct": {
+        "market_component": 78.37,
+        "momentum_component": 4.65,
+        "volatility_drag": 7.46,
+        "alpha_component": 9.51
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 353.3909973144531,
+      "sma50": 335.0653997802734,
+      "sma200": 312.2674494934082,
+      "ema20": 349.8339545045761,
+      "ema50": 338.6047769965284,
+      "ema200": 322.3820067750571
+    },
+    "momentum": {
+      "3m": 0.21415005573820167,
+      "6m": 0.10517887439744089,
+      "12m": 0.05474100143452021,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 619035.0,
+      "relative_volume": 3.3125752178794414,
+      "volume_spike": true
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 83,
+      "label": "Research priority"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 3.31x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [

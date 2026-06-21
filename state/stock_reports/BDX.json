@@ -1,49 +1,52 @@
 {
   "ticker": "BDX",
-  "generated_at": "2026-06-19T22:01:48.361686",
+  "generated_at": "2026-06-21T17:06:01.670849",
   "score": {
-    "final_score": 34.75,
+    "final_score": 44.25,
     "rating": "Drop",
-    "confidence": 24.28,
+    "confidence": 40.5,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 10.0,
-      "momentum": 30.0,
-      "volume": 0,
+      "technical": 28.0,
+      "momentum": 20.0,
+      "volume": 50.0,
       "fundamental": 55.0,
       "risk": 100,
       "catalyst": 30.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 28.0,
       "evidence": [
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 141.61000061035156,
       "resistance": 158.63999938964844,
-      "risk_reward": 0.0
+      "risk_reward": 6.19
     },
     "momentum": {
-      "score": 30.0,
+      "score": 20.0,
       "returns": {
-        "1m": 0.001814709433833439,
-        "3m": -0.09787247651424702,
-        "6m": -0.08762917560509043,
-        "12m": 0.07232728529023325
+        "1m": -0.013303640023728747,
+        "3m": -0.0736917757231923,
+        "6m": -0.05488283885124856,
+        "12m": 0.10413156239293198
       },
-      "acceleration": -0.0541,
+      "acceleration": -0.0463,
       "evidence": [
-        "1m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2275850.0,
-      "relative_volume": 1.283388624030582,
-      "accumulation_days": 0,
+      "score": 50.0,
+      "average_volume": 2463490.0,
+      "relative_volume": 2.5297037942106524,
+      "accumulation_days": 1,
       "distribution_days": 2,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.53x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 55.0,
@@ -53,14 +56,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016870277596805365,
-        "annualized_volatility": 0.2678073544186283,
-        "maximum_drawdown": -0.3339422713231035,
-        "sharpe_ratio": -0.308586658359239,
-        "sortino_ratio": -0.3710763920313379,
-        "calmar_ratio": -0.33733140890443114,
-        "beta": 0.4633040351008436,
-        "alpha": -0.16590056144255605
+        "volatility": 0.016870634118722146,
+        "annualized_volatility": 0.2678130140286008,
+        "maximum_drawdown": -0.3339423250623257,
+        "sharpe_ratio": -0.276466871051164,
+        "sortino_ratio": -0.3324592340252631,
+        "calmar_ratio": -0.3143694130607306,
+        "beta": 0.4654386685227254,
+        "alpha": -0.15995548498415962,
+        "capm_expected_return": 0.08591405896889087,
+        "actual_return": -0.07404142601526875,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -71,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 1m return is positive; 12m return is positive; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 12m return is positive; Relative volume is 2.53x; Price advanced on above-average volume; analyst revision"
   },
   "fundamentals": {
     "ticker": "BDX",
@@ -102,8 +108,8 @@
     "peg": 1.11,
     "price_to_book": 1.6439075,
     "price_to_sales": 1.7848701,
-    "enterprise_to_ebitda": 9.17,
-    "enterprise_to_revenue": 2.54,
+    "enterprise_to_ebitda": 9.117,
+    "enterprise_to_revenue": 2.526,
     "fcf_yield": 0.11421695478101458,
     "institutional_ownership": 0.99307996,
     "insider_ownership": 0.00414,
@@ -116,7 +122,7 @@
     "target_low_price": 150.0,
     "recommendation": "buy",
     "number_of_analysts": 13.0,
-    "dividend_yield": 2.89,
+    "dividend_yield": 2.92,
     "payout_ratio": 0.7295,
     "next_earnings_date": "1778157000",
     "eps_current_year": 5.73,
@@ -124,14 +130,14 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 36.04268702508116,
+    "rsi": 43.828614442475114,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.283388624030582,
+    "relative_volume": 2.5297037942106524,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 141.61000061035156,
     "resistance": 158.63999938964844
   },
@@ -183,7 +189,7 @@
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.99307996,
     "detail": {
       "earnings": {
@@ -251,6 +257,16 @@
     "available": true,
     "items": [
       {
+        "headline": "Will CONMED\u2019s New CFO Shift CNMD\u2019s Financial Playbook Or Deepen Its Existing Strategy?",
+        "source": "Simply Wall St.",
+        "published": "2026-06-21T11:09:22Z",
+        "summary": "On June 17, 2026, CONMED Corporation announced that John E. Gallagher will become Executive Vice President, Chief Financial Officer, and principal financial and accounting officer from July 15, 2026, succeeding Todd Garner, who will remain in an advisory role until November 2, 2026. Gallagher\u2019s nearly three decades of finance leadership across healthcare and industrial companies, including senior roles at Certara, Cue Health, and Becton Dickinson, signals a refreshed approach to CONMED\u2019s...",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
         "headline": "Here's Why You Should Retain BDX Stock in Your Portfolio Now",
         "source": "Zacks",
         "published": "2026-06-16T13:54:00Z",
@@ -289,16 +305,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Jim Cramer on Becton, Dickinson: \u201cI Think You Buy Some and Then You Wait\u201d",
-        "source": "Insider Monkey",
-        "published": "2026-06-06T15:06:15Z",
-        "summary": "Becton, Dickinson and Company (NYSE:BDX) was among the stocks on which Jim Cramer gave his opinion, as he warned that increased AI-related spending might cause near-term headwind for stocks. When a caller mentioned that they had started a position in the stock, Cramer commented: I like Becton, Dickinson. It is selling frankly at the lowest [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -318,20 +324,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6424,
-    "probability_pct": 64.24,
+    "probability_of_outperformance": 0.7011,
+    "probability_pct": 70.11,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 34.75/100"
+      "Composite score 44.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 34.75,
-    "technical_score": 10.0,
-    "momentum_score": 30.0,
-    "volume_score": 0,
+    "final_score": 44.25,
+    "technical_score": 28.0,
+    "momentum_score": 20.0,
+    "volume_score": 50.0,
     "fundamental_score": 55.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -339,7 +346,7 @@
     "eps_growth": null,
     "roe": 0.06672,
     "forward_pe": 10.752872,
-    "relative_volume": 1.283388624030582,
+    "relative_volume": 2.5297037942106524,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -347,14 +354,91 @@
     "analyst_revision": true,
     "major_news": false
   },
-  "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+  "quant_model": {
+    "returns": {
+      "daily": 0.01673607165435076,
+      "weekly": -0.022870785452218323,
+      "monthly": -0.013303640023728747,
+      "annual": 0.10413156239293198
+    },
+    "risk": {
+      "volatility": 0.016870634118722146,
+      "annualized_volatility": 0.2678130140286008,
+      "maximum_drawdown": -0.3339423250623257,
+      "sharpe_ratio": -0.276466871051164,
+      "sortino_ratio": -0.3324592340252631,
+      "calmar_ratio": -0.3143694130607306,
+      "beta": 0.4654386685227254,
+      "alpha": -0.15995548498415962,
+      "capm_expected_return": 0.08591405896889087,
+      "actual_return": -0.07404142601526875,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.4654386685227254,
+      "alpha": -0.15995548498415962,
+      "capm_expected_return": 0.08591405896889087,
+      "actual_return": -0.07404142601526875,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.47: Moves roughly 53% less than the market. CAPM expected return is 8.59%; realized alpha is -16.00%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.07404142601526875,
+      "components": {
+        "market_component": 0.08591405896889087,
+        "momentum_component": 0.026032890598232994,
+        "volatility_drag": -0.003562602805720161,
+        "alpha_component": -0.15995548498415962
+      },
+      "component_weights_pct": {
+        "market_component": 31.19,
+        "momentum_component": 9.45,
+        "volatility_drag": 1.29,
+        "alpha_component": 58.07
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 146.3887924194336,
+      "sma50": 148.08534881591797,
+      "sma200": 152.1245337677002,
+      "ema20": 146.15965846032185,
+      "ema50": 148.61958338507915,
+      "ema200": 152.54935016690354
+    },
+    "momentum": {
+      "3m": -0.0736917757231923,
+      "6m": -0.05488283885124856,
+      "12m": 0.10413156239293198,
+      "24m": 0.0,
+      "score": 25.0
+    },
+    "volume": {
+      "average_volume": 2463490.0,
+      "relative_volume": 2.5297037942106524,
+      "volume_spike": true
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 28,
+      "label": "High risk / weak setup"
+    }
   },
-  "report": "Ticker: BDX\nRating: Drop | Score: 34.75/100 | Confidence: 24.28/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 141.61000061035156 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.752872\nNews/Catalyst: Here's Why You Should Retain BDX Stock in Your Portfolio Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "why_now": {
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.53x",
+    "date_of_change": "2026-06-21",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.53x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
+  },
+  "report": "Ticker: BDX\nRating: Drop | Score: 44.25/100 | Confidence: 40.5/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 141.61000061035156 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.752872\nNews/Catalyst: Will CONMED\u2019s New CFO Shift CNMD\u2019s Financial Playbook Or Deepen Its Existing Strategy?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.53x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

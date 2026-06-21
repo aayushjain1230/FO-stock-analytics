@@ -1,6 +1,6 @@
 {
   "ticker": "CHTR",
-  "generated_at": "2026-06-19T22:02:31.882570",
+  "generated_at": "2026-06-21T17:06:21.117656",
   "score": {
     "final_score": 28.3,
     "rating": "Avoid",
@@ -61,8 +61,11 @@
         "sharpe_ratio": -0.6659283971543416,
         "sortino_ratio": -0.7760466922567153,
         "calmar_ratio": -0.4761486623392976,
-        "beta": 0.6559944560206401,
-        "alpha": -0.42296985960591427
+        "beta": 0.6559921287504222,
+        "alpha": -0.42296944892080757,
+        "capm_expected_return": 0.1210878043534113,
+        "actual_return": -0.3018816445673963,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -106,10 +109,10 @@
     "peg": 0.24,
     "price_to_book": 0.9474735,
     "price_to_sales": 0.36198682,
-    "enterprise_to_ebitda": 5.389,
-    "enterprise_to_revenue": 2.168,
+    "enterprise_to_ebitda": 5.302,
+    "enterprise_to_revenue": 2.133,
     "fcf_yield": 0.12153323582881122,
-    "institutional_ownership": 0.85067004,
+    "institutional_ownership": 0.85046,
     "insider_ownership": 0.34392,
     "short_interest": 21381446.0,
     "short_ratio": 6.31,
@@ -188,7 +191,7 @@
     "guidance_change": true,
     "bullish_news_score": 0,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.85067004,
+    "institutional_ownership": 0.85046,
     "detail": {
       "earnings": {
         "available": true,
@@ -245,7 +248,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.34392,
-    "institutional_ownership": 0.85067004,
+    "institutional_ownership": 0.85046,
     "short_interest": 21381446.0,
     "short_percent_float": 0.4429,
     "days_to_cover": 6.31,
@@ -254,6 +257,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Charter Communications (CHTR) Adds Netflix To Spectrum App Store For Easier Streaming",
+        "source": "Simply Wall St.",
+        "published": "2026-06-20T03:15:49Z",
+        "summary": "Charter Communications (NasdaqGS:CHTR) has added Netflix purchasing to The Spectrum App Store. The update gives Spectrum customers the option to sign up for Netflix directly through Charter\u2019s platform. This integration is positioned as a way to simplify access to streaming services for Spectrum subscribers. For investors watching Charter Communications, the Netflix integration into The Spectrum App Store sits squarely in the middle of how pay TV, broadband, and streaming are converging...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Charter Communications\u2019 (CHTR) Spectrum News Launches 24/7 Local Network in Tennessee",
+        "source": "Insider Monkey",
+        "published": "2026-06-19T23:58:07Z",
+        "summary": "Charter Communications Inc. (NASDAQ:CHTR) is one of the best NASDAQ stocks with high upside potential. On June 17, Spectrum News, which is owned and operated by Charter Communications, launched its newest 24/7 local network, Spectrum News Tennessee, now available to Spectrum TV customers on channel 1 and via the dedicated news app. The network focuses [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Charter Communications (CHTR) Stock Could Be 47.2% Below Fair Value After Its Sharp Pullback",
         "source": "Simply Wall St.",
@@ -279,26 +302,6 @@
         "source": "Barchart",
         "published": "2026-06-18T10:40:09Z",
         "summary": "June S&P 500 E-Mini futures (ESM26) are up +0.98%, and June Nasdaq 100 E-Mini futures (NQM26) are up +1.64% this morning, pointing to a sharply higher open on Wall Street as sentiment got a boost after U.S. President Donald Trump signed a preliminary agreement to end the Iran war.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Dear CoreWeave Stock Fans, Mark Your Calendars for June 22",
-        "source": "Barchart",
-        "published": "2026-06-17T18:11:34Z",
-        "summary": "CoreWeave stock has been included in the illustrious Nasdaq 100 club starting June 22.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Jim Cramer Says SaaS Companies Like Zscaler \u201cHave Fallen Viciously Out of Favor on Wall Street\u201d",
-        "source": "Insider Monkey",
-        "published": "2026-06-17T16:38:14Z",
-        "summary": "Zscaler, Inc. (NASDAQ:ZS) was among Jim Cramer\u2019s stock calls on Mad Money, as he highlighted worthy space players and reviewed several of this year\u2019s IPOs. Cramer noted the company\u2019s exit from the Nasdaq-100, as he commented: Then we have some real fireworks coming Thursday night. Thursday\u2019s the last trading day before the Nasdaq rebalances, the [\u2026]",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -351,11 +354,81 @@
     "analyst_revision": false,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.04371209578080615,
+      "weekly": -0.09278421797718728,
+      "monthly": -0.11417541503906248,
+      "annual": -0.6621433408098487
+    },
+    "risk": {
+      "volatility": 0.028556758050778296,
+      "annualized_volatility": 0.4533244803156059,
+      "maximum_drawdown": -0.7045523619498334,
+      "sharpe_ratio": -0.6659283971543416,
+      "sortino_ratio": -0.7760466922567153,
+      "calmar_ratio": -0.4761486623392976,
+      "beta": 0.6559921287504222,
+      "alpha": -0.42296944892080757,
+      "capm_expected_return": 0.1210878043534113,
+      "actual_return": -0.3018816445673963,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.6559921287504222,
+      "alpha": -0.42296944892080757,
+      "capm_expected_return": 0.1210878043534113,
+      "actual_return": -0.3018816445673963,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.66: Moves roughly 34% less than the market. CAPM expected return is 12.11%; realized alpha is -42.30%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": -0.3018816445673963,
+      "components": {
+        "market_component": 0.1210878043534113,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.04066489606312118,
+        "alpha_component": -0.42296944892080757
+      },
+      "component_weights_pct": {
+        "market_component": 20.71,
+        "momentum_component": 0.0,
+        "volatility_drag": 6.95,
+        "alpha_component": 72.34
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 139.18149909973144,
+      "sma50": 166.10719985961913,
+      "sma200": 211.6223002243042,
+      "ema20": 140.80925279441956,
+      "ema50": 160.23008504712067,
+      "ema200": 215.03584519903086
+    },
+    "momentum": {
+      "3m": -0.4035344684378196,
+      "6m": -0.40257462554797574,
+      "12m": -0.6621433408098487,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 3572220.0,
+      "relative_volume": 5.02046346529609,
+      "volume_spike": true
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 10,
+      "label": "High risk / weak setup"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 5.02x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -367,5 +440,5 @@
       }
     ]
   },
-  "report": "Ticker: CHTR\nRating: Avoid | Score: 28.3/100 | Confidence: 21.1/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 126.2300033569336 | Resistance: 244.69000244140625\nFundamental Outlook: Fundamentally Weak | Forward P/E: 2.8258586\nNews/Catalyst: Charter Communications (CHTR) Stock Could Be 47.2% Below Fair Value After Its Sharp Pullback\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 5.02x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: CHTR\nRating: Avoid | Score: 28.3/100 | Confidence: 21.1/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 126.2300033569336 | Resistance: 244.69000244140625\nFundamental Outlook: Fundamentally Weak | Forward P/E: 2.8258586\nNews/Catalyst: Charter Communications (CHTR) Adds Netflix To Spectrum App Store For Easier Streaming\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 5.02x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

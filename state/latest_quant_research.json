@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T22:00:35.464761",
+  "generated_at": "2026-06-21T17:05:13.823824",
   "benchmark": "SPY",
   "summary": "Research leaders: GE (83), GOOGL (83), TSM (75). Weakest research profiles: MSFT (18), TSLA (25), FIZZ (45). Review risk, liquidity, and options data before forming any conclusion.",
   "tickers": [
@@ -15,9 +15,30 @@
       "relative_volume": "1.63x",
       "quant_score": 73,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.27871231878800296,
-      "max_drawdown": -0.3336051402453709,
-      "sharpe_ratio": 0.6280907631691364,
+      "annualized_volatility": 0.2787123514017994,
+      "max_drawdown": -0.3336051205155717,
+      "sharpe_ratio": 0.6280908476678484,
+      "beta": 1.1305070327882512,
+      "capm_expected_return": 0.2028043174716071,
+      "actual_return": 0.22005667704745535,
+      "alpha": 0.017252359575848253,
+      "capm_interpretation": "Beta 1.13: Moves roughly in line with the market. CAPM expected return is 20.28%; realized alpha is 1.73%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.22005667704745535,
+        "components": {
+          "market_component": 0.2028043174716071,
+          "momentum_component": 0.13232505126147953,
+          "volatility_drag": -0.00574247028035988,
+          "alpha_component": 0.017252359575848253
+        },
+        "component_weights_pct": {
+          "market_component": 56.63,
+          "momentum_component": 36.95,
+          "volatility_drag": 1.6,
+          "alpha_component": 4.82
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "Normal volatility",
       "final_score": 63.0,
       "confidence": 42.76,
@@ -25,7 +46,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "AAPL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.87%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "research_note": "AAPL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.87%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). CAPM expected return is 20.28%, actual annualized return is 22.01%, and estimated alpha is 1.73%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "AMD",
@@ -42,6 +63,27 @@
       "annualized_volatility": 0.6101239110431599,
       "max_drawdown": -0.574853249455894,
       "sharpe_ratio": 1.2170794244542338,
+      "beta": 2.2218070066367175,
+      "capm_expected_return": 0.3551358311510942,
+      "actual_return": 0.7875692584981748,
+      "alpha": 0.4324334273470806,
+      "capm_interpretation": "Beta 2.22: Moves roughly 122% more than the market. CAPM expected return is 35.51%; realized alpha is 43.24%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.7875692584981748,
+        "components": {
+          "market_component": 0.3551358311510942,
+          "momentum_component": 0.8069826938798148,
+          "volatility_drag": -0.07202478220863198,
+          "alpha_component": 0.4324334273470806
+        },
+        "component_weights_pct": {
+          "market_component": 21.31,
+          "momentum_component": 48.42,
+          "volatility_drag": 4.32,
+          "alpha_component": 25.95
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "High volatility",
       "final_score": 55.5,
       "confidence": 30.5,
@@ -49,7 +91,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.01%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+      "research_note": "AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.01%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). CAPM expected return is 35.51%, actual annualized return is 78.76%, and estimated alpha is 43.24%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "AMZN",
@@ -66,6 +108,27 @@
       "annualized_volatility": 0.3273544768883381,
       "max_drawdown": -0.3087663843187597,
       "sharpe_ratio": 0.4452419086728633,
+      "beta": 1.3752504284113374,
+      "capm_expected_return": 0.23696736412398345,
+      "actual_return": 0.19075193210237032,
+      "alpha": -0.04621543202161313,
+      "capm_interpretation": "Beta 1.38: Moves roughly 38% more than the market. CAPM expected return is 23.70%; realized alpha is -4.62%, meaning negative alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.19075193210237032,
+        "components": {
+          "market_component": 0.23696736412398345,
+          "momentum_component": 0.03441252101439618,
+          "volatility_drag": -0.015470895377667616,
+          "alpha_component": -0.04621543202161313
+        },
+        "component_weights_pct": {
+          "market_component": 71.15,
+          "momentum_component": 10.33,
+          "volatility_drag": 4.64,
+          "alpha_component": 13.88
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "Normal volatility",
       "final_score": 56.75,
       "confidence": 38.3,
@@ -73,7 +136,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.74%, max drawdown is -30.88%, and the research score is 53/100 (Neutral). The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "research_note": "AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.74%, max drawdown is -30.88%, and the research score is 53/100 (Neutral). CAPM expected return is 23.70%, actual annualized return is 19.08%, and estimated alpha is -4.62%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "FIZZ",
@@ -90,6 +153,27 @@
       "annualized_volatility": 0.27548222232416847,
       "max_drawdown": -0.40083270711607755,
       "sharpe_ratio": -0.4164903769051774,
+      "beta": 0.10242816487308004,
+      "capm_expected_return": 0.05929766129610018,
+      "actual_return": -0.06973569460646871,
+      "alpha": -0.1290333559025689,
+      "capm_interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 5.93%; realized alpha is -12.90%, meaning negative alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": -0.06973569460646871,
+        "components": {
+          "market_component": 0.05929766129610018,
+          "momentum_component": 0.0,
+          "volatility_drag": -0.005096444464833694,
+          "alpha_component": -0.1290333559025689
+        },
+        "component_weights_pct": {
+          "market_component": 30.66,
+          "momentum_component": 0.0,
+          "volatility_drag": 2.63,
+          "alpha_component": 66.71
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "High volatility",
       "final_score": 49.0,
       "confidence": 31.05,
@@ -97,7 +181,7 @@
       "why_now": "Volume spike",
       "why_now_strength": 70,
       "what_invalidates": "Volume fades and price cannot hold the move",
-      "research_note": "FIZZ is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.55%, max drawdown is -40.08%, and the research score is 45/100 (Neutral). The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+      "research_note": "FIZZ is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.55%, max drawdown is -40.08%, and the research score is 45/100 (Neutral). CAPM expected return is 5.93%, actual annualized return is -6.97%, and estimated alpha is -12.90%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "GE",
@@ -111,9 +195,30 @@
       "relative_volume": "1.58x",
       "quant_score": 83,
       "quant_label": "Research priority",
-      "annualized_volatility": 0.32925601995886206,
-      "max_drawdown": -0.21364260712396543,
-      "sharpe_ratio": 1.231863014647159,
+      "annualized_volatility": 0.32925602093193124,
+      "max_drawdown": -0.2136426225729,
+      "sharpe_ratio": 1.2318630142562852,
+      "beta": 1.1708626096653862,
+      "capm_expected_return": 0.20843743967303446,
+      "actual_return": 0.4505983144072394,
+      "alpha": 0.24216087473420495,
+      "capm_interpretation": "Beta 1.17: Moves roughly in line with the market. CAPM expected return is 20.84%; realized alpha is 24.22%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.4505983144072394,
+        "components": {
+          "market_component": 0.20843743967303446,
+          "momentum_component": 0.13126511791936435,
+          "volatility_drag": -0.015851204186386247,
+          "alpha_component": 0.24216087473420495
+        },
+        "component_weights_pct": {
+          "market_component": 34.87,
+          "momentum_component": 21.96,
+          "volatility_drag": 2.65,
+          "alpha_component": 40.51
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "Normal volatility",
       "final_score": 81.25,
       "confidence": 56.87,
@@ -121,7 +226,7 @@
       "why_now": "52-week high",
       "why_now_strength": 65,
       "what_invalidates": "Failed breakout below prior range high",
-      "research_note": "GE is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.93%, max drawdown is -21.36%, and the research score is 83/100 (Research priority). The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "research_note": "GE is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.93%, max drawdown is -21.36%, and the research score is 83/100 (Research priority). CAPM expected return is 20.84%, actual annualized return is 45.06%, and estimated alpha is 24.22%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "GOOGL",
@@ -135,9 +240,30 @@
       "relative_volume": "1.36x",
       "quant_score": 83,
       "quant_label": "Research priority",
-      "annualized_volatility": 0.30721262815282585,
-      "max_drawdown": -0.2980587500209959,
-      "sharpe_ratio": 1.2267616682239506,
+      "annualized_volatility": 0.307212574990419,
+      "max_drawdown": -0.2980586978516081,
+      "sharpe_ratio": 1.2267619669775647,
+      "beta": 1.0982002802220658,
+      "capm_expected_return": 0.19829470816306782,
+      "actual_return": 0.4218767027754889,
+      "alpha": 0.22358199461242106,
+      "capm_interpretation": "Beta 1.10: Moves roughly in line with the market. CAPM expected return is 19.83%; realized alpha is 22.36%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.4218767027754889,
+        "components": {
+          "market_component": 0.19829470816306782,
+          "momentum_component": 0.27441022147965555,
+          "volatility_drag": -0.011442514998083797,
+          "alpha_component": 0.22358199461242106
+        },
+        "component_weights_pct": {
+          "market_component": 28.02,
+          "momentum_component": 38.77,
+          "volatility_drag": 1.62,
+          "alpha_component": 31.59
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "Normal volatility",
       "final_score": 61.25,
       "confidence": 39.31,
@@ -145,7 +271,7 @@
       "why_now": "Breakout",
       "why_now_strength": 75,
       "what_invalidates": "Close back below the reclaimed moving average",
-      "research_note": "GOOGL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.72%, max drawdown is -29.81%, and the research score is 83/100 (Research priority). The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "research_note": "GOOGL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.72%, max drawdown is -29.81%, and the research score is 83/100 (Research priority). CAPM expected return is 19.83%, actual annualized return is 42.19%, and estimated alpha is 22.36%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "MSFT",
@@ -159,9 +285,30 @@
       "relative_volume": "1.53x",
       "quant_score": 18,
       "quant_label": "High risk / weak setup",
-      "annualized_volatility": 0.25674446759749214,
-      "max_drawdown": -0.3391008841431322,
-      "sharpe_ratio": -0.3324570417931216,
+      "annualized_volatility": 0.25674440464452375,
+      "max_drawdown": -0.3391008841431321,
+      "sharpe_ratio": -0.3324573239209598,
+      "beta": 0.9201487984536595,
+      "capm_expected_return": 0.1734409993931425,
+      "actual_return": -0.04035655769979825,
+      "alpha": -0.21379755709294074,
+      "capm_interpretation": "Beta 0.92: Moves roughly in line with the market. CAPM expected return is 17.34%; realized alpha is -21.38%, meaning negative alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": -0.04035655769979825,
+        "components": {
+          "market_component": 0.1734409993931425,
+          "momentum_component": 0.0,
+          "volatility_drag": -0.00134888092890475,
+          "alpha_component": -0.21379755709294074
+        },
+        "component_weights_pct": {
+          "market_component": 44.63,
+          "momentum_component": 0.0,
+          "volatility_drag": 0.35,
+          "alpha_component": 55.02
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "High volatility",
       "final_score": 35.25,
       "confidence": 23.6,
@@ -169,7 +316,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 25.67%, max drawdown is -33.91%, and the research score is 18/100 (High risk / weak setup). The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+      "research_note": "MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 25.67%, max drawdown is -33.91%, and the research score is 18/100 (High risk / weak setup). CAPM expected return is 17.34%, actual annualized return is -4.04%, and estimated alpha is -21.38%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "NVDA",
@@ -183,9 +330,30 @@
       "relative_volume": "1.37x",
       "quant_score": 55,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.4815931892709464,
-      "max_drawdown": -0.36881031125619246,
-      "sharpe_ratio": 0.6483167169346038,
+      "annualized_volatility": 0.4815932774941635,
+      "max_drawdown": -0.36881024670706697,
+      "sharpe_ratio": 0.6483165649874046,
+      "beta": 2.0118676133430093,
+      "capm_expected_return": 0.32583097792306287,
+      "actual_return": 0.357224899386042,
+      "alpha": 0.031393921462979146,
+      "capm_interpretation": "Beta 2.01: Moves roughly 101% more than the market. CAPM expected return is 32.58%; realized alpha is 3.14%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.357224899386042,
+        "components": {
+          "market_component": 0.32583097792306287,
+          "momentum_component": 0.11596351501894941,
+          "volatility_drag": -0.0463186554988327,
+          "alpha_component": 0.031393921462979146
+        },
+        "component_weights_pct": {
+          "market_component": 62.72,
+          "momentum_component": 22.32,
+          "volatility_drag": 8.92,
+          "alpha_component": 6.04
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "Normal volatility",
       "final_score": 55.25,
       "confidence": 34.4,
@@ -193,7 +361,7 @@
       "why_now": "Breakout",
       "why_now_strength": 75,
       "what_invalidates": "Close back below the reclaimed moving average",
-      "research_note": "NVDA is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 48.16%, max drawdown is -36.88%, and the research score is 55/100 (Watch closely). The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "research_note": "NVDA is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 48.16%, max drawdown is -36.88%, and the research score is 55/100 (Watch closely). CAPM expected return is 32.58%, actual annualized return is 35.72%, and estimated alpha is 3.14%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "TSLA",
@@ -210,6 +378,27 @@
       "annualized_volatility": 0.611389616743794,
       "max_drawdown": -0.5376568011858525,
       "sharpe_ratio": 0.8803000774272507,
+      "beta": 2.2937842202108962,
+      "capm_expected_return": 0.36518292925146384,
+      "actual_return": 0.5832063269577786,
+      "alpha": 0.2180233977063148,
+      "capm_interpretation": "Beta 2.29: Moves roughly 129% more than the market. CAPM expected return is 36.52%; realized alpha is 21.80%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.5832063269577786,
+        "components": {
+          "market_component": 0.36518292925146384,
+          "momentum_component": 0.06649279477437975,
+          "volatility_drag": -0.07227792334875881,
+          "alpha_component": 0.2180233977063148
+        },
+        "component_weights_pct": {
+          "market_component": 50.58,
+          "momentum_component": 9.21,
+          "volatility_drag": 10.01,
+          "alpha_component": 30.2
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "Normal volatility",
       "final_score": 29.0,
       "confidence": 10.0,
@@ -217,7 +406,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "TSLA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.14%, max drawdown is -53.77%, and the research score is 25/100 (High risk / weak setup). The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "research_note": "TSLA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.14%, max drawdown is -53.77%, and the research score is 25/100 (High risk / weak setup). CAPM expected return is 36.52%, actual annualized return is 58.32%, and estimated alpha is 21.80%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "TSM",
@@ -231,9 +420,30 @@
       "relative_volume": "2.0x",
       "quant_score": 75,
       "quant_label": "Research priority",
-      "annualized_volatility": 0.4191433617347043,
-      "max_drawdown": -0.3681736497607533,
-      "sharpe_ratio": 1.2986854805204662,
+      "annualized_volatility": 0.41914338510843,
+      "max_drawdown": -0.3681737626873407,
+      "sharpe_ratio": 1.2986854302015514,
+      "beta": 1.6493674704148353,
+      "capm_expected_return": 0.27523059598907884,
+      "actual_return": 0.589335407405676,
+      "alpha": 0.3141048114165972,
+      "capm_interpretation": "Beta 1.65: Moves roughly 65% more than the market. CAPM expected return is 27.52%; realized alpha is 31.41%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.589335407405676,
+        "components": {
+          "market_component": 0.27523059598907884,
+          "momentum_component": 0.2960855476377503,
+          "volatility_drag": -0.03382867702168601,
+          "alpha_component": 0.3141048114165972
+        },
+        "component_weights_pct": {
+          "market_component": 29.94,
+          "momentum_component": 32.21,
+          "volatility_drag": 3.68,
+          "alpha_component": 34.17
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "High volatility",
       "final_score": 75.25,
       "confidence": 50.8,
@@ -241,7 +451,7 @@
       "why_now": "Volume spike",
       "why_now_strength": 70,
       "what_invalidates": "Volume fades and price cannot hold the move",
-      "research_note": "TSM is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 41.91%, max drawdown is -36.82%, and the research score is 75/100 (Research priority). The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+      "research_note": "TSM is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 41.91%, max drawdown is -36.82%, and the research score is 75/100 (Research priority). CAPM expected return is 27.52%, actual annualized return is 58.93%, and estimated alpha is 31.41%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
     },
     {
       "ticker": "VGT",
@@ -255,9 +465,30 @@
       "relative_volume": "0.65x",
       "quant_score": 73,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.2656929672926861,
-      "max_drawdown": -0.2722879227646884,
-      "sharpe_ratio": 0.9355424761047431,
+      "annualized_volatility": 0.26569298245571077,
+      "max_drawdown": -0.27228785375330977,
+      "sharpe_ratio": 0.9355424386327974,
+      "beta": 1.44774515404761,
+      "capm_expected_return": 0.24708670028689805,
+      "actual_return": 0.2935670607342368,
+      "alpha": 0.04648036044733872,
+      "capm_interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 24.71%; realized alpha is 4.65%, meaning positive alpha versus CAPM.",
+      "factor_decomposition": {
+        "actual_return": 0.2935670607342368,
+        "components": {
+          "market_component": 0.24708670028689805,
+          "momentum_component": 0.1332085643342648,
+          "volatility_drag": -0.003138596491142154,
+          "alpha_component": 0.04648036044733872
+        },
+        "component_weights_pct": {
+          "market_component": 57.47,
+          "momentum_component": 30.98,
+          "volatility_drag": 0.73,
+          "alpha_component": 10.81
+        },
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+      },
       "volatility_regime": "High volatility",
       "final_score": 59.75,
       "confidence": 29.72,
@@ -265,7 +496,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "VGT is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 26.57%, max drawdown is -27.23%, and the research score is 73/100 (Watch closely). The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+      "research_note": "VGT is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 26.57%, max drawdown is -27.23%, and the research score is 73/100 (Watch closely). CAPM expected return is 24.71%, actual annualized return is 29.36%, and estimated alpha is 4.65%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
     }
   ]
 }

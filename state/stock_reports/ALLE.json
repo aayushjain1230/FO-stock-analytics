@@ -1,6 +1,6 @@
 {
   "ticker": "ALLE",
-  "generated_at": "2026-06-19T22:01:20.564602",
+  "generated_at": "2026-06-21T17:05:42.779119",
   "score": {
     "final_score": 49.05,
     "rating": "Hold",
@@ -65,8 +65,11 @@
         "sharpe_ratio": 0.45719201389325764,
         "sortino_ratio": 0.6382592326376288,
         "calmar_ratio": 0.29188069007489853,
-        "beta": 0.6316968617457213,
-        "alpha": -0.0013726438415309077
+        "beta": 0.6316959068811481,
+        "alpha": -0.0013724857850322958,
+        "capm_expected_return": 0.11660303078480488,
+        "actual_return": 0.11523054499977259,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -103,15 +106,15 @@
     "cash_position": 308900000.0,
     "total_debt": 2224399872.0,
     "interest_coverage": null,
-    "forward_pe": 13.993963,
+    "forward_pe": 13.977066,
     "trailing_pe": 18.247269,
     "peg": 2.05,
     "price_to_book": 5.4627624,
     "price_to_sales": 2.7599072,
-    "enterprise_to_ebitda": 13.364,
-    "enterprise_to_revenue": 3.247,
+    "enterprise_to_ebitda": 13.253,
+    "enterprise_to_revenue": 3.22,
     "fcf_yield": 0.04306873419410875,
-    "institutional_ownership": 1.01928,
+    "institutional_ownership": 1.01925,
     "insider_ownership": 0.00253,
     "short_interest": 3359864.0,
     "short_ratio": 3.19,
@@ -122,11 +125,11 @@
     "target_low_price": 142.0,
     "recommendation": "buy",
     "number_of_analysts": 13.0,
-    "dividend_yield": 1.57,
+    "dividend_yield": 1.59,
     "payout_ratio": 0.2842,
     "next_earnings_date": "1777379400",
     "eps_current_year": 7.32,
-    "eps_forward": 9.54483,
+    "eps_forward": 9.55637,
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
@@ -190,7 +193,7 @@
     "guidance_change": true,
     "bullish_news_score": 0,
     "bearish_news_score": 0,
-    "institutional_ownership": 1.01928,
+    "institutional_ownership": 1.01925,
     "detail": {
       "earnings": {
         "available": true,
@@ -231,7 +234,7 @@
         "last_surprise_direction": "miss"
       },
       "analyst_upside_pct": 22.84,
-      "eps_growth_implied": 30.39
+      "eps_growth_implied": 30.55
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -247,7 +250,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00253,
-    "institutional_ownership": 1.01928,
+    "institutional_ownership": 1.01925,
     "short_interest": 3359864.0,
     "short_percent_float": 0.0392,
     "days_to_cover": 3.19,
@@ -345,7 +348,7 @@
     "revenue_growth": 0.097,
     "eps_growth": -0.07,
     "roe": 0.34179002,
-    "forward_pe": 13.993963,
+    "forward_pe": 13.977066,
     "relative_volume": 1.9005192927775756,
     "breakout": false,
     "price_above_sma50": false,
@@ -354,11 +357,81 @@
     "analyst_revision": true,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.02604098048215797,
+      "weekly": 0.0030709841954319472,
+      "monthly": 0.0630994105776379,
+      "annual": -0.01182985081568555
+    },
+    "risk": {
+      "volatility": 0.01587700969246501,
+      "annualized_volatility": 0.2520397152577471,
+      "maximum_drawdown": -0.29840559257011456,
+      "sharpe_ratio": 0.45719201389325764,
+      "sortino_ratio": 0.6382592326376288,
+      "calmar_ratio": 0.29188069007489853,
+      "beta": 0.6316959068811481,
+      "alpha": -0.0013724857850322958,
+      "capm_expected_return": 0.11660303078480488,
+      "actual_return": 0.11523054499977259,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.6316959068811481,
+      "alpha": -0.0013724857850322958,
+      "capm_expected_return": 0.11660303078480488,
+      "actual_return": 0.11523054499977259,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.63: Moves roughly 37% less than the market. CAPM expected return is 11.66%; realized alpha is -0.14%, meaning negative alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.11523054499977259,
+      "components": {
+        "market_component": 0.11660303078480488,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.0004079430515494198,
+        "alpha_component": -0.0013724857850322958
+      },
+      "component_weights_pct": {
+        "market_component": 98.5,
+        "momentum_component": 0.0,
+        "volatility_drag": 0.34,
+        "alpha_component": 1.16
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 130.77562217712403,
+      "sma50": 134.82410110473631,
+      "sma200": 155.7873211288452,
+      "ema20": 131.63689530522464,
+      "ema50": 135.13578926472655,
+      "ema200": 147.12192545438748
+    },
+    "momentum": {
+      "3m": -0.0675058815884576,
+      "6m": -0.15683408278041466,
+      "12m": -0.01182985081568555,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 975365.0,
+      "relative_volume": 1.9005192927775756,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 28,
+      "label": "High risk / weak setup"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 1.90x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
@@ -370,5 +443,5 @@
       }
     ]
   },
-  "report": "Ticker: ALLE\nRating: Hold | Score: 49.05/100 | Confidence: 44.39/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 125.6500015258789 | Resistance: 148.39999389648438\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.993963\nNews/Catalyst: Allegion (ALLE) Stock And The Value Question After New Access Control Launches\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.90x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: ALLE\nRating: Hold | Score: 49.05/100 | Confidence: 44.39/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 125.6500015258789 | Resistance: 148.39999389648438\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.977066\nNews/Catalyst: Allegion (ALLE) Stock And The Value Question After New Access Control Launches\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.90x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

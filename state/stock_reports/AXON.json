@@ -1,10 +1,10 @@
 {
   "ticker": "AXON",
-  "generated_at": "2026-06-19T22:01:41.312140",
+  "generated_at": "2026-06-21T17:05:57.136322",
   "score": {
-    "final_score": 43.9,
+    "final_score": 44.65,
     "rating": "Drop",
-    "confidence": 43.6,
+    "confidence": 45.89,
     "risk_level": "Moderate",
     "categories": {
       "technical": 38.0,
@@ -12,7 +12,7 @@
       "volume": 75.0,
       "fundamental": 71.0,
       "risk": 50.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 38.0,
@@ -67,8 +67,11 @@
         "sharpe_ratio": 0.6019279899018061,
         "sortino_ratio": 0.8869684273076943,
         "calmar_ratio": 0.3377254014212152,
-        "beta": 1.1469099741172593,
-        "alpha": 0.12801944888502623
+        "beta": 1.146905666401802,
+        "alpha": 0.12802021099172836,
+        "capm_expected_return": 0.2117042001854825,
+        "actual_return": 0.33972441117721086,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Volatility is elevated",
@@ -76,10 +79,11 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
@@ -110,14 +114,14 @@
     "total_debt": 1840359040.0,
     "interest_coverage": null,
     "forward_pe": 40.044033,
-    "trailing_pe": 170.7258,
+    "trailing_pe": 169.36,
     "peg": 1.64,
     "price_to_book": 9.652782,
     "price_to_sales": 11.439519,
-    "enterprise_to_ebitda": 351.899,
-    "enterprise_to_revenue": 12.133,
+    "enterprise_to_ebitda": 342.504,
+    "enterprise_to_revenue": 11.809,
     "fcf_yield": 0.00183484183709369,
-    "institutional_ownership": 0.88741994,
+    "institutional_ownership": 0.88738996,
     "insider_ownership": 0.042090002,
     "short_interest": 3294993.0,
     "short_ratio": 2.57,
@@ -131,7 +135,7 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1778097600",
-    "eps_current_year": 2.48,
+    "eps_current_year": 2.5,
     "eps_forward": 10.57336,
     "classification": "Fundamentally Strong"
   },
@@ -192,11 +196,11 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 3,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.88741994,
+    "institutional_ownership": 0.88738996,
     "detail": {
       "earnings": {
         "available": true,
@@ -237,11 +241,12 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 56.36,
-      "eps_growth_implied": 326.35
+      "eps_growth_implied": 322.93
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -254,7 +259,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.042090002,
-    "institutional_ownership": 0.88741994,
+    "institutional_ownership": 0.88738996,
     "short_interest": 3294993.0,
     "short_percent_float": 0.048499998,
     "days_to_cover": 2.57,
@@ -263,6 +268,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Is Axon Enterprise (AXON) on of the Best NASDAQ Stocks with High Upside Potential?",
+        "source": "Insider Monkey",
+        "published": "2026-06-19T23:58:14Z",
+        "summary": "Axon Enterprise Inc. (NASDAQ:AXON) is one of the best NASDAQ stocks with high upside potential. On May 6, Axon reported strong Q1 2026 financial results, with total revenue reaching $807 million, a 34% increase year-over-year. Growth was driven by a 35% rise in Software & Services revenue and a 33% increase in Connected Devices due [\u2026]",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "AppLovin Could Hit $600+ With 28% Upside as AI Ad-Tech Story Rebounds",
         "source": "24/7 Wall St.",
@@ -302,16 +317,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Axon Enterprise (AXON) Registers a Bigger Fall Than the Market: Important Facts to Note",
-        "source": "Zacks",
-        "published": "2026-06-16T22:00:05Z",
-        "summary": "Axon Enterprise (AXON) concluded the recent trading session at $435.39, signifying a -1.76% move from its prior day's close.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -331,8 +336,8 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7776,
-    "probability_pct": 77.76,
+    "probability_of_outperformance": 0.7878,
+    "probability_pct": 78.78,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
@@ -340,18 +345,18 @@
       "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 43.9/100"
+      "Composite score 44.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 43.9,
+    "final_score": 44.65,
     "technical_score": 38.0,
     "momentum_score": 10.0,
     "volume_score": 75.0,
     "fundamental_score": 71.0,
     "risk_score": 50.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.337,
     "eps_growth": 0.898,
     "roe": 0.06765,
@@ -362,16 +367,86 @@
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
+  },
+  "quant_model": {
+    "returns": {
+      "daily": 0.0009219264836675123,
+      "weekly": -0.05109820189778025,
+      "monthly": 0.07916602398049744,
+      "annual": -0.45546209087451617
+    },
+    "risk": {
+      "volatility": 0.03555346602725445,
+      "annualized_volatility": 0.564393776126993,
+      "maximum_drawdown": -0.602810643216398,
+      "sharpe_ratio": 0.6019279899018061,
+      "sortino_ratio": 0.8869684273076943,
+      "calmar_ratio": 0.3377254014212152,
+      "beta": 1.146905666401802,
+      "alpha": 0.12802021099172836,
+      "capm_expected_return": 0.2117042001854825,
+      "actual_return": 0.33972441117721086,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.146905666401802,
+      "alpha": 0.12802021099172836,
+      "capm_expected_return": 0.2117042001854825,
+      "actual_return": 0.33972441117721086,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.15: Moves roughly in line with the market. CAPM expected return is 21.17%; realized alpha is 12.80%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.33972441117721086,
+      "components": {
+        "market_component": 0.2117042001854825,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.06287875522539861,
+        "alpha_component": 0.12802021099172836
+      },
+      "component_weights_pct": {
+        "market_component": 52.58,
+        "momentum_component": 0.0,
+        "volatility_drag": 15.62,
+        "alpha_component": 31.8
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 443.62000274658203,
+      "sma50": 412.981201171875,
+      "sma200": 544.4853004455566,
+      "ema20": 438.64966500864944,
+      "ema50": 434.69614886241044,
+      "ema200": 511.9047017795304
+    },
+    "momentum": {
+      "3m": -0.15687602040760518,
+      "6m": -0.2371995896681619,
+      "12m": -0.45546209087451617,
+      "24m": 0.0,
+      "score": 0.0
+    },
+    "volume": {
+      "average_volume": 1190175.0,
+      "relative_volume": 1.612535971600815,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 10,
+      "label": "High risk / weak setup"
+    }
   },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AXON\nRating: Drop | Score: 43.9/100 | Confidence: 43.6/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 345.94000244140625 | Resistance: 513.2000122070312\nFundamental Outlook: Fundamentally Strong | Forward P/E: 40.044033\nNews/Catalyst: AppLovin Could Hit $600+ With 28% Upside as AI Ad-Tech Story Rebounds\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AXON\nRating: Drop | Score: 44.65/100 | Confidence: 45.89/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 345.94000244140625 | Resistance: 513.2000122070312\nFundamental Outlook: Fundamentally Strong | Forward P/E: 40.044033\nNews/Catalyst: Is Axon Enterprise (AXON) on of the Best NASDAQ Stocks with High Upside Potential?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,6 +1,6 @@
 {
   "ticker": "GE",
-  "generated_at": "2026-06-19T22:03:14.374657",
+  "generated_at": "2026-06-21T17:06:48.349065",
   "score": {
     "final_score": 84.5,
     "rating": "Buy Watch",
@@ -35,7 +35,7 @@
       "returns": {
         "1m": 0.25364559793454355,
         "3m": 0.22643267588134797,
-        "6m": 0.20031669360405924,
+        "6m": 0.20031657066337982,
         "12m": 0.5250604716774574
       },
       "acceleration": 0.1263,
@@ -72,14 +72,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.020741184560423093,
-        "annualized_volatility": 0.3292560974626323,
-        "maximum_drawdown": -0.21364266398707166,
-        "sharpe_ratio": 1.3685348186671367,
-        "sortino_ratio": 1.768757650929889,
-        "calmar_ratio": 2.273528561964728,
-        "beta": 1.170863256933047,
-        "alpha": 0.23447200065331045
+        "volatility": 0.020741182419398672,
+        "annualized_volatility": 0.32925606347492326,
+        "maximum_drawdown": -0.21364260712396554,
+        "sharpe_ratio": 1.36853492486778,
+        "sortino_ratio": 1.7687578399970707,
+        "calmar_ratio": 2.273529167086981,
+        "beta": 1.1708633926986265,
+        "alpha": 0.23447193031366537,
+        "capm_expected_return": 0.2161264917762497,
+        "actual_return": 0.4505984220899151,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -121,10 +124,10 @@
     "peg": 8.61,
     "price_to_book": 20.664473,
     "price_to_sales": 7.7344165,
-    "enterprise_to_ebitda": 34.244,
-    "enterprise_to_revenue": 7.823,
+    "enterprise_to_ebitda": 34.803,
+    "enterprise_to_revenue": 7.951,
     "fcf_yield": 0.015168346970704228,
-    "institutional_ownership": 0.8098,
+    "institutional_ownership": 0.80977994,
     "insider_ownership": 0.00302,
     "short_interest": 13826768.0,
     "short_ratio": 2.46,
@@ -135,8 +138,8 @@
     "target_low_price": 270.0,
     "recommendation": "strong_buy",
     "number_of_analysts": 21.0,
-    "dividend_yield": null,
-    "payout_ratio": null,
+    "dividend_yield": 0.53,
+    "payout_ratio": 0.1925,
     "next_earnings_date": "1784205000",
     "eps_current_year": 8.05,
     "eps_forward": 8.68639,
@@ -203,7 +206,7 @@
     "guidance_change": false,
     "bullish_news_score": 1,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.8098,
+    "institutional_ownership": 0.80977994,
     "detail": {
       "earnings": {
         "available": true,
@@ -260,7 +263,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00302,
-    "institutional_ownership": 0.8098,
+    "institutional_ownership": 0.80977994,
     "short_interest": 13826768.0,
     "short_percent_float": 0.013300001,
     "days_to_cover": 2.46,
@@ -269,6 +272,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "I'm Calling It: GE Vernova (GEV) Is a Buy Before This Catalyst Drops",
+        "source": "Motley Fool",
+        "published": "2026-06-20T15:32:54Z",
+        "summary": "This energy giant is still firing on all cylinders.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Jim Cramer Believes \u201cGE Aerospace Is Fantastic\u201d",
         "source": "Insider Monkey",
@@ -304,16 +317,6 @@
         "source": "Investor's Business Daily",
         "published": "2026-06-18T20:04:02Z",
         "summary": "GE Vernova supplier Arcosa broke out from a base-on-base pattern at a buy point of 135.58. The stock is up almost 30% this year.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Overlooked Signal In GE Stock's Shipping Delays",
-        "source": "Trefis",
-        "published": "2026-06-18T16:42:10Z",
-        "summary": "Before the stock took flight, the clearest signal was hidden in what GE was struggling to ship.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -366,11 +369,81 @@
     "analyst_revision": false,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.001708584352088982,
+      "weekly": 0.0747686144748474,
+      "monthly": 0.25364559793454355,
+      "annual": 0.5250604716774574
+    },
+    "risk": {
+      "volatility": 0.020741182419398672,
+      "annualized_volatility": 0.32925606347492326,
+      "maximum_drawdown": -0.21364260712396554,
+      "sharpe_ratio": 1.36853492486778,
+      "sortino_ratio": 1.7687578399970707,
+      "calmar_ratio": 2.273529167086981,
+      "beta": 1.1708633926986265,
+      "alpha": 0.23447193031366537,
+      "capm_expected_return": 0.2161264917762497,
+      "actual_return": 0.4505984220899151,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.1708633926986265,
+      "alpha": 0.23447193031366537,
+      "capm_expected_return": 0.2161264917762497,
+      "actual_return": 0.4505984220899151,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.17: Moves roughly in line with the market. CAPM expected return is 21.61%; realized alpha is 23.45%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.4505984220899151,
+      "components": {
+        "market_component": 0.2161264917762497,
+        "momentum_component": 0.13126511791936435,
+        "volatility_drag": -0.015851212694984653,
+        "alpha_component": 0.23447193031366537
+      },
+      "component_weights_pct": {
+        "market_component": 36.16,
+        "momentum_component": 21.96,
+        "volatility_drag": 2.65,
+        "alpha_component": 39.23
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 327.070002746582,
+      "sma50": 307.73200134277346,
+      "sma200": 304.979972076416,
+      "ema20": 329.2279653865588,
+      "ema50": 315.28999742788363,
+      "ema200": 296.4845831303787
+    },
+    "momentum": {
+      "3m": 0.22643267588134797,
+      "6m": 0.20031657066337982,
+      "12m": 0.5250604716774574,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 4914670.0,
+      "relative_volume": 1.5796381038808303,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 83,
+      "label": "Research priority"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "52-week high",
     "evidence": "Price is pressing against 52-week highs",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 65,
     "invalidates": "Failed breakout below prior range high",
     "triggers": [
@@ -382,5 +455,5 @@
       }
     ]
   },
-  "report": "Ticker: GE\nRating: Buy Watch | Score: 84.5/100 | Confidence: 72.44/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 273.25 | Resistance: 357.6400146484375\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.17246\nNews/Catalyst: Jim Cramer Believes \u201cGE Aerospace Is Fantastic\u201d\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: GE\nRating: Buy Watch | Score: 84.5/100 | Confidence: 72.44/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 273.25 | Resistance: 357.6400146484375\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.17246\nNews/Catalyst: I'm Calling It: GE Vernova (GEV) Is a Buy Before This Catalyst Drops\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

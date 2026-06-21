@@ -1,6 +1,6 @@
 {
   "ticker": "GLW",
-  "generated_at": "2026-06-19T22:03:15.172771",
+  "generated_at": "2026-06-21T17:06:48.904191",
   "score": {
     "final_score": 74.4,
     "rating": "Watch",
@@ -35,7 +35,7 @@
         "1m": 0.11026980779120632,
         "3m": 0.4669276089104675,
         "6m": 1.2665789674230252,
-        "12m": 2.903540872386103
+        "12m": 2.903541170595397
       },
       "acceleration": -0.1664,
       "evidence": [
@@ -68,14 +68,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.029934845858702448,
-        "annualized_volatility": 0.4752009460630706,
-        "maximum_drawdown": -0.27567655942774494,
-        "sharpe_ratio": 1.9575623823376331,
-        "sortino_ratio": 2.8084612879960367,
-        "calmar_ratio": 4.589524403092465,
-        "beta": 1.4745477951013382,
-        "alpha": 0.6580527682087899
+        "volatility": 0.029934843461872137,
+        "annualized_volatility": 0.475200908014569,
+        "maximum_drawdown": -0.27567661150453604,
+        "sharpe_ratio": 1.9575623995048852,
+        "sortino_ratio": 2.808460498521539,
+        "calmar_ratio": 4.589523125589619,
+        "beta": 1.4745440451732448,
+        "alpha": 0.658053351591282,
+        "capm_expected_return": 0.2721820781486177,
+        "actual_return": 0.9302354297398997,
+        "market_return": 0.18458728244814074
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -117,14 +120,14 @@
     "total_debt": 9923999744.0,
     "interest_coverage": null,
     "forward_pe": 46.554615,
-    "trailing_pe": 98.94416,
+    "trailing_pe": 93.26316,
     "peg": 1.53,
     "price_to_book": 14.967365,
     "price_to_sales": 10.278508,
-    "enterprise_to_ebitda": 41.311,
-    "enterprise_to_revenue": 9.889,
+    "enterprise_to_ebitda": 45.165,
+    "enterprise_to_revenue": 10.812,
     "fcf_yield": 0.003648165870445166,
-    "institutional_ownership": 0.73761004,
+    "institutional_ownership": 0.73733,
     "insider_ownership": 0.081750005,
     "short_interest": 21390269.0,
     "short_ratio": 1.43,
@@ -135,10 +138,10 @@
     "target_low_price": 149.0,
     "recommendation": "buy",
     "number_of_analysts": 15.0,
-    "dividend_yield": 0.63,
+    "dividend_yield": 0.57,
     "payout_ratio": 0.5385,
     "next_earnings_date": "1777379400",
-    "eps_current_year": 1.97,
+    "eps_current_year": 2.09,
     "eps_forward": 4.18691,
     "classification": "Quality Compounder"
   },
@@ -203,7 +206,7 @@
     "guidance_change": true,
     "bullish_news_score": 0,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.73761004,
+    "institutional_ownership": 0.73733,
     "detail": {
       "earnings": {
         "available": true,
@@ -244,7 +247,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 1.58,
-      "eps_growth_implied": 112.53
+      "eps_growth_implied": 100.33
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
@@ -262,7 +265,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.081750005,
-    "institutional_ownership": 0.73761004,
+    "institutional_ownership": 0.73733,
     "short_interest": 21390269.0,
     "short_percent_float": 0.028099999,
     "days_to_cover": 1.43,
@@ -371,11 +374,81 @@
     "analyst_revision": false,
     "major_news": false
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.11128851169733234,
+      "weekly": 0.1040498147813802,
+      "monthly": 0.11026980779120632,
+      "annual": 2.903541170595397
+    },
+    "risk": {
+      "volatility": 0.029934843461872137,
+      "annualized_volatility": 0.475200908014569,
+      "maximum_drawdown": -0.27567661150453604,
+      "sharpe_ratio": 1.9575623995048852,
+      "sortino_ratio": 2.808460498521539,
+      "calmar_ratio": 4.589523125589619,
+      "beta": 1.4745440451732448,
+      "alpha": 0.658053351591282,
+      "capm_expected_return": 0.2721820781486177,
+      "actual_return": 0.9302354297398997,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 1.4745440451732448,
+      "alpha": 0.658053351591282,
+      "capm_expected_return": 0.2721820781486177,
+      "actual_return": 0.9302354297398997,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 1.47: Moves roughly 47% more than the market. CAPM expected return is 27.22%; realized alpha is 65.81%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.9302354297398997,
+      "components": {
+        "market_component": 0.2721820781486177,
+        "momentum_component": 0.7258852926488493,
+        "volatility_drag": -0.0450401816029138,
+        "alpha_component": 0.658053351591282
+      },
+      "component_weights_pct": {
+        "market_component": 16.0,
+        "momentum_component": 42.67,
+        "volatility_drag": 2.65,
+        "alpha_component": 38.68
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 185.49135360717773,
+      "sma50": 179.00530822753908,
+      "sma200": 120.23189598083496,
+      "ema20": 183.12129475682642,
+      "ema50": 175.0951770667232,
+      "ema200": 129.63088424474287
+    },
+    "momentum": {
+      "3m": 0.4669276089104675,
+      "6m": 1.2665789674230252,
+      "12m": 2.903541170595397,
+      "24m": 0.0,
+      "score": 75.0
+    },
+    "volume": {
+      "average_volume": 12715695.0,
+      "relative_volume": 1.7913295340915303,
+      "volume_spike": false
+    },
+    "volatility_regime": "High volatility",
+    "quant_score": {
+      "score": 73,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Relative strength acceleration",
     "evidence": "Relative strength moved from lagging to leading",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 80,
     "invalidates": "Relative strength falls back below its signal line",
     "triggers": [

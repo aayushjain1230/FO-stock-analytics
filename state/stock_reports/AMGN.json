@@ -1,6 +1,6 @@
 {
   "ticker": "AMGN",
-  "generated_at": "2026-06-19T22:01:24.671338",
+  "generated_at": "2026-06-21T17:05:45.472012",
   "score": {
     "final_score": 55.75,
     "rating": "Hold",
@@ -33,7 +33,7 @@
         "1m": 0.02071052487835412,
         "3m": -0.02792251693768899,
         "6m": 0.0482533953767974,
-        "12m": 0.1989228800262881
+        "12m": 0.19892275009011584
       },
       "acceleration": -0.052,
       "evidence": [
@@ -62,14 +62,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01688835381838984,
-        "annualized_volatility": 0.2680943055403656,
-        "maximum_drawdown": -0.22740570018238382,
-        "sharpe_ratio": 0.41000117793007085,
-        "sortino_ratio": 0.5894646986072073,
-        "calmar_ratio": 0.33818923160512343,
-        "beta": 0.4801787495309832,
-        "alpha": 0.021284104436703723
+        "volatility": 0.016888366879247867,
+        "annualized_volatility": 0.26809451287505914,
+        "maximum_drawdown": -0.22740567414579815,
+        "sharpe_ratio": 0.410000874455807,
+        "sortino_ratio": 0.5894641293244802,
+        "calmar_ratio": 0.33818902040654875,
+        "beta": 0.4801784779503921,
+        "alpha": 0.021284144380630518,
+        "capm_expected_return": 0.08863484033494734,
+        "actual_return": 0.10991898471557786,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -107,14 +110,14 @@
     "total_debt": 57322999808.0,
     "interest_coverage": null,
     "forward_pe": 14.38051,
-    "trailing_pe": 23.49339,
+    "trailing_pe": 23.47705,
     "peg": 2.23,
     "price_to_book": 19.82617,
     "price_to_sales": 4.8953657,
-    "enterprise_to_ebitda": 13.773,
-    "enterprise_to_revenue": 6.261,
+    "enterprise_to_ebitda": 13.447,
+    "enterprise_to_revenue": 6.112,
     "fcf_yield": 0.0408144887816158,
-    "institutional_ownership": 0.85449,
+    "institutional_ownership": 0.85223997,
     "insider_ownership": 0.0021799998,
     "short_interest": 11852360.0,
     "short_ratio": 4.38,
@@ -125,10 +128,10 @@
     "target_low_price": 200.0,
     "recommendation": "buy",
     "number_of_analysts": 30.0,
-    "dividend_yield": 2.9,
+    "dividend_yield": 2.99,
     "payout_ratio": 0.6722,
     "next_earnings_date": "1777579200",
-    "eps_current_year": 14.37,
+    "eps_current_year": 14.38,
     "eps_forward": 23.47622,
     "classification": "Fundamentally Average"
   },
@@ -193,7 +196,7 @@
     "guidance_change": true,
     "bullish_news_score": 5,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.85449,
+    "institutional_ownership": 0.85223997,
     "detail": {
       "earnings": {
         "available": true,
@@ -234,7 +237,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 4.49,
-      "eps_growth_implied": 63.37
+      "eps_growth_implied": 63.26
     },
     "evidence": [
       "recent news item has elevated importance",
@@ -250,7 +253,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0021799998,
-    "institutional_ownership": 0.85449,
+    "institutional_ownership": 0.85223997,
     "short_interest": 11852360.0,
     "short_percent_float": 0.022,
     "days_to_cover": 4.38,
@@ -356,11 +359,81 @@
     "analyst_revision": false,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": -0.011883151422690252,
+      "weekly": -0.04648927178607387,
+      "monthly": 0.02071052487835412,
+      "annual": 0.19892275009011584
+    },
+    "risk": {
+      "volatility": 0.016888366879247867,
+      "annualized_volatility": 0.26809451287505914,
+      "maximum_drawdown": -0.22740567414579815,
+      "sharpe_ratio": 0.410000874455807,
+      "sortino_ratio": 0.5894641293244802,
+      "calmar_ratio": 0.33818902040654875,
+      "beta": 0.4801784779503921,
+      "alpha": 0.021284144380630518,
+      "capm_expected_return": 0.08863484033494734,
+      "actual_return": 0.10991898471557786,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.4801784779503921,
+      "alpha": 0.021284144380630518,
+      "capm_expected_return": 0.08863484033494734,
+      "actual_return": 0.10991898471557786,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.48: Moves roughly 52% less than the market. CAPM expected return is 8.86%; realized alpha is 2.13%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.10991898471557786,
+      "components": {
+        "market_component": 0.08863484033494734,
+        "momentum_component": 0.04973068752252896,
+        "volatility_drag": -0.0036189025750118287,
+        "alpha_component": 0.021284144380630518
+      },
+      "component_weights_pct": {
+        "market_component": 54.29,
+        "momentum_component": 30.46,
+        "volatility_drag": 2.22,
+        "alpha_component": 13.04
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 341.3850036621094,
+      "sma50": 338.92749084472655,
+      "sma200": 327.8775366210937,
+      "ema20": 341.9974995040242,
+      "ema50": 341.2461762759193,
+      "ema200": 329.9820190405218
+    },
+    "momentum": {
+      "3m": -0.02792251693768899,
+      "6m": 0.0482533953767974,
+      "12m": 0.19892275009011584,
+      "24m": 0.0,
+      "score": 50.0
+    },
+    "volume": {
+      "average_volume": 3031970.0,
+      "relative_volume": 2.6883841198956455,
+      "volume_spike": true
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 73,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
     "evidence": "Relative volume reached 2.69x",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [

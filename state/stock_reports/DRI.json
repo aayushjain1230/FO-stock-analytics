@@ -1,6 +1,6 @@
 {
   "ticker": "DRI",
-  "generated_at": "2026-06-19T22:03:07.194559",
+  "generated_at": "2026-06-21T17:06:43.517222",
   "score": {
     "final_score": 71.05,
     "rating": "Watch",
@@ -36,7 +36,7 @@
         "1m": 0.10179116118103493,
         "3m": 0.05221249448738985,
         "6m": 0.16799684117995195,
-        "12m": -0.021342994445816443
+        "12m": -0.021343062913384947
       },
       "acceleration": -0.0318,
       "evidence": [
@@ -68,14 +68,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017645378292942156,
-        "annualized_volatility": 0.28011169651669426,
-        "maximum_drawdown": -0.23919575519665237,
-        "sharpe_ratio": 0.836835478800043,
-        "sortino_ratio": 1.4417905365552233,
-        "calmar_ratio": 0.9040195381118548,
-        "beta": 0.5550744217048138,
-        "alpha": 0.13194774260492012
+        "volatility": 0.017645383707546466,
+        "annualized_volatility": 0.280111782470873,
+        "maximum_drawdown": -0.23919580818733532,
+        "sharpe_ratio": 0.836835306174026,
+        "sortino_ratio": 1.441789842640545,
+        "calmar_ratio": 0.904019337838225,
+        "beta": 0.5550735297592148,
+        "alpha": 0.13194791482981452,
+        "capm_expected_return": 0.10245951441715062,
+        "actual_return": 0.23440742924696514,
+        "market_return": 0.18458728244814074
       },
       "evidence": []
     },
@@ -113,15 +116,15 @@
     "cash_position": 240400000.0,
     "total_debt": 8156800000.0,
     "interest_coverage": null,
-    "forward_pe": 18.762476,
-    "trailing_pe": 22.492098,
+    "forward_pe": 18.753952,
+    "trailing_pe": 22.46842,
     "peg": 1.87,
     "price_to_book": 11.635957,
     "price_to_sales": 1.9153776,
-    "enterprise_to_ebitda": 15.861,
-    "enterprise_to_revenue": 2.496,
+    "enterprise_to_ebitda": 16.112,
+    "enterprise_to_revenue": 2.536,
     "fcf_yield": 0.027739037596083656,
-    "institutional_ownership": 0.99578005,
+    "institutional_ownership": 1.0040699,
     "insider_ownership": 0.0028799998,
     "short_interest": 5636336.0,
     "short_ratio": 5.7,
@@ -132,11 +135,11 @@
     "target_low_price": 156.0,
     "recommendation": "buy",
     "number_of_analysts": 26.0,
-    "dividend_yield": 2.87,
+    "dividend_yield": 2.81,
     "payout_ratio": 0.6217,
     "next_earnings_date": null,
-    "eps_current_year": 9.49,
-    "eps_forward": 11.37643,
+    "eps_current_year": 9.5,
+    "eps_forward": 11.3816,
     "classification": "Fundamentally Weak"
   },
   "technical_screen": {
@@ -200,7 +203,7 @@
     "guidance_change": true,
     "bullish_news_score": 2,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.99578005,
+    "institutional_ownership": 1.0040699,
     "detail": {
       "earnings": {
         "available": true,
@@ -241,7 +244,7 @@
         "last_surprise_direction": "beat"
       },
       "analyst_upside_pct": 5.99,
-      "eps_growth_implied": 19.88
+      "eps_growth_implied": 19.81
     },
     "evidence": [
       "technical backdrop is constructive",
@@ -258,7 +261,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0028799998,
-    "institutional_ownership": 0.99578005,
+    "institutional_ownership": 1.0040699,
     "short_interest": 5636336.0,
     "short_percent_float": 0.0659,
     "days_to_cover": 5.7,
@@ -355,7 +358,7 @@
     "revenue_growth": 0.059,
     "eps_growth": -0.033,
     "roe": 0.51539004,
-    "forward_pe": 18.762476,
+    "forward_pe": 18.753952,
     "relative_volume": 1.6675513562290991,
     "breakout": false,
     "price_above_sma50": true,
@@ -364,14 +367,84 @@
     "analyst_revision": false,
     "major_news": true
   },
+  "quant_model": {
+    "returns": {
+      "daily": 0.010031680778019858,
+      "weekly": 0.012379058317610658,
+      "monthly": 0.10179116118103493,
+      "annual": -0.021343062913384947
+    },
+    "risk": {
+      "volatility": 0.017645383707546466,
+      "annualized_volatility": 0.280111782470873,
+      "maximum_drawdown": -0.23919580818733532,
+      "sharpe_ratio": 0.836835306174026,
+      "sortino_ratio": 1.441789842640545,
+      "calmar_ratio": 0.904019337838225,
+      "beta": 0.5550735297592148,
+      "alpha": 0.13194791482981452,
+      "capm_expected_return": 0.10245951441715062,
+      "actual_return": 0.23440742924696514,
+      "market_return": 0.18458728244814074
+    },
+    "capm": {
+      "beta": 0.5550735297592148,
+      "alpha": 0.13194791482981452,
+      "capm_expected_return": 0.10245951441715062,
+      "actual_return": 0.23440742924696514,
+      "market_return": 0.18458728244814074,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.25%; realized alpha is 13.19%, meaning positive alpha versus CAPM."
+    },
+    "factor_decomposition": {
+      "actual_return": 0.23440742924696514,
+      "components": {
+        "market_component": 0.10245951441715062,
+        "momentum_component": 0.0,
+        "volatility_drag": -0.006022356494174597,
+        "alpha_component": 0.13194791482981452
+      },
+      "component_weights_pct": {
+        "market_component": 42.62,
+        "momentum_component": 0.0,
+        "volatility_drag": 2.5,
+        "alpha_component": 54.88
+      },
+      "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    },
+    "trend": {
+      "sma20": 203.71000061035156,
+      "sma50": 199.4825991821289,
+      "sma200": 193.90195640563965,
+      "ema20": 204.47754823986298,
+      "ema50": 201.2437008522612,
+      "ema200": 196.29451791122756
+    },
+    "momentum": {
+      "3m": 0.05221249448738985,
+      "6m": 0.16799684117995195,
+      "12m": -0.021343062913384947,
+      "24m": 0.0,
+      "score": 50.0
+    },
+    "volume": {
+      "average_volume": 1130340.0,
+      "relative_volume": 1.6675513562290991,
+      "volume_spike": false
+    },
+    "volatility_regime": "Normal volatility",
+    "quant_score": {
+      "score": 63,
+      "label": "Watch closely"
+    }
+  },
   "why_now": {
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-19",
+    "date_of_change": "2026-06-21",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DRI\nRating: Watch | Score: 71.05/100 | Confidence: 62.65/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.762476\nNews/Catalyst: Countdown to Darden Restaurants (DRI) Q4 Earnings: A Look at Estimates Beyond Revenue and EPS\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DRI\nRating: Watch | Score: 71.05/100 | Confidence: 62.65/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.753952\nNews/Catalyst: Countdown to Darden Restaurants (DRI) Q4 Earnings: A Look at Estimates Beyond Revenue and EPS\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
