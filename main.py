@@ -40,6 +40,7 @@ import watchlist_intelligence
 
 import plotting
 import database
+import data_backfill
 import intelligence_scoring
 import market_regime
 import options_analytics
@@ -912,7 +913,10 @@ def run_option_lab(args):
 
 
 def run_trade_journal_summary():
-    payload = trade_journal.summarize_trades()
+    if yf is not None and os.path.exists("portfolio.json"):
+        payload = data_backfill.sync_trade_journal_from_portfolio(yf)
+    else:
+        payload = trade_journal.summarize_trades()
     print(json.dumps(payload, indent=2, default=str))
 
 
@@ -971,6 +975,29 @@ def run_signal_outcome_update():
     updated = signal_validation.update_signal_outcomes(price_lookup, benchmark_df=benchmark_df)
     print(f"Updated {updated} signal outcome record(s).")
     return updated
+
+
+def run_backfill_signals():
+    if yf is None:
+        raise RuntimeError("Signal backfill requires yfinance.")
+    config = load_config()
+    payload = data_backfill.backfill_historical_signals(yf, load_watchlist_data(), benchmark=config.get("benchmark", "SPY"))
+    print(json.dumps(payload, indent=2, default=str))
+    return payload
+
+
+def run_refresh_watchlist_intelligence():
+    payload = data_backfill.refresh_watchlist_intelligence(load_watchlist_data())
+    print(json.dumps(payload.get("auto_refresh", payload), indent=2, default=str))
+    return payload
+
+
+def run_sync_trade_journal():
+    if yf is None:
+        raise RuntimeError("Trade journal sync requires yfinance.")
+    payload = data_backfill.sync_trade_journal_from_portfolio(yf)
+    print(json.dumps(payload, indent=2, default=str))
+    return payload
 
 
 def run_pairs_scan():
@@ -1051,6 +1078,7 @@ def main():
     parser.add_argument("--dashboard", action="store_true", help="Generate the static quant research dashboard HTML")
     parser.add_argument("--init-db", action="store_true", help="Create or migrate the SQLite research database")
     parser.add_argument("--signal-performance", action="store_true", help="Print historical signal validation summary")
+    parser.add_argument("--backfill-signals", action="store_true", help="Backfill historical signals from real price history and compute outcomes")
     parser.add_argument("--update-signal-outcomes", action="store_true", help="Update stored signal outcomes before EV/statistical analysis")
     parser.add_argument("--earnings-calendar", action="store_true", help="Generate earnings calendar from saved stock intelligence reports")
     parser.add_argument("--advanced-quant", action="store_true", help="Generate advanced quant model implementation snapshot")
@@ -1069,9 +1097,11 @@ def main():
     parser.add_argument("--market-price", type=float, help="Option lab observed market option price")
     parser.add_argument("--option-type", choices=["call", "put"], default="call", help="Option lab contract type")
     parser.add_argument("--trade-journal", action="store_true", help="Summarize trade journal performance")
+    parser.add_argument("--sync-trade-journal", action="store_true", help="Sync trade journal state with real portfolio/current-price data")
     parser.add_argument("--log-trade", nargs="+", metavar="TRADE_FIELD", help="Log a trade journal entry: TICKER ACTION SHARES PRICE [REASON...]")
     parser.add_argument("--trade-reason", help="Optional multi-word trade journal reason")
     parser.add_argument("--trade-date", help="Optional trade date as YYYY-MM-DD")
+    parser.add_argument("--refresh-watchlist-intel", action="store_true", help="Auto-fill blank watchlist intelligence from real stock reports")
     parser.add_argument("--set-watchlist-intel", metavar="TICKER", help="Create or update watchlist thesis, stop, target, horizon, and status for one ticker")
     parser.add_argument("--thesis", help="Watchlist thesis for --set-watchlist-intel")
     parser.add_argument("--entry-zone", help="Entry zone for --set-watchlist-intel")
@@ -1097,6 +1127,9 @@ def main():
         database.initialize_database()
         print("SQLite research database initialized at state/jfo_quant.db")
 
+    if args.backfill_signals:
+        run_backfill_signals()
+
     if args.update_signal_outcomes:
         run_signal_outcome_update()
 
@@ -1112,6 +1145,9 @@ def main():
 
     if args.option_lab:
         run_option_lab(args)
+
+    if args.refresh_watchlist_intel:
+        run_refresh_watchlist_intelligence()
 
     if args.set_watchlist_intel:
         run_watchlist_intelligence_update(args)
@@ -1132,6 +1168,9 @@ def main():
         reason_value = args.trade_reason or " ".join(args.log_trade[4:])
         trade = trade_journal.log_trade(ticker_value, action_value, float(shares_value), float(price_value), reason_value, trade_date=args.trade_date)
         print(json.dumps(trade, indent=2, default=str))
+
+    if args.sync_trade_journal:
+        run_sync_trade_journal()
 
     if args.trade_journal:
         run_trade_journal_summary()
