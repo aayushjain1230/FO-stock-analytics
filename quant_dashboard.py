@@ -590,6 +590,21 @@ def _section_trade_journal(payload):
           <td>{html.escape(str(item.get('entry_reason','')))}</td>
           <td>{html.escape(str(item.get('exit_reason','')))}</td>
         </tr>"""
+    position_rows = ""
+    for item in payload.get("portfolio_positions", [])[:20]:
+        quality = html.escape(str(item.get("data_quality", "")))
+        position_rows += f"""<tr>
+          <td style="font-weight:700;color:#e6edf3;">{html.escape(str(item.get('ticker','')))}</td>
+          <td>{_pct(item.get('weight'), multiply=True)}</td>
+          <td>{html.escape(str(item.get('sector','N/A')))}</td>
+          <td>{_fmt(item.get('shares'), 2)}</td>
+          <td>${_fmt(item.get('cost_basis'), 2)}</td>
+          <td>${_fmt(item.get('current_price'), 2)}</td>
+          <td>${_fmt(item.get('market_value'), 2)}</td>
+          <td>{_pct(item.get('unrealized_return_pct'), multiply=True)}</td>
+          <td>{quality}</td>
+        </tr>"""
+    note = html.escape(str(payload.get("journal_data_note", "")))
     return f"""
     <section id="trade-journal">
       <h2>Trade Journal</h2>
@@ -598,6 +613,8 @@ def _section_trade_journal(payload):
         <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;"><div style="color:#8b949e;font-size:12px;">Realized P&L</div><div style="color:{'#2ea043' if payload.get('realized_pnl',0) >= 0 else '#da3633'};font-size:20px;font-weight:700;">${_fmt(payload.get('realized_pnl'),2)}</div></div>
         <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:12px;"><div style="color:#8b949e;font-size:12px;">Win Rate</div><div style="color:#58a6ff;font-size:20px;font-weight:700;">{_pct(payload.get('win_rate'), multiply=True)}</div></div>
       </div>
+      <p style="font-size:12px;color:#8b949e;">{note}</p>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Ticker</th><th>Model Weight</th><th>Sector</th><th>Shares</th><th>Cost Basis</th><th>Current</th><th>Market Value</th><th>Unrealized</th><th>Data</th></tr></thead><tbody>{position_rows or '<tr><td colspan="9">No portfolio positions synced yet.</td></tr>'}</tbody></table></div>
       <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit</th><th>P&L</th><th>Entry Reason</th><th>Exit Reason</th></tr></thead><tbody>{rows or '<tr><td colspan="7">No closed trades logged yet.</td></tr>'}</tbody></table></div>
     </section>"""
 
