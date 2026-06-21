@@ -1,96 +1,119 @@
 {
-  "generated_at": "2026-06-21T13:24:28.064891",
+  "generated_at": "2026-06-21T17:43:02.039146",
   "primary_horizon": "return_1m",
   "signal_types": {
-    "high_volume_52w_breakout": {
-      "sample_size": 66,
-      "win_rate": 0.6363636363636364,
-      "average_win": 0.07700990587564568,
-      "average_loss": -0.060081536394606595,
-      "expected_value": 0.027158472322826675,
-      "average_return": 0.02715847232282667,
-      "median_return": 0.014281899392704522,
-      "variance": 0.007954412111547904,
-      "standard_deviation": 0.08918751096172549,
-      "sharpe_like": 0.3045098134253532,
-      "p_value": 0.015987537836352678,
+    "breakout": {
+      "sample_size": 0,
+      "win_rate": null,
+      "average_win": 0.0,
+      "average_loss": 0.0,
+      "expected_value": null,
+      "average_return": null,
+      "median_return": null,
+      "variance": null,
+      "standard_deviation": null,
+      "sharpe_like": null,
+      "p_value": null,
       "confidence_interval_95": {
-        "low": 0.0052334456027233085,
-        "high": 0.04908349904293004
+        "low": null,
+        "high": null
       },
       "train_test": {
-        "available": true,
-        "train_size": 46,
-        "test_size": 20,
-        "train_average_return": 0.030694132512920313,
-        "test_average_return": 0.019026453885611305,
-        "generalization_gap": -0.011667678627309008,
-        "passes_out_of_sample": true
+        "available": false,
+        "message": "Need at least 10 outcomes for train/test split."
       },
-      "confidence": "Moderate",
-      "attractiveness": "Constructive",
+      "confidence": "Low sample size",
+      "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.106034280849103,
-      "false_positive_rate": 0.36363636363636365,
-      "readout": "Expected value is 2.72% with variance 0.0080. Constructive."
+      "average_max_drawdown": -0.02880392251510172,
+      "false_positive_rate": null,
+      "readout": "No expected value estimate yet."
     },
-    "sma50_reclaim": {
-      "sample_size": 34,
-      "win_rate": 0.6764705882352942,
-      "average_win": 0.10101279235119605,
-      "average_loss": -0.03535362864364519,
-      "expected_value": 0.056894244382276825,
-      "average_return": 0.05689424438227683,
-      "median_return": 0.02511715554679106,
-      "variance": 0.014586904208592868,
-      "standard_deviation": 0.12077625680816934,
-      "sharpe_like": 0.47107143312648586,
-      "p_value": 0.009671779001854073,
+    "rank_improvement": {
+      "sample_size": 0,
+      "win_rate": null,
+      "average_win": 0.0,
+      "average_loss": 0.0,
+      "expected_value": null,
+      "average_return": null,
+      "median_return": null,
+      "variance": null,
+      "standard_deviation": null,
+      "sharpe_like": null,
+      "p_value": null,
       "confidence_interval_95": {
-        "low": 0.014753416181976703,
-        "high": 0.09903507258257696
+        "low": null,
+        "high": null
       },
       "train_test": {
-        "available": true,
-        "train_size": 23,
-        "test_size": 11,
-        "train_average_return": 0.04643261634065565,
-        "test_average_return": 0.07876855756021198,
-        "generalization_gap": 0.032335941219556324,
-        "passes_out_of_sample": true
+        "available": false,
+        "message": "Need at least 10 outcomes for train/test split."
       },
-      "confidence": "High",
-      "attractiveness": "Constructive",
+      "confidence": "Low sample size",
+      "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.15425764269281805,
-      "false_positive_rate": 0.3235294117647059,
-      "readout": "Expected value is 5.69% with variance 0.0146. Constructive."
+      "average_max_drawdown": -0.0019337799909960873,
+      "false_positive_rate": null,
+      "readout": "No expected value estimate yet."
+    },
+    "relative_strength": {
+      "sample_size": 0,
+      "win_rate": null,
+      "average_win": 0.0,
+      "average_loss": 0.0,
+      "expected_value": null,
+      "average_return": null,
+      "median_return": null,
+      "variance": null,
+      "standard_deviation": null,
+      "sharpe_like": null,
+      "p_value": null,
+      "confidence_interval_95": {
+        "low": null,
+        "high": null
+      },
+      "train_test": {
+        "available": false,
+        "message": "Need at least 10 outcomes for train/test split."
+      },
+      "confidence": "Low sample size",
+      "attractiveness": "Insufficient data",
+      "average_sp500_relative_return": null,
+      "average_max_drawdown": -0.013385413384115974,
+      "false_positive_rate": null,
+      "readout": "No expected value estimate yet."
+    },
+    "watchlist_change": {
+      "sample_size": 0,
+      "win_rate": null,
+      "average_win": 0.0,
+      "average_loss": 0.0,
+      "expected_value": null,
+      "average_return": null,
+      "median_return": null,
+      "variance": null,
+      "standard_deviation": null,
+      "sharpe_like": null,
+      "p_value": null,
+      "confidence_interval_95": {
+        "low": null,
+        "high": null
+      },
+      "train_test": {
+        "available": false,
+        "message": "Need at least 10 outcomes for train/test split."
+      },
+      "confidence": "Low sample size",
+      "attractiveness": "Insufficient data",
+      "average_sp500_relative_return": null,
+      "average_max_drawdown": -0.023960168316805364,
+      "false_positive_rate": null,
+      "readout": "No expected value estimate yet."
     }
   },
   "regression": {
-    "available": true,
-    "sample_size": 100,
-    "r_squared": 0.019486255461660273,
-    "features": {
-      "intercept": {
-        "coefficient": 0.24125603115086772,
-        "std_error": 0.1472695986444632,
-        "t_stat": 1.6381930376092462,
-        "p_value": 0.10462136090921054
-      },
-      "score": {
-        "coefficient": -0.0014867886029725076,
-        "std_error": 0.001070843495994055,
-        "t_stat": -1.3884275419652563,
-        "p_value": 0.1681871543730918
-      },
-      "confidence": {
-        "coefficient": -0.0014867886029725072,
-        "std_error": 0.0010708434959973386,
-        "t_stat": -1.3884275419609984,
-        "p_value": 0.16818715437438383
-      }
-    }
+    "available": false,
+    "message": "Need at least 20 completed signals for regression evidence."
   },
   "interpretation": "High expected value with low variance is more attractive than the same EV with high uncertainty."
 }

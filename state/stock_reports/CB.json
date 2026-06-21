@@ -1,10 +1,10 @@
 {
   "ticker": "CB",
-  "generated_at": "2026-06-21T17:06:14.609521",
+  "generated_at": "2026-06-21T17:42:22.251038",
   "score": {
-    "final_score": 63.4,
+    "final_score": 62.15,
     "rating": "Hold",
-    "confidence": 58.28,
+    "confidence": 53.51,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 60.0
+      "catalyst": 35.0
     },
     "technical": {
       "score": 65.0,
@@ -33,7 +33,7 @@
       "returns": {
         "1m": -0.017329477145559324,
         "3m": 0.002376171130480831,
-        "6m": 0.046060673303949695,
+        "6m": 0.04606057004593622,
         "12m": 0.1464648191250224
       },
       "acceleration": -0.0207,
@@ -64,27 +64,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.012054893990205,
-        "annualized_volatility": 0.19136550947597722,
-        "maximum_drawdown": -0.14351430988577796,
-        "sharpe_ratio": 0.6558205256415476,
-        "sortino_ratio": 0.9383066619411804,
-        "calmar_ratio": 0.7882414301546455,
-        "beta": 0.16760131593793529,
-        "alpha": 0.09456435757048216,
-        "capm_expected_return": 0.03093707144371573,
-        "actual_return": 0.1255014290141979,
-        "market_return": 0.18458728244814074
+        "volatility": 0.012054888820420839,
+        "annualized_volatility": 0.19136542740819787,
+        "maximum_drawdown": -0.1435144125933454,
+        "sharpe_ratio": 0.6558201116354829,
+        "sortino_ratio": 0.9383057862362136,
+        "calmar_ratio": 0.7882399534703426,
+        "beta": 0.16760060874412605,
+        "alpha": 0.09456434361256137,
+        "capm_expected_return": 0.030936952353454856,
+        "actual_return": 0.12550129596601622,
+        "market_return": 0.18458735075769295
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 60.0,
+      "score": 35.0,
       "evidence": [
         "earnings surprise",
-        "insider buying",
-        "major news",
-        "guidance change"
+        "insider buying"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
@@ -137,7 +135,8 @@
     "next_earnings_date": "1776801600",
     "eps_current_year": 28.27,
     "eps_forward": 29.2529,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
     "rsi": 63.56658946806759,
@@ -196,9 +195,9 @@
     "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": true,
-    "guidance_change": true,
-    "bullish_news_score": 3,
+    "major_news": false,
+    "guidance_change": false,
+    "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.84888,
     "detail": {
@@ -245,9 +244,7 @@
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "insider ownership or purchase data is supportive",
-      "recent news item has elevated importance",
-      "news tone or forward EPS implies a catalyst shift"
+      "insider ownership or purchase data is supportive"
     ]
   },
   "analyst": {
@@ -268,6 +265,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Strait of Hormuz Operating in War Zone Environment, Chubb CEO Says",
+        "source": "Barrons.com",
+        "published": "2026-06-21T17:07:07Z",
+        "summary": "The Strait of Hormuz is still operating in a war zone environment, according to Chubb CEO Evan Greenberg.  Chubb is insuring ships that pass through the waterway, which normally transits one-fifth of global oil supplies.  \"It's important to know that all of the channels aren't open,\" Greenberg told Fox News' Sunday Morning Futures.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Market Crash: The Financial Stocks I'd Buy Without Losing Sleep",
         "source": "Motley Fool",
@@ -307,16 +314,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Can Trupanion Turn Pet Insurance Loyalty Into Real Earnings?",
-        "source": "MarketBeat",
-        "published": "2026-06-18T16:25:00Z",
-        "summary": "Trupanion is showing stronger earnings, record operating margins, and loyal subscribers, but investors question competition and veterinary inflation.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -336,25 +333,25 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8404,
-    "probability_pct": 84.04,
+    "probability_of_outperformance": 0.8265,
+    "probability_pct": 82.65,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 63.4/100"
+      "Composite score 62.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 63.4,
+    "final_score": 62.15,
     "technical_score": 65.0,
     "momentum_score": 50.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 100,
-    "catalyst_score": 60.0,
+    "catalyst_score": 35.0,
     "revenue_growth": 0.102,
     "eps_growth": 0.787,
     "roe": 0.15433,
@@ -365,7 +362,7 @@
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
@@ -375,33 +372,33 @@
       "annual": 0.1464648191250224
     },
     "risk": {
-      "volatility": 0.012054893990205,
-      "annualized_volatility": 0.19136550947597722,
-      "maximum_drawdown": -0.14351430988577796,
-      "sharpe_ratio": 0.6558205256415476,
-      "sortino_ratio": 0.9383066619411804,
-      "calmar_ratio": 0.7882414301546455,
-      "beta": 0.16760131593793529,
-      "alpha": 0.09456435757048216,
-      "capm_expected_return": 0.03093707144371573,
-      "actual_return": 0.1255014290141979,
-      "market_return": 0.18458728244814074
+      "volatility": 0.012054888820420839,
+      "annualized_volatility": 0.19136542740819787,
+      "maximum_drawdown": -0.1435144125933454,
+      "sharpe_ratio": 0.6558201116354829,
+      "sortino_ratio": 0.9383057862362136,
+      "calmar_ratio": 0.7882399534703426,
+      "beta": 0.16760060874412605,
+      "alpha": 0.09456434361256137,
+      "capm_expected_return": 0.030936952353454856,
+      "actual_return": 0.12550129596601622,
+      "market_return": 0.18458735075769295
     },
     "capm": {
-      "beta": 0.16760131593793529,
-      "alpha": 0.09456435757048216,
-      "capm_expected_return": 0.03093707144371573,
-      "actual_return": 0.1255014290141979,
-      "market_return": 0.18458728244814074,
+      "beta": 0.16760060874412605,
+      "alpha": 0.09456434361256137,
+      "capm_expected_return": 0.030936952353454856,
+      "actual_return": 0.12550129596601622,
+      "market_return": 0.18458735075769295,
       "interpretation": "Beta 0.17: Moves roughly 83% less than the market. CAPM expected return is 3.09%; realized alpha is 9.46%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.1255014290141979,
+      "actual_return": 0.12550129596601622,
       "components": {
-        "market_component": 0.03093707144371573,
+        "market_component": 0.030936952353454856,
         "momentum_component": 0.0366162047812556,
         "volatility_drag": -0.0,
-        "alpha_component": 0.09456435757048216
+        "alpha_component": 0.09456434361256137
       },
       "component_weights_pct": {
         "market_component": 19.08,
@@ -414,14 +411,14 @@
     "trend": {
       "sma20": 321.68194274902345,
       "sma50": 323.7164196777344,
-      "sma200": 306.99162811279297,
-      "ema20": 323.560393232421,
-      "ema50": 323.0252813725603,
-      "ema200": 310.5301356054431
+      "sma200": 306.99162887573243,
+      "ema20": 323.56039322627015,
+      "ema50": 323.02528123133686,
+      "ema200": 310.5301363611126
     },
     "momentum": {
       "3m": 0.002376171130480831,
-      "6m": 0.046060673303949695,
+      "6m": 0.04606057004593622,
       "12m": 0.1464648191250224,
       "24m": 0.0,
       "score": 75.0
@@ -446,5 +443,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CB\nRating: Hold | Score: 63.4/100 | Confidence: 58.28/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 309.7799987792969 | Resistance: 332.94000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.055314\nNews/Catalyst: Market Crash: The Financial Stocks I'd Buy Without Losing Sleep\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CB\nRating: Hold | Score: 62.15/100 | Confidence: 53.51/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 309.7799987792969 | Resistance: 332.94000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.055314\nNews/Catalyst: Strait of Hormuz Operating in War Zone Environment, Chubb CEO Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
