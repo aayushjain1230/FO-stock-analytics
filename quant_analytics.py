@@ -97,12 +97,57 @@ def beta_alpha(stock_returns: pd.Series, benchmark_returns: pd.Series, risk_free
     aligned = pd.concat([stock_returns, benchmark_returns], axis=1).dropna()
     aligned.columns = ["stock", "benchmark"]
     if len(aligned) < 2:
-        return {"beta": 0.0, "alpha": 0.0}
+        return {"beta": 0.0, "alpha": 0.0, "capm_expected_return": 0.0, "actual_return": 0.0, "market_return": 0.0}
 
     benchmark_var = aligned["benchmark"].var()
     beta = aligned["stock"].cov(aligned["benchmark"]) / benchmark_var if benchmark_var else 0.0
-    alpha_daily = aligned["stock"].mean() - (risk_free_rate / TRADING_DAYS + beta * (aligned["benchmark"].mean() - risk_free_rate / TRADING_DAYS))
-    return {"beta": safe_float(beta, 0.0), "alpha": safe_float(alpha_daily * TRADING_DAYS, 0.0)}
+    market_return = aligned["benchmark"].mean() * TRADING_DAYS
+    actual_return = aligned["stock"].mean() * TRADING_DAYS
+    capm_expected = risk_free_rate + beta * (market_return - risk_free_rate)
+    alpha = actual_return - capm_expected
+    return {
+        "beta": safe_float(beta, 0.0),
+        "alpha": safe_float(alpha, 0.0),
+        "capm_expected_return": safe_float(capm_expected, 0.0),
+        "actual_return": safe_float(actual_return, 0.0),
+        "market_return": safe_float(market_return, 0.0),
+    }
+
+
+def capm_interpretation(beta_payload: Dict[str, float]) -> str:
+    beta = safe_float(beta_payload.get("beta"), 0.0)
+    alpha = safe_float(beta_payload.get("alpha"), 0.0)
+    capm_return = safe_float(beta_payload.get("capm_expected_return"), 0.0)
+    if beta >= 1.25:
+        beta_text = f"Moves roughly {(beta - 1) * 100:.0f}% more than the market."
+    elif beta <= 0.75:
+        beta_text = f"Moves roughly {(1 - beta) * 100:.0f}% less than the market."
+    else:
+        beta_text = "Moves roughly in line with the market."
+    alpha_text = "positive alpha versus CAPM" if alpha > 0 else "negative alpha versus CAPM" if alpha < 0 else "no CAPM alpha detected"
+    return f"Beta {beta:.2f}: {beta_text} CAPM expected return is {capm_return:.2%}; realized alpha is {alpha:.2%}, meaning {alpha_text}."
+
+
+def factor_decomposition(beta_payload: Dict[str, float], momentum: Dict[str, float], risk: Dict[str, float]) -> Dict:
+    actual = safe_float(beta_payload.get("actual_return"), 0.0)
+    market_component = safe_float(beta_payload.get("capm_expected_return"), 0.0)
+    alpha_component = safe_float(beta_payload.get("alpha"), 0.0)
+    momentum_component = max(safe_float(momentum.get("12m"), 0.0), 0.0) * 0.25
+    volatility_drag = -max(safe_float(risk.get("annualized_volatility"), 0.0) - 0.25, 0.0) * 0.20
+    components = {
+        "market_component": market_component,
+        "momentum_component": momentum_component,
+        "volatility_drag": volatility_drag,
+        "alpha_component": alpha_component,
+    }
+    total_abs = sum(abs(value) for value in components.values()) or 1.0
+    percent = {key: round(abs(value) / total_abs * 100, 2) for key, value in components.items()}
+    return {
+        "actual_return": actual,
+        "components": components,
+        "component_weights_pct": percent,
+        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality.",
+    }
 
 
 def momentum_score(df: pd.DataFrame) -> Dict[str, float]:
@@ -140,7 +185,7 @@ def volatility_regime(return_series: pd.Series, window: int = 21) -> str:
 def comprehensive_stock_analysis(df: pd.DataFrame, benchmark_df: Optional[pd.DataFrame] = None, risk_free_rate: float = 0.0) -> Dict:
     returns = daily_returns(df)
     benchmark_returns = daily_returns(benchmark_df) if benchmark_df is not None else pd.Series(dtype=float)
-    beta_payload = beta_alpha(returns, benchmark_returns, risk_free_rate) if not benchmark_returns.empty else {"beta": 0.0, "alpha": 0.0}
+    beta_payload = beta_alpha(returns, benchmark_returns, risk_free_rate) if not benchmark_returns.empty else {"beta": 0.0, "alpha": 0.0, "capm_expected_return": 0.0, "actual_return": 0.0, "market_return": 0.0}
     close = _as_price_series(df)
 
     annual_vol = safe_float(returns.std() * math.sqrt(TRADING_DAYS), 0.0)
@@ -172,12 +217,18 @@ def comprehensive_stock_analysis(df: pd.DataFrame, benchmark_df: Optional[pd.Dat
             "volume_spike": bool(pd.notna(relative_volume) and relative_volume >= 2.0),
         }
 
-    score = quant_score(risk, trend, momentum_score(df), volume)
+    momentum = momentum_score(df)
+    score = quant_score(risk, trend, momentum, volume)
     return {
         "returns": period_returns(df),
         "risk": risk,
+        "capm": {
+            **beta_payload,
+            "interpretation": capm_interpretation(beta_payload),
+        },
+        "factor_decomposition": factor_decomposition(beta_payload, momentum, risk),
         "trend": trend,
-        "momentum": momentum_score(df),
+        "momentum": momentum,
         "volume": volume,
         "volatility_regime": volatility_regime(returns),
         "quant_score": score,
