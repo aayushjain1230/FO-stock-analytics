@@ -113,6 +113,40 @@ def iv_rank_percentile(current_iv: float, historical_iv_values) -> Dict[str, flo
     return {"iv_rank": round(float(iv_rank * 100), 2), "iv_percentile": round(float(iv_percentile * 100), 2)}
 
 
+def stochastic_calculus_summary(days_to_expiry: float, risk_free_rate: float, volatility: float) -> Dict:
+    time_to_expiry = max(days_to_expiry / 365, 1e-9)
+    return {
+        "brownian_motion": "dW is the random shock term driving uncertainty through time.",
+        "geometric_brownian_motion_sde": "dS = mu*S*dt + sigma*S*dW",
+        "risk_neutral_sde": "dS = r*S*dt + sigma*S*dW",
+        "risk_neutral_pricing": "Black-Scholes and risk-neutral Monte Carlo discount expected payoff under drift r, not the investor's expected drift.",
+        "ito_lemma": "Ito's lemma converts the stock process into an option-value process and leads to the Black-Scholes PDE.",
+        "time_to_expiry_years": round(float(time_to_expiry), 6),
+        "risk_free_rate": risk_free_rate,
+        "volatility": volatility,
+    }
+
+
+def greeks_derivation_notes(greek_payload: Dict[str, float]) -> Dict[str, str]:
+    return {
+        "delta": f"Delta {greek_payload.get('delta')} is the first derivative of option value with respect to stock price.",
+        "gamma": f"Gamma {greek_payload.get('gamma')} is the second derivative with respect to stock price; it measures convexity.",
+        "theta": f"Theta {greek_payload.get('theta')} is the derivative with respect to time, usually observed as daily time decay.",
+        "vega": f"Vega {greek_payload.get('vega')} is sensitivity to implied volatility; it is not a Greek letter but is standard options risk language.",
+        "rho": f"Rho {greek_payload.get('rho')} is sensitivity to the risk-free rate used in discounting.",
+    }
+
+
+def volatility_surface_snapshot(current_iv: float | None = None) -> Dict:
+    return {
+        "available": bool(current_iv is not None and np.isfinite(current_iv)),
+        "current_iv": current_iv,
+        "surface_inputs_needed": ["expiration", "strike", "option_type", "bid", "ask", "last", "implied_volatility"],
+        "planned_outputs": ["term structure", "skew", "smile", "IV percentile by tenor", "relative value by strike"],
+        "note": "A real volatility surface requires a full options chain across strikes and expirations.",
+    }
+
+
 def monte_carlo_option_price(
     stock_price: float,
     strike: float,
@@ -136,6 +170,9 @@ def monte_carlo_option_price(
     discounted = math.exp(-risk_free_rate * time_to_expiry) * payoffs
     probability_profit = float((payoffs > 0).mean())
     return {
+        "model": "risk-neutral geometric Brownian motion",
+        "stochastic_process": "S_T = S_0 * exp((r - 0.5*sigma^2)T + sigma*sqrt(T)*Z)",
+        "simulations": simulations,
         "monte_carlo_price": round(float(discounted.mean()), 4),
         "expected_stock_price": round(float(terminal_prices.mean()), 4),
         "probability_of_profit": round(probability_profit, 4),
@@ -155,16 +192,22 @@ def option_lab_report(
     option_type: str = "call",
 ) -> Dict:
     fair_value = black_scholes_price(stock_price, strike, days_to_expiry, risk_free_rate, volatility, option_type)
+    greek_payload = greeks(stock_price, strike, days_to_expiry, risk_free_rate, volatility, option_type)
     payload = {
         "fair_value": round(float(fair_value), 4),
-        "greeks": greeks(stock_price, strike, days_to_expiry, risk_free_rate, volatility, option_type),
+        "model": "Black-Scholes with risk-neutral geometric Brownian motion",
+        "stochastic_calculus": stochastic_calculus_summary(days_to_expiry, risk_free_rate, volatility),
+        "greeks": greek_payload,
+        "greeks_derivation": greeks_derivation_notes(greek_payload),
         "break_even": break_even_analysis(stock_price, strike, market_price or fair_value, option_type),
         "monte_carlo": monte_carlo_option_price(stock_price, strike, days_to_expiry, risk_free_rate, volatility, option_type),
+        "volatility_surface": volatility_surface_snapshot(),
     }
     if market_price is not None:
         iv = implied_volatility(market_price, stock_price, strike, days_to_expiry, risk_free_rate, option_type)
         payload["market_price"] = market_price
         payload["implied_volatility"] = iv
+        payload["volatility_surface"] = volatility_surface_snapshot(iv)
         payload["relative_value"] = "expensive" if market_price > fair_value else "cheap" if market_price < fair_value else "fair"
     return payload
 
