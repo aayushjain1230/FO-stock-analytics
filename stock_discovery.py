@@ -223,7 +223,8 @@ def build_stock_intelligence(
     portfolio_fit = portfolio_fit_snapshot(ticker, portfolio_context)
     probability = probability_engine.probability_of_outperformance(score, fundamentals, tech, catalysts, market_payload)
     features = probability_engine.feature_snapshot(score, fundamentals, tech, catalysts)
-    report = stock_report_text(ticker, score, fundamentals, tech, why_payload, news, portfolio_fit, probability=probability)
+    quant_model = quant_analytics.comprehensive_stock_analysis(analyzed, benchmark_df) if benchmark_df is not None else {}
+    report = stock_report_text(ticker, score, fundamentals, tech, why_payload, news, portfolio_fit, probability=probability, quant_model=quant_model)
     return {
         "ticker": ticker,
         "generated_at": datetime.now().isoformat(),
@@ -240,6 +241,7 @@ def build_stock_intelligence(
         "portfolio_fit": portfolio_fit,
         "probability": probability,
         "features": features,
+        "quant_model": quant_model,
         "why_now": why_payload,
         "report": report,
     }
@@ -332,7 +334,7 @@ def insider_short_snapshot(fundamentals: Dict) -> Dict:
     }
 
 
-def stock_report_text(ticker: str, score: Dict, fundamentals: Dict, technical: Dict, why_payload: Dict, news: Dict, portfolio_fit: Dict, probability: Optional[Dict] = None) -> str:
+def stock_report_text(ticker: str, score: Dict, fundamentals: Dict, technical: Dict, why_payload: Dict, news: Dict, portfolio_fit: Dict, probability: Optional[Dict] = None, quant_model: Optional[Dict] = None) -> str:
     bull = []
     bear = []
     if score.get("categories", {}).get("momentum", 0) >= 60:
@@ -348,6 +350,10 @@ def stock_report_text(ticker: str, score: Dict, fundamentals: Dict, technical: D
     if technical.get("relative_volume", 0) < 1:
         bear.append("volume confirmation is weak")
     top_news = news.get("items", [{}])[0].get("headline") if news.get("items") else "No major news item available"
+    capm = (quant_model or {}).get("capm", {})
+    factor = (quant_model or {}).get("factor_decomposition", {})
+    capm_line = f"CAPM: Beta {capm.get('beta')} | Expected Return {capm.get('capm_expected_return')} | Alpha {capm.get('alpha')}" if capm else "CAPM: Unavailable"
+    factor_line = f"Factor View: {factor.get('interpretation')}" if factor else "Factor View: Unavailable"
     return (
         f"Ticker: {ticker}\n"
         f"Rating: {score.get('rating')} | Score: {score.get('final_score')}/100 | Confidence: {score.get('confidence')}/100\n"
