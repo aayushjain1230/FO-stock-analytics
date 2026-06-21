@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-06-21T12:49:47.626761",
+  "factor_models": {
+    "implemented": [
+      "market model",
+      "multi-factor regression",
+      "PCA factor compression"
+    ],
+    "module": "factor_models.py"
+  },
+  "statistical_arbitrage": {
+    "implemented": [
+      "OLS hedge ratio",
+      "spread z-score",
+      "half-life",
+      "pairs scan"
+    ],
+    "module": "stat_arb.py"
+  },
+  "machine_learning": {
+    "implemented": [
+      "time-series train/test split",
+      "linear return model",
+      "logistic probability model"
+    ],
+    "module": "ml_research.py",
+    "alternative_data": {
+      "available": false,
+      "supported_future_sources": [
+        "news sentiment",
+        "earnings transcripts",
+        "web traffic",
+        "app rankings",
+        "social volume",
+        "SEC filing velocity"
+      ],
+      "note": "Alternative data requires licensed or explicitly configured providers before it should influence alerts."
+    }
+  },
+  "derivatives": {
+    "implemented": [
+      "Black-Scholes",
+      "volatility surface builder",
+      "Dupire local-vol approximation",
+      "Heston Monte Carlo"
+    ],
+    "module": "advanced_derivatives.py"
+  },
+  "market_microstructure": {
+    "implemented": [
+      "order-book imbalance",
+      "microprice",
+      "VWAP",
+      "TWAP",
+      "participation schedule",
+      "implementation shortfall"
+    ],
+    "module": "microstructure.py"
+  },
+  "note": "These are implemented research engines. They still need sufficient clean market data before they should drive alerts."
+}
