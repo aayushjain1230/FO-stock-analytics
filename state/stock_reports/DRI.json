@@ -1,15 +1,15 @@
 {
   "ticker": "DRI",
-  "generated_at": "2026-06-22T20:22:26.952239",
+  "generated_at": "2026-06-22T22:23:14.419113",
   "score": {
-    "final_score": 66.55,
-    "rating": "Watch",
-    "confidence": 56.14,
+    "final_score": 59.05,
+    "rating": "Hold",
+    "confidence": 47.16,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 40.0,
-      "volume": 75.0,
+      "volume": 25.0,
       "fundamental": 42.0,
       "risk": 100,
       "catalyst": 30.0
@@ -46,15 +46,13 @@
       ]
     },
     "volume": {
-      "score": 75.0,
-      "average_volume": 1183023.05,
-      "relative_volume": 1.673222681502275,
+      "score": 25.0,
+      "average_volume": 1161067.4,
+      "relative_volume": 1.3266654459508553,
       "accumulation_days": 9,
       "distribution_days": 5,
       "evidence": [
-        "Relative volume is 1.67x",
-        "Accumulation days exceed distribution days",
-        "High-volume breakout behavior"
+        "Accumulation days exceed distribution days"
       ]
     },
     "fundamental": {
@@ -67,17 +65,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017662080612902326,
-        "annualized_volatility": 0.2803768376262889,
-        "maximum_drawdown": -0.2391957551966516,
-        "sharpe_ratio": 0.8272860131587744,
-        "sortino_ratio": 1.4267487086607435,
-        "calmar_ratio": 0.8911913230932235,
-        "beta": 0.5557088553005045,
-        "alpha": 0.1288039378601047,
-        "capm_expected_return": 0.10314789832181288,
-        "actual_return": 0.2319518361819176,
-        "market_return": 0.185614998461802
+        "volatility": 0.01766208447889555,
+        "annualized_volatility": 0.2803768989970288,
+        "maximum_drawdown": -0.2391957551966527,
+        "sharpe_ratio": 0.8272858910045512,
+        "sortino_ratio": 1.4267485111001426,
+        "calmar_ratio": 0.8911913230932175,
+        "beta": 0.5557010506234791,
+        "alpha": 0.12876560244594398,
+        "capm_expected_return": 0.10318625025790598,
+        "actual_return": 0.23195185270384996,
+        "market_return": 0.18568662078672382
       },
       "evidence": []
     },
@@ -146,10 +144,10 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.673222681502275,
+    "relative_volume": 1.3266654459508553,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation, volume surge",
+    "setup_type": "trend continuation",
     "support": 190.6300048828125,
     "resistance": 213.4499969482422
   },
@@ -336,20 +334,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7775,
-    "probability_pct": 77.75,
+    "probability_of_outperformance": 0.6938,
+    "probability_pct": 69.38,
     "confidence": "High",
     "evidence": [
-      "Volume surge above 1.5x",
-      "Composite score 66.55/100"
+      "Composite score 59.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.55,
+    "final_score": 59.05,
     "technical_score": 90.0,
     "momentum_score": 40.0,
-    "volume_score": 75.0,
+    "volume_score": 25.0,
     "fundamental_score": 42.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -357,7 +354,7 @@
     "eps_growth": -0.033,
     "roe": 0.51539004,
     "forward_pe": 18.87438,
-    "relative_volume": 1.673222681502275,
+    "relative_volume": 1.3266654459508553,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -373,49 +370,49 @@
       "annual": -0.019132852069258077
     },
     "risk": {
-      "volatility": 0.017662080612902326,
-      "annualized_volatility": 0.2803768376262889,
-      "maximum_drawdown": -0.2391957551966516,
-      "sharpe_ratio": 0.8272860131587744,
-      "sortino_ratio": 1.4267487086607435,
-      "calmar_ratio": 0.8911913230932235,
-      "beta": 0.5557088553005045,
-      "alpha": 0.1288039378601047,
-      "capm_expected_return": 0.10314789832181288,
-      "actual_return": 0.2319518361819176,
-      "market_return": 0.185614998461802
+      "volatility": 0.01766208447889555,
+      "annualized_volatility": 0.2803768989970288,
+      "maximum_drawdown": -0.2391957551966527,
+      "sharpe_ratio": 0.8272858910045512,
+      "sortino_ratio": 1.4267485111001426,
+      "calmar_ratio": 0.8911913230932175,
+      "beta": 0.5557010506234791,
+      "alpha": 0.12876560244594398,
+      "capm_expected_return": 0.10318625025790598,
+      "actual_return": 0.23195185270384996,
+      "market_return": 0.18568662078672382
     },
     "capm": {
-      "beta": 0.5557088553005045,
-      "alpha": 0.1288039378601047,
-      "capm_expected_return": 0.10314789832181288,
-      "actual_return": 0.2319518361819176,
-      "market_return": 0.185614998461802,
-      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.31%; realized alpha is 12.88%, meaning positive alpha versus CAPM."
+      "beta": 0.5557010506234791,
+      "alpha": 0.12876560244594398,
+      "capm_expected_return": 0.10318625025790598,
+      "actual_return": 0.23195185270384996,
+      "market_return": 0.18568662078672382,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.32%; realized alpha is 12.88%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2319518361819176,
+      "actual_return": 0.23195185270384996,
       "components": {
-        "market_component": 0.10314789832181288,
+        "market_component": 0.10318625025790598,
         "momentum_component": 0.0,
-        "volatility_drag": -0.00607536752525778,
-        "alpha_component": 0.1288039378601047
+        "volatility_drag": -0.006075379799405756,
+        "alpha_component": 0.12876560244594398
       },
       "component_weights_pct": {
-        "market_component": 43.33,
+        "market_component": 43.35,
         "momentum_component": 0.0,
         "volatility_drag": 2.55,
-        "alpha_component": 54.11
+        "alpha_component": 54.1
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
       "sma20": 204.4565002441406,
       "sma50": 199.8257992553711,
-      "sma200": 193.94445838928223,
-      "ema20": 205.19397221701894,
-      "ema50": 201.66551650537804,
-      "ema200": 196.4498436789701
+      "sma200": 193.94445831298827,
+      "ema20": 205.19397221703395,
+      "ema50": 201.6655165048461,
+      "ema200": 196.44984354383084
     },
     "momentum": {
       "3m": 0.052115793960677115,
@@ -425,8 +422,8 @@
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1183023.05,
-      "relative_volume": 1.673222681502275,
+      "average_volume": 1161067.4,
+      "relative_volume": 1.3266654459508553,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -444,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DRI\nRating: Watch | Score: 66.55/100 | Confidence: 56.14/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.87438\nNews/Catalyst: Darden Restaurants' Sales Trends Seen Holding Up Despite Macro Pressures, UBS Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DRI\nRating: Hold | Score: 59.05/100 | Confidence: 47.16/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.87438\nNews/Catalyst: Darden Restaurants' Sales Trends Seen Holding Up Despite Macro Pressures, UBS Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

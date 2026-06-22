@@ -1,10 +1,10 @@
 {
   "ticker": "T",
-  "generated_at": "2026-06-22T20:22:35.495153",
+  "generated_at": "2026-06-22T22:23:23.106406",
   "score": {
-    "final_score": 30.3,
+    "final_score": 31.05,
     "rating": "Drop",
-    "confidence": 14.63,
+    "confidence": 17.26,
     "risk_level": "Controlled",
     "categories": {
       "technical": 20.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 62.0,
       "risk": 100,
-      "catalyst": 20.0
+      "catalyst": 35.0
     },
     "technical": {
       "score": 20.0,
@@ -30,15 +30,15 @@
         "1m": -0.11351784553001032,
         "3m": -0.21118680567270787,
         "6m": -0.07253229513330128,
-        "12m": -0.16614125135467916
+        "12m": -0.16614119134479177
       },
       "acceleration": -0.1749,
       "evidence": []
     },
     "volume": {
       "score": 0,
-      "average_volume": 50260913.7,
-      "relative_volume": 1.2344796270585905,
+      "average_volume": 49809019.0,
+      "relative_volume": 1.0642285486489906,
       "accumulation_days": 4,
       "distribution_days": 9,
       "evidence": []
@@ -51,27 +51,28 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014453135657207867,
-        "annualized_volatility": 0.22943641568431258,
-        "maximum_drawdown": -0.23572650621018065,
-        "sharpe_ratio": 0.6942856277149342,
-        "sortino_ratio": 0.9738532542222222,
-        "calmar_ratio": 0.6032465628724754,
-        "beta": -0.017081817733183256,
-        "alpha": 0.16246504745631712,
-        "capm_expected_return": -0.003170641572269592,
-        "actual_return": 0.15929440588404753,
-        "market_return": 0.185614998461802
+        "volatility": 0.014453134094100815,
+        "annualized_volatility": 0.2294363908707574,
+        "maximum_drawdown": -0.23572650621018043,
+        "sharpe_ratio": 0.6942854280509531,
+        "sortino_ratio": 0.973853305956573,
+        "calmar_ratio": 0.6032462880757793,
+        "beta": -0.017074195612110033,
+        "alpha": 0.1624647925320338,
+        "capm_expected_return": -0.0031704496858642197,
+        "actual_return": 0.15929434284616958,
+        "market_return": 0.18568662078672382
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 20.0,
+      "score": 35.0,
       "evidence": [
-        "analyst revision"
+        "analyst revision",
+        "major news"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; major news"
   },
   "fundamentals": {
     "ticker": "T",
@@ -129,7 +130,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.2344796270585905,
+    "relative_volume": 1.0642285486489906,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -181,10 +182,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": false,
-    "bullish_news_score": 0,
-    "bearish_news_score": 0,
+    "bullish_news_score": 1,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.69276,
     "detail": {
       "earnings": {
@@ -229,7 +230,8 @@
       "eps_growth_implied": -16.17
     },
     "evidence": [
-      "analyst target/recommendation data is supportive"
+      "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance"
     ]
   },
   "analyst": {
@@ -250,6 +252,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Top Stock Reports for Visa, TotalEnergies & AT&T",
+        "source": "Zacks",
+        "published": "2026-06-22T20:19:00Z",
+        "summary": "New research highlights Visa, TotalEnergies and AT&T, outlining growth drivers, strategic investments and key risks shaping outlooks.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "As Anthropic Nears $1 Trillion Valuation, Tech Veterans Warn Against Repeating Intel\u2019s Biggest Mistake",
         "source": "24/7 Wall St.",
@@ -289,16 +301,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Is EchoStar Corporation (SATS) A Good Stock To Buy Now?",
-        "source": "Insider Monkey",
-        "published": "2026-06-22T12:31:54Z",
-        "summary": "Is SATS a good stock to buy? We came across a bullish thesis on EchoStar Corporation on r/ValueInvesting by OddAbbreviations7835. In this article, we will summarize the bulls\u2019 thesis on SATS. EchoStar Corporation\u2019s share was trading at $109.17 as of June 18th. SATS\u2019s forward P/E was 2.03 according to Yahoo Finance. EchoStar Corporation provides pay-tv services in [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -318,70 +320,70 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6512,
-    "probability_pct": 65.12,
+    "probability_of_outperformance": 0.6647,
+    "probability_pct": 66.47,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 30.3/100"
+      "Composite score 31.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 30.3,
+    "final_score": 31.05,
     "technical_score": 20.0,
     "momentum_score": 0,
     "volume_score": 0,
     "fundamental_score": 62.0,
     "risk_score": 100,
-    "catalyst_score": 20.0,
+    "catalyst_score": 35.0,
     "revenue_growth": 0.029,
     "eps_growth": -0.113,
     "roe": 0.18370001,
     "forward_pe": 8.701333,
-    "relative_volume": 1.2344796270585905,
+    "relative_volume": 1.0642285486489906,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
       "daily": 0.004089057321762013,
       "weekly": -0.0627650359213282,
       "monthly": -0.11351784553001032,
-      "annual": -0.16614125135467916
+      "annual": -0.16614119134479177
     },
     "risk": {
-      "volatility": 0.014453135657207867,
-      "annualized_volatility": 0.22943641568431258,
-      "maximum_drawdown": -0.23572650621018065,
-      "sharpe_ratio": 0.6942856277149342,
-      "sortino_ratio": 0.9738532542222222,
-      "calmar_ratio": 0.6032465628724754,
-      "beta": -0.017081817733183256,
-      "alpha": 0.16246504745631712,
-      "capm_expected_return": -0.003170641572269592,
-      "actual_return": 0.15929440588404753,
-      "market_return": 0.185614998461802
+      "volatility": 0.014453134094100815,
+      "annualized_volatility": 0.2294363908707574,
+      "maximum_drawdown": -0.23572650621018043,
+      "sharpe_ratio": 0.6942854280509531,
+      "sortino_ratio": 0.973853305956573,
+      "calmar_ratio": 0.6032462880757793,
+      "beta": -0.017074195612110033,
+      "alpha": 0.1624647925320338,
+      "capm_expected_return": -0.0031704496858642197,
+      "actual_return": 0.15929434284616958,
+      "market_return": 0.18568662078672382
     },
     "capm": {
-      "beta": -0.017081817733183256,
-      "alpha": 0.16246504745631712,
-      "capm_expected_return": -0.003170641572269592,
-      "actual_return": 0.15929440588404753,
-      "market_return": 0.185614998461802,
+      "beta": -0.017074195612110033,
+      "alpha": 0.1624647925320338,
+      "capm_expected_return": -0.0031704496858642197,
+      "actual_return": 0.15929434284616958,
+      "market_return": 0.18568662078672382,
       "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.32%; realized alpha is 16.25%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.15929440588404753,
+      "actual_return": 0.15929434284616958,
       "components": {
-        "market_component": -0.003170641572269592,
+        "market_component": -0.0031704496858642197,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": 0.16246504745631712
+        "alpha_component": 0.1624647925320338
       },
       "component_weights_pct": {
         "market_component": 1.91,
@@ -394,21 +396,21 @@
     "trend": {
       "sma20": 23.555499839782716,
       "sma50": 24.7757999420166,
-      "sma200": 25.65894109725952,
-      "ema20": 23.39040267731561,
-      "ema50": 24.53049417777681,
-      "ema200": 25.421390757450254
+      "sma200": 25.65894106864929,
+      "ema20": 23.390402677315603,
+      "ema50": 24.530494177663734,
+      "ema200": 25.421390768953366
     },
     "momentum": {
       "3m": -0.21118680567270787,
       "6m": -0.07253229513330128,
-      "12m": -0.16614125135467916,
+      "12m": -0.16614119134479177,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 50260913.7,
-      "relative_volume": 1.2344796270585905,
+      "average_volume": 49809019.0,
+      "relative_volume": 1.0642285486489906,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -426,5 +428,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: T\nRating: Drop | Score: 30.3/100 | Confidence: 14.63/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 22.010000228881836 | Resistance: 29.100000381469727\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.701333\nNews/Catalyst: As Anthropic Nears $1 Trillion Valuation, Tech Veterans Warn Against Repeating Intel\u2019s Biggest Mistake\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: T\nRating: Drop | Score: 31.05/100 | Confidence: 17.26/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 22.010000228881836 | Resistance: 29.100000381469727\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.701333\nNews/Catalyst: Top Stock Reports for Visa, TotalEnergies & AT&T\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,10 +1,10 @@
 {
   "ticker": "ANET",
-  "generated_at": "2026-06-22T20:21:42.483474",
+  "generated_at": "2026-06-22T22:22:33.887278",
   "score": {
-    "final_score": 72.65,
+    "final_score": 73.4,
     "rating": "Watch",
-    "confidence": 62.89,
+    "confidence": 65.32,
     "risk_level": "Moderate",
     "categories": {
       "technical": 90.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 60.0,
-      "catalyst": 65.0
+      "catalyst": 80.0
     },
     "technical": {
       "score": 90.0,
@@ -75,11 +75,11 @@
         "sharpe_ratio": 0.9807668006642934,
         "sortino_ratio": 1.2495242846575467,
         "calmar_ratio": 0.9160720822149402,
-        "beta": 1.7788779380756312,
-        "alpha": 0.19548598511803666,
-        "capm_expected_return": 0.3301864257396418,
+        "beta": 1.7789822525721666,
+        "alpha": 0.1953392079379988,
+        "capm_expected_return": 0.33033320291967966,
         "actual_return": 0.5256724108576785,
-        "market_return": 0.185614998461802
+        "market_return": 0.18568662078672382
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -87,11 +87,12 @@
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -205,9 +206,9 @@
     "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 5,
     "bearish_news_score": 0,
     "institutional_ownership": 0.72830003,
     "detail": {
@@ -256,6 +257,7 @@
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -277,6 +279,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Cisco Stock Looks Strong, But One Number Says Be Careful",
+        "source": "Trefis",
+        "published": "2026-06-22T21:08:34Z",
+        "summary": "After an 87% run over the last year (as of June 18), it\u2019s hard to find much fault with Cisco Systems (CSCO) stock. The company is posting record revenue, and its AI-related orders are surging. But when a stock is priced for perfection, sitting near its high, the most important signals are often the quiet ones that run counter to the main story.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Exclusive: Upscale AI wants to be the next Cisco\u2014and it just raised another $190 million",
         "source": "Fortune",
@@ -316,16 +328,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Nvidia Claims No. 1 Spot in $10 Billion AI Networking Market",
-        "source": "GuruFocus.com",
-        "published": "2026-06-18T12:15:40Z",
-        "summary": "Nvidia Wins One of the Biggest Battles in the AI Infrastructure Race",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -345,26 +347,26 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8977,
-    "probability_pct": 89.77,
+    "probability_of_outperformance": 0.9031,
+    "probability_pct": 90.31,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 72.65/100"
+      "Composite score 73.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 72.65,
+    "final_score": 73.4,
     "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 60.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 80.0,
     "revenue_growth": 0.351,
     "eps_growth": 0.25,
     "roe": 0.31520998,
@@ -375,7 +377,7 @@
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -391,33 +393,33 @@
       "sharpe_ratio": 0.9807668006642934,
       "sortino_ratio": 1.2495242846575467,
       "calmar_ratio": 0.9160720822149402,
-      "beta": 1.7788779380756312,
-      "alpha": 0.19548598511803666,
-      "capm_expected_return": 0.3301864257396418,
+      "beta": 1.7789822525721666,
+      "alpha": 0.1953392079379988,
+      "capm_expected_return": 0.33033320291967966,
       "actual_return": 0.5256724108576785,
-      "market_return": 0.185614998461802
+      "market_return": 0.18568662078672382
     },
     "capm": {
-      "beta": 1.7788779380756312,
-      "alpha": 0.19548598511803666,
-      "capm_expected_return": 0.3301864257396418,
+      "beta": 1.7789822525721666,
+      "alpha": 0.1953392079379988,
+      "capm_expected_return": 0.33033320291967966,
       "actual_return": 0.5256724108576785,
-      "market_return": 0.185614998461802,
-      "interpretation": "Beta 1.78: Moves roughly 78% more than the market. CAPM expected return is 33.02%; realized alpha is 19.55%, meaning positive alpha versus CAPM."
+      "market_return": 0.18568662078672382,
+      "interpretation": "Beta 1.78: Moves roughly 78% more than the market. CAPM expected return is 33.03%; realized alpha is 19.53%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
       "actual_return": 0.5256724108576785,
       "components": {
-        "market_component": 0.3301864257396418,
+        "market_component": 0.33033320291967966,
         "momentum_component": 0.23359929546462754,
         "volatility_drag": -0.05719620821211113,
-        "alpha_component": 0.19548598511803666
+        "alpha_component": 0.1953392079379988
       },
       "component_weights_pct": {
-        "market_component": 40.44,
+        "market_component": 40.46,
         "momentum_component": 28.61,
         "volatility_drag": 7.01,
-        "alpha_component": 23.94
+        "alpha_component": 23.92
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
@@ -456,5 +458,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ANET\nRating: Watch | Score: 72.65/100 | Confidence: 62.89/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 38.5231\nNews/Catalyst: Exclusive: Upscale AI wants to be the next Cisco\u2014and it just raised another $190 million\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ANET\nRating: Watch | Score: 73.4/100 | Confidence: 65.32/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 38.5231\nNews/Catalyst: Cisco Stock Looks Strong, But One Number Says Be Careful\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

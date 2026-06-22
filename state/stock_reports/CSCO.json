@@ -1,10 +1,10 @@
 {
   "ticker": "CSCO",
-  "generated_at": "2026-06-22T20:22:17.659395",
+  "generated_at": "2026-06-22T22:23:08.264688",
   "score": {
-    "final_score": 73.15,
+    "final_score": 73.9,
     "rating": "Watch",
-    "confidence": 62.71,
+    "confidence": 65.55,
     "risk_level": "Controlled",
     "categories": {
       "technical": 80.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 80.0,
@@ -35,7 +35,7 @@
         "1m": 0.06278968431119569,
         "3m": 0.5735804274846834,
         "6m": 0.6163469490261337,
-        "12m": 0.888324904387517
+        "12m": 0.8883251282390503
       },
       "acceleration": 0.2654,
       "evidence": [
@@ -49,8 +49,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 25360024.9,
-      "relative_volume": 0.6613163065151407,
+      "average_volume": 25511236.45,
+      "relative_volume": 0.775941575344538,
       "accumulation_days": 2,
       "distribution_days": 1,
       "evidence": [
@@ -68,27 +68,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.017270187040948255,
-        "annualized_volatility": 0.2741557200355173,
-        "maximum_drawdown": -0.17457804201514704,
-        "sharpe_ratio": 1.9737428751376813,
-        "sortino_ratio": 2.5903576006522893,
-        "calmar_ratio": 3.7462257916322157,
-        "beta": 0.8917677632904503,
-        "alpha": 0.3755874270869015,
-        "capm_expected_return": 0.16552547201144152,
-        "actual_return": 0.541112899098343,
-        "market_return": 0.185614998461802
+        "volatility": 0.01727019405326127,
+        "annualized_volatility": 0.2741558313525354,
+        "maximum_drawdown": -0.17457815256352072,
+        "sharpe_ratio": 1.9737421827220447,
+        "sortino_ratio": 2.590356738678419,
+        "calmar_ratio": 3.746223419404275,
+        "beta": 0.8918223254895447,
+        "alpha": 0.37551345501741873,
+        "capm_expected_return": 0.16559947396231126,
+        "actual_return": 0.54111292897973,
+        "market_return": 0.18568662078672382
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -150,7 +151,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6613163065151407,
+    "relative_volume": 0.775941575344538,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -202,9 +203,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.8286,
     "detail": {
@@ -252,6 +253,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -273,6 +275,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Cisco Stock Looks Strong, But One Number Says Be Careful",
+        "source": "Trefis",
+        "published": "2026-06-22T21:08:34Z",
+        "summary": "After an 87% run over the last year (as of June 18), it\u2019s hard to find much fault with Cisco Systems (CSCO) stock. The company is posting record revenue, and its AI-related orders are surging. But when a stock is priced for perfection, sitting near its high, the most important signals are often the quiet ones that run counter to the main story.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Why Cisco (CSCO) Is Turning AI Infrastructure Into a Hybrid Data Center Security Opportunity",
         "source": "Insider Monkey",
@@ -312,16 +324,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Cisco is Overvalued at 7.01X P/S: Should You Still Buy the Stock?",
-        "source": "Zacks",
-        "published": "2026-06-19T15:46:00Z",
-        "summary": "CSCO's AI infrastructure orders, network refresh cycle and security momentum support its premium valuation and long-term growth prospects.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -341,98 +343,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8691,
-    "probability_pct": 86.91,
+    "probability_of_outperformance": 0.8758,
+    "probability_pct": 87.58,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 73.15/100"
+      "Composite score 73.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 73.15,
+    "final_score": 73.9,
     "technical_score": 80.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.12,
     "eps_growth": 0.371,
     "roe": 0.25229,
     "forward_pe": 25.45155,
-    "relative_volume": 0.6613163065151407,
+    "relative_volume": 0.775941575344538,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
       "daily": 0.01664712940044022,
       "weekly": 0.0035507870404116737,
       "monthly": 0.06278968431119569,
-      "annual": 0.888324904387517
+      "annual": 0.8883251282390503
     },
     "risk": {
-      "volatility": 0.017270187040948255,
-      "annualized_volatility": 0.2741557200355173,
-      "maximum_drawdown": -0.17457804201514704,
-      "sharpe_ratio": 1.9737428751376813,
-      "sortino_ratio": 2.5903576006522893,
-      "calmar_ratio": 3.7462257916322157,
-      "beta": 0.8917677632904503,
-      "alpha": 0.3755874270869015,
-      "capm_expected_return": 0.16552547201144152,
-      "actual_return": 0.541112899098343,
-      "market_return": 0.185614998461802
+      "volatility": 0.01727019405326127,
+      "annualized_volatility": 0.2741558313525354,
+      "maximum_drawdown": -0.17457815256352072,
+      "sharpe_ratio": 1.9737421827220447,
+      "sortino_ratio": 2.590356738678419,
+      "calmar_ratio": 3.746223419404275,
+      "beta": 0.8918223254895447,
+      "alpha": 0.37551345501741873,
+      "capm_expected_return": 0.16559947396231126,
+      "actual_return": 0.54111292897973,
+      "market_return": 0.18568662078672382
     },
     "capm": {
-      "beta": 0.8917677632904503,
-      "alpha": 0.3755874270869015,
-      "capm_expected_return": 0.16552547201144152,
-      "actual_return": 0.541112899098343,
-      "market_return": 0.185614998461802,
-      "interpretation": "Beta 0.89: Moves roughly in line with the market. CAPM expected return is 16.55%; realized alpha is 37.56%, meaning positive alpha versus CAPM."
+      "beta": 0.8918223254895447,
+      "alpha": 0.37551345501741873,
+      "capm_expected_return": 0.16559947396231126,
+      "actual_return": 0.54111292897973,
+      "market_return": 0.18568662078672382,
+      "interpretation": "Beta 0.89: Moves roughly in line with the market. CAPM expected return is 16.56%; realized alpha is 37.55%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.541112899098343,
+      "actual_return": 0.54111292897973,
       "components": {
-        "market_component": 0.16552547201144152,
-        "momentum_component": 0.22208122609687925,
-        "volatility_drag": -0.004831144007103461,
-        "alpha_component": 0.3755874270869015
+        "market_component": 0.16559947396231126,
+        "momentum_component": 0.22208128205976257,
+        "volatility_drag": -0.004831166270507082,
+        "alpha_component": 0.37551345501741873
       },
       "component_weights_pct": {
-        "market_component": 21.55,
+        "market_component": 21.56,
         "momentum_component": 28.92,
         "volatility_drag": 0.63,
-        "alpha_component": 48.9
+        "alpha_component": 48.89
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
       "sma20": 121.46600036621093,
       "sma50": 105.80380004882812,
-      "sma200": 82.41939243316651,
-      "ema20": 118.64719151846097,
-      "ema50": 108.60078977294691,
-      "ema200": 86.65682130561306
+      "sma200": 82.41939231872558,
+      "ema20": 118.64719151845918,
+      "ema50": 108.6007897685833,
+      "ema200": 86.65682119058272
     },
     "momentum": {
       "3m": 0.5735804274846834,
       "6m": 0.6163469490261337,
-      "12m": 0.888324904387517,
+      "12m": 0.8883251282390503,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 25360024.9,
-      "relative_volume": 0.6613163065151407,
+      "average_volume": 25511236.45,
+      "relative_volume": 0.775941575344538,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -450,5 +452,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CSCO\nRating: Watch | Score: 73.15/100 | Confidence: 62.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 25.45155\nNews/Catalyst: Why Cisco (CSCO) Is Turning AI Infrastructure Into a Hybrid Data Center Security Opportunity\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CSCO\nRating: Watch | Score: 73.9/100 | Confidence: 65.55/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 25.45155\nNews/Catalyst: Cisco Stock Looks Strong, But One Number Says Be Careful\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
