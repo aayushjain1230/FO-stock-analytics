@@ -1,23 +1,24 @@
 {
   "ticker": "AEE",
-  "generated_at": "2026-06-21T17:41:56.172487",
+  "generated_at": "2026-06-22T17:28:56.453321",
   "score": {
-    "final_score": 54.2,
+    "final_score": 60.45,
     "rating": "Hold",
-    "confidence": 43.72,
+    "confidence": 47.99,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 55.0,
-      "momentum": 45.0,
+      "technical": 65.0,
+      "momentum": 60.0,
       "volume": 0,
       "fundamental": 73.0,
       "risk": 100,
       "catalyst": 65.0
     },
     "technical": {
-      "score": 55.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
+        "Price above SMA50",
         "Price above SMA200",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
@@ -25,28 +26,29 @@
       ],
       "support": 105.08999633789062,
       "resistance": 114.31999969482422,
-      "risk_reward": 1.58
+      "risk_reward": 0.91
     },
     "momentum": {
-      "score": 45.0,
+      "score": 60.0,
       "returns": {
-        "1m": 0.004000043420503863,
-        "3m": -0.001131788372194631,
-        "6m": 0.12439419207480018,
-        "12m": 0.1842160223241558
+        "1m": 0.018352597345816735,
+        "3m": 0.04360501505629588,
+        "6m": 0.1309916684487915,
+        "12m": 0.19722146619723402
       },
-      "acceleration": -0.0633,
+      "acceleration": -0.0219,
       "evidence": [
         "1m return is positive",
+        "3m return is positive",
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 1729805.0,
-      "relative_volume": 1.389520784134628,
-      "accumulation_days": 2,
+      "average_volume": 1647179.05,
+      "relative_volume": 0.17726123945056246,
+      "accumulation_days": 1,
       "distribution_days": 3,
       "evidence": []
     },
@@ -60,17 +62,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.010918107593680258,
-        "annualized_volatility": 0.17331958488194282,
+        "volatility": 0.010911999314071417,
+        "annualized_volatility": 0.17322261894924218,
         "maximum_drawdown": -0.08450908350241726,
-        "sharpe_ratio": 1.4912421917594085,
-        "sortino_ratio": 2.1495776053699527,
-        "calmar_ratio": 3.2597920888190344,
-        "beta": 0.13639929819730123,
-        "alpha": 0.23328389253473086,
-        "capm_expected_return": 0.0251775850994484,
-        "actual_return": 0.25846147763417926,
-        "market_return": 0.18458735075769295
+        "sharpe_ratio": 1.524215258895472,
+        "sortino_ratio": 2.1918476894061336,
+        "calmar_ratio": 3.344219087411657,
+        "beta": 0.13622391551485735,
+        "alpha": 0.23868201909192072,
+        "capm_expected_return": 0.025346539896350093,
+        "actual_return": 0.2640285589882708,
+        "market_return": 0.18606527202329357
       },
       "evidence": []
     },
@@ -78,12 +80,12 @@
       "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "AEE",
@@ -92,7 +94,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Regulated Electric",
     "exchange": "NYQ",
-    "market_cap": 30074597376.0,
+    "market_cap": 30395629568.0,
     "revenue_growth": 0.037,
     "eps_growth": 0.196,
     "fcf_growth": null,
@@ -109,14 +111,14 @@
     "cash_position": 13000000.0,
     "total_debt": 21304000512.0,
     "interest_coverage": null,
-    "forward_pe": 18.70866,
-    "trailing_pe": 19.544964,
+    "forward_pe": 18.908367,
+    "trailing_pe": 19.753597,
     "peg": 2.54,
-    "price_to_book": 2.2181172,
-    "price_to_sales": 3.519555,
+    "price_to_book": 2.2417946,
+    "price_to_sales": 3.5571246,
     "enterprise_to_ebitda": 13.456,
     "enterprise_to_revenue": 6.026,
-    "fcf_yield": -0.06215793856285473,
+    "fcf_yield": -0.06150143960064726,
     "institutional_ownership": 0.86327004,
     "insider_ownership": 0.0030899998,
     "short_interest": 9666747.0,
@@ -133,18 +135,17 @@
     "next_earnings_date": "1778011200",
     "eps_current_year": 5.56,
     "eps_forward": 5.80854,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 52.126358783820116,
+    "rsi": 66.26184178418788,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.389520784134628,
-    "price_above_sma50": false,
+    "relative_volume": 0.17726123945056246,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 105.08999633789062,
     "resistance": 114.31999969482422
   },
@@ -190,9 +191,9 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 3,
@@ -237,12 +238,12 @@
         "last_surprise_pct": 0.090900004,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.3,
+      "analyst_upside_pct": 9.14,
       "eps_growth_implied": 4.47
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -333,21 +334,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7996,
-    "probability_pct": 79.96,
+    "probability_of_outperformance": 0.8145,
+    "probability_pct": 81.45,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Analyst data is supportive",
-      "Composite score 54.2/100"
+      "Composite score 60.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 54.2,
-    "technical_score": 55.0,
-    "momentum_score": 45.0,
+    "final_score": 60.45,
+    "technical_score": 65.0,
+    "momentum_score": 60.0,
     "volume_score": 0,
     "fundamental_score": 73.0,
     "risk_score": 100,
@@ -355,93 +355,100 @@
     "revenue_growth": 0.037,
     "eps_growth": 0.196,
     "roe": 0.117469996,
-    "forward_pe": 18.70866,
-    "relative_volume": 1.389520784134628,
+    "forward_pe": 18.908367,
+    "relative_volume": 0.17726123945056246,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.002295262616624605,
-      "weekly": 0.003879890706192324,
-      "monthly": 0.004000043420503863,
-      "annual": 0.1842160223241558
+      "daily": 0.011410743664836298,
+      "weekly": 0.008348657450544694,
+      "monthly": 0.018352597345816735,
+      "annual": 0.19722146619723402
     },
     "risk": {
-      "volatility": 0.010918107593680258,
-      "annualized_volatility": 0.17331958488194282,
+      "volatility": 0.010911999314071417,
+      "annualized_volatility": 0.17322261894924218,
       "maximum_drawdown": -0.08450908350241726,
-      "sharpe_ratio": 1.4912421917594085,
-      "sortino_ratio": 2.1495776053699527,
-      "calmar_ratio": 3.2597920888190344,
-      "beta": 0.13639929819730123,
-      "alpha": 0.23328389253473086,
-      "capm_expected_return": 0.0251775850994484,
-      "actual_return": 0.25846147763417926,
-      "market_return": 0.18458735075769295
+      "sharpe_ratio": 1.524215258895472,
+      "sortino_ratio": 2.1918476894061336,
+      "calmar_ratio": 3.344219087411657,
+      "beta": 0.13622391551485735,
+      "alpha": 0.23868201909192072,
+      "capm_expected_return": 0.025346539896350093,
+      "actual_return": 0.2640285589882708,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.13639929819730123,
-      "alpha": 0.23328389253473086,
-      "capm_expected_return": 0.0251775850994484,
-      "actual_return": 0.25846147763417926,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.14: Moves roughly 86% less than the market. CAPM expected return is 2.52%; realized alpha is 23.33%, meaning positive alpha versus CAPM."
+      "beta": 0.13622391551485735,
+      "alpha": 0.23868201909192072,
+      "capm_expected_return": 0.025346539896350093,
+      "actual_return": 0.2640285589882708,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.14: Moves roughly 86% less than the market. CAPM expected return is 2.53%; realized alpha is 23.87%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.25846147763417926,
+      "actual_return": 0.2640285589882708,
       "components": {
-        "market_component": 0.0251775850994484,
-        "momentum_component": 0.04605400558103895,
+        "market_component": 0.025346539896350093,
+        "momentum_component": 0.049305366549308505,
         "volatility_drag": -0.0,
-        "alpha_component": 0.23328389253473086
+        "alpha_component": 0.23868201909192072
       },
       "component_weights_pct": {
-        "market_component": 8.27,
-        "momentum_component": 15.12,
+        "market_component": 8.09,
+        "momentum_component": 15.74,
         "volatility_drag": 0.0,
-        "alpha_component": 76.61
+        "alpha_component": 76.17
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 108.21143760681153,
-      "sma50": 109.30818130493164,
-      "sma200": 104.32725292205811,
-      "ema20": 108.47424621917895,
-      "ema50": 108.58520273763841,
-      "ema200": 104.44885043752767
+      "sma20": 108.25337944030761,
+      "sma50": 109.23598510742187,
+      "sma200": 104.39104347229004,
+      "ema20": 108.61098502326713,
+      "ema50": 108.63715571396143,
+      "ema200": 104.5038137827691
     },
     "momentum": {
-      "3m": -0.001131788372194631,
-      "6m": 0.12439419207480018,
-      "12m": 0.1842160223241558,
+      "3m": 0.04360501505629588,
+      "6m": 0.1309916684487915,
+      "12m": 0.19722146619723402,
       "24m": 0.0,
-      "score": 50.0
+      "score": 75.0
     },
     "volume": {
-      "average_volume": 1729805.0,
-      "relative_volume": 1.389520784134628,
+      "average_volume": 1647179.05,
+      "relative_volume": 0.17726123945056246,
       "volume_spike": false
     },
-    "volatility_regime": "Normal volatility",
+    "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 60,
+      "score": 70,
       "label": "Watch closely"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-21",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-22",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: AEE\nRating: Hold | Score: 54.2/100 | Confidence: 43.72/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 105.08999633789062 | Resistance: 114.31999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.70866\nNews/Catalyst: Why Ameren (AEE) is a Top Dividend Stock for Your Portfolio\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AEE\nRating: Hold | Score: 60.45/100 | Confidence: 47.99/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 105.08999633789062 | Resistance: 114.31999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 18.908367\nNews/Catalyst: Why Ameren (AEE) is a Top Dividend Stock for Your Portfolio\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

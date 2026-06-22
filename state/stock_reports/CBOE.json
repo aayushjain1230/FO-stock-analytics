@@ -1,51 +1,50 @@
 {
   "ticker": "CBOE",
-  "generated_at": "2026-06-21T17:42:22.632840",
+  "generated_at": "2026-06-22T17:29:50.075981",
   "score": {
-    "final_score": 41.7,
+    "final_score": 39.7,
     "rating": "Drop",
-    "confidence": 39.56,
+    "confidence": 28.71,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 10.0,
+      "technical": 20.0,
       "momentum": 35.0,
-      "volume": 25.0,
+      "volume": 0,
       "fundamental": 78.0,
       "risk": 85.0,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 20.0,
       "evidence": [
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 249.10000610351562,
       "resistance": 366.70001220703125,
-      "risk_reward": 0.0
+      "risk_reward": 19.78
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.3122789395230773,
-        "3m": -0.12231595644498405,
-        "6m": 0.005014230554873711,
-        "12m": 0.1101482054720555
+        "1m": -0.29265780373670625,
+        "3m": -0.10091935250925332,
+        "6m": 0.014526129350273642,
+        "12m": 0.12444798607986418
       },
-      "acceleration": -0.1248,
+      "acceleration": -0.1082,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1935850.0,
-      "relative_volume": 1.5761551773122917,
+      "score": 0,
+      "average_volume": 1932765.15,
+      "relative_volume": 0.5018214447833975,
       "accumulation_days": 3,
-      "distribution_days": 10,
-      "evidence": [
-        "Relative volume is 1.58x"
-      ]
+      "distribution_days": 9,
+      "evidence": []
     },
     "fundamental": {
       "score": 78.0,
@@ -57,31 +56,30 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01667549946421799,
-        "annualized_volatility": 0.26471534742066977,
-        "maximum_drawdown": -0.31927430258947354,
-        "sharpe_ratio": 0.8660858693968576,
-        "sortino_ratio": 1.1020852069825822,
-        "calmar_ratio": 0.6701447908350153,
-        "beta": -0.21880663113491686,
-        "alpha": 0.26965515818293195,
-        "capm_expected_return": -0.04038893636941004,
-        "actual_return": 0.22926622181352194,
-        "market_return": 0.18458735075769295
+        "volatility": 0.016653438408874833,
+        "annualized_volatility": 0.264365139024084,
+        "maximum_drawdown": -0.31927430258947365,
+        "sharpe_ratio": 0.9225407575822614,
+        "sortino_ratio": 1.17271615882209,
+        "calmar_ratio": 0.7264628188673216,
+        "beta": -0.22121469625484816,
+        "alpha": 0.2850479882678269,
+        "capm_expected_return": -0.04116037263420858,
+        "actual_return": 0.2438876156336183,
+        "market_return": 0.18606527202329357
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "earnings surprise",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Relative volume is 1.58x; eps growth is strong; earnings surprise"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "CBOE",
@@ -90,7 +88,7 @@
     "sector": "Financial Services",
     "industry": "Financial Data & Stock Exchanges",
     "exchange": "BTS",
-    "market_cap": 26069258240.0,
+    "market_cap": 26641715200.0,
     "revenue_growth": 0.065,
     "eps_growth": 0.544,
     "fcf_growth": null,
@@ -107,14 +105,14 @@
     "cash_position": 2136199936.0,
     "total_debt": 1584600064.0,
     "interest_coverage": null,
-    "forward_pe": 16.927235,
-    "trailing_pe": 21.272417,
+    "forward_pe": 17.29894,
+    "trailing_pe": 21.73954,
     "peg": 2.26,
-    "price_to_book": 4.8523455,
-    "price_to_sales": 5.440162,
+    "price_to_book": 4.9588985,
+    "price_to_sales": 5.5596232,
     "enterprise_to_ebitda": 14.302,
     "enterprise_to_revenue": 5.325,
-    "fcf_yield": 0.03847731296247269,
+    "fcf_yield": 0.03765054165881932,
     "institutional_ownership": 0.91811997,
     "insider_ownership": 0.0025499999,
     "short_interest": 2549419.0,
@@ -131,18 +129,17 @@
     "next_earnings_date": "1777638600",
     "eps_current_year": 11.71,
     "eps_forward": 14.71593,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 21.244716930985476,
+    "rsi": 30.729462097821923,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.5761551773122917,
+    "relative_volume": 0.5018214447833975,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "volume surge",
+    "setup_type": "No clear setup",
     "support": 249.10000610351562,
     "resistance": 366.70001220703125
   },
@@ -191,9 +188,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 0,
     "bearish_news_score": 0,
     "institutional_ownership": 0.91811997,
     "detail": {
@@ -235,12 +232,11 @@
         "last_surprise_pct": 0.096599996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 31.24,
+      "analyst_upside_pct": 28.42,
       "eps_growth_implied": 25.67
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -263,6 +259,46 @@
     "available": true,
     "items": [
       {
+        "headline": "Charles Schwab enters prediction markets with S&P 500 options",
+        "source": "Quartz",
+        "published": "2026-06-22T12:21:41Z",
+        "summary": "The brokerage is partnering with Cboe to offer contracts that pay a fixed sum or nothing based on where the index closes",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Schwab's Prediction Market Push: What Investors Should Know",
+        "source": "Zacks",
+        "published": "2026-06-22T12:05:00Z",
+        "summary": "SCHW plans to launch S&P 500-linked prediction market contracts with Cboe. This will likely broaden retail trading options and strengthen the platform's appeal.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Schwab plots S&P 500 prediction markets push with Cboe",
+        "source": "TheStreet",
+        "published": "2026-06-22T03:33:00Z",
+        "summary": "Major financial firms are racing to enter the prediction market space after the sector generated billions in trading volume over the past year. Charles Schwab, which oversees $11.77 trillion in client assets across 39.1 million active brokerage accounts, is now preparing its own entry into ...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Charles Schwab (SCHW) Launches Yes Or No S&P 500 Options With Cboe",
+        "source": "Simply Wall St.",
+        "published": "2026-06-21T18:07:27Z",
+        "summary": "Charles Schwab (NYSE:SCHW) is partnering with Cboe Global Markets to launch yes or no options tied to the S&P 500. The new products track simple binary outcomes, bringing a prediction market style structure into Schwab's retail trading platform. This expands Schwab's menu of listed derivatives beyond traditional options and futures. Charles Schwab enters this product rollout with its stock trading at $91.7, after a gain of 79.9% over the past 3 years and 32.8% over 5 years. The move into...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Lower Fee or Bigger Bitcoin ETF Scale? HODL vs. IBIT",
         "source": "Motley Fool",
         "published": "2026-06-20T22:16:32Z",
@@ -271,46 +307,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Schwab Plans S&P 500 Prediction Markets as Event Trading Moves Mainstream",
-        "source": "CryptoProwl",
-        "published": "2026-06-20T01:31:00Z",
-        "summary": "Charles Schwab (NYSE: $SCHW) is preparing to enter the prediction-markets race with a product built around the S&am...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Charles Schwab Planning to Roll Out S&P 500 Prediction Markets With Cboe: WSJ",
-        "source": "decrypt",
-        "published": "2026-06-19T20:02:32Z",
-        "summary": "Global financial institution Charles Schwab is the latest firm hoping to steal a piece of the growing prediction market pie.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Charles Schwab Breaks Into the Prediction Market Business",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-19T15:12:00Z",
-        "summary": "The brokerage is working with Cboe to offer yes-or-no contracts tied to the performance of the S&P 500 index.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "CME Stock Nears 52-Week Low After a 19.8% Drop: Time to Hold or Exit?",
-        "source": "Zacks",
-        "published": "2026-06-19T14:40:00Z",
-        "summary": "CME Group expands its product lineup and global reach while benefiting from electronic trading growth and strong capital returns.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -330,99 +326,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7583,
-    "probability_pct": 75.83,
+    "probability_of_outperformance": 0.7076,
+    "probability_pct": 70.76,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 41.7/100"
+      "Composite score 39.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.7,
-    "technical_score": 10.0,
+    "final_score": 39.7,
+    "technical_score": 20.0,
     "momentum_score": 35.0,
-    "volume_score": 25.0,
+    "volume_score": 0,
     "fundamental_score": 78.0,
     "risk_score": 85.0,
-    "catalyst_score": 45.0,
+    "catalyst_score": 30.0,
     "revenue_growth": 0.065,
     "eps_growth": 0.544,
     "roe": 0.2514,
-    "forward_pe": 16.927235,
-    "relative_volume": 1.5761551773122917,
+    "forward_pe": 17.29894,
+    "relative_volume": 0.5018214447833975,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.021948236225631357,
-      "weekly": -0.1581615030696517,
-      "monthly": -0.3122789395230773,
-      "annual": 0.1101482054720555
+      "daily": 0.02272175136345944,
+      "weekly": -0.1361432594917159,
+      "monthly": -0.29265780373670625,
+      "annual": 0.12444798607986418
     },
     "risk": {
-      "volatility": 0.01667549946421799,
-      "annualized_volatility": 0.26471534742066977,
-      "maximum_drawdown": -0.31927430258947354,
-      "sharpe_ratio": 0.8660858693968576,
-      "sortino_ratio": 1.1020852069825822,
-      "calmar_ratio": 0.6701447908350153,
-      "beta": -0.21880663113491686,
-      "alpha": 0.26965515818293195,
-      "capm_expected_return": -0.04038893636941004,
-      "actual_return": 0.22926622181352194,
-      "market_return": 0.18458735075769295
+      "volatility": 0.016653438408874833,
+      "annualized_volatility": 0.264365139024084,
+      "maximum_drawdown": -0.31927430258947365,
+      "sharpe_ratio": 0.9225407575822614,
+      "sortino_ratio": 1.17271615882209,
+      "calmar_ratio": 0.7264628188673216,
+      "beta": -0.22121469625484816,
+      "alpha": 0.2850479882678269,
+      "capm_expected_return": -0.04116037263420858,
+      "actual_return": 0.2438876156336183,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": -0.21880663113491686,
-      "alpha": 0.26965515818293195,
-      "capm_expected_return": -0.04038893636941004,
-      "actual_return": 0.22926622181352194,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta -0.22: Moves roughly 122% less than the market. CAPM expected return is -4.04%; realized alpha is 26.97%, meaning positive alpha versus CAPM."
+      "beta": -0.22121469625484816,
+      "alpha": 0.2850479882678269,
+      "capm_expected_return": -0.04116037263420858,
+      "actual_return": 0.2438876156336183,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta -0.22: Moves roughly 122% less than the market. CAPM expected return is -4.12%; realized alpha is 28.50%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.22926622181352194,
+      "actual_return": 0.2438876156336183,
       "components": {
-        "market_component": -0.04038893636941004,
-        "momentum_component": 0.027537051368013876,
-        "volatility_drag": -0.0029430694841339534,
-        "alpha_component": 0.26965515818293195
+        "market_component": -0.04116037263420858,
+        "momentum_component": 0.031111996519966045,
+        "volatility_drag": -0.0028730278048167968,
+        "alpha_component": 0.2850479882678269
       },
       "component_weights_pct": {
-        "market_component": 11.86,
-        "momentum_component": 8.09,
-        "volatility_drag": 0.86,
-        "alpha_component": 79.19
+        "market_component": 11.43,
+        "momentum_component": 8.64,
+        "volatility_drag": 0.8,
+        "alpha_component": 79.14
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 301.9983871459961,
-      "sma50": 315.32822875976564,
-      "sma200": 273.57263175964357,
-      "ema20": 294.62852851391233,
-      "ema50": 305.4386495517782,
-      "ema200": 279.6069693760407
+      "sma20": 297.1761924743652,
+      "sma50": 314.5393612670898,
+      "sma200": 273.67473693847654,
+      "ema20": 290.8315252751431,
+      "ema50": 303.4512513123956,
+      "ema200": 279.3528054018299
     },
     "momentum": {
-      "3m": -0.12231595644498405,
-      "6m": 0.005014230554873711,
-      "12m": 0.1101482054720555,
+      "3m": -0.10091935250925332,
+      "6m": 0.014526129350273642,
+      "12m": 0.12444798607986418,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1935850.0,
-      "relative_volume": 1.5761551773122917,
+      "average_volume": 1932765.15,
+      "relative_volume": 0.5018214447833975,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -435,10 +430,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-21",
+    "date_of_change": "2026-06-22",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBOE\nRating: Drop | Score: 41.7/100 | Confidence: 39.56/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 249.10000610351562 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.927235\nNews/Catalyst: Lower Fee or Bigger Bitcoin ETF Scale? HODL vs. IBIT\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBOE\nRating: Drop | Score: 39.7/100 | Confidence: 28.71/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 249.10000610351562 | Resistance: 366.70001220703125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.29894\nNews/Catalyst: Charles Schwab enters prediction markets with S&P 500 options\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

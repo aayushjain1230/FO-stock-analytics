@@ -1,57 +1,51 @@
 {
   "ticker": "FIZZ",
-  "generated_at": "2026-06-21T17:42:45.817143",
+  "generated_at": "2026-06-22T17:30:35.571523",
   "score": {
-    "final_score": 53.8,
-    "rating": "Hold",
-    "confidence": 50.26,
+    "final_score": 36.55,
+    "rating": "Drop",
+    "confidence": 27.65,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 65.0,
-      "momentum": 50.0,
-      "volume": 25.0,
+      "technical": 35.0,
+      "momentum": 30.0,
+      "volume": 0,
       "fundamental": 62.0,
       "risk": 60.0,
-      "catalyst": 60.0
+      "catalyst": 40.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 35.0,
       "evidence": [
-        "Price above SMA50",
-        "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
         "Stock is not materially extended from SMA20"
       ],
       "support": 32.93000030517578,
       "resistance": 37.2400016784668,
-      "risk_reward": 0.28
+      "risk_reward": 1.51
     },
     "momentum": {
-      "score": 50.0,
+      "score": 30.0,
       "returns": {
-        "1m": 0.045821329038299385,
-        "3m": 0.05005785513577332,
-        "6m": 0.09142859896322841,
-        "12m": -0.1697551664232626
+        "1m": -0.017578648251712514,
+        "3m": 0.016427144933541582,
+        "6m": 0.06223184121596925,
+        "12m": -0.2126788719070375
       },
-      "acceleration": 0.0043,
+      "acceleration": -0.0147,
       "evidence": [
-        "1m return is positive",
         "3m return is positive",
-        "6m return is positive",
-        "Momentum is accelerating"
+        "6m return is positive"
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 339720.0,
-      "relative_volume": 1.8091369363004828,
+      "score": 0,
+      "average_volume": 331800.9,
+      "relative_volume": 0.30987860491035435,
       "accumulation_days": 7,
       "distribution_days": 7,
-      "evidence": [
-        "Relative volume is 1.81x"
-      ]
+      "evidence": []
     },
     "fundamental": {
       "score": 62.0,
@@ -61,17 +55,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.017353748830694182,
-        "annualized_volatility": 0.27548222232416847,
-        "maximum_drawdown": -0.40083270711607755,
-        "sharpe_ratio": -0.2531404531955916,
-        "sortino_ratio": -0.4197600641245654,
-        "calmar_ratio": -0.25356259422066024,
-        "beta": 0.10242815493920009,
-        "alpha": -0.08864263636969416,
-        "capm_expected_return": 0.018906941763225445,
-        "actual_return": -0.06973569460646871,
-        "market_return": 0.18458735075769295
+        "volatility": 0.017452130056420257,
+        "annualized_volatility": 0.2770439758658619,
+        "maximum_drawdown": -0.40083270711607855,
+        "sharpe_ratio": -0.3176412879410856,
+        "sortino_ratio": -0.5206669291228784,
+        "calmar_ratio": -0.29511712056997336,
+        "beta": 0.10388742682294293,
+        "alpha": -0.10733044764196227,
+        "capm_expected_return": 0.01932984233161088,
+        "actual_return": -0.08800060531035139,
+        "market_return": 0.18606527202329357
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -79,15 +73,14 @@
       ]
     },
     "catalyst": {
-      "score": 60.0,
+      "score": 40.0,
       "evidence": [
         "insider buying",
-        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; insider buying"
   },
   "fundamentals": {
     "ticker": "FIZZ",
@@ -96,7 +89,7 @@
     "sector": "Consumer Defensive",
     "industry": "Beverages - Non-Alcoholic",
     "exchange": "NMS",
-    "market_cap": 3397909248.0,
+    "market_cap": 3240607232.0,
     "revenue_growth": -0.009,
     "eps_growth": 0.048,
     "fcf_growth": null,
@@ -113,14 +106,14 @@
     "cash_position": 313972992.0,
     "total_debt": 62671000.0,
     "interest_coverage": null,
-    "forward_pe": 18.034986,
-    "trailing_pe": 18.145,
+    "forward_pe": 17.200079,
+    "trailing_pe": 17.305,
     "peg": 4.03,
-    "price_to_book": 5.699702,
-    "price_to_sales": 2.8385432,
+    "price_to_book": 5.435841,
+    "price_to_sales": 2.7071362,
     "enterprise_to_ebitda": 12.104,
     "enterprise_to_revenue": 2.624,
-    "fcf_yield": 0.035377782991336676,
+    "fcf_yield": 0.037095052684249515,
     "institutional_ownership": 0.2633,
     "insider_ownership": 0.7468,
     "short_interest": 3020926.0,
@@ -137,18 +130,17 @@
     "next_earnings_date": null,
     "eps_current_year": 2.0,
     "eps_forward": 2.0122,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 46.2526726364908,
+    "rsi": 39.380134150798455,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.8091369363004828,
-    "price_above_sma50": true,
-    "price_above_sma200": true,
-    "setup_type": "trend continuation, volume surge",
+    "relative_volume": 0.30987860491035435,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
+    "setup_type": "No clear setup",
     "support": 32.93000030517578,
     "resistance": 37.2400016784668
   },
@@ -196,7 +188,7 @@
     "earnings_surprise": false,
     "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": true,
+    "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 3,
@@ -241,12 +233,11 @@
         "last_surprise_pct": -0.008,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": -3.55,
+      "analyst_upside_pct": 1.13,
       "eps_growth_implied": 0.61
     },
     "evidence": [
       "insider ownership or purchase data is supportive",
-      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -335,97 +326,96 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6128,
-    "probability_pct": 61.28,
+    "probability_of_outperformance": 0.5028,
+    "probability_pct": 50.28,
     "confidence": "High",
     "evidence": [
-      "Volume surge above 1.5x",
-      "Composite score 53.8/100"
+      "Composite score 36.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 53.8,
-    "technical_score": 65.0,
-    "momentum_score": 50.0,
-    "volume_score": 25.0,
+    "final_score": 36.55,
+    "technical_score": 35.0,
+    "momentum_score": 30.0,
+    "volume_score": 0,
     "fundamental_score": 62.0,
     "risk_score": 60.0,
-    "catalyst_score": 60.0,
+    "catalyst_score": 40.0,
     "revenue_growth": -0.009,
     "eps_growth": 0.048,
     "roe": 0.37949002,
-    "forward_pe": 18.034986,
-    "relative_volume": 1.8091369363004828,
+    "forward_pe": 17.200079,
+    "relative_volume": 0.30987860491035435,
     "breakout": false,
-    "price_above_sma50": true,
-    "price_above_sma200": true,
+    "price_above_sma50": false,
+    "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": false,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.014126607942508196,
-      "weekly": -0.018127656535218528,
-      "monthly": 0.045821329038299385,
-      "annual": -0.1697551664232626
+      "daily": -0.04519149485462626,
+      "weekly": -0.061992343962198326,
+      "monthly": -0.017578648251712514,
+      "annual": -0.2126788719070375
     },
     "risk": {
-      "volatility": 0.017353748830694182,
-      "annualized_volatility": 0.27548222232416847,
-      "maximum_drawdown": -0.40083270711607755,
-      "sharpe_ratio": -0.2531404531955916,
-      "sortino_ratio": -0.4197600641245654,
-      "calmar_ratio": -0.25356259422066024,
-      "beta": 0.10242815493920009,
-      "alpha": -0.08864263636969416,
-      "capm_expected_return": 0.018906941763225445,
-      "actual_return": -0.06973569460646871,
-      "market_return": 0.18458735075769295
+      "volatility": 0.017452130056420257,
+      "annualized_volatility": 0.2770439758658619,
+      "maximum_drawdown": -0.40083270711607855,
+      "sharpe_ratio": -0.3176412879410856,
+      "sortino_ratio": -0.5206669291228784,
+      "calmar_ratio": -0.29511712056997336,
+      "beta": 0.10388742682294293,
+      "alpha": -0.10733044764196227,
+      "capm_expected_return": 0.01932984233161088,
+      "actual_return": -0.08800060531035139,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.10242815493920009,
-      "alpha": -0.08864263636969416,
-      "capm_expected_return": 0.018906941763225445,
-      "actual_return": -0.06973569460646871,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 1.89%; realized alpha is -8.86%, meaning negative alpha versus CAPM."
+      "beta": 0.10388742682294293,
+      "alpha": -0.10733044764196227,
+      "capm_expected_return": 0.01932984233161088,
+      "actual_return": -0.08800060531035139,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 1.93%; realized alpha is -10.73%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.06973569460646871,
+      "actual_return": -0.08800060531035139,
       "components": {
-        "market_component": 0.018906941763225445,
+        "market_component": 0.01932984233161088,
         "momentum_component": 0.0,
-        "volatility_drag": -0.005096444464833694,
-        "alpha_component": -0.08864263636969416
+        "volatility_drag": -0.005408795173172377,
+        "alpha_component": -0.10733044764196227
       },
       "component_weights_pct": {
-        "market_component": 16.78,
+        "market_component": 14.64,
         "momentum_component": 0.0,
-        "volatility_drag": 4.52,
-        "alpha_component": 78.69
+        "volatility_drag": 4.1,
+        "alpha_component": 81.27
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 36.33599987030029,
-      "sma50": 35.200800018310545,
-      "sma200": 35.081399869918826,
-      "ema20": 36.20608903107369,
-      "ema50": 35.57013322763019,
-      "ema200": 36.29910515189535
+      "sma20": 36.29899997711182,
+      "sma50": 35.18520004272461,
+      "sma200": 35.0482998752594,
+      "ema20": 36.05789022105514,
+      "ema50": 35.534049630556005,
+      "ema200": 36.27976621161661
     },
     "momentum": {
-      "3m": 0.05005785513577332,
-      "6m": 0.09142859896322841,
-      "12m": -0.1697551664232626,
+      "3m": 0.016427144933541582,
+      "6m": 0.06223184121596925,
+      "12m": -0.2126788719070375,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 339720.0,
-      "relative_volume": 1.8091369363004828,
+      "average_volume": 331800.9,
+      "relative_volume": 0.30987860491035435,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -435,20 +425,13 @@
     }
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Volume spike",
-    "evidence": "Relative volume reached 1.81x",
-    "date_of_change": "2026-06-21",
-    "strength": 70,
-    "invalidates": "Volume fades and price cannot hold the move",
-    "triggers": [
-      {
-        "reason": "Volume spike",
-        "evidence": "Relative volume reached 1.81x",
-        "strength": 70,
-        "invalidates": "Volume fades and price cannot hold the move"
-      }
-    ]
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
+    "date_of_change": "2026-06-22",
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: FIZZ\nRating: Hold | Score: 53.8/100 | Confidence: 50.26/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.034986\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.81x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: FIZZ\nRating: Drop | Score: 36.55/100 | Confidence: 27.65/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 17.200079\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

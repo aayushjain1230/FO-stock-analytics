@@ -1,18 +1,18 @@
 {
   "ticker": "BAC",
-  "generated_at": "2026-06-21T17:42:11.755658",
+  "generated_at": "2026-06-22T17:29:28.893668",
   "score": {
-    "final_score": 77.7,
+    "final_score": 68.45,
     "rating": "Watch",
-    "confidence": 75.23,
+    "confidence": 52.62,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
       "momentum": 85.0,
-      "volume": 50.0,
+      "volume": 0,
       "fundamental": 68.0,
       "risk": 100,
-      "catalyst": 100
+      "catalyst": 65.0
     },
     "technical": {
       "score": 75.0,
@@ -26,18 +26,18 @@
         "Stock is not materially extended from SMA20"
       ],
       "support": 46.970001220703125,
-      "resistance": 56.84000015258789,
-      "risk_reward": 0.07
+      "resistance": 57.45000076293945,
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.11424071785800671,
-        "3m": 0.20170191905341817,
-        "6m": 0.03651452626637752,
-        "12m": 0.29830972463306926
+        "1m": 0.12723989575021966,
+        "3m": 0.22452287859743159,
+        "6m": 0.06461886587582266,
+        "12m": 0.30273985708433204
       },
-      "acceleration": 0.1834,
+      "acceleration": 0.1922,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,15 +48,12 @@
       ]
     },
     "volume": {
-      "score": 50.0,
-      "average_volume": 39609515.0,
-      "relative_volume": 1.7783302825091396,
+      "score": 0,
+      "average_volume": 39177968.1,
+      "relative_volume": 0.48065182839331577,
       "accumulation_days": 3,
       "distribution_days": 5,
-      "evidence": [
-        "Relative volume is 1.78x",
-        "High-volume breakout behavior"
-      ]
+      "evidence": []
     },
     "fundamental": {
       "score": 68.0,
@@ -68,28 +65,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01605081140632724,
-        "annualized_volatility": 0.2547987319316447,
-        "maximum_drawdown": -0.275093720247541,
-        "sharpe_ratio": 0.891979957508306,
-        "sortino_ratio": 1.1299575183468744,
-        "calmar_ratio": 0.7807779187050787,
-        "beta": 0.9100337117474934,
-        "alpha": 0.0592946501298989,
-        "capm_expected_return": 0.16798071195165978,
-        "actual_return": 0.22727536208155869,
-        "market_return": 0.18458735075769295
+        "volatility": 0.01607429437176764,
+        "annualized_volatility": 0.2551715124512544,
+        "maximum_drawdown": -0.27509380289326135,
+        "sharpe_ratio": 0.9346643017055914,
+        "sortino_ratio": 1.183131691020337,
+        "calmar_ratio": 0.83015908996765,
+        "beta": 0.9094122001110791,
+        "alpha": 0.06928967510544154,
+        "capm_expected_return": 0.16921002839496982,
+        "actual_return": 0.23849970350041136,
+        "market_return": 0.18606527202329357
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 100,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "insider buying",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -102,7 +97,7 @@
     "sector": "Financial Services",
     "industry": "Banks - Diversified",
     "exchange": "NYQ",
-    "market_cap": 398828404736.0,
+    "market_cap": 407592697856.0,
     "revenue_growth": 0.081,
     "eps_growth": 0.244,
     "fcf_growth": null,
@@ -119,11 +114,11 @@
     "cash_position": 851284983808.0,
     "total_debt": 799901024256.0,
     "interest_coverage": null,
-    "forward_pe": 11.126114,
-    "trailing_pe": 13.945409,
+    "forward_pe": 11.370611,
+    "trailing_pe": 14.251861,
     "peg": 1.0,
-    "price_to_book": 1.4535484,
-    "price_to_sales": 3.6392772,
+    "price_to_book": 1.4854903,
+    "price_to_sales": 3.7192507,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 3.398,
     "fcf_yield": null,
@@ -143,20 +138,19 @@
     "next_earnings_date": "1784032200",
     "eps_current_year": 4.03,
     "eps_forward": 5.05118,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 80.26319421892262,
+    "rsi": 83.90414478439979,
     "macd_cross": false,
     "breakout": true,
-    "new_52w_high": false,
-    "relative_volume": 1.7783302825091396,
+    "new_52w_high": true,
+    "relative_volume": 0.48065182839331577,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation, volume surge",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 46.970001220703125,
-    "resistance": 56.84000015258789
+    "resistance": 57.45000076293945
   },
   "earnings": {
     "next_earnings_date": "1784032200",
@@ -200,13 +194,13 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": true,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 5,
-    "bearish_news_score": 4,
+    "bullish_news_score": 3,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.70635,
     "detail": {
       "earnings": {
@@ -247,15 +241,13 @@
         "last_surprise_pct": 0.087799996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.38,
+      "analyst_upside_pct": 9.97,
       "eps_growth_implied": 25.34
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -278,50 +270,50 @@
     "available": true,
     "items": [
       {
-        "headline": "Fed Governor Bowman Spoke at Private Dinner After Policy Meeting",
-        "source": "Bloomberg",
-        "published": "2026-06-20T13:19:43Z",
-        "summary": "(Bloomberg) -- Michelle Bowman, the Federal Reserve\u2019s vice chair for supervision, spoke at a private dinner in New York hours after attending the central bank\u2019s policy meeting, the Wall Street Journal reported, a period when officials are restricted from commenting on monetary policy.Most Read from BloombergIran Says Hormuz Closed Again as Talks With US Set to OpenDOJ Rejects Judge Request to Certify $1.8 Billion Fund NixedTrump\u2019s Fears About Economy Undercut US Leverage in Iran TalksUkraine Tar",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "JPMorgan Posted Record Profits, but CEO Jamie Dimon Says the Next Crisis Will Be Worse Than Anyone Expects",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-20T12:30:25Z",
-        "summary": "JPMorgan Chase (NYSE:JPM) reported Q1 2026 net income of $16.5 billion, with EPS of $5.94, up 17% from a year earlier. Revenue hit $49.836 billion. Markets revenue set a record at $11.6 billion, up 20% year over year. Investment banking fees jumped 28%, with advisory fees up 82%. The stock has climbed 26% over the ... JPMorgan Posted Record Profits, but CEO Jamie Dimon Says the Next Crisis Will Be Worse Than Anyone Expects",
-        "bullish_score": 2,
+        "headline": "Airlines Gain on Pricing as 'Capacity Discipline' Becomes Key Into Summer, BofA Says",
+        "source": "MT Newswires",
+        "published": "2026-06-22T15:51:05Z",
+        "summary": "Airlines are benefiting from strong demand, rising fares and lower fuel costs alongside flat capacit",
+        "bullish_score": 1,
         "bearish_score": 0,
-        "importance_score": 60,
+        "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "BofA Sees No Sign of a Major Peak in Risk Assets Despite Strong Investor Optimism",
-        "source": "InvestorsHub",
-        "published": "2026-06-20T11:00:00Z",
-        "summary": "Investor confidence has climbed close to historically elevated levels, but Bank of America believes markets have not yet reached the conditions typically associated with a major turning point for risk assets. According to the bank\u2019s latest Global Fund Manager Survey, the Bull & Bear Indicator rose to 8.",
+        "headline": "Bank of America Corporation (BAC): One of the Top Financial Stocks According to Berkshire Hathaway",
+        "source": "Insider Monkey",
+        "published": "2026-06-22T14:53:22Z",
+        "summary": "We just covered the 10 Best Financial Stocks to Buy According to Warren Buffett and Bank of America Corporation (NYSE:BAC) ranks 2nd on this list. Bank of America Corporation (NYSE:BAC) is a long-term bet of Berkshire Hathaway. The stock has consistently featured in the 13F portfolio of the hedge fund since the third quarter of [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Is Bank of America Stock's Low Valuation a Bargain or a Warning Sign?",
+        "source": "Zacks",
+        "published": "2026-06-22T14:02:00Z",
+        "summary": "BAC trades below peers on a P/S basis, but rising costs and a mixed earnings outlook may temper near-term upside despite growth drivers.",
         "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "Europe\u2019s Stocks Are Back in the Lead as Stagflation Risks Ease",
+        "headline": "This Megacap Chip Stock Has Added Nearly $331B To Its Market Cap This Year \u2014 Why BofA Sees A Further Upside Of 22%",
+        "source": "Stocktwits",
+        "published": "2026-06-22T12:38:03Z",
+        "summary": "On Monday, analysts at BofA raised their price target for ASML to $2,345 from $2,268, while maintaining a \u2018Buy\u2019 rating.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Treasuries Pare Declines as Oil Price Drops on US-Iran Progress",
         "source": "Bloomberg",
-        "published": "2026-06-20T07:00:00Z",
-        "summary": "(Bloomberg) -- The prospect of peace in the Middle East is setting up European stocks for a standout second half, as investors bet on stronger economic growth and easing inflation.Most Read from BloombergIran Says Hormuz Closed Again as Talks With US Set to OpenDOJ Rejects Judge Request to Certify $1.8 Billion Fund NixedTrump\u2019s Fears About Economy Undercut US Leverage in Iran TalksUkraine Targets Oil Refinery 2,000 Kilometers Inside RussiaMeloni\u2019s Spat With Trump Shows Readiness to Risk a Bigger",
-        "bullish_score": 2,
-        "bearish_score": 2,
-        "importance_score": 90,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Bank of America spots Prime Day signal for Amazon investors",
-        "source": "TheStreet",
-        "published": "2026-06-20T00:03:00Z",
-        "summary": "On June 18, just days before Amazon\u2019s (AMZN) Prime Day kickoff, Bank of America pointed investors to a part of the event that could matter a lot more than the discounts. Prime Day is typically treated as a read on consumer demand, delivery speed, and Amazon\u2019s ability to pull shoppers away from ...",
+        "published": "2026-06-22T11:43:29Z",
+        "summary": "(Bloomberg) -- Treasuries fell as trading resumed following a US public holiday with Washington and Tehran working to hammer out details of a peace accord.Most Read from BloombergIran Says Hormuz Closed Again as Talks With US Set to OpenUS and Iran Make \u2018Progress\u2019 in Talks, Aim to Keep Hormuz OpenIranian Negotiators Said to Still Be Engaged in Talks With USMeta Taps New WhatsApp Boss as Part of $900 Million InvestmentIran Cites \u2018Major Progress\u2019 After All-Night Talks With USUS 10-year yields were",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -345,101 +337,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9348,
-    "probability_pct": 93.48,
+    "probability_of_outperformance": 0.8905,
+    "probability_pct": 89.05,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Analyst data is supportive",
-      "Composite score 77.7/100"
+      "Composite score 68.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 77.7,
+    "final_score": 68.45,
     "technical_score": 75.0,
     "momentum_score": 85.0,
-    "volume_score": 50.0,
+    "volume_score": 0,
     "fundamental_score": 68.0,
     "risk_score": 100,
-    "catalyst_score": 100,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.081,
     "eps_growth": 0.244,
     "roe": 0.10644,
-    "forward_pe": 11.126114,
-    "relative_volume": 1.7783302825091396,
+    "forward_pe": 11.370611,
+    "relative_volume": 0.48065182839331577,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
-    "analyst_revision": true,
-    "major_news": true
+    "analyst_revision": false,
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.005837573385518602,
-      "weekly": 0.018854258854319683,
-      "monthly": 0.11424071785800671,
-      "annual": 0.29830972463306926
+      "daily": 0.022241992580617653,
+      "weekly": 0.025526602882731675,
+      "monthly": 0.12723989575021966,
+      "annual": 0.30273985708433204
     },
     "risk": {
-      "volatility": 0.01605081140632724,
-      "annualized_volatility": 0.2547987319316447,
-      "maximum_drawdown": -0.275093720247541,
-      "sharpe_ratio": 0.891979957508306,
-      "sortino_ratio": 1.1299575183468744,
-      "calmar_ratio": 0.7807779187050787,
-      "beta": 0.9100337117474934,
-      "alpha": 0.0592946501298989,
-      "capm_expected_return": 0.16798071195165978,
-      "actual_return": 0.22727536208155869,
-      "market_return": 0.18458735075769295
+      "volatility": 0.01607429437176764,
+      "annualized_volatility": 0.2551715124512544,
+      "maximum_drawdown": -0.27509380289326135,
+      "sharpe_ratio": 0.9346643017055914,
+      "sortino_ratio": 1.183131691020337,
+      "calmar_ratio": 0.83015908996765,
+      "beta": 0.9094122001110791,
+      "alpha": 0.06928967510544154,
+      "capm_expected_return": 0.16921002839496982,
+      "actual_return": 0.23849970350041136,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.9100337117474934,
-      "alpha": 0.0592946501298989,
-      "capm_expected_return": 0.16798071195165978,
-      "actual_return": 0.22727536208155869,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 16.80%; realized alpha is 5.93%, meaning positive alpha versus CAPM."
+      "beta": 0.9094122001110791,
+      "alpha": 0.06928967510544154,
+      "capm_expected_return": 0.16921002839496982,
+      "actual_return": 0.23849970350041136,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 16.92%; realized alpha is 6.93%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.22727536208155869,
+      "actual_return": 0.23849970350041136,
       "components": {
-        "market_component": 0.16798071195165978,
-        "momentum_component": 0.07457743115826732,
-        "volatility_drag": -0.0009597463863289413,
-        "alpha_component": 0.0592946501298989
+        "market_component": 0.16921002839496982,
+        "momentum_component": 0.07568496427108301,
+        "volatility_drag": -0.0010343024902508824,
+        "alpha_component": 0.06928967510544154
       },
       "component_weights_pct": {
-        "market_component": 55.47,
-        "momentum_component": 24.63,
-        "volatility_drag": 0.32,
-        "alpha_component": 19.58
+        "market_component": 53.68,
+        "momentum_component": 24.01,
+        "volatility_drag": 0.33,
+        "alpha_component": 21.98
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 53.49373245239258,
-      "sma50": 52.635387878417966,
-      "sma200": 51.69853811264038,
-      "ema20": 54.111801063723696,
-      "ema50": 52.67935677147643,
-      "ema200": 50.72037719868878
+      "sma20": 53.80503978729248,
+      "sma50": 52.735636978149415,
+      "sma200": 51.74082424163819,
+      "ema20": 54.42972484460122,
+      "ema50": 52.866440849508834,
+      "ema200": 50.78756371858328
     },
     "momentum": {
-      "3m": 0.20170191905341817,
-      "6m": 0.03651452626637752,
-      "12m": 0.29830972463306926,
+      "3m": 0.22452287859743159,
+      "6m": 0.06461886587582266,
+      "12m": 0.30273985708433204,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 39609515.0,
-      "relative_volume": 1.7783302825091396,
+      "average_volume": 39177968.1,
+      "relative_volume": 0.48065182839331577,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -449,13 +439,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-21",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "52-week high",
+    "evidence": "Price is pressing against 52-week highs",
+    "date_of_change": "2026-06-22",
+    "strength": 65,
+    "invalidates": "Failed breakout below prior range high",
+    "triggers": [
+      {
+        "reason": "52-week high",
+        "evidence": "Price is pressing against 52-week highs",
+        "strength": 65,
+        "invalidates": "Failed breakout below prior range high"
+      }
+    ]
   },
-  "report": "Ticker: BAC\nRating: Watch | Score: 77.7/100 | Confidence: 75.23/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 46.970001220703125 | Resistance: 56.84000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.126114\nNews/Catalyst: Fed Governor Bowman Spoke at Private Dinner After Policy Meeting\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BAC\nRating: Watch | Score: 68.45/100 | Confidence: 52.62/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 46.970001220703125 | Resistance: 57.45000076293945\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.370611\nNews/Catalyst: Airlines Gain on Pricing as 'Capacity Discipline' Becomes Key Into Summer, BofA Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

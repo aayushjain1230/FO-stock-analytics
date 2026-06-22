@@ -1,54 +1,57 @@
 {
   "ticker": "ABBV",
-  "generated_at": "2026-06-21T17:41:52.497973",
+  "generated_at": "2026-06-22T17:28:48.913135",
   "score": {
-    "final_score": 57.0,
+    "final_score": 60.75,
     "rating": "Hold",
-    "confidence": 52.99,
+    "confidence": 50.46,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 38.0,
-      "momentum": 55.0,
-      "volume": 50.0,
+      "technical": 65.0,
+      "momentum": 70.0,
+      "volume": 25.0,
       "fundamental": 60.0,
-      "risk": 100,
-      "catalyst": 45.0
+      "risk": 85.0,
+      "catalyst": 30.0
     },
     "technical": {
-      "score": 38.0,
+      "score": 65.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 197.3800048828125,
-      "resistance": 227.72999572753906,
-      "risk_reward": 0.59
+      "resistance": 231.6699981689453,
+      "risk_reward": 0.0
     },
     "momentum": {
-      "score": 55.0,
+      "score": 70.0,
       "returns": {
-        "1m": 0.012771384059147906,
-        "3m": 0.05845921658633779,
-        "6m": -0.016218924204649987,
-        "12m": 0.2052125766802113
+        "1m": 0.09123878868934909,
+        "3m": 0.13908397473458023,
+        "6m": 0.049758833884392395,
+        "12m": 0.28965092238510315
       },
-      "acceleration": 0.0666,
+      "acceleration": 0.1142,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
+        "6m return is positive",
         "12m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 50.0,
-      "average_volume": 5462335.0,
-      "relative_volume": 1.7659297717917337,
+      "score": 25.0,
+      "average_volume": 5494782.0,
+      "relative_volume": 0.812177807963992,
       "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
-        "Relative volume is 1.77x",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -60,31 +63,32 @@
       ]
     },
     "risk": {
-      "score": 100,
+      "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01657995121856589,
-        "annualized_volatility": 0.263198566043446,
-        "maximum_drawdown": -0.2073638930417544,
-        "sharpe_ratio": 0.7018987222924206,
-        "sortino_ratio": 0.8769687064447178,
-        "calmar_ratio": 0.7787904391069004,
-        "beta": 0.2957340650039729,
-        "alpha": 0.13014996962720526,
-        "capm_expected_return": 0.054588767587886715,
-        "actual_return": 0.18473873721509199,
-        "market_return": 0.18458735075769295
+        "volatility": 0.016867647721481877,
+        "annualized_volatility": 0.267765606442118,
+        "maximum_drawdown": -0.20736395121632245,
+        "sharpe_ratio": 0.8166080047787927,
+        "sortino_ratio": 1.035873077401465,
+        "calmar_ratio": 0.9651969654428528,
+        "beta": 0.29248151323670324,
+        "alpha": 0.16423888530290967,
+        "capm_expected_return": 0.05442065232217173,
+        "actual_return": 0.2186595376250814,
+        "market_return": 0.18606527202329357
       },
-      "evidence": []
+      "evidence": [
+        "Short-term volatility is rising"
+      ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
-        "analyst revision",
-        "major news",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; 12m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "ABBV",
@@ -93,7 +97,7 @@
     "sector": "Healthcare",
     "industry": "Drug Manufacturers - General",
     "exchange": "NYQ",
-    "market_cap": 382492999680.0,
+    "market_cap": 409263276032.0,
     "revenue_growth": 0.124,
     "eps_growth": -0.462,
     "fcf_growth": null,
@@ -110,14 +114,14 @@
     "cash_position": 9390999552.0,
     "total_debt": 72912003072.0,
     "interest_coverage": null,
-    "forward_pe": 13.324904,
-    "trailing_pe": 106.12255,
+    "forward_pe": 14.257501,
+    "trailing_pe": 113.54996,
     "peg": 0.6,
-    "price_to_book": -57.47014,
-    "price_to_sales": 6.0888104,
+    "price_to_book": -61.49241,
+    "price_to_sales": 6.51496,
     "enterprise_to_ebitda": 14.911,
     "enterprise_to_revenue": 7.101,
-    "fcf_yield": 0.054410471473755995,
+    "fcf_yield": 0.050851433946819,
     "institutional_ownership": 0.7685,
     "insider_ownership": 0.00112,
     "short_interest": 23158744.0,
@@ -134,20 +138,19 @@
     "next_earnings_date": "1777465800",
     "eps_current_year": 2.04,
     "eps_forward": 16.24702,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 48.54300352857437,
+    "rsi": 67.81370687031847,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.7659297717917337,
+    "relative_volume": 0.812177807963992,
     "price_above_sma50": true,
-    "price_above_sma200": false,
-    "setup_type": "volume surge",
+    "price_above_sma200": true,
+    "setup_type": "No clear setup",
     "support": 197.3800048828125,
-    "resistance": 227.72999572753906
+    "resistance": 231.6699981689453
   },
   "earnings": {
     "next_earnings_date": "1777465800",
@@ -191,13 +194,13 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
-    "major_news": true,
+    "sector_strength": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 1,
+    "bullish_news_score": 0,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.7685,
     "detail": {
       "earnings": {
@@ -238,12 +241,11 @@
         "last_surprise_pct": -0.0077,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 17.12,
+      "analyst_upside_pct": 9.46,
       "eps_growth_implied": 696.42
     },
     "evidence": [
-      "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -266,50 +268,50 @@
     "available": true,
     "items": [
       {
-        "headline": "AbbVie's biggest deal since 2019 could land soon",
-        "source": "TheStreet",
-        "published": "2026-06-21T15:07:00Z",
-        "summary": "AbbVie (ABBV) is closing in on a deal to buy Apogee Therapeutics for $10.9 billion in cash, according to a Reuters report citing people familiar with the matter in the Financial Times. The price values Apogee at a roughly 60% premium to its closing share price on Thursday, June 18, a steep markup ...",
+        "headline": "AbbVie (ABBV) Is Buying Apogee Therapeutics For $10.9 Billion",
+        "source": "Simply Wall St.",
+        "published": "2026-06-22T16:13:25Z",
+        "summary": "AbbVie (NYSE:ABBV) has agreed to acquire Apogee Therapeutics in a cash deal valued at US$10.9b. The transaction focuses on expanding AbbVie's immunology and respiratory disease pipeline with several clinical-stage candidates. The deal is described as AbbVie's largest acquisition in more than five years and includes a premium to Apogee's recent trading levels. AbbVie is a large biopharmaceutical company with a long-standing focus on immunology, oncology, neuroscience, and other specialty...",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Stocks Stall as Iran Nuclear Talks Hit Early Snag: Markets Wrap",
-        "source": "Bloomberg",
-        "published": "2026-06-19T20:09:15Z",
-        "summary": "(Bloomberg) -- Global stocks are ending a strong week on a cautious note as relief over an interim peace deal between the US and Iran gave way to a focus on the challenges of securing a lasting agreement.Most Read from BloombergIran Says Hormuz Closed Again as Talks With US Set to OpenDOJ Rejects Judge Request to Certify $1.8 Billion Fund NixedTrump\u2019s Fears About Economy Undercut US Leverage in Iran TalksUkraine Targets Oil Refinery 2,000 Kilometers Inside RussiaMeloni\u2019s Spat With Trump Shows Re",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Retirement Portfolio That Forks Over a $10,000 Check Every Month",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-19T18:56:27Z",
-        "summary": "Ten thousand dollars a month works out to $120,000 a year, an income stream that exceeds the roughly $68,359 in per-capita disposable personal income reported by the Bureau of Economic Analysis for the first quarter of 2026. For many retirees, that level of cash flow would support a lifestyle well above basic needs. The real ... The Retirement Portfolio That Forks Over a $10,000 Check Every Month",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "How One Partnership Profit Line Reframes The Regeneron Pharmaceuticals Stock Story",
-        "source": "Trefis",
-        "published": "2026-06-19T00:56:28Z",
-        "summary": "While investors fixate on the pipeline, a powerful and accelerating profit stream from its Sanofi collaboration is quietly reshaping the company's financial core.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "FDA Seeks Updated Labeling for Testosterone Therapies",
+        "headline": "Top Midday Stories: Treasury Authorizes Sale of Iranian Oil; SpaceX launches First Inaugural Bond Issuance",
         "source": "MT Newswires",
-        "published": "2026-06-18T21:56:31Z",
-        "summary": "The US Food and Drug Administration said Thursday it is requesting updates to prescribing informatio",
+        "published": "2026-06-22T15:50:21Z",
+        "summary": "The Nasdaq Composite and S&P 500 were down, while the Dow Jones Industrial Average was up in late-mo",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "AbbVie to Buy Immunology Drugmaker Apogee for $10.9 Billion",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-22T15:48:00Z",
+        "summary": "The cash deal will add an experimental drug for moderate to severe atopic dermatitis, building up AbbVie\u2019s core business.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Prolium Bioscience Sclerosis, Lupus Treatment Studies Advancing",
+        "source": "Exec Edge",
+        "published": "2026-06-22T15:40:11Z",
+        "summary": "By Karen Roman Prolium Bioscience, Inc. said it dosed its first patient in Phase 1/2 study of PRO-203, a T-cell engager treatment for systemic sclerosis, following the completion of a study in 20 healthy volunteers. The company also completed the last patient and visit in a 26-week study of PRO-203 in treatment-refractory lupus nephritis patients, [\u2026] The post Prolium Bioscience Sclerosis, Lupus Treatment Studies Advancing appeared first on ExecEdge.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "AbbVie deepens immunology legacy in $10.9bn Apogee buyout",
+        "source": "Pharmaceutical Technology",
+        "published": "2026-06-22T15:33:28Z",
+        "summary": "The multi-billion-dollar bid could further cement AbbVie\u2019s leading position in the immunology space as competition heats up.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -333,114 +335,125 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.739,
-    "probability_pct": 73.9,
+    "probability_of_outperformance": 0.6766,
+    "probability_pct": 67.66,
     "confidence": "High",
     "evidence": [
-      "Volume surge above 1.5x",
-      "Analyst data is supportive",
-      "Composite score 57.0/100"
+      "Composite score 60.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 57.0,
-    "technical_score": 38.0,
-    "momentum_score": 55.0,
-    "volume_score": 50.0,
+    "final_score": 60.75,
+    "technical_score": 65.0,
+    "momentum_score": 70.0,
+    "volume_score": 25.0,
     "fundamental_score": 60.0,
-    "risk_score": 100,
-    "catalyst_score": 45.0,
+    "risk_score": 85.0,
+    "catalyst_score": 30.0,
     "revenue_growth": 0.124,
     "eps_growth": -0.462,
     "roe": null,
-    "forward_pe": 13.324904,
-    "relative_volume": 1.7659297717917337,
+    "forward_pe": 14.257501,
+    "relative_volume": 0.812177807963992,
     "breakout": false,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "earnings_surprise": false,
-    "analyst_revision": true,
-    "major_news": true
+    "analyst_revision": false,
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.021425621868259914,
-      "weekly": -0.036837650139740385,
-      "monthly": 0.012771384059147906,
-      "annual": 0.2052125766802113
+      "daily": 0.07011867656985471,
+      "weekly": 0.01730120105091526,
+      "monthly": 0.09123878868934909,
+      "annual": 0.28965092238510315
     },
     "risk": {
-      "volatility": 0.01657995121856589,
-      "annualized_volatility": 0.263198566043446,
-      "maximum_drawdown": -0.2073638930417544,
-      "sharpe_ratio": 0.7018987222924206,
-      "sortino_ratio": 0.8769687064447178,
-      "calmar_ratio": 0.7787904391069004,
-      "beta": 0.2957340650039729,
-      "alpha": 0.13014996962720526,
-      "capm_expected_return": 0.054588767587886715,
-      "actual_return": 0.18473873721509199,
-      "market_return": 0.18458735075769295
+      "volatility": 0.016867647721481877,
+      "annualized_volatility": 0.267765606442118,
+      "maximum_drawdown": -0.20736395121632245,
+      "sharpe_ratio": 0.8166080047787927,
+      "sortino_ratio": 1.035873077401465,
+      "calmar_ratio": 0.9651969654428528,
+      "beta": 0.29248151323670324,
+      "alpha": 0.16423888530290967,
+      "capm_expected_return": 0.05442065232217173,
+      "actual_return": 0.2186595376250814,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.2957340650039729,
-      "alpha": 0.13014996962720526,
-      "capm_expected_return": 0.054588767587886715,
-      "actual_return": 0.18473873721509199,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.30: Moves roughly 70% less than the market. CAPM expected return is 5.46%; realized alpha is 13.01%, meaning positive alpha versus CAPM."
+      "beta": 0.29248151323670324,
+      "alpha": 0.16423888530290967,
+      "capm_expected_return": 0.05442065232217173,
+      "actual_return": 0.2186595376250814,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.29: Moves roughly 71% less than the market. CAPM expected return is 5.44%; realized alpha is 16.42%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.18473873721509199,
+      "actual_return": 0.2186595376250814,
       "components": {
-        "market_component": 0.054588767587886715,
-        "momentum_component": 0.05130314417005283,
-        "volatility_drag": -0.0026397132086891984,
-        "alpha_component": 0.13014996962720526
+        "market_component": 0.05442065232217173,
+        "momentum_component": 0.07241273059627579,
+        "volatility_drag": -0.0035531212884236,
+        "alpha_component": 0.16423888530290967
       },
       "component_weights_pct": {
-        "market_component": 22.87,
-        "momentum_component": 21.49,
-        "volatility_drag": 1.11,
-        "alpha_component": 54.53
+        "market_component": 18.47,
+        "momentum_component": 24.58,
+        "volatility_drag": 1.21,
+        "alpha_component": 55.74
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 220.0209991455078,
-      "sma50": 211.63185424804686,
-      "sma200": 218.07993522644043,
-      "ema20": 219.45666987978893,
-      "ema50": 215.629376340167,
-      "ema200": 212.09384225285922
+      "sma20": 220.87949905395507,
+      "sma50": 212.05220642089844,
+      "sma200": 218.203544921875,
+      "ema20": 220.61984400254445,
+      "ema50": 216.25842031390079,
+      "ema200": 212.29257932725096
     },
     "momentum": {
-      "3m": 0.05845921658633779,
-      "6m": -0.016218924204649987,
-      "12m": 0.2052125766802113,
+      "3m": 0.13908397473458023,
+      "6m": 0.049758833884392395,
+      "12m": 0.28965092238510315,
       "24m": 0.0,
-      "score": 50.0
+      "score": 75.0
     },
     "volume": {
-      "average_volume": 5462335.0,
-      "relative_volume": 1.7659297717917337,
+      "average_volume": 5494782.0,
+      "relative_volume": 0.812177807963992,
       "volume_spike": false
     },
-    "volatility_regime": "Normal volatility",
+    "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 43,
+      "score": 53,
       "label": "Neutral"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-21",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-22",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: ABBV\nRating: Hold | Score: 57.0/100 | Confidence: 52.99/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 197.3800048828125 | Resistance: 227.72999572753906\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.324904\nNews/Catalyst: AbbVie's biggest deal since 2019 could land soon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABBV\nRating: Hold | Score: 60.75/100 | Confidence: 50.46/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 197.3800048828125 | Resistance: 231.6699981689453\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.257501\nNews/Catalyst: AbbVie (ABBV) Is Buying Apogee Therapeutics For $10.9 Billion\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

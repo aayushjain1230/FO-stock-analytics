@@ -1,42 +1,43 @@
 {
   "ticker": "CVS",
-  "generated_at": "2026-06-21T17:42:39.813950",
+  "generated_at": "2026-06-22T17:30:24.110633",
   "score": {
-    "final_score": 73.2,
+    "final_score": 71.95,
     "rating": "Watch",
-    "confidence": 64.68,
+    "confidence": 60.54,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
+      "technical": 83.0,
       "momentum": 85.0,
-      "volume": 50.0,
+      "volume": 25.0,
       "fundamental": 58.0,
       "risk": 100,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 83.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 70.08000183105469,
-      "resistance": 101.95999908447266,
-      "risk_reward": 0.13
+      "resistance": 102.88999938964844,
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.04395837095172439,
-        "3m": 0.38022496372718817,
-        "6m": 0.27728974299683506,
-        "12m": 0.519094060184986
+        "1m": 0.10302316398062028,
+        "3m": 0.4520575969293812,
+        "6m": 0.3436962492775115,
+        "12m": 0.5956488450356867
       },
-      "acceleration": 0.2416,
+      "acceleration": 0.2802,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,13 +48,12 @@
       ]
     },
     "volume": {
-      "score": 50.0,
-      "average_volume": 8291165.0,
-      "relative_volume": 2.6026258071091335,
+      "score": 25.0,
+      "average_volume": 8177514.7,
+      "relative_volume": 0.5143364645984678,
       "accumulation_days": 5,
       "distribution_days": 2,
       "evidence": [
-        "Relative volume is 2.60x",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -67,17 +67,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02184589499509767,
-        "annualized_volatility": 0.34679283194795424,
-        "maximum_drawdown": -0.3437908909724864,
-        "sharpe_ratio": 0.9848288729646828,
-        "sortino_ratio": 1.3577558183555196,
-        "calmar_ratio": 0.9455577943715532,
-        "beta": 0.30801386873454634,
-        "alpha": 0.2846761298131967,
-        "capm_expected_return": 0.0568554640263377,
-        "actual_return": 0.34153159383953435,
-        "market_return": 0.18458735075769295
+        "volatility": 0.021959048153530218,
+        "annualized_volatility": 0.3485890826515983,
+        "maximum_drawdown": -0.3437907715929692,
+        "sharpe_ratio": 1.0317699612390263,
+        "sortino_ratio": 1.4298400841008243,
+        "calmar_ratio": 1.0136040688019703,
+        "beta": 0.3060692534923361,
+        "alpha": 0.30271488538676944,
+        "capm_expected_return": 0.05694885890901791,
+        "actual_return": 0.35966374429578735,
+        "market_return": 0.18606527202329357
       },
       "evidence": []
     },
@@ -89,7 +89,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "CVS",
@@ -98,7 +98,7 @@
     "sector": "Healthcare",
     "industry": "Healthcare Plans",
     "exchange": "NYQ",
-    "market_cap": 125449175040.0,
+    "market_cap": 131254640640.0,
     "revenue_growth": 0.061,
     "eps_growth": 0.631,
     "fcf_growth": null,
@@ -115,14 +115,14 @@
     "cash_position": 11802000384.0,
     "total_debt": 78345003008.0,
     "interest_coverage": null,
-    "forward_pe": 11.727995,
-    "trailing_pe": 43.122807,
+    "forward_pe": 12.270737,
+    "trailing_pe": 45.118423,
     "peg": 0.28,
-    "price_to_book": 1.6159092,
-    "price_to_sales": 0.3092791,
+    "price_to_book": 1.6906894,
+    "price_to_sales": 0.32359177,
     "enterprise_to_ebitda": 12.469,
     "enterprise_to_revenue": 0.474,
-    "fcf_yield": 0.0414640039389772,
+    "fcf_yield": 0.03963002803281303,
     "institutional_ownership": 0.90334,
     "insider_ownership": 0.00064000004,
     "short_interest": 17760492.0,
@@ -139,20 +139,19 @@
     "next_earnings_date": "1778070600",
     "eps_current_year": 2.28,
     "eps_forward": 8.38336,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 70.73443863212378,
-    "macd_cross": false,
-    "breakout": false,
-    "new_52w_high": false,
-    "relative_volume": 2.6026258071091335,
+    "rsi": 78.0008907339641,
+    "macd_cross": true,
+    "breakout": true,
+    "new_52w_high": true,
+    "relative_volume": 0.5143364645984678,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation, volume surge",
+    "setup_type": "52-week high pressure, MACD bullish crossover, trend continuation",
     "support": 70.08000183105469,
-    "resistance": 101.95999908447266
+    "resistance": 102.88999938964844
   },
   "earnings": {
     "next_earnings_date": "1778070600",
@@ -243,7 +242,7 @@
         "last_surprise_pct": 0.16479999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 6.79,
+      "analyst_upside_pct": 2.07,
       "eps_growth_implied": 267.69
     },
     "evidence": [
@@ -271,9 +270,9 @@
     "available": true,
     "items": [
       {
-        "headline": "Jim Cramer Says Clover Health Was a Good Speculative Pick But Still Prefers UnitedHealth and CVS",
+        "headline": "Jim Cramer Says Clover Health (CLOV) Was a Good Speculative Pick But Still Prefers UnitedHealth and CVS",
         "source": "Insider Monkey",
-        "published": "2026-06-20T13:39:59Z",
+        "published": "2026-06-21T17:43:59Z",
         "summary": "Clover Health Investments, Corp. (NASDAQ:CLOV) was among the stocks on Jim Cramer\u2019s radar on Mad Money, as he advised investors to care about where a stock is going, not where it has been. A caller referenced Cramer\u2019s previous comment, calling it speculative, and noted that the company reported GAAP profitability in Q1 2026 and guided [\u2026]",
         "bullish_score": 1,
         "bearish_score": 0,
@@ -338,31 +337,31 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8774,
-    "probability_pct": 87.74,
+    "probability_of_outperformance": 0.8822,
+    "probability_pct": 88.22,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Volume surge above 1.5x",
+      "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 73.2/100"
+      "Composite score 71.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 73.2,
-    "technical_score": 73.0,
+    "final_score": 71.95,
+    "technical_score": 83.0,
     "momentum_score": 85.0,
-    "volume_score": 50.0,
+    "volume_score": 25.0,
     "fundamental_score": 58.0,
     "risk_score": 100,
     "catalyst_score": 50.0,
     "revenue_growth": 0.061,
     "eps_growth": 0.631,
     "roe": 0.037520003,
-    "forward_pe": 11.727995,
-    "relative_volume": 2.6026258071091335,
-    "breakout": false,
+    "forward_pe": 12.270737,
+    "relative_volume": 0.5143364645984678,
+    "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
@@ -371,67 +370,67 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.008471197420963139,
-      "weekly": -0.021496851014588758,
-      "monthly": 0.04395837095172439,
-      "annual": 0.519094060184986
+      "daily": 0.04648087580359084,
+      "weekly": 0.009121227084410766,
+      "monthly": 0.10302316398062028,
+      "annual": 0.5956488450356867
     },
     "risk": {
-      "volatility": 0.02184589499509767,
-      "annualized_volatility": 0.34679283194795424,
-      "maximum_drawdown": -0.3437908909724864,
-      "sharpe_ratio": 0.9848288729646828,
-      "sortino_ratio": 1.3577558183555196,
-      "calmar_ratio": 0.9455577943715532,
-      "beta": 0.30801386873454634,
-      "alpha": 0.2846761298131967,
-      "capm_expected_return": 0.0568554640263377,
-      "actual_return": 0.34153159383953435,
-      "market_return": 0.18458735075769295
+      "volatility": 0.021959048153530218,
+      "annualized_volatility": 0.3485890826515983,
+      "maximum_drawdown": -0.3437907715929692,
+      "sharpe_ratio": 1.0317699612390263,
+      "sortino_ratio": 1.4298400841008243,
+      "calmar_ratio": 1.0136040688019703,
+      "beta": 0.3060692534923361,
+      "alpha": 0.30271488538676944,
+      "capm_expected_return": 0.05694885890901791,
+      "actual_return": 0.35966374429578735,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.30801386873454634,
-      "alpha": 0.2846761298131967,
-      "capm_expected_return": 0.0568554640263377,
-      "actual_return": 0.34153159383953435,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.31: Moves roughly 69% less than the market. CAPM expected return is 5.69%; realized alpha is 28.47%, meaning positive alpha versus CAPM."
+      "beta": 0.3060692534923361,
+      "alpha": 0.30271488538676944,
+      "capm_expected_return": 0.05694885890901791,
+      "actual_return": 0.35966374429578735,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.31: Moves roughly 69% less than the market. CAPM expected return is 5.69%; realized alpha is 30.27%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.34153159383953435,
+      "actual_return": 0.35966374429578735,
       "components": {
-        "market_component": 0.0568554640263377,
-        "momentum_component": 0.1297735150462465,
-        "volatility_drag": -0.01935856638959085,
-        "alpha_component": 0.2846761298131967
+        "market_component": 0.05694885890901791,
+        "momentum_component": 0.14891221125892168,
+        "volatility_drag": -0.019717816530319666,
+        "alpha_component": 0.30271488538676944
       },
       "component_weights_pct": {
-        "market_component": 11.59,
-        "momentum_component": 26.45,
-        "volatility_drag": 3.95,
-        "alpha_component": 58.02
+        "market_component": 10.78,
+        "momentum_component": 28.19,
+        "volatility_drag": 3.73,
+        "alpha_component": 57.3
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 95.45250091552734,
-      "sma50": 88.61022918701173,
-      "sma200": 79.26544460296631,
-      "ema20": 96.13435698649089,
-      "ema50": 90.27019350411219,
-      "ema200": 79.37989811180597
+      "sma20": 95.93100090026856,
+      "sma50": 89.10494857788086,
+      "sma200": 79.42237277984619,
+      "ema20": 96.77775150107735,
+      "ema50": 90.76508785438374,
+      "ema200": 79.61834188363147
     },
     "momentum": {
-      "3m": 0.38022496372718817,
-      "6m": 0.27728974299683506,
-      "12m": 0.519094060184986,
+      "3m": 0.4520575969293812,
+      "6m": 0.3436962492775115,
+      "12m": 0.5956488450356867,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 8291165.0,
-      "relative_volume": 2.6026258071091335,
-      "volume_spike": true
+      "average_volume": 8177514.7,
+      "relative_volume": 0.5143364645984678,
+      "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
@@ -441,19 +440,19 @@
   },
   "why_now": {
     "send_alert": true,
-    "reason": "Volume spike",
-    "evidence": "Relative volume reached 2.60x",
-    "date_of_change": "2026-06-21",
-    "strength": 70,
-    "invalidates": "Volume fades and price cannot hold the move",
+    "reason": "52-week high",
+    "evidence": "Price is pressing against 52-week highs",
+    "date_of_change": "2026-06-22",
+    "strength": 65,
+    "invalidates": "Failed breakout below prior range high",
     "triggers": [
       {
-        "reason": "Volume spike",
-        "evidence": "Relative volume reached 2.60x",
-        "strength": 70,
-        "invalidates": "Volume fades and price cannot hold the move"
+        "reason": "52-week high",
+        "evidence": "Price is pressing against 52-week highs",
+        "strength": 65,
+        "invalidates": "Failed breakout below prior range high"
       }
     ]
   },
-  "report": "Ticker: CVS\nRating: Watch | Score: 73.2/100 | Confidence: 64.68/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 70.08000183105469 | Resistance: 101.95999908447266\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.727995\nNews/Catalyst: Jim Cramer Says Clover Health Was a Good Speculative Pick But Still Prefers UnitedHealth and CVS\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.60x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: CVS\nRating: Watch | Score: 71.95/100 | Confidence: 60.54/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation | Support: 70.08000183105469 | Resistance: 102.88999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.270737\nNews/Catalyst: Jim Cramer Says Clover Health (CLOV) Was a Good Speculative Pick But Still Prefers UnitedHealth and CVS\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

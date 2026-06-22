@@ -1,15 +1,15 @@
 {
   "ticker": "CNP",
-  "generated_at": "2026-06-21T17:42:31.691472",
+  "generated_at": "2026-06-22T17:30:07.072367",
   "score": {
     "final_score": 62.25,
     "rating": "Hold",
-    "confidence": 55.76,
+    "confidence": 53.24,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
-      "momentum": 45.0,
-      "volume": 50.0,
+      "momentum": 60.0,
+      "volume": 25.0,
       "fundamental": 50.0,
       "risk": 100,
       "catalyst": 45.0
@@ -27,31 +27,31 @@
       ],
       "support": 41.290000915527344,
       "resistance": 44.130001068115234,
-      "risk_reward": 0.86
+      "risk_reward": 0.38
     },
     "momentum": {
-      "score": 45.0,
+      "score": 60.0,
       "returns": {
-        "1m": 0.013045491990582248,
-        "3m": -0.004521730369999366,
-        "6m": 0.13776358471256045,
-        "12m": 0.22575274008825197
+        "1m": 0.031778124650970296,
+        "3m": 0.037180136905274885,
+        "6m": 0.14389688144865942,
+        "12m": 0.24636427834783547
       },
-      "acceleration": -0.0734,
+      "acceleration": -0.0348,
       "evidence": [
         "1m return is positive",
+        "3m return is positive",
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 50.0,
-      "average_volume": 5296735.0,
-      "relative_volume": 1.3555898114593234,
+      "score": 25.0,
+      "average_volume": 5262189.65,
+      "relative_volume": 0.5806314867424057,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
-        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -65,17 +65,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.011728987765400548,
-        "annualized_volatility": 0.18619190854661427,
-        "maximum_drawdown": -0.18141165472907395,
-        "sharpe_ratio": 1.0769998573085604,
-        "sortino_ratio": 1.449326989187965,
-        "calmar_ratio": 1.1075065703104703,
-        "beta": 0.12873173263246782,
-        "alpha": 0.1767664094516372,
-        "capm_expected_return": 0.023762249485074886,
-        "actual_return": 0.2005286589367121,
-        "market_return": 0.18458735075769295
+        "volatility": 0.011736602342849583,
+        "annualized_volatility": 0.18631278621622818,
+        "maximum_drawdown": -0.17269209056118495,
+        "sharpe_ratio": 1.1088488714525384,
+        "sortino_ratio": 1.4897304022090059,
+        "calmar_ratio": 1.2055347850143634,
+        "beta": 0.12841301970366933,
+        "alpha": 0.18269951929054684,
+        "capm_expected_return": 0.023893203442495792,
+        "actual_return": 0.20659272273304263,
+        "market_return": 0.18606527202329357
       },
       "evidence": []
     },
@@ -96,7 +96,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Regulated Electric",
     "exchange": "NYQ",
-    "market_cap": 28011536384.0,
+    "market_cap": 28354975744.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.067,
     "fcf_growth": null,
@@ -113,14 +113,14 @@
     "cash_position": 1194000000.0,
     "total_debt": 24682999808.0,
     "interest_coverage": null,
-    "forward_pe": 20.567356,
-    "trailing_pe": 26.26994,
+    "forward_pe": 20.819525,
+    "trailing_pe": 26.592026,
     "peg": 2.49,
-    "price_to_book": 2.4465773,
-    "price_to_sales": 2.9761515,
+    "price_to_book": 2.476574,
+    "price_to_sales": 3.012641,
     "enterprise_to_ebitda": 14.056,
     "enterprise_to_revenue": 5.472,
-    "fcf_yield": -0.17654780388357294,
+    "fcf_yield": -0.17440943263887138,
     "institutional_ownership": 1.04019,
     "insider_ownership": 0.0023700001,
     "short_interest": 38913290.0,
@@ -137,18 +137,17 @@
     "next_earnings_date": "1776947400",
     "eps_current_year": 1.63,
     "eps_forward": 2.08194,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 54.388730009441076,
+    "rsi": 67.31256234638366,
     "macd_cross": false,
-    "breakout": false,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 1.3555898114593234,
+    "relative_volume": 0.5806314867424057,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 41.290000915527344,
     "resistance": 44.130001068115234
   },
@@ -241,7 +240,7 @@
         "last_surprise_pct": 0.011,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.72,
+      "analyst_upside_pct": 6.41,
       "eps_growth_implied": 27.73
     },
     "evidence": [
@@ -336,10 +335,11 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.685,
-    "probability_pct": 68.5,
+    "probability_of_outperformance": 0.7415,
+    "probability_pct": 74.15,
     "confidence": "High",
     "evidence": [
+      "Breakout pressure detected",
       "Composite score 62.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
@@ -347,17 +347,17 @@
   "features": {
     "final_score": 62.25,
     "technical_score": 75.0,
-    "momentum_score": 45.0,
-    "volume_score": 50.0,
+    "momentum_score": 60.0,
+    "volume_score": 25.0,
     "fundamental_score": 50.0,
     "risk_score": 100,
     "catalyst_score": 45.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.067,
     "roe": 0.09561,
-    "forward_pe": 20.567356,
-    "relative_volume": 1.3555898114593234,
-    "breakout": false,
+    "forward_pe": 20.819525,
+    "relative_volume": 0.5806314867424057,
+    "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
@@ -366,71 +366,71 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0044569228700088726,
-      "weekly": 0.0063454867827237305,
-      "monthly": 0.013045491990582248,
-      "annual": 0.22575274008825197
+      "daily": 0.012260661597864653,
+      "weekly": 0.010372952890357778,
+      "monthly": 0.031778124650970296,
+      "annual": 0.24636427834783547
     },
     "risk": {
-      "volatility": 0.011728987765400548,
-      "annualized_volatility": 0.18619190854661427,
-      "maximum_drawdown": -0.18141165472907395,
-      "sharpe_ratio": 1.0769998573085604,
-      "sortino_ratio": 1.449326989187965,
-      "calmar_ratio": 1.1075065703104703,
-      "beta": 0.12873173263246782,
-      "alpha": 0.1767664094516372,
-      "capm_expected_return": 0.023762249485074886,
-      "actual_return": 0.2005286589367121,
-      "market_return": 0.18458735075769295
+      "volatility": 0.011736602342849583,
+      "annualized_volatility": 0.18631278621622818,
+      "maximum_drawdown": -0.17269209056118495,
+      "sharpe_ratio": 1.1088488714525384,
+      "sortino_ratio": 1.4897304022090059,
+      "calmar_ratio": 1.2055347850143634,
+      "beta": 0.12841301970366933,
+      "alpha": 0.18269951929054684,
+      "capm_expected_return": 0.023893203442495792,
+      "actual_return": 0.20659272273304263,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.12873173263246782,
-      "alpha": 0.1767664094516372,
-      "capm_expected_return": 0.023762249485074886,
-      "actual_return": 0.2005286589367121,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.13: Moves roughly 87% less than the market. CAPM expected return is 2.38%; realized alpha is 17.68%, meaning positive alpha versus CAPM."
+      "beta": 0.12841301970366933,
+      "alpha": 0.18269951929054684,
+      "capm_expected_return": 0.023893203442495792,
+      "actual_return": 0.20659272273304263,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.13: Moves roughly 87% less than the market. CAPM expected return is 2.39%; realized alpha is 18.27%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2005286589367121,
+      "actual_return": 0.20659272273304263,
       "components": {
-        "market_component": 0.023762249485074886,
-        "momentum_component": 0.05643818502206299,
+        "market_component": 0.023893203442495792,
+        "momentum_component": 0.06159106958695887,
         "volatility_drag": -0.0,
-        "alpha_component": 0.1767664094516372
+        "alpha_component": 0.18269951929054684
       },
       "component_weights_pct": {
-        "market_component": 9.25,
-        "momentum_component": 21.96,
+        "market_component": 8.91,
+        "momentum_component": 22.97,
         "volatility_drag": 0.0,
-        "alpha_component": 68.79
+        "alpha_component": 68.12
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 42.45900001525879,
-      "sma50": 42.45673782348633,
-      "sma200": 40.235981483459476,
-      "ema20": 42.52911810030388,
-      "ema50": 42.37450412022523,
-      "ema200": 40.332586882863126
+      "sma20": 42.50275001525879,
+      "sma50": 42.44584365844727,
+      "sma200": 40.267690105438234,
+      "ema20": 42.60682125454924,
+      "ema50": 42.41256281369397,
+      "ema200": 40.362771362174776
     },
     "momentum": {
-      "3m": -0.004521730369999366,
-      "6m": 0.13776358471256045,
-      "12m": 0.22575274008825197,
+      "3m": 0.037180136905274885,
+      "6m": 0.14389688144865942,
+      "12m": 0.24636427834783547,
       "24m": 0.0,
-      "score": 50.0
+      "score": 75.0
     },
     "volume": {
-      "average_volume": 5296735.0,
-      "relative_volume": 1.3555898114593234,
+      "average_volume": 5262189.65,
+      "relative_volume": 0.5806314867424057,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
-      "score": 80,
+      "score": 90,
       "label": "Research priority"
     }
   },
@@ -438,10 +438,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-21",
+    "date_of_change": "2026-06-22",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CNP\nRating: Hold | Score: 62.25/100 | Confidence: 55.76/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 41.290000915527344 | Resistance: 44.130001068115234\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.567356\nNews/Catalyst: Is CenterPoint Energy Stock Underperforming the S&P 500?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CNP\nRating: Hold | Score: 62.25/100 | Confidence: 53.24/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 41.290000915527344 | Resistance: 44.130001068115234\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.819525\nNews/Catalyst: Is CenterPoint Energy Stock Underperforming the S&P 500?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

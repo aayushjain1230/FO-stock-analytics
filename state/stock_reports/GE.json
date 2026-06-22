@@ -1,18 +1,18 @@
 {
   "ticker": "GE",
-  "generated_at": "2026-06-21T17:42:46.293987",
+  "generated_at": "2026-06-22T17:30:36.404698",
   "score": {
-    "final_score": 84.5,
-    "rating": "Buy Watch",
-    "confidence": 72.44,
+    "final_score": 73.75,
+    "rating": "Watch",
+    "confidence": 60.86,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 85.0,
-      "volume": 100,
+      "volume": 25.0,
       "fundamental": 60.0,
       "risk": 100,
-      "catalyst": 35.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 90.0,
@@ -33,12 +33,12 @@
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.25364559793454355,
-        "3m": 0.22643267588134797,
-        "6m": 0.20031657066337982,
-        "12m": 0.5250604716774574
+        "1m": 0.19034206180559088,
+        "3m": 0.24587671128652344,
+        "6m": 0.22607548653273857,
+        "12m": 0.5227276614198917
       },
-      "acceleration": 0.1263,
+      "acceleration": 0.1328,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,16 +49,13 @@
       ]
     },
     "volume": {
-      "score": 100,
-      "average_volume": 4914670.0,
-      "relative_volume": 1.5796381038808303,
+      "score": 25.0,
+      "average_volume": 4757620.05,
+      "relative_volume": 0.3756712350327345,
       "accumulation_days": 5,
       "distribution_days": 0,
       "evidence": [
-        "Relative volume is 1.58x",
-        "Price advanced on above-average volume",
-        "Accumulation days exceed distribution days",
-        "High-volume breakout behavior"
+        "Accumulation days exceed distribution days"
       ]
     },
     "fundamental": {
@@ -72,25 +69,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.020741181161162612,
-        "annualized_volatility": 0.32925604350104504,
-        "maximum_drawdown": -0.21364267943600934,
-        "sharpe_ratio": 1.3685349917741982,
-        "sortino_ratio": 1.7687574279752332,
-        "calmar_ratio": 2.2735283975612384,
-        "beta": 1.1708621115836142,
-        "alpha": 0.23447208150453006,
-        "capm_expected_return": 0.21612633527977762,
-        "actual_return": 0.4505984167843077,
-        "market_return": 0.18458735075769295
+        "volatility": 0.020731685683700714,
+        "annualized_volatility": 0.329105307469381,
+        "maximum_drawdown": -0.2136425502608511,
+        "sharpe_ratio": 1.4121051845264307,
+        "sortino_ratio": 1.8195739669773219,
+        "calmar_ratio": 2.372692086036862,
+        "beta": 1.1692874870037815,
+        "alpha": 0.247167516589886,
+        "capm_expected_return": 0.21756379434279194,
+        "actual_return": 0.46473131093267794,
+        "market_return": 0.18606527202329357
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 35.0,
+      "score": 45.0,
       "evidence": [
         "sector strength",
-        "major news"
+        "major news",
+        "guidance change"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
@@ -102,7 +100,7 @@
     "sector": "Industrials",
     "industry": "Aerospace & Defense",
     "exchange": "NYQ",
-    "market_cap": 373672869888.0,
+    "market_cap": 374106456064.0,
     "revenue_growth": 0.247,
     "eps_growth": -0.018,
     "fcf_growth": null,
@@ -119,14 +117,14 @@
     "cash_position": 10581000192.0,
     "total_debt": 21321000960.0,
     "interest_coverage": null,
-    "forward_pe": 41.17246,
-    "trailing_pe": 44.42733,
+    "forward_pe": 41.22023,
+    "trailing_pe": 44.47888,
     "peg": 8.61,
-    "price_to_book": 20.664473,
-    "price_to_sales": 7.7344165,
+    "price_to_book": 20.68845,
+    "price_to_sales": 7.743391,
     "enterprise_to_ebitda": 34.803,
     "enterprise_to_revenue": 7.951,
-    "fcf_yield": 0.015168346970704228,
+    "fcf_yield": 0.015150766986577614,
     "institutional_ownership": 0.80977994,
     "insider_ownership": 0.00302,
     "short_interest": 13826768.0,
@@ -143,18 +141,17 @@
     "next_earnings_date": "1784205000",
     "eps_current_year": 8.05,
     "eps_forward": 8.68639,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 68.99529472153307,
+    "rsi": 68.44092462306024,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 1.5796381038808303,
+    "relative_volume": 0.3756712350327345,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation, volume surge",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 273.25,
     "resistance": 357.6400146484375
   },
@@ -204,8 +201,8 @@
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
-    "guidance_change": false,
-    "bullish_news_score": 1,
+    "guidance_change": true,
+    "bullish_news_score": 3,
     "bearish_news_score": 1,
     "institutional_ownership": 0.80977994,
     "detail": {
@@ -247,12 +244,13 @@
         "last_surprise_pct": 0.16309999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -1.87,
+      "analyst_upside_pct": -1.98,
       "eps_growth_implied": 7.91
     },
     "evidence": [
       "technical backdrop is constructive",
-      "recent news item has elevated importance"
+      "recent news item has elevated importance",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -273,6 +271,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Defense ETFs to Buy Now as Record Backlogs Signal Sustained Growth",
+        "source": "Zacks",
+        "published": "2026-06-22T14:27:00Z",
+        "summary": "Record defense backlogs and rising military spending projections bolster the case for ETFs like IDEF as contractors scale production.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "I'm Calling It: GE Vernova (GEV) Is a Buy Before This Catalyst Drops",
         "source": "Motley Fool",
@@ -312,16 +320,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "GE Vernova Supplier Breaks Out As Data Centers Lift Construction Sector",
-        "source": "Investor's Business Daily",
-        "published": "2026-06-18T20:04:02Z",
-        "summary": "GE Vernova supplier Arcosa broke out from a base-on-base pattern at a buy point of 135.58. The stock is up almost 30% this year.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -339,30 +337,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9237,
-    "probability_pct": 92.37,
+    "probability_of_outperformance": 0.8737,
+    "probability_pct": 87.37,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
-      "Volume surge above 1.5x",
       "Breakout pressure detected",
-      "Composite score 84.5/100"
+      "Composite score 73.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 84.5,
+    "final_score": 73.75,
     "technical_score": 90.0,
     "momentum_score": 85.0,
-    "volume_score": 100,
+    "volume_score": 25.0,
     "fundamental_score": 60.0,
     "risk_score": 100,
-    "catalyst_score": 35.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.247,
     "eps_growth": -0.018,
     "roe": 0.45428002,
-    "forward_pe": 41.17246,
-    "relative_volume": 1.5796381038808303,
+    "forward_pe": 41.22023,
+    "relative_volume": 0.3756712350327345,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -372,66 +369,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.001708584352088982,
-      "weekly": 0.0747686144748474,
-      "monthly": 0.25364559793454355,
-      "annual": 0.5250604716774574
+      "daily": -0.0009367575185499355,
+      "weekly": 0.06562781295536313,
+      "monthly": 0.19034206180559088,
+      "annual": 0.5227276614198917
     },
     "risk": {
-      "volatility": 0.020741181161162612,
-      "annualized_volatility": 0.32925604350104504,
-      "maximum_drawdown": -0.21364267943600934,
-      "sharpe_ratio": 1.3685349917741982,
-      "sortino_ratio": 1.7687574279752332,
-      "calmar_ratio": 2.2735283975612384,
-      "beta": 1.1708621115836142,
-      "alpha": 0.23447208150453006,
-      "capm_expected_return": 0.21612633527977762,
-      "actual_return": 0.4505984167843077,
-      "market_return": 0.18458735075769295
+      "volatility": 0.020731685683700714,
+      "annualized_volatility": 0.329105307469381,
+      "maximum_drawdown": -0.2136425502608511,
+      "sharpe_ratio": 1.4121051845264307,
+      "sortino_ratio": 1.8195739669773219,
+      "calmar_ratio": 2.372692086036862,
+      "beta": 1.1692874870037815,
+      "alpha": 0.247167516589886,
+      "capm_expected_return": 0.21756379434279194,
+      "actual_return": 0.46473131093267794,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 1.1708621115836142,
-      "alpha": 0.23447208150453006,
-      "capm_expected_return": 0.21612633527977762,
-      "actual_return": 0.4505984167843077,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 1.17: Moves roughly in line with the market. CAPM expected return is 21.61%; realized alpha is 23.45%, meaning positive alpha versus CAPM."
+      "beta": 1.1692874870037815,
+      "alpha": 0.247167516589886,
+      "capm_expected_return": 0.21756379434279194,
+      "actual_return": 0.46473131093267794,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 1.17: Moves roughly in line with the market. CAPM expected return is 21.76%; realized alpha is 24.72%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.4505984167843077,
+      "actual_return": 0.46473131093267794,
       "components": {
-        "market_component": 0.21612633527977762,
-        "momentum_component": 0.13126511791936435,
-        "volatility_drag": -0.015851208700209007,
-        "alpha_component": 0.23447208150453006
+        "market_component": 0.21756379434279194,
+        "momentum_component": 0.13068191535497292,
+        "volatility_drag": -0.015821061493876198,
+        "alpha_component": 0.247167516589886
       },
       "component_weights_pct": {
-        "market_component": 36.16,
-        "momentum_component": 21.96,
-        "volatility_drag": 2.65,
-        "alpha_component": 39.23
+        "market_component": 35.59,
+        "momentum_component": 21.38,
+        "volatility_drag": 2.59,
+        "alpha_component": 40.44
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 327.070002746582,
-      "sma50": 307.73200134277346,
-      "sma200": 304.97997268676755,
-      "ema20": 329.2279653865588,
-      "ema50": 315.2899974296399,
-      "ema200": 296.48458308672787
+      "sma20": 329.84725189208984,
+      "sma50": 308.6177014160156,
+      "sma200": 305.3921075439453,
+      "ema20": 331.9019679855324,
+      "ema50": 316.9376442934115,
+      "ema200": 297.0601184003548
     },
     "momentum": {
-      "3m": 0.22643267588134797,
-      "6m": 0.20031657066337982,
-      "12m": 0.5250604716774574,
+      "3m": 0.24587671128652344,
+      "6m": 0.22607548653273857,
+      "12m": 0.5227276614198917,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 4914670.0,
-      "relative_volume": 1.5796381038808303,
+      "average_volume": 4757620.05,
+      "relative_volume": 0.3756712350327345,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -444,7 +441,7 @@
     "send_alert": true,
     "reason": "52-week high",
     "evidence": "Price is pressing against 52-week highs",
-    "date_of_change": "2026-06-21",
+    "date_of_change": "2026-06-22",
     "strength": 65,
     "invalidates": "Failed breakout below prior range high",
     "triggers": [
@@ -456,5 +453,5 @@
       }
     ]
   },
-  "report": "Ticker: GE\nRating: Buy Watch | Score: 84.5/100 | Confidence: 72.44/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 273.25 | Resistance: 357.6400146484375\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.17246\nNews/Catalyst: I'm Calling It: GE Vernova (GEV) Is a Buy Before This Catalyst Drops\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: GE\nRating: Watch | Score: 73.75/100 | Confidence: 60.86/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 273.25 | Resistance: 357.6400146484375\nFundamental Outlook: Fundamentally Average | Forward P/E: 41.22023\nNews/Catalyst: Defense ETFs to Buy Now as Record Backlogs Signal Sustained Growth\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

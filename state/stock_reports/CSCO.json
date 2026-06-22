@@ -1,41 +1,43 @@
 {
   "ticker": "CSCO",
-  "generated_at": "2026-06-21T17:42:37.064256",
+  "generated_at": "2026-06-22T17:30:18.486239",
   "score": {
-    "final_score": 76.9,
+    "final_score": 73.15,
     "rating": "Watch",
-    "confidence": 71.04,
+    "confidence": 62.71,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 80.0,
       "momentum": 85.0,
-      "volume": 75.0,
+      "volume": 25.0,
       "fundamental": 86.0,
       "risk": 85.0,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 77.04000091552734,
       "resistance": 130.0,
-      "risk_reward": 0.25
+      "risk_reward": 0.19
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.03605480812217765,
-        "3m": 0.530859052996858,
-        "6m": 0.5581027803980929,
-        "12m": 0.8719041627321071
+        "1m": 0.06366331171237838,
+        "3m": 0.5748739317402374,
+        "6m": 0.6176756079370476,
+        "12m": 0.889877132832299
       },
-      "acceleration": 0.2518,
+      "acceleration": 0.266,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,14 +48,12 @@
       ]
     },
     "volume": {
-      "score": 75.0,
-      "average_volume": 25656505.0,
-      "relative_volume": 2.0378613532903254,
+      "score": 25.0,
+      "average_volume": 24875274.8,
+      "relative_volume": 0.2844590082679207,
       "accumulation_days": 2,
       "distribution_days": 1,
       "evidence": [
-        "Relative volume is 2.04x",
-        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -68,17 +68,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.017246848263037632,
-        "annualized_volatility": 0.2737852284219832,
-        "maximum_drawdown": -0.1745779814546934,
-        "sharpe_ratio": 1.9638856207928044,
-        "sortino_ratio": 2.5759606133631565,
-        "calmar_ratio": 3.714802314595068,
-        "beta": 0.8925297279595443,
-        "alpha": 0.37293317532686954,
-        "capm_expected_return": 0.16474969795653668,
-        "actual_return": 0.5376828732834062,
-        "market_return": 0.18458735075769295
+        "volatility": 0.017271639372791844,
+        "annualized_volatility": 0.27417877508879296,
+        "maximum_drawdown": -0.1745781419909902,
+        "sharpe_ratio": 1.9751160687628642,
+        "sortino_ratio": 2.5923776175720987,
+        "calmar_ratio": 3.7501554658062166,
+        "beta": 0.8920506805744602,
+        "alpha": 0.37555525185194305,
+        "capm_expected_return": 0.1659796525396511,
+        "actual_return": 0.5415349043915941,
+        "market_return": 0.18606527202329357
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -92,7 +92,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "CSCO",
@@ -101,7 +101,7 @@
     "sector": "Technology",
     "industry": "Communication Equipment",
     "exchange": "NMS",
-    "market_cap": 471159111680.0,
+    "market_cap": 479140511744.0,
     "revenue_growth": 0.12,
     "eps_growth": 0.371,
     "fcf_growth": null,
@@ -118,14 +118,14 @@
     "cash_position": 16640000000.0,
     "total_debt": 33001000960.0,
     "interest_coverage": null,
-    "forward_pe": 25.027584,
-    "trailing_pe": 39.84667,
+    "forward_pe": 25.45155,
+    "trailing_pe": 40.521667,
     "peg": 1.66,
-    "price_to_book": 9.639545,
-    "price_to_sales": 7.7562165,
+    "price_to_book": 9.802838,
+    "price_to_sales": 7.887606,
     "enterprise_to_ebitda": 28.666,
     "enterprise_to_revenue": 8.026,
-    "fcf_yield": 0.019713882350445643,
+    "fcf_yield": 0.01938549354174144,
     "institutional_ownership": 0.8286,
     "insider_ownership": 0.00055,
     "short_interest": 61949954.0,
@@ -142,18 +142,17 @@
     "next_earnings_date": "1786564800",
     "eps_current_year": 3.0,
     "eps_forward": 4.77633,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 48.85833259923013,
+    "rsi": 50.377513894101725,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 2.0378613532903254,
+    "relative_volume": 0.2844590082679207,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation, volume surge",
+    "setup_type": "trend continuation",
     "support": 77.04000091552734,
     "resistance": 130.0
   },
@@ -204,7 +203,7 @@
     "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.8286,
     "detail": {
@@ -246,7 +245,7 @@
         "last_surprise_pct": 0.0229,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 6.28,
+      "analyst_upside_pct": 4.51,
       "eps_growth_implied": 59.21
     },
     "evidence": [
@@ -274,6 +273,36 @@
     "available": true,
     "items": [
       {
+        "headline": "Datadog vs. Cisco: Which Observability Stock is the Better Buy?",
+        "source": "Zacks",
+        "published": "2026-06-22T12:52:00Z",
+        "summary": "DDOG and CSCO are capitalizing on rising observability demand through product expansion, AI innovation and growing customer adoption.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Exclusive: Upscale AI wants to be the next Cisco\u2014and it just raised another $190 million",
+        "source": "Fortune",
+        "published": "2026-06-22T12:00:00Z",
+        "summary": "The AI networking startup has now raised $500 million in under 18 months as investors bet the next infrastructure giant will emerge from the race to connect the world's AI chips.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Why Cisco (CSCO) Is Turning AI Infrastructure Into a Hybrid Data Center Security Opportunity",
+        "source": "Insider Monkey",
+        "published": "2026-06-22T07:52:18Z",
+        "summary": "Cisco Systems, Inc. (NASDAQ:CSCO) is one of Kevin O\u2019Leary\u2019s top stock picks for 2026 through the O\u2019Shares U.S. Quality Dividend ETF. The stock made up 4.41% of the ETF as of June 17, 2026. On June 16, 2026, Equinix said it had expanded a collaboration with Cisco and NVIDIA to help enterprises deploy Cisco Secure [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Nvidia's $6.9 billion side bet just paid off in a big way",
         "source": "TheStreet",
         "published": "2026-06-19T17:33:00Z",
@@ -292,36 +321,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Shorting Out-of-the-Money Cisco Puts and Calls Provides Shareholders Extra Income",
-        "source": "Barchart",
-        "published": "2026-06-19T13:00:03Z",
-        "summary": "Over the last month, selling short out-of-the-money (OTM) Cisco Systems put and call options has worked well for existing shareholders. Moreover, for the next month, it looks like a good play as well.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Cisco Keeps Access to Restricted AI Model",
-        "source": "GuruFocus.com",
-        "published": "2026-06-19T12:38:02Z",
-        "summary": "Project Glasswing preserves access for select firms",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Cisco (CSCO) Pushes Further Into Quantum Security And Enterprise AI",
-        "source": "Simply Wall St.",
-        "published": "2026-06-19T02:10:30Z",
-        "summary": "Cisco Systems (NasdaqGS:CSCO) is a founding partner in the new Quantum Communication Fieldlab Rotterdam, focused on quantum secure networking. The initiative is intended to test and validate quantum resistant communication infrastructure in real world conditions. Cisco also launched the Secure AI Factory with Equinix and NVIDIA, aimed at simplifying enterprise scale AI deployment. The Secure AI Factory centers on pre integrated infrastructure that combines networking, compute, and colocation...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -341,30 +340,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8965,
-    "probability_pct": 89.65,
+    "probability_of_outperformance": 0.8691,
+    "probability_pct": 86.91,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 76.9/100"
+      "Composite score 73.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 76.9,
-    "technical_score": 65.0,
+    "final_score": 73.15,
+    "technical_score": 80.0,
     "momentum_score": 85.0,
-    "volume_score": 75.0,
+    "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
     "catalyst_score": 50.0,
     "revenue_growth": 0.12,
     "eps_growth": 0.371,
     "roe": 0.25229,
-    "forward_pe": 25.027584,
-    "relative_volume": 2.0378613532903254,
+    "forward_pe": 25.45155,
+    "relative_volume": 0.2844590082679207,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -374,89 +372,82 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.018835754282650274,
-      "weekly": -0.01879669113608773,
-      "monthly": 0.03605480812217765,
-      "annual": 0.8719041627321071
+      "daily": 0.01748282700146997,
+      "weekly": 0.0043757192720461635,
+      "monthly": 0.06366331171237838,
+      "annual": 0.889877132832299
     },
     "risk": {
-      "volatility": 0.017246848263037632,
-      "annualized_volatility": 0.2737852284219832,
-      "maximum_drawdown": -0.1745779814546934,
-      "sharpe_ratio": 1.9638856207928044,
-      "sortino_ratio": 2.5759606133631565,
-      "calmar_ratio": 3.714802314595068,
-      "beta": 0.8925297279595443,
-      "alpha": 0.37293317532686954,
-      "capm_expected_return": 0.16474969795653668,
-      "actual_return": 0.5376828732834062,
-      "market_return": 0.18458735075769295
+      "volatility": 0.017271639372791844,
+      "annualized_volatility": 0.27417877508879296,
+      "maximum_drawdown": -0.1745781419909902,
+      "sharpe_ratio": 1.9751160687628642,
+      "sortino_ratio": 2.5923776175720987,
+      "calmar_ratio": 3.7501554658062166,
+      "beta": 0.8920506805744602,
+      "alpha": 0.37555525185194305,
+      "capm_expected_return": 0.1659796525396511,
+      "actual_return": 0.5415349043915941,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.8925297279595443,
-      "alpha": 0.37293317532686954,
-      "capm_expected_return": 0.16474969795653668,
-      "actual_return": 0.5376828732834062,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.89: Moves roughly in line with the market. CAPM expected return is 16.47%; realized alpha is 37.29%, meaning positive alpha versus CAPM."
+      "beta": 0.8920506805744602,
+      "alpha": 0.37555525185194305,
+      "capm_expected_return": 0.1659796525396511,
+      "actual_return": 0.5415349043915941,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.89: Moves roughly in line with the market. CAPM expected return is 16.60%; realized alpha is 37.56%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.5376828732834062,
+      "actual_return": 0.5415349043915941,
       "components": {
-        "market_component": 0.16474969795653668,
-        "momentum_component": 0.21797604068302678,
-        "volatility_drag": -0.004757045684396644,
-        "alpha_component": 0.37293317532686954
+        "market_component": 0.1659796525396511,
+        "momentum_component": 0.22246928320807474,
+        "volatility_drag": -0.004835755017758592,
+        "alpha_component": 0.37555525185194305
       },
       "component_weights_pct": {
-        "market_component": 21.67,
-        "momentum_component": 28.67,
+        "market_component": 21.59,
+        "momentum_component": 28.94,
         "volatility_drag": 0.63,
-        "alpha_component": 49.04
+        "alpha_component": 48.85
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 121.2995002746582,
-      "sma50": 105.0366000366211,
-      "sma200": 82.1444687652588,
-      "ema20": 118.34373812258356,
-      "ema50": 108.07306695587125,
-      "ema200": 86.30275711842779
+      "sma20": 121.47099533081055,
+      "sma50": 105.80579803466797,
+      "sma200": 82.41989208221436,
+      "ema20": 118.65670573674599,
+      "ema50": 108.60470739280372,
+      "ema200": 86.65781536513106
     },
     "momentum": {
-      "3m": 0.530859052996858,
-      "6m": 0.5581027803980929,
-      "12m": 0.8719041627321071,
+      "3m": 0.5748739317402374,
+      "6m": 0.6176756079370476,
+      "12m": 0.889877132832299,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 25656505.0,
-      "relative_volume": 2.0378613532903254,
-      "volume_spike": true
+      "average_volume": 24875274.8,
+      "relative_volume": 0.2844590082679207,
+      "volume_spike": false
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 100,
+      "score": 90,
       "label": "Research priority"
     }
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Volume spike",
-    "evidence": "Relative volume reached 2.04x",
-    "date_of_change": "2026-06-21",
-    "strength": 70,
-    "invalidates": "Volume fades and price cannot hold the move",
-    "triggers": [
-      {
-        "reason": "Volume spike",
-        "evidence": "Relative volume reached 2.04x",
-        "strength": 70,
-        "invalidates": "Volume fades and price cannot hold the move"
-      }
-    ]
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
+    "date_of_change": "2026-06-22",
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: CSCO\nRating: Watch | Score: 76.9/100 | Confidence: 71.04/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 25.027584\nNews/Catalyst: Nvidia's $6.9 billion side bet just paid off in a big way\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.04x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: CSCO\nRating: Watch | Score: 73.15/100 | Confidence: 62.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 77.04000091552734 | Resistance: 130.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 25.45155\nNews/Catalyst: Datadog vs. Cisco: Which Observability Stock is the Better Buy?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

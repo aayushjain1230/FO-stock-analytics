@@ -1,22 +1,23 @@
 {
   "ticker": "AFL",
-  "generated_at": "2026-06-21T17:41:57.338285",
+  "generated_at": "2026-06-22T17:28:58.933665",
   "score": {
-    "final_score": 68.65,
+    "final_score": 66.9,
     "rating": "Watch",
-    "confidence": 64.56,
+    "confidence": 54.55,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 72.0,
+      "technical": 80.0,
       "momentum": 60.0,
-      "volume": 25.0,
+      "volume": 0,
       "fundamental": 86.0,
       "risk": 100,
       "catalyst": 80.0
     },
     "technical": {
-      "score": 72.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +27,17 @@
       ],
       "support": 106.19999694824219,
       "resistance": 118.66999816894531,
-      "risk_reward": 0.35
+      "risk_reward": 0.19
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.019779301958345097,
-        "3m": 0.08302636021210441,
-        "6m": 0.06571029202375755,
-        "12m": 0.1551891555643754
+        "1m": -0.004943680984310306,
+        "3m": 0.10378929075656229,
+        "6m": 0.06667358790658451,
+        "12m": 0.16075939852478371
       },
-      "acceleration": 0.0502,
+      "acceleration": 0.0705,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -45,14 +46,12 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 3112215.0,
-      "relative_volume": 2.0500190378878065,
-      "accumulation_days": 6,
+      "score": 0,
+      "average_volume": 3003968.95,
+      "relative_volume": 0.22865715705883044,
+      "accumulation_days": 5,
       "distribution_days": 7,
-      "evidence": [
-        "Relative volume is 2.05x"
-      ]
+      "evidence": []
     },
     "fundamental": {
       "score": 86.0,
@@ -65,17 +64,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.012568489200242726,
-        "annualized_volatility": 0.19951858067786005,
-        "maximum_drawdown": -0.13559213213383337,
-        "sharpe_ratio": 0.8413310009094491,
-        "sortino_ratio": 1.0947411584368303,
-        "calmar_ratio": 1.175148013023984,
-        "beta": 0.36880115066581787,
-        "alpha": 0.09978513982394455,
-        "capm_expected_return": 0.06807602735779208,
-        "actual_return": 0.16786116718173663,
-        "market_return": 0.18458735075769295
+        "volatility": 0.012583168564943304,
+        "annualized_volatility": 0.19975160836827296,
+        "maximum_drawdown": -0.1355922008013224,
+        "sharpe_ratio": 0.8487685971418747,
+        "sortino_ratio": 1.1050021541794672,
+        "calmar_ratio": 1.18913110526996,
+        "beta": 0.3688345384050474,
+        "alpha": 0.10091559369165111,
+        "capm_expected_return": 0.06862729871992106,
+        "actual_return": 0.16954289241157217,
+        "market_return": 0.18606527202329357
       },
       "evidence": []
     },
@@ -89,7 +88,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "AFL",
@@ -98,7 +97,7 @@
     "sector": "Financial Services",
     "industry": "Insurance - Life",
     "exchange": "NYQ",
-    "market_cap": 58772488192.0,
+    "market_cap": 59375632384.0,
     "revenue_growth": 0.279,
     "eps_growth": 38.6,
     "fcf_growth": null,
@@ -115,14 +114,14 @@
     "cash_position": 8270000128.0,
     "total_debt": 14464000000.0,
     "interest_coverage": null,
-    "forward_pe": 15.186048,
-    "trailing_pe": 13.196571,
+    "forward_pe": 15.341893,
+    "trailing_pe": 13.332,
     "peg": 1.18,
-    "price_to_book": 1.9675902,
-    "price_to_sales": 3.2449474,
+    "price_to_book": 1.9877824,
+    "price_to_sales": 3.2782483,
     "enterprise_to_ebitda": 11.049,
     "enterprise_to_revenue": 3.587,
-    "fcf_yield": 0.08376581287348196,
+    "fcf_yield": 0.08291491055052137,
     "institutional_ownership": 0.59834,
     "insider_ownership": 0.108789995,
     "short_interest": 9082321.0,
@@ -139,18 +138,17 @@
     "next_earnings_date": "1786046400",
     "eps_current_year": 8.75,
     "eps_forward": 7.60369,
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 59.21450053567049,
+    "rsi": 63.0108166756645,
     "macd_cross": false,
-    "breakout": false,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 2.0500190378878065,
+    "relative_volume": 0.22865715705883044,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation, volume surge",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 106.19999694824219,
     "resistance": 118.66999816894531
   },
@@ -243,7 +241,7 @@
         "last_surprise_pct": -0.0255,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": -2.63,
+      "analyst_upside_pct": -3.62,
       "eps_growth_implied": -13.1
     },
     "evidence": [
@@ -340,32 +338,32 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9006,
-    "probability_pct": 90.06,
+    "probability_of_outperformance": 0.9083,
+    "probability_pct": 90.83,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
-      "Volume surge above 1.5x",
+      "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 68.65/100"
+      "Composite score 66.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 68.65,
-    "technical_score": 72.0,
+    "final_score": 66.9,
+    "technical_score": 80.0,
     "momentum_score": 60.0,
-    "volume_score": 25.0,
+    "volume_score": 0,
     "fundamental_score": 86.0,
     "risk_score": 100,
     "catalyst_score": 80.0,
     "revenue_growth": 0.279,
     "eps_growth": 38.6,
     "roe": 0.16469,
-    "forward_pe": 15.186048,
-    "relative_volume": 2.0500190378878065,
-    "breakout": false,
+    "forward_pe": 15.341893,
+    "relative_volume": 0.22865715705883044,
+    "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
@@ -374,89 +372,82 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.006624196982254138,
-      "weekly": -0.008415592556645923,
-      "monthly": -0.019779301958345097,
-      "annual": 0.1551891555643754
+      "daily": 0.010136846770678831,
+      "weekly": -0.009842954940848858,
+      "monthly": -0.004943680984310306,
+      "annual": 0.16075939852478371
     },
     "risk": {
-      "volatility": 0.012568489200242726,
-      "annualized_volatility": 0.19951858067786005,
-      "maximum_drawdown": -0.13559213213383337,
-      "sharpe_ratio": 0.8413310009094491,
-      "sortino_ratio": 1.0947411584368303,
-      "calmar_ratio": 1.175148013023984,
-      "beta": 0.36880115066581787,
-      "alpha": 0.09978513982394455,
-      "capm_expected_return": 0.06807602735779208,
-      "actual_return": 0.16786116718173663,
-      "market_return": 0.18458735075769295
+      "volatility": 0.012583168564943304,
+      "annualized_volatility": 0.19975160836827296,
+      "maximum_drawdown": -0.1355922008013224,
+      "sharpe_ratio": 0.8487685971418747,
+      "sortino_ratio": 1.1050021541794672,
+      "calmar_ratio": 1.18913110526996,
+      "beta": 0.3688345384050474,
+      "alpha": 0.10091559369165111,
+      "capm_expected_return": 0.06862729871992106,
+      "actual_return": 0.16954289241157217,
+      "market_return": 0.18606527202329357
     },
     "capm": {
-      "beta": 0.36880115066581787,
-      "alpha": 0.09978513982394455,
-      "capm_expected_return": 0.06807602735779208,
-      "actual_return": 0.16786116718173663,
-      "market_return": 0.18458735075769295,
-      "interpretation": "Beta 0.37: Moves roughly 63% less than the market. CAPM expected return is 6.81%; realized alpha is 9.98%, meaning positive alpha versus CAPM."
+      "beta": 0.3688345384050474,
+      "alpha": 0.10091559369165111,
+      "capm_expected_return": 0.06862729871992106,
+      "actual_return": 0.16954289241157217,
+      "market_return": 0.18606527202329357,
+      "interpretation": "Beta 0.37: Moves roughly 63% less than the market. CAPM expected return is 6.86%; realized alpha is 10.09%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.16786116718173663,
+      "actual_return": 0.16954289241157217,
       "components": {
-        "market_component": 0.06807602735779208,
-        "momentum_component": 0.03879728889109385,
+        "market_component": 0.06862729871992106,
+        "momentum_component": 0.04018984963119593,
         "volatility_drag": -0.0,
-        "alpha_component": 0.09978513982394455
+        "alpha_component": 0.10091559369165111
       },
       "component_weights_pct": {
-        "market_component": 32.94,
-        "momentum_component": 18.77,
+        "market_component": 32.72,
+        "momentum_component": 19.16,
         "volatility_drag": 0.0,
-        "alpha_component": 48.29
+        "alpha_component": 48.12
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 115.72249946594238,
-      "sma50": 114.755205078125,
-      "sma200": 110.44746982574463,
-      "ema20": 115.88593814921046,
-      "ema50": 114.58325839776849,
-      "ema200": 110.47699641962541
+      "sma20": 115.66402473449708,
+      "sma50": 114.8382649230957,
+      "sma200": 110.5052685546875,
+      "ema20": 115.95780146163696,
+      "ema50": 114.66393465380835,
+      "ema200": 110.54266135151622
     },
     "momentum": {
-      "3m": 0.08302636021210441,
-      "6m": 0.06571029202375755,
-      "12m": 0.1551891555643754,
+      "3m": 0.10378929075656229,
+      "6m": 0.06667358790658451,
+      "12m": 0.16075939852478371,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3112215.0,
-      "relative_volume": 2.0500190378878065,
-      "volume_spike": true
+      "average_volume": 3003968.95,
+      "relative_volume": 0.22865715705883044,
+      "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
-      "score": 90,
+      "score": 80,
       "label": "Research priority"
     }
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Volume spike",
-    "evidence": "Relative volume reached 2.05x",
-    "date_of_change": "2026-06-21",
-    "strength": 70,
-    "invalidates": "Volume fades and price cannot hold the move",
-    "triggers": [
-      {
-        "reason": "Volume spike",
-        "evidence": "Relative volume reached 2.05x",
-        "strength": 70,
-        "invalidates": "Volume fades and price cannot hold the move"
-      }
-    ]
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
+    "date_of_change": "2026-06-22",
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: AFL\nRating: Watch | Score: 68.65/100 | Confidence: 64.56/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 106.19999694824219 | Resistance: 118.66999816894531\nFundamental Outlook: Quality Compounder | Forward P/E: 15.186048\nNews/Catalyst: UNM Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.05x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: AFL\nRating: Watch | Score: 66.9/100 | Confidence: 54.55/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 106.19999694824219 | Resistance: 118.66999816894531\nFundamental Outlook: Quality Compounder | Forward P/E: 15.341893\nNews/Catalyst: UNM Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
