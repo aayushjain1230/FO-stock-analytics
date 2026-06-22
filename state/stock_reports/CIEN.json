@@ -1,13 +1,13 @@
 {
   "ticker": "CIEN",
-  "generated_at": "2026-06-22T17:29:59.304177",
+  "generated_at": "2026-06-22T20:22:07.348990",
   "score": {
-    "final_score": 42.65,
+    "final_score": 40.15,
     "rating": "Avoid",
-    "confidence": 31.68,
+    "confidence": 29.79,
     "risk_level": "High",
     "categories": {
-      "technical": 32.0,
+      "technical": 22.0,
       "momentum": 65.0,
       "volume": 0,
       "fundamental": 81.0,
@@ -15,25 +15,24 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 32.0,
+      "score": 22.0,
       "evidence": [
         "Price above SMA200",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 365.0,
       "resistance": 627.0,
-      "risk_reward": 2.16
+      "risk_reward": 1.75
     },
     "momentum": {
       "score": 65.0,
       "returns": {
-        "1m": -0.19246180186832973,
-        "3m": 0.1669746062343016,
-        "6m": 1.1971059935836754,
-        "12m": 5.068679226952784
+        "1m": -0.1702177906321225,
+        "3m": 0.19911945871744297,
+        "6m": 1.25762628912076,
+        "12m": 5.235843788611408
       },
-      "acceleration": -0.4316,
+      "acceleration": -0.4297,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -43,8 +42,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3530430.95,
-      "relative_volume": 0.47824728026475066,
+      "average_volume": 3593998.0,
+      "relative_volume": 0.8235285606725435,
       "accumulation_days": 3,
       "distribution_days": 9,
       "evidence": []
@@ -60,17 +59,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.03878336306603239,
-        "annualized_volatility": 0.6156668020766953,
+        "volatility": 0.03886573842534257,
+        "annualized_volatility": 0.6169744703660612,
         "maximum_drawdown": -0.4550825032215893,
-        "sharpe_ratio": 2.1604743285507673,
-        "sortino_ratio": 2.7637936686405524,
-        "calmar_ratio": 4.655710847955126,
-        "beta": 1.9606262910811278,
-        "alpha": 0.9653278566416151,
-        "capm_expected_return": 0.3648044641860312,
-        "actual_return": 1.3301323208276463,
-        "market_return": 0.18606527202329357
+        "sharpe_ratio": 2.17948285416863,
+        "sortino_ratio": 2.794032295841536,
+        "calmar_ratio": 4.7504015568214015,
+        "beta": 1.9577224463509122,
+        "alpha": 0.9813026307545425,
+        "capm_expected_return": 0.3633826488680598,
+        "actual_return": 1.3446852796226023,
+        "market_return": 0.185614998461802
       },
       "evidence": [
         "Volatility is elevated",
@@ -88,7 +87,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; 6m return is positive; 12m return is positive"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; 12m return is positive; Outperforming S&P 500 over 3 months"
   },
   "fundamentals": {
     "ticker": "CIEN",
@@ -138,14 +137,15 @@
     "next_earnings_date": "1780576200",
     "eps_current_year": 3.0,
     "eps_forward": 9.61921,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 32.440066174596,
+    "rsi": 34.7646686068324,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.47824728026475066,
+    "relative_volume": 0.8235285606725435,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -241,7 +241,7 @@
         "last_surprise_pct": 0.1234,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 26.16,
+      "analyst_upside_pct": 22.72,
       "eps_growth_implied": 220.64
     },
     "evidence": [
@@ -345,13 +345,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 42.65/100"
+      "Composite score 40.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 42.65,
-    "technical_score": 32.0,
+    "final_score": 40.15,
+    "technical_score": 22.0,
     "momentum_score": 65.0,
     "volume_score": 0,
     "fundamental_score": 81.0,
@@ -361,7 +361,7 @@
     "eps_growth": 23.833,
     "roe": 0.15464,
     "forward_pe": 46.55164,
-    "relative_volume": 0.47824728026475066,
+    "relative_volume": 0.8235285606725435,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -371,66 +371,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.04616761805749503,
-      "weekly": 0.004506676635276596,
-      "monthly": -0.19246180186832973,
-      "annual": 5.068679226952784
+      "daily": 0.07498478646496731,
+      "weekly": 0.032176275242025154,
+      "monthly": -0.1702177906321225,
+      "annual": 5.235843788611408
     },
     "risk": {
-      "volatility": 0.03878336306603239,
-      "annualized_volatility": 0.6156668020766953,
+      "volatility": 0.03886573842534257,
+      "annualized_volatility": 0.6169744703660612,
       "maximum_drawdown": -0.4550825032215893,
-      "sharpe_ratio": 2.1604743285507673,
-      "sortino_ratio": 2.7637936686405524,
-      "calmar_ratio": 4.655710847955126,
-      "beta": 1.9606262910811278,
-      "alpha": 0.9653278566416151,
-      "capm_expected_return": 0.3648044641860312,
-      "actual_return": 1.3301323208276463,
-      "market_return": 0.18606527202329357
+      "sharpe_ratio": 2.17948285416863,
+      "sortino_ratio": 2.794032295841536,
+      "calmar_ratio": 4.7504015568214015,
+      "beta": 1.9577224463509122,
+      "alpha": 0.9813026307545425,
+      "capm_expected_return": 0.3633826488680598,
+      "actual_return": 1.3446852796226023,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 1.9606262910811278,
-      "alpha": 0.9653278566416151,
-      "capm_expected_return": 0.3648044641860312,
-      "actual_return": 1.3301323208276463,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 1.96: Moves roughly 96% more than the market. CAPM expected return is 36.48%; realized alpha is 96.53%, meaning positive alpha versus CAPM."
+      "beta": 1.9577224463509122,
+      "alpha": 0.9813026307545425,
+      "capm_expected_return": 0.3633826488680598,
+      "actual_return": 1.3446852796226023,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 1.96: Moves roughly 96% more than the market. CAPM expected return is 36.34%; realized alpha is 98.13%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.3301323208276463,
+      "actual_return": 1.3446852796226023,
       "components": {
-        "market_component": 0.3648044641860312,
-        "momentum_component": 1.267169806738196,
-        "volatility_drag": -0.07313336041533906,
-        "alpha_component": 0.9653278566416151
+        "market_component": 0.3633826488680598,
+        "momentum_component": 1.308960947152852,
+        "volatility_drag": -0.07339489407321224,
+        "alpha_component": 0.9813026307545425
       },
       "component_weights_pct": {
-        "market_component": 13.66,
-        "momentum_component": 47.45,
-        "volatility_drag": 2.74,
-        "alpha_component": 36.15
+        "market_component": 13.33,
+        "momentum_component": 48.0,
+        "volatility_drag": 2.69,
+        "alpha_component": 35.98
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 509.89699401855466,
-      "sma50": 520.4085974121094,
-      "sma200": 311.8054991912842,
-      "ema20": 485.79432203487454,
-      "ema50": 490.0342885954848,
-      "ema200": 345.9670308002059
+      "sma20": 510.5139984130859,
+      "sma50": 520.6553991699219,
+      "sma200": 311.86719963073733,
+      "ema20": 486.96956850064834,
+      "ema50": 490.5182136108034,
+      "ema200": 346.08981774439127
     },
     "momentum": {
-      "3m": 0.1669746062343016,
-      "6m": 1.1971059935836754,
-      "12m": 5.068679226952784,
+      "3m": 0.19911945871744297,
+      "6m": 1.25762628912076,
+      "12m": 5.235843788611408,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3530430.95,
-      "relative_volume": 0.47824728026475066,
+      "average_volume": 3593998.0,
+      "relative_volume": 0.8235285606725435,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -448,5 +448,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CIEN\nRating: Avoid | Score: 42.65/100 | Confidence: 31.68/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 46.55164\nNews/Catalyst: Ciena (CIEN) Sets A New Bar For Quantum Safe 800GbE Across The Atlantic\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CIEN\nRating: Avoid | Score: 40.15/100 | Confidence: 29.79/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 46.55164\nNews/Catalyst: Ciena (CIEN) Sets A New Bar For Quantum Safe 800GbE Across The Atlantic\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

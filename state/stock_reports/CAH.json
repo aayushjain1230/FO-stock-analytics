@@ -1,10 +1,10 @@
 {
   "ticker": "CAH",
-  "generated_at": "2026-06-22T17:29:45.868659",
+  "generated_at": "2026-06-22T20:22:00.008129",
   "score": {
-    "final_score": 64.75,
-    "rating": "Hold",
-    "confidence": 54.82,
+    "final_score": 65.75,
+    "rating": "Watch",
+    "confidence": 58.42,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 50.0,
       "risk": 100,
-      "catalyst": 45.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 75.0,
@@ -27,17 +27,17 @@
       ],
       "support": 182.5,
       "resistance": 227.72000122070312,
-      "risk_reward": 0.08
+      "risk_reward": 0.12
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.1254329469912736,
-        "3m": 0.08147777979762139,
-        "6m": 0.1354758974671233,
-        "12m": 0.3709159468754377
+        "1m": 0.11800436816641091,
+        "3m": 0.07433933325041342,
+        "6m": 0.12798102873183703,
+        "12m": 0.36186689584796117
       },
-      "acceleration": 0.0137,
+      "acceleration": 0.0103,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2260798.85,
-      "relative_volume": 0.38657884136839504,
+      "average_volume": 2298134.3,
+      "relative_volume": 0.7052181415159245,
       "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
@@ -66,23 +66,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016669487456829814,
-        "annualized_volatility": 0.2646199097620934,
-        "maximum_drawdown": -0.20418311682392443,
-        "sharpe_ratio": 1.6358108445988144,
-        "sortino_ratio": 2.5122595223025175,
-        "calmar_ratio": 2.3958052556040697,
-        "beta": 0.2865327569713378,
-        "alpha": 0.37955432271613576,
-        "capm_expected_return": 0.053313795369456234,
-        "actual_return": 0.432868118085592,
-        "market_return": 0.18606527202329357
+        "volatility": 0.016664662203322064,
+        "annualized_volatility": 0.26454331123732727,
+        "maximum_drawdown": -0.2041831168239241,
+        "sharpe_ratio": 1.6235448659637899,
+        "sortino_ratio": 2.4927001179408492,
+        "calmar_ratio": 2.371454038293444,
+        "beta": 0.2868256905023897,
+        "alpha": 0.3762587846830173,
+        "capm_expected_return": 0.05323915010140636,
+        "actual_return": 0.42949793478442366,
+        "market_return": 0.185614998461802
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 65.0,
       "evidence": [
+        "analyst revision",
         "sector strength",
         "major news",
         "guidance change"
@@ -138,14 +139,15 @@
     "next_earnings_date": "1777552200",
     "eps_current_year": 6.54,
     "eps_forward": 11.9968,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 83.05663693105748,
+    "rsi": 82.46647214615972,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.38657884136839504,
+    "relative_volume": 0.7052181415159245,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -194,7 +196,7 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
@@ -241,10 +243,11 @@
         "last_surprise_pct": 0.137,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 9.38,
+      "analyst_upside_pct": 10.11,
       "eps_growth_implied": 83.44
     },
     "evidence": [
+      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
@@ -336,96 +339,97 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7307,
-    "probability_pct": 73.07,
+    "probability_of_outperformance": 0.7752,
+    "probability_pct": 77.52,
     "confidence": "High",
     "evidence": [
-      "Composite score 64.75/100"
+      "Analyst data is supportive",
+      "Composite score 65.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 64.75,
+    "final_score": 65.75,
     "technical_score": 75.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 50.0,
     "risk_score": 100,
-    "catalyst_score": 45.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.11,
     "eps_growth": -0.195,
     "roe": null,
     "forward_pe": 18.690817,
-    "relative_volume": 0.38657884136839504,
+    "relative_volume": 0.7052181415159245,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.011047467651360998,
-      "weekly": 0.0016528707040392998,
-      "monthly": 0.1254329469912736,
-      "annual": 0.3709159468754377
+      "daily": 0.004373906308408726,
+      "weekly": -0.004958680277356131,
+      "monthly": 0.11800436816641091,
+      "annual": 0.36186689584796117
     },
     "risk": {
-      "volatility": 0.016669487456829814,
-      "annualized_volatility": 0.2646199097620934,
-      "maximum_drawdown": -0.20418311682392443,
-      "sharpe_ratio": 1.6358108445988144,
-      "sortino_ratio": 2.5122595223025175,
-      "calmar_ratio": 2.3958052556040697,
-      "beta": 0.2865327569713378,
-      "alpha": 0.37955432271613576,
-      "capm_expected_return": 0.053313795369456234,
-      "actual_return": 0.432868118085592,
-      "market_return": 0.18606527202329357
+      "volatility": 0.016664662203322064,
+      "annualized_volatility": 0.26454331123732727,
+      "maximum_drawdown": -0.2041831168239241,
+      "sharpe_ratio": 1.6235448659637899,
+      "sortino_ratio": 2.4927001179408492,
+      "calmar_ratio": 2.371454038293444,
+      "beta": 0.2868256905023897,
+      "alpha": 0.3762587846830173,
+      "capm_expected_return": 0.05323915010140636,
+      "actual_return": 0.42949793478442366,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.2865327569713378,
-      "alpha": 0.37955432271613576,
-      "capm_expected_return": 0.053313795369456234,
-      "actual_return": 0.432868118085592,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.29: Moves roughly 71% less than the market. CAPM expected return is 5.33%; realized alpha is 37.96%, meaning positive alpha versus CAPM."
+      "beta": 0.2868256905023897,
+      "alpha": 0.3762587846830173,
+      "capm_expected_return": 0.05323915010140636,
+      "actual_return": 0.42949793478442366,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.29: Moves roughly 71% less than the market. CAPM expected return is 5.32%; realized alpha is 37.63%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.432868118085592,
+      "actual_return": 0.42949793478442366,
       "components": {
-        "market_component": 0.053313795369456234,
-        "momentum_component": 0.09272898671885943,
-        "volatility_drag": -0.002923981952418675,
-        "alpha_component": 0.37955432271613576
+        "market_component": 0.05323915010140636,
+        "momentum_component": 0.09046672396199029,
+        "volatility_drag": -0.0029086622474654546,
+        "alpha_component": 0.3762587846830173
       },
       "component_weights_pct": {
-        "market_component": 10.09,
-        "momentum_component": 17.54,
-        "volatility_drag": 0.55,
-        "alpha_component": 71.81
+        "market_component": 10.18,
+        "momentum_component": 17.3,
+        "volatility_drag": 0.56,
+        "alpha_component": 71.96
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 209.7860008239746,
-      "sma50": 203.89700073242187,
-      "sma200": 197.07778625488282,
-      "ema20": 213.24777299573051,
-      "ema50": 207.8568393361374,
-      "ema200": 195.16836554212574
+      "sma20": 209.71200103759764,
+      "sma50": 203.8674008178711,
+      "sma200": 197.0703865814209,
+      "ema20": 213.1068210216941,
+      "ema50": 207.7988003024218,
+      "ema200": 195.15363938836737
     },
     "momentum": {
-      "3m": 0.08147777979762139,
-      "6m": 0.1354758974671233,
-      "12m": 0.3709159468754377,
+      "3m": 0.07433933325041342,
+      "6m": 0.12798102873183703,
+      "12m": 0.36186689584796117,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 2260798.85,
-      "relative_volume": 0.38657884136839504,
+      "average_volume": 2298134.3,
+      "relative_volume": 0.7052181415159245,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -443,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CAH\nRating: Hold | Score: 64.75/100 | Confidence: 54.82/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 182.5 | Resistance: 227.72000122070312\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.690817\nNews/Catalyst: Cardinal Health (CAH) Stock Could Be 9.6% Undervalued Despite Rich P/E Signals\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CAH\nRating: Watch | Score: 65.75/100 | Confidence: 58.42/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 182.5 | Resistance: 227.72000122070312\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.690817\nNews/Catalyst: Cardinal Health (CAH) Stock Could Be 9.6% Undervalued Despite Rich P/E Signals\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

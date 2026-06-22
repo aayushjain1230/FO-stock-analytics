@@ -1,18 +1,18 @@
 {
   "ticker": "APA",
-  "generated_at": "2026-06-22T17:29:15.499470",
+  "generated_at": "2026-06-22T20:21:43.791812",
   "score": {
-    "final_score": 40.75,
+    "final_score": 44.0,
     "rating": "Drop",
-    "confidence": 31.55,
+    "confidence": 40.45,
     "risk_level": "Controlled",
     "categories": {
       "technical": 32.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 70.0,
       "risk": 75.0,
-      "catalyst": 45.0
+      "catalyst": 35.0
     },
     "technical": {
       "score": 32.0,
@@ -23,29 +23,31 @@
       ],
       "support": 33.029998779296875,
       "resistance": 44.38999938964844,
-      "risk_reward": 12.06
+      "risk_reward": 8.71
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.13784329122613803,
-        "3m": -0.12741219706756013,
-        "6m": 0.39875904682972685,
-        "12m": 0.7386391604774218
+        "1m": -0.13021360558552397,
+        "3m": -0.11969020109808404,
+        "6m": 0.4111373023810445,
+        "12m": 0.7540253079166379
       },
-      "acceleration": -0.3268,
+      "acceleration": -0.3253,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 5249838.7,
-      "relative_volume": 0.5968133839997789,
-      "accumulation_days": 0,
+      "score": 25.0,
+      "average_volume": 5433857.4,
+      "relative_volume": 1.2539062950014108,
+      "accumulation_days": 1,
       "distribution_days": 5,
-      "evidence": []
+      "evidence": [
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 70.0,
@@ -57,31 +59,30 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.0311129906876955,
-        "annualized_volatility": 0.49390341541866467,
-        "maximum_drawdown": -0.5519893258141507,
-        "sharpe_ratio": 0.48411395172772703,
-        "sortino_ratio": 0.6374829739818212,
-        "calmar_ratio": 0.22310827060989163,
-        "beta": 0.9438470667854019,
-        "alpha": 0.06348837298033738,
-        "capm_expected_return": 0.17561716122981352,
-        "actual_return": 0.2391055342101509,
-        "market_return": 0.18606527202329357
+        "volatility": 0.03113052963388394,
+        "annualized_volatility": 0.4941818375579011,
+        "maximum_drawdown": -0.5519893547030255,
+        "sharpe_ratio": 0.4931228938717853,
+        "sortino_ratio": 0.6497120158036428,
+        "calmar_ratio": 0.23218188201013995,
+        "beta": 0.9426995184577323,
+        "alpha": 0.06871320816695523,
+        "capm_expected_return": 0.17497916966847346,
+        "actual_return": 0.2436923778354287,
+        "market_return": 0.185614998461802
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 35.0,
       "evidence": [
         "earnings surprise",
-        "major news",
-        "guidance change"
+        "major news"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; eps growth is strong"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; Price advanced on above-average volume"
   },
   "fundamentals": {
     "ticker": "APA",
@@ -131,14 +132,15 @@
     "next_earnings_date": "1778097600",
     "eps_current_year": 4.29,
     "eps_forward": 4.28835,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 34.208386819371256,
+    "rsi": 35.78864454958354,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5968133839997789,
+    "relative_volume": 1.2539062950014108,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -191,9 +193,9 @@
     "insider_buying": false,
     "sector_strength": false,
     "major_news": true,
-    "guidance_change": true,
+    "guidance_change": false,
     "bullish_news_score": 1,
-    "bearish_news_score": 3,
+    "bearish_news_score": 2,
     "institutional_ownership": 1.05767,
     "detail": {
       "earnings": {
@@ -234,13 +236,12 @@
         "last_surprise_pct": 0.20899999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.59,
+      "analyst_upside_pct": 26.43,
       "eps_growth_implied": -0.04
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "recent news item has elevated importance",
-      "news tone or forward EPS implies a catalyst shift"
+      "recent news item has elevated importance"
     ]
   },
   "analyst": {
@@ -261,6 +262,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Is APA Corporation Stock Outperforming the Nasdaq?",
+        "source": "Barchart",
+        "published": "2026-06-22T13:27:19Z",
+        "summary": "APA Corporation has outperformed the Nasdaq over the past year, but analysts are cautious about the stock\u2019s prospects.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Here Are Monday\u2019s Best Wall Street Analyst Research Calls: Accenture, Apple, Boyd Gaming, BWX Technologies, Conoco-Phillips, Estee Lauder, Hut 8, Incyte, SpaceX, and More",
         "source": "24/7 Wall St.",
@@ -300,16 +311,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Stocks Supported as Geopolitical Risks Recede",
-        "source": "Barchart",
-        "published": "2026-06-18T15:17:09Z",
-        "summary": "The S&P 500 Index ($SPX ) (SPY ) today is up +0.99%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is up +0.61%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is up +2.16%. September E-mini S&P futures (ESU26 ) are up +0.99%, and September E-mini Nasdaq futures...",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -329,29 +330,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6728,
-    "probability_pct": 67.28,
+    "probability_of_outperformance": 0.6639,
+    "probability_pct": 66.39,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 40.75/100"
+      "Composite score 44.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.75,
+    "final_score": 44.0,
     "technical_score": 32.0,
     "momentum_score": 35.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 70.0,
     "risk_score": 75.0,
-    "catalyst_score": 45.0,
+    "catalyst_score": 35.0,
     "revenue_growth": -0.119,
     "eps_growth": 0.322,
     "roe": 0.26217,
     "forward_pe": 7.9028063,
-    "relative_volume": 0.5968133839997789,
+    "relative_volume": 1.2539062950014108,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -361,66 +362,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.026339775317441028,
-      "weekly": -0.08427873833887145,
-      "monthly": -0.13784329122613803,
-      "annual": 0.7386391604774218
+      "daily": 0.035422404689155806,
+      "weekly": -0.07617503133317283,
+      "monthly": -0.13021360558552397,
+      "annual": 0.7540253079166379
     },
     "risk": {
-      "volatility": 0.0311129906876955,
-      "annualized_volatility": 0.49390341541866467,
-      "maximum_drawdown": -0.5519893258141507,
-      "sharpe_ratio": 0.48411395172772703,
-      "sortino_ratio": 0.6374829739818212,
-      "calmar_ratio": 0.22310827060989163,
-      "beta": 0.9438470667854019,
-      "alpha": 0.06348837298033738,
-      "capm_expected_return": 0.17561716122981352,
-      "actual_return": 0.2391055342101509,
-      "market_return": 0.18606527202329357
+      "volatility": 0.03113052963388394,
+      "annualized_volatility": 0.4941818375579011,
+      "maximum_drawdown": -0.5519893547030255,
+      "sharpe_ratio": 0.4931228938717853,
+      "sortino_ratio": 0.6497120158036428,
+      "calmar_ratio": 0.23218188201013995,
+      "beta": 0.9426995184577323,
+      "alpha": 0.06871320816695523,
+      "capm_expected_return": 0.17497916966847346,
+      "actual_return": 0.2436923778354287,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.9438470667854019,
-      "alpha": 0.06348837298033738,
-      "capm_expected_return": 0.17561716122981352,
-      "actual_return": 0.2391055342101509,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.94: Moves roughly in line with the market. CAPM expected return is 17.56%; realized alpha is 6.35%, meaning positive alpha versus CAPM."
+      "beta": 0.9426995184577323,
+      "alpha": 0.06871320816695523,
+      "capm_expected_return": 0.17497916966847346,
+      "actual_return": 0.2436923778354287,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.94: Moves roughly in line with the market. CAPM expected return is 17.50%; realized alpha is 6.87%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2391055342101509,
+      "actual_return": 0.2436923778354287,
       "components": {
-        "market_component": 0.17561716122981352,
-        "momentum_component": 0.18465979011935546,
-        "volatility_drag": -0.048780683083732936,
-        "alpha_component": 0.06348837298033738
+        "market_component": 0.17497916966847346,
+        "momentum_component": 0.18850632697915948,
+        "volatility_drag": -0.04883636751158023,
+        "alpha_component": 0.06871320816695523
       },
       "component_weights_pct": {
-        "market_component": 37.16,
-        "momentum_component": 39.08,
-        "volatility_drag": 10.32,
-        "alpha_component": 13.44
+        "market_component": 36.38,
+        "momentum_component": 39.19,
+        "volatility_drag": 10.15,
+        "alpha_component": 14.28
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 36.526000022888184,
-      "sma50": 37.587444915771485,
-      "sma200": 29.545219955444335,
-      "ema20": 36.156362796100545,
-      "ema50": 36.694183214758,
-      "ema200": 31.07137339123259
+      "sma20": 36.54099998474121,
+      "sma50": 37.593444900512694,
+      "sma200": 29.546719884872438,
+      "ema20": 36.18493415201501,
+      "ema50": 36.70594789126865,
+      "ema200": 31.07435844653024
     },
     "momentum": {
-      "3m": -0.12741219706756013,
-      "6m": 0.39875904682972685,
-      "12m": 0.7386391604774218,
+      "3m": -0.11969020109808404,
+      "6m": 0.4111373023810445,
+      "12m": 0.7540253079166379,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 5249838.7,
-      "relative_volume": 0.5968133839997789,
+      "average_volume": 5433857.4,
+      "relative_volume": 1.2539062950014108,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -438,5 +439,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APA\nRating: Drop | Score: 40.75/100 | Confidence: 31.55/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 33.029998779296875 | Resistance: 44.38999938964844\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.9028063\nNews/Catalyst: Here Are Monday\u2019s Best Wall Street Analyst Research Calls: Accenture, Apple, Boyd Gaming, BWX Technologies, Conoco-Phillips, Estee Lauder, Hut 8, Incyte, SpaceX, and More\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APA\nRating: Drop | Score: 44.0/100 | Confidence: 40.45/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 33.029998779296875 | Resistance: 44.38999938964844\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.9028063\nNews/Catalyst: Is APA Corporation Stock Outperforming the Nasdaq?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

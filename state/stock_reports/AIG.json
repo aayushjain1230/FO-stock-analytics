@@ -1,15 +1,15 @@
 {
   "ticker": "AIG",
-  "generated_at": "2026-06-22T17:28:59.709351",
+  "generated_at": "2026-06-22T20:21:35.944919",
   "score": {
-    "final_score": 47.95,
+    "final_score": 55.45,
     "rating": "Hold",
-    "confidence": 38.82,
+    "confidence": 54.52,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
       "momentum": 25.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 68.0,
       "risk": 100,
       "catalyst": 65.0
@@ -25,29 +25,32 @@
       ],
       "support": 72.55000305175781,
       "resistance": 78.7699966430664,
-      "risk_reward": 0.65
+      "risk_reward": 0.63
     },
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": -0.015414913596228152,
-        "3m": 0.032762176806752974,
-        "6m": -0.10285180485401346,
-        "12m": -0.07249947544571356
+        "1m": -0.014769836824316762,
+        "3m": 0.03343881806444249,
+        "6m": -0.10226401465726698,
+        "12m": -0.07189171307067943
       },
-      "acceleration": 0.0842,
+      "acceleration": 0.0846,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3818228.75,
-      "relative_volume": 1.1945787690169165,
+      "score": 50.0,
+      "average_volume": 4007408.1,
+      "relative_volume": 2.0823339654376603,
       "accumulation_days": 3,
       "distribution_days": 4,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.08x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 68.0,
@@ -59,17 +62,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015270245651912687,
-        "annualized_volatility": 0.24240763472295815,
+        "volatility": 0.015273009676551843,
+        "annualized_volatility": 0.24245151225383532,
         "maximum_drawdown": -0.16976556869500503,
-        "sharpe_ratio": 0.22311333129975683,
-        "sortino_ratio": 0.2921786365785053,
-        "calmar_ratio": 0.14677043907808524,
-        "beta": 0.5327814774725722,
-        "alpha": -0.045047755619372604,
-        "capm_expected_return": 0.0991321305349064,
-        "actual_return": 0.05408437491553379,
-        "market_return": 0.18606527202329357
+        "sharpe_ratio": 0.22448015774184812,
+        "sortino_ratio": 0.29402164202146974,
+        "calmar_ratio": 0.14876798256991297,
+        "beta": 0.5321887962997116,
+        "alpha": -0.04435666889106865,
+        "capm_expected_return": 0.09878222260655922,
+        "actual_return": 0.05442555371549057,
+        "market_return": 0.185614998461802
       },
       "evidence": []
     },
@@ -132,17 +135,18 @@
     "next_earnings_date": "1777579200",
     "eps_current_year": 5.68,
     "eps_forward": 8.9006,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 61.379860710700925,
+    "rsi": 61.532398080479794,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1945787690169165,
+    "relative_volume": 2.0823339654376603,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 72.55000305175781,
     "resistance": 78.7699966430664
   },
@@ -235,7 +239,7 @@
         "last_surprise_pct": 0.1234,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 15.04,
+      "analyst_upside_pct": 14.97,
       "eps_growth_implied": 56.7
     },
     "evidence": [
@@ -331,22 +335,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7867,
-    "probability_pct": 78.67,
+    "probability_of_outperformance": 0.828,
+    "probability_pct": 82.8,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 47.95/100"
+      "Composite score 55.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 47.95,
+    "final_score": 55.45,
     "technical_score": 53.0,
     "momentum_score": 25.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 68.0,
     "risk_score": 100,
     "catalyst_score": 65.0,
@@ -354,7 +359,7 @@
     "eps_growth": 0.216,
     "roe": 0.07723,
     "forward_pe": 8.574702,
-    "relative_volume": 1.1945787690169165,
+    "relative_volume": 2.0823339654376603,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -364,71 +369,71 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.03107272569666164,
-      "weekly": 0.014354091729377183,
-      "monthly": -0.015414913596228152,
-      "annual": -0.07249947544571356
+      "daily": 0.0317482600660961,
+      "weekly": 0.015018672446781567,
+      "monthly": -0.014769836824316762,
+      "annual": -0.07189171307067943
     },
     "risk": {
-      "volatility": 0.015270245651912687,
-      "annualized_volatility": 0.24240763472295815,
+      "volatility": 0.015273009676551843,
+      "annualized_volatility": 0.24245151225383532,
       "maximum_drawdown": -0.16976556869500503,
-      "sharpe_ratio": 0.22311333129975683,
-      "sortino_ratio": 0.2921786365785053,
-      "calmar_ratio": 0.14677043907808524,
-      "beta": 0.5327814774725722,
-      "alpha": -0.045047755619372604,
-      "capm_expected_return": 0.0991321305349064,
-      "actual_return": 0.05408437491553379,
-      "market_return": 0.18606527202329357
+      "sharpe_ratio": 0.22448015774184812,
+      "sortino_ratio": 0.29402164202146974,
+      "calmar_ratio": 0.14876798256991297,
+      "beta": 0.5321887962997116,
+      "alpha": -0.04435666889106865,
+      "capm_expected_return": 0.09878222260655922,
+      "actual_return": 0.05442555371549057,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.5327814774725722,
-      "alpha": -0.045047755619372604,
-      "capm_expected_return": 0.0991321305349064,
-      "actual_return": 0.05408437491553379,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.91%; realized alpha is -4.50%, meaning negative alpha versus CAPM."
+      "beta": 0.5321887962997116,
+      "alpha": -0.04435666889106865,
+      "capm_expected_return": 0.09878222260655922,
+      "actual_return": 0.05442555371549057,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.88%; realized alpha is -4.44%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.05408437491553379,
+      "actual_return": 0.05442555371549057,
       "components": {
-        "market_component": 0.0991321305349064,
+        "market_component": 0.09878222260655922,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": -0.045047755619372604
+        "alpha_component": -0.04435666889106865
       },
       "component_weights_pct": {
-        "market_component": 68.76,
+        "market_component": 69.01,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 31.24
+        "alpha_component": 30.99
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 74.43452186584473,
-      "sma50": 75.55874984741212,
-      "sma200": 76.67856773376465,
-      "ema20": 74.83889198163395,
-      "ema50": 75.26970655353243,
-      "ema200": 76.38845025393199
+      "sma20": 74.43702201843261,
+      "sma50": 75.55974990844726,
+      "sma200": 76.67881790161132,
+      "ema20": 74.84365417704088,
+      "ema50": 75.27166746176695,
+      "ema200": 76.38894785357905
     },
     "momentum": {
-      "3m": 0.032762176806752974,
-      "6m": -0.10285180485401346,
-      "12m": -0.07249947544571356,
+      "3m": 0.03343881806444249,
+      "6m": -0.10226401465726698,
+      "12m": -0.07189171307067943,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 3818228.75,
-      "relative_volume": 1.1945787690169165,
-      "volume_spike": false
+      "average_volume": 4007408.1,
+      "relative_volume": 2.0823339654376603,
+      "volume_spike": true
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
-      "score": 35,
+      "score": 45,
       "label": "Neutral"
     }
   },
@@ -445,8 +450,14 @@
         "evidence": "Price reclaimed a major moving average",
         "strength": 75,
         "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.08x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
       }
     ]
   },
-  "report": "Ticker: AIG\nRating: Hold | Score: 47.95/100 | Confidence: 38.82/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 72.55000305175781 | Resistance: 78.7699966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.574702\nNews/Catalyst: American International Group (AIG) Could Be a Great Choice\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: AIG\nRating: Hold | Score: 55.45/100 | Confidence: 54.52/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 72.55000305175781 | Resistance: 78.7699966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.574702\nNews/Catalyst: American International Group (AIG) Could Be a Great Choice\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

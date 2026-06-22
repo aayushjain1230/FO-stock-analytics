@@ -1,50 +1,53 @@
 {
   "ticker": "BKR",
-  "generated_at": "2026-06-22T17:29:35.989141",
+  "generated_at": "2026-06-22T20:21:54.504902",
   "score": {
-    "final_score": 41.45,
-    "rating": "Drop",
-    "confidence": 31.11,
+    "final_score": 47.7,
+    "rating": "Hold",
+    "confidence": 43.47,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 22.0,
+      "technical": 32.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 68.0,
       "risk": 100,
       "catalyst": 40.0
     },
     "technical": {
-      "score": 22.0,
+      "score": 32.0,
       "evidence": [
         "Price above SMA200",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 58.369998931884766,
+      "support": 58.40999984741211,
       "resistance": 69.66999816894531,
-      "risk_reward": 0.0
+      "risk_reward": 14.22
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.1260668044351695,
-        "3m": -0.02957432563088136,
-        "6m": 0.29799321590948713,
-        "12m": 0.5232829257283664
+        "1m": -0.11438837078788378,
+        "3m": -0.01660645588379206,
+        "6m": 0.3153385064141532,
+        "12m": 0.5436386676368363
       },
-      "acceleration": -0.1786,
+      "acceleration": -0.1743,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 7652724.05,
-      "relative_volume": 0.4751616517519667,
-      "accumulation_days": 3,
+      "score": 25.0,
+      "average_volume": 7873660.4,
+      "relative_volume": 1.0230321846240662,
+      "accumulation_days": 4,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 68.0,
@@ -56,17 +59,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02165184444549234,
-        "annualized_volatility": 0.3437123749717676,
-        "maximum_drawdown": -0.28002806338166464,
-        "sharpe_ratio": 1.0072346135192665,
-        "sortino_ratio": 1.3908736650342777,
-        "calmar_ratio": 1.1872841270677021,
-        "beta": 1.018747726901504,
-        "alpha": 0.15664542823743724,
-        "capm_expected_return": 0.18955357292904032,
-        "actual_return": 0.34619900116647756,
-        "market_return": 0.18606527202329357
+        "volatility": 0.02165754986696674,
+        "annualized_volatility": 0.34380294572984404,
+        "maximum_drawdown": -0.2800282240376172,
+        "sharpe_ratio": 1.026585146131981,
+        "sortino_ratio": 1.4172909993819671,
+        "calmar_ratio": 1.2192901754094825,
+        "beta": 1.0177181211426682,
+        "alpha": 0.16403924979223306,
+        "capm_expected_return": 0.18890374749044436,
+        "actual_return": 0.3529429972826774,
+        "market_return": 0.185614998461802
       },
       "evidence": []
     },
@@ -77,7 +80,7 @@
         "analyst revision"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; Accumulation days exceed distribution days"
   },
   "fundamentals": {
     "ticker": "BKR",
@@ -127,18 +130,19 @@
     "next_earnings_date": "1776974400",
     "eps_current_year": 3.13,
     "eps_forward": 2.78282,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 36.342036083320785,
+    "rsi": 39.110605771284334,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4751616517519667,
+    "relative_volume": 1.0230321846240662,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 58.369998931884766,
+    "support": 58.40999984741211,
     "resistance": 69.66999816894531
   },
   "earnings": {
@@ -230,7 +234,7 @@
         "last_surprise_pct": 0.17940001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 22.04,
+      "analyst_upside_pct": 20.44,
       "eps_growth_implied": -11.09
     },
     "evidence": [
@@ -331,15 +335,15 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 41.45/100"
+      "Composite score 47.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.45,
-    "technical_score": 22.0,
+    "final_score": 47.7,
+    "technical_score": 32.0,
     "momentum_score": 35.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 68.0,
     "risk_score": 100,
     "catalyst_score": 40.0,
@@ -347,7 +351,7 @@
     "eps_growth": 1.325,
     "roe": 0.17184,
     "forward_pe": 20.97696,
-    "relative_volume": 0.4751616517519667,
+    "relative_volume": 1.0230321846240662,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -357,66 +361,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.000684829920079455,
-      "weekly": -0.07554641279495633,
-      "monthly": -0.1260668044351695,
-      "annual": 0.5232829257283664
+      "daily": 0.012669092285566563,
+      "weekly": -0.0631928714339468,
+      "monthly": -0.11438837078788378,
+      "annual": 0.5436386676368363
     },
     "risk": {
-      "volatility": 0.02165184444549234,
-      "annualized_volatility": 0.3437123749717676,
-      "maximum_drawdown": -0.28002806338166464,
-      "sharpe_ratio": 1.0072346135192665,
-      "sortino_ratio": 1.3908736650342777,
-      "calmar_ratio": 1.1872841270677021,
-      "beta": 1.018747726901504,
-      "alpha": 0.15664542823743724,
-      "capm_expected_return": 0.18955357292904032,
-      "actual_return": 0.34619900116647756,
-      "market_return": 0.18606527202329357
+      "volatility": 0.02165754986696674,
+      "annualized_volatility": 0.34380294572984404,
+      "maximum_drawdown": -0.2800282240376172,
+      "sharpe_ratio": 1.026585146131981,
+      "sortino_ratio": 1.4172909993819671,
+      "calmar_ratio": 1.2192901754094825,
+      "beta": 1.0177181211426682,
+      "alpha": 0.16403924979223306,
+      "capm_expected_return": 0.18890374749044436,
+      "actual_return": 0.3529429972826774,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 1.018747726901504,
-      "alpha": 0.15664542823743724,
-      "capm_expected_return": 0.18955357292904032,
-      "actual_return": 0.34619900116647756,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 1.02: Moves roughly in line with the market. CAPM expected return is 18.96%; realized alpha is 15.66%, meaning positive alpha versus CAPM."
+      "beta": 1.0177181211426682,
+      "alpha": 0.16403924979223306,
+      "capm_expected_return": 0.18890374749044436,
+      "actual_return": 0.3529429972826774,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 1.02: Moves roughly in line with the market. CAPM expected return is 18.89%; realized alpha is 16.40%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.34619900116647756,
+      "actual_return": 0.3529429972826774,
       "components": {
-        "market_component": 0.18955357292904032,
-        "momentum_component": 0.1308207314320916,
-        "volatility_drag": -0.01874247499435352,
-        "alpha_component": 0.15664542823743724
+        "market_component": 0.18890374749044436,
+        "momentum_component": 0.13590966690920908,
+        "volatility_drag": -0.01876058914596881,
+        "alpha_component": 0.16403924979223306
       },
       "component_weights_pct": {
-        "market_component": 38.23,
-        "momentum_component": 26.39,
-        "volatility_drag": 3.78,
-        "alpha_component": 31.6
+        "market_component": 37.21,
+        "momentum_component": 26.77,
+        "volatility_drag": 3.7,
+        "alpha_component": 32.32
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 63.195999717712404,
-      "sma50": 64.11538513183594,
-      "sma200": 54.91919393539429,
-      "ema20": 62.55315195666757,
-      "ema50": 63.02084816491211,
-      "ema200": 56.139760793682925
+      "sma20": 63.23499984741211,
+      "sma50": 64.13098518371582,
+      "sma200": 54.92309398651123,
+      "ema20": 62.62743791806393,
+      "ema50": 63.05143650044939,
+      "ema200": 56.147521983857516
     },
     "momentum": {
-      "3m": -0.02957432563088136,
-      "6m": 0.29799321590948713,
-      "12m": 0.5232829257283664,
+      "3m": -0.01660645588379206,
+      "6m": 0.3153385064141532,
+      "12m": 0.5436386676368363,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 7652724.05,
-      "relative_volume": 0.4751616517519667,
+      "average_volume": 7873660.4,
+      "relative_volume": 1.0230321846240662,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -434,5 +438,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BKR\nRating: Drop | Score: 41.45/100 | Confidence: 31.11/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 58.369998931884766 | Resistance: 69.66999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.97696\nNews/Catalyst: Sector Update: Energy Stocks Decline Premarket Monday\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BKR\nRating: Hold | Score: 47.7/100 | Confidence: 43.47/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 58.40999984741211 | Resistance: 69.66999816894531\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.97696\nNews/Catalyst: Sector Update: Energy Stocks Decline Premarket Monday\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

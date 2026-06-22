@@ -1,15 +1,15 @@
 {
   "ticker": "CTSH",
-  "generated_at": "2026-06-22T17:30:21.648794",
+  "generated_at": "2026-06-22T20:22:19.383761",
   "score": {
-    "final_score": 20.5,
+    "final_score": 24.25,
     "rating": "Avoid",
-    "confidence": 9.09,
+    "confidence": 18.94,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 50.0,
       "risk": 60.0,
       "catalyst": 30.0
@@ -19,28 +19,30 @@
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 41.55500030517578,
+      "support": 41.83000183105469,
       "resistance": 62.540000915527344,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.18996099564938607,
-        "3m": -0.32579319328889866,
-        "6m": -0.4970588726862105,
-        "12m": -0.4638249217644853
+        "1m": -0.1846003420437572,
+        "3m": -0.3213314462249621,
+        "6m": -0.49373052287456776,
+        "12m": -0.4602766372362659
       },
-      "acceleration": -0.0773,
+      "acceleration": -0.0745,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 11865266.5,
-      "relative_volume": 0.6700001217840325,
+      "score": 25.0,
+      "average_volume": 12563010.25,
+      "relative_volume": 1.7435793304395337,
       "accumulation_days": 6,
-      "distribution_days": 7,
-      "evidence": []
+      "distribution_days": 8,
+      "evidence": [
+        "Relative volume is 1.74x"
+      ]
     },
     "fundamental": {
       "score": 50.0,
@@ -52,17 +54,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.019005199460539118,
-        "annualized_volatility": 0.3016981883385925,
-        "maximum_drawdown": -0.5287639145450138,
-        "sharpe_ratio": -0.6286913078170344,
-        "sortino_ratio": -0.7726418772867404,
-        "calmar_ratio": -0.3968984515121272,
-        "beta": 0.7517168665645355,
-        "alpha": -0.3295434318544479,
-        "capm_expected_return": 0.13986840326182817,
-        "actual_return": -0.1896750285926197,
-        "market_return": 0.18606527202329357
+        "volatility": 0.01897512665023732,
+        "annualized_volatility": 0.30122079727489226,
+        "maximum_drawdown": -0.5256453404379432,
+        "sharpe_ratio": -0.6191371224554248,
+        "sortino_ratio": -0.7624009972623389,
+        "calmar_ratio": -0.3942376462788129,
+        "beta": 0.7519429988993453,
+        "alpha": -0.3260688762325704,
+        "capm_expected_return": 0.13957189858406477,
+        "actual_return": -0.18649697764850565,
+        "market_return": 0.185614998461802
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -76,7 +78,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Debt-to-equity is elevated; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Relative volume is 1.74x; Debt-to-equity is elevated; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "CTSH",
@@ -126,18 +128,19 @@
     "next_earnings_date": "1777465800",
     "eps_current_year": 4.61,
     "eps_forward": 6.18341,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 6.76086332894117,
+    "rsi": 6.865491831027526,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6700001217840325,
+    "relative_volume": 1.7435793304395337,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 41.55500030517578,
+    "setup_type": "volume surge",
+    "support": 41.83000183105469,
     "resistance": 62.540000915527344
   },
   "earnings": {
@@ -229,7 +232,7 @@
         "last_surprise_pct": 0.0498,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 71.36,
+      "analyst_upside_pct": 69.88,
       "eps_growth_implied": 34.13
     },
     "evidence": [
@@ -323,20 +326,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.4992,
-    "probability_pct": 49.92,
+    "probability_of_outperformance": 0.549,
+    "probability_pct": 54.9,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 20.5/100"
+      "Composite score 24.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 20.5,
+    "final_score": 24.25,
     "technical_score": 10.0,
     "momentum_score": 0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 50.0,
     "risk_score": 60.0,
     "catalyst_score": 30.0,
@@ -344,7 +348,7 @@
     "eps_growth": 0.036,
     "roe": 0.14876,
     "forward_pe": 6.7066555,
-    "relative_volume": 0.6700001217840325,
+    "relative_volume": 1.7435793304395337,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -354,66 +358,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0490846778104127,
-      "weekly": -0.20346939306753142,
-      "monthly": -0.18996099564938607,
-      "annual": -0.4638249217644853
+      "daily": -0.042791736824651316,
+      "weekly": -0.19819813495883165,
+      "monthly": -0.1846003420437572,
+      "annual": -0.4602766372362659
     },
     "risk": {
-      "volatility": 0.019005199460539118,
-      "annualized_volatility": 0.3016981883385925,
-      "maximum_drawdown": -0.5287639145450138,
-      "sharpe_ratio": -0.6286913078170344,
-      "sortino_ratio": -0.7726418772867404,
-      "calmar_ratio": -0.3968984515121272,
-      "beta": 0.7517168665645355,
-      "alpha": -0.3295434318544479,
-      "capm_expected_return": 0.13986840326182817,
-      "actual_return": -0.1896750285926197,
-      "market_return": 0.18606527202329357
+      "volatility": 0.01897512665023732,
+      "annualized_volatility": 0.30122079727489226,
+      "maximum_drawdown": -0.5256453404379432,
+      "sharpe_ratio": -0.6191371224554248,
+      "sortino_ratio": -0.7624009972623389,
+      "calmar_ratio": -0.3942376462788129,
+      "beta": 0.7519429988993453,
+      "alpha": -0.3260688762325704,
+      "capm_expected_return": 0.13957189858406477,
+      "actual_return": -0.18649697764850565,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.7517168665645355,
-      "alpha": -0.3295434318544479,
-      "capm_expected_return": 0.13986840326182817,
-      "actual_return": -0.1896750285926197,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.75: Moves roughly in line with the market. CAPM expected return is 13.99%; realized alpha is -32.95%, meaning negative alpha versus CAPM."
+      "beta": 0.7519429988993453,
+      "alpha": -0.3260688762325704,
+      "capm_expected_return": 0.13957189858406477,
+      "actual_return": -0.18649697764850565,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.75: Moves roughly in line with the market. CAPM expected return is 13.96%; realized alpha is -32.61%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.1896750285926197,
+      "actual_return": -0.18649697764850565,
       "components": {
-        "market_component": 0.13986840326182817,
+        "market_component": 0.13957189858406477,
         "momentum_component": 0.0,
-        "volatility_drag": -0.010339637667718504,
-        "alpha_component": -0.3295434318544479
+        "volatility_drag": -0.010244159454978453,
+        "alpha_component": -0.3260688762325704
       },
       "component_weights_pct": {
-        "market_component": 29.15,
+        "market_component": 29.33,
         "momentum_component": 0.0,
-        "volatility_drag": 2.16,
-        "alpha_component": 68.69
+        "volatility_drag": 2.15,
+        "alpha_component": 68.52
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 51.839249801635745,
-      "sma50": 52.9561408996582,
-      "sma200": 66.72510412216187,
-      "ema20": 50.356984794004326,
-      "ema50": 53.487413393679034,
-      "ema200": 63.87449707090935
+      "sma20": 51.85299987792969,
+      "sma50": 52.96164093017578,
+      "sma200": 66.72647912979126,
+      "ema20": 50.383175415516604,
+      "ema50": 53.49819776724613,
+      "ema200": 63.877233355610855
     },
     "momentum": {
-      "3m": -0.32579319328889866,
-      "6m": -0.4970588726862105,
-      "12m": -0.4638249217644853,
+      "3m": -0.3213314462249621,
+      "6m": -0.49373052287456776,
+      "12m": -0.4602766372362659,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 11865266.5,
-      "relative_volume": 0.6700001217840325,
+      "average_volume": 12563010.25,
+      "relative_volume": 1.7435793304395337,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -431,5 +435,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CTSH\nRating: Avoid | Score: 20.5/100 | Confidence: 9.09/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 41.55500030517578 | Resistance: 62.540000915527344\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.7066555\nNews/Catalyst: Nasdaq-100 Onboards 5 New Stocks in AI-Fueled Rebalancing\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CTSH\nRating: Avoid | Score: 24.25/100 | Confidence: 18.94/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 41.83000183105469 | Resistance: 62.540000915527344\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.7066555\nNews/Catalyst: Nasdaq-100 Onboards 5 New Stocks in AI-Fueled Rebalancing\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

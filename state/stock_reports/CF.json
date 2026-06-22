@@ -1,13 +1,13 @@
 {
   "ticker": "CF",
-  "generated_at": "2026-06-22T17:29:55.126152",
+  "generated_at": "2026-06-22T20:22:04.891174",
   "score": {
-    "final_score": 43.15,
-    "rating": "Drop",
-    "confidence": 29.72,
+    "final_score": 45.65,
+    "rating": "Hold",
+    "confidence": 31.59,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 22.0,
+      "technical": 32.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 86.0,
@@ -15,24 +15,25 @@
       "catalyst": 20.0
     },
     "technical": {
-      "score": 22.0,
+      "score": 32.0,
       "evidence": [
         "Price above SMA200",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 102.73999786376953,
+      "support": 102.93000030517578,
       "resistance": 137.60000610351562,
-      "risk_reward": 0.0
+      "risk_reward": 50.75
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.1667478076164992,
-        "3m": -0.17406365966141013,
-        "6m": 0.31262067917501324,
-        "12m": 0.04619788913532119
+        "1m": -0.15977294476924886,
+        "3m": -0.16715003525444283,
+        "6m": 0.32360816806660764,
+        "12m": 0.05495516401766265
       },
-      "acceleration": -0.3304,
+      "acceleration": -0.329,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -40,9 +41,9 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2756886.45,
-      "relative_volume": 0.3453276068007806,
-      "accumulation_days": 1,
+      "average_volume": 2858353.65,
+      "relative_volume": 1.043038533737769,
+      "accumulation_days": 2,
       "distribution_days": 6,
       "evidence": []
     },
@@ -57,17 +58,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.023415846028962975,
-        "annualized_volatility": 0.3717150319848923,
-        "maximum_drawdown": -0.2915902019641363,
-        "sharpe_ratio": 0.6636979085706173,
-        "sortino_ratio": 0.9383899189086369,
-        "calmar_ratio": 0.6672551023171345,
-        "beta": 0.09072630236340037,
-        "alpha": 0.22982547518371943,
-        "capm_expected_return": 0.01688101412891367,
-        "actual_return": 0.24670648931263311,
-        "market_return": 0.18606527202329357
+        "volatility": 0.023416813221015267,
+        "annualized_volatility": 0.3717303856827347,
+        "maximum_drawdown": -0.29159006341042437,
+        "sharpe_ratio": 0.6750211302040355,
+        "sortino_ratio": 0.9543033553403929,
+        "calmar_ratio": 0.6845371942244589,
+        "beta": 0.09017147008260473,
+        "alpha": 0.23418868779406046,
+        "capm_expected_return": 0.016737177280681102,
+        "actual_return": 0.25092586507474157,
+        "market_return": 0.185614998461802
       },
       "evidence": []
     },
@@ -77,7 +78,7 @@
         "earnings surprise"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; revenue growth is strong; eps growth is strong"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; revenue growth is strong"
   },
   "fundamentals": {
     "ticker": "CF",
@@ -127,18 +128,19 @@
     "next_earnings_date": "1785960000",
     "eps_current_year": 11.1,
     "eps_forward": 11.47579,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 30.239517795014336,
+    "rsi": 32.16911223314304,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3453276068007806,
+    "relative_volume": 1.043038533737769,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 102.73999786376953,
+    "support": 102.93000030517578,
     "resistance": 137.60000610351562
   },
   "earnings": {
@@ -230,7 +232,7 @@
         "last_surprise_pct": 0.4568,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 22.78,
+      "analyst_upside_pct": 21.72,
       "eps_growth_implied": 3.39
     },
     "evidence": [
@@ -329,13 +331,13 @@
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 43.15/100"
+      "Composite score 45.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 43.15,
-    "technical_score": 22.0,
+    "final_score": 45.65,
+    "technical_score": 32.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
@@ -345,7 +347,7 @@
     "eps_growth": 1.151,
     "roe": 0.273,
     "forward_pe": 8.949711,
-    "relative_volume": 0.3453276068007806,
+    "relative_volume": 1.043038533737769,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -355,66 +357,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.001845938412930237,
-      "weekly": -0.061563804224501806,
-      "monthly": -0.1667478076164992,
-      "annual": 0.04619788913532119
+      "daily": 0.00650926034158017,
+      "weekly": -0.05370848285090146,
+      "monthly": -0.15977294476924886,
+      "annual": 0.05495516401766265
     },
     "risk": {
-      "volatility": 0.023415846028962975,
-      "annualized_volatility": 0.3717150319848923,
-      "maximum_drawdown": -0.2915902019641363,
-      "sharpe_ratio": 0.6636979085706173,
-      "sortino_ratio": 0.9383899189086369,
-      "calmar_ratio": 0.6672551023171345,
-      "beta": 0.09072630236340037,
-      "alpha": 0.22982547518371943,
-      "capm_expected_return": 0.01688101412891367,
-      "actual_return": 0.24670648931263311,
-      "market_return": 0.18606527202329357
+      "volatility": 0.023416813221015267,
+      "annualized_volatility": 0.3717303856827347,
+      "maximum_drawdown": -0.29159006341042437,
+      "sharpe_ratio": 0.6750211302040355,
+      "sortino_ratio": 0.9543033553403929,
+      "calmar_ratio": 0.6845371942244589,
+      "beta": 0.09017147008260473,
+      "alpha": 0.23418868779406046,
+      "capm_expected_return": 0.016737177280681102,
+      "actual_return": 0.25092586507474157,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.09072630236340037,
-      "alpha": 0.22982547518371943,
-      "capm_expected_return": 0.01688101412891367,
-      "actual_return": 0.24670648931263311,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.09: Moves roughly 91% less than the market. CAPM expected return is 1.69%; realized alpha is 22.98%, meaning positive alpha versus CAPM."
+      "beta": 0.09017147008260473,
+      "alpha": 0.23418868779406046,
+      "capm_expected_return": 0.016737177280681102,
+      "actual_return": 0.25092586507474157,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.09: Moves roughly 91% less than the market. CAPM expected return is 1.67%; realized alpha is 23.42%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.24670648931263311,
+      "actual_return": 0.25092586507474157,
       "components": {
-        "market_component": 0.01688101412891367,
-        "momentum_component": 0.011549472283830298,
-        "volatility_drag": -0.024343006396978464,
-        "alpha_component": 0.22982547518371943
+        "market_component": 0.016737177280681102,
+        "momentum_component": 0.013738791004415662,
+        "volatility_drag": -0.02434607713654694,
+        "alpha_component": 0.23418868779406046
       },
       "component_weights_pct": {
-        "market_component": 5.97,
-        "momentum_component": 4.09,
-        "volatility_drag": 8.61,
-        "alpha_component": 81.33
+        "market_component": 5.79,
+        "momentum_component": 4.75,
+        "volatility_drag": 8.42,
+        "alpha_component": 81.03
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 111.38899955749511,
-      "sma50": 117.90782318115234,
-      "sma200": 98.29120834350586,
-      "ema20": 110.66966188759498,
-      "ema50": 114.59759530147764,
-      "ema200": 103.38998175859797
+      "sma20": 111.4319995880127,
+      "sma50": 117.92502319335938,
+      "sma200": 98.29550827026367,
+      "ema20": 110.75156670770711,
+      "ema50": 114.63132082663275,
+      "ema200": 103.39853905185801
     },
     "momentum": {
-      "3m": -0.17406365966141013,
-      "6m": 0.31262067917501324,
-      "12m": 0.04619788913532119,
+      "3m": -0.16715003525444283,
+      "6m": 0.32360816806660764,
+      "12m": 0.05495516401766265,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 2756886.45,
-      "relative_volume": 0.3453276068007806,
+      "average_volume": 2858353.65,
+      "relative_volume": 1.043038533737769,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -432,5 +434,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CF\nRating: Drop | Score: 43.15/100 | Confidence: 29.72/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 102.73999786376953 | Resistance: 137.60000610351562\nFundamental Outlook: Quality Compounder | Forward P/E: 8.949711\nNews/Catalyst: BHP Hikes Jansen Stage 2 Project Investment After Detailed Review\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CF\nRating: Hold | Score: 45.65/100 | Confidence: 31.59/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 102.93000030517578 | Resistance: 137.60000610351562\nFundamental Outlook: Quality Compounder | Forward P/E: 8.949711\nNews/Catalyst: BHP Hikes Jansen Stage 2 Project Investment After Detailed Review\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

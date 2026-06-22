@@ -1,13 +1,13 @@
 {
   "ticker": "CDW",
-  "generated_at": "2026-06-22T17:29:53.823675",
+  "generated_at": "2026-06-22T20:22:04.055851",
   "score": {
-    "final_score": 38.0,
+    "final_score": 35.5,
     "rating": "Drop",
-    "confidence": 35.22,
+    "confidence": 33.16,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 30.0,
+      "technical": 20.0,
       "momentum": 35.0,
       "volume": 25.0,
       "fundamental": 50.0,
@@ -15,25 +15,24 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 20.0,
       "evidence": [
-        "Price above SMA50",
         "EMA trend is positive",
         "Stock is not materially extended from SMA20"
       ],
       "support": 99.30000305175781,
       "resistance": 142.44000244140625,
-      "risk_reward": 0.6
+      "risk_reward": 0.78
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.19563629106201197,
-        "3m": 0.055862099859180336,
-        "6m": -0.11177488180101769,
-        "12m": -0.24306038113660278
+        "1m": 0.17034837311301843,
+        "3m": 0.0335304306498303,
+        "6m": -0.13056099934960763,
+        "12m": -0.2590697872722746
       },
-      "acceleration": 0.1117,
+      "acceleration": 0.0988,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -42,8 +41,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2160274.95,
-      "relative_volume": 0.23848769805899012,
+      "average_volume": 2218235.45,
+      "relative_volume": 0.7548382657034897,
       "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
@@ -60,17 +59,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02315248626401569,
-        "annualized_volatility": 0.36753432532454666,
-        "maximum_drawdown": -0.574983876381364,
-        "sharpe_ratio": -0.6013662538833373,
-        "sortino_ratio": -0.7102906202152623,
-        "calmar_ratio": -0.4381524746268948,
-        "beta": 0.9819833291113749,
-        "alpha": -0.4037357356474098,
-        "capm_expected_return": 0.18271299525344736,
-        "actual_return": -0.2210227403939624,
-        "market_return": 0.18606527202329357
+        "volatility": 0.023199514340529644,
+        "annualized_volatility": 0.36828087289510847,
+        "maximum_drawdown": -0.5749838763813635,
+        "sharpe_ratio": -0.6286683903878753,
+        "sortino_ratio": -0.742316956330013,
+        "calmar_ratio": -0.45212232535757135,
+        "beta": 0.9835891404975038,
+        "alpha": -0.4140954403740988,
+        "capm_expected_return": 0.1825688968004893,
+        "actual_return": -0.2315265435736095,
+        "market_return": 0.185614998461802
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -84,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; Momentum is accelerating"
+    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; Momentum is accelerating; Accumulation days exceed distribution days"
   },
   "fundamentals": {
     "ticker": "CDW",
@@ -134,15 +133,16 @@
     "next_earnings_date": "1778070600",
     "eps_current_year": 8.22,
     "eps_forward": 11.63957,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 26.997496157321805,
+    "rsi": 24.920766140155408,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.23848769805899012,
-    "price_above_sma50": true,
+    "relative_volume": 0.7548382657034897,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 99.30000305175781,
@@ -237,7 +237,7 @@
         "last_surprise_pct": -0.0026,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 12.32,
+      "analyst_upside_pct": 14.91,
       "eps_growth_implied": 41.6
     },
     "evidence": [
@@ -336,13 +336,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 38.0/100"
+      "Composite score 35.5/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 38.0,
-    "technical_score": 30.0,
+    "final_score": 35.5,
+    "technical_score": 20.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 50.0,
@@ -352,9 +352,9 @@
     "eps_growth": 0.077,
     "roe": 0.44157,
     "forward_pe": 10.862085,
-    "relative_volume": 0.23848769805899012,
+    "relative_volume": 0.7548382657034897,
     "breakout": false,
-    "price_above_sma50": true,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
@@ -362,66 +362,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01659264107218761,
-      "weekly": -0.04501100285760329,
-      "monthly": 0.19563629106201197,
-      "annual": -0.24306038113660278
+      "daily": -0.037391879761165536,
+      "weekly": -0.06520918819411381,
+      "monthly": 0.17034837311301843,
+      "annual": -0.2590697872722746
     },
     "risk": {
-      "volatility": 0.02315248626401569,
-      "annualized_volatility": 0.36753432532454666,
-      "maximum_drawdown": -0.574983876381364,
-      "sharpe_ratio": -0.6013662538833373,
-      "sortino_ratio": -0.7102906202152623,
-      "calmar_ratio": -0.4381524746268948,
-      "beta": 0.9819833291113749,
-      "alpha": -0.4037357356474098,
-      "capm_expected_return": 0.18271299525344736,
-      "actual_return": -0.2210227403939624,
-      "market_return": 0.18606527202329357
+      "volatility": 0.023199514340529644,
+      "annualized_volatility": 0.36828087289510847,
+      "maximum_drawdown": -0.5749838763813635,
+      "sharpe_ratio": -0.6286683903878753,
+      "sortino_ratio": -0.742316956330013,
+      "calmar_ratio": -0.45212232535757135,
+      "beta": 0.9835891404975038,
+      "alpha": -0.4140954403740988,
+      "capm_expected_return": 0.1825688968004893,
+      "actual_return": -0.2315265435736095,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.9819833291113749,
-      "alpha": -0.4037357356474098,
-      "capm_expected_return": 0.18271299525344736,
-      "actual_return": -0.2210227403939624,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.98: Moves roughly in line with the market. CAPM expected return is 18.27%; realized alpha is -40.37%, meaning negative alpha versus CAPM."
+      "beta": 0.9835891404975038,
+      "alpha": -0.4140954403740988,
+      "capm_expected_return": 0.1825688968004893,
+      "actual_return": -0.2315265435736095,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.98: Moves roughly in line with the market. CAPM expected return is 18.26%; realized alpha is -41.41%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.2210227403939624,
+      "actual_return": -0.2315265435736095,
       "components": {
-        "market_component": 0.18271299525344736,
+        "market_component": 0.1825688968004893,
         "momentum_component": 0.0,
-        "volatility_drag": -0.023506865064909333,
-        "alpha_component": -0.4037357356474098
+        "volatility_drag": -0.023656174579021694,
+        "alpha_component": -0.4140954403740988
       },
       "component_weights_pct": {
-        "market_component": 29.96,
+        "market_component": 29.43,
         "momentum_component": 0.0,
-        "volatility_drag": 3.85,
-        "alpha_component": 66.19
+        "volatility_drag": 3.81,
+        "alpha_component": 66.76
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 128.357999420166,
-      "sma50": 124.41691497802735,
-      "sma200": 134.9277632522583,
-      "ema20": 127.201353805177,
-      "ema50": 124.7527024820783,
-      "ema200": 135.35201753087938
+      "sma20": 128.22449951171876,
+      "sma50": 124.36351501464844,
+      "sma200": 134.91441337585448,
+      "ema20": 126.94706826534356,
+      "ema50": 124.64799668803802,
+      "ema200": 135.325450812379
     },
     "momentum": {
-      "3m": 0.055862099859180336,
-      "6m": -0.11177488180101769,
-      "12m": -0.24306038113660278,
+      "3m": 0.0335304306498303,
+      "6m": -0.13056099934960763,
+      "12m": -0.2590697872722746,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2160274.95,
-      "relative_volume": 0.23848769805899012,
+      "average_volume": 2218235.45,
+      "relative_volume": 0.7548382657034897,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -439,5 +439,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CDW\nRating: Drop | Score: 38.0/100 | Confidence: 35.22/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 99.30000305175781 | Resistance: 142.44000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.862085\nNews/Catalyst: CDW (CDW): Buy, Sell, or Hold Post Q1 Earnings?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CDW\nRating: Drop | Score: 35.5/100 | Confidence: 33.16/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 99.30000305175781 | Resistance: 142.44000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.862085\nNews/Catalyst: CDW (CDW): Buy, Sell, or Hold Post Q1 Earnings?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

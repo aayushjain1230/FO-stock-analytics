@@ -1,13 +1,13 @@
 {
   "ticker": "BLDR",
-  "generated_at": "2026-06-22T17:29:36.655178",
+  "generated_at": "2026-06-22T20:21:54.837047",
   "score": {
-    "final_score": 38.05,
+    "final_score": 35.55,
     "rating": "Drop",
-    "confidence": 26.46,
+    "confidence": 24.99,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 43.0,
       "momentum": 20.0,
       "volume": 0,
       "fundamental": 47.0,
@@ -15,27 +15,26 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
-        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 66.38999938964844,
       "resistance": 91.31999969482422,
-      "risk_reward": 0.96
+      "risk_reward": 1.28
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.1109082342295773,
-        "3m": -0.02573262664212339,
-        "6m": -0.2355328410748726,
-        "12m": -0.25942912135292984
+        "1m": 0.08563804838747502,
+        "3m": -0.047894599004966176,
+        "6m": -0.25292242068278625,
+        "12m": -0.27627512461047066
       },
-      "acceleration": 0.092,
+      "acceleration": 0.0786,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +42,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2646972.15,
-      "relative_volume": 0.2290326326251676,
+      "average_volume": 2690834.05,
+      "relative_volume": 0.5513089891217929,
       "accumulation_days": 2,
       "distribution_days": 3,
       "evidence": []
@@ -57,17 +56,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.029072805186813377,
-        "annualized_volatility": 0.4615164746360216,
+        "volatility": 0.02911674586038843,
+        "annualized_volatility": 0.4622140112043431,
         "maximum_drawdown": -0.6710598088126598,
-        "sharpe_ratio": -0.4131385877917741,
-        "sortino_ratio": -0.758482805791074,
-        "calmar_ratio": -0.3818902832915537,
-        "beta": 1.2087921442178355,
-        "alpha": -0.41558450370727595,
-        "capm_expected_return": 0.22491423913351188,
-        "actual_return": -0.19067026457376407,
-        "market_return": 0.18606527202329357
+        "sharpe_ratio": -0.4369183329744549,
+        "sortino_ratio": -0.8009994284922145,
+        "calmar_ratio": -0.39469440271022244,
+        "beta": 1.2105099283109584,
+        "alpha": -0.42663857373427216,
+        "capm_expected_return": 0.22468879848143458,
+        "actual_return": -0.20194977525283758,
+        "market_return": 0.185614998461802
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -80,7 +79,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "BLDR",
@@ -130,15 +129,16 @@
     "next_earnings_date": "1777552200",
     "eps_current_year": 2.62,
     "eps_forward": 5.87982,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 56.87964575197255,
+    "rsi": 53.13072082579635,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2290326326251676,
-    "price_above_sma50": true,
+    "relative_volume": 0.5513089891217929,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 66.38999938964844,
@@ -233,7 +233,7 @@
         "last_surprise_pct": -0.2761,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 23.06,
+      "analyst_upside_pct": 25.93,
       "eps_growth_implied": 124.42
     },
     "evidence": [
@@ -327,18 +327,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5573,
-    "probability_pct": 55.73,
+    "probability_of_outperformance": 0.549,
+    "probability_pct": 54.9,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 38.05/100"
+      "Composite score 35.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 38.05,
-    "technical_score": 53.0,
+    "final_score": 35.55,
+    "technical_score": 43.0,
     "momentum_score": 20.0,
     "volume_score": 0,
     "fundamental_score": 47.0,
@@ -348,9 +348,9 @@
     "eps_growth": null,
     "roe": 0.06958,
     "forward_pe": 13.457894,
-    "relative_volume": 0.2290326326251676,
+    "relative_volume": 0.5513089891217929,
     "breakout": false,
-    "price_above_sma50": true,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
@@ -358,66 +358,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01811638107478375,
-      "weekly": 0.0174874716350244,
-      "monthly": 0.1109082342295773,
-      "annual": -0.25942912135292984
+      "daily": -0.04045160261786984,
+      "weekly": -0.0056576421628397044,
+      "monthly": 0.08563804838747502,
+      "annual": -0.27627512461047066
     },
     "risk": {
-      "volatility": 0.029072805186813377,
-      "annualized_volatility": 0.4615164746360216,
+      "volatility": 0.02911674586038843,
+      "annualized_volatility": 0.4622140112043431,
       "maximum_drawdown": -0.6710598088126598,
-      "sharpe_ratio": -0.4131385877917741,
-      "sortino_ratio": -0.758482805791074,
-      "calmar_ratio": -0.3818902832915537,
-      "beta": 1.2087921442178355,
-      "alpha": -0.41558450370727595,
-      "capm_expected_return": 0.22491423913351188,
-      "actual_return": -0.19067026457376407,
-      "market_return": 0.18606527202329357
+      "sharpe_ratio": -0.4369183329744549,
+      "sortino_ratio": -0.8009994284922145,
+      "calmar_ratio": -0.39469440271022244,
+      "beta": 1.2105099283109584,
+      "alpha": -0.42663857373427216,
+      "capm_expected_return": 0.22468879848143458,
+      "actual_return": -0.20194977525283758,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 1.2087921442178355,
-      "alpha": -0.41558450370727595,
-      "capm_expected_return": 0.22491423913351188,
-      "actual_return": -0.19067026457376407,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 1.21: Moves roughly in line with the market. CAPM expected return is 22.49%; realized alpha is -41.56%, meaning negative alpha versus CAPM."
+      "beta": 1.2105099283109584,
+      "alpha": -0.42663857373427216,
+      "capm_expected_return": 0.22468879848143458,
+      "actual_return": -0.20194977525283758,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 1.21: Moves roughly in line with the market. CAPM expected return is 22.47%; realized alpha is -42.66%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.19067026457376407,
+      "actual_return": -0.20194977525283758,
       "components": {
-        "market_component": 0.22491423913351188,
+        "market_component": 0.22468879848143458,
         "momentum_component": 0.0,
-        "volatility_drag": -0.04230329492720432,
-        "alpha_component": -0.41558450370727595
+        "volatility_drag": -0.04244280224086862,
+        "alpha_component": -0.42663857373427216
       },
       "component_weights_pct": {
-        "market_component": 32.94,
+        "market_component": 32.39,
         "momentum_component": 0.0,
-        "volatility_drag": 6.2,
-        "alpha_component": 60.86
+        "volatility_drag": 6.12,
+        "alpha_component": 61.5
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 76.34550056457519,
-      "sma50": 78.87800018310547,
-      "sma200": 103.23875011444092,
-      "ema20": 76.92888110211685,
-      "ema50": 79.616381871693,
-      "ema200": 99.26593309486337
+      "sma20": 76.25550079345703,
+      "sma50": 78.8420002746582,
+      "sma200": 103.2297501373291,
+      "ema20": 76.75745296665367,
+      "ema50": 79.54579381591404,
+      "ema200": 99.24802269265079
     },
     "momentum": {
-      "3m": -0.02573262664212339,
-      "6m": -0.2355328410748726,
-      "12m": -0.25942912135292984,
+      "3m": -0.047894599004966176,
+      "6m": -0.25292242068278625,
+      "12m": -0.27627512461047066,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 2646972.15,
-      "relative_volume": 0.2290326326251676,
+      "average_volume": 2690834.05,
+      "relative_volume": 0.5513089891217929,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -435,5 +435,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BLDR\nRating: Drop | Score: 38.05/100 | Confidence: 26.46/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 66.38999938964844 | Resistance: 91.31999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.457894\nNews/Catalyst: Here is What to Know Beyond Why Builders FirstSource, Inc. (BLDR) is a Trending Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BLDR\nRating: Drop | Score: 35.55/100 | Confidence: 24.99/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 66.38999938964844 | Resistance: 91.31999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.457894\nNews/Catalyst: Here is What to Know Beyond Why Builders FirstSource, Inc. (BLDR) is a Trending Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

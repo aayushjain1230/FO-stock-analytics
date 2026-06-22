@@ -1,10 +1,10 @@
 {
   "ticker": "ACN",
-  "generated_at": "2026-06-22T17:28:51.853269",
+  "generated_at": "2026-06-22T20:21:31.969327",
   "score": {
-    "final_score": 26.5,
+    "final_score": 27.25,
     "rating": "Avoid",
-    "confidence": 20.69,
+    "confidence": 23.07,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
@@ -12,36 +12,36 @@
       "volume": 25.0,
       "fundamental": 65.0,
       "risk": 60.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 10.0,
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 120.77999877929688,
+      "support": 124.83000183105469,
       "resistance": 201.3300018310547,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.32607969000870296,
-        "3m": -0.39094830756862786,
-        "6m": -0.5550366946525509,
-        "12m": -0.6004522539353654
+        "1m": -0.30348174879582257,
+        "3m": -0.37052554520767855,
+        "6m": -0.5401161551361495,
+        "12m": -0.5870545920108805
       },
-      "acceleration": -0.1134,
+      "acceleration": -0.1005,
       "evidence": []
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7455496.4,
-      "relative_volume": 2.0823332434309805,
+      "average_volume": 8057596.15,
+      "relative_volume": 3.4212217250426478,
       "accumulation_days": 2,
       "distribution_days": 5,
       "evidence": [
-        "Relative volume is 2.08x"
+        "Relative volume is 3.42x"
       ]
     },
     "fundamental": {
@@ -52,17 +52,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.021689568905769327,
-        "annualized_volatility": 0.3443112322131899,
-        "maximum_drawdown": -0.6910973846001359,
-        "sharpe_ratio": -1.1466679368545032,
-        "sortino_ratio": -1.3383352365350916,
-        "calmar_ratio": -0.5296532207176706,
-        "beta": 0.6656072044635096,
-        "alpha": -0.518657035836897,
-        "capm_expected_return": 0.1238463855591669,
-        "actual_return": -0.3948106502777301,
-        "market_return": 0.18606527202329357
+        "volatility": 0.02157529554716856,
+        "annualized_volatility": 0.34249719888316343,
+        "maximum_drawdown": -0.6807392662191826,
+        "sharpe_ratio": -1.1060801927846868,
+        "sortino_ratio": -1.2958583608236571,
+        "calmar_ratio": -0.5220708978048838,
+        "beta": 0.664149234187432,
+        "alpha": -0.5021054268510118,
+        "capm_expected_return": 0.12327605908210716,
+        "actual_return": -0.3788293677689046,
+        "market_return": 0.185614998461802
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -70,13 +70,14 @@
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Relative volume is 2.08x; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Relative volume is 3.42x; analyst revision; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "ACN",
@@ -126,18 +127,19 @@
     "next_earnings_date": "1781785800",
     "eps_current_year": 12.52,
     "eps_forward": 14.76589,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 5.1473264712424935,
+    "rsi": 5.406420259179399,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 2.0823332434309805,
+    "relative_volume": 3.4212217250426478,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "volume surge",
-    "support": 120.77999877929688,
+    "support": 124.83000183105469,
     "resistance": 201.3300018310547
   },
   "earnings": {
@@ -185,9 +187,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 3,
     "bearish_news_score": 2,
     "institutional_ownership": 0.85551,
     "detail": {
@@ -229,11 +231,12 @@
         "last_surprise_pct": 0.024600001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 63.65,
+      "analyst_upside_pct": 58.34,
       "eps_growth_implied": 17.94
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -255,6 +258,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "A Bad Bet on \u2018Durability\u2019: The Crux of Accenture\u2019s Stunning Stock Slide",
+        "source": "Barrons.com",
+        "published": "2026-06-22T19:34:00Z",
+        "summary": "Analysts continue lowering estimates and price targets after Accenture\u2019s disappointing earnings report raised fresh concerns about growth, bookings, acquisitions, and AI disruption.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Accenture's Fiscal Q3 Earnings Beat Offset by Weaker-Than-Expected Bookings, UBS Says",
+        "source": "MT Newswires",
+        "published": "2026-06-22T19:26:43Z",
+        "summary": "Accenture's (ACN) fiscal Q3 earnings per share beat and capital return were offset by weaker-than-ex",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Adobe Expands AI Push With Agency Deals",
         "source": "GuruFocus.com",
@@ -284,26 +307,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "SpaceX initiation, Apple downgrade among today's top calls on Wall Street",
-        "source": "The Fly",
-        "published": "2026-06-22T13:30:25Z",
-        "summary": "SpaceX initiation, Apple downgrade among today's top calls on Wall Street",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Company News for Jun 22, 2026",
-        "source": "Zacks",
-        "published": "2026-06-22T13:27:00Z",
-        "summary": "Companies in The News Are: CCL, ACN, TXN, XOM",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -323,98 +326,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5902,
-    "probability_pct": 59.02,
+    "probability_of_outperformance": 0.6046,
+    "probability_pct": 60.46,
     "confidence": "High",
     "evidence": [
       "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 26.5/100"
+      "Composite score 27.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 26.5,
+    "final_score": 27.25,
     "technical_score": 10.0,
     "momentum_score": 0,
     "volume_score": 25.0,
     "fundamental_score": 65.0,
     "risk_score": 60.0,
-    "catalyst_score": 30.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.056,
     "eps_growth": 0.09,
     "roe": 0.24406,
     "forward_pe": 8.179663,
-    "relative_volume": 2.0823332434309805,
+    "relative_volume": 3.4212217250426478,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.05625882472870436,
-      "weekly": -0.29069767650255796,
-      "monthly": -0.32607969000870296,
-      "annual": -0.6004522539353654
+      "daily": -0.024613232092935755,
+      "weekly": -0.26691330323035056,
+      "monthly": -0.30348174879582257,
+      "annual": -0.5870545920108805
     },
     "risk": {
-      "volatility": 0.021689568905769327,
-      "annualized_volatility": 0.3443112322131899,
-      "maximum_drawdown": -0.6910973846001359,
-      "sharpe_ratio": -1.1466679368545032,
-      "sortino_ratio": -1.3383352365350916,
-      "calmar_ratio": -0.5296532207176706,
-      "beta": 0.6656072044635096,
-      "alpha": -0.518657035836897,
-      "capm_expected_return": 0.1238463855591669,
-      "actual_return": -0.3948106502777301,
-      "market_return": 0.18606527202329357
+      "volatility": 0.02157529554716856,
+      "annualized_volatility": 0.34249719888316343,
+      "maximum_drawdown": -0.6807392662191826,
+      "sharpe_ratio": -1.1060801927846868,
+      "sortino_ratio": -1.2958583608236571,
+      "calmar_ratio": -0.5220708978048838,
+      "beta": 0.664149234187432,
+      "alpha": -0.5021054268510118,
+      "capm_expected_return": 0.12327605908210716,
+      "actual_return": -0.3788293677689046,
+      "market_return": 0.185614998461802
     },
     "capm": {
-      "beta": 0.6656072044635096,
-      "alpha": -0.518657035836897,
-      "capm_expected_return": 0.1238463855591669,
-      "actual_return": -0.3948106502777301,
-      "market_return": 0.18606527202329357,
-      "interpretation": "Beta 0.67: Moves roughly 33% less than the market. CAPM expected return is 12.38%; realized alpha is -51.87%, meaning negative alpha versus CAPM."
+      "beta": 0.664149234187432,
+      "alpha": -0.5021054268510118,
+      "capm_expected_return": 0.12327605908210716,
+      "actual_return": -0.3788293677689046,
+      "market_return": 0.185614998461802,
+      "interpretation": "Beta 0.66: Moves roughly 34% less than the market. CAPM expected return is 12.33%; realized alpha is -50.21%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.3948106502777301,
+      "actual_return": -0.3788293677689046,
       "components": {
-        "market_component": 0.1238463855591669,
+        "market_component": 0.12327605908210716,
         "momentum_component": 0.0,
-        "volatility_drag": -0.018862246442637978,
-        "alpha_component": -0.518657035836897
+        "volatility_drag": -0.018499439776632688,
+        "alpha_component": -0.5021054268510118
       },
       "component_weights_pct": {
-        "market_component": 18.73,
+        "market_component": 19.15,
         "momentum_component": 0.0,
-        "volatility_drag": 2.85,
-        "alpha_component": 78.42
+        "volatility_drag": 2.87,
+        "alpha_component": 77.98
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 170.3634998321533,
-      "sma50": 176.49660018920898,
-      "sma200": 223.92347911834716,
-      "ema20": 163.89563612997532,
-      "ema50": 176.65513913491245,
-      "ema200": 219.2349278110612
+      "sma20": 170.5659999847412,
+      "sma50": 176.57760025024413,
+      "sma200": 223.94372913360596,
+      "ema20": 164.2813507063332,
+      "ema50": 176.8139627840048,
+      "ema200": 219.27522653658843
     },
     "momentum": {
-      "3m": -0.39094830756862786,
-      "6m": -0.5550366946525509,
-      "12m": -0.6004522539353654,
+      "3m": -0.37052554520767855,
+      "6m": -0.5401161551361495,
+      "12m": -0.5870545920108805,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 7455496.4,
-      "relative_volume": 2.0823332434309805,
+      "average_volume": 8057596.15,
+      "relative_volume": 3.4212217250426478,
       "volume_spike": true
     },
     "volatility_regime": "High volatility",
@@ -426,18 +429,18 @@
   "why_now": {
     "send_alert": true,
     "reason": "Volume spike",
-    "evidence": "Relative volume reached 2.08x",
+    "evidence": "Relative volume reached 3.42x",
     "date_of_change": "2026-06-22",
     "strength": 70,
     "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
       {
         "reason": "Volume spike",
-        "evidence": "Relative volume reached 2.08x",
+        "evidence": "Relative volume reached 3.42x",
         "strength": 70,
         "invalidates": "Volume fades and price cannot hold the move"
       }
     ]
   },
-  "report": "Ticker: ACN\nRating: Avoid | Score: 26.5/100 | Confidence: 20.69/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 120.77999877929688 | Resistance: 201.3300018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.179663\nNews/Catalyst: Adobe Expands AI Push With Agency Deals\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.08x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: ACN\nRating: Avoid | Score: 27.25/100 | Confidence: 23.07/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 124.83000183105469 | Resistance: 201.3300018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.179663\nNews/Catalyst: A Bad Bet on \u2018Durability\u2019: The Crux of Accenture\u2019s Stunning Stock Slide\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.42x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
