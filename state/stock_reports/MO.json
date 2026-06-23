@@ -1,22 +1,24 @@
 {
   "ticker": "MO",
-  "generated_at": "2026-06-22T22:23:21.139515",
+  "generated_at": "2026-06-23T15:47:56.380141",
   "score": {
-    "final_score": 59.2,
-    "rating": "Hold",
-    "confidence": 50.27,
+    "final_score": 70.95,
+    "rating": "Watch",
+    "confidence": 61.21,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 62.0,
-      "momentum": 50.0,
+      "technical": 80.0,
+      "momentum": 75.0,
       "volume": 25.0,
       "fundamental": 73.0,
       "risk": 100,
-      "catalyst": 30.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 62.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -25,27 +27,29 @@
       ],
       "support": 63.779998779296875,
       "resistance": 74.55000305175781,
-      "risk_reward": 0.88
+      "risk_reward": 0.46
     },
     "momentum": {
-      "score": 50.0,
+      "score": 75.0,
       "returns": {
-        "1m": -0.0379174454948733,
-        "3m": 0.11263621857694472,
-        "6m": 0.23427557079122585,
-        "12m": 0.2476869016029426
+        "1m": -0.019950914816132315,
+        "3m": 0.14070312372949356,
+        "6m": 0.28094006683947614,
+        "12m": 0.2720139278574669
       },
-      "acceleration": -0.0045,
+      "acceleration": 0.0002,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
-        "12m return is positive"
+        "12m return is positive",
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 8512669.85,
-      "relative_volume": 1.034833625081795,
+      "average_volume": 8407083.25,
+      "relative_volume": 0.2843275044290777,
       "accumulation_days": 6,
       "distribution_days": 2,
       "evidence": [
@@ -62,28 +66,29 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.013348493153040337,
-        "annualized_volatility": 0.2119007595623591,
-        "maximum_drawdown": -0.16396941288651734,
-        "sharpe_ratio": 1.3992910476553948,
-        "sortino_ratio": 1.9581007031318602,
-        "calmar_ratio": 1.922076918110175,
-        "beta": -0.09866434941112857,
-        "alpha": 0.3148314854812604,
-        "capm_expected_return": -0.01832064963427305,
-        "actual_return": 0.29651083584698734,
-        "market_return": 0.18568662078672382
+        "volatility": 0.013373958093487282,
+        "annualized_volatility": 0.21230500295980123,
+        "maximum_drawdown": -0.16396941288651756,
+        "sharpe_ratio": 1.4506974565577548,
+        "sortino_ratio": 2.033910433999512,
+        "calmar_ratio": 2.0138931259501507,
+        "beta": -0.1036531796550809,
+        "alpha": 0.3265433545544343,
+        "capm_expected_return": -0.01855302674616409,
+        "actual_return": 0.3079903278082702,
+        "market_return": 0.1789913904030888
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 3m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "MO",
@@ -92,7 +97,7 @@
     "sector": "Consumer Defensive",
     "industry": "Tobacco",
     "exchange": "NYQ",
-    "market_cap": 116082483200.0,
+    "market_cap": 118862856192.0,
     "revenue_growth": 0.053,
     "eps_growth": 1.063,
     "fcf_growth": null,
@@ -109,15 +114,15 @@
     "cash_position": 3531000064.0,
     "total_debt": 24601999360.0,
     "interest_coverage": null,
-    "forward_pe": 11.835221,
-    "trailing_pe": 14.5125265,
+    "forward_pe": 12.118694,
+    "trailing_pe": 14.860126,
     "peg": 1.58,
-    "price_to_book": -36.168053,
-    "price_to_sales": 5.696461,
-    "enterprise_to_ebitda": 8.649,
-    "enterprise_to_revenue": 6.701,
-    "fcf_yield": 0.07359314601567724,
-    "institutional_ownership": 0.63505,
+    "price_to_book": -37.03434,
+    "price_to_sales": 5.832901,
+    "enterprise_to_ebitda": 8.69,
+    "enterprise_to_revenue": 6.733,
+    "fcf_yield": 0.07187169658956061,
+    "institutional_ownership": 0.63504004,
     "insider_ownership": 0.0013,
     "short_interest": 52490415.0,
     "short_ratio": 5.42,
@@ -128,23 +133,22 @@
     "target_low_price": 59.0,
     "recommendation": "none",
     "number_of_analysts": 11.0,
-    "dividend_yield": 6.13,
+    "dividend_yield": 6.1,
     "payout_ratio": 0.8768,
     "next_earnings_date": "1785414600",
     "eps_current_year": 4.79,
     "eps_forward": 5.87357,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 53.237950682450915,
+    "rsi": 56.73982124226897,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.034833625081795,
-    "price_above_sma50": false,
+    "relative_volume": 0.2843275044290777,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 63.779998779296875,
     "resistance": 74.55000305175781
   },
@@ -192,12 +196,12 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.63505,
+    "institutional_ownership": 0.63504004,
     "detail": {
       "earnings": {
         "available": true,
@@ -237,11 +241,12 @@
         "last_surprise_pct": 0.0592,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 1.23,
+      "analyst_upside_pct": -1.15,
       "eps_growth_implied": 22.62
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -254,7 +259,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0013,
-    "institutional_ownership": 0.63505,
+    "institutional_ownership": 0.63504004,
     "short_interest": 52490415.0,
     "short_percent_float": 0.0315,
     "days_to_cover": 5.42,
@@ -263,6 +268,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "You Don\u2019t Need a Powerball Jackpot To Build A $5,000 Monthly Dividend Paycheck",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-23T14:04:23Z",
+        "summary": "The latest Powerball jackpot stood at roughly $269 million, with a cash option of about $120.5 million before taxes. That would solve all your financial problems, but the odds are not great: roughly 1 in 292 million. If your goal is simply to create a $5,000 monthly dividend paycheck, however, a Powerball win is the ... You Don\u2019t Need a Powerball Jackpot To Build A $5,000 Monthly Dividend Paycheck",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Bank of America Sees Interest Rates Exploding Higher Soon: Play It Safe With 4 Dividend Giants",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-23T12:40:05Z",
+        "summary": "Bank of America has predicted that the Federal Reserve will be forced to raise interest rates by 75 basis points this year, with the first 25-basis-point hike in September. They also see additional 25-basis-point hikes in October and December. The energy shock from the war with Iran drove inflation higher, with the CPI rising in ... Bank of America Sees Interest Rates Exploding Higher Soon: Play It Safe With 4 Dividend Giants",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Don\u2019t Wait For Your Rich Uncle To Die. Build Your Own Inheritance With This Portfolio",
         "source": "24/7 Wall St.",
@@ -292,26 +317,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "This Dividend Portfolio Pays More Than Social Security and a Part-Time Job Combined",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-20T20:57:30Z",
-        "summary": "The average retired worker receives about $24,000 a year from Social Security. Add a modest part-time job, the kind many retirees take for supplemental income rather than career advancement, and total annual income often lands somewhere between $40,000 and $45,000 before taxes. For millions of retirees, that combination defines the retirement budget. A portfolio can ... This Dividend Portfolio Pays More Than Social Security and a Part-Time Job Combined",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Dividend Portfolio That Out-Earns a New York City Teacher",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-20T10:11:56Z",
-        "summary": "A mid-career New York City public school teacher earns about $85,000 a year in exchange for lesson plans, grading, classroom management, parent conferences, staff meetings, and a daily commute. A portfolio can generate the same income without requiring any of those things, but it demands something else: a substantial amount of capital. The math is ... The Dividend Portfolio That Out-Earns a New York City Teacher",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -331,31 +336,31 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7617,
-    "probability_pct": 76.17,
+    "probability_of_outperformance": 0.8586,
+    "probability_pct": 85.86,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 59.2/100"
+      "Composite score 70.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.2,
-    "technical_score": 62.0,
-    "momentum_score": 50.0,
+    "final_score": 70.95,
+    "technical_score": 80.0,
+    "momentum_score": 75.0,
     "volume_score": 25.0,
     "fundamental_score": 73.0,
     "risk_score": 100,
-    "catalyst_score": 30.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.053,
     "eps_growth": 1.063,
     "roe": null,
-    "forward_pe": 11.835221,
-    "relative_volume": 1.034833625081795,
+    "forward_pe": 12.118694,
+    "relative_volume": 0.2843275044290777,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
@@ -363,82 +368,95 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.005642352056586475,
-      "weekly": -0.01932847985616093,
-      "monthly": -0.0379174454948733,
-      "annual": 0.2476869016029426
+      "daily": 0.023953400436733663,
+      "weekly": 0.022776358633089577,
+      "monthly": -0.019950914816132315,
+      "annual": 0.2720139278574669
     },
     "risk": {
-      "volatility": 0.013348493153040337,
-      "annualized_volatility": 0.2119007595623591,
-      "maximum_drawdown": -0.16396941288651734,
-      "sharpe_ratio": 1.3992910476553948,
-      "sortino_ratio": 1.9581007031318602,
-      "calmar_ratio": 1.922076918110175,
-      "beta": -0.09866434941112857,
-      "alpha": 0.3148314854812604,
-      "capm_expected_return": -0.01832064963427305,
-      "actual_return": 0.29651083584698734,
-      "market_return": 0.18568662078672382
+      "volatility": 0.013373958093487282,
+      "annualized_volatility": 0.21230500295980123,
+      "maximum_drawdown": -0.16396941288651756,
+      "sharpe_ratio": 1.4506974565577548,
+      "sortino_ratio": 2.033910433999512,
+      "calmar_ratio": 2.0138931259501507,
+      "beta": -0.1036531796550809,
+      "alpha": 0.3265433545544343,
+      "capm_expected_return": -0.01855302674616409,
+      "actual_return": 0.3079903278082702,
+      "market_return": 0.1789913904030888
     },
     "capm": {
-      "beta": -0.09866434941112857,
-      "alpha": 0.3148314854812604,
-      "capm_expected_return": -0.01832064963427305,
-      "actual_return": 0.29651083584698734,
-      "market_return": 0.18568662078672382,
-      "interpretation": "Beta -0.10: Moves roughly 110% less than the market. CAPM expected return is -1.83%; realized alpha is 31.48%, meaning positive alpha versus CAPM."
+      "beta": -0.1036531796550809,
+      "alpha": 0.3265433545544343,
+      "capm_expected_return": -0.01855302674616409,
+      "actual_return": 0.3079903278082702,
+      "market_return": 0.1789913904030888,
+      "interpretation": "Beta -0.10: Moves roughly 110% less than the market. CAPM expected return is -1.86%; realized alpha is 32.65%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.29651083584698734,
+      "actual_return": 0.3079903278082702,
       "components": {
-        "market_component": -0.01832064963427305,
-        "momentum_component": 0.06192172540073565,
+        "market_component": -0.01855302674616409,
+        "momentum_component": 0.06800348196436673,
         "volatility_drag": -0.0,
-        "alpha_component": 0.3148314854812604
+        "alpha_component": 0.3265433545544343
       },
       "component_weights_pct": {
-        "market_component": 4.64,
-        "momentum_component": 15.67,
+        "market_component": 4.49,
+        "momentum_component": 16.46,
         "volatility_drag": 0.0,
-        "alpha_component": 79.69
+        "alpha_component": 79.05
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 70.09152793884277,
-      "sma50": 68.92197624206543,
-      "sma200": 62.53022943496704,
-      "ema20": 69.94516805062271,
-      "ema50": 68.87615243165222,
-      "ema200": 63.30982299637915
+      "sma20": 70.00972213745118,
+      "sma50": 69.01773262023926,
+      "sma200": 62.57430416107178,
+      "ema20": 70.06229519358914,
+      "ema50": 68.96630343863407,
+      "ema200": 63.388083598760296
     },
     "momentum": {
-      "3m": 0.11263621857694472,
-      "6m": 0.23427557079122585,
-      "12m": 0.2476869016029426,
+      "3m": 0.14070312372949356,
+      "6m": 0.28094006683947614,
+      "12m": 0.2720139278574669,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 8512669.85,
-      "relative_volume": 1.034833625081795,
+      "average_volume": 8407083.25,
+      "relative_volume": 0.2843275044290777,
       "volume_spike": false
     },
-    "volatility_regime": "Normal volatility",
+    "volatility_regime": "High volatility",
     "quant_score": {
       "score": 90,
       "label": "Research priority"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-22",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-23",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: MO\nRating: Hold | Score: 59.2/100 | Confidence: 50.27/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 63.779998779296875 | Resistance: 74.55000305175781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.835221\nNews/Catalyst: Don\u2019t Wait For Your Rich Uncle To Die. Build Your Own Inheritance With This Portfolio\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: MO\nRating: Watch | Score: 70.95/100 | Confidence: 61.21/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 63.779998779296875 | Resistance: 74.55000305175781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 12.118694\nNews/Catalyst: You Don\u2019t Need a Powerball Jackpot To Build A $5,000 Monthly Dividend Paycheck\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

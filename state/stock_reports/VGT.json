@@ -1,23 +1,22 @@
 {
   "ticker": "VGT",
-  "generated_at": "2026-06-22T22:23:24.408799",
+  "generated_at": "2026-06-23T15:48:02.251726",
   "score": {
-    "final_score": 61.5,
+    "final_score": 56.75,
     "rating": "Hold",
-    "confidence": 42.05,
+    "confidence": 36.66,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
+      "technical": 57.0,
       "momentum": 85.0,
       "volume": 0,
       "fundamental": 50.0,
       "risk": 85.0,
-      "catalyst": 35.0
+      "catalyst": 20.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 57.0,
       "evidence": [
-        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +25,17 @@
       ],
       "support": 83.5875015258789,
       "resistance": 125.7699966430664,
-      "risk_reward": 0.14
+      "risk_reward": 0.28
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.05868400419680375,
-        "3m": 0.36865865709048173,
-        "6m": 0.3212703411432405,
-        "12m": 0.5339598727692594
+        "1m": 0.01703209550197582,
+        "3m": 0.30159466843373517,
+        "6m": 0.25906453681438024,
+        "12m": 0.4885443128470086
       },
-      "acceleration": 0.208,
+      "acceleration": 0.1721,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +47,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 5644863.95,
-      "relative_volume": 0.7800859398923157,
+      "average_volume": 5590359.35,
+      "relative_volume": 0.45275926671869493,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": []
@@ -62,30 +61,29 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016728980537790417,
-        "annualized_volatility": 0.2655643331437981,
-        "maximum_drawdown": -0.27228780633663185,
-        "sharpe_ratio": 1.1598531806199601,
-        "sortino_ratio": 1.543355570755161,
-        "calmar_ratio": 1.1518992727909463,
-        "beta": 1.4460863239119244,
-        "alpha": 0.03949675360295196,
-        "capm_expected_return": 0.268518882853101,
-        "actual_return": 0.30801563645605295,
-        "market_return": 0.18568662078672382
+        "volatility": 0.016785335076402553,
+        "annualized_volatility": 0.2664589337103031,
+        "maximum_drawdown": -0.2722878753480147,
+        "sharpe_ratio": 1.089766105629298,
+        "sortino_ratio": 1.449015248803244,
+        "calmar_ratio": 1.0664919584957393,
+        "beta": 1.4497551129318076,
+        "alpha": 0.03088423109196098,
+        "capm_expected_return": 0.2594936834076513,
+        "actual_return": 0.29037791449961226,
+        "market_return": 0.1789913904030888
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 35.0,
+      "score": 20.0,
       "evidence": [
-        "sector strength",
-        "major news"
+        "sector strength"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "VGT",
@@ -95,11 +93,11 @@
     "note": "Company fundamentals skipped because this symbol is an ETF/fund."
   },
   "technical_screen": {
-    "rsi": 44.70046174085951,
+    "rsi": 37.46306019181943,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7800859398923157,
+    "relative_volume": 0.45275926671869493,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -117,10 +115,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": false,
     "bullish_news_score": 1,
-    "bearish_news_score": 2,
+    "bearish_news_score": 1,
     "institutional_ownership": null,
     "detail": {
       "note": "Company catalysts skipped because this symbol is an ETF/fund."
@@ -147,6 +145,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "This Unstoppable Vanguard ETF Has Crushed the S&P 500 Over the Last Decade. Is It a Buy Right Now?",
+        "source": "Motley Fool",
+        "published": "2026-06-23T12:20:00Z",
+        "summary": "Growth stocks have unsurprisingly outperformed the S&P 500. But this growth ETF from Vanguard has done even better.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Who Really Powered VGT's Climb This Year?",
         "source": "Trefis",
@@ -186,16 +194,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Artificial Intelligence (AI) ETF Showdown: Vanguard's VGT vs. the iShares SOXX",
-        "source": "Motley Fool",
-        "published": "2026-06-11T16:50:48Z",
-        "summary": "Compare portfolio diversity, volatility, and sector focus as these two tech ETFs take different approaches to growth and risk management.",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -213,96 +211,96 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7214,
-    "probability_pct": 72.14,
+    "probability_of_outperformance": 0.6709,
+    "probability_pct": 67.09,
     "confidence": "High",
     "evidence": [
-      "Composite score 61.5/100"
+      "Composite score 56.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.5,
-    "technical_score": 73.0,
+    "final_score": 56.75,
+    "technical_score": 57.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 50.0,
     "risk_score": 85.0,
-    "catalyst_score": 35.0,
+    "catalyst_score": 20.0,
     "revenue_growth": null,
     "eps_growth": null,
     "roe": null,
     "forward_pe": null,
-    "relative_volume": 0.7800859398923157,
+    "relative_volume": 0.45275926671869493,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0039153716854256615,
-      "weekly": 0.0322940238260101,
-      "monthly": 0.05868400419680375,
-      "annual": 0.5339598727692594
+      "daily": -0.033773127729458396,
+      "weekly": -0.03553384242725577,
+      "monthly": 0.01703209550197582,
+      "annual": 0.4885443128470086
     },
     "risk": {
-      "volatility": 0.016728980537790417,
-      "annualized_volatility": 0.2655643331437981,
-      "maximum_drawdown": -0.27228780633663185,
-      "sharpe_ratio": 1.1598531806199601,
-      "sortino_ratio": 1.543355570755161,
-      "calmar_ratio": 1.1518992727909463,
-      "beta": 1.4460863239119244,
-      "alpha": 0.03949675360295196,
-      "capm_expected_return": 0.268518882853101,
-      "actual_return": 0.30801563645605295,
-      "market_return": 0.18568662078672382
+      "volatility": 0.016785335076402553,
+      "annualized_volatility": 0.2664589337103031,
+      "maximum_drawdown": -0.2722878753480147,
+      "sharpe_ratio": 1.089766105629298,
+      "sortino_ratio": 1.449015248803244,
+      "calmar_ratio": 1.0664919584957393,
+      "beta": 1.4497551129318076,
+      "alpha": 0.03088423109196098,
+      "capm_expected_return": 0.2594936834076513,
+      "actual_return": 0.29037791449961226,
+      "market_return": 0.1789913904030888
     },
     "capm": {
-      "beta": 1.4460863239119244,
-      "alpha": 0.03949675360295196,
-      "capm_expected_return": 0.268518882853101,
-      "actual_return": 0.30801563645605295,
-      "market_return": 0.18568662078672382,
-      "interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 26.85%; realized alpha is 3.95%, meaning positive alpha versus CAPM."
+      "beta": 1.4497551129318076,
+      "alpha": 0.03088423109196098,
+      "capm_expected_return": 0.2594936834076513,
+      "actual_return": 0.29037791449961226,
+      "market_return": 0.1789913904030888,
+      "interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 25.95%; realized alpha is 3.09%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.30801563645605295,
+      "actual_return": 0.29037791449961226,
       "components": {
-        "market_component": 0.268518882853101,
-        "momentum_component": 0.13348996819231485,
-        "volatility_drag": -0.0031128666287596253,
-        "alpha_component": 0.03949675360295196
+        "market_component": 0.2594936834076513,
+        "momentum_component": 0.12213607821175215,
+        "volatility_drag": -0.003291786742060621,
+        "alpha_component": 0.03088423109196098
       },
       "component_weights_pct": {
-        "market_component": 60.39,
-        "momentum_component": 30.02,
-        "volatility_drag": 0.7,
-        "alpha_component": 8.88
+        "market_component": 62.41,
+        "momentum_component": 29.37,
+        "volatility_drag": 0.79,
+        "alpha_component": 7.43
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 118.82849960327148,
-      "sma50": 111.00962463378906,
-      "sma200": 97.47171104431152,
-      "ema20": 117.32332523550686,
-      "ema50": 111.50374761961056,
-      "ema200": 98.21238215158657
+      "sma20": 118.8629997253418,
+      "sma50": 111.480224609375,
+      "sma200": 97.61934421539307,
+      "ema20": 117.239199255113,
+      "ema50": 111.69732623773368,
+      "ema200": 98.39375153560748
     },
     "momentum": {
-      "3m": 0.36865865709048173,
-      "6m": 0.3212703411432405,
-      "12m": 0.5339598727692594,
+      "3m": 0.30159466843373517,
+      "6m": 0.25906453681438024,
+      "12m": 0.4885443128470086,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5644863.95,
-      "relative_volume": 0.7800859398923157,
+      "average_volume": 5590359.35,
+      "relative_volume": 0.45275926671869493,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -315,10 +313,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-22",
+    "date_of_change": "2026-06-23",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: VGT\nRating: Hold | Score: 61.5/100 | Confidence: 42.05/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 83.5875015258789 | Resistance: 125.7699966430664\nFundamental Outlook: ETF / Fund | Forward P/E: None\nNews/Catalyst: Who Really Powered VGT's Climb This Year?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: VGT\nRating: Hold | Score: 56.75/100 | Confidence: 36.66/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 83.5875015258789 | Resistance: 125.7699966430664\nFundamental Outlook: ETF / Fund | Forward P/E: None\nNews/Catalyst: This Unstoppable Vanguard ETF Has Crushed the S&P 500 Over the Last Decade. Is It a Buy Right Now?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
