@@ -1,15 +1,15 @@
 {
   "ticker": "AON",
-  "generated_at": "2026-06-23T19:53:45.471214",
+  "generated_at": "2026-06-23T21:27:04.729579",
   "score": {
-    "final_score": 40.45,
+    "final_score": 44.2,
     "rating": "Drop",
-    "confidence": 31.67,
+    "confidence": 41.94,
     "risk_level": "Controlled",
     "categories": {
       "technical": 35.0,
       "momentum": 10.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 78.0,
       "risk": 100,
       "catalyst": 50.0
@@ -28,10 +28,10 @@
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.010764265687604135,
-        "3m": -0.013479415402635087,
-        "6m": -0.08907109560857407,
-        "12m": -0.09148284700400677
+        "1m": -0.01073348643891714,
+        "3m": -0.013448720633577604,
+        "6m": -0.08904275281189578,
+        "12m": -0.0914545792469712
       },
       "acceleration": 0.0311,
       "evidence": [
@@ -39,12 +39,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1613071.25,
-      "relative_volume": 0.7066798816233318,
-      "accumulation_days": 4,
+      "score": 25.0,
+      "average_volume": 1681927.8,
+      "relative_volume": 1.4965303504704541,
+      "accumulation_days": 5,
       "distribution_days": 5,
-      "evidence": []
+      "evidence": [
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 78.0,
@@ -56,17 +58,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014441885526413928,
-        "annualized_volatility": 0.22925782539452633,
+        "volatility": 0.014441981792895763,
+        "annualized_volatility": 0.22925935357754948,
         "maximum_drawdown": -0.24170904253801895,
-        "sharpe_ratio": 0.3008661384188137,
-        "sortino_ratio": 0.3911979476113597,
-        "calmar_ratio": 0.18003888528793163,
-        "beta": 0.23406954682547249,
-        "alpha": 0.027148422841278073,
-        "capm_expected_return": 0.0418274937874677,
-        "actual_return": 0.06897591662874578,
-        "market_return": 0.1786968631961988
+        "sharpe_ratio": 0.3009340442468927,
+        "sortino_ratio": 0.3912887190704089,
+        "calmar_ratio": 0.18010658581432537,
+        "beta": 0.23335091912317069,
+        "alpha": 0.02745635875253275,
+        "capm_expected_return": 0.04153558570098754,
+        "actual_return": 0.06899194445352029,
+        "market_return": 0.17799623784238716
       },
       "evidence": []
     },
@@ -78,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; Momentum is accelerating; eps growth is strong; earnings surprise"
+    "explanation": "EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; Momentum is accelerating; Price advanced on above-average volume; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "AON",
@@ -132,11 +134,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 52.303025167856724,
+    "rsi": 52.310662857512234,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7066798816233318,
+    "relative_volume": 1.4965303504704541,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -232,7 +234,7 @@
         "last_surprise_pct": 0.0197,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 19.23,
+      "analyst_upside_pct": 19.21,
       "eps_growth_implied": 17.47
     },
     "evidence": [
@@ -334,15 +336,15 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 40.45/100"
+      "Composite score 44.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.45,
+    "final_score": 44.2,
     "technical_score": 35.0,
     "momentum_score": 10.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 78.0,
     "risk_score": 100,
     "catalyst_score": 50.0,
@@ -350,7 +352,7 @@
     "eps_growth": 0.271,
     "roe": 0.46447,
     "forward_pe": 15.062667,
-    "relative_volume": 0.7066798816233318,
+    "relative_volume": 1.4965303504704541,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -360,66 +362,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.02263815959244253,
-      "weekly": -0.026645620828156136,
-      "monthly": -0.010764265687604135,
-      "annual": -0.09148284700400677
+      "daily": 0.022669978129864043,
+      "weekly": -0.026615335714650912,
+      "monthly": -0.01073348643891714,
+      "annual": -0.0914545792469712
     },
     "risk": {
-      "volatility": 0.014441885526413928,
-      "annualized_volatility": 0.22925782539452633,
+      "volatility": 0.014441981792895763,
+      "annualized_volatility": 0.22925935357754948,
       "maximum_drawdown": -0.24170904253801895,
-      "sharpe_ratio": 0.3008661384188137,
-      "sortino_ratio": 0.3911979476113597,
-      "calmar_ratio": 0.18003888528793163,
-      "beta": 0.23406954682547249,
-      "alpha": 0.027148422841278073,
-      "capm_expected_return": 0.0418274937874677,
-      "actual_return": 0.06897591662874578,
-      "market_return": 0.1786968631961988
+      "sharpe_ratio": 0.3009340442468927,
+      "sortino_ratio": 0.3912887190704089,
+      "calmar_ratio": 0.18010658581432537,
+      "beta": 0.23335091912317069,
+      "alpha": 0.02745635875253275,
+      "capm_expected_return": 0.04153558570098754,
+      "actual_return": 0.06899194445352029,
+      "market_return": 0.17799623784238716
     },
     "capm": {
-      "beta": 0.23406954682547249,
-      "alpha": 0.027148422841278073,
-      "capm_expected_return": 0.0418274937874677,
-      "actual_return": 0.06897591662874578,
-      "market_return": 0.1786968631961988,
-      "interpretation": "Beta 0.23: Moves roughly 77% less than the market. CAPM expected return is 4.18%; realized alpha is 2.71%, meaning positive alpha versus CAPM."
+      "beta": 0.23335091912317069,
+      "alpha": 0.02745635875253275,
+      "capm_expected_return": 0.04153558570098754,
+      "actual_return": 0.06899194445352029,
+      "market_return": 0.17799623784238716,
+      "interpretation": "Beta 0.23: Moves roughly 77% less than the market. CAPM expected return is 4.15%; realized alpha is 2.75%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.06897591662874578,
+      "actual_return": 0.06899194445352029,
       "components": {
-        "market_component": 0.0418274937874677,
+        "market_component": 0.04153558570098754,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": 0.027148422841278073
+        "alpha_component": 0.02745635875253275
       },
       "component_weights_pct": {
-        "market_component": 60.64,
+        "market_component": 60.2,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 39.36
+        "alpha_component": 39.8
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 324.0415008544922,
-      "sma50": 321.9771319580078,
-      "sma200": 336.59118240356446,
-      "ema20": 323.96341338446786,
-      "ema50": 323.3271307118135,
-      "ema200": 334.0031254708999
+      "sma20": 324.04199981689453,
+      "sma50": 321.9773315429687,
+      "sma200": 336.5912322998047,
+      "ema20": 323.9643637890438,
+      "ema50": 323.32752205490533,
+      "ema200": 334.00322484337244
     },
     "momentum": {
-      "3m": -0.013479415402635087,
-      "6m": -0.08907109560857407,
-      "12m": -0.09148284700400677,
+      "3m": -0.013448720633577604,
+      "6m": -0.08904275281189578,
+      "12m": -0.0914545792469712,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 1613071.25,
-      "relative_volume": 0.7066798816233318,
+      "average_volume": 1681927.8,
+      "relative_volume": 1.4965303504704541,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -437,5 +439,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AON\nRating: Drop | Score: 40.45/100 | Confidence: 31.67/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 308.2699890136719 | Resistance: 336.3299865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.062667\nNews/Catalyst: Here is why AON\u00a0is among the Best Pet Care Stocks to Buy for Consistent Recurring Revenue\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AON\nRating: Drop | Score: 44.2/100 | Confidence: 41.94/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 308.2699890136719 | Resistance: 336.3299865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.062667\nNews/Catalyst: Here is why AON\u00a0is among the Best Pet Care Stocks to Buy for Consistent Recurring Revenue\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

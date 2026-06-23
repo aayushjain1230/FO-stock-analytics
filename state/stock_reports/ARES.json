@@ -1,15 +1,15 @@
 {
   "ticker": "ARES",
-  "generated_at": "2026-06-23T19:53:49.407208",
+  "generated_at": "2026-06-23T21:27:08.416268",
   "score": {
-    "final_score": 44.4,
+    "final_score": 40.65,
     "rating": "Drop",
-    "confidence": 44.21,
+    "confidence": 33.44,
     "risk_level": "Moderate",
     "categories": {
       "technical": 28.0,
       "momentum": 40.0,
-      "volume": 25.0,
+      "volume": 0,
       "fundamental": 76.0,
       "risk": 60.0,
       "catalyst": 65.0
@@ -22,17 +22,17 @@
       ],
       "support": 100.45999908447266,
       "resistance": 135.36000061035156,
-      "risk_reward": 0.7
+      "risk_reward": 0.72
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": -0.01436536411591316,
-        "3m": 0.14085916364145445,
-        "6m": -0.256734472503386,
-        "12m": -0.24313502935271303
+        "1m": -0.01607610363830947,
+        "3m": 0.13887900508201123,
+        "6m": -0.25802453848446094,
+        "12m": -0.24444869952141834
       },
-      "acceleration": 0.2692,
+      "acceleration": 0.2679,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating",
@@ -40,14 +40,12 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 2535966.45,
-      "relative_volume": 0.9508126576359083,
+      "score": 0,
+      "average_volume": 2556491.85,
+      "relative_volume": 1.1037535676086743,
       "accumulation_days": 4,
-      "distribution_days": 3,
-      "evidence": [
-        "Accumulation days exceed distribution days"
-      ]
+      "distribution_days": 4,
+      "evidence": []
     },
     "fundamental": {
       "score": 76.0,
@@ -60,17 +58,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02602623588240341,
-        "annualized_volatility": 0.4131536862476707,
-        "maximum_drawdown": -0.49971746470637324,
-        "sharpe_ratio": 0.16128207120256963,
-        "sortino_ratio": 0.19801803234063003,
-        "calmar_ratio": -0.03876132418497118,
-        "beta": 1.6095496955442021,
-        "alpha": -0.22098719950914475,
-        "capm_expected_return": 0.2876214817521457,
-        "actual_return": 0.06663428224300093,
-        "market_return": 0.1786968631961988
+        "volatility": 0.026031385112478725,
+        "annualized_volatility": 0.41323542774100713,
+        "maximum_drawdown": -0.4997174241882465,
+        "sharpe_ratio": 0.15921597432958962,
+        "sortino_ratio": 0.195454999099607,
+        "calmar_ratio": -0.040478587214085114,
+        "beta": 1.6098107218600515,
+        "alpha": -0.22074657087413752,
+        "capm_expected_return": 0.2865402521294267,
+        "actual_return": 0.06579368125528917,
+        "market_return": 0.17799623784238716
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -86,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; Outperforming S&P 500 over 3 months; Accumulation days exceed distribution days"
+    "explanation": "EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; Outperforming S&P 500 over 3 months; revenue growth is strong"
   },
   "fundamentals": {
     "ticker": "ARES",
@@ -140,11 +138,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 42.42045890287408,
+    "rsi": 42.23602288250287,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9508126576359083,
+    "relative_volume": 1.1037535676086743,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -240,7 +238,7 @@
         "last_surprise_pct": -0.0657,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 20.44,
+      "analyst_upside_pct": 20.69,
       "eps_growth_implied": 237.53
     },
     "evidence": [
@@ -344,15 +342,15 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 44.4/100"
+      "Composite score 40.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 44.4,
+    "final_score": 40.65,
     "technical_score": 28.0,
     "momentum_score": 40.0,
-    "volume_score": 25.0,
+    "volume_score": 0,
     "fundamental_score": 76.0,
     "risk_score": 60.0,
     "catalyst_score": 65.0,
@@ -360,7 +358,7 @@
     "eps_growth": 7.705,
     "roe": 0.14182,
     "forward_pe": 16.346115,
-    "relative_volume": 0.9508126576359083,
+    "relative_volume": 1.1037535676086743,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -370,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.03899923433360819,
-      "weekly": -0.09715690752007489,
-      "monthly": -0.01436536411591316,
-      "annual": -0.24313502935271303
+      "daily": -0.040667217510157117,
+      "weekly": -0.09872394798780615,
+      "monthly": -0.01607610363830947,
+      "annual": -0.24444869952141834
     },
     "risk": {
-      "volatility": 0.02602623588240341,
-      "annualized_volatility": 0.4131536862476707,
-      "maximum_drawdown": -0.49971746470637324,
-      "sharpe_ratio": 0.16128207120256963,
-      "sortino_ratio": 0.19801803234063003,
-      "calmar_ratio": -0.03876132418497118,
-      "beta": 1.6095496955442021,
-      "alpha": -0.22098719950914475,
-      "capm_expected_return": 0.2876214817521457,
-      "actual_return": 0.06663428224300093,
-      "market_return": 0.1786968631961988
+      "volatility": 0.026031385112478725,
+      "annualized_volatility": 0.41323542774100713,
+      "maximum_drawdown": -0.4997174241882465,
+      "sharpe_ratio": 0.15921597432958962,
+      "sortino_ratio": 0.195454999099607,
+      "calmar_ratio": -0.040478587214085114,
+      "beta": 1.6098107218600515,
+      "alpha": -0.22074657087413752,
+      "capm_expected_return": 0.2865402521294267,
+      "actual_return": 0.06579368125528917,
+      "market_return": 0.17799623784238716
     },
     "capm": {
-      "beta": 1.6095496955442021,
-      "alpha": -0.22098719950914475,
-      "capm_expected_return": 0.2876214817521457,
-      "actual_return": 0.06663428224300093,
-      "market_return": 0.1786968631961988,
-      "interpretation": "Beta 1.61: Moves roughly 61% more than the market. CAPM expected return is 28.76%; realized alpha is -22.10%, meaning negative alpha versus CAPM."
+      "beta": 1.6098107218600515,
+      "alpha": -0.22074657087413752,
+      "capm_expected_return": 0.2865402521294267,
+      "actual_return": 0.06579368125528917,
+      "market_return": 0.17799623784238716,
+      "interpretation": "Beta 1.61: Moves roughly 61% more than the market. CAPM expected return is 28.65%; realized alpha is -22.07%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.06663428224300093,
+      "actual_return": 0.06579368125528917,
       "components": {
-        "market_component": 0.2876214817521457,
+        "market_component": 0.2865402521294267,
         "momentum_component": 0.0,
-        "volatility_drag": -0.032630737249534136,
-        "alpha_component": -0.22098719950914475
+        "volatility_drag": -0.03264708554820143,
+        "alpha_component": -0.22074657087413752
       },
       "component_weights_pct": {
-        "market_component": 53.14,
+        "market_component": 53.07,
         "momentum_component": 0.0,
-        "volatility_drag": 6.03,
-        "alpha_component": 40.83
+        "volatility_drag": 6.05,
+        "alpha_component": 40.88
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 127.58981819152832,
-      "sma50": 122.11191650390624,
-      "sma200": 137.43589054107667,
-      "ema20": 126.96107418888553,
-      "ema50": 123.60653676965856,
-      "ema200": 133.66046767442688
+      "sma20": 127.57931823730469,
+      "sma50": 122.10771652221679,
+      "sma200": 137.4348406982422,
+      "ema20": 126.94107427744383,
+      "ema50": 123.5983015556381,
+      "ema200": 133.65837814022643
     },
     "momentum": {
-      "3m": 0.14085916364145445,
-      "6m": -0.256734472503386,
-      "12m": -0.24313502935271303,
+      "3m": 0.13887900508201123,
+      "6m": -0.25802453848446094,
+      "12m": -0.24444869952141834,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2535966.45,
-      "relative_volume": 0.9508126576359083,
+      "average_volume": 2556491.85,
+      "relative_volume": 1.1037535676086743,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +445,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ARES\nRating: Drop | Score: 44.4/100 | Confidence: 44.21/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 100.45999908447266 | Resistance: 135.36000061035156\nFundamental Outlook: Quality Compounder | Forward P/E: 16.346115\nNews/Catalyst: ARES vs. KKR: Which Asset Manager Offers Better Upside Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ARES\nRating: Drop | Score: 40.65/100 | Confidence: 33.44/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 100.45999908447266 | Resistance: 135.36000061035156\nFundamental Outlook: Quality Compounder | Forward P/E: 16.346115\nNews/Catalyst: ARES vs. KKR: Which Asset Manager Offers Better Upside Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

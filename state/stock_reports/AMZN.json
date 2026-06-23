@@ -1,10 +1,10 @@
 {
   "ticker": "AMZN",
-  "generated_at": "2026-06-23T19:53:44.642296",
+  "generated_at": "2026-06-23T21:27:03.850810",
   "score": {
-    "final_score": 50.15,
+    "final_score": 50.9,
     "rating": "Hold",
-    "confidence": 40.48,
+    "confidence": 42.66,
     "risk_level": "Controlled",
     "categories": {
       "technical": 22.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 76.0,
       "risk": 100,
-      "catalyst": 65.0
+      "catalyst": 80.0
     },
     "technical": {
       "score": 22.0,
@@ -22,17 +22,17 @@
       ],
       "support": 199.33999633789062,
       "resistance": 274.989990234375,
-      "risk_reward": 1.11
+      "risk_reward": 1.18
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.12366832304618325,
-        "3m": 0.1195393318271083,
-        "6m": 0.0374845660870915,
-        "12m": 0.12194187499508824
+        "1m": -0.12795199261739676,
+        "3m": 0.11406681874142954,
+        "6m": 0.032413151709147936,
+        "12m": 0.11645761783883324
       },
-      "acceleration": 0.1008,
+      "acceleration": 0.0979,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -42,9 +42,9 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 46199343.9,
-      "relative_volume": 0.8086668520848843,
-      "accumulation_days": 2,
+      "average_volume": 47180837.35,
+      "relative_volume": 1.207900287509416,
+      "accumulation_days": 3,
       "distribution_days": 9,
       "evidence": []
     },
@@ -59,26 +59,27 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.020709353356513645,
-        "annualized_volatility": 0.3287507927657751,
+        "volatility": 0.020705788306793347,
+        "annualized_volatility": 0.32869419935594624,
         "maximum_drawdown": -0.30876638431876047,
-        "sharpe_ratio": 0.5276418993316345,
-        "sortino_ratio": 0.7780838546523996,
-        "calmar_ratio": 0.4113847527817575,
-        "beta": 1.3708234292025163,
-        "alpha": -0.07149915409263202,
-        "capm_expected_return": 0.24496184679434616,
-        "actual_return": 0.17346269270171413,
-        "market_return": 0.1786968631961988
+        "sharpe_ratio": 0.5201579720833511,
+        "sortino_ratio": 0.7669156829058819,
+        "calmar_ratio": 0.4023813280997325,
+        "beta": 1.3709283947823394,
+        "alpha": -0.07304718845000963,
+        "capm_expected_return": 0.24402009662255933,
+        "actual_return": 0.1709729081725497,
+        "market_return": 0.17799623784238716
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
+        "major news",
         "guidance change"
       ]
     },
@@ -136,11 +137,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 34.70062956811324,
+    "rsi": 33.60164070572321,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8086668520848843,
+    "relative_volume": 1.207900287509416,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -192,10 +193,10 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 0,
+    "bullish_news_score": 1,
+    "bearish_news_score": 3,
     "institutional_ownership": 0.68018997,
     "detail": {
       "earnings": {
@@ -236,13 +237,14 @@
         "last_surprise_pct": 0.6818,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 32.89,
+      "analyst_upside_pct": 33.69,
       "eps_growth_implied": 34.25
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -285,34 +287,34 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
-        "source": "Yahoo Finance",
-        "published": "2026-06-21T22:58:17Z",
-        "summary": "US stocks traded mixed on Monday as investors assessed signs of progress in US-Iran peace talks, while shares of Elon Musk's SpaceX (SPCX) fell for the third day in a row.",
+        "headline": "FedEx Earnings Show Weaker Margin Amid Massive Transformation",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-23T20:50:07Z",
+        "summary": "FedEx easily beat revenue estimates for its fiscal fourth quarter after Tuesday's market close, its first report after executing a momentous structural transformation.  The restructuring included spinning off FedEx Freight, its less-than-truckload business, earlier this month.  Late Tuesday, FedEx posted Q4 earnings of $6.31 per share, vs. $6.07 a year ago, on revenue of $25 billion.",
+        "bullish_score": 1,
+        "bearish_score": 2,
+        "importance_score": 75,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Worried About Amazon\u2019s AI Bill? What If It\u2019s Already Paid For?",
+        "source": "Trefis",
+        "published": "2026-06-23T20:44:14Z",
+        "summary": "If you follow Amazon.com (AMZN) stock, you\u2019ve heard the main worry. The company is spending a fortune to build out its artificial intelligence infrastructure, and with the stock having trailed the index over the past year, investors are clearly nervous about the size of the bill. The price appears to give little credit for this investment, with a trailing price-to-earnings multiple of 27.5, toward the low end of its 10-year range.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Bill Ackman just showed what\u2019s inside his $5B fund",
-        "source": "TheStreet",
-        "published": "2026-06-23T19:37:00Z",
-        "summary": "Retail investors have spent decades watching Bill Ackman make concentrated bets from the outside, The Motley Fool noted, piecing together his moves through quarterly filings that arrive months after the trades close. That dynamic changed when Pershing Square USA (PSUS) began trading on the New York ...",
+        "headline": "Oracle Stock Falls As Annual Filing Reveals 21,000 Jobs Cut, Jump In AI Spending",
+        "source": "Investor's Business Daily",
+        "published": "2026-06-23T20:11:00Z",
+        "summary": "Oracle disclosed a 2026 headcount of 141,000, down by 21,000 from a year earlier, after a round of AI-related layoffs.",
         "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Sector Update: Consumer Stocks Mixed Late Afternoon",
-        "source": "MT Newswires",
-        "published": "2026-06-23T19:29:25Z",
-        "summary": "Consumer stocks were mixed late Tuesday afternoon, with the State Street Consumer Staples Select Sec",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -330,99 +332,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8183,
-    "probability_pct": 81.83,
+    "probability_of_outperformance": 0.8271,
+    "probability_pct": 82.71,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 50.15/100"
+      "Composite score 50.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 50.15,
+    "final_score": 50.9,
     "technical_score": 22.0,
     "momentum_score": 60.0,
     "volume_score": 0,
     "fundamental_score": 76.0,
     "risk_score": 100,
-    "catalyst_score": 65.0,
+    "catalyst_score": 80.0,
     "revenue_growth": 0.166,
     "eps_growth": 0.748,
     "roe": 0.24285,
     "forward_pe": 23.672806,
-    "relative_volume": 0.8086668520848843,
+    "relative_volume": 1.207900287509416,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.010610426959663632,
-      "weekly": -0.04373632053801835,
-      "monthly": -0.12366832304618325,
-      "annual": 0.12194187499508824
+      "daily": 0.005670378290686617,
+      "weekly": -0.048410712361907526,
+      "monthly": -0.12795199261739676,
+      "annual": 0.11645761783883324
     },
     "risk": {
-      "volatility": 0.020709353356513645,
-      "annualized_volatility": 0.3287507927657751,
+      "volatility": 0.020705788306793347,
+      "annualized_volatility": 0.32869419935594624,
       "maximum_drawdown": -0.30876638431876047,
-      "sharpe_ratio": 0.5276418993316345,
-      "sortino_ratio": 0.7780838546523996,
-      "calmar_ratio": 0.4113847527817575,
-      "beta": 1.3708234292025163,
-      "alpha": -0.07149915409263202,
-      "capm_expected_return": 0.24496184679434616,
-      "actual_return": 0.17346269270171413,
-      "market_return": 0.1786968631961988
+      "sharpe_ratio": 0.5201579720833511,
+      "sortino_ratio": 0.7669156829058819,
+      "calmar_ratio": 0.4023813280997325,
+      "beta": 1.3709283947823394,
+      "alpha": -0.07304718845000963,
+      "capm_expected_return": 0.24402009662255933,
+      "actual_return": 0.1709729081725497,
+      "market_return": 0.17799623784238716
     },
     "capm": {
-      "beta": 1.3708234292025163,
-      "alpha": -0.07149915409263202,
-      "capm_expected_return": 0.24496184679434616,
-      "actual_return": 0.17346269270171413,
-      "market_return": 0.1786968631961988,
-      "interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 24.50%; realized alpha is -7.15%, meaning negative alpha versus CAPM."
+      "beta": 1.3709283947823394,
+      "alpha": -0.07304718845000963,
+      "capm_expected_return": 0.24402009662255933,
+      "actual_return": 0.1709729081725497,
+      "market_return": 0.17799623784238716,
+      "interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 24.40%; realized alpha is -7.30%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.17346269270171413,
+      "actual_return": 0.1709729081725497,
       "components": {
-        "market_component": 0.24496184679434616,
-        "momentum_component": 0.03048546874877206,
-        "volatility_drag": -0.015750158553155025,
-        "alpha_component": -0.07149915409263202
+        "market_component": 0.24402009662255933,
+        "momentum_component": 0.02911440445970831,
+        "volatility_drag": -0.015738839871189247,
+        "alpha_component": -0.07304718845000963
       },
       "component_weights_pct": {
-        "market_component": 67.54,
-        "momentum_component": 8.41,
-        "volatility_drag": 4.34,
-        "alpha_component": 19.71
+        "market_component": 67.42,
+        "momentum_component": 8.04,
+        "volatility_drag": 4.35,
+        "alpha_component": 20.18
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 249.94150085449218,
-      "sma50": 257.0206002807617,
-      "sma200": 232.8355500793457,
-      "ema20": 246.91326275053058,
-      "ema50": 248.35424461004342,
-      "ema200": 234.12605664705393
+      "sma20": 249.88400115966797,
+      "sma50": 256.997600402832,
+      "sma200": 232.82980010986327,
+      "ema20": 246.803739522294,
+      "ema50": 248.3091468101813,
+      "ema200": 234.11461392171577
     },
     "momentum": {
-      "3m": 0.1195393318271083,
-      "6m": 0.0374845660870915,
-      "12m": 0.12194187499508824,
+      "3m": 0.11406681874142954,
+      "6m": 0.032413151709147936,
+      "12m": 0.11645761783883324,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 46199343.9,
-      "relative_volume": 0.8086668520848843,
+      "average_volume": 47180837.35,
+      "relative_volume": 1.207900287509416,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +449,5 @@
       }
     ]
   },
-  "report": "Ticker: AMZN\nRating: Hold | Score: 50.15/100 | Confidence: 40.48/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 199.33999633789062 | Resistance: 274.989990234375\nFundamental Outlook: Quality Compounder | Forward P/E: 23.672806\nNews/Catalyst: Do you really save money on Prime Day?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: AMZN\nRating: Hold | Score: 50.9/100 | Confidence: 42.66/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 199.33999633789062 | Resistance: 274.989990234375\nFundamental Outlook: Quality Compounder | Forward P/E: 23.672806\nNews/Catalyst: Do you really save money on Prime Day?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

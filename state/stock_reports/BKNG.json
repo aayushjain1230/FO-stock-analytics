@@ -1,13 +1,13 @@
 {
   "ticker": "BKNG",
-  "generated_at": "2026-06-23T19:53:58.395145",
+  "generated_at": "2026-06-23T21:27:16.012712",
   "score": {
-    "final_score": 51.65,
+    "final_score": 49.15,
     "rating": "Hold",
-    "confidence": 47.72,
+    "confidence": 45.97,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 43.0,
       "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 81.0,
@@ -15,27 +15,26 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
-        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 154.1300048828125,
       "resistance": 192.02999877929688,
-      "risk_reward": 1.41
+      "risk_reward": 1.56
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.0663640319255192,
-        "3m": -0.031810683431129694,
-        "6m": -0.20182210138681855,
-        "12m": -0.19265946319019067
+        "1m": 0.060650784122616264,
+        "3m": -0.03699794155319236,
+        "6m": -0.20609849105212175,
+        "12m": -0.19698488518778579
       },
-      "acceleration": 0.0691,
+      "acceleration": 0.0661,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,9 +42,9 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7829588.7,
-      "relative_volume": 0.48155454193909314,
-      "accumulation_days": 5,
+      "average_volume": 8099357.35,
+      "relative_volume": 1.1316634893261006,
+      "accumulation_days": 6,
       "distribution_days": 3,
       "evidence": [
         "Accumulation days exceed distribution days"
@@ -62,17 +61,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.0195851893400329,
-        "annualized_volatility": 0.3109052422430418,
-        "maximum_drawdown": -0.33353776634140586,
-        "sharpe_ratio": 0.286172697600144,
-        "sortino_ratio": 0.3955687729949631,
-        "calmar_ratio": 0.1243278828540345,
-        "beta": 0.9662095360580395,
-        "alpha": -0.08368602141310867,
-        "capm_expected_return": 0.17265861328382617,
-        "actual_return": 0.0889725918707175,
-        "market_return": 0.1786968631961988
+        "volatility": 0.01958000493109881,
+        "annualized_volatility": 0.31082294230263496,
+        "maximum_drawdown": -0.3335377663414062,
+        "sharpe_ratio": 0.2774532466189609,
+        "sortino_ratio": 0.3834143802303137,
+        "calmar_ratio": 0.11588506821439903,
+        "beta": 0.9666778510052186,
+        "alpha": -0.08582618621896854,
+        "capm_expected_return": 0.1720650206844926,
+        "actual_return": 0.08623883446552405,
+        "market_return": 0.17799623784238716
       },
       "evidence": []
     },
@@ -84,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "BKNG",
@@ -138,12 +137,12 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 53.23687896132508,
+    "rsi": 52.16954511827951,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.48155454193909314,
-    "price_above_sma50": true,
+    "relative_volume": 1.1316634893261006,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 154.1300048828125,
@@ -238,7 +237,7 @@
         "last_surprise_pct": 0.056700002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 32.27,
+      "analyst_upside_pct": 32.83,
       "eps_growth_implied": 62.32
     },
     "evidence": [
@@ -333,20 +332,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8007,
-    "probability_pct": 80.07,
+    "probability_of_outperformance": 0.7953,
+    "probability_pct": 79.53,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 51.65/100"
+      "Composite score 49.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 51.65,
-    "technical_score": 53.0,
+    "final_score": 49.15,
+    "technical_score": 43.0,
     "momentum_score": 20.0,
     "volume_score": 25.0,
     "fundamental_score": 81.0,
@@ -356,9 +355,9 @@
     "eps_growth": 2.4,
     "roe": null,
     "forward_pe": 13.616229,
-    "relative_volume": 0.48155454193909314,
+    "relative_volume": 1.1316634893261006,
     "breakout": false,
-    "price_above_sma50": true,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
@@ -366,66 +365,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0123979363300053,
-      "weekly": -0.02742781323221155,
-      "monthly": 0.0663640319255192,
-      "annual": -0.19265946319019067
+      "daily": 0.006973822132383178,
+      "weekly": -0.03263855341366917,
+      "monthly": 0.060650784122616264,
+      "annual": -0.19698488518778579
     },
     "risk": {
-      "volatility": 0.0195851893400329,
-      "annualized_volatility": 0.3109052422430418,
-      "maximum_drawdown": -0.33353776634140586,
-      "sharpe_ratio": 0.286172697600144,
-      "sortino_ratio": 0.3955687729949631,
-      "calmar_ratio": 0.1243278828540345,
-      "beta": 0.9662095360580395,
-      "alpha": -0.08368602141310867,
-      "capm_expected_return": 0.17265861328382617,
-      "actual_return": 0.0889725918707175,
-      "market_return": 0.1786968631961988
+      "volatility": 0.01958000493109881,
+      "annualized_volatility": 0.31082294230263496,
+      "maximum_drawdown": -0.3335377663414062,
+      "sharpe_ratio": 0.2774532466189609,
+      "sortino_ratio": 0.3834143802303137,
+      "calmar_ratio": 0.11588506821439903,
+      "beta": 0.9666778510052186,
+      "alpha": -0.08582618621896854,
+      "capm_expected_return": 0.1720650206844926,
+      "actual_return": 0.08623883446552405,
+      "market_return": 0.17799623784238716
     },
     "capm": {
-      "beta": 0.9662095360580395,
-      "alpha": -0.08368602141310867,
-      "capm_expected_return": 0.17265861328382617,
-      "actual_return": 0.0889725918707175,
-      "market_return": 0.1786968631961988,
-      "interpretation": "Beta 0.97: Moves roughly in line with the market. CAPM expected return is 17.27%; realized alpha is -8.37%, meaning negative alpha versus CAPM."
+      "beta": 0.9666778510052186,
+      "alpha": -0.08582618621896854,
+      "capm_expected_return": 0.1720650206844926,
+      "actual_return": 0.08623883446552405,
+      "market_return": 0.17799623784238716,
+      "interpretation": "Beta 0.97: Moves roughly in line with the market. CAPM expected return is 17.21%; realized alpha is -8.58%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.0889725918707175,
+      "actual_return": 0.08623883446552405,
       "components": {
-        "market_component": 0.17265861328382617,
+        "market_component": 0.1720650206844926,
         "momentum_component": 0.0,
-        "volatility_drag": -0.012181048448608357,
-        "alpha_component": -0.08368602141310867
+        "volatility_drag": -0.012164588460526994,
+        "alpha_component": -0.08582618621896854
       },
       "component_weights_pct": {
-        "market_component": 64.3,
+        "market_component": 63.71,
         "momentum_component": 0.0,
-        "volatility_drag": 4.54,
-        "alpha_component": 31.16
+        "volatility_drag": 4.5,
+        "alpha_component": 31.78
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 167.34928512573242,
-      "sma50": 168.89999267578125,
-      "sma200": 189.30349159240723,
-      "ema20": 167.55488477422432,
-      "ema50": 168.49743277777236,
-      "ema200": 183.02858655013864
+      "sma20": 167.30378494262695,
+      "sma50": 168.88179260253906,
+      "sma200": 189.2989415740967,
+      "ema20": 167.46821775878533,
+      "ema50": 168.4617463593223,
+      "ema200": 183.01953162411627
     },
     "momentum": {
-      "3m": -0.031810683431129694,
-      "6m": -0.20182210138681855,
-      "12m": -0.19265946319019067,
+      "3m": -0.03699794155319236,
+      "6m": -0.20609849105212175,
+      "12m": -0.19698488518778579,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 7829588.7,
-      "relative_volume": 0.48155454193909314,
+      "average_volume": 8099357.35,
+      "relative_volume": 1.1316634893261006,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -435,20 +434,13 @@
     }
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "Breakout",
-    "evidence": "Price reclaimed a major moving average",
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
     "date_of_change": "2026-06-23",
-    "strength": 75,
-    "invalidates": "Close back below the reclaimed moving average",
-    "triggers": [
-      {
-        "reason": "Breakout",
-        "evidence": "Price reclaimed a major moving average",
-        "strength": 75,
-        "invalidates": "Close back below the reclaimed moving average"
-      }
-    ]
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: BKNG\nRating: Hold | Score: 51.65/100 | Confidence: 47.72/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 154.1300048828125 | Resistance: 192.02999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 13.616229\nNews/Catalyst: Booking Holdings\u2019 (BKNG) Priceline Upgrades AI Assistant Penny With Anthropic\u2019s Claude Integration\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: BKNG\nRating: Hold | Score: 49.15/100 | Confidence: 45.97/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 154.1300048828125 | Resistance: 192.02999877929688\nFundamental Outlook: Quality Compounder | Forward P/E: 13.616229\nNews/Catalyst: Booking Holdings\u2019 (BKNG) Priceline Upgrades AI Assistant Penny With Anthropic\u2019s Claude Integration\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
