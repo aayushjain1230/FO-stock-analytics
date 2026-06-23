@@ -1,10 +1,10 @@
 {
   "ticker": "AMD",
-  "generated_at": "2026-06-23T15:46:34.383248",
+  "generated_at": "2026-06-23T17:47:51.393670",
   "score": {
-    "final_score": 54.15,
+    "final_score": 54.9,
     "rating": "Avoid",
-    "confidence": 35.77,
+    "confidence": 38.1,
     "risk_level": "High",
     "categories": {
       "technical": 73.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 61.0,
       "risk": 20.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 73.0,
@@ -26,17 +26,17 @@
       ],
       "support": 196.0399932861328,
       "resistance": 551.6300048828125,
-      "risk_reward": 0.1
+      "risk_reward": 0.09
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.15409595263153797,
-        "3m": 1.560045460171307,
-        "6m": 1.5806724431396466,
-        "12m": 3.0460852533638283
+        "1m": 0.1599902661964483,
+        "3m": 1.5731203788106698,
+        "6m": 1.5938527099567206,
+        "12m": 3.0667498221453995
       },
-      "acceleration": 0.7697,
+      "acceleration": 0.7762,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 30710951.2,
-      "relative_volume": 0.37214490445349674,
+      "average_volume": 30913171.55,
+      "relative_volume": 0.5005416857656587,
       "accumulation_days": 2,
       "distribution_days": 2,
       "evidence": []
@@ -66,17 +66,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.038546851588127436,
-        "annualized_volatility": 0.6119122987602021,
+        "volatility": 0.03853184619443405,
+        "annualized_volatility": 0.6116740955199782,
         "maximum_drawdown": -0.5748532494558936,
-        "sharpe_ratio": 1.2678111709754396,
-        "sortino_ratio": 2.0565077633010933,
-        "calmar_ratio": 1.4053796912435124,
-        "beta": 2.2272178287658098,
-        "alpha": 0.377136432124104,
-        "capm_expected_return": 0.3986528159013409,
-        "actual_return": 0.7757892480254449,
-        "market_return": 0.1789913904030888
+        "sharpe_ratio": 1.27226322665134,
+        "sortino_ratio": 2.065321361415657,
+        "calmar_ratio": 1.413464823582849,
+        "beta": 2.2258420595700876,
+        "alpha": 0.37656356728672763,
+        "capm_expected_return": 0.40164689113855984,
+        "actual_return": 0.7782104584252875,
+        "market_return": 0.18044716578683767
       },
       "evidence": [
         "Volatility is elevated",
@@ -86,10 +86,11 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -143,14 +144,15 @@
     "next_earnings_date": "1778011200",
     "eps_current_year": 2.98,
     "eps_forward": 13.10372,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.64009617400307,
+    "rsi": 49.997290309749914,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.37214490445349674,
+    "relative_volume": 0.5005416857656587,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -202,10 +204,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 0,
-    "bearish_news_score": 1,
+    "bearish_news_score": 3,
     "institutional_ownership": 0.72156996,
     "detail": {
       "earnings": {
@@ -246,12 +248,13 @@
         "last_surprise_pct": 0.0582,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -5.94,
+      "analyst_upside_pct": -6.42,
       "eps_growth_implied": 339.72
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -274,16 +277,6 @@
     "available": true,
     "items": [
       {
-        "headline": "Tech stocks live: Google and other tech stocks extend losses as AI worries creep back in",
-        "source": "Yahoo Finance",
-        "published": "2026-06-22T14:34:22Z",
-        "summary": "Memory giant Micron (MU) will report its third quarter earnings after the bell on Wednesday, providing another update on the broader AI build-out.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
         "headline": "Nvidia, Micron, AMD lead tech sell-off as AI trade cools",
         "source": "Yahoo Finance",
         "published": "2026-06-23T12:59:46Z",
@@ -294,34 +287,44 @@
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       },
       {
-        "headline": "Rise of the Managed Intelligence Provider: Pax8\u202fCPO Libby McIlhany, COO Craig Donovan, Live from Pax8 Beyond 2026",
-        "source": "Exec Edge",
-        "published": "2026-06-23T15:27:02Z",
-        "summary": "Watch Video Highlights Below, or Click HERE: Tech Edge hosted a fireside chat on June 9 at Pax8 Beyond 2026 in Salt Lake City with Libby McIlhany, Chief Product Officer and Craig Donovan, Chief Operating Officer, at Pax8. The in-person interview was joined by Editor-in-Chief John Jannarone and they discussed how AI is transforming the managed services industry, the company\u2019s [\u2026] The post Rise of the Managed Intelligence Provider: Pax8 CPO Libby McIlhany, COO Craig Donovan, Live from Pax8 Beyond",
+        "headline": "Tech stocks live: Google and other tech stocks extend losses as AI worries creep back in",
+        "source": "Yahoo Finance",
+        "published": "2026-06-22T14:34:22Z",
+        "summary": "Memory giant Micron (MU) will report its third quarter earnings after the bell on Wednesday, providing another update on the broader AI build-out.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "The June Tech Wreck Arrives\u2014and the Stock Market Is Shaking In Its Boots",
-        "source": "Barrons.com",
-        "published": "2026-06-23T15:12:00Z",
-        "summary": "Stocks could be facing the end-of-quarter reckoning many investors feared when Elon Musk\u2019s  SpaceX  unveiled plans for its multibillion-dollar initial public offering and Federal Reserve Chairman Kevin Warsh took over the central bank\u2019s policy reigns earlier this month.  The early signs of a late June \u201ctech wreck\u201d started to formulate Monday, with Google parent  Alphabet  shedding more than $225 billion in market value, its biggest slump in more than a year, and SpaceX extending its three-day decline to more than $600 billion.  Shares in SpaceX were falling 4.3% in premarket trading Tuesday, putting them below $150 a share.",
+        "headline": "Over 40 Analysts Rate AMD a Buy, Here\u2019s Why We Agree",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-23T17:28:08Z",
+        "summary": "I\u2019m opening with the headline number. Our 24/7 Wall St. price target for Advanced Micro Devices (NASDAQ:AMD) is $586.55 over the next 12 months, against a current quote of $551.63. That implies 6.33% of upside and a buy recommendation, with our model registering 90% confidence. The setup is unusual: a stock that has already run ... Over 40 Analysts Rate AMD a Buy, Here\u2019s Why We Agree",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Micron Earnings Have Never Looked Better. Start Worrying.",
-        "source": "Trefis",
-        "published": "2026-06-23T15:04:16Z",
-        "summary": "Micron Technology's stock has risen by almost 9x over the past twelve months, taking its market capitalization above $1.2 trillion - among the largest single-year gains in the company's four-decade trading history. The rally is driven by surging demand and a shortage of high-bandwidth memory that is used alongside AI accelerators in data centers. Hyperscalers, including Microsoft (MSFT), Alphabet (GOOG), and Meta (META), are projected to spend roughly $700 billion on AI infrastructure this year,",
+        "headline": "AMD and Intel Drop 5%, NVIDIA Slips 3% Amid Korean-Led Chip Selloff Bulls Say Is \u201cHealthy\u201d",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-23T17:23:22Z",
+        "summary": "Shares of Advanced Micro Devices (NASDAQ:AMD) and Intel (NASDAQ:INTC) are leading a sharp midday slide in chip stocks on Tuesday. AMD stock down 5% to $523 while Intel shares are down 5% to $134 amid a broad semiconductor selloff that\u2019s pulling the entire group lower. Meanwhile, NVIDIA (NASDAQ:NVDA) stock is down 3% to $202. The ... AMD and Intel Drop 5%, NVIDIA Slips 3% Amid Korean-Led Chip Selloff Bulls Say Is \u201cHealthy\u201d",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "AMD (AMD) Stock Sees Modest Fair Value Lift As AI Target Revisions Split Analysts",
+        "source": "Simply Wall St.",
+        "published": "2026-06-23T17:15:26Z",
+        "summary": "Advanced Micro Devices is back in the spotlight as analysts revisit their price targets, with some recent updates tying AMD to higher ranges such as US$560 to US$665. Those shifts sit against a backdrop of mixed views on how agentic AI, GPUs, and server CPUs could affect both valuation and execution risk, and how much recent share gains may already reflect AI optimism. As you read on, you will see how this evolving narrative may matter for your own view on AMD and its role in the AI build...",
+        "bullish_score": 0,
+        "bearish_score": 2,
+        "importance_score": 60,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -339,99 +342,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.764,
-    "probability_pct": 76.4,
+    "probability_of_outperformance": 0.7747,
+    "probability_pct": 77.47,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 54.15/100"
+      "Composite score 54.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 54.15,
+    "final_score": 54.9,
     "technical_score": 73.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 61.0,
     "risk_score": 20.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.378,
     "eps_growth": 0.912,
     "roe": 0.08063,
     "forward_pe": 39.578457,
-    "relative_volume": 0.37214490445349674,
+    "relative_volume": 0.5005416857656587,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.05938765019242287,
-      "weekly": -0.05187664755660859,
-      "monthly": 0.15409595263153797,
-      "annual": 3.0460852533638283
+      "daily": -0.05458366130384629,
+      "weekly": -0.04703429772878642,
+      "monthly": 0.1599902661964483,
+      "annual": 3.0667498221453995
     },
     "risk": {
-      "volatility": 0.038546851588127436,
-      "annualized_volatility": 0.6119122987602021,
+      "volatility": 0.03853184619443405,
+      "annualized_volatility": 0.6116740955199782,
       "maximum_drawdown": -0.5748532494558936,
-      "sharpe_ratio": 1.2678111709754396,
-      "sortino_ratio": 2.0565077633010933,
-      "calmar_ratio": 1.4053796912435124,
-      "beta": 2.2272178287658098,
-      "alpha": 0.377136432124104,
-      "capm_expected_return": 0.3986528159013409,
-      "actual_return": 0.7757892480254449,
-      "market_return": 0.1789913904030888
+      "sharpe_ratio": 1.27226322665134,
+      "sortino_ratio": 2.065321361415657,
+      "calmar_ratio": 1.413464823582849,
+      "beta": 2.2258420595700876,
+      "alpha": 0.37656356728672763,
+      "capm_expected_return": 0.40164689113855984,
+      "actual_return": 0.7782104584252875,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": 2.2272178287658098,
-      "alpha": 0.377136432124104,
-      "capm_expected_return": 0.3986528159013409,
-      "actual_return": 0.7757892480254449,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta 2.23: Moves roughly 123% more than the market. CAPM expected return is 39.87%; realized alpha is 37.71%, meaning positive alpha versus CAPM."
+      "beta": 2.2258420595700876,
+      "alpha": 0.37656356728672763,
+      "capm_expected_return": 0.40164689113855984,
+      "actual_return": 0.7782104584252875,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta 2.23: Moves roughly 123% more than the market. CAPM expected return is 40.16%; realized alpha is 37.66%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.7757892480254449,
+      "actual_return": 0.7782104584252875,
       "components": {
-        "market_component": 0.3986528159013409,
-        "momentum_component": 0.7615213133409571,
-        "volatility_drag": -0.07238245975204043,
-        "alpha_component": 0.377136432124104
+        "market_component": 0.40164689113855984,
+        "momentum_component": 0.7666874555363499,
+        "volatility_drag": -0.07233481910399564,
+        "alpha_component": 0.37656356728672763
       },
       "component_weights_pct": {
-        "market_component": 24.77,
-        "momentum_component": 47.31,
-        "volatility_drag": 4.5,
-        "alpha_component": 23.43
+        "market_component": 24.84,
+        "momentum_component": 47.41,
+        "volatility_drag": 4.47,
+        "alpha_component": 23.28
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 509.5275024414062,
-      "sma50": 422.8236013793945,
-      "sma200": 264.88315017700194,
-      "ema20": 499.0440737103436,
-      "ema50": 431.8555709379871,
-      "ema200": 290.41919186941965
+      "sma20": 509.6600036621094,
+      "sma50": 422.8766018676758,
+      "sma200": 264.89640029907224,
+      "ema20": 499.29645698787334,
+      "ema50": 431.95949346402875,
+      "ema200": 290.4455602715496
     },
     "momentum": {
-      "3m": 1.560045460171307,
-      "6m": 1.5806724431396466,
-      "12m": 3.0460852533638283,
+      "3m": 1.5731203788106698,
+      "6m": 1.5938527099567206,
+      "12m": 3.0667498221453995,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 30710951.2,
-      "relative_volume": 0.37214490445349674,
+      "average_volume": 30913171.55,
+      "relative_volume": 0.5005416857656587,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -449,5 +452,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMD\nRating: Avoid | Score: 54.15/100 | Confidence: 35.77/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 551.6300048828125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.578457\nNews/Catalyst: Tech stocks live: Google and other tech stocks extend losses as AI worries creep back in\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMD\nRating: Avoid | Score: 54.9/100 | Confidence: 38.1/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 551.6300048828125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.578457\nNews/Catalyst: Nvidia, Micron, AMD lead tech sell-off as AI trade cools\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,39 +1,40 @@
 {
   "ticker": "CDW",
-  "generated_at": "2026-06-23T15:47:14.602539",
+  "generated_at": "2026-06-23T17:48:16.591512",
   "score": {
-    "final_score": 38.75,
+    "final_score": 39.75,
     "rating": "Drop",
-    "confidence": 37.82,
+    "confidence": 35.65,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 30.0,
+      "technical": 38.0,
       "momentum": 35.0,
       "volume": 25.0,
       "fundamental": 50.0,
       "risk": 60.0,
-      "catalyst": 45.0
+      "catalyst": 25.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 38.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "EMA trend is positive",
         "Stock is not materially extended from SMA20"
       ],
       "support": 99.30000305175781,
       "resistance": 142.44000244140625,
-      "risk_reward": 0.46
+      "risk_reward": 0.38
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.21303532952057447,
-        "3m": 0.07897143064446976,
-        "6m": -0.08929850619461088,
-        "12m": -0.23000909136571857
+        "1m": 0.2288942748229459,
+        "3m": 0.09307765532316492,
+        "6m": -0.07739220402387703,
+        "12m": -0.2199424070687488
       },
-      "acceleration": 0.1236,
+      "acceleration": 0.1318,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -42,8 +43,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2176789.1,
-      "relative_volume": 0.27769433428346363,
+      "average_volume": 2201380.3,
+      "relative_volume": 0.49800845405948263,
       "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
@@ -60,17 +61,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.023259376695223943,
-        "annualized_volatility": 0.3692311583156036,
-        "maximum_drawdown": -0.5749838763813644,
-        "sharpe_ratio": -0.5670848949820994,
-        "sortino_ratio": -0.6713285738435227,
-        "calmar_ratio": -0.4237209775919941,
-        "beta": 0.9702729920087075,
-        "alpha": -0.3830559245477266,
-        "capm_expected_return": 0.17367051191020363,
-        "actual_return": -0.20938541263752294,
-        "market_return": 0.1789913904030888
+        "volatility": 0.023318804768016874,
+        "annualized_volatility": 0.37017454972463926,
+        "maximum_drawdown": -0.5749838763813646,
+        "sharpe_ratio": -0.5470738642298627,
+        "sortino_ratio": -0.6492938917168768,
+        "calmar_ratio": -0.4150811080340092,
+        "beta": 0.9711732215937403,
+        "alpha": -0.37775827668207074,
+        "capm_expected_return": 0.1752454553246629,
+        "actual_return": -0.20251282135740784,
+        "market_return": 0.18044716578683767
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -78,14 +79,13 @@
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 25.0,
       "evidence": [
-        "analyst revision",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; Momentum is accelerating"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "CDW",
@@ -135,14 +135,15 @@
     "next_earnings_date": "1778070600",
     "eps_current_year": 8.21,
     "eps_forward": 11.74457,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 36.02475022653004,
+    "rsi": 38.6897471114865,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.27769433428346363,
+    "relative_volume": 0.49800845405948263,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -191,13 +192,13 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 4,
-    "bearish_news_score": 0,
+    "bullish_news_score": 6,
+    "bearish_news_score": 1,
     "institutional_ownership": 1.04028,
     "detail": {
       "earnings": {
@@ -238,11 +239,10 @@
         "last_surprise_pct": -0.0026,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 10.51,
+      "analyst_upside_pct": 8.79,
       "eps_growth_implied": 43.05
     },
     "evidence": [
-      "analyst target/recommendation data is supportive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -265,6 +265,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "CDW Stock Jumps Nearly 6% \u2014 Why Morgan Stanley Is Growing More Optimistic On This IT Play",
+        "source": "Stocktwits",
+        "published": "2026-06-23T17:18:30Z",
+        "summary": "The Wall Street bank says concerns around AI disruption and weak software sales have created an attractive entry point in CDW.",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Morgan Stanley lifts server market TAM to $809B, boosts targets on compute stocks",
+        "source": "Investing.com",
+        "published": "2026-06-23T17:14:13Z",
+        "summary": "Investing.com -- Morgan Stanley has raised its server market total addressable market forecast to $809 billion for 2026, representing 82% year-over-year growth, as enterprise compute demand proves more resilient than expected despite significant price increases.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Morgan Stanley upgrades CDW on stronger AI-driven server demand",
         "source": "Investing.com",
@@ -294,26 +314,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "CDW (CDW): Buy, Sell, or Hold Post Q1 Earnings?",
-        "source": "StockStory",
-        "published": "2026-06-16T20:17:04Z",
-        "summary": "Over the past six months, CDW\u2019s stock price fell to $130.14. Shareholders have lost 10.3% of their capital, which is disappointing considering the S&P 500 has climbed by 9.3%. This may have investors wondering how to approach the situation.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Oppenheimer Picks Alphabet, Dumps Meta in Highest-Conviction Stock Picks",
-        "source": "GuruFocus.com",
-        "published": "2026-06-16T18:52:59Z",
-        "summary": "Top Bank Names Alphabet A Buy, Meta A Sell As Rally Continues",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -333,97 +333,96 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5142,
-    "probability_pct": 51.42,
+    "probability_of_outperformance": 0.4543,
+    "probability_pct": 45.43,
     "confidence": "High",
     "evidence": [
-      "Analyst data is supportive",
-      "Composite score 38.75/100"
+      "Composite score 39.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 38.75,
-    "technical_score": 30.0,
+    "final_score": 39.75,
+    "technical_score": 38.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 50.0,
     "risk_score": 60.0,
-    "catalyst_score": 45.0,
+    "catalyst_score": 25.0,
     "revenue_growth": 0.092,
     "eps_growth": 0.077,
     "roe": 0.44157,
     "forward_pe": 10.941227,
-    "relative_volume": 0.27769433428346363,
+    "relative_volume": 0.49800845405948263,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.043012016064885916,
-      "weekly": -0.018393057797339796,
-      "monthly": 0.21303532952057447,
-      "annual": -0.23000909136571857
+      "daily": 0.05664811561610561,
+      "weekly": -0.005559754078995005,
+      "monthly": 0.2288942748229459,
+      "annual": -0.2199424070687488
     },
     "risk": {
-      "volatility": 0.023259376695223943,
-      "annualized_volatility": 0.3692311583156036,
-      "maximum_drawdown": -0.5749838763813644,
-      "sharpe_ratio": -0.5670848949820994,
-      "sortino_ratio": -0.6713285738435227,
-      "calmar_ratio": -0.4237209775919941,
-      "beta": 0.9702729920087075,
-      "alpha": -0.3830559245477266,
-      "capm_expected_return": 0.17367051191020363,
-      "actual_return": -0.20938541263752294,
-      "market_return": 0.1789913904030888
+      "volatility": 0.023318804768016874,
+      "annualized_volatility": 0.37017454972463926,
+      "maximum_drawdown": -0.5749838763813646,
+      "sharpe_ratio": -0.5470738642298627,
+      "sortino_ratio": -0.6492938917168768,
+      "calmar_ratio": -0.4150811080340092,
+      "beta": 0.9711732215937403,
+      "alpha": -0.37775827668207074,
+      "capm_expected_return": 0.1752454553246629,
+      "actual_return": -0.20251282135740784,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": 0.9702729920087075,
-      "alpha": -0.3830559245477266,
-      "capm_expected_return": 0.17367051191020363,
-      "actual_return": -0.20938541263752294,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta 0.97: Moves roughly in line with the market. CAPM expected return is 17.37%; realized alpha is -38.31%, meaning negative alpha versus CAPM."
+      "beta": 0.9711732215937403,
+      "alpha": -0.37775827668207074,
+      "capm_expected_return": 0.1752454553246629,
+      "actual_return": -0.20251282135740784,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta 0.97: Moves roughly in line with the market. CAPM expected return is 17.52%; realized alpha is -37.78%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.20938541263752294,
+      "actual_return": -0.20251282135740784,
       "components": {
-        "market_component": 0.17367051191020363,
+        "market_component": 0.1752454553246629,
         "momentum_component": 0.0,
-        "volatility_drag": -0.02384623166312072,
-        "alpha_component": -0.3830559245477266
+        "volatility_drag": -0.02403490994492785,
+        "alpha_component": -0.37775827668207074
       },
       "component_weights_pct": {
-        "market_component": 29.91,
+        "market_component": 30.37,
         "momentum_component": 0.0,
-        "volatility_drag": 4.11,
-        "alpha_component": 65.98
+        "volatility_drag": 4.17,
+        "alpha_component": 65.46
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 129.12774925231935,
-      "sma50": 124.44541366577148,
-      "sma200": 134.74028579711913,
-      "ema20": 127.13163266929539,
-      "ema50": 124.81415346874849,
-      "ema200": 135.26136661588757
+      "sma20": 129.21199989318848,
+      "sma50": 124.47911392211914,
+      "sma200": 134.74871086120606,
+      "ema20": 127.2921100804747,
+      "ema50": 124.88023240272202,
+      "ema200": 135.2781328944737
     },
     "momentum": {
-      "3m": 0.07897143064446976,
-      "6m": -0.08929850619461088,
-      "12m": -0.23000909136571857,
+      "3m": 0.09307765532316492,
+      "6m": -0.07739220402387703,
+      "12m": -0.2199424070687488,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2176789.1,
-      "relative_volume": 0.27769433428346363,
+      "average_volume": 2201380.3,
+      "relative_volume": 0.49800845405948263,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -454,5 +453,5 @@
       }
     ]
   },
-  "report": "Ticker: CDW\nRating: Drop | Score: 38.75/100 | Confidence: 37.82/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 99.30000305175781 | Resistance: 142.44000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.941227\nNews/Catalyst: Morgan Stanley upgrades CDW on stronger AI-driven server demand\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: CDW\nRating: Drop | Score: 39.75/100 | Confidence: 35.65/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 99.30000305175781 | Resistance: 142.44000244140625\nFundamental Outlook: Fundamentally Average | Forward P/E: 10.941227\nNews/Catalyst: CDW Stock Jumps Nearly 6% \u2014 Why Morgan Stanley Is Growing More Optimistic On This IT Play\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

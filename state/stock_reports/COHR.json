@@ -1,13 +1,13 @@
 {
   "ticker": "COHR",
-  "generated_at": "2026-06-23T15:47:28.455999",
+  "generated_at": "2026-06-23T17:48:25.639337",
   "score": {
-    "final_score": 53.45,
+    "final_score": 55.45,
     "rating": "Avoid",
-    "confidence": 43.67,
+    "confidence": 44.7,
     "risk_level": "High",
     "categories": {
-      "technical": 65.0,
+      "technical": 73.0,
       "momentum": 75.0,
       "volume": 25.0,
       "fundamental": 63.0,
@@ -15,8 +15,9 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 73.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -25,17 +26,17 @@
       ],
       "support": 219.64999389648438,
       "resistance": 426.8900146484375,
-      "risk_reward": 0.25
+      "risk_reward": 0.22
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": 0.019272496460606803,
-        "3m": 0.5106253638582499,
-        "6m": 1.1927322801229074,
-        "12m": 3.744889385989688
+        "1m": 0.02973542390046302,
+        "3m": 0.5261320744049776,
+        "6m": 1.2152408819164644,
+        "12m": 3.793596119005781
       },
-      "acceleration": -0.0857,
+      "acceleration": -0.0815,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 6145469.05,
-      "relative_volume": 0.424618687161072,
+      "average_volume": 6181501.55,
+      "relative_volume": 0.5387252551930526,
       "accumulation_days": 4,
       "distribution_days": 3,
       "evidence": [
@@ -64,17 +65,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.045958728546511805,
-        "annualized_volatility": 0.7295721978407714,
+        "volatility": 0.04592050813832468,
+        "annualized_volatility": 0.7289654676703483,
         "maximum_drawdown": -0.5484734570005422,
-        "sharpe_ratio": 1.5289177132858867,
-        "sortino_ratio": 2.1048539532179587,
-        "calmar_ratio": 2.4302370344149984,
-        "beta": 2.6552647802754326,
-        "alpha": 0.6401863214898188,
-        "capm_expected_return": 0.4752695349098518,
-        "actual_return": 1.1154558563996706,
-        "market_return": 0.1789913904030888
+        "sharpe_ratio": 1.53661697790337,
+        "sortino_ratio": 2.1184283155293966,
+        "calmar_ratio": 2.4521871289997104,
+        "beta": 2.651739313433171,
+        "alpha": 0.6416418704129769,
+        "capm_expected_return": 0.4784988435145505,
+        "actual_return": 1.1201407139275275,
+        "market_return": 0.18044716578683767
       },
       "evidence": [
         "Volatility is elevated",
@@ -91,7 +92,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "COHR",
@@ -141,14 +142,15 @@
     "next_earnings_date": "1778097600",
     "eps_current_year": 2.08,
     "eps_forward": 8.17679,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 43.32878933923984,
+    "rsi": 43.88540332817686,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.424618687161072,
+    "relative_volume": 0.5387252551930526,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -244,7 +246,7 @@
         "last_surprise_pct": 0.0112,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -0.23,
+      "analyst_upside_pct": -1.23,
       "eps_growth_implied": 293.11
     },
     "evidence": [
@@ -339,18 +341,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6326,
-    "probability_pct": 63.26,
+    "probability_of_outperformance": 0.6532,
+    "probability_pct": 65.32,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
-      "Composite score 53.45/100"
+      "Composite score 55.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 53.45,
-    "technical_score": 65.0,
+    "final_score": 55.45,
+    "technical_score": 73.0,
     "momentum_score": 75.0,
     "volume_score": 25.0,
     "fundamental_score": 63.0,
@@ -360,7 +362,7 @@
     "eps_growth": null,
     "roe": 0.04718,
     "forward_pe": 47.124237,
-    "relative_volume": 0.424618687161072,
+    "relative_volume": 0.5387252551930526,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +372,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.09446979008729584,
-      "weekly": -0.06900007956811105,
-      "monthly": 0.019272496460606803,
-      "annual": 3.744889385989688
+      "daily": -0.08517443784948486,
+      "weekly": -0.05944327837135954,
+      "monthly": 0.02973542390046302,
+      "annual": 3.793596119005781
     },
     "risk": {
-      "volatility": 0.045958728546511805,
-      "annualized_volatility": 0.7295721978407714,
+      "volatility": 0.04592050813832468,
+      "annualized_volatility": 0.7289654676703483,
       "maximum_drawdown": -0.5484734570005422,
-      "sharpe_ratio": 1.5289177132858867,
-      "sortino_ratio": 2.1048539532179587,
-      "calmar_ratio": 2.4302370344149984,
-      "beta": 2.6552647802754326,
-      "alpha": 0.6401863214898188,
-      "capm_expected_return": 0.4752695349098518,
-      "actual_return": 1.1154558563996706,
-      "market_return": 0.1789913904030888
+      "sharpe_ratio": 1.53661697790337,
+      "sortino_ratio": 2.1184283155293966,
+      "calmar_ratio": 2.4521871289997104,
+      "beta": 2.651739313433171,
+      "alpha": 0.6416418704129769,
+      "capm_expected_return": 0.4784988435145505,
+      "actual_return": 1.1201407139275275,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": 2.6552647802754326,
-      "alpha": 0.6401863214898188,
-      "capm_expected_return": 0.4752695349098518,
-      "actual_return": 1.1154558563996706,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta 2.66: Moves roughly 166% more than the market. CAPM expected return is 47.53%; realized alpha is 64.02%, meaning positive alpha versus CAPM."
+      "beta": 2.651739313433171,
+      "alpha": 0.6416418704129769,
+      "capm_expected_return": 0.4784988435145505,
+      "actual_return": 1.1201407139275275,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta 2.65: Moves roughly 165% more than the market. CAPM expected return is 47.85%; realized alpha is 64.16%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.1154558563996706,
+      "actual_return": 1.1201407139275275,
       "components": {
-        "market_component": 0.4752695349098518,
-        "momentum_component": 0.936222346497422,
-        "volatility_drag": -0.09591443956815429,
-        "alpha_component": 0.6401863214898188
+        "market_component": 0.4784988435145505,
+        "momentum_component": 0.9483990297514453,
+        "volatility_drag": -0.09579309353406967,
+        "alpha_component": 0.6416418704129769
       },
       "component_weights_pct": {
-        "market_component": 22.13,
-        "momentum_component": 43.59,
-        "volatility_drag": 4.47,
-        "alpha_component": 29.81
+        "market_component": 22.11,
+        "momentum_component": 43.82,
+        "volatility_drag": 4.43,
+        "alpha_component": 29.65
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 387.1572494506836,
-      "sma50": 361.61930114746093,
-      "sma200": 227.03502525329588,
-      "ema20": 384.52960927671353,
-      "ema50": 356.9816334969505,
-      "ema200": 251.83229153707597
+      "sma20": 387.35499877929686,
+      "sma50": 361.6984008789062,
+      "sma200": 227.05480018615722,
+      "ema20": 384.9062746645484,
+      "ema50": 357.1367310095884,
+      "ema200": 251.87164463729752
     },
     "momentum": {
-      "3m": 0.5106253638582499,
-      "6m": 1.1927322801229074,
-      "12m": 3.744889385989688,
+      "3m": 0.5261320744049776,
+      "6m": 1.2152408819164644,
+      "12m": 3.793596119005781,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 6145469.05,
-      "relative_volume": 0.424618687161072,
+      "average_volume": 6181501.55,
+      "relative_volume": 0.5387252551930526,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -447,5 +449,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: COHR\nRating: Avoid | Score: 53.45/100 | Confidence: 43.67/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 219.64999389648438 | Resistance: 426.8900146484375\nFundamental Outlook: Fundamentally Average | Forward P/E: 47.124237\nNews/Catalyst: 2 Reasons to Like COHR (and 1 Not So Much)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COHR\nRating: Avoid | Score: 55.45/100 | Confidence: 44.7/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 219.64999389648438 | Resistance: 426.8900146484375\nFundamental Outlook: Fundamentally Average | Forward P/E: 47.124237\nNews/Catalyst: 2 Reasons to Like COHR (and 1 Not So Much)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "COR",
-  "generated_at": "2026-06-23T15:47:31.537808",
+  "generated_at": "2026-06-23T17:48:27.313045",
   "score": {
-    "final_score": 37.7,
+    "final_score": 39.45,
     "rating": "Drop",
-    "confidence": 30.58,
+    "confidence": 31.79,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 36.0,
+      "technical": 43.0,
       "momentum": 10.0,
       "volume": 0,
       "fundamental": 53.0,
@@ -15,33 +15,34 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 36.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 252.74000549316406,
       "resistance": 327.55999755859375,
-      "risk_reward": 1.46
+      "risk_reward": 1.68
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": 0.06662521622940987,
-        "3m": -0.11488381504858936,
-        "6m": -0.1653563283537779,
-        "12m": -0.028596157142379952
+        "1m": 0.05745143274187514,
+        "3m": -0.12249648360218046,
+        "6m": -0.17253489512345432,
+        "12m": -0.03695086397136582
       },
-      "acceleration": -0.0322,
+      "acceleration": -0.0362,
       "evidence": [
         "1m return is positive"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 1496376.85,
-      "relative_volume": 0.35140679969754945,
+      "average_volume": 1513536.9,
+      "relative_volume": 0.5741769493693877,
       "accumulation_days": 1,
       "distribution_days": 3,
       "evidence": []
@@ -57,17 +58,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01637678346299932,
-        "annualized_volatility": 0.25997337790950814,
-        "maximum_drawdown": -0.3244224428918434,
-        "sharpe_ratio": 0.49088895104578395,
-        "sortino_ratio": 0.524731685647039,
-        "calmar_ratio": 0.2995816000682476,
-        "beta": -0.007060723046129024,
-        "alpha": 0.12888186741710542,
-        "capm_expected_return": -0.0012638086352777665,
-        "actual_return": 0.12761805878182764,
-        "market_return": 0.1789913904030888
+        "volatility": 0.01633424463664396,
+        "annualized_volatility": 0.2592980949759031,
+        "maximum_drawdown": -0.3244224428918424,
+        "sharpe_ratio": 0.4747199421265837,
+        "sortino_ratio": 0.506130008799189,
+        "calmar_ratio": 0.28488993178053573,
+        "beta": -0.003246240825313186,
+        "alpha": 0.12367975159688341,
+        "capm_expected_return": -0.0005857749563892892,
+        "actual_return": 0.12309397664049412,
+        "market_return": 0.18044716578683767
       },
       "evidence": []
     },
@@ -80,7 +81,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; eps growth is strong; Debt-to-equity is elevated"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "COR",
@@ -130,14 +131,15 @@
     "next_earnings_date": "1778070600",
     "eps_current_year": 13.05,
     "eps_forward": 19.78564,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 71.0438344290243,
+    "rsi": 69.32447496454122,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.35140679969754945,
+    "relative_volume": 0.5741769493693877,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -233,7 +235,7 @@
         "last_surprise_pct": 0.0047999998,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 23.78,
+      "analyst_upside_pct": 24.93,
       "eps_growth_implied": 51.61
     },
     "evidence": [
@@ -336,13 +338,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 37.7/100"
+      "Composite score 39.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 37.7,
-    "technical_score": 36.0,
+    "final_score": 39.45,
+    "technical_score": 43.0,
     "momentum_score": 10.0,
     "volume_score": 0,
     "fundamental_score": 53.0,
@@ -352,7 +354,7 @@
     "eps_growth": 1.283,
     "roe": 1.0713401,
     "forward_pe": 14.315432,
-    "relative_volume": 0.35140679969754945,
+    "relative_volume": 0.5741769493693877,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -362,69 +364,69 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.04366337833236189,
-      "weekly": 0.00602283824869887,
-      "monthly": 0.06662521622940987,
-      "annual": -0.028596157142379952
+      "daily": 0.03468708401547338,
+      "weekly": -0.002629718958071292,
+      "monthly": 0.05745143274187514,
+      "annual": -0.03695086397136582
     },
     "risk": {
-      "volatility": 0.01637678346299932,
-      "annualized_volatility": 0.25997337790950814,
-      "maximum_drawdown": -0.3244224428918434,
-      "sharpe_ratio": 0.49088895104578395,
-      "sortino_ratio": 0.524731685647039,
-      "calmar_ratio": 0.2995816000682476,
-      "beta": -0.007060723046129024,
-      "alpha": 0.12888186741710542,
-      "capm_expected_return": -0.0012638086352777665,
-      "actual_return": 0.12761805878182764,
-      "market_return": 0.1789913904030888
+      "volatility": 0.01633424463664396,
+      "annualized_volatility": 0.2592980949759031,
+      "maximum_drawdown": -0.3244224428918424,
+      "sharpe_ratio": 0.4747199421265837,
+      "sortino_ratio": 0.506130008799189,
+      "calmar_ratio": 0.28488993178053573,
+      "beta": -0.003246240825313186,
+      "alpha": 0.12367975159688341,
+      "capm_expected_return": -0.0005857749563892892,
+      "actual_return": 0.12309397664049412,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": -0.007060723046129024,
-      "alpha": 0.12888186741710542,
-      "capm_expected_return": -0.0012638086352777665,
-      "actual_return": 0.12761805878182764,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta -0.01: Moves roughly 101% less than the market. CAPM expected return is -0.13%; realized alpha is 12.89%, meaning positive alpha versus CAPM."
+      "beta": -0.003246240825313186,
+      "alpha": 0.12367975159688341,
+      "capm_expected_return": -0.0005857749563892892,
+      "actual_return": 0.12309397664049412,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta -0.00: Moves roughly 100% less than the market. CAPM expected return is -0.06%; realized alpha is 12.37%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.12761805878182764,
+      "actual_return": 0.12309397664049412,
       "components": {
-        "market_component": -0.0012638086352777665,
+        "market_component": -0.0005857749563892892,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0019946755819016285,
-        "alpha_component": 0.12888186741710542
+        "volatility_drag": -0.0018596189951806232,
+        "alpha_component": 0.12367975159688341
       },
       "component_weights_pct": {
-        "market_component": 0.96,
+        "market_component": 0.46,
         "momentum_component": 0.0,
-        "volatility_drag": 1.51,
-        "alpha_component": 97.53
+        "volatility_drag": 1.47,
+        "alpha_component": 98.06
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 273.8822494506836,
-      "sma50": 283.67933563232424,
-      "sma200": 323.5599520111084,
-      "ema20": 276.09908472800015,
-      "ema50": 285.697264882456,
-      "ema200": 307.9451720104033
+      "sma20": 273.7604949951172,
+      "sma50": 283.63063385009764,
+      "sma200": 323.5477770233154,
+      "ema20": 275.86717147930204,
+      "ema50": 285.601771191539,
+      "ema200": 307.9209424887632
     },
     "momentum": {
-      "3m": -0.11488381504858936,
-      "6m": -0.1653563283537779,
-      "12m": -0.028596157142379952,
+      "3m": -0.12249648360218046,
+      "6m": -0.17253489512345432,
+      "12m": -0.03695086397136582,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 1496376.85,
-      "relative_volume": 0.35140679969754945,
+      "average_volume": 1513536.9,
+      "relative_volume": 0.5741769493693877,
       "volume_spike": false
     },
-    "volatility_regime": "High volatility",
+    "volatility_regime": "Normal volatility",
     "quant_score": {
       "score": 28,
       "label": "High risk / weak setup"
@@ -439,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: COR\nRating: Drop | Score: 37.7/100 | Confidence: 30.58/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 252.74000549316406 | Resistance: 327.55999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.315432\nNews/Catalyst: Amgen vs. NovoCure: Which Health Care Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: COR\nRating: Drop | Score: 39.45/100 | Confidence: 31.79/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 252.74000549316406 | Resistance: 327.55999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.315432\nNews/Catalyst: Amgen vs. NovoCure: Which Health Care Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

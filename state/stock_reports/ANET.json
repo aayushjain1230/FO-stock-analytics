@@ -1,13 +1,13 @@
 {
   "ticker": "ANET",
-  "generated_at": "2026-06-23T15:46:38.587129",
+  "generated_at": "2026-06-23T17:47:53.748588",
   "score": {
-    "final_score": 70.65,
+    "final_score": 72.65,
     "rating": "Watch",
-    "confidence": 65.79,
+    "confidence": 67.03,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 75.0,
+      "technical": 83.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 86.0,
@@ -15,8 +15,9 @@
       "catalyst": 100
     },
     "technical": {
-      "score": 75.0,
+      "score": 83.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +27,17 @@
       ],
       "support": 116.12999725341797,
       "resistance": 177.72999572753906,
-      "risk_reward": 0.37
+      "risk_reward": 0.28
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.08442693638956844,
-        "3m": 0.18586244271778019,
-        "6m": 0.2930106801113468,
-        "12m": 0.8682318203691124
+        "1m": 0.10660203733951779,
+        "3m": 0.21011176602172799,
+        "6m": 0.31945104358691,
+        "12m": 0.9064346976902173
       },
-      "acceleration": 0.0394,
+      "acceleration": 0.0504,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +49,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 8246638.1,
-      "relative_volume": 0.39003312149711045,
+      "average_volume": 8299394.85,
+      "relative_volume": 0.5146877666628911,
       "accumulation_days": 3,
       "distribution_days": 0,
       "evidence": [
@@ -67,17 +68,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.033914278836251976,
-        "annualized_volatility": 0.5383724861689426,
+        "volatility": 0.03383676362123871,
+        "annualized_volatility": 0.5371419702784498,
         "maximum_drawdown": -0.5041596124253696,
-        "sharpe_ratio": 0.9024599357991909,
-        "sortino_ratio": 1.147604296436058,
-        "calmar_ratio": 0.7993363315311963,
-        "beta": 1.7918488077242398,
-        "alpha": 0.16513408981739608,
-        "capm_expected_return": 0.3207255094866786,
-        "actual_return": 0.4858595993040747,
-        "market_return": 0.1789913904030888
+        "sharpe_ratio": 0.9222387027405351,
+        "sortino_ratio": 1.1761643923866003,
+        "calmar_ratio": 0.8278726265301409,
+        "beta": 1.7865601119240089,
+        "alpha": 0.1729934051525897,
+        "capm_expected_return": 0.3223797087045029,
+        "actual_return": 0.4953731138570926,
+        "market_return": 0.18044716578683767
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -95,7 +96,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "ANET",
@@ -145,14 +146,15 @@
     "next_earnings_date": "1778011200",
     "eps_current_year": 2.92,
     "eps_forward": 4.45434,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 40.19343190036702,
+    "rsi": 42.110589992505346,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.39003312149711045,
+    "relative_volume": 0.5146877666628911,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -248,7 +250,7 @@
         "last_surprise_pct": 0.0773,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 17.96,
+      "analyst_upside_pct": 15.62,
       "eps_growth_implied": 52.55
     },
     "evidence": [
@@ -346,21 +348,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8913,
-    "probability_pct": 89.13,
+    "probability_of_outperformance": 0.8997,
+    "probability_pct": 89.97,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 70.65/100"
+      "Composite score 72.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 70.65,
-    "technical_score": 75.0,
+    "final_score": 72.65,
+    "technical_score": 83.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
@@ -370,7 +372,7 @@
     "eps_growth": 0.25,
     "roe": 0.31520998,
     "forward_pe": 36.17708,
-    "relative_volume": 0.39003312149711045,
+    "relative_volume": 0.5146877666628911,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -380,66 +382,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.07690767208708005,
-      "weekly": -0.04704596370774239,
-      "monthly": 0.08442693638956844,
-      "annual": 0.8682318203691124
+      "daily": -0.05803165114855258,
+      "weekly": -0.027559310207786236,
+      "monthly": 0.10660203733951779,
+      "annual": 0.9064346976902173
     },
     "risk": {
-      "volatility": 0.033914278836251976,
-      "annualized_volatility": 0.5383724861689426,
+      "volatility": 0.03383676362123871,
+      "annualized_volatility": 0.5371419702784498,
       "maximum_drawdown": -0.5041596124253696,
-      "sharpe_ratio": 0.9024599357991909,
-      "sortino_ratio": 1.147604296436058,
-      "calmar_ratio": 0.7993363315311963,
-      "beta": 1.7918488077242398,
-      "alpha": 0.16513408981739608,
-      "capm_expected_return": 0.3207255094866786,
-      "actual_return": 0.4858595993040747,
-      "market_return": 0.1789913904030888
+      "sharpe_ratio": 0.9222387027405351,
+      "sortino_ratio": 1.1761643923866003,
+      "calmar_ratio": 0.8278726265301409,
+      "beta": 1.7865601119240089,
+      "alpha": 0.1729934051525897,
+      "capm_expected_return": 0.3223797087045029,
+      "actual_return": 0.4953731138570926,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": 1.7918488077242398,
-      "alpha": 0.16513408981739608,
-      "capm_expected_return": 0.3207255094866786,
-      "actual_return": 0.4858595993040747,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta 1.79: Moves roughly 79% more than the market. CAPM expected return is 32.07%; realized alpha is 16.51%, meaning positive alpha versus CAPM."
+      "beta": 1.7865601119240089,
+      "alpha": 0.1729934051525897,
+      "capm_expected_return": 0.3223797087045029,
+      "actual_return": 0.4953731138570926,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta 1.79: Moves roughly 79% more than the market. CAPM expected return is 32.24%; realized alpha is 17.30%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.4858595993040747,
+      "actual_return": 0.4953731138570926,
       "components": {
-        "market_component": 0.3207255094866786,
-        "momentum_component": 0.2170579550922781,
-        "volatility_drag": -0.05767449723378853,
-        "alpha_component": 0.16513408981739608
+        "market_component": 0.3223797087045029,
+        "momentum_component": 0.22660867442255433,
+        "volatility_drag": -0.05742839405568996,
+        "alpha_component": 0.1729934051525897
       },
       "component_weights_pct": {
-        "market_component": 42.17,
-        "momentum_component": 28.54,
-        "volatility_drag": 7.58,
-        "alpha_component": 21.71
+        "market_component": 41.36,
+        "momentum_component": 29.07,
+        "volatility_drag": 7.37,
+        "alpha_component": 22.2
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 162.75374755859374,
-      "sma50": 159.38089874267578,
-      "sma200": 142.45387439727784,
-      "ema20": 162.03396391407745,
-      "ema50": 156.36997029867874,
-      "ema200": 140.49650432169324
+      "sma20": 162.91849746704102,
+      "sma50": 159.4467987060547,
+      "sma200": 142.47034938812257,
+      "ema20": 162.3477732635008,
+      "ema50": 156.4991859131472,
+      "ema200": 140.52929037312552
     },
     "momentum": {
-      "3m": 0.18586244271778019,
-      "6m": 0.2930106801113468,
-      "12m": 0.8682318203691124,
+      "3m": 0.21011176602172799,
+      "6m": 0.31945104358691,
+      "12m": 0.9064346976902173,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 8246638.1,
-      "relative_volume": 0.39003312149711045,
+      "average_volume": 8299394.85,
+      "relative_volume": 0.5146877666628911,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -457,5 +459,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ANET\nRating: Watch | Score: 70.65/100 | Confidence: 65.79/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 36.17708\nNews/Catalyst: Wall Street Analysts Think Arista Networks (ANET) Is a Good Investment: Is It?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ANET\nRating: Watch | Score: 72.65/100 | Confidence: 67.03/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 36.17708\nNews/Catalyst: Wall Street Analysts Think Arista Networks (ANET) Is a Good Investment: Is It?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

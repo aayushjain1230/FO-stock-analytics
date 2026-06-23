@@ -1,10 +1,10 @@
 {
   "ticker": "CAT",
-  "generated_at": "2026-06-23T15:47:10.284615",
+  "generated_at": "2026-06-23T17:48:13.245789",
   "score": {
-    "final_score": 69.65,
+    "final_score": 70.4,
     "rating": "Watch",
-    "confidence": 50.66,
+    "confidence": 53.31,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 71.0,
       "risk": 85.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 90.0,
@@ -28,17 +28,17 @@
       ],
       "support": 667.4299926757812,
       "resistance": 1022.280029296875,
-      "risk_reward": 0.12
+      "risk_reward": 0.1
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.13701710457455296,
-        "3m": 0.4058350611038599,
-        "6m": 0.7474905062578103,
-        "12m": 1.7606124873085847
+        "1m": 0.14338006974338735,
+        "3m": 0.41370238296818407,
+        "6m": 0.7572697973339526,
+        "12m": 1.7760614027476946
       },
-      "acceleration": 0.0321,
+      "acceleration": 0.0351,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -50,8 +50,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3050380.1,
-      "relative_volume": 0.512526947051615,
+      "average_volume": 3088941.15,
+      "relative_volume": 0.7558004140027077,
       "accumulation_days": 6,
       "distribution_days": 6,
       "evidence": []
@@ -68,27 +68,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.02108753303070943,
-        "annualized_volatility": 0.334754208978704,
-        "maximum_drawdown": -0.34047146968067465,
-        "sharpe_ratio": 1.853515567997183,
-        "sortino_ratio": 3.0101505894003227,
-        "calmar_ratio": 2.2279441259530497,
-        "beta": 1.2545506685700472,
-        "alpha": 0.3959183692961328,
-        "capm_expected_return": 0.22455376849847739,
-        "actual_return": 0.6204721377946102,
-        "market_return": 0.1789913904030888
+        "volatility": 0.0210687581201114,
+        "annualized_volatility": 0.33445616651272486,
+        "maximum_drawdown": -0.3404714442727049,
+        "sharpe_ratio": 1.8632894368274455,
+        "sortino_ratio": 3.0319967929607463,
+        "calmar_ratio": 2.242492047354195,
+        "beta": 1.2530772840166458,
+        "alpha": 0.3970743977322895,
+        "capm_expected_return": 0.22611424441267194,
+        "actual_return": 0.6231886421449614,
+        "market_return": 0.18044716578683767
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -142,14 +143,15 @@
     "next_earnings_date": "1785846600",
     "eps_current_year": 20.04,
     "eps_forward": 30.11224,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 60.94989349098467,
+    "rsi": 61.949400774746714,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.512526947051615,
+    "relative_volume": 0.7558004140027077,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -201,9 +203,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.72877,
     "detail": {
@@ -245,12 +247,13 @@
         "last_surprise_pct": 0.19299999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -3.56,
+      "analyst_upside_pct": -4.0,
       "eps_growth_implied": 50.26
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -283,6 +286,16 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
+        "headline": "CAT's Record Backlog: A Sign of Sustained Demand Strength?",
+        "source": "Zacks",
+        "published": "2026-06-23T14:46:00Z",
+        "summary": "Caterpillar's record $63B backlog jumps 79% year over year, boosting revenue visibility and supporting a stronger 2026 sales growth outlook.",
+        "bullish_score": 3,
+        "bearish_score": 0,
+        "importance_score": 75,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "BHP and partners test electric haul trucks at Pilbara mining site",
         "source": "Mining Technology",
         "published": "2026-06-23T13:40:05Z",
@@ -311,16 +324,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Chevron and Microsoft sign power deal for data centre in Texas, US",
-        "source": "Power Technology",
-        "published": "2026-06-23T08:34:12Z",
-        "summary": "Project Kilby is set to deliver approximately 2.67GW of capacity and will be built using a phased, modular approach.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -340,99 +343,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8887,
-    "probability_pct": 88.87,
+    "probability_of_outperformance": 0.8945,
+    "probability_pct": 89.45,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 69.65/100"
+      "Composite score 70.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 69.65,
+    "final_score": 70.4,
     "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 71.0,
     "risk_score": 85.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.222,
     "eps_growth": 0.302,
     "roe": 0.51331,
     "forward_pe": 32.701817,
-    "relative_volume": 0.512526947051615,
+    "relative_volume": 0.7558004140027077,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.036858837726541416,
-      "weekly": 0.054254583649233634,
-      "monthly": 0.13701710457455296,
-      "annual": 1.7606124873085847
+      "daily": -0.031468915584156654,
+      "weekly": 0.060154393922847715,
+      "monthly": 0.14338006974338735,
+      "annual": 1.7760614027476946
     },
     "risk": {
-      "volatility": 0.02108753303070943,
-      "annualized_volatility": 0.334754208978704,
-      "maximum_drawdown": -0.34047146968067465,
-      "sharpe_ratio": 1.853515567997183,
-      "sortino_ratio": 3.0101505894003227,
-      "calmar_ratio": 2.2279441259530497,
-      "beta": 1.2545506685700472,
-      "alpha": 0.3959183692961328,
-      "capm_expected_return": 0.22455376849847739,
-      "actual_return": 0.6204721377946102,
-      "market_return": 0.1789913904030888
+      "volatility": 0.0210687581201114,
+      "annualized_volatility": 0.33445616651272486,
+      "maximum_drawdown": -0.3404714442727049,
+      "sharpe_ratio": 1.8632894368274455,
+      "sortino_ratio": 3.0319967929607463,
+      "calmar_ratio": 2.242492047354195,
+      "beta": 1.2530772840166458,
+      "alpha": 0.3970743977322895,
+      "capm_expected_return": 0.22611424441267194,
+      "actual_return": 0.6231886421449614,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": 1.2545506685700472,
-      "alpha": 0.3959183692961328,
-      "capm_expected_return": 0.22455376849847739,
-      "actual_return": 0.6204721377946102,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta 1.25: Moves roughly 25% more than the market. CAPM expected return is 22.46%; realized alpha is 39.59%, meaning positive alpha versus CAPM."
+      "beta": 1.2530772840166458,
+      "alpha": 0.3970743977322895,
+      "capm_expected_return": 0.22611424441267194,
+      "actual_return": 0.6231886421449614,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta 1.25: Moves roughly 25% more than the market. CAPM expected return is 22.61%; realized alpha is 39.71%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.6204721377946102,
+      "actual_return": 0.6231886421449614,
       "components": {
-        "market_component": 0.22455376849847739,
-        "momentum_component": 0.44015312182714617,
-        "volatility_drag": -0.0169508417957408,
-        "alpha_component": 0.3959183692961328
+        "market_component": 0.22611424441267194,
+        "momentum_component": 0.44401535068692366,
+        "volatility_drag": -0.016891233302544974,
+        "alpha_component": 0.3970743977322895
       },
       "component_weights_pct": {
-        "market_component": 20.84,
-        "momentum_component": 40.85,
-        "volatility_drag": 1.57,
-        "alpha_component": 36.74
+        "market_component": 20.86,
+        "momentum_component": 40.96,
+        "volatility_drag": 1.56,
+        "alpha_component": 36.63
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 922.5419982910156,
-      "sma50": 881.3756909179688,
-      "sma200": 674.5027166748047,
-      "ema20": 930.6506552558462,
-      "ema50": 879.0800803042841,
-      "ema200": 702.8450020473186
+      "sma20": 922.8174987792969,
+      "sma50": 881.4858911132812,
+      "sma200": 674.5302645874024,
+      "ema20": 931.1754180905974,
+      "ema50": 879.2961590430106,
+      "ema200": 702.8998269387505
     },
     "momentum": {
-      "3m": 0.4058350611038599,
-      "6m": 0.7474905062578103,
-      "12m": 1.7606124873085847,
+      "3m": 0.41370238296818407,
+      "6m": 0.7572697973339526,
+      "12m": 1.7760614027476946,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3050380.1,
-      "relative_volume": 0.512526947051615,
+      "average_volume": 3088941.15,
+      "relative_volume": 0.7558004140027077,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -450,5 +453,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CAT\nRating: Watch | Score: 69.65/100 | Confidence: 50.66/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 667.4299926757812 | Resistance: 1022.280029296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 32.701817\nNews/Catalyst: Chevron's Microsoft Power Deal Highlights 'Underappreciated' Fuel Cost Economics, UBS Securities Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CAT\nRating: Watch | Score: 70.4/100 | Confidence: 53.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 667.4299926757812 | Resistance: 1022.280029296875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 32.701817\nNews/Catalyst: Chevron's Microsoft Power Deal Highlights 'Underappreciated' Fuel Cost Economics, UBS Securities Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

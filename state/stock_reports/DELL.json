@@ -1,10 +1,10 @@
 {
   "ticker": "DELL",
-  "generated_at": "2026-06-23T15:47:45.244302",
+  "generated_at": "2026-06-23T17:48:35.688847",
   "score": {
-    "final_score": 61.15,
+    "final_score": 61.9,
     "rating": "Avoid",
-    "confidence": 53.09,
+    "confidence": 54.9,
     "risk_level": "High",
     "categories": {
       "technical": 73.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 71.0,
       "risk": 20.0,
-      "catalyst": 85.0
+      "catalyst": 100
     },
     "technical": {
       "score": 73.0,
@@ -26,17 +26,17 @@
       ],
       "support": 164.1300048828125,
       "resistance": 465.9599914550781,
-      "risk_reward": 0.17
+      "risk_reward": 0.13
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.6717166940264558,
-        "3m": 1.575597551560461,
-        "6m": 2.463251753091755,
-        "12m": 2.59416823268205
+        "1m": 0.7030854562797371,
+        "3m": 1.6239270965986434,
+        "6m": 2.528237597436189,
+        "12m": 2.6616106463351348
       },
-      "acceleration": 0.344,
+      "acceleration": 0.3598,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 12558463.85,
-      "relative_volume": 0.21597203546514968,
+      "average_volume": 12621638.1,
+      "relative_volume": 0.3149957215141512,
       "accumulation_days": 6,
       "distribution_days": 3,
       "evidence": [
@@ -67,17 +67,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.037961090489738766,
-        "annualized_volatility": 0.6026136295960074,
-        "maximum_drawdown": -0.5038513708107009,
-        "sharpe_ratio": 1.2580038388559904,
-        "sortino_ratio": 2.063372715836986,
-        "calmar_ratio": 1.5673687158378897,
-        "beta": 1.8688808789609146,
-        "alpha": 0.42357667235575835,
-        "capm_expected_return": 0.33451358702296086,
-        "actual_return": 0.7580902593787192,
-        "market_return": 0.1789913904030888
+        "volatility": 0.03797684044115382,
+        "annualized_volatility": 0.6028636523236409,
+        "maximum_drawdown": -0.5038514243877468,
+        "sharpe_ratio": 1.2733153501004968,
+        "sortino_ratio": 2.089353133967976,
+        "calmar_ratio": 1.6008064038098124,
+        "beta": 1.8679913882234482,
+        "alpha": 0.4305617908021994,
+        "capm_expected_return": 0.3370737517191416,
+        "actual_return": 0.767635542521341,
+        "market_return": 0.18044716578683767
       },
       "evidence": [
         "Volatility is elevated",
@@ -87,12 +87,13 @@
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 100,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -146,14 +147,15 @@
     "next_earnings_date": "1788465600",
     "eps_current_year": 12.56,
     "eps_forward": 21.40284,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 46.094227189060675,
+    "rsi": 48.60125861041693,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.21597203546514968,
+    "relative_volume": 0.3149957215141512,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -205,7 +207,7 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 4,
     "bearish_news_score": 0,
@@ -249,7 +251,7 @@
         "last_surprise_pct": 0.6399,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 14.64,
+      "analyst_upside_pct": 12.59,
       "eps_growth_implied": 70.4
     },
     "evidence": [
@@ -257,6 +259,7 @@
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -278,6 +281,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Morgan Stanley lifts server market TAM to $809B, boosts targets on compute stocks",
+        "source": "Investing.com",
+        "published": "2026-06-23T17:14:13Z",
+        "summary": "Investing.com -- Morgan Stanley has raised its server market total addressable market forecast to $809 billion for 2026, representing 82% year-over-year growth, as enterprise compute demand proves more resilient than expected despite significant price increases.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Tim Cook issues chilling warning as \u2018hundred-year-flood\u2019 strikes US tech giants like Apple, Dell, HP. Get protection now",
+        "source": "Moneywise",
+        "published": "2026-06-23T15:50:00Z",
+        "summary": "Keep your head above water, if you can.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Who Will Be the Next Trillionaire After Musk? Here\u2019s What the Prediction Markets Say.",
         "source": "Entrepreneur",
@@ -307,26 +330,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Semtech and onsemi Shares Are Soaring, What You Need To Know",
-        "source": "StockStory",
-        "published": "2026-06-23T00:43:19Z",
-        "summary": "A number of stocks jumped in the afternoon session after the Philadelphia Semiconductor Index hit a fresh record high even as the broader Nasdaq slipped as NVIDIA unveiled its next-generation Vera Rubin platform at the ISC High Performance 2026 conference in Hamburg, which set off a chain reaction across the chip and AI-server supply chain.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Why Intel (INTC) Stock Is Trading Up Today",
-        "source": "StockStory",
-        "published": "2026-06-23T00:19:19Z",
-        "summary": "Shares of computer processor maker Intel (NASDAQ:INTC) jumped 5.3% in the afternoon session after the Philadelphia Semiconductor Index hit a fresh record high even as the broader Nasdaq slipped as NVIDIA unveiled its next-generation Vera Rubin platform at the ISC High Performance 2026 conference in Hamburg, which set off a chain reaction across the chip and AI-server supply chain.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -346,100 +349,100 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8302,
-    "probability_pct": 83.02,
+    "probability_of_outperformance": 0.8385,
+    "probability_pct": 83.85,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 61.15/100"
+      "Composite score 61.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.15,
+    "final_score": 61.9,
     "technical_score": 73.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 71.0,
     "risk_score": 20.0,
-    "catalyst_score": 85.0,
+    "catalyst_score": 100,
     "revenue_growth": 0.875,
     "eps_growth": 2.825,
     "roe": null,
     "forward_pe": 19.770275,
-    "relative_volume": 0.21597203546514968,
+    "relative_volume": 0.3149957215141512,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.00931430817528689,
-      "weekly": 0.033099415222129114,
-      "monthly": 0.6717166940264558,
-      "annual": 2.59416823268205
+      "daily": 0.028253486497259672,
+      "weekly": 0.05248490682839657,
+      "monthly": 0.7030854562797371,
+      "annual": 2.6616106463351348
     },
     "risk": {
-      "volatility": 0.037961090489738766,
-      "annualized_volatility": 0.6026136295960074,
-      "maximum_drawdown": -0.5038513708107009,
-      "sharpe_ratio": 1.2580038388559904,
-      "sortino_ratio": 2.063372715836986,
-      "calmar_ratio": 1.5673687158378897,
-      "beta": 1.8688808789609146,
-      "alpha": 0.42357667235575835,
-      "capm_expected_return": 0.33451358702296086,
-      "actual_return": 0.7580902593787192,
-      "market_return": 0.1789913904030888
+      "volatility": 0.03797684044115382,
+      "annualized_volatility": 0.6028636523236409,
+      "maximum_drawdown": -0.5038514243877468,
+      "sharpe_ratio": 1.2733153501004968,
+      "sortino_ratio": 2.089353133967976,
+      "calmar_ratio": 1.6008064038098124,
+      "beta": 1.8679913882234482,
+      "alpha": 0.4305617908021994,
+      "capm_expected_return": 0.3370737517191416,
+      "actual_return": 0.767635542521341,
+      "market_return": 0.18044716578683767
     },
     "capm": {
-      "beta": 1.8688808789609146,
-      "alpha": 0.42357667235575835,
-      "capm_expected_return": 0.33451358702296086,
-      "actual_return": 0.7580902593787192,
-      "market_return": 0.1789913904030888,
-      "interpretation": "Beta 1.87: Moves roughly 87% more than the market. CAPM expected return is 33.45%; realized alpha is 42.36%, meaning positive alpha versus CAPM."
+      "beta": 1.8679913882234482,
+      "alpha": 0.4305617908021994,
+      "capm_expected_return": 0.3370737517191416,
+      "actual_return": 0.767635542521341,
+      "market_return": 0.18044716578683767,
+      "interpretation": "Beta 1.87: Moves roughly 87% more than the market. CAPM expected return is 33.71%; realized alpha is 43.06%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.7580902593787192,
+      "actual_return": 0.767635542521341,
       "components": {
-        "market_component": 0.33451358702296086,
-        "momentum_component": 0.6485420581705125,
-        "volatility_drag": -0.07052272591920149,
-        "alpha_component": 0.42357667235575835
+        "market_component": 0.3370737517191416,
+        "momentum_component": 0.6654026615837837,
+        "volatility_drag": -0.07057273046472819,
+        "alpha_component": 0.4305617908021994
       },
       "component_weights_pct": {
-        "market_component": 22.65,
-        "momentum_component": 43.9,
-        "volatility_drag": 4.77,
-        "alpha_component": 28.68
+        "market_component": 22.42,
+        "momentum_component": 44.25,
+        "volatility_drag": 4.69,
+        "alpha_component": 28.64
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 395.4919967651367,
-      "sma50": 291.9023321533203,
-      "sma200": 175.87378818511962,
-      "ema20": 381.33770372399204,
-      "ema50": 312.8577854838079,
-      "ema200": 201.03153233881704
+      "sma20": 395.8884979248047,
+      "sma50": 292.0609326171875,
+      "sma200": 175.91343830108642,
+      "ema20": 382.0929440281215,
+      "ema50": 313.16876678550733,
+      "ema200": 201.1104381327837
     },
     "momentum": {
-      "3m": 1.575597551560461,
-      "6m": 2.463251753091755,
-      "12m": 2.59416823268205,
+      "3m": 1.6239270965986434,
+      "6m": 2.528237597436189,
+      "12m": 2.6616106463351348,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 12558463.85,
-      "relative_volume": 0.21597203546514968,
+      "average_volume": 12621638.1,
+      "relative_volume": 0.3149957215141512,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -457,5 +460,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DELL\nRating: Avoid | Score: 61.15/100 | Confidence: 53.09/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 164.1300048828125 | Resistance: 465.9599914550781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.770275\nNews/Catalyst: Who Will Be the Next Trillionaire After Musk? Here\u2019s What the Prediction Markets Say.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DELL\nRating: Avoid | Score: 61.9/100 | Confidence: 54.9/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 164.1300048828125 | Resistance: 465.9599914550781\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.770275\nNews/Catalyst: Morgan Stanley lifts server market TAM to $809B, boosts targets on compute stocks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
