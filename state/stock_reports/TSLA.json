@@ -1,10 +1,10 @@
 {
   "ticker": "TSLA",
-  "generated_at": "2026-06-23T17:48:47.033628",
+  "generated_at": "2026-06-23T19:54:41.136960",
   "score": {
-    "final_score": 34.45,
+    "final_score": 36.2,
     "rating": "Drop",
-    "confidence": 30.87,
+    "confidence": 36.07,
     "risk_level": "High",
     "categories": {
       "technical": 20.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 53.0,
       "risk": 35.0,
-      "catalyst": 25.0
+      "catalyst": 60.0
     },
     "technical": {
       "score": 20.0,
@@ -22,17 +22,17 @@
       ],
       "support": 343.25,
       "resistance": 445.2699890136719,
-      "risk_reward": 1.51
+      "risk_reward": 1.68
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": -0.08129711792390781,
-        "3m": 0.00795588481223053,
-        "6m": -0.20582574681793142,
-        "12m": 0.1915818243081373
+        "1m": -0.08757927650152364,
+        "3m": 0.0010634075694009315,
+        "6m": -0.2112563693772891,
+        "12m": 0.18343369924555764
       },
-      "acceleration": 0.1109,
+      "acceleration": 0.1067,
       "evidence": [
         "3m return is positive",
         "12m return is positive",
@@ -41,8 +41,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 46396835.0,
-      "relative_volume": 0.6447788949397087,
+      "average_volume": 46948845.45,
+      "relative_volume": 0.8701749448452091,
       "accumulation_days": 4,
       "distribution_days": 3,
       "evidence": [
@@ -60,17 +60,17 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.038591990173899304,
-        "annualized_volatility": 0.6126288515951153,
+        "volatility": 0.038611409884569625,
+        "annualized_volatility": 0.6129371299449143,
         "maximum_drawdown": -0.5376568011858518,
-        "sharpe_ratio": 0.9137512109555438,
-        "sortino_ratio": 1.4900041803640947,
-        "calmar_ratio": 0.8450133017019553,
-        "beta": 2.2988462322666066,
-        "alpha": 0.14497006781908117,
-        "capm_expected_return": 0.4148202871922595,
-        "actual_return": 0.5597903550113407,
-        "market_return": 0.18044716578683767
+        "sharpe_ratio": 0.9079627653469975,
+        "sortino_ratio": 1.4792742966840966,
+        "calmar_ratio": 0.8356751761407596,
+        "beta": 2.3003493647994513,
+        "alpha": 0.1454588757436059,
+        "capm_expected_return": 0.41106521574503035,
+        "actual_return": 0.5565240914886362,
+        "market_return": 0.1786968631961988
       },
       "evidence": [
         "Volatility is elevated",
@@ -79,9 +79,11 @@
       ]
     },
     "catalyst": {
-      "score": 25.0,
+      "score": 60.0,
       "evidence": [
+        "analyst revision",
         "insider buying",
+        "major news",
         "guidance change"
       ]
     },
@@ -139,11 +141,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 36.907110424655926,
+    "rsi": 36.28144486751965,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6447788949397087,
+    "relative_volume": 0.8701749448452091,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -192,13 +194,13 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 0,
-    "bearish_news_score": 0,
+    "bearish_news_score": 3,
     "institutional_ownership": 0.44929,
     "detail": {
       "earnings": {
@@ -239,11 +241,13 @@
         "last_surprise_pct": 0.1715,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 9.73,
+      "analyst_upside_pct": 10.3,
       "eps_growth_implied": 129.35
     },
     "evidence": [
+      "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -269,7 +273,7 @@
         "headline": "Tesla pushes back as fatal Texas crash reignites self-driving scrutiny",
         "source": "Yahoo Finance",
         "published": "2026-06-23T17:31:30Z",
-        "summary": "Tesla disputed claims that its driver-assistance software caused a fatal crash in Texas, after a Model 3 left the road, plowed through a brick house at high speed and killed a woman inside.",
+        "summary": "Tesla disputed claims that its driver-assistance software caused a fatal crash in Texas after a Model 3 left the road, plowed through a brick house at high speed, and killed a woman inside.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -286,34 +290,34 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Tesla Locks In a Major European Megapack Deal With NatPower",
-        "source": "GuruFocus.com",
-        "published": "2026-06-23T17:09:40Z",
-        "summary": "The multiyear agreement covers 25 GWh of battery storage across Italy and Britain",
+        "headline": "Why Tesla (TSLA) Shares Are Trading Lower Today",
+        "source": "StockStory",
+        "published": "2026-06-23T19:36:46Z",
+        "summary": "Shares of electric vehicle pioneer Tesla (NASDAQ:TSLA) fell 4.8% in the morning session after sentiment weakened following a fresh federal safety probe into its driver-assistance software as the broad tech/AI selloff continued to weigh on the Magnificent Seven.",
+        "bullish_score": 0,
+        "bearish_score": 2,
+        "importance_score": 60,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Tech selloff drags global stocks lower",
+        "source": "Reuters",
+        "published": "2026-06-23T19:36:00Z",
+        "summary": "By Amanda Cooper and Chibuike Oguh NEW YORK/LONDON, June 23 (Reuters) - Global stocks fell on Tuesday, dragged by a broad selloff in technology and semiconductor shares as investors kept taking",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Micron, Sandisk, SpaceX, Tesla, Carnival, and More Stocks That Explain Today\u2019s Market",
-        "source": "Barrons.com",
-        "published": "2026-06-23T16:59:00Z",
-        "summary": "FEATURE  Tech stocks fell Tuesday and the dropped 1.4% as investors rotated out of some of the sector\u2019s high-flying names amid concerns over higher interest rates and mega-cap hyperscalers\u2019 aggressive artificial-intelligence spending plans.",
+        "headline": "Tesla stock tumbles amid new probe over fatal crash into Texas home",
+        "source": "TheStreet",
+        "published": "2026-06-23T19:13:00Z",
+        "summary": "Automotive execs tout automated driver assistance systems like Ford BlueCruise, General Motors Super Cruise, and Tesla Full Self-Driving (Supervised) as the ultimate key to unlocking safer roads. There were more than 40,000 motor vehicle-related deaths in 2023, according to the Insurance Institute ...",
         "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Tesla Stunning Europe Rebound Sparks Fresh EV Battle With BYD",
-        "source": "GuruFocus.com",
-        "published": "2026-06-23T16:15:17Z",
-        "summary": "BYD Overtakes Expectations as Tesla Roars Back in Europe's Growing EV Market",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -331,96 +335,97 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.3974,
-    "probability_pct": 39.74,
+    "probability_of_outperformance": 0.4709,
+    "probability_pct": 47.09,
     "confidence": "High",
     "evidence": [
-      "Composite score 34.45/100"
+      "Analyst data is supportive",
+      "Composite score 36.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 34.45,
+    "final_score": 36.2,
     "technical_score": 20.0,
     "momentum_score": 45.0,
     "volume_score": 25.0,
     "fundamental_score": 53.0,
     "risk_score": 35.0,
-    "catalyst_score": 25.0,
+    "catalyst_score": 60.0,
     "revenue_growth": 0.158,
     "eps_growth": 0.083,
     "roe": 0.04901,
     "forward_pe": 153.03506,
-    "relative_volume": 0.6447788949397087,
+    "relative_volume": 0.8701749448452091,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
-    "analyst_revision": false,
-    "major_news": false
+    "analyst_revision": true,
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.05226511183349736,
-      "weekly": -0.06632613260001086,
-      "monthly": -0.08129711792390781,
-      "annual": 0.1915818243081373
+      "daily": -0.058745793426164594,
+      "weekly": -0.07271066388778435,
+      "monthly": -0.08757927650152364,
+      "annual": 0.18343369924555764
     },
     "risk": {
-      "volatility": 0.038591990173899304,
-      "annualized_volatility": 0.6126288515951153,
+      "volatility": 0.038611409884569625,
+      "annualized_volatility": 0.6129371299449143,
       "maximum_drawdown": -0.5376568011858518,
-      "sharpe_ratio": 0.9137512109555438,
-      "sortino_ratio": 1.4900041803640947,
-      "calmar_ratio": 0.8450133017019553,
-      "beta": 2.2988462322666066,
-      "alpha": 0.14497006781908117,
-      "capm_expected_return": 0.4148202871922595,
-      "actual_return": 0.5597903550113407,
-      "market_return": 0.18044716578683767
+      "sharpe_ratio": 0.9079627653469975,
+      "sortino_ratio": 1.4792742966840966,
+      "calmar_ratio": 0.8356751761407596,
+      "beta": 2.3003493647994513,
+      "alpha": 0.1454588757436059,
+      "capm_expected_return": 0.41106521574503035,
+      "actual_return": 0.5565240914886362,
+      "market_return": 0.1786968631961988
     },
     "capm": {
-      "beta": 2.2988462322666066,
-      "alpha": 0.14497006781908117,
-      "capm_expected_return": 0.4148202871922595,
-      "actual_return": 0.5597903550113407,
-      "market_return": 0.18044716578683767,
-      "interpretation": "Beta 2.30: Moves roughly 130% more than the market. CAPM expected return is 41.48%; realized alpha is 14.50%, meaning positive alpha versus CAPM."
+      "beta": 2.3003493647994513,
+      "alpha": 0.1454588757436059,
+      "capm_expected_return": 0.41106521574503035,
+      "actual_return": 0.5565240914886362,
+      "market_return": 0.1786968631961988,
+      "interpretation": "Beta 2.30: Moves roughly 130% more than the market. CAPM expected return is 41.11%; realized alpha is 14.55%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.5597903550113407,
+      "actual_return": 0.5565240914886362,
       "components": {
-        "market_component": 0.4148202871922595,
-        "momentum_component": 0.047895456077034326,
-        "volatility_drag": -0.07252577031902306,
-        "alpha_component": 0.14497006781908117
+        "market_component": 0.41106521574503035,
+        "momentum_component": 0.04585842481138941,
+        "volatility_drag": -0.07258742598898286,
+        "alpha_component": 0.1454588757436059
       },
       "component_weights_pct": {
-        "market_component": 60.98,
-        "momentum_component": 7.04,
-        "volatility_drag": 10.66,
-        "alpha_component": 21.31
+        "market_component": 60.9,
+        "momentum_component": 6.79,
+        "volatility_drag": 10.75,
+        "alpha_component": 21.55
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 410.9509994506836,
-      "sma50": 404.3746008300781,
-      "sma200": 417.54530029296876,
-      "ema20": 405.1172870186317,
-      "ema50": 404.94695727244056,
-      "ema200": 396.7411310760019
+      "sma20": 410.8197494506836,
+      "sma50": 404.3221008300781,
+      "sma200": 417.53217529296876,
+      "ema20": 404.8672870186317,
+      "ema50": 404.84401609596995,
+      "ema200": 396.7150116730168
     },
     "momentum": {
-      "3m": 0.00795588481223053,
-      "6m": -0.20582574681793142,
-      "12m": 0.1915818243081373,
+      "3m": 0.0010634075694009315,
+      "6m": -0.2112563693772891,
+      "12m": 0.18343369924555764,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 46396835.0,
-      "relative_volume": 0.6447788949397087,
+      "average_volume": 46948845.45,
+      "relative_volume": 0.8701749448452091,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -438,5 +443,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: TSLA\nRating: Drop | Score: 34.45/100 | Confidence: 30.87/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, valuation is demanding, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 343.25 | Resistance: 445.2699890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 153.03506\nNews/Catalyst: Tesla pushes back as fatal Texas crash reignites self-driving scrutiny\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: TSLA\nRating: Drop | Score: 36.2/100 | Confidence: 36.07/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, valuation is demanding, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 343.25 | Resistance: 445.2699890136719\nFundamental Outlook: Fundamentally Average | Forward P/E: 153.03506\nNews/Catalyst: Tesla pushes back as fatal Texas crash reignites self-driving scrutiny\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

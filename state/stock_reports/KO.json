@@ -1,22 +1,23 @@
 {
   "ticker": "KO",
-  "generated_at": "2026-06-23T17:48:42.532912",
+  "generated_at": "2026-06-23T19:54:36.392021",
   "score": {
-    "final_score": 59.65,
+    "final_score": 62.15,
     "rating": "Hold",
-    "confidence": 48.11,
+    "confidence": 50.78,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 72.0,
+      "technical": 80.0,
       "momentum": 50.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 70.0
+      "catalyst": 80.0
     },
     "technical": {
-      "score": 72.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +27,17 @@
       ],
       "support": 74.62999725341797,
       "resistance": 83.58999633789062,
-      "risk_reward": 0.66
+      "risk_reward": 0.6
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": -0.007623122611063571,
-        "3m": 0.07244339281707157,
-        "6m": 0.15271604576060782,
-        "12m": 0.1955425354963447
+        "1m": -0.005075081367513445,
+        "3m": 0.07519701400528445,
+        "6m": 0.1556757761751537,
+        "12m": 0.19861209122438495
       },
-      "acceleration": -0.0039,
+      "acceleration": -0.0026,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 18477761.55,
-      "relative_volume": 0.420701987032623,
+      "average_volume": 18620824.0,
+      "relative_volume": 0.5707631413088916,
       "accumulation_days": 5,
       "distribution_days": 7,
       "evidence": []
@@ -62,32 +63,33 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01062970183386703,
-        "annualized_volatility": 0.16874128537907626,
-        "maximum_drawdown": -0.1550297779417611,
-        "sharpe_ratio": 0.9228771618302861,
-        "sortino_ratio": 1.5951969292895172,
-        "calmar_ratio": 0.9806184600516833,
-        "beta": -0.017336051933170744,
-        "alpha": 0.15885571997151032,
-        "capm_expected_return": -0.003128241437274089,
-        "actual_return": 0.15572747853423624,
-        "market_return": 0.18044716578683767
+        "volatility": 0.010633119691232103,
+        "annualized_volatility": 0.16879554218270432,
+        "maximum_drawdown": -0.15502977794176154,
+        "sharpe_ratio": 0.9302955189947284,
+        "sortino_ratio": 1.608537426322435,
+        "calmar_ratio": 0.9902283890724933,
+        "beta": -0.018285662043749214,
+        "alpha": 0.16029732696753923,
+        "capm_expected_return": -0.003267590448683778,
+        "actual_return": 0.15702973651885546,
+        "market_return": 0.1786968631961988
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 70.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
         "sector strength",
-        "major news"
+        "major news",
+        "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "KO",
@@ -141,11 +143,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 55.76696401680531,
+    "rsi": 56.40305837794491,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.420701987032623,
+    "relative_volume": 0.5707631413088916,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -198,8 +200,8 @@
     "insider_buying": true,
     "sector_strength": true,
     "major_news": true,
-    "guidance_change": false,
-    "bullish_news_score": 2,
+    "guidance_change": true,
+    "bullish_news_score": 3,
     "bearish_news_score": 1,
     "institutional_ownership": 0.68273,
     "detail": {
@@ -241,14 +243,15 @@
         "last_surprise_pct": 0.0588,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.43,
+      "analyst_upside_pct": 7.17,
       "eps_growth_implied": 9.54
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance"
+      "recent news item has elevated importance",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -269,16 +272,6 @@
   "news": {
     "available": true,
     "items": [
-      {
-        "headline": "Abbvie acquiring Apogee for $10.9B, Coca-Cola vs. IRS in appeals court",
-        "source": "Yahoo Finance Video",
-        "published": "2026-06-22T19:47:19Z",
-        "summary": "Yahoo Finance Senior Reporter Brooke DiPalma joins Josh Lipton in highlighting the day's biggest stories and stock moves, including AbbVie's (ABBV) $10.9 billion acquisition of Apogee Therapeutics (APGE) and Coca-Cola's (KO) latest legal showdown with the IRS in US appeals court.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
       {
         "headline": "67 With $1.5 Million. Here Are My 3 Defensive Anchors",
         "source": "24/7 Wall St.",
@@ -318,6 +311,16 @@
         "bearish_score": 0,
         "importance_score": 60,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Coca-Cola (KO) Heads To Appeals Court In $20 Billion IRS Tax Fight",
+        "source": "Simply Wall St.",
+        "published": "2026-06-23T11:12:24Z",
+        "summary": "Coca-Cola is preparing for a pivotal federal appeals court hearing in a long-running $20 billion IRS tax dispute. The case centers on transfer pricing between the US parent and foreign subsidiaries. The outcome could have major financial implications for Coca-Cola and may influence how other multinationals handle profit allocation. Coca-Cola, traded as NYSE:KO, heads into this legal test with its stock at $79.53 and medium to long term returns of 15.1% year to date and 69.9% over five...",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -337,29 +340,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7989,
-    "probability_pct": 79.89,
+    "probability_of_outperformance": 0.8189,
+    "probability_pct": 81.89,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 59.65/100"
+      "Composite score 62.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.65,
-    "technical_score": 72.0,
+    "final_score": 62.15,
+    "technical_score": 80.0,
     "momentum_score": 50.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
-    "catalyst_score": 70.0,
+    "catalyst_score": 80.0,
     "revenue_growth": 0.121,
     "eps_growth": 0.182,
     "roe": 0.43372002,
     "forward_pe": 23.0084,
-    "relative_volume": 0.420701987032623,
+    "relative_volume": 0.5707631413088916,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -369,66 +372,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.006343535150471702,
-      "weekly": -0.010820708199387519,
-      "monthly": -0.007623122611063571,
-      "annual": 0.1955425354963447
+      "daily": 0.00892743738677737,
+      "weekly": -0.008280877122906483,
+      "monthly": -0.005075081367513445,
+      "annual": 0.19861209122438495
     },
     "risk": {
-      "volatility": 0.01062970183386703,
-      "annualized_volatility": 0.16874128537907626,
-      "maximum_drawdown": -0.1550297779417611,
-      "sharpe_ratio": 0.9228771618302861,
-      "sortino_ratio": 1.5951969292895172,
-      "calmar_ratio": 0.9806184600516833,
-      "beta": -0.017336051933170744,
-      "alpha": 0.15885571997151032,
-      "capm_expected_return": -0.003128241437274089,
-      "actual_return": 0.15572747853423624,
-      "market_return": 0.18044716578683767
+      "volatility": 0.010633119691232103,
+      "annualized_volatility": 0.16879554218270432,
+      "maximum_drawdown": -0.15502977794176154,
+      "sharpe_ratio": 0.9302955189947284,
+      "sortino_ratio": 1.608537426322435,
+      "calmar_ratio": 0.9902283890724933,
+      "beta": -0.018285662043749214,
+      "alpha": 0.16029732696753923,
+      "capm_expected_return": -0.003267590448683778,
+      "actual_return": 0.15702973651885546,
+      "market_return": 0.1786968631961988
     },
     "capm": {
-      "beta": -0.017336051933170744,
-      "alpha": 0.15885571997151032,
-      "capm_expected_return": -0.003128241437274089,
-      "actual_return": 0.15572747853423624,
-      "market_return": 0.18044716578683767,
-      "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.31%; realized alpha is 15.89%, meaning positive alpha versus CAPM."
+      "beta": -0.018285662043749214,
+      "alpha": 0.16029732696753923,
+      "capm_expected_return": -0.003267590448683778,
+      "actual_return": 0.15702973651885546,
+      "market_return": 0.1786968631961988,
+      "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.33%; realized alpha is 16.03%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.15572747853423624,
+      "actual_return": 0.15702973651885546,
       "components": {
-        "market_component": -0.003128241437274089,
-        "momentum_component": 0.048885633874086176,
+        "market_component": -0.003267590448683778,
+        "momentum_component": 0.049653022806096236,
         "volatility_drag": -0.0,
-        "alpha_component": 0.15885571997151032
+        "alpha_component": 0.16029732696753923
       },
       "component_weights_pct": {
-        "market_component": 1.48,
-        "momentum_component": 23.18,
+        "market_component": 1.53,
+        "momentum_component": 23.29,
         "volatility_drag": 0.0,
-        "alpha_component": 75.33
+        "alpha_component": 75.18
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 79.80495567321778,
-      "sma50": 78.55192535400391,
-      "sma200": 72.88665607452393,
-      "ema20": 79.91668512473254,
-      "ema50": 78.85231355326346,
-      "ema200": 74.2606201457058
+      "sma20": 79.81523056030274,
+      "sma50": 78.55603530883789,
+      "sma200": 72.88768363952637,
+      "ema20": 79.93625633789898,
+      "ema50": 78.86037227821824,
+      "ema200": 74.2626648609076
     },
     "momentum": {
-      "3m": 0.07244339281707157,
-      "6m": 0.15271604576060782,
-      "12m": 0.1955425354963447,
+      "3m": 0.07519701400528445,
+      "6m": 0.1556757761751537,
+      "12m": 0.19861209122438495,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 18477761.55,
-      "relative_volume": 0.420701987032623,
+      "average_volume": 18620824.0,
+      "relative_volume": 0.5707631413088916,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -453,5 +456,5 @@
       }
     ]
   },
-  "report": "Ticker: KO\nRating: Hold | Score: 59.65/100 | Confidence: 48.11/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.0084\nNews/Catalyst: Abbvie acquiring Apogee for $10.9B, Coca-Cola vs. IRS in appeals court\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: KO\nRating: Hold | Score: 62.15/100 | Confidence: 50.78/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.0084\nNews/Catalyst: 67 With $1.5 Million. Here Are My 3 Defensive Anchors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

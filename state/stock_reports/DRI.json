@@ -1,13 +1,13 @@
 {
   "ticker": "DRI",
-  "generated_at": "2026-06-23T17:48:36.448936",
+  "generated_at": "2026-06-23T19:54:30.450413",
   "score": {
-    "final_score": 59.8,
+    "final_score": 61.55,
     "rating": "Hold",
-    "confidence": 48.13,
+    "confidence": 48.98,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 83.0,
+      "technical": 90.0,
       "momentum": 50.0,
       "volume": 25.0,
       "fundamental": 42.0,
@@ -15,29 +15,30 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 83.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 190.6300048828125,
       "resistance": 213.4499969482422,
-      "risk_reward": 0.01
+      "risk_reward": 0.07
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": 0.08250872229423045,
-        "3m": 0.09696561883114518,
-        "6m": 0.1228568447765992,
-        "12m": -0.026225366138989292
+        "1m": 0.07555690280739413,
+        "3m": 0.08992095784290144,
+        "6m": 0.11564591156776349,
+        "12m": -0.03247883309698463
       },
-      "acceleration": 0.0355,
+      "acceleration": 0.0321,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1144628.2,
-      "relative_volume": 0.5461721107342978,
+      "average_volume": 1160788.25,
+      "relative_volume": 0.8170008612681943,
       "accumulation_days": 8,
       "distribution_days": 5,
       "evidence": [
@@ -65,17 +66,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017646006009424342,
-        "annualized_volatility": 0.2801216612069286,
-        "maximum_drawdown": -0.2391958081873352,
-        "sharpe_ratio": 0.8376712367757857,
-        "sortino_ratio": 1.44334278377839,
-        "calmar_ratio": 0.9052369986511777,
-        "beta": 0.5536749622239215,
-        "alpha": 0.13474078069045445,
-        "capm_expected_return": 0.09990907770044105,
-        "actual_return": 0.2346498583908955,
-        "market_return": 0.18044716578683767
+        "volatility": 0.01764444641974058,
+        "annualized_volatility": 0.28009690348822536,
+        "maximum_drawdown": -0.2391957551966526,
+        "sharpe_ratio": 0.8261173752998651,
+        "sortino_ratio": 1.4228556788014053,
+        "calmar_ratio": 0.8887497745338468,
+        "beta": 0.5541005851976739,
+        "alpha": 0.13237688226930994,
+        "capm_expected_return": 0.09901603647000243,
+        "actual_return": 0.23139291873931236,
+        "market_return": 0.1786968631961988
       },
       "evidence": []
     },
@@ -86,7 +87,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "DRI",
@@ -140,11 +141,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.22019536499819,
+    "rsi": 69.04034689038878,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5461721107342978,
+    "relative_volume": 0.8170008612681943,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -240,7 +241,7 @@
         "last_surprise_pct": 0.0029,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 6.05,
+      "analyst_upside_pct": 6.71,
       "eps_growth_implied": 19.83
     },
     "evidence": [
@@ -334,17 +335,17 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6769,
-    "probability_pct": 67.69,
+    "probability_of_outperformance": 0.6938,
+    "probability_pct": 69.38,
     "confidence": "High",
     "evidence": [
-      "Composite score 59.8/100"
+      "Composite score 61.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.8,
-    "technical_score": 83.0,
+    "final_score": 61.55,
+    "technical_score": 90.0,
     "momentum_score": 50.0,
     "volume_score": 25.0,
     "fundamental_score": 42.0,
@@ -354,7 +355,7 @@
     "eps_growth": -0.033,
     "roe": 0.51539004,
     "forward_pe": 18.620064,
-    "relative_volume": 0.5461721107342978,
+    "relative_volume": 0.8170008612681943,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,66 +365,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0062735935427107314,
-      "weekly": 0.021891202550635702,
-      "monthly": 0.08250872229423045,
-      "annual": -0.026225366138989292
+      "daily": -0.0001886475760981554,
+      "weekly": 0.015328665890180782,
+      "monthly": 0.07555690280739413,
+      "annual": -0.03247883309698463
     },
     "risk": {
-      "volatility": 0.017646006009424342,
-      "annualized_volatility": 0.2801216612069286,
-      "maximum_drawdown": -0.2391958081873352,
-      "sharpe_ratio": 0.8376712367757857,
-      "sortino_ratio": 1.44334278377839,
-      "calmar_ratio": 0.9052369986511777,
-      "beta": 0.5536749622239215,
-      "alpha": 0.13474078069045445,
-      "capm_expected_return": 0.09990907770044105,
-      "actual_return": 0.2346498583908955,
-      "market_return": 0.18044716578683767
+      "volatility": 0.01764444641974058,
+      "annualized_volatility": 0.28009690348822536,
+      "maximum_drawdown": -0.2391957551966526,
+      "sharpe_ratio": 0.8261173752998651,
+      "sortino_ratio": 1.4228556788014053,
+      "calmar_ratio": 0.8887497745338468,
+      "beta": 0.5541005851976739,
+      "alpha": 0.13237688226930994,
+      "capm_expected_return": 0.09901603647000243,
+      "actual_return": 0.23139291873931236,
+      "market_return": 0.1786968631961988
     },
     "capm": {
-      "beta": 0.5536749622239215,
-      "alpha": 0.13474078069045445,
-      "capm_expected_return": 0.09990907770044105,
-      "actual_return": 0.2346498583908955,
-      "market_return": 0.18044716578683767,
-      "interpretation": "Beta 0.55: Moves roughly 45% less than the market. CAPM expected return is 9.99%; realized alpha is 13.47%, meaning positive alpha versus CAPM."
+      "beta": 0.5541005851976739,
+      "alpha": 0.13237688226930994,
+      "capm_expected_return": 0.09901603647000243,
+      "actual_return": 0.23139291873931236,
+      "market_return": 0.1786968631961988,
+      "interpretation": "Beta 0.55: Moves roughly 45% less than the market. CAPM expected return is 9.90%; realized alpha is 13.24%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2346498583908955,
+      "actual_return": 0.23139291873931236,
       "components": {
-        "market_component": 0.09990907770044105,
+        "market_component": 0.09901603647000243,
         "momentum_component": 0.0,
-        "volatility_drag": -0.006024332241385722,
-        "alpha_component": 0.13474078069045445
+        "volatility_drag": -0.0060193806976450714,
+        "alpha_component": 0.13237688226930994
       },
       "component_weights_pct": {
-        "market_component": 41.51,
+        "market_component": 41.71,
         "momentum_component": 0.0,
-        "volatility_drag": 2.5,
-        "alpha_component": 55.98
+        "volatility_drag": 2.54,
+        "alpha_component": 55.76
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 204.94750061035157,
-      "sma50": 200.24459930419923,
-      "sma200": 193.98423034667968,
-      "ema20": 205.9688321802604,
-      "ema50": 202.1229473019297,
-      "ema200": 196.6178053860128
+      "sma20": 204.87900085449218,
+      "sma50": 200.21719940185548,
+      "sma200": 193.97738037109374,
+      "ema20": 205.83835645481398,
+      "ema50": 202.0692220032529,
+      "ema200": 196.60417350237796
     },
     "momentum": {
-      "3m": 0.09696561883114518,
-      "6m": 0.1228568447765992,
-      "12m": -0.026225366138989292,
+      "3m": 0.08992095784290144,
+      "6m": 0.11564591156776349,
+      "12m": -0.03247883309698463,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1144628.2,
-      "relative_volume": 0.5461721107342978,
+      "average_volume": 1160788.25,
+      "relative_volume": 0.8170008612681943,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -441,5 +442,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DRI\nRating: Hold | Score: 59.8/100 | Confidence: 48.13/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.620064\nNews/Catalyst: Jim Cramer Says Darden \u201cAlmost Always Surprises to the Upside\u201d\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DRI\nRating: Hold | Score: 61.55/100 | Confidence: 48.98/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 18.620064\nNews/Catalyst: Jim Cramer Says Darden \u201cAlmost Always Surprises to the Upside\u201d\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

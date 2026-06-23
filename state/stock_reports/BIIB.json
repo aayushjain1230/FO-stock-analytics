@@ -1,21 +1,21 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2026-06-23T17:48:05.407833",
+  "generated_at": "2026-06-23T19:53:57.924791",
   "score": {
-    "final_score": 63.95,
+    "final_score": 59.95,
     "rating": "Hold",
-    "confidence": 46.63,
+    "confidence": 47.08,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 90.0,
-      "momentum": 70.0,
+      "technical": 80.0,
+      "momentum": 60.0,
       "volume": 0,
       "fundamental": 68.0,
       "risk": 75.0,
-      "catalyst": 50.0
+      "catalyst": 70.0
     },
     "technical": {
-      "score": 90.0,
+      "score": 80.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,34 +23,32 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
-        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 172.33999633789062,
       "resistance": 204.52999877929688,
-      "risk_reward": 0.14
+      "risk_reward": 0.28
     },
     "momentum": {
-      "score": 70.0,
+      "score": 60.0,
       "returns": {
-        "1m": 0.05900666387159781,
-        "3m": 0.09262684907084995,
-        "6m": 0.18091924884838395,
-        "12m": 0.5794237441001162
+        "1m": 0.042645283047434646,
+        "3m": 0.07574604502472826,
+        "6m": 0.16267434991417318,
+        "12m": 0.5550220531178574
       },
-      "acceleration": 0.0022,
+      "acceleration": -0.0056,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
         "6m return is positive",
-        "12m return is positive",
-        "Momentum is accelerating"
+        "12m return is positive"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 1018984.85,
-      "relative_volume": 0.3302276770846986,
+      "average_volume": 1027481.5,
+      "relative_volume": 0.4928847867333864,
       "accumulation_days": 2,
       "distribution_days": 3,
       "evidence": []
@@ -65,26 +63,27 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.019669264001571197,
-        "annualized_volatility": 0.31223988611899534,
+        "volatility": 0.019673989190561833,
+        "annualized_volatility": 0.3123148961687973,
         "maximum_drawdown": -0.5211993420936047,
-        "sharpe_ratio": -0.0410138614851688,
-        "sortino_ratio": -0.06617076854651621,
-        "calmar_ratio": -0.11407861076176758,
-        "beta": 0.5240366720880144,
-        "alpha": -0.10736709568607797,
-        "capm_expected_return": 0.09456093224664862,
-        "actual_return": -0.012806163439429353,
-        "market_return": 0.18044716578683767
+        "sharpe_ratio": -0.0660534741482972,
+        "sortino_ratio": -0.10678558420753857,
+        "calmar_ratio": -0.12818448483307482,
+        "beta": 0.5267402435071158,
+        "alpha": -0.11475631315413728,
+        "capm_expected_return": 0.09412682923392351,
+        "actual_return": -0.020629483920213777,
+        "market_return": 0.1786968631961988
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 70.0,
       "evidence": [
         "earnings surprise",
+        "analyst revision",
         "sector strength",
         "guidance change"
       ]
@@ -143,14 +142,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 63.9848480854839,
+    "rsi": 60.02759776606892,
     "macd_cross": false,
-    "breakout": true,
+    "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3302276770846986,
+    "relative_volume": 0.4928847867333864,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "trend continuation",
     "support": 172.33999633789062,
     "resistance": 204.52999877929688
   },
@@ -196,7 +195,7 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": false,
@@ -243,11 +242,12 @@
         "last_surprise_pct": 0.2361,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 9.85,
+      "analyst_upside_pct": 11.59,
       "eps_growth_implied": 78.57
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -270,6 +270,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Therapeutics Stocks Q1 Recap: Benchmarking Biogen (NASDAQ:BIIB)",
+        "source": "StockStory",
+        "published": "2026-06-23T18:24:46Z",
+        "summary": "Let\u2019s dig into the relative performance of Biogen (NASDAQ:BIIB) and its peers as we unravel the now-completed Q1 therapeutics earnings season.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Biogen (BIIB) Stock Could Be 10.3% Undervalued on Its Pipeline Narrative",
         "source": "Simply Wall St.",
@@ -309,16 +319,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Biogen acquires RayThera in deal worth up to $1 billion",
-        "source": "Quartz",
-        "published": "2026-06-18T13:40:30Z",
-        "summary": "The deal adds multiple small-molecule anti-inflammatory drug candidates to Biogen's pipeline, with the lead asset set to begin human trials this summer",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -338,99 +338,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8395,
-    "probability_pct": 83.95,
+    "probability_of_outperformance": 0.8082,
+    "probability_pct": 80.82,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 63.95/100"
+      "Analyst data is supportive",
+      "Composite score 59.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 63.95,
-    "technical_score": 90.0,
-    "momentum_score": 70.0,
+    "final_score": 59.95,
+    "technical_score": 80.0,
+    "momentum_score": 60.0,
     "volume_score": 0,
     "fundamental_score": 68.0,
     "risk_score": 75.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 70.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.311,
     "roe": 0.077010006,
     "forward_pe": 11.981656,
-    "relative_volume": 0.3302276770846986,
-    "breakout": true,
+    "relative_volume": 0.4928847867333864,
+    "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.004706760557892098,
-      "weekly": 0.010118780270901961,
-      "monthly": 0.05900666387159781,
-      "annual": 0.5794237441001162
+      "daily": -0.010815700713505572,
+      "weekly": -0.00548729531433656,
+      "monthly": 0.042645283047434646,
+      "annual": 0.5550220531178574
     },
     "risk": {
-      "volatility": 0.019669264001571197,
-      "annualized_volatility": 0.31223988611899534,
+      "volatility": 0.019673989190561833,
+      "annualized_volatility": 0.3123148961687973,
       "maximum_drawdown": -0.5211993420936047,
-      "sharpe_ratio": -0.0410138614851688,
-      "sortino_ratio": -0.06617076854651621,
-      "calmar_ratio": -0.11407861076176758,
-      "beta": 0.5240366720880144,
-      "alpha": -0.10736709568607797,
-      "capm_expected_return": 0.09456093224664862,
-      "actual_return": -0.012806163439429353,
-      "market_return": 0.18044716578683767
+      "sharpe_ratio": -0.0660534741482972,
+      "sortino_ratio": -0.10678558420753857,
+      "calmar_ratio": -0.12818448483307482,
+      "beta": 0.5267402435071158,
+      "alpha": -0.11475631315413728,
+      "capm_expected_return": 0.09412682923392351,
+      "actual_return": -0.020629483920213777,
+      "market_return": 0.1786968631961988
     },
     "capm": {
-      "beta": 0.5240366720880144,
-      "alpha": -0.10736709568607797,
-      "capm_expected_return": 0.09456093224664862,
-      "actual_return": -0.012806163439429353,
-      "market_return": 0.18044716578683767,
-      "interpretation": "Beta 0.52: Moves roughly 48% less than the market. CAPM expected return is 9.46%; realized alpha is -10.74%, meaning negative alpha versus CAPM."
+      "beta": 0.5267402435071158,
+      "alpha": -0.11475631315413728,
+      "capm_expected_return": 0.09412682923392351,
+      "actual_return": -0.020629483920213777,
+      "market_return": 0.1786968631961988,
+      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.41%; realized alpha is -11.48%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.012806163439429353,
+      "actual_return": -0.020629483920213777,
       "components": {
-        "market_component": 0.09456093224664862,
-        "momentum_component": 0.14485593602502905,
-        "volatility_drag": -0.012447977223799069,
-        "alpha_component": -0.10736709568607797
+        "market_component": 0.09412682923392351,
+        "momentum_component": 0.13875551327946434,
+        "volatility_drag": -0.012462979233759464,
+        "alpha_component": -0.11475631315413728
       },
       "component_weights_pct": {
-        "market_component": 26.32,
-        "momentum_component": 40.32,
-        "volatility_drag": 3.47,
-        "alpha_component": 29.89
+        "market_component": 26.14,
+        "momentum_component": 38.53,
+        "volatility_drag": 3.46,
+        "alpha_component": 31.87
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 196.3540008544922,
-      "sma50": 191.48440063476562,
-      "sma200": 175.2925003051758,
-      "ema20": 196.4666197025339,
-      "ema50": 192.640667697344,
-      "ema200": 177.84602660492556
+      "sma20": 196.19900131225586,
+      "sma50": 191.4224008178711,
+      "sma200": 175.27700035095214,
+      "ema20": 196.17138247922662,
+      "ema50": 192.51909942892337,
+      "ema200": 177.81518092487852
     },
     "momentum": {
-      "3m": 0.09262684907084995,
-      "6m": 0.18091924884838395,
-      "12m": 0.5794237441001162,
+      "3m": 0.07574604502472826,
+      "6m": 0.16267434991417318,
+      "12m": 0.5550220531178574,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1018984.85,
-      "relative_volume": 0.3302276770846986,
+      "average_volume": 1027481.5,
+      "relative_volume": 0.4928847867333864,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -448,5 +448,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BIIB\nRating: Hold | Score: 63.95/100 | Confidence: 46.63/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.981656\nNews/Catalyst: Biogen (BIIB) Stock Could Be 10.3% Undervalued on Its Pipeline Narrative\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BIIB\nRating: Hold | Score: 59.95/100 | Confidence: 47.08/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.981656\nNews/Catalyst: Therapeutics Stocks Q1 Recap: Benchmarking Biogen (NASDAQ:BIIB)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
