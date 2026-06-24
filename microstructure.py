@@ -1,4 +1,4 @@
-﻿"""Market microstructure, order book, and execution analytics."""
+"""Market microstructure, order book, and execution analytics."""
 
 from typing import Dict, Iterable, List
 
