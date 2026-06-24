@@ -75,10 +75,15 @@ jobs:
           python main.py --quant-report
           python main.py --portfolio-report
           python main.py --stock-discovery
+          python main.py --refresh-watchlist-intel
           python main.py --earnings-calendar
+          python main.py --sync-trade-journal
           python main.py --trade-journal
+          python main.py --backfill-signals
           python main.py --update-signal-outcomes
           python main.py --signal-performance
+          python main.py --advanced-quant
+          python main.py --pairs-scan
           python main.py --dashboard
 
       - name: Debug - List Files
@@ -113,6 +118,8 @@ jobs:
             portfolio.json
             trade_journal.json
             watchlist_intelligence.json
+            state/latest_advanced_quant.json
+            state/latest_pairs_scan.json
             config/screeners.json
             plots/quant_research_dashboard.html
           if-no-files-found: warn
