@@ -32,6 +32,8 @@ import stat_arb
 import ml_research
 import microstructure
 import factor_models
+import alternative_data
+import backtesting
 import advanced_derivatives
 import earnings_alerts
 import intraday_monitor
@@ -54,6 +56,7 @@ import state_manager
 import stock_discovery
 import telegram_notifier
 import why_now
+import fundamentals_fetcher
 try:
     from indicators import calculate_metrics, get_market_regime_label
 except ModuleNotFoundError:
@@ -658,7 +661,54 @@ def _extract_downloaded_ticker(batch_raw, ticker):
     return df.dropna(subset=[close_col])
 
 
-def run_quant_research_report():
+def _build_factor_feature_frame(price_data, fundamentals_by_ticker, benchmark_data=None):
+    rows = {}
+    benchmark_returns = None
+    if benchmark_data is not None and not benchmark_data.empty:
+        benchmark_returns = quant_analytics._as_price_series(benchmark_data).pct_change()
+    for ticker, df in price_data.items():
+        if df is None or df.empty:
+            continue
+        close = quant_analytics._as_price_series(df).dropna()
+        if len(close) < 63:
+            continue
+        returns = close.pct_change().dropna()
+        fundamental = fundamentals_by_ticker.get(ticker, {})
+        beta = None
+        if benchmark_returns is not None:
+            aligned = pd.concat([returns.rename("asset"), benchmark_returns.rename("market")], axis=1).dropna()
+            if len(aligned) >= 30 and aligned["market"].var() > 0:
+                beta = aligned.cov().loc["asset", "market"] / aligned["market"].var()
+        rows[ticker] = {
+            "return_12m_ex_1m": close.iloc[-21] / close.iloc[-252] - 1 if len(close) >= 252 else None,
+            "return_6m": close.iloc[-1] / close.iloc[-126] - 1 if len(close) >= 126 else None,
+            "relative_strength": (
+                close.iloc[-1] / close.iloc[-126] - 1
+                - (quant_analytics._as_price_series(benchmark_data).iloc[-1] / quant_analytics._as_price_series(benchmark_data).iloc[-126] - 1)
+                if benchmark_data is not None and len(close) >= 126 and len(benchmark_data) >= 126
+                else None
+            ),
+            "annualized_volatility": returns.std() * (252**0.5),
+            "maximum_drawdown": quant_analytics.max_drawdown(returns),
+            "downside_deviation": returns[returns < 0].std() * (252**0.5),
+            "market_beta": beta,
+            "forward_pe": fundamental.get("forward_pe"),
+            "price_to_book": fundamental.get("price_to_book"),
+            "ev_to_ebitda": fundamental.get("enterprise_to_ebitda"),
+            "fcf_yield": fundamental.get("fcf_yield"),
+            "return_on_equity": fundamental.get("roe"),
+            "return_on_invested_capital": fundamental.get("roic"),
+            "gross_margin": fundamental.get("gross_margin"),
+            "operating_margin": fundamental.get("operating_margin"),
+            "debt_to_equity": fundamental.get("debt_to_equity"),
+            "revenue_growth": fundamental.get("revenue_growth"),
+            "earnings_growth": fundamental.get("eps_growth"),
+            "free_cashflow_growth": fundamental.get("fcf_growth"),
+        }
+    return pd.DataFrame.from_dict(rows, orient="index")
+
+
+def run_quant_research_report(send_alert=False):
     """Generate a research-focused snapshot for the current watchlist."""
     if yf is None or calculate_metrics is None:
         raise RuntimeError("Quant reports require yfinance and pandas-ta. Install compatible dependencies before running --quant-report.")
@@ -681,12 +731,18 @@ def run_quant_research_report():
     market_payload, sector_data = _build_market_intelligence(download_period, interval)
 
     rows = []
+    price_data = {}
+    analyzed_data = {}
+    fundamentals_by_ticker = {}
     for ticker in watchlist:
         df = _extract_downloaded_ticker(batch_raw, ticker)
         if df.empty:
             rows.append({"ticker": ticker, "error": "No price data returned"})
             continue
+        price_data[ticker] = df
+        fundamentals_by_ticker[ticker] = fundamentals_fetcher.fetch_fundamentals_cached(yf, ticker)
         analyzed = calculate_metrics(df, benchmark_data, config=config) if benchmark_data is not None else df
+        analyzed_data[ticker] = analyzed
         base_rating = scoring.generate_rating(analyzed, config=config)
         quant_payload = quant_analytics.comprehensive_stock_analysis(analyzed, benchmark_data, risk_free_rate=risk_free_rate)
         intelligence_payload = intelligence_scoring.final_stock_score(analyzed, benchmark_df=benchmark_data)
@@ -703,15 +759,67 @@ def run_quant_research_report():
         row["research_note"] = research_reports.stock_research_note(ticker, latest, rating, quant_payload)
         rows.append(row)
 
+    factor_features = _build_factor_feature_frame(price_data, fundamentals_by_ticker, benchmark_data)
+    factor_payload = factor_models.cross_sectional_factor_scores(factor_features)
+    portfolio_payload = portfolio_engine.load_portfolio(fallback_tickers=watchlist)
+    positions = portfolio_payload.get("positions", [])
+    price_frame = portfolio_engine.price_frame_from_data(price_data)
+    weights = portfolio_engine.weights_from_positions(positions, price_frame)
+    portfolio_factors = factor_models.portfolio_factor_exposure(factor_payload, weights)
+
+    pairs_payload = stat_arb.pairs_scan(price_frame) if price_frame.shape[1] >= 2 else {"candidates": []}
+    backtest_payload = {}
+    benchmark_price = quant_analytics._as_price_series(benchmark_data) if benchmark_data is not None else None
+    for ticker, analyzed in analyzed_data.items():
+        if "MRS" not in analyzed.columns:
+            continue
+        signal = (
+            analyzed["MRS"].rank(pct=True) * 50
+            + analyzed["RSI"].rank(pct=True) * 25
+            + (analyzed["Close"] > analyzed["SMA50"]).astype(float) * 25
+        )
+        backtest_payload[ticker] = backtesting.walk_forward_signal_backtest(
+            analyzed["Close"],
+            signal,
+            benchmark_price=benchmark_price,
+            transaction_cost_bps=5,
+            slippage_bps=5,
+        )
+
+    factor_lookup = factor_payload.get("stocks", {})
+    for row in rows:
+        row["factor_model"] = factor_lookup.get(row.get("ticker"), {})
+
     watchlist_intelligence.build_watchlist_report(watchlist, rows)
     payload = {
         "generated_at": datetime.now().isoformat(),
         "benchmark": benchmark_symbol,
+        "market_regime": market_payload,
+        "factor_model": factor_payload,
+        "portfolio_factor_exposure": portfolio_factors,
+        "pairs_trading": pairs_payload,
+        "signal_backtests": backtest_payload,
+        "alternative_data": {
+            "configured": False,
+            "provider_requirements": alternative_data.provider_requirements(),
+            "policy": "Alternative data remains excluded from scores until timestamp and predictive-validation checks pass.",
+        },
         "summary": research_reports.watchlist_summary(rows),
         "tickers": rows,
     }
     with open(QUANT_RESEARCH_FILE, "w") as f:
         json.dump(payload, f, indent=2)
+    if send_alert:
+        portfolio_report = {}
+        if os.path.exists(PORTFOLIO_REPORT_FILE):
+            try:
+                with open(PORTFOLIO_REPORT_FILE, "r") as f:
+                    portfolio_report = json.load(f)
+            except Exception:
+                portfolio_report = {}
+        message = telegram_notifier.format_quant_intelligence_report(payload, portfolio_report)
+        if should_send_report(message):
+            telegram_notifier.send_long_message(message)
     print(f"Quant research snapshot saved to {QUANT_RESEARCH_FILE}")
 
 
@@ -856,6 +964,15 @@ def run_portfolio_report(send_alert=False):
         risk_free_rate=risk_free_rate,
     )
     price_frame = portfolio_engine.price_frame_from_data(price_data)
+    fundamentals_by_ticker = {
+        ticker: fundamentals_fetcher.fetch_fundamentals_cached(yf, ticker)
+        for ticker in tickers
+    }
+    factor_features = _build_factor_feature_frame(price_data, fundamentals_by_ticker, benchmark_df)
+    stock_factor_payload = factor_models.cross_sectional_factor_scores(factor_features)
+    weights = portfolio_engine.weights_from_positions(positions, price_frame)
+    report["cross_sectional_factor_model"] = stock_factor_payload
+    report["portfolio_factor_scores"] = factor_models.portfolio_factor_exposure(stock_factor_payload, weights)
     report["benchmark_comparison"] = benchmark_comparison.comparison(price_frame, benchmark_df)
     with open(PORTFOLIO_REPORT_FILE, "w") as f:
         json.dump(report, f, indent=2, default=str)
@@ -1074,6 +1191,7 @@ def main():
     parser.add_argument("--analyze", action="store_true", help="Manually trigger the full analysis engine")
     parser.add_argument("--force", action="store_true", help="Run analysis even when market-hours checks are enabled")
     parser.add_argument("--quant-report", action="store_true", help="Generate a watchlist quant research snapshot")
+    parser.add_argument("--send-quant-alert", action="store_true", help="Send the generated quant intelligence report to Telegram")
     parser.add_argument("--option-lab", action="store_true", help="Run Black-Scholes, Greeks, IV, break-even, and Monte Carlo analysis")
     parser.add_argument("--dashboard", action="store_true", help="Generate the static quant research dashboard HTML")
     parser.add_argument("--init-db", action="store_true", help="Create or migrate the SQLite research database")
@@ -1140,8 +1258,8 @@ def main():
             json.dump(payload, f, indent=2, default=str)
         print(json.dumps(payload, indent=2, default=str))
 
-    if args.quant_report:
-        run_quant_research_report()
+    if args.quant_report or args.send_quant_alert:
+        run_quant_research_report(send_alert=args.send_quant_alert)
 
     if args.option_lab:
         run_option_lab(args)
