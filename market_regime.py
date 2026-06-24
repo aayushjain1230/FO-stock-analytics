@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 import quant_analytics
+import research_mindset
 
 
 INDEX_SYMBOLS = {
@@ -36,9 +37,17 @@ def classify_market(index_data: Dict[str, pd.DataFrame], sector_data: Dict[str, 
     health_score = _health_score(index_metrics, sector_metrics)
     vix_status = _vix_status(index_data.get("vix"))
     risk_environment = _risk_environment(index_metrics, sector_metrics, vix_status)
-    regime = _regime_label(index_metrics, health_score, risk_environment)
+    heuristic_regime = _regime_label(index_metrics, health_score, risk_environment)
+    statistical_regime = detect_statistical_regime(index_data.get("sp500"))
+    regime = statistical_regime.get("current_regime", heuristic_regime)
     return {
         "regime": regime,
+        "heuristic_regime": heuristic_regime,
+        "regime_confidence": statistical_regime.get("confidence", 0),
+        "regime_model": statistical_regime.get("model", "heuristic"),
+        "transition_probabilities": statistical_regime.get("transition_probabilities", {}),
+        "strategy_recommendation": strategy_for_regime(regime),
+        "regime_research_mindset": statistical_regime.get("research_mindset", {}),
         "health_score": health_score,
         "risk_environment": risk_environment,
         "buy_environment": "Favorable" if health_score >= 65 and risk_environment != "Risk-off" else "Selective" if health_score >= 45 else "Dangerous",
@@ -49,6 +58,241 @@ def classify_market(index_data: Dict[str, pd.DataFrame], sector_data: Dict[str, 
         "risk_on_risk_off": _risk_on_score(sector_metrics),
         "breadth_proxy": _breadth_proxy(index_metrics),
     }
+
+
+def detect_statistical_regime(spy_df: pd.DataFrame, n_states: int = 6) -> Dict:
+    """
+    Fit a diagonal-Gaussian HMM to market return, volatility, trend, and drawdown.
+
+    A local K-Means implementation is used if HMM estimation becomes unstable.
+    """
+    features = _regime_features(spy_df)
+    if len(features) < 120:
+        return {
+            "available": False,
+            "model": "heuristic",
+            "current_regime": "Unknown",
+            "confidence": 0,
+            "transition_probabilities": {},
+            "message": "Need at least 120 observations for statistical regime inference.",
+        }
+    try:
+        model = _gaussian_hmm(features, n_states=min(n_states, max(2, len(features) // 60)))
+        model["model"] = "Gaussian HMM"
+    except Exception as exc:
+        model = _kmeans_regime_fallback(features, n_states=min(n_states, max(2, len(features) // 60)))
+        model["fallback_reason"] = str(exc)
+
+    model["strategy_recommendation"] = strategy_for_regime(model["current_regime"])
+    model["research_mindset"] = research_mindset.research_envelope(
+        "market_regime",
+        "Market behavior is better modeled as a changing latent state than as one permanent distribution.",
+        [
+            f"Model: {model.get('model')}",
+            f"Current state confidence: {model.get('confidence', 0):.1f}%",
+            f"Observations: {len(features)}",
+        ],
+        [
+            "Historical return, volatility, trend, and drawdown contain information about the latent state.",
+            "State behavior is persistent enough for transition probabilities to be useful.",
+        ],
+        [
+            "Regime labels are assigned after estimation and may be economically ambiguous.",
+            "Transition probabilities can change after structural breaks.",
+            "The current state may be revised as new observations arrive.",
+        ],
+        confidence=model.get("confidence", 0),
+        regime_weaknesses=["Structural break", "Policy shock", "Sparse crisis history"],
+    )
+    return model
+
+
+def _regime_features(spy_df: pd.DataFrame) -> pd.DataFrame:
+    if spy_df is None or spy_df.empty:
+        return pd.DataFrame()
+    close = quant_analytics._as_price_series(spy_df).dropna()
+    returns = close.pct_change()
+    rolling_high = close.rolling(252, min_periods=60).max()
+    return pd.DataFrame(
+        {
+            "return_21d": close.pct_change(21),
+            "volatility_21d": returns.rolling(21).std() * np.sqrt(252),
+            "trend_50d": close / close.rolling(50).mean() - 1,
+            "drawdown": close / rolling_high - 1,
+        }
+    ).replace([np.inf, -np.inf], np.nan).dropna()
+
+
+def _kmeans(data: np.ndarray, k: int, iterations: int = 50, seed: int = 42):
+    rng = np.random.default_rng(seed)
+    centers = data[rng.choice(len(data), size=k, replace=False)].copy()
+    labels = np.zeros(len(data), dtype=int)
+    for _ in range(iterations):
+        distances = ((data[:, None, :] - centers[None, :, :]) ** 2).sum(axis=2)
+        new_labels = distances.argmin(axis=1)
+        if np.array_equal(new_labels, labels):
+            break
+        labels = new_labels
+        for idx in range(k):
+            members = data[labels == idx]
+            if len(members):
+                centers[idx] = members.mean(axis=0)
+    return labels, centers
+
+
+def _gaussian_hmm(features: pd.DataFrame, n_states: int, iterations: int = 30) -> Dict:
+    raw = features.values.astype(float)
+    mean = raw.mean(axis=0)
+    std = raw.std(axis=0)
+    std[std == 0] = 1
+    x = (raw - mean) / std
+    labels, means = _kmeans(x, n_states)
+    variances = np.vstack([
+        x[labels == state].var(axis=0) + 0.10 if np.any(labels == state) else np.ones(x.shape[1])
+        for state in range(n_states)
+    ])
+    transition = np.full((n_states, n_states), 0.15 / max(n_states - 1, 1))
+    np.fill_diagonal(transition, 0.85)
+    initial = np.full(n_states, 1 / n_states)
+
+    for _ in range(iterations):
+        emission = _emission_probabilities(x, means, variances)
+        alpha, scales = _forward(emission, initial, transition)
+        beta = _backward(emission, transition, scales)
+        gamma = alpha * beta
+        gamma /= gamma.sum(axis=1, keepdims=True)
+
+        xi_sum = np.zeros_like(transition)
+        for t in range(len(x) - 1):
+            xi = alpha[t, :, None] * transition * emission[t + 1, None, :] * beta[t + 1, None, :]
+            xi_sum += xi / max(xi.sum(), 1e-12)
+
+        initial = gamma[0]
+        transition = xi_sum / np.maximum(xi_sum.sum(axis=1, keepdims=True), 1e-12)
+        weights = np.maximum(gamma.sum(axis=0), 1e-12)
+        means = (gamma.T @ x) / weights[:, None]
+        for state in range(n_states):
+            residual = x - means[state]
+            variances[state] = (gamma[:, state, None] * residual**2).sum(axis=0) / weights[state]
+        variances = np.maximum(variances, 0.03)
+
+    raw_centroids = means * std + mean
+    state_names = _name_states(raw_centroids)
+    latest_probabilities = gamma[-1]
+    current_state = int(np.argmax(latest_probabilities))
+    transition_by_name = _aggregate_transitions(transition, state_names, current_state)
+    return {
+        "available": True,
+        "current_regime": state_names[current_state],
+        "confidence": round(float(latest_probabilities[current_state] * 100), 1),
+        "state_probabilities": {
+            state_names[idx]: round(float(probability * 100), 2)
+            for idx, probability in enumerate(latest_probabilities)
+        },
+        "transition_probabilities": transition_by_name,
+        "state_centroids": {
+            state_names[idx]: {
+                column: round(float(raw_centroids[idx, col]), 5)
+                for col, column in enumerate(features.columns)
+            }
+            for idx in range(n_states)
+        },
+    }
+
+
+def _emission_probabilities(x, means, variances):
+    diff = x[:, None, :] - means[None, :, :]
+    log_prob = -0.5 * (
+        np.log(2 * np.pi * variances)[None, :, :]
+        + (diff**2) / variances[None, :, :]
+    ).sum(axis=2)
+    log_prob -= log_prob.max(axis=1, keepdims=True)
+    return np.maximum(np.exp(log_prob), 1e-300)
+
+
+def _forward(emission, initial, transition):
+    alpha = np.zeros_like(emission)
+    scales = np.ones(len(emission))
+    alpha[0] = initial * emission[0]
+    scales[0] = max(alpha[0].sum(), 1e-12)
+    alpha[0] /= scales[0]
+    for t in range(1, len(emission)):
+        alpha[t] = (alpha[t - 1] @ transition) * emission[t]
+        scales[t] = max(alpha[t].sum(), 1e-12)
+        alpha[t] /= scales[t]
+    return alpha, scales
+
+
+def _backward(emission, transition, scales):
+    beta = np.ones_like(emission)
+    for t in range(len(emission) - 2, -1, -1):
+        beta[t] = transition @ (emission[t + 1] * beta[t + 1])
+        beta[t] /= max(scales[t + 1], 1e-12)
+    return beta
+
+
+def _kmeans_regime_fallback(features: pd.DataFrame, n_states: int) -> Dict:
+    raw = features.values.astype(float)
+    mean = raw.mean(axis=0)
+    std = raw.std(axis=0)
+    std[std == 0] = 1
+    labels, centers = _kmeans((raw - mean) / std, n_states)
+    raw_centers = centers * std + mean
+    state_names = _name_states(raw_centers)
+    latest_state = int(labels[-1])
+    distances = np.sqrt((((raw[-1] - raw_centers) / std) ** 2).sum(axis=1))
+    confidence = 100 / (1 + distances[latest_state])
+    counts = np.ones((n_states, n_states)) * 0.5
+    for left, right in zip(labels[:-1], labels[1:]):
+        counts[left, right] += 1
+    transition = counts / counts.sum(axis=1, keepdims=True)
+    return {
+        "available": True,
+        "model": "K-Means fallback",
+        "current_regime": state_names[latest_state],
+        "confidence": round(float(confidence), 1),
+        "transition_probabilities": _aggregate_transitions(transition, state_names, latest_state),
+    }
+
+
+def _name_states(centroids: np.ndarray) -> list:
+    volatility_median = float(np.median(centroids[:, 1]))
+    names = []
+    for return_21d, volatility, trend, drawdown in centroids:
+        if drawdown <= -0.20 and return_21d <= -0.08:
+            name = "Crash"
+        elif volatility >= volatility_median * 1.35:
+            name = "High Volatility"
+        elif trend < -0.03 and return_21d < 0:
+            name = "Bear Trend"
+        elif drawdown < -0.05 and return_21d > 0.03:
+            name = "Recovery"
+        elif trend > 0.02 and return_21d > 0:
+            name = "Bull Trend"
+        else:
+            name = "Sideways"
+        names.append(name)
+    return names
+
+
+def _aggregate_transitions(transition, state_names, current_state):
+    output = {}
+    for target_state, probability in enumerate(transition[current_state]):
+        name = state_names[target_state]
+        output[name] = output.get(name, 0) + float(probability)
+    return {name: round(value * 100, 2) for name, value in sorted(output.items(), key=lambda item: item[1], reverse=True)}
+
+
+def strategy_for_regime(regime: str) -> Dict:
+    recommendations = {
+        "Bull Trend": {"risk_posture": "Risk-on", "preferred": ["momentum", "growth", "breakouts"], "avoid": ["premature mean reversion"]},
+        "Bear Trend": {"risk_posture": "Defensive", "preferred": ["quality", "low volatility", "cash"], "avoid": ["leveraged dip buying"]},
+        "Sideways": {"risk_posture": "Selective", "preferred": ["pairs trading", "mean reversion", "income"], "avoid": ["late breakouts"]},
+        "High Volatility": {"risk_posture": "Reduced size", "preferred": ["quality", "volatility targeting"], "avoid": ["tight stops", "high leverage"]},
+        "Crash": {"risk_posture": "Capital preservation", "preferred": ["liquidity", "hedges"], "avoid": ["uncapped leverage", "illiquid trades"]},
+        "Recovery": {"risk_posture": "Gradually add risk", "preferred": ["cyclicals", "small caps", "improving momentum"], "avoid": ["chasing the first rebound"]},
+    }
+    return recommendations.get(regime, {"risk_posture": "Neutral", "preferred": ["diversification"], "avoid": ["concentrated bets"]})
 
 
 def _index_trend(df: pd.DataFrame) -> Dict:
