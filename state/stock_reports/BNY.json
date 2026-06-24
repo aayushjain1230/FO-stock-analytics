@@ -1,13 +1,13 @@
 {
   "ticker": "BNY",
-  "generated_at": "2026-06-24T15:32:29.813166",
+  "generated_at": "2026-06-24T17:23:36.277169",
   "score": {
-    "final_score": 72.65,
+    "final_score": 70.15,
     "rating": "Watch",
-    "confidence": 53.42,
+    "confidence": 51.99,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 90.0,
+      "technical": 80.0,
       "momentum": 85.0,
       "volume": 0,
       "fundamental": 76.0,
@@ -15,7 +15,7 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 90.0,
+      "score": 80.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,22 +23,21 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
-        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 114.66000366210938,
       "resistance": 147.2899932861328,
-      "risk_reward": 0.04
+      "risk_reward": 0.08
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.049227498411616555,
-        "3m": 0.24325308319944594,
-        "6m": 0.2709670242162021,
-        "12m": 0.6595285836958107
+        "1m": 0.04017256084709686,
+        "3m": 0.23252368555945857,
+        "6m": 0.2599985361953592,
+        "12m": 0.6452066871246194
       },
-      "acceleration": 0.1078,
+      "acceleration": 0.1025,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -50,8 +49,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3601427.3,
-      "relative_volume": 0.16530834872051978,
+      "average_volume": 3630227.0,
+      "relative_volume": 0.3226630180426734,
       "accumulation_days": 2,
       "distribution_days": 5,
       "evidence": []
@@ -67,17 +66,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014101848258197158,
-        "annualized_volatility": 0.22385990110535428,
-        "maximum_drawdown": -0.17582913536323552,
-        "sharpe_ratio": 2.2301097164257113,
-        "sortino_ratio": 3.0575861409182656,
-        "calmar_ratio": 3.446867089059165,
-        "beta": 0.8348071800521495,
-        "alpha": 0.34765071044910867,
-        "capm_expected_return": 0.15158143012404066,
-        "actual_return": 0.49923214057314935,
-        "market_return": 0.18157657689835816
+        "volatility": 0.014120047140870496,
+        "annualized_volatility": 0.22414879941151164,
+        "maximum_drawdown": -0.17582899043307576,
+        "sharpe_ratio": 2.2080389429258265,
+        "sortino_ratio": 3.027880602627248,
+        "calmar_ratio": 3.4071339235774447,
+        "beta": 0.8372220805588979,
+        "alpha": 0.3463479540476977,
+        "capm_expected_return": 0.14858132406298954,
+        "actual_return": 0.4949292781106872,
+        "market_return": 0.17746942837891022
       },
       "evidence": []
     },
@@ -139,14 +138,15 @@
     "next_earnings_date": null,
     "eps_current_year": 8.06,
     "eps_forward": 9.67818,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 59.93412979077639,
+    "rsi": 57.292761330285494,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.16530834872051978,
+    "relative_volume": 0.3226630180426734,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -242,7 +242,7 @@
         "last_surprise_pct": 0.16540001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -0.53,
+      "analyst_upside_pct": 0.34,
       "eps_growth_implied": 20.08
     },
     "evidence": [
@@ -337,20 +337,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9083,
-    "probability_pct": 90.83,
+    "probability_of_outperformance": 0.8985,
+    "probability_pct": 89.85,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 72.65/100"
+      "Composite score 70.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 72.65,
-    "technical_score": 90.0,
+    "final_score": 70.15,
+    "technical_score": 80.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 76.0,
@@ -360,7 +360,7 @@
     "eps_growth": 0.418,
     "roe": 0.13472,
     "forward_pe": 15.085999,
-    "relative_volume": 0.16530834872051978,
+    "relative_volume": 0.3226630180426734,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +370,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.008758186875783225,
-      "weekly": 0.010730377878188424,
-      "monthly": 0.049227498411616555,
-      "annual": 0.6595285836958107
+      "daily": -0.017312702214705267,
+      "weekly": 0.002007674289019157,
+      "monthly": 0.04017256084709686,
+      "annual": 0.6452066871246194
     },
     "risk": {
-      "volatility": 0.014101848258197158,
-      "annualized_volatility": 0.22385990110535428,
-      "maximum_drawdown": -0.17582913536323552,
-      "sharpe_ratio": 2.2301097164257113,
-      "sortino_ratio": 3.0575861409182656,
-      "calmar_ratio": 3.446867089059165,
-      "beta": 0.8348071800521495,
-      "alpha": 0.34765071044910867,
-      "capm_expected_return": 0.15158143012404066,
-      "actual_return": 0.49923214057314935,
-      "market_return": 0.18157657689835816
+      "volatility": 0.014120047140870496,
+      "annualized_volatility": 0.22414879941151164,
+      "maximum_drawdown": -0.17582899043307576,
+      "sharpe_ratio": 2.2080389429258265,
+      "sortino_ratio": 3.027880602627248,
+      "calmar_ratio": 3.4071339235774447,
+      "beta": 0.8372220805588979,
+      "alpha": 0.3463479540476977,
+      "capm_expected_return": 0.14858132406298954,
+      "actual_return": 0.4949292781106872,
+      "market_return": 0.17746942837891022
     },
     "capm": {
-      "beta": 0.8348071800521495,
-      "alpha": 0.34765071044910867,
-      "capm_expected_return": 0.15158143012404066,
-      "actual_return": 0.49923214057314935,
-      "market_return": 0.18157657689835816,
-      "interpretation": "Beta 0.83: Moves roughly in line with the market. CAPM expected return is 15.16%; realized alpha is 34.77%, meaning positive alpha versus CAPM."
+      "beta": 0.8372220805588979,
+      "alpha": 0.3463479540476977,
+      "capm_expected_return": 0.14858132406298954,
+      "actual_return": 0.4949292781106872,
+      "market_return": 0.17746942837891022,
+      "interpretation": "Beta 0.84: Moves roughly in line with the market. CAPM expected return is 14.86%; realized alpha is 34.63%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.49923214057314935,
+      "actual_return": 0.4949292781106872,
       "components": {
-        "market_component": 0.15158143012404066,
-        "momentum_component": 0.16488214592395267,
+        "market_component": 0.14858132406298954,
+        "momentum_component": 0.16130167178115484,
         "volatility_drag": -0.0,
-        "alpha_component": 0.34765071044910867
+        "alpha_component": 0.3463479540476977
       },
       "component_weights_pct": {
-        "market_component": 22.82,
-        "momentum_component": 24.83,
+        "market_component": 22.64,
+        "momentum_component": 24.58,
         "volatility_drag": 0.0,
-        "alpha_component": 52.35
+        "alpha_component": 52.78
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 142.8904998779297,
-      "sma50": 137.85463653564454,
-      "sma200": 119.62385868072509,
-      "ema20": 142.78213038871021,
-      "ema50": 137.43803689038046,
-      "ema200": 120.70251861451537
+      "sma20": 142.8275001525879,
+      "sma50": 137.82943664550783,
+      "sma200": 119.61755817413331,
+      "ema20": 142.66213091180464,
+      "ema50": 137.38862531633887,
+      "ema200": 120.68998108890818
     },
     "momentum": {
-      "3m": 0.24325308319944594,
-      "6m": 0.2709670242162021,
-      "12m": 0.6595285836958107,
+      "3m": 0.23252368555945857,
+      "6m": 0.2599985361953592,
+      "12m": 0.6452066871246194,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3601427.3,
-      "relative_volume": 0.16530834872051978,
+      "average_volume": 3630227.0,
+      "relative_volume": 0.3226630180426734,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BNY\nRating: Watch | Score: 72.65/100 | Confidence: 53.42/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 114.66000366210938 | Resistance: 147.2899932861328\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.085999\nNews/Catalyst: Bank Of New York Mellon (BNY): 10 Most Profitable Undervalued Stocks to Invest In\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BNY\nRating: Watch | Score: 70.15/100 | Confidence: 51.99/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 114.66000366210938 | Resistance: 147.2899932861328\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.085999\nNews/Catalyst: Bank Of New York Mellon (BNY): 10 Most Profitable Undervalued Stocks to Invest In\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

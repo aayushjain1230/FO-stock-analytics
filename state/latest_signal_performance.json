@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T15:33:34.081867",
+  "generated_at": "2026-06-24T17:24:49.119792",
   "primary_horizon": "return_1m",
   "signal_types": {
     "breakout": {
@@ -25,9 +25,41 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.046037979501107794,
+      "average_max_drawdown": -0.049356107025140886,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
+    },
+    "high_volume_52w_breakout": {
+      "sample_size": 64,
+      "win_rate": 0.625,
+      "average_win": 0.0764673002824656,
+      "average_loss": -0.06008154967519266,
+      "expected_value": 0.025261481548343755,
+      "average_return": 0.025261481548343748,
+      "median_return": 0.012896909221269404,
+      "variance": 0.00804740191960467,
+      "standard_deviation": 0.08970731252024368,
+      "sharpe_like": 0.2815989113779677,
+      "p_value": 0.027763796373890485,
+      "confidence_interval_95": {
+        "low": 0.002853261602121071,
+        "high": 0.047669701494566424
+      },
+      "train_test": {
+        "available": true,
+        "train_size": 44,
+        "test_size": 20,
+        "train_average_return": 0.02962876538318822,
+        "test_average_return": 0.01565345711168591,
+        "generalization_gap": -0.013975308271502309,
+        "passes_out_of_sample": true
+      },
+      "confidence": "Moderate",
+      "attractiveness": "Constructive",
+      "average_sp500_relative_return": null,
+      "average_max_drawdown": -0.10915812360439496,
+      "false_positive_rate": 0.375,
+      "readout": "Expected value is 2.53% with variance 0.0080. Constructive."
     },
     "rank_improvement": {
       "sample_size": 0,
@@ -52,7 +84,7 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.04455978702320043,
+      "average_max_drawdown": -0.05136813071365515,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     },
@@ -82,6 +114,38 @@
       "average_max_drawdown": -0.04900936762701352,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
+    },
+    "sma50_reclaim": {
+      "sample_size": 35,
+      "win_rate": 0.6857142857142857,
+      "average_win": 0.09906158703774744,
+      "average_loss": -0.03535361066118193,
+      "expected_value": 0.05681681061808393,
+      "average_return": 0.05681681061808393,
+      "median_return": 0.03246444816763483,
+      "variance": 0.01415808784898153,
+      "standard_deviation": 0.11898776344221926,
+      "sharpe_like": 0.4775012906740978,
+      "p_value": 0.007857168273093813,
+      "confidence_interval_95": {
+        "low": 0.015943083792724452,
+        "high": 0.0976905374434434
+      },
+      "train_test": {
+        "available": true,
+        "train_size": 24,
+        "test_size": 11,
+        "train_average_return": 0.04675558468286783,
+        "test_average_return": 0.07876857629491903,
+        "generalization_gap": 0.0320129916120512,
+        "passes_out_of_sample": true
+      },
+      "confidence": "High",
+      "attractiveness": "Constructive",
+      "average_sp500_relative_return": null,
+      "average_max_drawdown": -0.1525436766365547,
+      "false_positive_rate": 0.3142857142857143,
+      "readout": "Expected value is 5.68% with variance 0.0142. Constructive."
     },
     "volume_spike": {
       "sample_size": 0,
@@ -133,14 +197,35 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.028046850477769614,
+      "average_max_drawdown": -0.029656166839325048,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     }
   },
   "regression": {
-    "available": false,
-    "message": "Need at least 20 completed signals for regression evidence."
+    "available": true,
+    "sample_size": 99,
+    "r_squared": 0.022287115001639157,
+    "features": {
+      "intercept": {
+        "coefficient": 0.252459850850473,
+        "std_error": 0.14639909785372357,
+        "t_stat": 1.7244631596208422,
+        "p_value": 0.08784273507202929
+      },
+      "score": {
+        "coefficient": -0.001577766453481531,
+        "std_error": 0.0010665613547837566,
+        "t_stat": -1.479302101473028,
+        "p_value": 0.14233362425560284
+      },
+      "confidence": {
+        "coefficient": -0.001577766453492486,
+        "std_error": 0.0010665613547837485,
+        "t_stat": -1.4793021014833105,
+        "p_value": 0.1423336242528603
+      }
+    }
   },
   "interpretation": "High expected value with low variance is more attractive than the same EV with high uncertainty."
 }

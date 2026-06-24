@@ -1,10 +1,10 @@
 {
   "ticker": "ACN",
-  "generated_at": "2026-06-24T15:31:52.706971",
+  "generated_at": "2026-06-24T17:23:11.392988",
   "score": {
-    "final_score": 25.25,
+    "final_score": 26.0,
     "rating": "Avoid",
-    "confidence": 12.69,
+    "confidence": 15.03,
     "risk_level": "Moderate",
     "categories": {
       "technical": 20.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 65.0,
       "risk": 60.0,
-      "catalyst": 30.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 20.0,
@@ -22,23 +22,23 @@
       ],
       "support": 124.83000183105469,
       "resistance": 201.3300018310547,
-      "risk_reward": 22.08
+      "risk_reward": 14.58
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.2850647157710102,
-        "3m": -0.33227382167923525,
-        "6m": -0.5253196617254894,
-        "12m": -0.5597354274509878
+        "1m": -0.276166025903675,
+        "3m": -0.3239627363149349,
+        "6m": -0.5194113883340286,
+        "12m": -0.5542555218188108
       },
-      "acceleration": -0.0696,
+      "acceleration": -0.0643,
       "evidence": []
     },
     "volume": {
       "score": 0,
-      "average_volume": 9058806.0,
-      "relative_volume": 0.40855494642450674,
+      "average_volume": 9179941.4,
+      "relative_volume": 0.6670770251322083,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -51,17 +51,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.02155378114639223,
-        "annualized_volatility": 0.34215566835879896,
-        "maximum_drawdown": -0.6807392413006688,
-        "sharpe_ratio": -1.0639541322579955,
-        "sortino_ratio": -1.245261641260642,
-        "calmar_ratio": -0.5078212733689799,
-        "beta": 0.6570561727860055,
-        "alpha": -0.4833439479102595,
-        "capm_expected_return": 0.11930601068441903,
-        "actual_return": -0.36403793722584044,
-        "market_return": 0.18157657689835816
+        "volatility": 0.021573170940798796,
+        "annualized_volatility": 0.34246347180263365,
+        "maximum_drawdown": -0.6807392413006683,
+        "sharpe_ratio": -1.044553312613176,
+        "sortino_ratio": -1.2236545327466681,
+        "calmar_ratio": -0.5018222346400584,
+        "beta": 0.6559105664324196,
+        "alpha": -0.47412542721289874,
+        "capm_expected_return": 0.11640407329244873,
+        "actual_return": -0.35772135392045,
+        "market_return": 0.17746942837891022
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -69,13 +69,14 @@
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 45.0,
       "evidence": [
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "ACN",
@@ -125,14 +126,15 @@
     "next_earnings_date": "1781785800",
     "eps_current_year": 12.52,
     "eps_forward": 14.65975,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 11.862582826419157,
+    "rsi": 13.985816080102524,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.40855494642450674,
+    "relative_volume": 0.6670770251322083,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -184,9 +186,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 2,
     "bearish_news_score": 1,
     "institutional_ownership": 0.85552,
     "detail": {
@@ -228,11 +230,12 @@
         "last_surprise_pct": 0.024600001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 41.43,
+      "analyst_upside_pct": 39.67,
       "eps_growth_implied": 17.09
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -254,6 +257,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "PAYX Q4 Earnings Beat on Paycor-Led Management Solutions Growth",
+        "source": "Zacks",
+        "published": "2026-06-24T15:18:00Z",
+        "summary": "Paychex's Q4 earnings beat as Paycor boosts Management Solutions growth, margins expand and the FY27 guidance points to continued gains.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Don't Overlook Accenture (ACN) International Revenue Trends While Assessing the Stock",
         "source": "Zacks",
@@ -293,16 +306,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Pzena Focused Value Strategy Picked Accenture (ACN) Defying Market Fears",
-        "source": "Insider Monkey",
-        "published": "2026-06-23T13:07:07Z",
-        "summary": "Pzena Investment Management recently released its first-quarter 2026 commentary for \u201cPzena Focused Value Strategy.\u201d A copy of the letter can be downloaded here. The equity market faced challenges in the first quarter due to the Iran conflict and the related energy price hike, compounded by continued AI-related uncertainty. Despite this volatility, energy stocks led the [\u2026]",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -322,97 +325,97 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5411,
-    "probability_pct": 54.11,
+    "probability_of_outperformance": 0.5559,
+    "probability_pct": 55.59,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 25.25/100"
+      "Composite score 26.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 25.25,
+    "final_score": 26.0,
     "technical_score": 20.0,
     "momentum_score": 0,
     "volume_score": 0,
     "fundamental_score": 65.0,
     "risk_score": 60.0,
-    "catalyst_score": 30.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.056,
     "eps_growth": 0.09,
     "roe": 0.24406,
     "forward_pe": 8.742305,
-    "relative_volume": 0.40855494642450674,
+    "relative_volume": 0.6670770251322083,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.00893632089709806,
-      "weekly": -0.2258035224460082,
-      "monthly": -0.2850647157710102,
-      "annual": -0.5597354274509878
+      "daily": 0.021494396590950426,
+      "weekly": -0.21616721759141422,
+      "monthly": -0.276166025903675,
+      "annual": -0.5542555218188108
     },
     "risk": {
-      "volatility": 0.02155378114639223,
-      "annualized_volatility": 0.34215566835879896,
-      "maximum_drawdown": -0.6807392413006688,
-      "sharpe_ratio": -1.0639541322579955,
-      "sortino_ratio": -1.245261641260642,
-      "calmar_ratio": -0.5078212733689799,
-      "beta": 0.6570561727860055,
-      "alpha": -0.4833439479102595,
-      "capm_expected_return": 0.11930601068441903,
-      "actual_return": -0.36403793722584044,
-      "market_return": 0.18157657689835816
+      "volatility": 0.021573170940798796,
+      "annualized_volatility": 0.34246347180263365,
+      "maximum_drawdown": -0.6807392413006683,
+      "sharpe_ratio": -1.044553312613176,
+      "sortino_ratio": -1.2236545327466681,
+      "calmar_ratio": -0.5018222346400584,
+      "beta": 0.6559105664324196,
+      "alpha": -0.47412542721289874,
+      "capm_expected_return": 0.11640407329244873,
+      "actual_return": -0.35772135392045,
+      "market_return": 0.17746942837891022
     },
     "capm": {
-      "beta": 0.6570561727860055,
-      "alpha": -0.4833439479102595,
-      "capm_expected_return": 0.11930601068441903,
-      "actual_return": -0.36403793722584044,
-      "market_return": 0.18157657689835816,
-      "interpretation": "Beta 0.66: Moves roughly 34% less than the market. CAPM expected return is 11.93%; realized alpha is -48.33%, meaning negative alpha versus CAPM."
+      "beta": 0.6559105664324196,
+      "alpha": -0.47412542721289874,
+      "capm_expected_return": 0.11640407329244873,
+      "actual_return": -0.35772135392045,
+      "market_return": 0.17746942837891022,
+      "interpretation": "Beta 0.66: Moves roughly 34% less than the market. CAPM expected return is 11.64%; realized alpha is -47.41%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.36403793722584044,
+      "actual_return": -0.35772135392045,
       "components": {
-        "market_component": 0.11930601068441903,
+        "market_component": 0.11640407329244873,
         "momentum_component": 0.0,
-        "volatility_drag": -0.018431133671759792,
-        "alpha_component": -0.4833439479102595
+        "volatility_drag": -0.01849269436052673,
+        "alpha_component": -0.47412542721289874
       },
       "component_weights_pct": {
-        "market_component": 19.21,
+        "market_component": 19.11,
         "momentum_component": 0.0,
-        "volatility_drag": 2.97,
-        "alpha_component": 77.82
+        "volatility_drag": 3.04,
+        "alpha_component": 77.85
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 165.5117500305176,
-      "sma50": 174.25110046386717,
-      "sma200": 222.70140846252443,
-      "ema20": 157.62820377688527,
-      "ema50": 173.02887169916494,
-      "ema200": 217.45953098215708
+      "sma20": 165.59150009155275,
+      "sma50": 174.28300048828126,
+      "sma200": 222.70938346862792,
+      "ema20": 157.78010865504748,
+      "ema50": 173.09142076665916,
+      "ema200": 217.47540183568717
     },
     "momentum": {
-      "3m": -0.33227382167923525,
-      "6m": -0.5253196617254894,
-      "12m": -0.5597354274509878,
+      "3m": -0.3239627363149349,
+      "6m": -0.5194113883340286,
+      "12m": -0.5542555218188108,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 9058806.0,
-      "relative_volume": 0.40855494642450674,
+      "average_volume": 9179941.4,
+      "relative_volume": 0.6670770251322083,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -430,5 +433,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ACN\nRating: Avoid | Score: 25.25/100 | Confidence: 12.69/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.83000183105469 | Resistance: 201.3300018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.742305\nNews/Catalyst: Don't Overlook Accenture (ACN) International Revenue Trends While Assessing the Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ACN\nRating: Avoid | Score: 26.0/100 | Confidence: 15.03/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.83000183105469 | Resistance: 201.3300018310547\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.742305\nNews/Catalyst: PAYX Q4 Earnings Beat on Paycor-Led Management Solutions Growth\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

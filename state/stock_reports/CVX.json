@@ -1,13 +1,13 @@
 {
   "ticker": "CVX",
-  "generated_at": "2026-06-24T15:33:05.952565",
+  "generated_at": "2026-06-24T17:24:01.758843",
   "score": {
-    "final_score": 35.55,
+    "final_score": 38.55,
     "rating": "Drop",
-    "confidence": 26.47,
+    "confidence": 28.86,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 10.0,
+      "technical": 22.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 47.0,
@@ -15,23 +15,24 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 22.0,
       "evidence": [
+        "Price above SMA200",
         "Stock is not materially extended from SMA20"
       ],
-      "support": 171.1396942138672,
+      "support": 172.19500732421875,
       "resistance": 211.14999389648438,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.10599330950338115,
-        "3m": -0.1648184413816799,
-        "6m": 0.1803498950285447,
-        "12m": 0.21413247603628438
+        "1m": -0.10048052075173075,
+        "3m": -0.15966839099516728,
+        "6m": 0.1876283859990211,
+        "12m": 0.22161928338130332
       },
-      "acceleration": -0.255,
+      "acceleration": -0.2535,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -39,8 +40,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 8750045.3,
-      "relative_volume": 0.3886958162376599,
+      "average_volume": 8825138.9,
+      "relative_volume": 0.5555694993083905,
       "accumulation_days": 2,
       "distribution_days": 4,
       "evidence": []
@@ -53,17 +54,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015023414254782656,
-        "annualized_volatility": 0.23848930776754604,
-        "maximum_drawdown": -0.20639719457092232,
-        "sharpe_ratio": 0.45140568639812484,
-        "sortino_ratio": 0.5542274680793398,
-        "calmar_ratio": 0.398320025383472,
-        "beta": 0.3927211735296654,
-        "alpha": 0.0363464633064,
-        "capm_expected_return": 0.07130896636502275,
-        "actual_return": 0.10765542967142275,
-        "market_return": 0.18157657689835816
+        "volatility": 0.015003496790841555,
+        "annualized_volatility": 0.23817312782953454,
+        "maximum_drawdown": -0.2063972900638379,
+        "sharpe_ratio": 0.46466974351758944,
+        "sortino_ratio": 0.5710678271387282,
+        "calmar_ratio": 0.41455831538675636,
+        "beta": 0.39694728970656856,
+        "alpha": 0.04022583762054946,
+        "capm_expected_return": 0.0704460086007824,
+        "actual_return": 0.11067184622133186,
+        "market_return": 0.17746942837891022
       },
       "evidence": []
     },
@@ -75,7 +76,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; analyst revision; major news; guidance change"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; analyst revision; major news"
   },
   "fundamentals": {
     "ticker": "CVX",
@@ -125,18 +126,19 @@
     "next_earnings_date": "1777638600",
     "eps_current_year": 5.74,
     "eps_forward": 12.57021,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 24.2152873000188,
+    "rsi": 24.94636179064969,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3886958162376599,
+    "relative_volume": 0.5555694993083905,
     "price_above_sma50": false,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 171.1396942138672,
+    "support": 172.19500732421875,
     "resistance": 211.14999389648438
   },
   "earnings": {
@@ -228,7 +230,7 @@
         "last_surprise_pct": 0.45560002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.05,
+      "analyst_upside_pct": 26.3,
       "eps_growth_implied": 118.99
     },
     "evidence": [
@@ -328,13 +330,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 35.55/100"
+      "Composite score 38.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.55,
-    "technical_score": 10.0,
+    "final_score": 38.55,
+    "technical_score": 22.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 47.0,
@@ -344,76 +346,76 @@
     "eps_growth": -0.445,
     "roe": 0.06638,
     "forward_pe": 13.61075,
-    "relative_volume": 0.3886958162376599,
+    "relative_volume": 0.5555694993083905,
     "breakout": false,
     "price_above_sma50": false,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": true,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.027504839363480138,
-      "weekly": -0.04980459922317504,
-      "monthly": -0.10599330950338115,
-      "annual": 0.21413247603628438
+      "daily": -0.021508060547861474,
+      "weekly": -0.043945329294934776,
+      "monthly": -0.10048052075173075,
+      "annual": 0.22161928338130332
     },
     "risk": {
-      "volatility": 0.015023414254782656,
-      "annualized_volatility": 0.23848930776754604,
-      "maximum_drawdown": -0.20639719457092232,
-      "sharpe_ratio": 0.45140568639812484,
-      "sortino_ratio": 0.5542274680793398,
-      "calmar_ratio": 0.398320025383472,
-      "beta": 0.3927211735296654,
-      "alpha": 0.0363464633064,
-      "capm_expected_return": 0.07130896636502275,
-      "actual_return": 0.10765542967142275,
-      "market_return": 0.18157657689835816
+      "volatility": 0.015003496790841555,
+      "annualized_volatility": 0.23817312782953454,
+      "maximum_drawdown": -0.2063972900638379,
+      "sharpe_ratio": 0.46466974351758944,
+      "sortino_ratio": 0.5710678271387282,
+      "calmar_ratio": 0.41455831538675636,
+      "beta": 0.39694728970656856,
+      "alpha": 0.04022583762054946,
+      "capm_expected_return": 0.0704460086007824,
+      "actual_return": 0.11067184622133186,
+      "market_return": 0.17746942837891022
     },
     "capm": {
-      "beta": 0.3927211735296654,
-      "alpha": 0.0363464633064,
-      "capm_expected_return": 0.07130896636502275,
-      "actual_return": 0.10765542967142275,
-      "market_return": 0.18157657689835816,
-      "interpretation": "Beta 0.39: Moves roughly 61% less than the market. CAPM expected return is 7.13%; realized alpha is 3.63%, meaning positive alpha versus CAPM."
+      "beta": 0.39694728970656856,
+      "alpha": 0.04022583762054946,
+      "capm_expected_return": 0.0704460086007824,
+      "actual_return": 0.11067184622133186,
+      "market_return": 0.17746942837891022,
+      "interpretation": "Beta 0.40: Moves roughly 60% less than the market. CAPM expected return is 7.04%; realized alpha is 4.02%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.10765542967142275,
+      "actual_return": 0.11067184622133186,
       "components": {
-        "market_component": 0.07130896636502275,
-        "momentum_component": 0.053533119009071095,
+        "market_component": 0.0704460086007824,
+        "momentum_component": 0.05540482084532583,
         "volatility_drag": -0.0,
-        "alpha_component": 0.0363464633064
+        "alpha_component": 0.04022583762054946
       },
       "component_weights_pct": {
-        "market_component": 44.24,
-        "momentum_component": 33.21,
+        "market_component": 42.42,
+        "momentum_component": 33.36,
         "volatility_drag": 0.0,
-        "alpha_component": 22.55
+        "alpha_component": 24.22
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 182.968985748291,
-      "sma50": 185.18109924316406,
-      "sma200": 169.43505889892577,
-      "ema20": 181.54732319060545,
-      "ema50": 184.493902530128,
-      "ema200": 173.0346276124525
+      "sma20": 183.0217514038086,
+      "sma50": 185.2022055053711,
+      "sma200": 169.44033592224122,
+      "ema20": 181.64782920111512,
+      "ema50": 184.53528735969576,
+      "ema200": 173.0451281369929
     },
     "momentum": {
-      "3m": -0.1648184413816799,
-      "6m": 0.1803498950285447,
-      "12m": 0.21413247603628438,
+      "3m": -0.15966839099516728,
+      "6m": 0.1876283859990211,
+      "12m": 0.22161928338130332,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 8750045.3,
-      "relative_volume": 0.3886958162376599,
+      "average_volume": 8825138.9,
+      "relative_volume": 0.5555694993083905,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -431,5 +433,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CVX\nRating: Drop | Score: 35.55/100 | Confidence: 26.47/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 171.1396942138672 | Resistance: 211.14999389648438\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.61075\nNews/Catalyst: Bloom Energy (BE) Faces Fresh AI Data Center Power Competition From Gas And Nuclear\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CVX\nRating: Drop | Score: 38.55/100 | Confidence: 28.86/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 172.19500732421875 | Resistance: 211.14999389648438\nFundamental Outlook: Fundamentally Weak | Forward P/E: 13.61075\nNews/Catalyst: Bloom Energy (BE) Faces Fresh AI Data Center Power Competition From Gas And Nuclear\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

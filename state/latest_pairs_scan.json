@@ -1,37 +1,561 @@
 {
   "candidates": [
     {
-      "pair": "GE/MSFT",
+      "pair": "GE/NVDA",
       "available": true,
-      "hedge_ratio": 0.8329055170113967,
-      "correlation": 0.26597714018421165,
-      "spread_zscore": 2.684016622184013,
-      "half_life_days": 521.2547024614604,
-      "mean_reversion_p_value_proxy": 0.7482121402670974,
-      "cointegration_strength": "Weak",
-      "interpretation": "Pairs are research candidates only when correlation, spread behavior, and mean reversion all support the setup."
-    },
-    {
-      "pair": "GE/TSLA",
-      "available": true,
-      "hedge_ratio": 0.7259089290756622,
-      "correlation": 0.35537767290390565,
-      "spread_zscore": 2.156048472471441,
-      "half_life_days": 62.22787333982382,
-      "mean_reversion_p_value_proxy": 0.13317317737006854,
-      "cointegration_strength": "Weak",
-      "interpretation": "Pairs are research candidates only when correlation, spread behavior, and mean reversion all support the setup."
-    },
-    {
-      "pair": "MSFT/VGT",
-      "available": true,
-      "hedge_ratio": 0.21436089718338852,
-      "correlation": 0.6515697632267212,
-      "spread_zscore": -2.0053608737656003,
-      "half_life_days": 126.05206954960029,
-      "mean_reversion_p_value_proxy": 0.4094838244931724,
+      "hedge_ratio": 1.0253176173781513,
+      "intercept": 0.3067154214967542,
+      "correlation": 0.4270703870526866,
+      "spread_zscore": 2.1145232464824373,
+      "half_life_days": 23.16881455424639,
+      "engle_granger_p_value": 0.0430570105658855,
+      "cointegrated": true,
+      "stationarity_test": {
+        "available": true,
+        "method": "Engle-Granger residual ADF",
+        "test_statistic": -2.9201274798998944,
+        "p_value": 0.0430570105658855,
+        "used_lag": 2,
+        "observations": 499,
+        "critical_values": {
+          "1%": -3.4435228622952065,
+          "5%": -2.867349510566146,
+          "10%": -2.569864247011056
+        },
+        "cointegrated": true
+      },
       "cointegration_strength": "Moderate",
-      "interpretation": "Pairs are research candidates only when correlation, spread behavior, and mean reversion all support the setup."
+      "signal": {
+        "action": "short_y_long_x",
+        "reason": "Spread is above its historical mean.",
+        "entry": true
+      },
+      "historical_performance": {
+        "trades": 15,
+        "win_rate": 0.21115537848605578,
+        "average_daily_pnl": 1.6181335116400815e-05,
+        "profit_factor": 1.0035658291689322,
+        "maximum_drawdown": -0.3751190698543665,
+        "cost_bps_per_turn": 10
+      },
+      "spread_history": [
+        {
+          "date": "2025-12-31 00:00:00",
+          "spread": 0.062679
+        },
+        {
+          "date": "2026-01-02 00:00:00",
+          "spread": 0.090305
+        },
+        {
+          "date": "2026-01-05 00:00:00",
+          "spread": 0.105345
+        },
+        {
+          "date": "2026-01-06 00:00:00",
+          "spread": 0.120032
+        },
+        {
+          "date": "2026-01-07 00:00:00",
+          "spread": 0.097864
+        },
+        {
+          "date": "2026-01-08 00:00:00",
+          "spread": 0.091333
+        },
+        {
+          "date": "2026-01-09 00:00:00",
+          "spread": 0.114815
+        },
+        {
+          "date": "2026-01-12 00:00:00",
+          "spread": 0.122362
+        },
+        {
+          "date": "2026-01-13 00:00:00",
+          "spread": 0.126946
+        },
+        {
+          "date": "2026-01-14 00:00:00",
+          "spread": 0.115937
+        },
+        {
+          "date": "2026-01-15 00:00:00",
+          "spread": 0.097596
+        },
+        {
+          "date": "2026-01-16 00:00:00",
+          "spread": 0.118162
+        },
+        {
+          "date": "2026-01-20 00:00:00",
+          "spread": 0.124
+        },
+        {
+          "date": "2026-01-21 00:00:00",
+          "spread": 0.113738
+        },
+        {
+          "date": "2026-01-22 00:00:00",
+          "spread": 0.028624
+        },
+        {
+          "date": "2026-01-23 00:00:00",
+          "spread": 0.009207
+        },
+        {
+          "date": "2026-01-26 00:00:00",
+          "spread": 0.019826
+        },
+        {
+          "date": "2026-01-27 00:00:00",
+          "spread": 0.01675
+        },
+        {
+          "date": "2026-01-28 00:00:00",
+          "spread": -0.016355
+        },
+        {
+          "date": "2026-01-29 00:00:00",
+          "spread": -6.3e-05
+        },
+        {
+          "date": "2026-01-30 00:00:00",
+          "spread": 0.033502
+        },
+        {
+          "date": "2026-02-02 00:00:00",
+          "spread": 0.069789
+        },
+        {
+          "date": "2026-02-03 00:00:00",
+          "spread": 0.103266
+        },
+        {
+          "date": "2026-02-04 00:00:00",
+          "spread": 0.133698
+        },
+        {
+          "date": "2026-02-05 00:00:00",
+          "spread": 0.140977
+        },
+        {
+          "date": "2026-02-06 00:00:00",
+          "spread": 0.109933
+        },
+        {
+          "date": "2026-02-09 00:00:00",
+          "spread": 0.071284
+        },
+        {
+          "date": "2026-02-10 00:00:00",
+          "spread": 0.078114
+        },
+        {
+          "date": "2026-02-11 00:00:00",
+          "spread": 0.061681
+        },
+        {
+          "date": "2026-02-12 00:00:00",
+          "spread": 0.075918
+        },
+        {
+          "date": "2026-02-13 00:00:00",
+          "spread": 0.106845
+        },
+        {
+          "date": "2026-02-17 00:00:00",
+          "spread": 0.131133
+        },
+        {
+          "date": "2026-02-18 00:00:00",
+          "spread": 0.122197
+        },
+        {
+          "date": "2026-02-19 00:00:00",
+          "spread": 0.138168
+        },
+        {
+          "date": "2026-02-20 00:00:00",
+          "spread": 0.152762
+        },
+        {
+          "date": "2026-02-23 00:00:00",
+          "spread": 0.131058
+        },
+        {
+          "date": "2026-02-24 00:00:00",
+          "spread": 0.143551
+        },
+        {
+          "date": "2026-02-25 00:00:00",
+          "spread": 0.121255
+        },
+        {
+          "date": "2026-02-26 00:00:00",
+          "spread": 0.172785
+        },
+        {
+          "date": "2026-02-27 00:00:00",
+          "spread": 0.220558
+        },
+        {
+          "date": "2026-03-02 00:00:00",
+          "spread": 0.200511
+        },
+        {
+          "date": "2026-03-03 00:00:00",
+          "spread": 0.18013
+        },
+        {
+          "date": "2026-03-04 00:00:00",
+          "spread": 0.180069
+        },
+        {
+          "date": "2026-03-05 00:00:00",
+          "spread": 0.139933
+        },
+        {
+          "date": "2026-03-06 00:00:00",
+          "spread": 0.159341
+        },
+        {
+          "date": "2026-03-09 00:00:00",
+          "spread": 0.128204
+        },
+        {
+          "date": "2026-03-10 00:00:00",
+          "spread": 0.130528
+        },
+        {
+          "date": "2026-03-11 00:00:00",
+          "spread": 0.119356
+        },
+        {
+          "date": "2026-03-12 00:00:00",
+          "spread": 0.076993
+        },
+        {
+          "date": "2026-03-13 00:00:00",
+          "spread": 0.07018
+        },
+        {
+          "date": "2026-03-16 00:00:00",
+          "spread": 0.067702
+        },
+        {
+          "date": "2026-03-17 00:00:00",
+          "spread": 0.068644
+        },
+        {
+          "date": "2026-03-18 00:00:00",
+          "spread": 0.073556
+        },
+        {
+          "date": "2026-03-19 00:00:00",
+          "spread": 0.052507
+        },
+        {
+          "date": "2026-03-20 00:00:00",
+          "spread": 0.070054
+        },
+        {
+          "date": "2026-03-23 00:00:00",
+          "spread": 0.069173
+        },
+        {
+          "date": "2026-03-24 00:00:00",
+          "spread": 0.068618
+        },
+        {
+          "date": "2026-03-25 00:00:00",
+          "spread": 0.068651
+        },
+        {
+          "date": "2026-03-26 00:00:00",
+          "spread": 0.073339
+        },
+        {
+          "date": "2026-03-27 00:00:00",
+          "spread": 0.087303
+        },
+        {
+          "date": "2026-03-30 00:00:00",
+          "spread": 0.0674
+        },
+        {
+          "date": "2026-03-31 00:00:00",
+          "spread": 0.049424
+        },
+        {
+          "date": "2026-04-01 00:00:00",
+          "spread": 0.072434
+        },
+        {
+          "date": "2026-04-02 00:00:00",
+          "spread": 0.022754
+        },
+        {
+          "date": "2026-04-06 00:00:00",
+          "spread": 0.04774
+        },
+        {
+          "date": "2026-04-07 00:00:00",
+          "spread": 0.044776
+        },
+        {
+          "date": "2026-04-08 00:00:00",
+          "spread": 0.087369
+        },
+        {
+          "date": "2026-04-09 00:00:00",
+          "spread": 0.093088
+        },
+        {
+          "date": "2026-04-10 00:00:00",
+          "spread": 0.052074
+        },
+        {
+          "date": "2026-04-13 00:00:00",
+          "spread": 0.059831
+        },
+        {
+          "date": "2026-04-14 00:00:00",
+          "spread": 0.040928
+        },
+        {
+          "date": "2026-04-15 00:00:00",
+          "spread": 0.015806
+        },
+        {
+          "date": "2026-04-16 00:00:00",
+          "spread": -0.032613
+        },
+        {
+          "date": "2026-04-17 00:00:00",
+          "spread": -0.030295
+        },
+        {
+          "date": "2026-04-20 00:00:00",
+          "spread": -0.033969
+        },
+        {
+          "date": "2026-04-21 00:00:00",
+          "spread": -0.080017
+        },
+        {
+          "date": "2026-04-22 00:00:00",
+          "spread": -0.13046
+        },
+        {
+          "date": "2026-04-23 00:00:00",
+          "spread": -0.094214
+        },
+        {
+          "date": "2026-04-24 00:00:00",
+          "spread": -0.129633
+        },
+        {
+          "date": "2026-04-27 00:00:00",
+          "spread": -0.17003
+        },
+        {
+          "date": "2026-04-28 00:00:00",
+          "spread": -0.137442
+        },
+        {
+          "date": "2026-04-29 00:00:00",
+          "spread": -0.138072
+        },
+        {
+          "date": "2026-04-30 00:00:00",
+          "spread": -0.067327
+        },
+        {
+          "date": "2026-05-01 00:00:00",
+          "spread": -0.073423
+        },
+        {
+          "date": "2026-05-04 00:00:00",
+          "spread": -0.094706
+        },
+        {
+          "date": "2026-05-05 00:00:00",
+          "spread": -0.062705
+        },
+        {
+          "date": "2026-05-06 00:00:00",
+          "spread": -0.05552
+        },
+        {
+          "date": "2026-05-07 00:00:00",
+          "spread": -0.083986
+        },
+        {
+          "date": "2026-05-08 00:00:00",
+          "spread": -0.120041
+        },
+        {
+          "date": "2026-05-11 00:00:00",
+          "spread": -0.127938
+        },
+        {
+          "date": "2026-05-12 00:00:00",
+          "spread": -0.145279
+        },
+        {
+          "date": "2026-05-13 00:00:00",
+          "spread": -0.177722
+        },
+        {
+          "date": "2026-05-14 00:00:00",
+          "spread": -0.232571
+        },
+        {
+          "date": "2026-05-15 00:00:00",
+          "spread": -0.221157
+        },
+        {
+          "date": "2026-05-18 00:00:00",
+          "spread": -0.191696
+        },
+        {
+          "date": "2026-05-19 00:00:00",
+          "spread": -0.186265
+        },
+        {
+          "date": "2026-05-20 00:00:00",
+          "spread": -0.148594
+        },
+        {
+          "date": "2026-05-21 00:00:00",
+          "spread": -0.124978
+        },
+        {
+          "date": "2026-05-22 00:00:00",
+          "spread": -0.101693
+        },
+        {
+          "date": "2026-05-26 00:00:00",
+          "spread": -0.061705
+        },
+        {
+          "date": "2026-05-27 00:00:00",
+          "spread": -0.042251
+        },
+        {
+          "date": "2026-05-28 00:00:00",
+          "spread": -0.038862
+        },
+        {
+          "date": "2026-05-29 00:00:00",
+          "spread": -0.014747
+        },
+        {
+          "date": "2026-06-01 00:00:00",
+          "spread": -0.074424
+        },
+        {
+          "date": "2026-06-02 00:00:00",
+          "spread": -0.088785
+        },
+        {
+          "date": "2026-06-03 00:00:00",
+          "spread": -0.060703
+        },
+        {
+          "date": "2026-06-04 00:00:00",
+          "spread": -0.038687
+        },
+        {
+          "date": "2026-06-05 00:00:00",
+          "spread": 0.028022
+        },
+        {
+          "date": "2026-06-08 00:00:00",
+          "spread": -0.007861
+        },
+        {
+          "date": "2026-06-09 00:00:00",
+          "spread": 0.020102
+        },
+        {
+          "date": "2026-06-10 00:00:00",
+          "spread": 0.022957
+        },
+        {
+          "date": "2026-06-11 00:00:00",
+          "spread": 0.043581
+        },
+        {
+          "date": "2026-06-12 00:00:00",
+          "spread": 0.049584
+        },
+        {
+          "date": "2026-06-15 00:00:00",
+          "spread": 0.034479
+        },
+        {
+          "date": "2026-06-16 00:00:00",
+          "spread": 0.086389
+        },
+        {
+          "date": "2026-06-17 00:00:00",
+          "spread": 0.115081
+        },
+        {
+          "date": "2026-06-18 00:00:00",
+          "spread": 0.086965
+        },
+        {
+          "date": "2026-06-22 00:00:00",
+          "spread": 0.089869
+        },
+        {
+          "date": "2026-06-23 00:00:00",
+          "spread": 0.136872
+        },
+        {
+          "date": "2026-06-24 00:00:00",
+          "spread": 0.168257
+        }
+      ],
+      "research_mindset": {
+        "signal": "pairs_trading",
+        "thesis": "The price relationship is stationary enough that an extreme spread may mean-revert.",
+        "evidence": [
+          "Engle-Granger p-value: 0.0431",
+          "Spread z-score: 2.11",
+          "Estimated half-life: 23.2 days"
+        ],
+        "assumptions": [
+          "The hedge ratio remains stable after entry.",
+          "Borrow, liquidity, and execution costs are available near historical levels.",
+          "No corporate event permanently changes the relationship."
+        ],
+        "failure_modes": [
+          "Cointegration can break after acquisitions, index changes, or business-model divergence.",
+          "A high z-score may reflect a structural break rather than temporary mispricing.",
+          "Short borrow and gap risk can dominate modeled edge."
+        ],
+        "regime_weaknesses": [
+          "Crash",
+          "Structural break",
+          "Liquidity shock"
+        ],
+        "confidence": 42.8,
+        "uncertainty": "High uncertainty",
+        "historical_robustness": {
+          "trades": 15,
+          "win_rate": 0.21115537848605578,
+          "average_daily_pnl": 1.6181335116400815e-05,
+          "profit_factor": 1.0035658291689322,
+          "maximum_drawdown": -0.3751190698543665,
+          "cost_bps_per_turn": 10
+        },
+        "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+      },
+      "interpretation": "Require residual stationarity, practical half-life, and net-of-cost performance before deployment."
     }
   ],
   "z_threshold": 2.0

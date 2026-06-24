@@ -1,13 +1,13 @@
 {
   "ticker": "CSX",
-  "generated_at": "2026-06-24T15:33:02.279299",
+  "generated_at": "2026-06-24T17:23:59.120293",
   "score": {
-    "final_score": 71.2,
+    "final_score": 67.45,
     "rating": "Watch",
-    "confidence": 54.97,
+    "confidence": 52.58,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 65.0,
       "momentum": 85.0,
       "volume": 0,
       "fundamental": 78.0,
@@ -15,29 +15,27 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 65.0,
       "evidence": [
-        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 39.54999923706055,
       "resistance": 47.56999969482422,
-      "risk_reward": 0.11
+      "risk_reward": 0.22
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.030279598064175683,
-        "3m": 0.20654302051790263,
-        "6m": 0.2891172861749347,
-        "12m": 0.46253659983061524
+        "1m": 0.01584615150541846,
+        "3m": 0.18964025524893358,
+        "6m": 0.27105771720653427,
+        "12m": 0.4420475559889778
       },
-      "acceleration": 0.062,
+      "acceleration": 0.0541,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +47,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 12592437.45,
-      "relative_volume": 0.21761863109353782,
+      "average_volume": 12682923.85,
+      "relative_volume": 0.3587561554270469,
       "accumulation_days": 3,
       "distribution_days": 4,
       "evidence": []
@@ -65,17 +63,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015251288770866636,
-        "annualized_volatility": 0.24210670356567043,
-        "maximum_drawdown": -0.2709587729112486,
-        "sharpe_ratio": 0.8917684169456895,
-        "sortino_ratio": 1.322441267169811,
-        "calmar_ratio": 0.7574697732477126,
-        "beta": 0.6908525386404752,
-        "alpha": 0.09046047266281904,
-        "capm_expected_return": 0.1254426391078782,
-        "actual_return": 0.21590311177069724,
-        "market_return": 0.18157657689835816
+        "volatility": 0.015242074796947875,
+        "annualized_volatility": 0.24196043626421637,
+        "maximum_drawdown": -0.2709588502697263,
+        "sharpe_ratio": 0.8628096014918526,
+        "sortino_ratio": 1.2789499913957336,
+        "calmar_ratio": 0.7260163184047753,
+        "beta": 0.6899908118670431,
+        "alpha": 0.08631351262117895,
+        "capm_expected_return": 0.12245227496874433,
+        "actual_return": 0.20876578758992329,
+        "market_return": 0.17746942837891022
       },
       "evidence": []
     },
@@ -88,7 +86,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "CSX",
@@ -138,17 +136,18 @@
     "next_earnings_date": "1784750400",
     "eps_current_year": 1.63,
     "eps_forward": 2.17221,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 52.4027645060331,
+    "rsi": 47.17607868161031,
     "macd_cross": false,
-    "breakout": true,
+    "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.21761863109353782,
+    "relative_volume": 0.3587561554270469,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "trend continuation",
     "support": 39.54999923706055,
     "resistance": 47.56999969482422
   },
@@ -241,7 +240,7 @@
         "last_surprise_pct": 0.106000006,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -1.08,
+      "analyst_upside_pct": 0.31,
       "eps_growth_implied": 33.26
     },
     "evidence": [
@@ -337,20 +336,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9058,
-    "probability_pct": 90.58,
+    "probability_of_outperformance": 0.8694,
+    "probability_pct": 86.94,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 71.2/100"
+      "Composite score 67.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 71.2,
-    "technical_score": 80.0,
+    "final_score": 67.45,
+    "technical_score": 65.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 78.0,
@@ -360,8 +358,8 @@
     "eps_growth": 0.265,
     "roe": 0.23684,
     "forward_pe": 21.524162,
-    "relative_volume": 0.21761863109353782,
-    "breakout": true,
+    "relative_volume": 0.3587561554270469,
+    "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
@@ -370,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.012889974494583623,
-      "weekly": -0.003091694094800035,
-      "monthly": 0.030279598064175683,
-      "annual": 0.46253659983061524
+      "daily": -0.001299856444743508,
+      "weekly": -0.017057633810872663,
+      "monthly": 0.01584615150541846,
+      "annual": 0.4420475559889778
     },
     "risk": {
-      "volatility": 0.015251288770866636,
-      "annualized_volatility": 0.24210670356567043,
-      "maximum_drawdown": -0.2709587729112486,
-      "sharpe_ratio": 0.8917684169456895,
-      "sortino_ratio": 1.322441267169811,
-      "calmar_ratio": 0.7574697732477126,
-      "beta": 0.6908525386404752,
-      "alpha": 0.09046047266281904,
-      "capm_expected_return": 0.1254426391078782,
-      "actual_return": 0.21590311177069724,
-      "market_return": 0.18157657689835816
+      "volatility": 0.015242074796947875,
+      "annualized_volatility": 0.24196043626421637,
+      "maximum_drawdown": -0.2709588502697263,
+      "sharpe_ratio": 0.8628096014918526,
+      "sortino_ratio": 1.2789499913957336,
+      "calmar_ratio": 0.7260163184047753,
+      "beta": 0.6899908118670431,
+      "alpha": 0.08631351262117895,
+      "capm_expected_return": 0.12245227496874433,
+      "actual_return": 0.20876578758992329,
+      "market_return": 0.17746942837891022
     },
     "capm": {
-      "beta": 0.6908525386404752,
-      "alpha": 0.09046047266281904,
-      "capm_expected_return": 0.1254426391078782,
-      "actual_return": 0.21590311177069724,
-      "market_return": 0.18157657689835816,
-      "interpretation": "Beta 0.69: Moves roughly 31% less than the market. CAPM expected return is 12.54%; realized alpha is 9.05%, meaning positive alpha versus CAPM."
+      "beta": 0.6899908118670431,
+      "alpha": 0.08631351262117895,
+      "capm_expected_return": 0.12245227496874433,
+      "actual_return": 0.20876578758992329,
+      "market_return": 0.17746942837891022,
+      "interpretation": "Beta 0.69: Moves roughly 31% less than the market. CAPM expected return is 12.25%; realized alpha is 8.63%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.21590311177069724,
+      "actual_return": 0.20876578758992329,
       "components": {
-        "market_component": 0.1254426391078782,
-        "momentum_component": 0.11563414995765381,
+        "market_component": 0.12245227496874433,
+        "momentum_component": 0.11051188899724446,
         "volatility_drag": -0.0,
-        "alpha_component": 0.09046047266281904
+        "alpha_component": 0.08631351262117895
       },
       "component_weights_pct": {
-        "market_component": 37.84,
-        "momentum_component": 34.88,
+        "market_component": 38.35,
+        "momentum_component": 34.61,
         "volatility_drag": 0.0,
-        "alpha_component": 27.29
+        "alpha_component": 27.03
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 46.49654674530029,
-      "sma50": 45.40703811645508,
-      "sma200": 39.06897208213806,
-      "ema20": 46.3184076531471,
-      "ema50": 45.15035077925033,
-      "ema200": 40.19822077567681
+      "sma20": 46.463796615600586,
+      "sma50": 45.393938064575195,
+      "sma200": 39.06569706916809,
+      "ema20": 46.25602645371909,
+      "ema50": 45.12466440301665,
+      "ema200": 40.191703319007374
     },
     "momentum": {
-      "3m": 0.20654302051790263,
-      "6m": 0.2891172861749347,
-      "12m": 0.46253659983061524,
+      "3m": 0.18964025524893358,
+      "6m": 0.27105771720653427,
+      "12m": 0.4420475559889778,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 12592437.45,
-      "relative_volume": 0.21761863109353782,
+      "average_volume": 12682923.85,
+      "relative_volume": 0.3587561554270469,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +445,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CSX\nRating: Watch | Score: 71.2/100 | Confidence: 54.97/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 39.54999923706055 | Resistance: 47.56999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 21.524162\nNews/Catalyst: A Look Back at Transportation and Logistics Stocks\u2019 Q1 Earnings: CSX (NASDAQ:CSX) Vs The Rest Of The Pack\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CSX\nRating: Watch | Score: 67.45/100 | Confidence: 52.58/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 39.54999923706055 | Resistance: 47.56999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 21.524162\nNews/Catalyst: A Look Back at Transportation and Logistics Stocks\u2019 Q1 Earnings: CSX (NASDAQ:CSX) Vs The Rest Of The Pack\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

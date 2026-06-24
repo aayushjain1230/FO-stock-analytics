@@ -1,13 +1,13 @@
 {
   "ticker": "BX",
-  "generated_at": "2026-06-24T15:32:32.851562",
+  "generated_at": "2026-06-24T17:23:38.404404",
   "score": {
-    "final_score": 38.25,
+    "final_score": 35.75,
     "rating": "Drop",
-    "confidence": 27.65,
+    "confidence": 25.86,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 35.0,
+      "technical": 25.0,
       "momentum": 25.0,
       "volume": 0,
       "fundamental": 70.0,
@@ -15,25 +15,24 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 35.0,
+      "score": 25.0,
       "evidence": [
         "RSI confirms momentum without extreme extension",
-        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 108.06999969482422,
       "resistance": 130.19000244140625,
-      "risk_reward": 1.59
+      "risk_reward": 1.93
     },
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": -0.016116814004557778,
-        "3m": 0.08983516407112568,
-        "6m": -0.21467021996435054,
-        "12m": -0.12640904670806496
+        "1m": -0.024386122163142843,
+        "3m": 0.08067535430707529,
+        "6m": -0.22127073316517143,
+        "12m": -0.13375137443573537
       },
-      "acceleration": 0.1972,
+      "acceleration": 0.1913,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating"
@@ -41,8 +40,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 5433827.75,
-      "relative_volume": 0.35824746192957624,
+      "average_volume": 5478821.05,
+      "relative_volume": 0.5195499130237152,
       "accumulation_days": 4,
       "distribution_days": 7,
       "evidence": []
@@ -55,17 +54,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.023114549221525525,
-        "annualized_volatility": 0.366932093445109,
-        "maximum_drawdown": -0.46497158402566907,
-        "sharpe_ratio": 0.169854201203988,
-        "sortino_ratio": 0.24790834798201902,
-        "calmar_ratio": -0.010261107292565689,
-        "beta": 1.4654465099699205,
-        "alpha": -0.20376580327975774,
-        "capm_expected_return": 0.26609076090798384,
-        "actual_return": 0.06232495762822608,
-        "market_return": 0.18157657689835816
+        "volatility": 0.02313799842683481,
+        "annualized_volatility": 0.36730433803925183,
+        "maximum_drawdown": -0.46497158402566974,
+        "sharpe_ratio": 0.1585050414970026,
+        "sortino_ratio": 0.23108549846253204,
+        "calmar_ratio": -0.019328761511795023,
+        "beta": 1.471033152538489,
+        "alpha": -0.2028438233644912,
+        "capm_expected_return": 0.2610634127074319,
+        "actual_return": 0.05821958934294068,
+        "market_return": 0.17746942837891022
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -78,7 +77,7 @@
         "guidance change"
       ]
     },
-    "explanation": "RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; analyst revision"
+    "explanation": "RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "BX",
@@ -128,14 +127,15 @@
     "next_earnings_date": "1776947400",
     "eps_current_year": 3.9,
     "eps_forward": 7.5351,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 57.66990169007736,
+    "rsi": 56.33001888175651,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.35824746192957624,
+    "relative_volume": 0.5195499130237152,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -231,7 +231,7 @@
         "last_surprise_pct": 0.016900001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 23.05,
+      "analyst_upside_pct": 24.03,
       "eps_growth_implied": 93.21
     },
     "evidence": [
@@ -330,13 +330,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 38.25/100"
+      "Composite score 35.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 38.25,
-    "technical_score": 35.0,
+    "final_score": 35.75,
+    "technical_score": 25.0,
     "momentum_score": 25.0,
     "volume_score": 0,
     "fundamental_score": 70.0,
@@ -346,7 +346,7 @@
     "eps_growth": 0.039,
     "roe": 0.29533002,
     "forward_pe": 15.472919,
-    "relative_volume": 0.35824746192957624,
+    "relative_volume": 0.5195499130237152,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -356,66 +356,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.02889981868512248,
-      "weekly": -0.0881364200390008,
-      "monthly": -0.016116814004557778,
-      "annual": -0.12640904670806496
+      "daily": -0.037061688677875515,
+      "weekly": -0.09580042024615854,
+      "monthly": -0.024386122163142843,
+      "annual": -0.13375137443573537
     },
     "risk": {
-      "volatility": 0.023114549221525525,
-      "annualized_volatility": 0.366932093445109,
-      "maximum_drawdown": -0.46497158402566907,
-      "sharpe_ratio": 0.169854201203988,
-      "sortino_ratio": 0.24790834798201902,
-      "calmar_ratio": -0.010261107292565689,
-      "beta": 1.4654465099699205,
-      "alpha": -0.20376580327975774,
-      "capm_expected_return": 0.26609076090798384,
-      "actual_return": 0.06232495762822608,
-      "market_return": 0.18157657689835816
+      "volatility": 0.02313799842683481,
+      "annualized_volatility": 0.36730433803925183,
+      "maximum_drawdown": -0.46497158402566974,
+      "sharpe_ratio": 0.1585050414970026,
+      "sortino_ratio": 0.23108549846253204,
+      "calmar_ratio": -0.019328761511795023,
+      "beta": 1.471033152538489,
+      "alpha": -0.2028438233644912,
+      "capm_expected_return": 0.2610634127074319,
+      "actual_return": 0.05821958934294068,
+      "market_return": 0.17746942837891022
     },
     "capm": {
-      "beta": 1.4654465099699205,
-      "alpha": -0.20376580327975774,
-      "capm_expected_return": 0.26609076090798384,
-      "actual_return": 0.06232495762822608,
-      "market_return": 0.18157657689835816,
-      "interpretation": "Beta 1.47: Moves roughly 47% more than the market. CAPM expected return is 26.61%; realized alpha is -20.38%, meaning negative alpha versus CAPM."
+      "beta": 1.471033152538489,
+      "alpha": -0.2028438233644912,
+      "capm_expected_return": 0.2610634127074319,
+      "actual_return": 0.05821958934294068,
+      "market_return": 0.17746942837891022,
+      "interpretation": "Beta 1.47: Moves roughly 47% more than the market. CAPM expected return is 26.11%; realized alpha is -20.28%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.06232495762822608,
+      "actual_return": 0.05821958934294068,
       "components": {
-        "market_component": 0.26609076090798384,
+        "market_component": 0.2610634127074319,
         "momentum_component": 0.0,
-        "volatility_drag": -0.023386418689021804,
-        "alpha_component": -0.20376580327975774
+        "volatility_drag": -0.023460867607850367,
+        "alpha_component": -0.2028438233644912
       },
       "component_weights_pct": {
-        "market_component": 53.95,
+        "market_component": 53.57,
         "momentum_component": 0.0,
-        "volatility_drag": 4.74,
-        "alpha_component": 41.31
+        "volatility_drag": 4.81,
+        "alpha_component": 41.62
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 119.25000076293945,
-      "sma50": 121.02989624023438,
-      "sma200": 136.27947536468506,
-      "ema20": 120.39838375940325,
-      "ema50": 120.13043340870834,
-      "ema200": 130.7745857805014
+      "sma20": 119.2010009765625,
+      "sma50": 121.0102963256836,
+      "sma200": 136.27457592010498,
+      "ema20": 120.30505083310801,
+      "ema50": 120.09200222928534,
+      "ema200": 130.76483492615336
     },
     "momentum": {
-      "3m": 0.08983516407112568,
-      "6m": -0.21467021996435054,
-      "12m": -0.12640904670806496,
+      "3m": 0.08067535430707529,
+      "6m": -0.22127073316517143,
+      "12m": -0.13375137443573537,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 5433827.75,
-      "relative_volume": 0.35824746192957624,
+      "average_volume": 5478821.05,
+      "relative_volume": 0.5195499130237152,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -433,5 +433,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BX\nRating: Drop | Score: 38.25/100 | Confidence: 27.65/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 108.06999969482422 | Resistance: 130.19000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.472919\nNews/Catalyst: Sector Update: Financial Stocks Advance Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BX\nRating: Drop | Score: 35.75/100 | Confidence: 25.86/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 108.06999969482422 | Resistance: 130.19000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.472919\nNews/Catalyst: Sector Update: Financial Stocks Advance Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
