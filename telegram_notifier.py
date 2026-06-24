@@ -3,7 +3,10 @@ import os
 import re
 import time
 
-import requests
+try:
+    import requests
+except ModuleNotFoundError:
+    requests = None
 
 
 def load_telegram_config():
@@ -164,6 +167,9 @@ def format_sector_summary(sector_map, regime_label="Unknown"):
 
 
 def _execute_send(url, chat_id, text, retries=3):
+    if requests is None:
+        print("Telegram Failure: requests is not installed.")
+        return False
     payload = {
         "chat_id": chat_id,
         "text": text,
@@ -251,3 +257,91 @@ def send_bundle(watchlist_reports, sector_map, regime_label="Unknown", run_summa
             send_long_message(sector_summary)
 
     return True
+
+
+def format_quant_intelligence_report(quant_payload, portfolio_payload=None):
+    portfolio_payload = portfolio_payload or {}
+    regime = quant_payload.get("market_regime", {})
+    factors = quant_payload.get("factor_model", {})
+    portfolio_factors = quant_payload.get("portfolio_factor_exposure", {})
+    pairs = quant_payload.get("pairs_trading", {}).get("candidates", [])
+    backtests = quant_payload.get("signal_backtests", {})
+
+    lines = [
+        "*QUANT RESEARCH INTELLIGENCE*",
+        _format_metric_line("Regime", regime.get("regime", "Unknown")),
+        _format_metric_line("Regime confidence", f"{regime.get('regime_confidence', 0)}%"),
+        _format_metric_line("Model", regime.get("regime_model", "N/A")),
+    ]
+
+    transitions = regime.get("transition_probabilities", {})
+    if transitions:
+        transition_text = ", ".join(f"{name} {probability:.1f}%" for name, probability in list(transitions.items())[:3])
+        lines.append(_format_metric_line("Next-state probabilities", transition_text))
+
+    lines.extend(["", "*Factor leaderboard*"])
+    for item in factors.get("leaderboard", [])[:5]:
+        scores = item.get("scores", {})
+        driver = max(
+            ((name, value) for name, value in scores.items() if value is not None),
+            key=lambda pair: pair[1],
+            default=("N/A", 0),
+        )
+        lines.append(
+            f"- `{_escape_md(item.get('ticker'))}` {_escape_md(str(item.get('composite_score')))} "
+            f"| {_escape_md(driver[0])} {_escape_md(str(driver[1]))}"
+        )
+
+    exposures = portfolio_factors.get("exposures", {})
+    if exposures:
+        lines.extend(["", "*Portfolio factor exposure*"])
+        for name, value in sorted(exposures.items(), key=lambda item: item[1], reverse=True):
+            lines.append(f"- {_escape_md(name)}: {_escape_md(f'{value:.1f}/100')}")
+    for warning in portfolio_factors.get("warnings", [])[:3]:
+        lines.append(f"- Warning: {_escape_md(warning)}")
+
+    portfolio_warnings = portfolio_payload.get("risk_warnings", [])
+    if portfolio_payload:
+        lines.extend(
+            [
+                "",
+                "*Portfolio risk*",
+                _format_metric_line("Health", f"{portfolio_payload.get('portfolio_health', {}).get('score', 'N/A')}/100"),
+                _format_metric_line("Sortino", f"{portfolio_payload.get('sortino', {}).get('sortino_ratio', 0):.2f}"),
+                _format_metric_line("One-day CVaR", f"{portfolio_payload.get('tail_risk', {}).get('conditional_value_at_risk', 0) * 100:.2f}%"),
+                _format_metric_line("Average correlation", f"{portfolio_payload.get('correlation', {}).get('average_correlation', 0):.2f}"),
+            ]
+        )
+        for warning in portfolio_warnings[:3]:
+            lines.append(f"- {_escape_md(warning)}")
+
+    if pairs:
+        lines.extend(["", "*New pair opportunities*"])
+        for pair in pairs[:3]:
+            z_value = pair.get("spread_zscore", 0)
+            p_value = pair.get("engle_granger_p_value")
+            p_text = f"{p_value:.3f}" if p_value is not None else "N/A"
+            lines.append(
+                f"- `{_escape_md(pair.get('pair'))}` z={_escape_md(f'{z_value:.2f}')} "
+                f"p={_escape_md(p_text)} "
+                f"| {_escape_md(pair.get('signal', {}).get('action', 'watch'))}"
+            )
+
+    validated = []
+    for ticker, result in backtests.items():
+        performance = result.get("performance", {})
+        robustness = result.get("robustness", {})
+        if result.get("available") and performance.get("sharpe_ratio", 0) > 0:
+            validated.append((ticker, performance.get("sharpe_ratio", 0), robustness.get("positive_fold_pct", 0)))
+    if validated:
+        lines.extend(["", "*Historically stronger signals*"])
+        for ticker, sharpe, fold_pct in sorted(validated, key=lambda item: item[1], reverse=True)[:5]:
+            lines.append(f"- `{_escape_md(ticker)}` Sharpe {_escape_md(f'{sharpe:.2f}')} | positive folds {_escape_md(f'{fold_pct * 100:.0f}%')}")
+
+    lines.extend(
+        [
+            "",
+            _format_metric_line("Uncertainty", "Models can fail during structural breaks; position sizing and out-of-sample evidence remain mandatory."),
+        ]
+    )
+    return "\n".join(lines)
