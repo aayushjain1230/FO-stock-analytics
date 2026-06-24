@@ -1,4 +1,4 @@
-﻿"""Machine-learning research helpers for signal validation."""
+"""Machine-learning research helpers for signal validation."""
 
 from typing import Dict, Iterable, List
 
