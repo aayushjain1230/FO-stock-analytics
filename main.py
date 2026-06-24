@@ -676,7 +676,11 @@ def _build_factor_feature_frame(price_data, fundamentals_by_ticker, benchmark_da
         fundamental = fundamentals_by_ticker.get(ticker, {})
         beta = None
         if benchmark_returns is not None:
-            aligned = pd.concat([returns.rename("asset"), benchmark_returns.rename("market")], axis=1).dropna()
+            aligned = pd.concat(
+                [returns.rename("asset"), benchmark_returns.rename("market")],
+                axis=1,
+                sort=False,
+            ).dropna()
             if len(aligned) >= 30 and aligned["market"].var() > 0:
                 beta = aligned.cov().loc["asset", "market"] / aligned["market"].var()
         rows[ticker] = {
