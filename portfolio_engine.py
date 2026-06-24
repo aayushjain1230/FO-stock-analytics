@@ -7,7 +7,11 @@ from typing import Dict, Iterable, Optional
 
 import numpy as np
 import pandas as pd
-from scipy.optimize import minimize
+
+try:
+    from scipy.optimize import minimize
+except Exception:
+    minimize = None
 
 import quant_analytics
 
@@ -169,6 +173,37 @@ def sharpe_engine(portfolio_return_series: pd.Series, risk_free_rate: float = 0.
     }
 
 
+def downside_and_tail_risk(
+    portfolio_return_series: pd.Series,
+    risk_free_rate: float = 0.045,
+    confidence: float = 0.95,
+) -> Dict:
+    returns = pd.to_numeric(portfolio_return_series, errors="coerce").dropna()
+    if returns.empty:
+        return {
+            "sortino_ratio": 0.0,
+            "value_at_risk": 0.0,
+            "conditional_value_at_risk": 0.0,
+            "confidence": confidence,
+        }
+    target_daily = risk_free_rate / TRADING_DAYS
+    downside = np.minimum(returns - target_daily, 0)
+    downside_deviation = float(np.sqrt(np.mean(downside**2)) * math.sqrt(TRADING_DAYS))
+    annual_return = quant_analytics.cagr(returns)
+    sortino = (annual_return - risk_free_rate) / downside_deviation if downside_deviation else 0.0
+    cutoff = float(np.quantile(returns, 1 - confidence))
+    tail = returns[returns <= cutoff]
+    cvar = float(tail.mean()) if not tail.empty else cutoff
+    return {
+        "sortino_ratio": float(sortino),
+        "downside_deviation": downside_deviation,
+        "value_at_risk": cutoff,
+        "conditional_value_at_risk": cvar,
+        "confidence": confidence,
+        "interpretation": "VaR and CVaR are one-day historical estimates; CVaR describes the average loss beyond VaR.",
+    }
+
+
 def risk_contributions(price_frame: pd.DataFrame, weights: pd.Series) -> Dict:
     returns = price_frame[weights.index].pct_change().dropna()
     covariance = returns.cov().values
@@ -314,8 +349,12 @@ def optimize_portfolio(price_frame: pd.DataFrame, weights: pd.Series, risk_free_
         vol = math.sqrt(max(candidate.T @ covariance @ candidate, 1e-12))
         return -((ret - risk_free_rate) / vol)
 
-    result = minimize(negative_sharpe, np.repeat(1 / n, n), bounds=[(0, 1)] * n, constraints={"type": "eq", "fun": lambda x: x.sum() - 1})
-    optimized = result.x if result.success else np.repeat(1 / n, n)
+    if minimize is None:
+        result = None
+        optimized = np.repeat(1 / n, n)
+    else:
+        result = minimize(negative_sharpe, np.repeat(1 / n, n), bounds=[(0, 1)] * n, constraints={"type": "eq", "fun": lambda x: x.sum() - 1})
+        optimized = result.x if result.success else np.repeat(1 / n, n)
     current_returns = portfolio_returns(price_frame, weights)
     optimized_returns = returns.dot(optimized)
     current_vol = current_returns.std() * math.sqrt(TRADING_DAYS)
@@ -327,7 +366,8 @@ def optimize_portfolio(price_frame: pd.DataFrame, weights: pd.Series, risk_free_
         "optimized_sharpe": quant_analytics.sharpe_ratio(optimized_returns, risk_free_rate),
         "risk_reduction_opportunity": _safe_float((current_vol - optimized_vol) / current_vol if current_vol else 0.0, 0.0),
         "optimized_weights": {ticker: round(float(weight * 100), 2) for ticker, weight in zip(weights.index, optimized)},
-        "note": "Educational Markowitz comparison only; not investment advice.",
+        "optimizer_available": minimize is not None,
+        "note": "Educational Markowitz comparison only; equal-weight fallback is used when SciPy optimization is unavailable.",
     }
 
 
@@ -347,10 +387,19 @@ def factor_exposure(price_frame: pd.DataFrame, weights: pd.Series, factor_prices
     x = aligned.drop(columns=["portfolio"]).values
     x = np.column_stack([np.ones(len(x)), x])
     coefficients = np.linalg.lstsq(x, y, rcond=None)[0][1:]
-    raw = {name: abs(float(value)) for name, value in zip(aligned.drop(columns=["portfolio"]).columns, coefficients)}
+    signed = {name: float(value) for name, value in zip(aligned.drop(columns=["portfolio"]).columns, coefficients)}
+    raw = {name: abs(value) for name, value in signed.items()}
     total = sum(raw.values()) or 1
+    normalized = {name: round(value / total * 100, 2) for name, value in raw.items()}
+    warnings = [
+        f"{name} explains {value:.1f}% of modeled factor sensitivity."
+        for name, value in normalized.items()
+        if value >= 35
+    ]
     return {
-        "main_risk_drivers": {name: round(value / total * 100, 2) for name, value in raw.items()},
+        "main_risk_drivers": normalized,
+        "signed_exposures": {name: round(value, 4) for name, value in signed.items()},
+        "concentration_warnings": warnings,
         "interpretation": "Factor exposures are estimated with linear regression on ETF proxies.",
     }
 
@@ -365,6 +414,7 @@ def generate_portfolio_report(positions: Iterable[Dict], price_data: Dict[str, p
     variance = portfolio_variance_metrics(price_frame, weights)
     corr = correlation_analysis(price_frame, weights)
     sharpe = sharpe_engine(returns, risk_free_rate=risk_free_rate)
+    tail_risk = downside_and_tail_risk(returns, risk_free_rate=risk_free_rate)
     risk_contrib = risk_contributions(price_frame, weights)
     diversification = diversification_score(weights, corr["average_correlation"], sector_exposure)
     metrics = {
@@ -374,6 +424,16 @@ def generate_portfolio_report(positions: Iterable[Dict], price_data: Dict[str, p
         "variance": variance,
         "correlation": corr,
         "sharpe": sharpe,
+        "sortino": {
+            "sortino_ratio": tail_risk["sortino_ratio"],
+            "downside_deviation": tail_risk["downside_deviation"],
+        },
+        "tail_risk": {
+            "value_at_risk": tail_risk["value_at_risk"],
+            "conditional_value_at_risk": tail_risk["conditional_value_at_risk"],
+            "confidence": tail_risk["confidence"],
+            "interpretation": tail_risk["interpretation"],
+        },
         "maximum_drawdown": quant_analytics.max_drawdown(returns),
         "risk_contributions": risk_contrib,
         "sector_exposure": {key: round(float(value * 100), 2) for key, value in sector_exposure.items()},
@@ -386,9 +446,31 @@ def generate_portfolio_report(positions: Iterable[Dict], price_data: Dict[str, p
         "factor_exposure": factor_exposure(price_frame, weights, factor_prices=factor_prices),
     }
     metrics["portfolio_health"] = portfolio_health_score(metrics)
+    metrics["risk_warnings"] = portfolio_risk_warnings(metrics)
     metrics["why_now"] = portfolio_why_now(metrics)
     metrics["report"] = portfolio_intelligence_text(metrics)
     return metrics
+
+
+def portfolio_risk_warnings(metrics: Dict) -> list:
+    warnings = []
+    top_risk = max(metrics.get("risk_contributions", {}).items(), key=lambda item: item[1], default=None)
+    if top_risk and top_risk[1] >= 35:
+        warnings.append(f"{top_risk[0]} contributes {top_risk[1]:.1f}% of portfolio variance.")
+    largest = metrics.get("diversification", {}).get("largest_position", {})
+    if largest.get("weight", 0) >= 20:
+        warnings.append(f"{largest.get('ticker')} is {largest.get('weight'):.1f}% of portfolio value.")
+    largest_sector = metrics.get("diversification", {}).get("largest_sector_weight")
+    if largest_sector is not None and largest_sector >= 35:
+        warnings.append(f"Largest sector exposure is {largest_sector:.1f}%.")
+    average_corr = metrics.get("correlation", {}).get("average_correlation", 0)
+    if average_corr >= 0.65:
+        warnings.append(f"Average holding correlation is elevated at {average_corr:.2f}.")
+    cvar = metrics.get("tail_risk", {}).get("conditional_value_at_risk", 0)
+    if cvar <= -0.03:
+        warnings.append(f"Historical one-day CVaR is {cvar * 100:.2f}%.")
+    warnings.extend(metrics.get("factor_exposure", {}).get("concentration_warnings", []))
+    return warnings
 
 
 def portfolio_why_now(metrics: Dict, previous: Optional[Dict] = None) -> Dict:
