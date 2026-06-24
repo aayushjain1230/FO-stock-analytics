@@ -1,502 +1,1978 @@
 {
-  "generated_at": "2026-06-24T15:31:36.235465",
+  "generated_at": "2026-06-24T17:10:36.499918",
   "benchmark": "SPY",
-  "summary": "Research leaders: GE (83), TSM (75), AAPL (73). Weakest research profiles: MSFT (18), TSLA (25), NVDA (35). Review risk, liquidity, and options data before forming any conclusion.",
-  "tickers": [
-    {
-      "ticker": "AAPL",
-      "score": 56,
-      "rating": "Hold",
-      "close": 299.02,
-      "weekly_rsi": 75.47,
-      "monthly_rsi": 73.42,
-      "above_sma200": true,
-      "rs_status": "leading",
-      "relative_volume": "0.2x",
-      "quant_score": 73,
-      "quant_label": "Watch closely",
-      "annualized_volatility": 0.2786273976481396,
-      "max_drawdown": -0.333605140245371,
-      "sharpe_ratio": 0.646323970132017,
-      "beta": 1.1295915098680658,
-      "capm_expected_return": 0.19942141817940262,
-      "actual_return": 0.2250835658354978,
-      "alpha": 0.025662147656095174,
-      "capm_interpretation": "Beta 1.13: Moves roughly in line with the market. CAPM expected return is 19.94%; realized alpha is 2.57%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.2250835658354978,
-        "components": {
-          "market_component": 0.19942141817940262,
-          "momentum_component": 0.1224633594463817,
-          "volatility_drag": -0.00572547952962792,
-          "alpha_component": 0.025662147656095174
-        },
-        "component_weights_pct": {
-          "market_component": 56.45,
-          "momentum_component": 34.67,
-          "volatility_drag": 1.62,
-          "alpha_component": 7.26
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
-      },
-      "volatility_regime": "Normal volatility",
-      "final_score": 55.5,
-      "confidence": 27.8,
-      "risk_level": "Controlled",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "AAPL is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.86%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). CAPM expected return is 19.94%, actual annualized return is 22.51%, and estimated alpha is 2.57%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+  "market_regime": {
+    "regime": "Sideways",
+    "heuristic_regime": "Bull market",
+    "regime_confidence": 100.0,
+    "regime_model": "Gaussian HMM",
+    "transition_probabilities": {
+      "Sideways": 86.23,
+      "Bull Trend": 9.91,
+      "Bear Trend": 3.85,
+      "High Volatility": 0.0
     },
-    {
-      "ticker": "AMD",
-      "score": 50,
-      "rating": "Avoid",
-      "close": 520.05,
-      "weekly_rsi": 84.02,
-      "monthly_rsi": 83.87,
-      "above_sma200": true,
-      "rs_status": "leading",
-      "relative_volume": "0.28x",
-      "quant_score": 65,
-      "quant_label": "Watch closely",
-      "annualized_volatility": 0.6112128642971704,
-      "max_drawdown": -0.5748532494558936,
-      "sharpe_ratio": 1.194885915333816,
-      "beta": 2.2242482697799684,
-      "capm_expected_return": 0.349067062475197,
-      "actual_return": 0.7753296428195275,
-      "alpha": 0.42626258034433057,
-      "capm_interpretation": "Beta 2.22: Moves roughly 122% more than the market. CAPM expected return is 34.91%; realized alpha is 42.63%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.7753296428195275,
-        "components": {
-          "market_component": 0.349067062475197,
-          "momentum_component": 0.7533412013793908,
-          "volatility_drag": -0.07224257285943407,
-          "alpha_component": 0.42626258034433057
-        },
-        "component_weights_pct": {
-          "market_component": 21.8,
-          "momentum_component": 47.06,
-          "volatility_drag": 4.51,
-          "alpha_component": 26.63
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
-      },
-      "volatility_regime": "High volatility",
-      "final_score": 50.0,
-      "confidence": 19.59,
-      "risk_level": "High",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.12%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). CAPM expected return is 34.91%, actual annualized return is 77.53%, and estimated alpha is 42.63%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+    "strategy_recommendation": {
+      "risk_posture": "Selective",
+      "preferred": [
+        "pairs trading",
+        "mean reversion",
+        "income"
+      ],
+      "avoid": [
+        "late breakouts"
+      ]
     },
-    {
-      "ticker": "AMZN",
-      "score": 49,
-      "rating": "Hold",
-      "close": 241.76,
-      "weekly_rsi": 63.64,
-      "monthly_rsi": 69.14,
-      "above_sma200": true,
-      "rs_status": "lagging",
-      "relative_volume": "0.4x",
-      "quant_score": 53,
-      "quant_label": "Neutral",
-      "annualized_volatility": 0.32914861859593797,
-      "max_drawdown": -0.30876638431876047,
-      "sharpe_ratio": 0.4316224715431348,
-      "beta": 1.3737471391133687,
-      "capm_expected_return": 0.2327988455017342,
-      "actual_return": 0.1870679402633874,
-      "alpha": -0.045730905238346775,
-      "capm_interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 23.28%; realized alpha is -4.57%, meaning negative alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.1870679402633874,
-        "components": {
-          "market_component": 0.2327988455017342,
-          "momentum_component": 0.0399218030066702,
-          "volatility_drag": -0.015829723719187595,
-          "alpha_component": -0.045730905238346775
-        },
-        "component_weights_pct": {
-          "market_component": 69.64,
-          "momentum_component": 11.94,
-          "volatility_drag": 4.74,
-          "alpha_component": 13.68
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
-      },
-      "volatility_regime": "High volatility",
-      "final_score": 48.75,
-      "confidence": 23.26,
-      "risk_level": "Controlled",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.91%, max drawdown is -30.88%, and the research score is 53/100 (Neutral). CAPM expected return is 23.28%, actual annualized return is 18.71%, and estimated alpha is -4.57%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+    "regime_research_mindset": {
+      "signal": "market_regime",
+      "thesis": "Market behavior is better modeled as a changing latent state than as one permanent distribution.",
+      "evidence": [
+        "Model: Gaussian HMM",
+        "Current state confidence: 100.0%",
+        "Observations: 443"
+      ],
+      "assumptions": [
+        "Historical return, volatility, trend, and drawdown contain information about the latent state.",
+        "State behavior is persistent enough for transition probabilities to be useful."
+      ],
+      "failure_modes": [
+        "Regime labels are assigned after estimation and may be economically ambiguous.",
+        "Transition probabilities can change after structural breaks.",
+        "The current state may be revised as new observations arrive."
+      ],
+      "regime_weaknesses": [
+        "Structural break",
+        "Policy shock",
+        "Sparse crisis history"
+      ],
+      "confidence": 100.0,
+      "uncertainty": "Lower uncertainty",
+      "historical_robustness": {},
+      "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
     },
-    {
-      "ticker": "FIZZ",
-      "score": 35,
-      "rating": "Drop",
-      "close": 34.51,
-      "weekly_rsi": 52.68,
-      "monthly_rsi": 43.04,
-      "above_sma200": false,
-      "rs_status": "lagging",
-      "relative_volume": "0.24x",
-      "quant_score": 45,
-      "quant_label": "Neutral",
-      "annualized_volatility": 0.27903664980376036,
-      "max_drawdown": -0.40083270711607855,
-      "sharpe_ratio": -0.4802847991299326,
-      "beta": 0.09982970756807992,
-      "capm_expected_return": 0.05864727415567995,
-      "actual_return": -0.08901706130088831,
-      "alpha": -0.14766433545656826,
-      "capm_interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 5.86%; realized alpha is -14.77%, meaning negative alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": -0.08901706130088831,
-        "components": {
-          "market_component": 0.05864727415567995,
-          "momentum_component": 0.0,
-          "volatility_drag": -0.0058073299607520725,
-          "alpha_component": -0.14766433545656826
-        },
-        "component_weights_pct": {
-          "market_component": 27.65,
-          "momentum_component": 0.0,
-          "volatility_drag": 2.74,
-          "alpha_component": 69.61
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
-      },
-      "volatility_regime": "High volatility",
-      "final_score": 34.75,
-      "confidence": 14.67,
-      "risk_level": "Moderate",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "FIZZ is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 27.90%, max drawdown is -40.08%, and the research score is 45/100 (Neutral). CAPM expected return is 5.86%, actual annualized return is -8.90%, and estimated alpha is -14.77%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+    "health_score": 76.52,
+    "risk_environment": "Neutral",
+    "buy_environment": "Favorable",
+    "vix_status": {
+      "level": 18.98,
+      "regime": "Normal"
     },
-    {
-      "ticker": "GE",
-      "score": 68,
-      "rating": "Watch",
-      "close": 368.9,
-      "weekly_rsi": 66.68,
-      "monthly_rsi": 73.4,
-      "above_sma200": true,
-      "rs_status": "leading",
-      "relative_volume": "0.45x",
-      "quant_score": 83,
-      "quant_label": "Research priority",
-      "annualized_volatility": 0.3293384578150045,
-      "max_drawdown": -0.21364260712396554,
-      "sharpe_ratio": 1.3185659102466438,
-      "beta": 1.1674959121582775,
-      "capm_expected_return": 0.20460315999116674,
-      "actual_return": 0.4792544634080674,
-      "alpha": 0.27465130341690064,
-      "capm_interpretation": "Beta 1.17: Moves roughly in line with the market. CAPM expected return is 20.46%; realized alpha is 27.47%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.4792544634080674,
-        "components": {
-          "market_component": 0.20460315999116674,
-          "momentum_component": 0.1241299580413901,
-          "volatility_drag": -0.015867691563000896,
-          "alpha_component": 0.27465130341690064
-        },
-        "component_weights_pct": {
-          "market_component": 33.04,
-          "momentum_component": 20.05,
-          "volatility_drag": 2.56,
-          "alpha_component": 44.35
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    "index_trends": {
+      "sp500": {
+        "latest": 735.010009765625,
+        "above_sma20": false,
+        "above_sma50": true,
+        "above_sma200": true,
+        "trend_score": 66.67,
+        "one_month_return": -0.0117166976852362,
+        "three_month_return": 0.12817838748039434,
+        "volatility": 0.16761704180329062
       },
-      "volatility_regime": "Normal volatility",
-      "final_score": 68.25,
-      "confidence": 43.25,
-      "risk_level": "Controlled",
-      "why_now": "52-week high",
-      "why_now_strength": 65,
-      "what_invalidates": "Failed breakout below prior range high",
-      "research_note": "GE is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.93%, max drawdown is -21.36%, and the research score is 83/100 (Research priority). CAPM expected return is 20.46%, actual annualized return is 47.93%, and estimated alpha is 27.47%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "nasdaq": {
+        "latest": 711.8200073242188,
+        "above_sma20": false,
+        "above_sma50": true,
+        "above_sma200": true,
+        "trend_score": 66.67,
+        "one_month_return": -0.006881473388587689,
+        "three_month_return": 0.22025116597828398,
+        "volatility": 0.3158587634427556
+      },
+      "russell2000": {
+        "latest": 297.7099914550781,
+        "above_sma20": true,
+        "above_sma50": true,
+        "above_sma200": true,
+        "trend_score": 100.0,
+        "one_month_return": 0.04663989527765611,
+        "three_month_return": 0.1995255440301804,
+        "volatility": 0.22639240468521976
+      },
+      "dow": {
+        "latest": 519.8599853515625,
+        "above_sma20": true,
+        "above_sma50": true,
+        "above_sma200": true,
+        "trend_score": 100.0,
+        "one_month_return": 0.029950527854443187,
+        "three_month_return": 0.13144242541462914,
+        "volatility": 0.14375202618599295
+      },
+      "vix": {
+        "latest": 18.979999542236328,
+        "above_sma20": true,
+        "above_sma50": true,
+        "above_sma200": true,
+        "trend_score": 100.0,
+        "one_month_return": 0.1440626502511284,
+        "three_month_return": -0.25069089619407514,
+        "volatility": 1.853483299070022
+      }
     },
-    {
-      "ticker": "GOOGL",
-      "score": 51,
-      "rating": "Hold",
-      "close": 350.58,
-      "weekly_rsi": 66.13,
-      "monthly_rsi": 82.26,
-      "above_sma200": true,
-      "rs_status": "lagging",
-      "relative_volume": "0.31x",
-      "quant_score": 63,
-      "quant_label": "Watch closely",
-      "annualized_volatility": 0.30903271457161935,
-      "max_drawdown": -0.2980588021903756,
-      "sharpe_ratio": 1.1130292876168832,
-      "beta": 1.1012172093948307,
-      "capm_expected_return": 0.1955424940898995,
-      "actual_return": 0.38896246214996105,
-      "alpha": 0.19341996806006156,
-      "capm_interpretation": "Beta 1.10: Moves roughly in line with the market. CAPM expected return is 19.55%; realized alpha is 19.34%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.38896246214996105,
-        "components": {
-          "market_component": 0.1955424940898995,
-          "momentum_component": 0.2820840129629232,
-          "volatility_drag": -0.01180654291432387,
-          "alpha_component": 0.19341996806006156
-        },
-        "component_weights_pct": {
-          "market_component": 28.64,
-          "momentum_component": 41.31,
-          "volatility_drag": 1.73,
-          "alpha_component": 28.33
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    "sector_rankings": [
+      {
+        "name": "Technology",
+        "latest": 183.24000549316406,
+        "above_sma50": true,
+        "one_month_return": 0.017010391042177497,
+        "three_month_return": 0.3474734739818308,
+        "momentum_score": 100.0
       },
-      "volatility_regime": "Normal volatility",
-      "final_score": 51.25,
-      "confidence": 25.03,
-      "risk_level": "Controlled",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "GOOGL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.90%, max drawdown is -29.81%, and the research score is 63/100 (Watch closely). CAPM expected return is 19.55%, actual annualized return is 38.90%, and estimated alpha is 19.34%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      {
+        "name": "Industrials",
+        "latest": 180.4499969482422,
+        "above_sma50": true,
+        "one_month_return": 0.0531172784233942,
+        "three_month_return": 0.10301192199692477,
+        "momentum_score": 90.61
+      },
+      {
+        "name": "Financials",
+        "latest": 53.814998626708984,
+        "above_sma50": true,
+        "one_month_return": 0.039728763442247184,
+        "three_month_return": 0.09585049312296912,
+        "momentum_score": 88.56
+      },
+      {
+        "name": "Real Estate",
+        "latest": 44.45500183105469,
+        "above_sma50": true,
+        "one_month_return": 0.006385849125527532,
+        "three_month_return": 0.113044225735635,
+        "momentum_score": 86.94
+      },
+      {
+        "name": "Healthcare",
+        "latest": 153.13999938964844,
+        "above_sma50": true,
+        "one_month_return": 0.026188494996655542,
+        "three_month_return": 0.06233437052649582,
+        "momentum_score": 83.85
+      },
+      {
+        "name": "Materials",
+        "latest": 51.34000015258789,
+        "above_sma50": true,
+        "one_month_return": 0.024696073857144007,
+        "three_month_return": 0.06361124818272534,
+        "momentum_score": 83.83
+      },
+      {
+        "name": "Consumer Staples",
+        "latest": 84.4749984741211,
+        "above_sma50": true,
+        "one_month_return": 0.0030793646422153653,
+        "three_month_return": 0.04871333488413332,
+        "momentum_score": 80.18
+      },
+      {
+        "name": "Utilities",
+        "latest": 45.165000915527344,
+        "above_sma50": true,
+        "one_month_return": 0.0022801539245693725,
+        "three_month_return": 0.008059463221818497,
+        "momentum_score": 76.03
+      },
+      {
+        "name": "Consumer Discretionary",
+        "latest": 115.87000274658203,
+        "above_sma50": false,
+        "one_month_return": -0.02583576302774293,
+        "three_month_return": 0.05854208853500631,
+        "momentum_score": 53.27
+      },
+      {
+        "name": "Communication Services",
+        "latest": 106.83000183105469,
+        "above_sma50": false,
+        "one_month_return": -0.07233741467394494,
+        "three_month_return": -0.03619255634338536,
+        "momentum_score": 39.15
+      },
+      {
+        "name": "Energy",
+        "latest": 53.5099983215332,
+        "above_sma50": false,
+        "one_month_return": -0.09403430861086648,
+        "three_month_return": -0.11413707096054249,
+        "momentum_score": 29.18
+      }
+    ],
+    "sector_participation": 72.73,
+    "risk_on_risk_off": {
+      "score": 3.09,
+      "label": "Neutral"
     },
-    {
-      "ticker": "MSFT",
-      "score": 32,
-      "rating": "Drop",
-      "close": 374.68,
-      "weekly_rsi": 46.57,
-      "monthly_rsi": 58.83,
-      "above_sma200": false,
-      "rs_status": "lagging",
-      "relative_volume": "0.25x",
-      "quant_score": 18,
-      "quant_label": "High risk / weak setup",
-      "annualized_volatility": 0.25768897540350594,
-      "max_drawdown": -0.33910095902930937,
-      "sharpe_ratio": -0.3627507133282979,
-      "beta": 0.9132182440401476,
-      "capm_expected_return": 0.1698419938712662,
-      "actual_return": -0.048476859644459844,
-      "alpha": -0.21831885351572605,
-      "capm_interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 16.98%; realized alpha is -21.83%, meaning negative alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": -0.048476859644459844,
-        "components": {
-          "market_component": 0.1698419938712662,
-          "momentum_component": 0.0,
-          "volatility_drag": -0.0015377950807011877,
-          "alpha_component": -0.21831885351572605
-        },
-        "component_weights_pct": {
-          "market_component": 43.58,
-          "momentum_component": 0.0,
-          "volatility_drag": 0.39,
-          "alpha_component": 56.02
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
-      },
-      "volatility_regime": "High volatility",
-      "final_score": 31.5,
-      "confidence": 12.53,
-      "risk_level": "Controlled",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 25.77%, max drawdown is -33.91%, and the research score is 18/100 (High risk / weak setup). CAPM expected return is 16.98%, actual annualized return is -4.85%, and estimated alpha is -21.83%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+    "breadth_proxy": 60.0
+  },
+  "factor_model": {
+    "available": true,
+    "factor_weights": {
+      "momentum": 0.25,
+      "quality": 0.22,
+      "growth": 0.2,
+      "value": 0.18,
+      "low_volatility": 0.15
     },
-    {
-      "ticker": "NVDA",
-      "score": 43,
-      "rating": "Drop",
-      "close": 200.95,
-      "weekly_rsi": 63.12,
-      "monthly_rsi": 76.41,
-      "above_sma200": true,
-      "rs_status": "lagging",
-      "relative_volume": "0.25x",
-      "quant_score": 35,
-      "quant_label": "Neutral",
-      "annualized_volatility": 0.479096227464047,
-      "max_drawdown": -0.368810311256193,
-      "sharpe_ratio": 0.7054659696580324,
-      "beta": 2.0085396376520084,
-      "capm_expected_return": 0.3195784972764118,
-      "actual_return": 0.38298608466742917,
-      "alpha": 0.06340758739101737,
-      "capm_interpretation": "Beta 2.01: Moves roughly 101% more than the market. CAPM expected return is 31.96%; realized alpha is 6.34%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.38298608466742917,
-        "components": {
-          "market_component": 0.3195784972764118,
-          "momentum_component": 0.0989242464675334,
-          "volatility_drag": -0.045819245492809406,
-          "alpha_component": 0.06340758739101737
+    "stocks": {
+      "AAPL": {
+        "scores": {
+          "momentum": 60.6,
+          "quality": 57.5,
+          "growth": 37.5,
+          "value": 40.0,
+          "low_volatility": 63.6
         },
-        "component_weights_pct": {
-          "market_component": 60.56,
-          "momentum_component": 18.75,
-          "volatility_drag": 8.68,
-          "alpha_component": 12.02
+        "composite_score": 52.0,
+        "contributions": {
+          "momentum": 15.15,
+          "quality": 12.65,
+          "growth": 7.5,
+          "value": 7.2,
+          "low_volatility": 9.54
         },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Low Volatility: 63.6/100, Momentum: 60.6/100, Quality: 57.5/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 63.6/100",
+            "Momentum: 60.6/100",
+            "Quality: 57.5/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
       },
-      "volatility_regime": "Normal volatility",
-      "final_score": 43.25,
-      "confidence": 19.02,
-      "risk_level": "Moderate",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "NVDA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 47.91%, max drawdown is -36.88%, and the research score is 35/100 (Neutral). CAPM expected return is 31.96%, actual annualized return is 38.30%, and estimated alpha is 6.34%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      "AMD": {
+        "scores": {
+          "momentum": 100.0,
+          "quality": 30.0,
+          "growth": 90.0,
+          "value": 30.0,
+          "low_volatility": 6.1
+        },
+        "composite_score": 55.9,
+        "contributions": {
+          "momentum": 25.0,
+          "quality": 6.6,
+          "growth": 18.0,
+          "value": 5.4,
+          "low_volatility": 0.91
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 100.0/100, Growth: 90.0/100, Quality: 30.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 100.0/100",
+            "Growth: 90.0/100",
+            "Quality: 30.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "AMZN": {
+        "scores": {
+          "momentum": 27.3,
+          "quality": 35.0,
+          "growth": 52.5,
+          "value": 50.0,
+          "low_volatility": 54.5
+        },
+        "composite_score": 42.2,
+        "contributions": {
+          "momentum": 6.83,
+          "quality": 7.7,
+          "growth": 10.5,
+          "value": 9.0,
+          "low_volatility": 8.17
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Low Volatility: 54.5/100, Growth: 52.5/100, Value: 50.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 54.5/100",
+            "Growth: 52.5/100",
+            "Value: 50.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "FIZZ": {
+        "scores": {
+          "momentum": 27.3,
+          "quality": 55.0,
+          "growth": 15.0,
+          "value": 85.0,
+          "low_volatility": 60.6
+        },
+        "composite_score": 46.3,
+        "contributions": {
+          "momentum": 6.83,
+          "quality": 12.1,
+          "growth": 3.0,
+          "value": 15.3,
+          "low_volatility": 9.09
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Value: 85.0/100, Low Volatility: 60.6/100, Quality: 55.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Value: 85.0/100",
+            "Low Volatility: 60.6/100",
+            "Quality: 55.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "GE": {
+        "scores": {
+          "momentum": 60.6,
+          "quality": 42.5,
+          "growth": 40.0,
+          "value": 32.5,
+          "low_volatility": 57.6
+        },
+        "composite_score": 47.0,
+        "contributions": {
+          "momentum": 15.15,
+          "quality": 9.35,
+          "growth": 8.0,
+          "value": 5.85,
+          "low_volatility": 8.64
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 60.6/100, Low Volatility: 57.6/100, Quality: 42.5/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 60.6/100",
+            "Low Volatility: 57.6/100",
+            "Quality: 42.5/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "GOOGL": {
+        "scores": {
+          "momentum": 72.7,
+          "quality": 67.5,
+          "growth": 70.0,
+          "value": 47.5,
+          "low_volatility": 69.7
+        },
+        "composite_score": 66.0,
+        "contributions": {
+          "momentum": 18.18,
+          "quality": 14.85,
+          "growth": 14.0,
+          "value": 8.55,
+          "low_volatility": 10.46
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 72.7/100, Growth: 70.0/100, Low Volatility: 69.7/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 72.7/100",
+            "Growth: 70.0/100",
+            "Low Volatility: 69.7/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "MSFT": {
+        "scores": {
+          "momentum": 12.1,
+          "quality": 65.0,
+          "growth": 50.0,
+          "value": 67.5,
+          "low_volatility": 75.8
+        },
+        "composite_score": 50.8,
+        "contributions": {
+          "momentum": 3.02,
+          "quality": 14.3,
+          "growth": 10.0,
+          "value": 12.15,
+          "low_volatility": 11.37
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Low Volatility: 75.8/100, Value: 67.5/100, Quality: 65.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 75.8/100",
+            "Value: 67.5/100",
+            "Quality: 65.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "NVDA": {
+        "scores": {
+          "momentum": 48.5,
+          "quality": 72.5,
+          "growth": 100.0,
+          "value": 47.5,
+          "low_volatility": 24.2
+        },
+        "composite_score": 60.3,
+        "contributions": {
+          "momentum": 12.12,
+          "quality": 15.95,
+          "growth": 20.0,
+          "value": 8.55,
+          "low_volatility": 3.63
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Growth: 100.0/100, Quality: 72.5/100, Momentum: 48.5/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Growth: 100.0/100",
+            "Quality: 72.5/100",
+            "Momentum: 48.5/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "TSLA": {
+        "scores": {
+          "momentum": 27.3,
+          "quality": 25.0,
+          "growth": 25.0,
+          "value": 12.5,
+          "low_volatility": 9.1
+        },
+        "composite_score": 20.9,
+        "contributions": {
+          "momentum": 6.83,
+          "quality": 5.5,
+          "growth": 5.0,
+          "value": 2.25,
+          "low_volatility": 1.36
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 27.3/100, Quality: 25.0/100, Growth: 25.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 27.3/100",
+            "Quality: 25.0/100",
+            "Growth: 25.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "TSM": {
+        "scores": {
+          "momentum": 87.9,
+          "quality": 75.0,
+          "growth": 70.0,
+          "value": 62.5,
+          "low_volatility": 33.3
+        },
+        "composite_score": 68.7,
+        "contributions": {
+          "momentum": 21.98,
+          "quality": 16.5,
+          "growth": 14.0,
+          "value": 11.25,
+          "low_volatility": 4.99
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 87.9/100, Quality: 75.0/100, Growth: 70.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 87.9/100",
+            "Quality: 75.0/100",
+            "Growth: 70.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      "VGT": {
+        "scores": {
+          "momentum": 75.8,
+          "quality": null,
+          "growth": null,
+          "value": null,
+          "low_volatility": 78.8
+        },
+        "composite_score": 60.8,
+        "contributions": {
+          "momentum": 18.95,
+          "quality": 11.0,
+          "growth": 10.0,
+          "value": 9.0,
+          "low_volatility": 11.82
+        },
+        "data_coverage_pct": 40.0,
+        "explanation": "Primary score drivers: Low Volatility: 78.8/100, Momentum: 75.8/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 78.8/100",
+            "Momentum: 75.8/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 40.0,
+          "uncertainty": "High uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      }
     },
-    {
-      "ticker": "TSLA",
-      "score": 26,
-      "rating": "Avoid",
-      "close": 383.3,
-      "weekly_rsi": 51.81,
-      "monthly_rsi": 69.13,
-      "above_sma200": false,
-      "rs_status": "lagging",
-      "relative_volume": "0.27x",
-      "quant_score": 25,
-      "quant_label": "High risk / weak setup",
-      "annualized_volatility": 0.6122822521987051,
-      "max_drawdown": -0.5376568011858518,
-      "sharpe_ratio": 0.8379822305756239,
-      "beta": 2.298069490438752,
-      "capm_expected_return": 0.359158832363938,
-      "actual_return": 0.5580816474393373,
-      "alpha": 0.19892281507539933,
-      "capm_interpretation": "Beta 2.30: Moves roughly 130% more than the market. CAPM expected return is 35.92%; realized alpha is 19.89%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.5580816474393373,
-        "components": {
-          "market_component": 0.359158832363938,
-          "momentum_component": 0.024822183552540955,
-          "volatility_drag": -0.07245645043974103,
-          "alpha_component": 0.19892281507539933
+    "leaderboard": [
+      {
+        "ticker": "TSM",
+        "scores": {
+          "momentum": 87.9,
+          "quality": 75.0,
+          "growth": 70.0,
+          "value": 62.5,
+          "low_volatility": 33.3
         },
-        "component_weights_pct": {
-          "market_component": 54.8,
-          "momentum_component": 3.79,
-          "volatility_drag": 11.06,
-          "alpha_component": 30.35
+        "composite_score": 68.7,
+        "contributions": {
+          "momentum": 21.98,
+          "quality": 16.5,
+          "growth": 14.0,
+          "value": 11.25,
+          "low_volatility": 4.99
         },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 87.9/100, Quality: 75.0/100, Growth: 70.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 87.9/100",
+            "Quality: 75.0/100",
+            "Growth: 70.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
       },
-      "volatility_regime": "Normal volatility",
-      "final_score": 26.5,
-      "confidence": 8.15,
-      "risk_level": "High",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "TSLA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.23%, max drawdown is -53.77%, and the research score is 25/100 (High risk / weak setup). CAPM expected return is 35.92%, actual annualized return is 55.81%, and estimated alpha is 19.89%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice."
+      {
+        "ticker": "GOOGL",
+        "scores": {
+          "momentum": 72.7,
+          "quality": 67.5,
+          "growth": 70.0,
+          "value": 47.5,
+          "low_volatility": 69.7
+        },
+        "composite_score": 66.0,
+        "contributions": {
+          "momentum": 18.18,
+          "quality": 14.85,
+          "growth": 14.0,
+          "value": 8.55,
+          "low_volatility": 10.46
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 72.7/100, Growth: 70.0/100, Low Volatility: 69.7/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 72.7/100",
+            "Growth: 70.0/100",
+            "Low Volatility: 69.7/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "VGT",
+        "scores": {
+          "momentum": 75.8,
+          "quality": null,
+          "growth": null,
+          "value": null,
+          "low_volatility": 78.8
+        },
+        "composite_score": 60.8,
+        "contributions": {
+          "momentum": 18.95,
+          "quality": 11.0,
+          "growth": 10.0,
+          "value": 9.0,
+          "low_volatility": 11.82
+        },
+        "data_coverage_pct": 40.0,
+        "explanation": "Primary score drivers: Low Volatility: 78.8/100, Momentum: 75.8/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 78.8/100",
+            "Momentum: 75.8/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 40.0,
+          "uncertainty": "High uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "NVDA",
+        "scores": {
+          "momentum": 48.5,
+          "quality": 72.5,
+          "growth": 100.0,
+          "value": 47.5,
+          "low_volatility": 24.2
+        },
+        "composite_score": 60.3,
+        "contributions": {
+          "momentum": 12.12,
+          "quality": 15.95,
+          "growth": 20.0,
+          "value": 8.55,
+          "low_volatility": 3.63
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Growth: 100.0/100, Quality: 72.5/100, Momentum: 48.5/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Growth: 100.0/100",
+            "Quality: 72.5/100",
+            "Momentum: 48.5/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "AMD",
+        "scores": {
+          "momentum": 100.0,
+          "quality": 30.0,
+          "growth": 90.0,
+          "value": 30.0,
+          "low_volatility": 6.1
+        },
+        "composite_score": 55.9,
+        "contributions": {
+          "momentum": 25.0,
+          "quality": 6.6,
+          "growth": 18.0,
+          "value": 5.4,
+          "low_volatility": 0.91
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 100.0/100, Growth: 90.0/100, Quality: 30.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 100.0/100",
+            "Growth: 90.0/100",
+            "Quality: 30.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "AAPL",
+        "scores": {
+          "momentum": 60.6,
+          "quality": 57.5,
+          "growth": 37.5,
+          "value": 40.0,
+          "low_volatility": 63.6
+        },
+        "composite_score": 52.0,
+        "contributions": {
+          "momentum": 15.15,
+          "quality": 12.65,
+          "growth": 7.5,
+          "value": 7.2,
+          "low_volatility": 9.54
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Low Volatility: 63.6/100, Momentum: 60.6/100, Quality: 57.5/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 63.6/100",
+            "Momentum: 60.6/100",
+            "Quality: 57.5/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "MSFT",
+        "scores": {
+          "momentum": 12.1,
+          "quality": 65.0,
+          "growth": 50.0,
+          "value": 67.5,
+          "low_volatility": 75.8
+        },
+        "composite_score": 50.8,
+        "contributions": {
+          "momentum": 3.02,
+          "quality": 14.3,
+          "growth": 10.0,
+          "value": 12.15,
+          "low_volatility": 11.37
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Low Volatility: 75.8/100, Value: 67.5/100, Quality: 65.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 75.8/100",
+            "Value: 67.5/100",
+            "Quality: 65.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "GE",
+        "scores": {
+          "momentum": 60.6,
+          "quality": 42.5,
+          "growth": 40.0,
+          "value": 32.5,
+          "low_volatility": 57.6
+        },
+        "composite_score": 47.0,
+        "contributions": {
+          "momentum": 15.15,
+          "quality": 9.35,
+          "growth": 8.0,
+          "value": 5.85,
+          "low_volatility": 8.64
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 60.6/100, Low Volatility: 57.6/100, Quality: 42.5/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 60.6/100",
+            "Low Volatility: 57.6/100",
+            "Quality: 42.5/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "FIZZ",
+        "scores": {
+          "momentum": 27.3,
+          "quality": 55.0,
+          "growth": 15.0,
+          "value": 85.0,
+          "low_volatility": 60.6
+        },
+        "composite_score": 46.3,
+        "contributions": {
+          "momentum": 6.83,
+          "quality": 12.1,
+          "growth": 3.0,
+          "value": 15.3,
+          "low_volatility": 9.09
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Value: 85.0/100, Low Volatility: 60.6/100, Quality: 55.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Value: 85.0/100",
+            "Low Volatility: 60.6/100",
+            "Quality: 55.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "AMZN",
+        "scores": {
+          "momentum": 27.3,
+          "quality": 35.0,
+          "growth": 52.5,
+          "value": 50.0,
+          "low_volatility": 54.5
+        },
+        "composite_score": 42.2,
+        "contributions": {
+          "momentum": 6.83,
+          "quality": 7.7,
+          "growth": 10.5,
+          "value": 9.0,
+          "low_volatility": 8.17
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Low Volatility: 54.5/100, Growth: 52.5/100, Value: 50.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Low Volatility: 54.5/100",
+            "Growth: 52.5/100",
+            "Value: 50.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      },
+      {
+        "ticker": "TSLA",
+        "scores": {
+          "momentum": 27.3,
+          "quality": 25.0,
+          "growth": 25.0,
+          "value": 12.5,
+          "low_volatility": 9.1
+        },
+        "composite_score": 20.9,
+        "contributions": {
+          "momentum": 6.83,
+          "quality": 5.5,
+          "growth": 5.0,
+          "value": 2.25,
+          "low_volatility": 1.36
+        },
+        "data_coverage_pct": 89.3,
+        "explanation": "Primary score drivers: Momentum: 27.3/100, Quality: 25.0/100, Growth: 25.0/100",
+        "research_mindset": {
+          "signal": "multi_factor",
+          "thesis": "The stock ranks well when several economically distinct factors agree.",
+          "evidence": [
+            "Momentum: 27.3/100",
+            "Quality: 25.0/100",
+            "Growth: 25.0/100"
+          ],
+          "assumptions": [
+            "Cross-sectional inputs are comparable across the universe.",
+            "Accounting fields are current and adjusted for one-off events.",
+            "Factor relationships remain stable over the evaluation horizon."
+          ],
+          "failure_modes": [
+            "Crowded factors can unwind together.",
+            "Cheap securities can remain value traps.",
+            "Growth and momentum can reverse after expectations peak."
+          ],
+          "regime_weaknesses": [
+            "Factor crowding",
+            "Liquidity shock",
+            "Rapid regime transition"
+          ],
+          "confidence": 89.3,
+          "uncertainty": "Lower uncertainty",
+          "historical_robustness": {},
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        }
+      }
+    ]
+  },
+  "portfolio_factor_exposure": {
+    "available": true,
+    "exposures": {
+      "momentum": 54.56,
+      "quality": 52.27,
+      "growth": 54.55,
+      "value": 47.73,
+      "low_volatility": 48.48
     },
-    {
-      "ticker": "TSM",
-      "score": 62,
-      "rating": "Hold",
-      "close": 441.48,
-      "weekly_rsi": 84.79,
-      "monthly_rsi": 84.58,
-      "above_sma200": true,
-      "rs_status": "leading",
-      "relative_volume": "0.31x",
-      "quant_score": 75,
-      "quant_label": "Research priority",
-      "annualized_volatility": 0.4207908939556803,
-      "max_drawdown": -0.36817364976075295,
-      "sharpe_ratio": 1.2910906199336554,
-      "beta": 1.6572529004085388,
-      "capm_expected_return": 0.2715556539043971,
-      "actual_return": 0.5882791761396764,
-      "alpha": 0.3167235222352793,
-      "capm_interpretation": "Beta 1.66: Moves roughly 66% more than the market. CAPM expected return is 27.16%; realized alpha is 31.67%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.5882791761396764,
-        "components": {
-          "market_component": 0.2715556539043971,
-          "momentum_component": 0.28057546450055126,
-          "volatility_drag": -0.034158178791136064,
-          "alpha_component": 0.3167235222352793
-        },
-        "component_weights_pct": {
-          "market_component": 30.07,
-          "momentum_component": 31.07,
-          "volatility_drag": 3.78,
-          "alpha_component": 35.07
-        },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+    "holding_contributions": {
+      "momentum": {
+        "AAPL": 5.51,
+        "AMD": 9.09,
+        "AMZN": 2.48,
+        "FIZZ": 2.48,
+        "GE": 5.51,
+        "GOOGL": 6.61,
+        "MSFT": 1.1,
+        "NVDA": 4.41,
+        "TSLA": 2.48,
+        "TSM": 7.99,
+        "VGT": 6.9
       },
-      "volatility_regime": "High volatility",
-      "final_score": 61.75,
-      "confidence": 36.28,
-      "risk_level": "Moderate",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "TSM is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 42.08%, max drawdown is -36.82%, and the research score is 75/100 (Research priority). CAPM expected return is 27.16%, actual annualized return is 58.83%, and estimated alpha is 31.67%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
+      "quality": {
+        "AAPL": 5.23,
+        "AMD": 2.73,
+        "AMZN": 3.18,
+        "FIZZ": 5.0,
+        "GE": 3.86,
+        "GOOGL": 6.14,
+        "MSFT": 5.91,
+        "NVDA": 6.59,
+        "TSLA": 2.27,
+        "TSM": 6.82,
+        "VGT": 4.55
+      },
+      "growth": {
+        "AAPL": 3.41,
+        "AMD": 8.18,
+        "AMZN": 4.77,
+        "FIZZ": 1.36,
+        "GE": 3.64,
+        "GOOGL": 6.36,
+        "MSFT": 4.55,
+        "NVDA": 9.09,
+        "TSLA": 2.27,
+        "TSM": 6.36,
+        "VGT": 4.55
+      },
+      "value": {
+        "AAPL": 3.64,
+        "AMD": 2.73,
+        "AMZN": 4.55,
+        "FIZZ": 7.73,
+        "GE": 2.95,
+        "GOOGL": 4.32,
+        "MSFT": 6.14,
+        "NVDA": 4.32,
+        "TSLA": 1.14,
+        "TSM": 5.68,
+        "VGT": 4.55
+      },
+      "low_volatility": {
+        "AAPL": 5.78,
+        "AMD": 0.55,
+        "AMZN": 4.95,
+        "FIZZ": 5.51,
+        "GE": 5.24,
+        "GOOGL": 6.34,
+        "MSFT": 6.89,
+        "NVDA": 2.2,
+        "TSLA": 0.83,
+        "TSM": 3.03,
+        "VGT": 7.17
+      }
     },
-    {
-      "ticker": "VGT",
-      "score": 56,
-      "rating": "Hold",
-      "close": 116.37,
-      "weekly_rsi": 80.34,
-      "monthly_rsi": 84.35,
-      "above_sma200": true,
-      "rs_status": "leading",
-      "relative_volume": "0.37x",
-      "quant_score": 73,
-      "quant_label": "Watch closely",
-      "annualized_volatility": 0.2664061562296075,
-      "max_drawdown": -0.27228787534801513,
-      "sharpe_ratio": 0.9179732661897478,
-      "beta": 1.4491616430940826,
-      "capm_expected_return": 0.2431084260485623,
-      "actual_return": 0.28955372936714907,
-      "alpha": 0.04644530331858676,
-      "capm_interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 24.31%; realized alpha is 4.64%, meaning positive alpha versus CAPM.",
-      "factor_decomposition": {
-        "actual_return": 0.28955372936714907,
-        "components": {
-          "market_component": 0.2431084260485623,
-          "momentum_component": 0.11800642745468937,
-          "volatility_drag": -0.003281231245921501,
-          "alpha_component": 0.04644530331858676
+    "warnings": [],
+    "concentration_score": 6.83
+  },
+  "pairs_trading": {
+    "candidates": [
+      {
+        "pair": "GE/NVDA",
+        "available": true,
+        "hedge_ratio": 1.0378736531302681,
+        "intercept": 0.24000775048802825,
+        "correlation": 0.426866019014657,
+        "spread_zscore": 2.1011594642543034,
+        "half_life_days": 23.219596216369695,
+        "engle_granger_p_value": 0.04309643818111773,
+        "cointegrated": true,
+        "stationarity_test": {
+          "available": true,
+          "method": "Engle-Granger residual ADF",
+          "test_statistic": -2.919773641871217,
+          "p_value": 0.04309643818111773,
+          "used_lag": 2,
+          "observations": 499,
+          "critical_values": {
+            "1%": -3.4435228622952065,
+            "5%": -2.867349510566146,
+            "10%": -2.569864247011056
+          },
+          "cointegrated": true
         },
-        "component_weights_pct": {
-          "market_component": 59.17,
-          "momentum_component": 28.72,
-          "volatility_drag": 0.8,
-          "alpha_component": 11.3
+        "cointegration_strength": "Moderate",
+        "signal": {
+          "action": "short_y_long_x",
+          "reason": "Spread is above its historical mean.",
+          "entry": true
         },
-        "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
+        "historical_performance": {
+          "trades": 15,
+          "win_rate": 0.20916334661354583,
+          "average_daily_pnl": 4.285714761075312e-06,
+          "profit_factor": 1.0009344190991873,
+          "maximum_drawdown": -0.38051196090139694,
+          "cost_bps_per_turn": 10
+        },
+        "spread_history": [
+          {
+            "date": "2025-12-31 00:00:00",
+            "spread": 0.063548
+          },
+          {
+            "date": "2026-01-02 00:00:00",
+            "spread": 0.091017
+          },
+          {
+            "date": "2026-01-05 00:00:00",
+            "spread": 0.106105
+          },
+          {
+            "date": "2026-01-06 00:00:00",
+            "spread": 0.120851
+          },
+          {
+            "date": "2026-01-07 00:00:00",
+            "spread": 0.098559
+          },
+          {
+            "date": "2026-01-08 00:00:00",
+            "spread": 0.092301
+          },
+          {
+            "date": "2026-01-09 00:00:00",
+            "spread": 0.115795
+          },
+          {
+            "date": "2026-01-12 00:00:00",
+            "spread": 0.123337
+          },
+          {
+            "date": "2026-01-13 00:00:00",
+            "spread": 0.127861
+          },
+          {
+            "date": "2026-01-14 00:00:00",
+            "spread": 0.117035
+          },
+          {
+            "date": "2026-01-15 00:00:00",
+            "spread": 0.098428
+          },
+          {
+            "date": "2026-01-16 00:00:00",
+            "spread": 0.119049
+          },
+          {
+            "date": "2026-01-20 00:00:00",
+            "spread": 0.125449
+          },
+          {
+            "date": "2026-01-21 00:00:00",
+            "spread": 0.114822
+          },
+          {
+            "date": "2026-01-22 00:00:00",
+            "spread": 0.029605
+          },
+          {
+            "date": "2026-01-23 00:00:00",
+            "spread": 0.009997
+          },
+          {
+            "date": "2026-01-26 00:00:00",
+            "spread": 0.020696
+          },
+          {
+            "date": "2026-01-27 00:00:00",
+            "spread": 0.017483
+          },
+          {
+            "date": "2026-01-28 00:00:00",
+            "spread": -0.01582
+          },
+          {
+            "date": "2026-01-29 00:00:00",
+            "spread": 0.000408
+          },
+          {
+            "date": "2026-01-30 00:00:00",
+            "spread": 0.034063
+          },
+          {
+            "date": "2026-02-02 00:00:00",
+            "spread": 0.070718
+          },
+          {
+            "date": "2026-02-03 00:00:00",
+            "spread": 0.104556
+          },
+          {
+            "date": "2026-02-04 00:00:00",
+            "spread": 0.135424
+          },
+          {
+            "date": "2026-02-05 00:00:00",
+            "spread": 0.142871
+          },
+          {
+            "date": "2026-02-06 00:00:00",
+            "spread": 0.110875
+          },
+          {
+            "date": "2026-02-09 00:00:00",
+            "spread": 0.071916
+          },
+          {
+            "date": "2026-02-10 00:00:00",
+            "spread": 0.078846
+          },
+          {
+            "date": "2026-02-11 00:00:00",
+            "spread": 0.062313
+          },
+          {
+            "date": "2026-02-12 00:00:00",
+            "spread": 0.076757
+          },
+          {
+            "date": "2026-02-13 00:00:00",
+            "spread": 0.107965
+          },
+          {
+            "date": "2026-02-17 00:00:00",
+            "spread": 0.132105
+          },
+          {
+            "date": "2026-02-18 00:00:00",
+            "spread": 0.122966
+          },
+          {
+            "date": "2026-02-19 00:00:00",
+            "spread": 0.138943
+          },
+          {
+            "date": "2026-02-20 00:00:00",
+            "spread": 0.153409
+          },
+          {
+            "date": "2026-02-23 00:00:00",
+            "spread": 0.131592
+          },
+          {
+            "date": "2026-02-24 00:00:00",
+            "spread": 0.143999
+          },
+          {
+            "date": "2026-02-25 00:00:00",
+            "spread": 0.121528
+          },
+          {
+            "date": "2026-02-26 00:00:00",
+            "spread": 0.173762
+          },
+          {
+            "date": "2026-02-27 00:00:00",
+            "spread": 0.222069
+          },
+          {
+            "date": "2026-03-02 00:00:00",
+            "spread": 0.201654
+          },
+          {
+            "date": "2026-03-03 00:00:00",
+            "spread": 0.181441
+          },
+          {
+            "date": "2026-03-04 00:00:00",
+            "spread": 0.181173
+          },
+          {
+            "date": "2026-03-05 00:00:00",
+            "spread": 0.141016
+          },
+          {
+            "date": "2026-03-06 00:00:00",
+            "spread": 0.160808
+          },
+          {
+            "date": "2026-03-09 00:00:00",
+            "spread": 0.13079
+          },
+          {
+            "date": "2026-03-10 00:00:00",
+            "spread": 0.13297
+          },
+          {
+            "date": "2026-03-11 00:00:00",
+            "spread": 0.121656
+          },
+          {
+            "date": "2026-03-12 00:00:00",
+            "spread": 0.079489
+          },
+          {
+            "date": "2026-03-13 00:00:00",
+            "spread": 0.072876
+          },
+          {
+            "date": "2026-03-16 00:00:00",
+            "spread": 0.070193
+          },
+          {
+            "date": "2026-03-17 00:00:00",
+            "spread": 0.071224
+          },
+          {
+            "date": "2026-03-18 00:00:00",
+            "spread": 0.076242
+          },
+          {
+            "date": "2026-03-19 00:00:00",
+            "spread": 0.055322
+          },
+          {
+            "date": "2026-03-20 00:00:00",
+            "spread": 0.073287
+          },
+          {
+            "date": "2026-03-23 00:00:00",
+            "spread": 0.072194
+          },
+          {
+            "date": "2026-03-24 00:00:00",
+            "spread": 0.071671
+          },
+          {
+            "date": "2026-03-25 00:00:00",
+            "spread": 0.071457
+          },
+          {
+            "date": "2026-03-26 00:00:00",
+            "spread": 0.076679
+          },
+          {
+            "date": "2026-03-27 00:00:00",
+            "spread": 0.090919
+          },
+          {
+            "date": "2026-03-30 00:00:00",
+            "spread": 0.071193
+          },
+          {
+            "date": "2026-03-31 00:00:00",
+            "spread": 0.052534
+          },
+          {
+            "date": "2026-04-01 00:00:00",
+            "spread": 0.075447
+          },
+          {
+            "date": "2026-04-02 00:00:00",
+            "spread": 0.025651
+          },
+          {
+            "date": "2026-04-06 00:00:00",
+            "spread": 0.050619
+          },
+          {
+            "date": "2026-04-07 00:00:00",
+            "spread": 0.047623
+          },
+          {
+            "date": "2026-04-08 00:00:00",
+            "spread": 0.089938
+          },
+          {
+            "date": "2026-04-09 00:00:00",
+            "spread": 0.095532
+          },
+          {
+            "date": "2026-04-10 00:00:00",
+            "spread": 0.054199
+          },
+          {
+            "date": "2026-04-13 00:00:00",
+            "spread": 0.061912
+          },
+          {
+            "date": "2026-04-14 00:00:00",
+            "spread": 0.042539
+          },
+          {
+            "date": "2026-04-15 00:00:00",
+            "spread": 0.017268
+          },
+          {
+            "date": "2026-04-16 00:00:00",
+            "spread": -0.031119
+          },
+          {
+            "date": "2026-04-17 00:00:00",
+            "spread": -0.029009
+          },
+          {
+            "date": "2026-04-20 00:00:00",
+            "spread": -0.032707
+          },
+          {
+            "date": "2026-04-21 00:00:00",
+            "spread": -0.078619
+          },
+          {
+            "date": "2026-04-22 00:00:00",
+            "spread": -0.129225
+          },
+          {
+            "date": "2026-04-23 00:00:00",
+            "spread": -0.092801
+          },
+          {
+            "date": "2026-04-24 00:00:00",
+            "spread": -0.128751
+          },
+          {
+            "date": "2026-04-27 00:00:00",
+            "spread": -0.169641
+          },
+          {
+            "date": "2026-04-28 00:00:00",
+            "spread": -0.136852
+          },
+          {
+            "date": "2026-04-29 00:00:00",
+            "spread": -0.137249
+          },
+          {
+            "date": "2026-04-30 00:00:00",
+            "spread": -0.06591
+          },
+          {
+            "date": "2026-05-01 00:00:00",
+            "spread": -0.071935
+          },
+          {
+            "date": "2026-05-04 00:00:00",
+            "spread": -0.09322
+          },
+          {
+            "date": "2026-05-05 00:00:00",
+            "spread": -0.061093
+          },
+          {
+            "date": "2026-05-06 00:00:00",
+            "spread": -0.054611
+          },
+          {
+            "date": "2026-05-07 00:00:00",
+            "spread": -0.083297
+          },
+          {
+            "date": "2026-05-08 00:00:00",
+            "spread": -0.119571
+          },
+          {
+            "date": "2026-05-11 00:00:00",
+            "spread": -0.127712
+          },
+          {
+            "date": "2026-05-12 00:00:00",
+            "spread": -0.14513
+          },
+          {
+            "date": "2026-05-13 00:00:00",
+            "spread": -0.177857
+          },
+          {
+            "date": "2026-05-14 00:00:00",
+            "spread": -0.233245
+          },
+          {
+            "date": "2026-05-15 00:00:00",
+            "spread": -0.221263
+          },
+          {
+            "date": "2026-05-18 00:00:00",
+            "spread": -0.191634
+          },
+          {
+            "date": "2026-05-19 00:00:00",
+            "spread": -0.186105
+          },
+          {
+            "date": "2026-05-20 00:00:00",
+            "spread": -0.148596
+          },
+          {
+            "date": "2026-05-21 00:00:00",
+            "spread": -0.124756
+          },
+          {
+            "date": "2026-05-22 00:00:00",
+            "spread": -0.10123
+          },
+          {
+            "date": "2026-05-26 00:00:00",
+            "spread": -0.061214
+          },
+          {
+            "date": "2026-05-27 00:00:00",
+            "spread": -0.041628
+          },
+          {
+            "date": "2026-05-28 00:00:00",
+            "spread": -0.038335
+          },
+          {
+            "date": "2026-05-29 00:00:00",
+            "spread": -0.014037
+          },
+          {
+            "date": "2026-06-01 00:00:00",
+            "spread": -0.074477
+          },
+          {
+            "date": "2026-06-02 00:00:00",
+            "spread": -0.088751
+          },
+          {
+            "date": "2026-06-03 00:00:00",
+            "spread": -0.060206
+          },
+          {
+            "date": "2026-06-04 00:00:00",
+            "spread": -0.039625
+          },
+          {
+            "date": "2026-06-05 00:00:00",
+            "spread": 0.027888
+          },
+          {
+            "date": "2026-06-08 00:00:00",
+            "spread": -0.008211
+          },
+          {
+            "date": "2026-06-09 00:00:00",
+            "spread": 0.01978
+          },
+          {
+            "date": "2026-06-10 00:00:00",
+            "spread": 0.023113
+          },
+          {
+            "date": "2026-06-11 00:00:00",
+            "spread": 0.04346
+          },
+          {
+            "date": "2026-06-12 00:00:00",
+            "spread": 0.049445
+          },
+          {
+            "date": "2026-06-15 00:00:00",
+            "spread": 0.033903
+          },
+          {
+            "date": "2026-06-16 00:00:00",
+            "spread": 0.086114
+          },
+          {
+            "date": "2026-06-17 00:00:00",
+            "spread": 0.114974
+          },
+          {
+            "date": "2026-06-18 00:00:00",
+            "spread": 0.086493
+          },
+          {
+            "date": "2026-06-22 00:00:00",
+            "spread": 0.08952
+          },
+          {
+            "date": "2026-06-23 00:00:00",
+            "spread": 0.137051
+          },
+          {
+            "date": "2026-06-24 00:00:00",
+            "spread": 0.168486
+          }
+        ],
+        "research_mindset": {
+          "signal": "pairs_trading",
+          "thesis": "The price relationship is stationary enough that an extreme spread may mean-revert.",
+          "evidence": [
+            "Engle-Granger p-value: 0.0431",
+            "Spread z-score: 2.10",
+            "Estimated half-life: 23.2 days"
+          ],
+          "assumptions": [
+            "The hedge ratio remains stable after entry.",
+            "Borrow, liquidity, and execution costs are available near historical levels.",
+            "No corporate event permanently changes the relationship."
+          ],
+          "failure_modes": [
+            "Cointegration can break after acquisitions, index changes, or business-model divergence.",
+            "A high z-score may reflect a structural break rather than temporary mispricing.",
+            "Short borrow and gap risk can dominate modeled edge."
+          ],
+          "regime_weaknesses": [
+            "Crash",
+            "Structural break",
+            "Liquidity shock"
+          ],
+          "confidence": 42.7,
+          "uncertainty": "High uncertainty",
+          "historical_robustness": {
+            "trades": 15,
+            "win_rate": 0.20916334661354583,
+            "average_daily_pnl": 4.285714761075312e-06,
+            "profit_factor": 1.0009344190991873,
+            "maximum_drawdown": -0.38051196090139694,
+            "cost_bps_per_turn": 10
+          },
+          "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
+        },
+        "interpretation": "Require residual stationarity, practical half-life, and net-of-cost performance before deployment."
+      }
+    ],
+    "z_threshold": 2.0
+  },
+  "signal_backtests": {
+    "AAPL": {
+      "available": true,
+      "method": "rolling walk-forward out-of-sample",
+      "folds": [
+        {
+          "train_start": "2024-09-03 00:00:00",
+          "train_end": "2025-09-04 00:00:00",
+          "test_start": "2025-09-05 00:00:00",
+          "test_end": "2025-12-03 00:00:00",
+          "entry_threshold": 66.73398314515254
+        },
+        {
+          "train_start": "2024-12-02 00:00:00",
+          "train_end": "2025-12-03 00:00:00",
+          "test_start": "2025-12-04 00:00:00",
+          "test_end": "2026-03-06 00:00:00",
+          "entry_threshold": 84.96204718995403
+        },
+        {
+          "train_start": "2025-03-06 00:00:00",
+          "train_end": "2026-03-06 00:00:00",
+          "test_start": "2026-03-09 00:00:00",
+          "test_end": "2026-06-05 00:00:00",
+          "entry_threshold": 80.6508522418847
+        },
+        {
+          "train_start": "2025-06-05 00:00:00",
+          "train_end": "2026-06-05 00:00:00",
+          "test_start": "2026-06-08 00:00:00",
+          "test_end": "2026-06-24 00:00:00",
+          "entry_threshold": 84.59388457641225
+        }
+      ],
+      "train_window": 252,
+      "test_window": 63,
+      "entry_percentile": 0.75,
+      "transaction_cost_bps": 5,
+      "slippage_bps": 5,
+      "performance": {
+        "cagr": 0.191,
+        "sharpe_ratio": 1.3597,
+        "sortino_ratio": 1.3635,
+        "max_drawdown": -0.0557,
+        "win_rate": 0.2189,
+        "profit_factor": 1.4622
       },
-      "volatility_regime": "High volatility",
-      "final_score": 55.75,
-      "confidence": 27.38,
-      "risk_level": "Controlled",
-      "why_now": "No clear Why Now trigger",
-      "why_now_strength": 0,
-      "what_invalidates": "N/A",
-      "research_note": "VGT is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 26.64%, max drawdown is -27.23%, and the research score is 73/100 (Watch closely). CAPM expected return is 24.31%, actual annualized return is 28.96%, and estimated alpha is 4.64%. The current volatility regime is high volatility. This is an educational research summary, not financial advice."
-    }
-  ]
-}
+      "performance_attribution": {
+        "gross_return": 0.1612422063141552,
+        "net_return": 0.14957335800910343,
+        "transaction_and_slippage_drag": 0.01,
+        "average_exposure": 0.3880597014925373,
+        "turnover": 10.0
+      },
+      "alpha_beta": {
+        "available": true,
+        "alpha_annualized": 0.14088696768176476,
+        "beta": 0.24114693235459117,
+        "residual_volatility": 0.1314696359829325,
+        "benchmark_correlation": 0.2339776501328366
+      },
+      "robustness": {
+        "sample_size": 201,
+        "fold_count": 4,
+        "positive_fold_pct": 0.5,
+        "worst_fold_return": -0.01987156849768501,
+        "best_fold_return": 0.13541831264449877,
+        "return_stability": 0.07194772511666915,
+        "warning": "A strategy is not robust if results depend on one fold or disappear after realistic costs."
+      },
+      "equity_curve": {
+        
