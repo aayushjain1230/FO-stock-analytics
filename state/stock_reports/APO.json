@@ -1,15 +1,15 @@
 {
   "ticker": "APO",
-  "generated_at": "2026-06-24T19:12:59.640364",
+  "generated_at": "2026-06-24T21:11:30.613147",
   "score": {
-    "final_score": 35.3,
+    "final_score": 39.05,
     "rating": "Drop",
-    "confidence": 26.83,
+    "confidence": 37.72,
     "risk_level": "Moderate",
     "categories": {
       "technical": 43.0,
       "momentum": 25.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 47.0,
       "risk": 60.0,
       "catalyst": 45.0
@@ -28,24 +28,26 @@
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": -0.04622204548997744,
-        "3m": 0.10639896929353654,
-        "6m": -0.15546205499899013,
-        "12m": -0.07088100668632769
+        "1m": -0.04598861011079158,
+        "3m": 0.10666975838203108,
+        "6m": -0.15525535590881312,
+        "12m": -0.07065360654199915
       },
-      "acceleration": 0.1841,
+      "acceleration": 0.1843,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3566139.25,
-      "relative_volume": 1.1306583162729835,
+      "score": 25.0,
+      "average_volume": 3708801.95,
+      "relative_volume": 1.856486027785873,
       "accumulation_days": 4,
       "distribution_days": 5,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.86x"
+      ]
     },
     "fundamental": {
       "score": 47.0,
@@ -55,17 +57,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.025314605083284772,
-        "annualized_volatility": 0.4018568975290982,
-        "maximum_drawdown": -0.4282126981858564,
-        "sharpe_ratio": 0.2825407477050591,
-        "sortino_ratio": 0.3681054566306291,
-        "calmar_ratio": 0.0774996550602686,
-        "beta": 1.5668181344494052,
-        "alpha": -0.16208251189936557,
-        "capm_expected_return": 0.2756234601976723,
-        "actual_return": 0.11354094829830673,
-        "market_return": 0.17591286068087858
+        "volatility": 0.025338781066339428,
+        "annualized_volatility": 0.40224067936227703,
+        "maximum_drawdown": -0.428212648238125,
+        "sharpe_ratio": 0.2811107017056883,
+        "sortino_ratio": 0.3666330089865981,
+        "calmar_ratio": 0.07600335095867897,
+        "beta": 1.5642263042046616,
+        "alpha": -0.16195082845638198,
+        "capm_expected_return": 0.27502498808648446,
+        "actual_return": 0.11307415963010246,
+        "market_return": 0.1758217384193154
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -80,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; analyst revision"
+    "explanation": "SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; Relative volume is 1.86x"
   },
   "fundamentals": {
     "ticker": "APO",
@@ -134,14 +136,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 47.51118806879084,
+    "rsi": 47.5510782788877,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1306583162729835,
+    "relative_volume": 1.856486027785873,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 104.27999877929688,
     "resistance": 138.91000366210938
   },
@@ -234,7 +236,7 @@
         "last_surprise_pct": 0.0292,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 22.72,
+      "analyst_upside_pct": 22.65,
       "eps_growth_implied": 567.41
     },
     "evidence": [
@@ -329,20 +331,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5142,
-    "probability_pct": 51.42,
+    "probability_of_outperformance": 0.5638,
+    "probability_pct": 56.38,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 35.3/100"
+      "Composite score 39.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.3,
+    "final_score": 39.05,
     "technical_score": 43.0,
     "momentum_score": 25.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 47.0,
     "risk_score": 60.0,
     "catalyst_score": 45.0,
@@ -350,7 +353,7 @@
     "eps_growth": null,
     "roe": 0.08492,
     "forward_pe": 11.904717,
-    "relative_volume": 1.1306583162729835,
+    "relative_volume": 1.856486027785873,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -360,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0615573147381957,
-      "weekly": -0.1148902117531686,
-      "monthly": -0.04622204548997744,
-      "annual": -0.07088100668632769
+      "daily": -0.0613276326376162,
+      "weekly": -0.11467358277986983,
+      "monthly": -0.04598861011079158,
+      "annual": -0.07065360654199915
     },
     "risk": {
-      "volatility": 0.025314605083284772,
-      "annualized_volatility": 0.4018568975290982,
-      "maximum_drawdown": -0.4282126981858564,
-      "sharpe_ratio": 0.2825407477050591,
-      "sortino_ratio": 0.3681054566306291,
-      "calmar_ratio": 0.0774996550602686,
-      "beta": 1.5668181344494052,
-      "alpha": -0.16208251189936557,
-      "capm_expected_return": 0.2756234601976723,
-      "actual_return": 0.11354094829830673,
-      "market_return": 0.17591286068087858
+      "volatility": 0.025338781066339428,
+      "annualized_volatility": 0.40224067936227703,
+      "maximum_drawdown": -0.428212648238125,
+      "sharpe_ratio": 0.2811107017056883,
+      "sortino_ratio": 0.3666330089865981,
+      "calmar_ratio": 0.07600335095867897,
+      "beta": 1.5642263042046616,
+      "alpha": -0.16195082845638198,
+      "capm_expected_return": 0.27502498808648446,
+      "actual_return": 0.11307415963010246,
+      "market_return": 0.1758217384193154
     },
     "capm": {
-      "beta": 1.5668181344494052,
-      "alpha": -0.16208251189936557,
-      "capm_expected_return": 0.2756234601976723,
-      "actual_return": 0.11354094829830673,
-      "market_return": 0.17591286068087858,
-      "interpretation": "Beta 1.57: Moves roughly 57% more than the market. CAPM expected return is 27.56%; realized alpha is -16.21%, meaning negative alpha versus CAPM."
+      "beta": 1.5642263042046616,
+      "alpha": -0.16195082845638198,
+      "capm_expected_return": 0.27502498808648446,
+      "actual_return": 0.11307415963010246,
+      "market_return": 0.1758217384193154,
+      "interpretation": "Beta 1.56: Moves roughly 56% more than the market. CAPM expected return is 27.50%; realized alpha is -16.20%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.11354094829830673,
+      "actual_return": 0.11307415963010246,
       "components": {
-        "market_component": 0.2756234601976723,
+        "market_component": 0.27502498808648446,
         "momentum_component": 0.0,
-        "volatility_drag": -0.03037137950581964,
-        "alpha_component": -0.16208251189936557
+        "volatility_drag": -0.030448135872455408,
+        "alpha_component": -0.16195082845638198
       },
       "component_weights_pct": {
-        "market_component": 58.88,
+        "market_component": 58.84,
         "momentum_component": 0.0,
-        "volatility_drag": 6.49,
-        "alpha_component": 34.63
+        "volatility_drag": 6.51,
+        "alpha_component": 34.65
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 131.14250106811522,
-      "sma50": 129.05921600341796,
-      "sma200": 127.78846599578857,
-      "ema20": 131.58829097888807,
-      "ema50": 128.36547457118067,
-      "ema200": 128.00029326418058
+      "sma20": 131.14400100708008,
+      "sma50": 129.0598159790039,
+      "sma200": 127.78861560821534,
+      "ema20": 131.59114800548733,
+      "ema50": 128.36665099120088,
+      "ema200": 128.00182248478905
     },
     "momentum": {
-      "3m": 0.10639896929353654,
-      "6m": -0.15546205499899013,
-      "12m": -0.07088100668632769,
+      "3m": 0.10666975838203108,
+      "6m": -0.15525535590881312,
+      "12m": -0.07065360654199915,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 3566139.25,
-      "relative_volume": 1.1306583162729835,
+      "average_volume": 3708801.95,
+      "relative_volume": 1.856486027785873,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -429,13 +432,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.86x",
     "date_of_change": "2026-06-24",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.86x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: APO\nRating: Drop | Score: 35.3/100 | Confidence: 26.83/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 104.27999877929688 | Resistance: 138.91000366210938\nFundamental Outlook: Fundamentally Weak | Forward P/E: 11.904717\nNews/Catalyst: Sector Update: Financial Stocks Advance Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APO\nRating: Drop | Score: 39.05/100 | Confidence: 37.72/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 104.27999877929688 | Resistance: 138.91000366210938\nFundamental Outlook: Fundamentally Weak | Forward P/E: 11.904717\nNews/Catalyst: Sector Update: Financial Stocks Advance Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.86x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

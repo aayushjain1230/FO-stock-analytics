@@ -1,13 +1,13 @@
 {
   "ticker": "CNC",
-  "generated_at": "2026-06-24T19:13:26.734711",
+  "generated_at": "2026-06-24T21:12:03.625048",
   "score": {
-    "final_score": 66.2,
+    "final_score": 68.2,
     "rating": "Watch",
-    "confidence": 58.57,
+    "confidence": 59.69,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 72.0,
+      "technical": 80.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 58.0,
@@ -15,8 +15,9 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 72.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +27,17 @@
       ],
       "support": 31.799999237060547,
       "resistance": 66.20999908447266,
-      "risk_reward": 0.14
+      "risk_reward": 0.1
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.04852889688035944,
-        "3m": 0.8802304178967368,
-        "6m": 0.5891849716571516,
-        "12m": 0.1612358904424691
+        "1m": 0.06476161431488059,
+        "3m": 0.9093390568444264,
+        "6m": 0.6137878134794899,
+        "12m": 0.17921347231022766
       },
-      "acceleration": 0.5856,
+      "acceleration": 0.6024,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +49,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5497753.8,
-      "relative_volume": 0.4854302497139832,
+      "average_volume": 5558836.4,
+      "relative_volume": 0.6998637340721162,
       "accumulation_days": 7,
       "distribution_days": 5,
       "evidence": [
@@ -66,17 +67,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.03271517355108353,
-        "annualized_volatility": 0.5193372798869093,
+        "volatility": 0.032736789308480806,
+        "annualized_volatility": 0.5196804193977502,
         "maximum_drawdown": -0.6857784116957288,
-        "sharpe_ratio": 0.20068916637129286,
-        "sortino_ratio": 0.2057044594968858,
-        "calmar_ratio": -0.06650144911702728,
-        "beta": 0.1822287008541417,
-        "alpha": 0.07216899370062649,
-        "capm_expected_return": 0.03205637206541213,
-        "actual_return": 0.10422536576603861,
-        "market_return": 0.17591286068087858
+        "sharpe_ratio": 0.22126231992903375,
+        "sortino_ratio": 0.22642372937428384,
+        "calmar_ratio": -0.05174598816550168,
+        "beta": 0.1813887247737946,
+        "alpha": 0.08309361429824813,
+        "capm_expected_return": 0.03189208091939131,
+        "actual_return": 0.11498569521763943,
+        "market_return": 0.1758217384193154
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -91,7 +92,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "CNC",
@@ -145,11 +146,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 55.86272328612298,
+    "rsi": 58.541463300307555,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4854302497139832,
+    "relative_volume": 0.6998637340721162,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -245,7 +246,7 @@
         "last_surprise_pct": 0.5791,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -1.06,
+      "analyst_upside_pct": -2.57,
       "eps_growth_implied": 134.29
     },
     "evidence": [
@@ -341,19 +342,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8048,
-    "probability_pct": 80.48,
+    "probability_of_outperformance": 0.8185,
+    "probability_pct": 81.85,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 66.2/100"
+      "Composite score 68.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.2,
-    "technical_score": 72.0,
+    "final_score": 68.2,
+    "technical_score": 80.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
@@ -363,7 +364,7 @@
     "eps_growth": 0.183,
     "roe": -0.26044,
     "forward_pe": 14.000063,
-    "relative_volume": 0.4854302497139832,
+    "relative_volume": 0.6998637340721162,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -373,66 +374,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.017896754498551548,
-      "weekly": 0.010099347418943028,
-      "monthly": 0.04852889688035944,
-      "annual": 0.1612358904424691
+      "daily": -0.0026924005478083934,
+      "weekly": 0.025737120813868364,
+      "monthly": 0.06476161431488059,
+      "annual": 0.17921347231022766
     },
     "risk": {
-      "volatility": 0.03271517355108353,
-      "annualized_volatility": 0.5193372798869093,
+      "volatility": 0.032736789308480806,
+      "annualized_volatility": 0.5196804193977502,
       "maximum_drawdown": -0.6857784116957288,
-      "sharpe_ratio": 0.20068916637129286,
-      "sortino_ratio": 0.2057044594968858,
-      "calmar_ratio": -0.06650144911702728,
-      "beta": 0.1822287008541417,
-      "alpha": 0.07216899370062649,
-      "capm_expected_return": 0.03205637206541213,
-      "actual_return": 0.10422536576603861,
-      "market_return": 0.17591286068087858
+      "sharpe_ratio": 0.22126231992903375,
+      "sortino_ratio": 0.22642372937428384,
+      "calmar_ratio": -0.05174598816550168,
+      "beta": 0.1813887247737946,
+      "alpha": 0.08309361429824813,
+      "capm_expected_return": 0.03189208091939131,
+      "actual_return": 0.11498569521763943,
+      "market_return": 0.1758217384193154
     },
     "capm": {
-      "beta": 0.1822287008541417,
-      "alpha": 0.07216899370062649,
-      "capm_expected_return": 0.03205637206541213,
-      "actual_return": 0.10422536576603861,
-      "market_return": 0.17591286068087858,
-      "interpretation": "Beta 0.18: Moves roughly 82% less than the market. CAPM expected return is 3.21%; realized alpha is 7.22%, meaning positive alpha versus CAPM."
+      "beta": 0.1813887247737946,
+      "alpha": 0.08309361429824813,
+      "capm_expected_return": 0.03189208091939131,
+      "actual_return": 0.11498569521763943,
+      "market_return": 0.1758217384193154,
+      "interpretation": "Beta 0.18: Moves roughly 82% less than the market. CAPM expected return is 3.19%; realized alpha is 8.31%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.10422536576603861,
+      "actual_return": 0.11498569521763943,
       "components": {
-        "market_component": 0.03205637206541213,
-        "momentum_component": 0.04030897261061728,
-        "volatility_drag": -0.05386745597738185,
-        "alpha_component": 0.07216899370062649
+        "market_component": 0.03189208091939131,
+        "momentum_component": 0.044803368077556915,
+        "volatility_drag": -0.05393608387955005,
+        "alpha_component": 0.08309361429824813
       },
       "component_weights_pct": {
-        "market_component": 16.16,
-        "momentum_component": 20.32,
-        "volatility_drag": 27.15,
-        "alpha_component": 36.38
+        "market_component": 14.92,
+        "momentum_component": 20.96,
+        "volatility_drag": 25.24,
+        "alpha_component": 38.88
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 62.22449989318848,
-      "sma50": 55.27859992980957,
-      "sma200": 42.5521999835968,
-      "ema20": 61.51776149904442,
-      "ema50": 56.15973353145142,
-      "ema200": 47.0692257727687
+      "sma20": 62.27250003814697,
+      "sma50": 55.29779998779297,
+      "sma200": 42.55699999809265,
+      "ema20": 61.60919034658441,
+      "ema50": 56.197380703197624,
+      "ema200": 47.07617650082248
     },
     "momentum": {
-      "3m": 0.8802304178967368,
-      "6m": 0.5891849716571516,
-      "12m": 0.1612358904424691,
+      "3m": 0.9093390568444264,
+      "6m": 0.6137878134794899,
+      "12m": 0.17921347231022766,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5497753.8,
-      "relative_volume": 0.4854302497139832,
+      "average_volume": 5558836.4,
+      "relative_volume": 0.6998637340721162,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -450,5 +451,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CNC\nRating: Watch | Score: 66.2/100 | Confidence: 58.57/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 31.799999237060547 | Resistance: 66.20999908447266\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.000063\nNews/Catalyst: Centene adds JPMorgan veteran to board\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CNC\nRating: Watch | Score: 68.2/100 | Confidence: 59.69/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 31.799999237060547 | Resistance: 66.20999908447266\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.000063\nNews/Catalyst: Centene adds JPMorgan veteran to board\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

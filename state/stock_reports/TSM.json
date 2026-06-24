@@ -1,43 +1,44 @@
 {
   "ticker": "TSM",
-  "generated_at": "2026-06-24T19:13:50.208615",
+  "generated_at": "2026-06-24T21:12:32.435554",
   "score": {
-    "final_score": 68.65,
+    "final_score": 69.65,
     "rating": "Watch",
-    "confidence": 59.09,
+    "confidence": 57.31,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 83.0,
+      "technical": 90.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 45.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 83.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 316.5,
       "resistance": 467.6700134277344,
-      "risk_reward": 0.27
+      "risk_reward": 0.22
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.07888279053884117,
-        "3m": 0.27146301728572975,
-        "6m": 0.5146544722999262,
-        "12m": 1.093121855506746
+        "1m": 0.09231272149495218,
+        "3m": 0.28729018654372473,
+        "6m": 0.5335088883344923,
+        "12m": 1.1191768769967525
       },
-      "acceleration": 0.0141,
+      "acceleration": 0.0205,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +50,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 13690754.95,
-      "relative_volume": 0.5308910302276647,
+      "average_volume": 13818473.4,
+      "relative_volume": 0.7077531444247669,
       "accumulation_days": 6,
       "distribution_days": 3,
       "evidence": [
@@ -68,17 +69,17 @@
     "risk": {
       "score": 45.0,
       "risk_metrics": {
-        "volatility": 0.02650483099604324,
-        "annualized_volatility": 0.42075114814396086,
-        "maximum_drawdown": -0.36817380641134123,
-        "sharpe_ratio": 1.3815356463435593,
-        "sortino_ratio": 2.045456483206117,
-        "calmar_ratio": 1.7278902937157137,
-        "beta": 1.6574572419557394,
-        "alpha": 0.2897146645121883,
-        "capm_expected_return": 0.2915680448886733,
-        "actual_return": 0.5812827094008616,
-        "market_return": 0.17591286068087858
+        "volatility": 0.026506900122180266,
+        "annualized_volatility": 0.4207839945030996,
+        "maximum_drawdown": -0.3681737372087699,
+        "sharpe_ratio": 1.3648776215709277,
+        "sortino_ratio": 2.020450379472984,
+        "calmar_ratio": 1.6970456732628576,
+        "beta": 1.656264246064857,
+        "alpha": 0.2831113985876249,
+        "capm_expected_return": 0.29120725902487987,
+        "actual_return": 0.5743186576125048,
+        "market_return": 0.1758217384193154
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -87,15 +88,14 @@
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "TSM",
@@ -149,11 +149,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.66704859933063,
+    "rsi": 51.0578453700326,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5308910302276647,
+    "relative_volume": 0.7077531444247669,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -205,9 +205,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 4,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.15645,
     "detail": {
@@ -249,13 +249,12 @@
         "last_surprise_pct": 0.0468,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.78,
+      "analyst_upside_pct": 7.39,
       "eps_growth_implied": 71.94
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -277,6 +276,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "A Top Strategist Says the AI Trade Is Cooling, but Chipmakers Are Quietly Winning",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-24T19:15:50Z",
+        "summary": "The setup is almost too neat. South Korea\u2019s Kospi just had what local press called a \u201cBlack Tuesday,\u201d dropping nearly 10% as foreign investors dumped semiconductor shares and tripping circuit breakers. American chip names sold off in sympathy. And onto CNBC walked Jay Woods of Freedom Capital Markets with a thesis that has been building ... A Top Strategist Says the AI Trade Is Cooling, but Chipmakers Are Quietly Winning",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Bet on These 3 Dividend Growth Stocks Amid AI Spending Fears",
         "source": "Zacks",
@@ -316,16 +325,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Intel (INTC) Advanced Packaging Could Support AI Data Center Growth, Mizuho Says",
-        "source": "Insider Monkey",
-        "published": "2026-06-24T13:47:19Z",
-        "summary": "Intel (NASDAQ:INTC) is one of the 15 AI Stocks Analysts Are Watching: Microsoft, Nvidia, and More. Intel Corporation may benefit from tailwinds coming from advanced packaging technologies, which has led one firm to raise estimates and its price target for the stock. On June 22, Mizuho analyst Siti Panigrahi raised the price target on the [\u2026]",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -343,99 +342,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8447,
-    "probability_pct": 84.47,
+    "probability_of_outperformance": 0.8471,
+    "probability_pct": 84.71,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 68.65/100"
+      "Composite score 69.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 68.65,
-    "technical_score": 83.0,
+    "final_score": 69.65,
+    "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 45.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.351,
     "eps_growth": 0.584,
     "roe": 0.3621,
     "forward_pe": 22.104488,
-    "relative_volume": 0.5308910302276647,
+    "relative_volume": 0.7077531444247669,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.002245722755864654,
-      "weekly": 0.022497281525329926,
-      "monthly": 0.07888279053884117,
-      "annual": 1.093121855506746
+      "daily": 0.010174320618690169,
+      "weekly": 0.03522532577083881,
+      "monthly": 0.09231272149495218,
+      "annual": 1.1191768769967525
     },
     "risk": {
-      "volatility": 0.02650483099604324,
-      "annualized_volatility": 0.42075114814396086,
-      "maximum_drawdown": -0.36817380641134123,
-      "sharpe_ratio": 1.3815356463435593,
-      "sortino_ratio": 2.045456483206117,
-      "calmar_ratio": 1.7278902937157137,
-      "beta": 1.6574572419557394,
-      "alpha": 0.2897146645121883,
-      "capm_expected_return": 0.2915680448886733,
-      "actual_return": 0.5812827094008616,
-      "market_return": 0.17591286068087858
+      "volatility": 0.026506900122180266,
+      "annualized_volatility": 0.4207839945030996,
+      "maximum_drawdown": -0.3681737372087699,
+      "sharpe_ratio": 1.3648776215709277,
+      "sortino_ratio": 2.020450379472984,
+      "calmar_ratio": 1.6970456732628576,
+      "beta": 1.656264246064857,
+      "alpha": 0.2831113985876249,
+      "capm_expected_return": 0.29120725902487987,
+      "actual_return": 0.5743186576125048,
+      "market_return": 0.1758217384193154
     },
     "capm": {
-      "beta": 1.6574572419557394,
-      "alpha": 0.2897146645121883,
-      "capm_expected_return": 0.2915680448886733,
-      "actual_return": 0.5812827094008616,
-      "market_return": 0.17591286068087858,
-      "interpretation": "Beta 1.66: Moves roughly 66% more than the market. CAPM expected return is 29.16%; realized alpha is 28.97%, meaning positive alpha versus CAPM."
+      "beta": 1.656264246064857,
+      "alpha": 0.2831113985876249,
+      "capm_expected_return": 0.29120725902487987,
+      "actual_return": 0.5743186576125048,
+      "market_return": 0.1758217384193154,
+      "interpretation": "Beta 1.66: Moves roughly 66% more than the market. CAPM expected return is 29.12%; realized alpha is 28.31%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.5812827094008616,
+      "actual_return": 0.5743186576125048,
       "components": {
-        "market_component": 0.2915680448886733,
-        "momentum_component": 0.2732804638766865,
-        "volatility_drag": -0.034150229628792175,
-        "alpha_component": 0.2897146645121883
+        "market_component": 0.29120725902487987,
+        "momentum_component": 0.2797942192491881,
+        "volatility_drag": -0.03415679890061992,
+        "alpha_component": 0.2831113985876249
       },
       "component_weights_pct": {
-        "market_component": 32.81,
-        "momentum_component": 30.75,
-        "volatility_drag": 3.84,
-        "alpha_component": 32.6
+        "market_component": 32.78,
+        "momentum_component": 31.5,
+        "volatility_drag": 3.85,
+        "alpha_component": 31.87
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 432.17894744873047,
-      "sma50": 409.5135968017578,
-      "sma200": 336.7005028533936,
-      "ema20": 430.78186367774214,
-      "ema50": 410.1250804164094,
-      "ema200": 342.57846287132196
+      "sma20": 432.44994659423827,
+      "sma50": 409.62199645996094,
+      "sma200": 336.7276029205322,
+      "ema20": 431.29805252632394,
+      "ema50": 410.33762876963374,
+      "ema200": 342.66354433063265
     },
     "momentum": {
-      "3m": 0.27146301728572975,
-      "6m": 0.5146544722999262,
-      "12m": 1.093121855506746,
+      "3m": 0.28729018654372473,
+      "6m": 0.5335088883344923,
+      "12m": 1.1191768769967525,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 13690754.95,
-      "relative_volume": 0.5308910302276647,
+      "average_volume": 13818473.4,
+      "relative_volume": 0.7077531444247669,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -453,5 +452,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: TSM\nRating: Watch | Score: 68.65/100 | Confidence: 59.09/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 316.5 | Resistance: 467.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 22.104488\nNews/Catalyst: Bet on These 3 Dividend Growth Stocks Amid AI Spending Fears\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: TSM\nRating: Watch | Score: 69.65/100 | Confidence: 57.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 316.5 | Resistance: 467.6700134277344\nFundamental Outlook: Quality Compounder | Forward P/E: 22.104488\nNews/Catalyst: A Top Strategist Says the AI Trade Is Cooling, but Chipmakers Are Quietly Winning\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

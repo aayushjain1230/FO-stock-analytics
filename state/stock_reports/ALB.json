@@ -1,13 +1,13 @@
 {
   "ticker": "ALB",
-  "generated_at": "2026-06-24T19:12:52.492744",
+  "generated_at": "2026-06-24T21:11:20.652689",
   "score": {
-    "final_score": 31.95,
+    "final_score": 37.45,
     "rating": "Drop",
-    "confidence": 29.47,
+    "confidence": 33.99,
     "risk_level": "High",
     "categories": {
-      "technical": 10.0,
+      "technical": 32.0,
       "momentum": 35.0,
       "volume": 25.0,
       "fundamental": 68.0,
@@ -15,23 +15,25 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 32.0,
       "evidence": [
-        "Stock is not materially extended from SMA20"
+        "Price above SMA200",
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 146.5,
+      "support": 147.22000122070312,
       "resistance": 215.6199951171875,
-      "risk_reward": 0.0
+      "risk_reward": 109.32
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.1439913352631892,
-        "3m": -0.17048470839340202,
-        "6m": 0.009307768612278444,
-        "12m": 1.5680300582606486
+        "1m": -0.13616165283349657,
+        "3m": -0.1628973537655718,
+        "6m": 0.01853963696548666,
+        "12m": 1.5915189694311325
       },
-      "acceleration": -0.1751,
+      "acceleration": -0.1722,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -39,8 +41,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2312604.9,
-      "relative_volume": 0.5631735883634944,
+      "average_volume": 2343242.4,
+      "relative_volume": 0.8170934428294743,
       "accumulation_days": 6,
       "distribution_days": 4,
       "evidence": [
@@ -57,17 +59,17 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.03824646159036575,
-        "annualized_volatility": 0.6071437553777502,
-        "maximum_drawdown": -0.5395646647502175,
-        "sharpe_ratio": 0.6766609534768389,
-        "sortino_ratio": 1.0573260953530677,
-        "calmar_ratio": 0.4738064380617915,
-        "beta": 1.623902652611164,
-        "alpha": 0.1251651113233201,
-        "capm_expected_return": 0.28566536108809687,
-        "actual_return": 0.41083047241141696,
-        "market_return": 0.17591286068087858
+        "volatility": 0.03823468911084112,
+        "annualized_volatility": 0.6069568730589296,
+        "maximum_drawdown": -0.5395645969438995,
+        "sharpe_ratio": 0.7169101486449646,
+        "sortino_ratio": 1.117410774583205,
+        "calmar_ratio": 0.531261940048593,
+        "beta": 1.6253285330604337,
+        "alpha": 0.14936545390055894,
+        "capm_expected_return": 0.28576808818520116,
+        "actual_return": 0.4351335420857601,
+        "market_return": 0.1758217384193154
       },
       "evidence": [
         "Volatility is elevated",
@@ -82,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Accumulation days exceed distribution days; revenue growth is strong; analyst revision"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; Accumulation days exceed distribution days"
   },
   "fundamentals": {
     "ticker": "ALB",
@@ -136,15 +138,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 35.44775937305555,
+    "rsi": 36.09226248767599,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5631735883634944,
+    "relative_volume": 0.8170934428294743,
     "price_above_sma50": false,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 146.5,
+    "support": 147.22000122070312,
     "resistance": 215.6199951171875
   },
   "earnings": {
@@ -236,7 +238,7 @@
         "last_surprise_pct": 1.2459999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 46.44,
+      "analyst_upside_pct": 45.19,
       "eps_growth_implied": 465.05
     },
     "evidence": [
@@ -336,13 +338,13 @@
     "evidence": [
       "Revenue growth above 20%",
       "Analyst data is supportive",
-      "Composite score 31.95/100"
+      "Composite score 37.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 31.95,
-    "technical_score": 10.0,
+    "final_score": 37.45,
+    "technical_score": 32.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 68.0,
@@ -352,76 +354,76 @@
     "eps_growth": null,
     "roe": -0.0182,
     "forward_pe": 11.986294,
-    "relative_volume": 0.5631735883634944,
+    "relative_volume": 0.8170934428294743,
     "breakout": false,
     "price_above_sma50": false,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": true,
     "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.023203065919944366,
-      "weekly": -0.11805430460716959,
-      "monthly": -0.1439913352631892,
-      "annual": 1.5680300582606486
+      "daily": -0.014268565479466089,
+      "weekly": -0.10998738309150546,
+      "monthly": -0.13616165283349657,
+      "annual": 1.5915189694311325
     },
     "risk": {
-      "volatility": 0.03824646159036575,
-      "annualized_volatility": 0.6071437553777502,
-      "maximum_drawdown": -0.5395646647502175,
-      "sharpe_ratio": 0.6766609534768389,
-      "sortino_ratio": 1.0573260953530677,
-      "calmar_ratio": 0.4738064380617915,
-      "beta": 1.623902652611164,
-      "alpha": 0.1251651113233201,
-      "capm_expected_return": 0.28566536108809687,
-      "actual_return": 0.41083047241141696,
-      "market_return": 0.17591286068087858
+      "volatility": 0.03823468911084112,
+      "annualized_volatility": 0.6069568730589296,
+      "maximum_drawdown": -0.5395645969438995,
+      "sharpe_ratio": 0.7169101486449646,
+      "sortino_ratio": 1.117410774583205,
+      "calmar_ratio": 0.531261940048593,
+      "beta": 1.6253285330604337,
+      "alpha": 0.14936545390055894,
+      "capm_expected_return": 0.28576808818520116,
+      "actual_return": 0.4351335420857601,
+      "market_return": 0.1758217384193154
     },
     "capm": {
-      "beta": 1.623902652611164,
-      "alpha": 0.1251651113233201,
-      "capm_expected_return": 0.28566536108809687,
-      "actual_return": 0.41083047241141696,
-      "market_return": 0.17591286068087858,
-      "interpretation": "Beta 1.62: Moves roughly 62% more than the market. CAPM expected return is 28.57%; realized alpha is 12.52%, meaning positive alpha versus CAPM."
+      "beta": 1.6253285330604337,
+      "alpha": 0.14936545390055894,
+      "capm_expected_return": 0.28576808818520116,
+      "actual_return": 0.4351335420857601,
+      "market_return": 0.1758217384193154,
+      "interpretation": "Beta 1.63: Moves roughly 63% more than the market. CAPM expected return is 28.58%; realized alpha is 14.94%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.41083047241141696,
+      "actual_return": 0.4351335420857601,
       "components": {
-        "market_component": 0.28566536108809687,
-        "momentum_component": 0.39200751456516214,
-        "volatility_drag": -0.07142875107555005,
-        "alpha_component": 0.1251651113233201
+        "market_component": 0.28576808818520116,
+        "momentum_component": 0.3978797423577831,
+        "volatility_drag": -0.07139137461178593,
+        "alpha_component": 0.14936545390055894
       },
       "component_weights_pct": {
-        "market_component": 32.67,
-        "momentum_component": 44.84,
-        "volatility_drag": 8.17,
-        "alpha_component": 14.32
+        "market_component": 31.6,
+        "momentum_component": 43.99,
+        "volatility_drag": 7.89,
+        "alpha_component": 16.52
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 162.5970146179199,
-      "sma50": 179.23689453125,
-      "sma200": 146.52203140258788,
-      "ema20": 162.73670406826164,
-      "ema50": 170.6674257808683,
-      "ema200": 150.13406391480956
+      "sma20": 162.66401443481445,
+      "sma50": 179.26369445800782,
+      "sma200": 146.5287314605713,
+      "ema20": 162.86432276711324,
+      "ema50": 170.71997465562356,
+      "ema200": 150.12399406194135
     },
     "momentum": {
-      "3m": -0.17048470839340202,
-      "6m": 0.009307768612278444,
-      "12m": 1.5680300582606486,
+      "3m": -0.1628973537655718,
+      "6m": 0.01853963696548666,
+      "12m": 1.5915189694311325,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 2312604.9,
-      "relative_volume": 0.5631735883634944,
+      "average_volume": 2343242.4,
+      "relative_volume": 0.8170934428294743,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -439,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ALB\nRating: Drop | Score: 31.95/100 | Confidence: 29.47/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 146.5 | Resistance: 215.6199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.986294\nNews/Catalyst: FMC to Sell Newark Property for $114M, Use Proceeds to Cut Debt\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALB\nRating: Drop | Score: 37.45/100 | Confidence: 33.99/100\nBull Case: No decisive bull case yet.\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 147.22000122070312 | Resistance: 215.6199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.986294\nNews/Catalyst: FMC to Sell Newark Property for $114M, Use Proceeds to Cut Debt\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
