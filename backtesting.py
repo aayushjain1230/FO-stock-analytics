@@ -138,7 +138,10 @@ def walk_forward_signal_backtest(
         "performance_attribution": attribution,
         "alpha_beta": benchmark_attribution,
         "robustness": robustness_diagnostics(out_of_sample, folds),
-        "equity_curve": (1 + out_of_sample).cumprod().round(6).to_dict(),
+        "equity_curve": {
+            str(date): float(value)
+            for date, value in (1 + out_of_sample).cumprod().round(6).items()
+        },
     }
 
 
@@ -200,7 +203,10 @@ def momentum_backtest(
         "transaction_cost_bps": transaction_cost_bps,
         "slippage_bps": slippage_bps,
         "performance": performance_report(strategy_returns),
-        "equity_curve": (1 + strategy_returns.fillna(0)).cumprod().round(6).to_dict(),
+        "equity_curve": {
+            str(date): float(value)
+            for date, value in (1 + strategy_returns.fillna(0)).cumprod().round(6).items()
+        },
         "latest_positions": positions.iloc[-1][positions.iloc[-1] > 0].round(4).to_dict() if not positions.empty else {},
     }
 
