@@ -668,6 +668,87 @@ def _section_benchmark_and_drift(portfolio):
 # Main generator
 # ---------------------------------------------------------------------------
 
+def _section_quant_lab(quant):
+    regime = quant.get("market_regime", {})
+    factors = quant.get("factor_model", {})
+    portfolio_factors = quant.get("portfolio_factor_exposure", {})
+    pairs = quant.get("pairs_trading", {}).get("candidates", [])
+    backtests = quant.get("signal_backtests", {})
+
+    factor_rows = ""
+    for item in factors.get("leaderboard", [])[:10]:
+        scores = item.get("scores", {})
+        factor_rows += (
+            "<tr>"
+            f"<td><strong>{html.escape(str(item.get('ticker', 'N/A')))}</strong></td>"
+            f"<td>{_fmt(item.get('composite_score'))}</td>"
+            f"<td>{_fmt(scores.get('momentum'))}</td>"
+            f"<td>{_fmt(scores.get('quality'))}</td>"
+            f"<td>{_fmt(scores.get('growth'))}</td>"
+            f"<td>{_fmt(scores.get('value'))}</td>"
+            f"<td>{_fmt(scores.get('low_volatility'))}</td>"
+            f"<td>{_fmt(item.get('data_coverage_pct'), suffix='%')}</td>"
+            "</tr>"
+        )
+
+    pair_rows = ""
+    for item in pairs[:8]:
+        pair_rows += (
+            "<tr>"
+            f"<td>{html.escape(str(item.get('pair', 'N/A')))}</td>"
+            f"<td>{_fmt(item.get('spread_zscore'))}</td>"
+            f"<td>{_fmt(item.get('engle_granger_p_value'), precision=4)}</td>"
+            f"<td>{_fmt(item.get('half_life_days'))}</td>"
+            f"<td>{html.escape(str(item.get('signal', {}).get('action', 'watch')))}</td>"
+            f"<td>{html.escape(str(item.get('cointegration_strength', 'N/A')))}</td>"
+            "</tr>"
+        )
+
+    backtest_rows = ""
+    for ticker, result in sorted(
+        backtests.items(),
+        key=lambda item: item[1].get("performance", {}).get("sharpe_ratio", -999),
+        reverse=True,
+    )[:10]:
+        performance = result.get("performance", {})
+        robustness = result.get("robustness", {})
+        backtest_rows += (
+            "<tr>"
+            f"<td>{html.escape(str(ticker))}</td>"
+            f"<td>{_pct(performance.get('cagr'), multiply=True)}</td>"
+            f"<td>{_fmt(performance.get('sharpe_ratio'))}</td>"
+            f"<td>{_fmt(performance.get('sortino_ratio'))}</td>"
+            f"<td>{_pct(performance.get('max_drawdown'), multiply=True)}</td>"
+            f"<td>{_pct(robustness.get('positive_fold_pct'), multiply=True)}</td>"
+            "</tr>"
+        )
+
+    exposures = portfolio_factors.get("exposures", {})
+    exposure_text = ", ".join(
+        f"{html.escape(name.replace('_', ' ').title())}: {value:.1f}"
+        for name, value in sorted(exposures.items(), key=lambda item: item[1], reverse=True)
+    ) or "Run a quant report with portfolio holdings to calculate exposures."
+    transition_text = ", ".join(
+        f"{html.escape(name)} {probability:.1f}%"
+        for name, probability in regime.get("transition_probabilities", {}).items()
+    ) or "N/A"
+
+    return f"""
+    <section id="quant-lab">
+      <h2>Quant Research Lab</h2>
+      <p>Regime: <strong>{html.escape(str(regime.get('regime', 'Unknown')))}</strong>
+      ({_fmt(regime.get('regime_confidence'), suffix='%')} confidence, {html.escape(str(regime.get('regime_model', 'N/A')))})
+      | Next-state probabilities: {transition_text}</p>
+      <p>Portfolio factor exposure: {exposure_text}</p>
+      <h3>Factor Leaderboard</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Ticker</th><th>Composite</th><th>Momentum</th><th>Quality</th><th>Growth</th><th>Value</th><th>Low Vol</th><th>Coverage</th></tr></thead><tbody>{factor_rows or '<tr><td colspan="8">Factor report unavailable.</td></tr>'}</tbody></table></div>
+      <h3>Cointegration Opportunities</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Pair</th><th>Z-score</th><th>EG p-value</th><th>Half-life</th><th>Signal</th><th>Strength</th></tr></thead><tbody>{pair_rows or '<tr><td colspan="6">No validated pair entries.</td></tr>'}</tbody></table></div>
+      <h3>Walk-Forward Signal Validation</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Ticker</th><th>CAGR</th><th>Sharpe</th><th>Sortino</th><th>Drawdown</th><th>Positive Folds</th></tr></thead><tbody>{backtest_rows or '<tr><td colspan="6">Backtests unavailable.</td></tr>'}</tbody></table></div>
+      <p>Every model remains conditional on data quality, stable relationships, execution costs, and the absence of structural breaks.</p>
+    </section>"""
+
 def generate_dashboard(
     quant_path=os.path.join(STATE_DIR, "latest_quant_research.json"),
     portfolio_path=os.path.join(STATE_DIR, "latest_portfolio_report.json"),
@@ -702,6 +783,7 @@ def generate_dashboard(
     sec_discovery = _section_stock_discovery(discovery)
     sec_trade = _section_trade_journal(trade_payload)
     sec_signal_perf = _section_signal_performance(signal_payload)
+    sec_quant_lab = _section_quant_lab(quant)
     sec_notes = _section_research_notes(rows)
 
     nav_links = "".join(
@@ -717,6 +799,7 @@ def generate_dashboard(
             ("Discovery", "stock-discovery"),
             ("Journal", "trade-journal"),
             ("Signal EV", "signal-performance"),
+            ("Quant Lab", "quant-lab"),
             ("Research", "research-notes"),
         ]
     )
@@ -768,6 +851,7 @@ def generate_dashboard(
     {sec_discovery}
     {sec_trade}
     {sec_signal_perf}
+    {sec_quant_lab}
     {sec_notes}
     <div class="disclaimer">
       ⚠ This dashboard is for educational and research purposes only. Nothing here constitutes financial advice,
