@@ -1,13 +1,13 @@
 {
   "ticker": "CEG",
-  "generated_at": "2026-06-24T17:23:44.909432",
+  "generated_at": "2026-06-24T17:31:09.013337",
   "score": {
-    "final_score": 36.9,
+    "final_score": 39.4,
     "rating": "Drop",
-    "confidence": 35.14,
+    "confidence": 36.68,
     "risk_level": "High",
     "categories": {
-      "technical": 43.0,
+      "technical": 53.0,
       "momentum": 10.0,
       "volume": 25.0,
       "fundamental": 81.0,
@@ -15,34 +15,35 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 43.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 242.3000030517578,
       "resistance": 322.7799987792969,
-      "risk_reward": 1.96
+      "risk_reward": 2.07
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.08355155817413829,
-        "3m": -0.08455582073665524,
-        "6m": -0.2395034876924702,
-        "12m": -0.1405196313110202
+        "1m": -0.0867651035908148,
+        "3m": -0.08776584468588444,
+        "6m": -0.24217024970461898,
+        "12m": -0.1435334170009397
       },
-      "acceleration": 0.0352,
+      "acceleration": 0.0333,
       "evidence": [
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4220858.65,
-      "relative_volume": 0.2625705080173675,
+      "average_volume": 4222871.75,
+      "relative_volume": 0.2719796072423938,
       "accumulation_days": 3,
       "distribution_days": 2,
       "evidence": [
@@ -60,17 +61,17 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.037224262030041394,
-        "annualized_volatility": 0.5909168404163633,
-        "maximum_drawdown": -0.5070228044711589,
-        "sharpe_ratio": 0.49079623984736065,
-        "sortino_ratio": 0.6928784701842405,
-        "calmar_ratio": 0.24494192059765812,
-        "beta": 1.6303465531025507,
-        "alpha": 0.0006830925001976573,
-        "capm_expected_return": 0.2893366708386363,
-        "actual_return": 0.29001976333883395,
-        "market_return": 0.17746942837891022
+        "volatility": 0.037225339606911614,
+        "annualized_volatility": 0.5909339464188662,
+        "maximum_drawdown": -0.507022760179452,
+        "sharpe_ratio": 0.48780580245441535,
+        "sortino_ratio": 0.6889716423235198,
+        "calmar_ratio": 0.2410278515502082,
+        "beta": 1.630455923689613,
+        "alpha": -6.669633030370603e-05,
+        "capm_expected_return": 0.28832770426071325,
+        "actual_return": 0.28826100793040954,
+        "market_return": 0.17683869896234108
       },
       "evidence": [
         "Volatility is elevated",
@@ -86,7 +87,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Momentum is accelerating; Accumulation days exceed distribution days"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "CEG",
@@ -140,11 +141,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 51.66618368878706,
+    "rsi": 50.956157440897535,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2625705080173675,
+    "relative_volume": 0.2719796072423938,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -240,7 +241,7 @@
         "last_surprise_pct": 0.053000003,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 33.61,
+      "analyst_upside_pct": 34.12,
       "eps_growth_implied": 17.5
     },
     "evidence": [
@@ -335,21 +336,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6894,
-    "probability_pct": 68.94,
+    "probability_of_outperformance": 0.6965,
+    "probability_pct": 69.65,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 36.9/100"
+      "Composite score 39.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 36.9,
-    "technical_score": 43.0,
+    "final_score": 39.4,
+    "technical_score": 53.0,
     "momentum_score": 10.0,
     "volume_score": 25.0,
     "fundamental_score": 81.0,
@@ -359,7 +360,7 @@
     "eps_growth": 10.91,
     "roe": 0.16104999,
     "forward_pe": 20.198256,
-    "relative_volume": 0.2625705080173675,
+    "relative_volume": 0.2719796072423938,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -369,66 +370,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0028121428926317638,
-      "weekly": 0.005597014925373234,
-      "monthly": -0.08355155817413829,
-      "annual": -0.1405196313110202
+      "daily": -0.006308802738971164,
+      "weekly": 0.0020708681932135597,
+      "monthly": -0.0867651035908148,
+      "annual": -0.1435334170009397
     },
     "risk": {
-      "volatility": 0.037224262030041394,
-      "annualized_volatility": 0.5909168404163633,
-      "maximum_drawdown": -0.5070228044711589,
-      "sharpe_ratio": 0.49079623984736065,
-      "sortino_ratio": 0.6928784701842405,
-      "calmar_ratio": 0.24494192059765812,
-      "beta": 1.6303465531025507,
-      "alpha": 0.0006830925001976573,
-      "capm_expected_return": 0.2893366708386363,
-      "actual_return": 0.29001976333883395,
-      "market_return": 0.17746942837891022
+      "volatility": 0.037225339606911614,
+      "annualized_volatility": 0.5909339464188662,
+      "maximum_drawdown": -0.507022760179452,
+      "sharpe_ratio": 0.48780580245441535,
+      "sortino_ratio": 0.6889716423235198,
+      "calmar_ratio": 0.2410278515502082,
+      "beta": 1.630455923689613,
+      "alpha": -6.669633030370603e-05,
+      "capm_expected_return": 0.28832770426071325,
+      "actual_return": 0.28826100793040954,
+      "market_return": 0.17683869896234108
     },
     "capm": {
-      "beta": 1.6303465531025507,
-      "alpha": 0.0006830925001976573,
-      "capm_expected_return": 0.2893366708386363,
-      "actual_return": 0.29001976333883395,
-      "market_return": 0.17746942837891022,
-      "interpretation": "Beta 1.63: Moves roughly 63% more than the market. CAPM expected return is 28.93%; realized alpha is 0.07%, meaning positive alpha versus CAPM."
+      "beta": 1.630455923689613,
+      "alpha": -6.669633030370603e-05,
+      "capm_expected_return": 0.28832770426071325,
+      "actual_return": 0.28826100793040954,
+      "market_return": 0.17683869896234108,
+      "interpretation": "Beta 1.63: Moves roughly 63% more than the market. CAPM expected return is 28.83%; realized alpha is -0.01%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.29001976333883395,
+      "actual_return": 0.28826100793040954,
       "components": {
-        "market_component": 0.2893366708386363,
+        "market_component": 0.28832770426071325,
         "momentum_component": 0.0,
-        "volatility_drag": -0.06818336808327266,
-        "alpha_component": 0.0006830925001976573
+        "volatility_drag": -0.06818678928377324,
+        "alpha_component": -6.669633030370603e-05
       },
       "component_weights_pct": {
-        "market_component": 80.77,
+        "market_component": 80.86,
         "momentum_component": 0.0,
-        "volatility_drag": 19.03,
-        "alpha_component": 0.19
+        "volatility_drag": 19.12,
+        "alpha_component": 0.02
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 265.98550033569336,
-      "sma50": 283.3659182739258,
-      "sma200": 317.9386838531494,
-      "ema20": 268.7356378866031,
-      "ema50": 278.61779125021474,
-      "ema200": 298.88236679068683
+      "sma20": 265.9382499694824,
+      "sma50": 283.3470181274414,
+      "sma200": 317.9339587402344,
+      "ema20": 268.64563718911927,
+      "ema50": 278.5807321071018,
+      "ema200": 298.8729634671509
     },
     "momentum": {
-      "3m": -0.08455582073665524,
-      "6m": -0.2395034876924702,
-      "12m": -0.1405196313110202,
+      "3m": -0.08776584468588444,
+      "6m": -0.24217024970461898,
+      "12m": -0.1435334170009397,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 4220858.65,
-      "relative_volume": 0.2625705080173675,
+      "average_volume": 4222871.75,
+      "relative_volume": 0.2719796072423938,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -446,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CEG\nRating: Drop | Score: 36.9/100 | Confidence: 35.14/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 20.198256\nNews/Catalyst: Trending: Walmart & Constellation ink nuclear deal, Avis to win $650M from hedge fund\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CEG\nRating: Drop | Score: 39.4/100 | Confidence: 36.68/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 20.198256\nNews/Catalyst: Trending: Walmart & Constellation ink nuclear deal, Avis to win $650M from hedge fund\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

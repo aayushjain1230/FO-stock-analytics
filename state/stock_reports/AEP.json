@@ -1,13 +1,13 @@
 {
   "ticker": "AEP",
-  "generated_at": "2026-06-24T17:23:14.459878",
+  "generated_at": "2026-06-24T17:30:39.099360",
   "score": {
-    "final_score": 60.95,
+    "final_score": 62.7,
     "rating": "Hold",
-    "confidence": 52.37,
+    "confidence": 53.51,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 58.0,
+      "technical": 65.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 73.0,
@@ -15,27 +15,28 @@
       "catalyst": 35.0
     },
     "technical": {
-      "score": 58.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 123.79000091552734,
       "resistance": 137.14999389648438,
-      "risk_reward": 0.4
+      "risk_reward": 0.43
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.01337495109511,
-        "3m": 0.04284509998088937,
-        "6m": 0.18246559417190378,
-        "12m": 0.3316517074955394
+        "1m": 0.011551062502942466,
+        "3m": 0.040968170539128934,
+        "6m": 0.18033737351131784,
+        "12m": 0.3292551818075362
       },
-      "acceleration": -0.0484,
+      "acceleration": -0.0492,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5274176.05,
-      "relative_volume": 0.34396292099502446,
+      "average_volume": 5275622.55,
+      "relative_volume": 0.34935232430530877,
       "accumulation_days": 6,
       "distribution_days": 4,
       "evidence": [
@@ -63,17 +64,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01197409450210202,
-        "annualized_volatility": 0.19008285736648636,
-        "maximum_drawdown": -0.13101022751635338,
-        "sharpe_ratio": 1.3711710397720467,
-        "sortino_ratio": 2.0811012545067977,
-        "calmar_ratio": 2.0948471113193783,
-        "beta": -0.002328960093805438,
-        "alpha": 0.2610494283946117,
-        "capm_expected_return": -0.0004133192165649442,
-        "actual_return": 0.26063610917804675,
-        "market_return": 0.17746942837891022
+        "volatility": 0.011975538193587602,
+        "annualized_volatility": 0.19010577525833086,
+        "maximum_drawdown": -0.13101023761972652,
+        "sharpe_ratio": 1.3662574197287431,
+        "sortino_ratio": 2.0751886846812524,
+        "calmar_ratio": 2.0860364271624787,
+        "beta": -0.0021697089079412406,
+        "alpha": 0.26011711448038677,
+        "capm_expected_return": -0.0003836885004073309,
+        "actual_return": 0.25973342597997945,
+        "market_return": 0.17683869896234108
       },
       "evidence": []
     },
@@ -84,7 +85,7 @@
         "major news"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "AEP",
@@ -138,11 +139,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.97736190489181,
+    "rsi": 69.9764842786241,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.34396292099502446,
+    "relative_volume": 0.34935232430530877,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -238,7 +239,7 @@
         "last_surprise_pct": 0.0461,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.31,
+      "analyst_upside_pct": 8.5,
       "eps_growth_implied": 1.65
     },
     "evidence": [
@@ -332,17 +333,17 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7071,
-    "probability_pct": 70.71,
+    "probability_of_outperformance": 0.723,
+    "probability_pct": 72.3,
     "confidence": "High",
     "evidence": [
-      "Composite score 60.95/100"
+      "Composite score 62.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.95,
-    "technical_score": 58.0,
+    "final_score": 62.7,
+    "technical_score": 65.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 73.0,
@@ -352,7 +353,7 @@
     "eps_growth": 0.067,
     "roe": 0.12585,
     "forward_pe": 19.526983,
-    "relative_volume": 0.34396292099502446,
+    "relative_volume": 0.34935232430530877,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -362,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0029161011935832093,
-      "weekly": 0.02774571178046714,
-      "monthly": 0.01337495109511,
-      "annual": 0.3316517074955394
+      "daily": -0.00471066888691507,
+      "weekly": 0.025895958461283675,
+      "monthly": 0.011551062502942466,
+      "annual": 0.3292551818075362
     },
     "risk": {
-      "volatility": 0.01197409450210202,
-      "annualized_volatility": 0.19008285736648636,
-      "maximum_drawdown": -0.13101022751635338,
-      "sharpe_ratio": 1.3711710397720467,
-      "sortino_ratio": 2.0811012545067977,
-      "calmar_ratio": 2.0948471113193783,
-      "beta": -0.002328960093805438,
-      "alpha": 0.2610494283946117,
-      "capm_expected_return": -0.0004133192165649442,
-      "actual_return": 0.26063610917804675,
-      "market_return": 0.17746942837891022
+      "volatility": 0.011975538193587602,
+      "annualized_volatility": 0.19010577525833086,
+      "maximum_drawdown": -0.13101023761972652,
+      "sharpe_ratio": 1.3662574197287431,
+      "sortino_ratio": 2.0751886846812524,
+      "calmar_ratio": 2.0860364271624787,
+      "beta": -0.0021697089079412406,
+      "alpha": 0.26011711448038677,
+      "capm_expected_return": -0.0003836885004073309,
+      "actual_return": 0.25973342597997945,
+      "market_return": 0.17683869896234108
     },
     "capm": {
-      "beta": -0.002328960093805438,
-      "alpha": 0.2610494283946117,
-      "capm_expected_return": -0.0004133192165649442,
-      "actual_return": 0.26063610917804675,
-      "market_return": 0.17746942837891022,
-      "interpretation": "Beta -0.00: Moves roughly 100% less than the market. CAPM expected return is -0.04%; realized alpha is 26.10%, meaning positive alpha versus CAPM."
+      "beta": -0.0021697089079412406,
+      "alpha": 0.26011711448038677,
+      "capm_expected_return": -0.0003836885004073309,
+      "actual_return": 0.25973342597997945,
+      "market_return": 0.17683869896234108,
+      "interpretation": "Beta -0.00: Moves roughly 100% less than the market. CAPM expected return is -0.04%; realized alpha is 26.01%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.26063610917804675,
+      "actual_return": 0.25973342597997945,
       "components": {
-        "market_component": -0.0004133192165649442,
-        "momentum_component": 0.08291292687388485,
+        "market_component": -0.0003836885004073309,
+        "momentum_component": 0.08231379545188405,
         "volatility_drag": -0.0,
-        "alpha_component": 0.2610494283946117
+        "alpha_component": 0.26011711448038677
       },
       "component_weights_pct": {
-        "market_component": 0.12,
-        "momentum_component": 24.08,
+        "market_component": 0.11,
+        "momentum_component": 24.01,
         "volatility_drag": 0.0,
-        "alpha_component": 75.8
+        "alpha_component": 75.88
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 128.56600074768068,
-      "sma50": 130.51505996704103,
-      "sma200": 121.82193344116212,
-      "ema20": 129.62946518043867,
-      "ema50": 129.5451146433627,
-      "ema200": 122.30685070166294
+      "sma20": 128.55400047302246,
+      "sma50": 130.51025985717774,
+      "sma200": 121.82073356628418,
+      "ema20": 129.60660751442674,
+      "ema50": 129.53570266694678,
+      "ema200": 122.30446264670414
     },
     "momentum": {
-      "3m": 0.04284509998088937,
-      "6m": 0.18246559417190378,
-      "12m": 0.3316517074955394,
+      "3m": 0.040968170539128934,
+      "6m": 0.18033737351131784,
+      "12m": 0.3292551818075362,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5274176.05,
-      "relative_volume": 0.34396292099502446,
+      "average_volume": 5275622.55,
+      "relative_volume": 0.34935232430530877,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -439,5 +440,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AEP\nRating: Hold | Score: 60.95/100 | Confidence: 52.37/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.526983\nNews/Catalyst: American Electric Power vs. GE Vernova: Which Utilities Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AEP\nRating: Hold | Score: 62.7/100 | Confidence: 53.51/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 123.79000091552734 | Resistance: 137.14999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.526983\nNews/Catalyst: American Electric Power vs. GE Vernova: Which Utilities Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "FIZZ",
-  "generated_at": "2026-06-24T17:24:24.283164",
+  "generated_at": "2026-06-24T17:31:32.313751",
   "score": {
-    "final_score": 38.55,
+    "final_score": 41.05,
     "rating": "Drop",
-    "confidence": 28.97,
+    "confidence": 30.48,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 43.0,
+      "technical": 53.0,
       "momentum": 30.0,
       "volume": 0,
       "fundamental": 62.0,
@@ -15,25 +15,26 @@
       "catalyst": 40.0
     },
     "technical": {
-      "score": 43.0,
+      "score": 53.0,
       "evidence": [
         "SMA alignment is constructive",
         "EMA trend is positive",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 32.93000030517578,
       "resistance": 37.2400016784668,
-      "risk_reward": 1.87
+      "risk_reward": 2.02
     },
     "momentum": {
       "score": 30.0,
       "returns": {
-        "1m": -0.024092928104631706,
-        "3m": 0.02135868407765007,
-        "6m": 0.06528467296642515,
-        "12m": -0.20631628728837903
+        "1m": -0.02621880014359179,
+        "3m": 0.019133802292530033,
+        "6m": 0.0629641047842584,
+        "12m": -0.20804521216373084
       },
-      "acceleration": -0.0113,
+      "acceleration": -0.0123,
       "evidence": [
         "3m return is positive",
         "6m return is positive"
@@ -41,8 +42,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 352832.05,
-      "relative_volume": 0.40484134023538965,
+      "average_volume": 352946.4,
+      "relative_volume": 0.411189914389267,
       "accumulation_days": 7,
       "distribution_days": 8,
       "evidence": []
@@ -55,17 +56,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.017578158697566838,
-        "annualized_volatility": 0.2790446185211334,
+        "volatility": 0.017579195728538083,
+        "annualized_volatility": 0.27906108087744413,
         "maximum_drawdown": -0.40083270711607855,
-        "sharpe_ratio": -0.3229195234595094,
-        "sortino_ratio": -0.5174663625167174,
-        "calmar_ratio": -0.30105098488458687,
-        "beta": 0.10010442534680677,
-        "alpha": -0.10787443038128205,
-        "capm_expected_return": 0.01776547514449709,
-        "actual_return": -0.09010895523678497,
-        "market_return": 0.17746942837891022
+        "sharpe_ratio": -0.32681321553661774,
+        "sortino_ratio": -0.5240042023874794,
+        "calmar_ratio": -0.30345598422571873,
+        "beta": 0.10025165313389311,
+        "alpha": -0.1089292210817032,
+        "capm_expected_return": 0.017728371909021563,
+        "actual_return": -0.09120084917268165,
+        "market_return": 0.17683869896234108
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -80,7 +81,7 @@
         "guidance change"
       ]
     },
-    "explanation": "SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; insider buying"
+    "explanation": "SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; 6m return is positive"
   },
   "fundamentals": {
     "ticker": "FIZZ",
@@ -134,11 +135,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 43.042670826267766,
+    "rsi": 42.74527485325451,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.40484134023538965,
+    "relative_volume": 0.411189914389267,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -234,7 +235,7 @@
         "last_surprise_pct": -0.008,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 1.66,
+      "analyst_upside_pct": 1.95,
       "eps_growth_implied": 0.61
     },
     "evidence": [
@@ -327,17 +328,17 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5028,
-    "probability_pct": 50.28,
+    "probability_of_outperformance": 0.5112,
+    "probability_pct": 51.12,
     "confidence": "High",
     "evidence": [
-      "Composite score 38.55/100"
+      "Composite score 41.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 38.55,
-    "technical_score": 43.0,
+    "final_score": 41.05,
+    "technical_score": 53.0,
     "momentum_score": 30.0,
     "volume_score": 0,
     "fundamental_score": 62.0,
@@ -347,7 +348,7 @@
     "eps_growth": 0.048,
     "roe": 0.37949002,
     "forward_pe": 17.147898,
-    "relative_volume": 0.40484134023538965,
+    "relative_volume": 0.411189914389267,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -357,66 +358,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0034731963685847855,
-      "weekly": -0.04520246827618113,
-      "monthly": -0.024092928104631706,
-      "annual": -0.20631628728837903
+      "daily": -0.005643985503046012,
+      "weekly": -0.04728235624299093,
+      "monthly": -0.02621880014359179,
+      "annual": -0.20804521216373084
     },
     "risk": {
-      "volatility": 0.017578158697566838,
-      "annualized_volatility": 0.2790446185211334,
+      "volatility": 0.017579195728538083,
+      "annualized_volatility": 0.27906108087744413,
       "maximum_drawdown": -0.40083270711607855,
-      "sharpe_ratio": -0.3229195234595094,
-      "sortino_ratio": -0.5174663625167174,
-      "calmar_ratio": -0.30105098488458687,
-      "beta": 0.10010442534680677,
-      "alpha": -0.10787443038128205,
-      "capm_expected_return": 0.01776547514449709,
-      "actual_return": -0.09010895523678497,
-      "market_return": 0.17746942837891022
+      "sharpe_ratio": -0.32681321553661774,
+      "sortino_ratio": -0.5240042023874794,
+      "calmar_ratio": -0.30345598422571873,
+      "beta": 0.10025165313389311,
+      "alpha": -0.1089292210817032,
+      "capm_expected_return": 0.017728371909021563,
+      "actual_return": -0.09120084917268165,
+      "market_return": 0.17683869896234108
     },
     "capm": {
-      "beta": 0.10010442534680677,
-      "alpha": -0.10787443038128205,
-      "capm_expected_return": 0.01776547514449709,
-      "actual_return": -0.09010895523678497,
-      "market_return": 0.17746942837891022,
-      "interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 1.78%; realized alpha is -10.79%, meaning negative alpha versus CAPM."
+      "beta": 0.10025165313389311,
+      "alpha": -0.1089292210817032,
+      "capm_expected_return": 0.017728371909021563,
+      "actual_return": -0.09120084917268165,
+      "market_return": 0.17683869896234108,
+      "interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 1.77%; realized alpha is -10.89%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.09010895523678497,
+      "actual_return": -0.09120084917268165,
       "components": {
-        "market_component": 0.01776547514449709,
+        "market_component": 0.017728371909021563,
         "momentum_component": 0.0,
-        "volatility_drag": -0.005808923704226677,
-        "alpha_component": -0.10787443038128205
+        "volatility_drag": -0.005812216175488827,
+        "alpha_component": -0.1089292210817032
       },
       "component_weights_pct": {
-        "market_component": 13.52,
+        "market_component": 13.38,
         "momentum_component": 0.0,
-        "volatility_drag": 4.42,
-        "alpha_component": 82.07
+        "volatility_drag": 4.39,
+        "alpha_component": 82.23
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 36.16299991607666,
-      "sma50": 35.162799987792965,
-      "sma200": 34.98259985923767,
-      "ema20": 35.71211138681509,
-      "ema50": 35.42544041604818,
-      "ema200": 36.236712692714214
+      "sma20": 36.15924987792969,
+      "sma50": 35.16129997253418,
+      "sma200": 34.98222485542297,
+      "ema20": 35.70496845701133,
+      "ema50": 35.4224992096584,
+      "ema200": 36.23596641646606
     },
     "momentum": {
-      "3m": 0.02135868407765007,
-      "6m": 0.06528467296642515,
-      "12m": -0.20631628728837903,
+      "3m": 0.019133802292530033,
+      "6m": 0.0629641047842584,
+      "12m": -0.20804521216373084,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 352832.05,
-      "relative_volume": 0.40484134023538965,
+      "average_volume": 352946.4,
+      "relative_volume": 0.411189914389267,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -434,5 +435,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: FIZZ\nRating: Drop | Score: 38.55/100 | Confidence: 28.97/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 17.147898\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: FIZZ\nRating: Drop | Score: 41.05/100 | Confidence: 30.48/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.93000030517578 | Resistance: 37.2400016784668\nFundamental Outlook: Fundamentally Average | Forward P/E: 17.147898\nNews/Catalyst: Fuel Up Your Portfolio with Suja Life\u2019s Farm-to-Bottle Growth Strategy\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
