@@ -1,47 +1,48 @@
 {
   "ticker": "CMG",
-  "generated_at": "2026-06-23T22:47:13.377937",
+  "generated_at": "2026-06-24T15:32:50.034201",
   "score": {
-    "final_score": 31.05,
+    "final_score": 32.3,
     "rating": "Drop",
-    "confidence": 23.38,
+    "confidence": 22.23,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 35.0,
+      "technical": 43.0,
       "momentum": 10.0,
       "volume": 0,
       "fundamental": 42.0,
       "risk": 75.0,
-      "catalyst": 45.0
+      "catalyst": 30.0
     },
     "technical": {
-      "score": 35.0,
+      "score": 43.0,
       "evidence": [
+        "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 28.18000030517578,
       "resistance": 36.04999923706055,
-      "risk_reward": 1.84
+      "risk_reward": 1.23
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.05640239381563128,
-        "3m": -0.07224220033929762,
-        "6m": -0.17751794088669048,
-        "12m": -0.41360360972422583
+        "1m": -0.036029172634017725,
+        "3m": -0.032203859947504854,
+        "6m": -0.1576779904936607,
+        "12m": -0.41046856371608553
       },
-      "acceleration": 0.0165,
+      "acceleration": 0.0466,
       "evidence": [
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 21842671.25,
-      "relative_volume": 0.6500773114002711,
+      "average_volume": 21186670.1,
+      "relative_volume": 0.18354474684532893,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -56,31 +57,30 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.0230398558135861,
-        "annualized_volatility": 0.36574637235320734,
+        "volatility": 0.023045139209121792,
+        "annualized_volatility": 0.3658302436571999,
         "maximum_drawdown": -0.5740628968357382,
-        "sharpe_ratio": -0.8109378618239858,
-        "sortino_ratio": -1.014638362171932,
-        "calmar_ratio": -0.5329106734313338,
-        "beta": 0.8780505806404736,
-        "alpha": -0.45288723687399995,
-        "capm_expected_return": 0.15628965570801068,
-        "actual_return": -0.2965975811659893,
-        "market_return": 0.1779961874109904
+        "sharpe_ratio": -0.7755932165898277,
+        "sortino_ratio": -0.970637982377993,
+        "calmar_ratio": -0.5172718925853481,
+        "beta": 0.8804523787648008,
+        "alpha": -0.4436049844620573,
+        "capm_expected_return": 0.1598695290581292,
+        "actual_return": -0.2837354554039281,
+        "market_return": 0.18157657689835816
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 45.0,
+      "score": 30.0,
       "evidence": [
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Momentum is accelerating; Debt-to-equity is elevated; analyst revision"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Momentum is accelerating; Debt-to-equity is elevated"
   },
   "fundamentals": {
     "ticker": "CMG",
@@ -89,7 +89,7 @@
     "sector": "Consumer Cyclical",
     "industry": "Restaurants",
     "exchange": "NYQ",
-    "market_cap": 39700615168.0,
+    "market_cap": 40669081600.0,
     "revenue_growth": 0.074,
     "eps_growth": -0.179,
     "fcf_growth": null,
@@ -106,14 +106,14 @@
     "cash_position": 871422016.0,
     "total_debt": 5245879808.0,
     "interest_coverage": null,
-    "forward_pe": 22.8154,
-    "trailing_pe": 28.394495,
+    "forward_pe": 23.371962,
+    "trailing_pe": 29.087154,
     "peg": 1.64,
-    "price_to_book": 16.541956,
-    "price_to_sales": 3.2706118,
+    "price_to_book": 16.945482,
+    "price_to_sales": 3.3503957,
     "enterprise_to_ebitda": 19.13,
     "enterprise_to_revenue": 3.631,
-    "fcf_yield": 0.027402843895398654,
+    "fcf_yield": 0.026750290815517212,
     "institutional_ownership": 0.92554003,
     "insider_ownership": 0.0066299997,
     "short_interest": 44671409.0,
@@ -133,11 +133,11 @@
     "classification": "Fundamentally Weak"
   },
   "technical_screen": {
-    "rsi": 58.77466605055802,
+    "rsi": 65.02788035807507,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6500773114002711,
+    "relative_volume": 0.18354474684532893,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -189,10 +189,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 3,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.92554003,
     "detail": {
       "earnings": {
@@ -233,12 +233,11 @@
         "last_surprise_pct": 0.0139999995,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 38.54,
+      "analyst_upside_pct": 35.24,
       "eps_growth_implied": 24.45
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -260,6 +259,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Chipotle Mexican Grill (CMG) Gains As Market Dips: What You Should Know",
+        "source": "Zacks",
+        "published": "2026-06-23T21:50:03Z",
+        "summary": "In the closing of the recent trading day, Chipotle Mexican Grill (CMG) stood at $30.95, denoting a +1.34% move from the preceding trading day.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Best Stocks to Buy Now",
         "source": "Kiplinger",
@@ -299,16 +308,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Chipotle Mexican Grill (CMG) Stock After 38% Slide Is The Recent Weakness An Opportunity",
-        "source": "Simply Wall St.",
-        "published": "2026-06-17T22:15:31Z",
-        "summary": "If you are wondering whether Chipotle Mexican Grill stock is starting to look interesting at current levels, the key question is how its current price lines up with its underlying value. The stock last closed at US$31.86, with returns of 4.7% over the past week, while being down 5.6% over the past month, 15.0% year to date, and 38.5% over the past year. These moves will naturally have changed how many investors think about its risk and reward trade off. Recent headlines around Chipotle...",
-        "bullish_score": 0,
-        "bearish_score": 2,
-        "importance_score": 60,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -328,97 +327,97 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5638,
-    "probability_pct": 56.38,
+    "probability_of_outperformance": 0.549,
+    "probability_pct": 54.9,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 31.05/100"
+      "Composite score 32.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 31.05,
-    "technical_score": 35.0,
+    "final_score": 32.3,
+    "technical_score": 43.0,
     "momentum_score": 10.0,
     "volume_score": 0,
     "fundamental_score": 42.0,
     "risk_score": 75.0,
-    "catalyst_score": 45.0,
+    "catalyst_score": 30.0,
     "revenue_growth": 0.074,
     "eps_growth": -0.179,
     "roe": 0.49231997,
-    "forward_pe": 22.8154,
-    "relative_volume": 0.6500773114002711,
+    "forward_pe": 23.371962,
+    "relative_volume": 0.18354474684532893,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.01342501097318749,
-      "weekly": -0.05438432032361873,
-      "monthly": -0.05640239381563128,
-      "annual": -0.41360360972422583
+      "daily": 0.024394156450899374,
+      "weekly": -0.027752243781259844,
+      "monthly": -0.036029172634017725,
+      "annual": -0.41046856371608553
     },
     "risk": {
-      "volatility": 0.0230398558135861,
-      "annualized_volatility": 0.36574637235320734,
+      "volatility": 0.023045139209121792,
+      "annualized_volatility": 0.3658302436571999,
       "maximum_drawdown": -0.5740628968357382,
-      "sharpe_ratio": -0.8109378618239858,
-      "sortino_ratio": -1.014638362171932,
-      "calmar_ratio": -0.5329106734313338,
-      "beta": 0.8780505806404736,
-      "alpha": -0.45288723687399995,
-      "capm_expected_return": 0.15628965570801068,
-      "actual_return": -0.2965975811659893,
-      "market_return": 0.1779961874109904
+      "sharpe_ratio": -0.7755932165898277,
+      "sortino_ratio": -0.970637982377993,
+      "calmar_ratio": -0.5172718925853481,
+      "beta": 0.8804523787648008,
+      "alpha": -0.4436049844620573,
+      "capm_expected_return": 0.1598695290581292,
+      "actual_return": -0.2837354554039281,
+      "market_return": 0.18157657689835816
     },
     "capm": {
-      "beta": 0.8780505806404736,
-      "alpha": -0.45288723687399995,
-      "capm_expected_return": 0.15628965570801068,
-      "actual_return": -0.2965975811659893,
-      "market_return": 0.1779961874109904,
-      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 15.63%; realized alpha is -45.29%, meaning negative alpha versus CAPM."
+      "beta": 0.8804523787648008,
+      "alpha": -0.4436049844620573,
+      "capm_expected_return": 0.1598695290581292,
+      "actual_return": -0.2837354554039281,
+      "market_return": 0.18157657689835816,
+      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 15.99%; realized alpha is -44.36%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.2965975811659893,
+      "actual_return": -0.2837354554039281,
       "components": {
-        "market_component": 0.15628965570801068,
+        "market_component": 0.1598695290581292,
         "momentum_component": 0.0,
-        "volatility_drag": -0.023149274470641468,
-        "alpha_component": -0.45288723687399995
+        "volatility_drag": -0.023166048731439983,
+        "alpha_component": -0.4436049844620573
       },
       "component_weights_pct": {
-        "market_component": 24.72,
+        "market_component": 25.51,
         "momentum_component": 0.0,
-        "volatility_drag": 3.66,
-        "alpha_component": 71.62
+        "volatility_drag": 3.7,
+        "alpha_component": 70.79
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 30.979000091552734,
-      "sma50": 32.529800224304196,
-      "sma200": 35.71305008888245,
-      "ema20": 31.399264603587635,
-      "ema50": 32.25228282744636,
-      "ema200": 36.77216822822995
+      "sma20": 30.948750019073486,
+      "sma50": 32.47210021972656,
+      "sma200": 35.666275081634524,
+      "ema20": 31.428382253122724,
+      "ema50": 32.230820752789874,
+      "ema200": 36.72174864311031
     },
     "momentum": {
-      "3m": -0.07224220033929762,
-      "6m": -0.17751794088669048,
-      "12m": -0.41360360972422583,
+      "3m": -0.032203859947504854,
+      "6m": -0.1576779904936607,
+      "12m": -0.41046856371608553,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 21842671.25,
-      "relative_volume": 0.6500773114002711,
+      "average_volume": 21186670.1,
+      "relative_volume": 0.18354474684532893,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -431,10 +430,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-23",
+    "date_of_change": "2026-06-24",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CMG\nRating: Drop | Score: 31.05/100 | Confidence: 23.38/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 22.8154\nNews/Catalyst: Best Stocks to Buy Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMG\nRating: Drop | Score: 32.3/100 | Confidence: 22.23/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 23.371962\nNews/Catalyst: Chipotle Mexican Grill (CMG) Gains As Market Dips: What You Should Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

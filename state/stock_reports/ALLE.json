@@ -1,45 +1,50 @@
 {
   "ticker": "ALLE",
-  "generated_at": "2026-06-23T22:46:29.473590",
+  "generated_at": "2026-06-24T15:32:03.877365",
   "score": {
-    "final_score": 35.3,
+    "final_score": 44.05,
     "rating": "Drop",
-    "confidence": 19.57,
+    "confidence": 31.1,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 38.0,
-      "momentum": 0,
+      "technical": 53.0,
+      "momentum": 20.0,
       "volume": 0,
       "fundamental": 62.0,
       "risk": 100,
       "catalyst": 30.0
     },
     "technical": {
-      "score": 38.0,
+      "score": 53.0,
       "evidence": [
+        "Price above SMA20",
+        "Price above SMA50",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 125.6500015258789,
       "resistance": 148.39999389648438,
-      "risk_reward": 6.32
+      "risk_reward": 1.47
     },
     "momentum": {
-      "score": 0,
+      "score": 20.0,
       "returns": {
-        "1m": -0.010782039273702582,
-        "3m": -0.09983441949536032,
-        "6m": -0.18846810066155162,
-        "12m": -0.05703569533269037
+        "1m": 0.038149988346916075,
+        "3m": -0.07084397675535503,
+        "6m": -0.15050966363468932,
+        "12m": -0.04585144634934013
       },
-      "acceleration": -0.0056,
-      "evidence": []
+      "acceleration": 0.0044,
+      "evidence": [
+        "1m return is positive",
+        "Momentum is accelerating"
+      ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 998904.15,
-      "relative_volume": 0.5789174066400665,
+      "average_volume": 989103.25,
+      "relative_volume": 0.21601890399207566,
       "accumulation_days": 4,
       "distribution_days": 5,
       "evidence": []
@@ -52,17 +57,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015899069645860176,
-        "annualized_volatility": 0.2523899061614508,
-        "maximum_drawdown": -0.29840559257011445,
-        "sharpe_ratio": 0.3386012146822442,
-        "sortino_ratio": 0.47457708821702865,
-        "calmar_ratio": 0.1847417169032822,
-        "beta": 0.6364762538793537,
-        "alpha": -0.027830817768349697,
-        "capm_expected_return": 0.11329034656815455,
-        "actual_return": 0.08545952879980485,
-        "market_return": 0.1779961874109904
+        "volatility": 0.01602111844976374,
+        "annualized_volatility": 0.2543273708591011,
+        "maximum_drawdown": -0.2984055925701148,
+        "sharpe_ratio": 0.4288932449508411,
+        "sortino_ratio": 0.6057429115856013,
+        "calmar_ratio": 0.26750797121898673,
+        "beta": 0.6417508992448546,
+        "alpha": -0.007447640138747991,
+        "capm_expected_return": 0.11652693150632384,
+        "actual_return": 0.10907929136757585,
+        "market_return": 0.18157657689835816
       },
       "evidence": []
     },
@@ -73,7 +78,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; analyst revision; guidance change"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "ALLE",
@@ -82,7 +87,7 @@
     "sector": "Industrials",
     "industry": "Security & Protection Services",
     "exchange": "NYQ",
-    "market_cap": 11065101312.0,
+    "market_cap": 11574702080.0,
     "revenue_growth": 0.097,
     "eps_growth": -0.07,
     "fcf_growth": null,
@@ -99,14 +104,14 @@
     "cash_position": 308900000.0,
     "total_debt": 2224399872.0,
     "interest_coverage": null,
-    "forward_pe": 13.473735,
-    "trailing_pe": 17.590162,
+    "forward_pe": 14.094264,
+    "trailing_pe": 18.425446,
     "peg": 2.01,
-    "price_to_book": 5.266042,
-    "price_to_sales": 2.6605196,
-    "enterprise_to_ebitda": 13.029,
-    "enterprise_to_revenue": 3.166,
-    "fcf_yield": 0.04467762942792656,
+    "price_to_book": 5.5085683,
+    "price_to_sales": 2.7830493,
+    "enterprise_to_ebitda": 12.844,
+    "enterprise_to_revenue": 3.121,
+    "fcf_yield": 0.04271060218942586,
     "institutional_ownership": 1.01897,
     "insider_ownership": 0.00253,
     "short_interest": 3359864.0,
@@ -118,20 +123,20 @@
     "target_low_price": 142.0,
     "recommendation": "buy",
     "number_of_analysts": 13.0,
-    "dividend_yield": 1.62,
+    "dividend_yield": 1.65,
     "payout_ratio": 0.2842,
     "next_earnings_date": "1777379400",
-    "eps_current_year": 7.32,
+    "eps_current_year": 7.31,
     "eps_forward": 9.55637,
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 48.002913088208985,
+    "rsi": 57.155793262187196,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5789174066400665,
-    "price_above_sma50": false,
+    "relative_volume": 0.21601890399207566,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 125.6500015258789,
@@ -184,7 +189,7 @@
     "sector_strength": false,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 1.01897,
     "detail": {
@@ -226,8 +231,8 @@
         "last_surprise_pct": -0.0509,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 27.43,
-      "eps_growth_implied": 30.55
+      "analyst_upside_pct": 21.82,
+      "eps_growth_implied": 30.73
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
@@ -252,6 +257,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "2 Value Stocks Worth Your Attention and 1 Facing Headwinds",
+        "source": "StockStory",
+        "published": "2026-06-24T10:24:25Z",
+        "summary": "The low valuation multiples for value stocks provide a margin of safety that growth stocks rarely offer. However, the challenge lies in determining whether these cheap assets are genuinely undervalued or simply on sale due to their potentially deteriorating business models.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Is Allegion Stock Underperforming the S&P 500?",
         "source": "Barchart",
@@ -291,16 +306,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Stocks Edge Higher as Chipmakers and AI Stocks Rebound",
-        "source": "Barchart",
-        "published": "2026-06-11T14:07:43Z",
-        "summary": "The S&P 500 Index ($SPX ) (SPY ) today is up +0.20%, the Dow Jones Industrial Average ($DOWI ) (DIA ) is up +0.43%, and the Nasdaq 100 Index ($IUXX ) (QQQ ) is up +0.53%. June E-mini S&P futures (ESM26 ) are up +0.29%, and June E-mini Nasdaq futures...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -320,19 +325,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6602,
-    "probability_pct": 66.02,
+    "probability_of_outperformance": 0.6677,
+    "probability_pct": 66.77,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 35.3/100"
+      "Composite score 44.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.3,
-    "technical_score": 38.0,
-    "momentum_score": 0,
+    "final_score": 44.05,
+    "technical_score": 53.0,
+    "momentum_score": 20.0,
     "volume_score": 0,
     "fundamental_score": 62.0,
     "risk_score": 100,
@@ -340,10 +345,10 @@
     "revenue_growth": 0.097,
     "eps_growth": -0.07,
     "roe": 0.34179002,
-    "forward_pe": 13.473735,
-    "relative_volume": 0.5789174066400665,
+    "forward_pe": 14.094264,
+    "relative_volume": 0.21601890399207566,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
@@ -351,66 +356,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01657372863617912,
-      "weekly": -0.036948411025907624,
-      "monthly": -0.010782039273702582,
-      "annual": -0.05703569533269037
+      "daily": 0.04729738937940353,
+      "weekly": -0.0001482094935534306,
+      "monthly": 0.038149988346916075,
+      "annual": -0.04585144634934013
     },
     "risk": {
-      "volatility": 0.015899069645860176,
-      "annualized_volatility": 0.2523899061614508,
-      "maximum_drawdown": -0.29840559257011445,
-      "sharpe_ratio": 0.3386012146822442,
-      "sortino_ratio": 0.47457708821702865,
-      "calmar_ratio": 0.1847417169032822,
-      "beta": 0.6364762538793537,
-      "alpha": -0.027830817768349697,
-      "capm_expected_return": 0.11329034656815455,
-      "actual_return": 0.08545952879980485,
-      "market_return": 0.1779961874109904
+      "volatility": 0.01602111844976374,
+      "annualized_volatility": 0.2543273708591011,
+      "maximum_drawdown": -0.2984055925701148,
+      "sharpe_ratio": 0.4288932449508411,
+      "sortino_ratio": 0.6057429115856013,
+      "calmar_ratio": 0.26750797121898673,
+      "beta": 0.6417508992448546,
+      "alpha": -0.007447640138747991,
+      "capm_expected_return": 0.11652693150632384,
+      "actual_return": 0.10907929136757585,
+      "market_return": 0.18157657689835816
     },
     "capm": {
-      "beta": 0.6364762538793537,
-      "alpha": -0.027830817768349697,
-      "capm_expected_return": 0.11329034656815455,
-      "actual_return": 0.08545952879980485,
-      "market_return": 0.1779961874109904,
-      "interpretation": "Beta 0.64: Moves roughly 36% less than the market. CAPM expected return is 11.33%; realized alpha is -2.78%, meaning negative alpha versus CAPM."
+      "beta": 0.6417508992448546,
+      "alpha": -0.007447640138747991,
+      "capm_expected_return": 0.11652693150632384,
+      "actual_return": 0.10907929136757585,
+      "market_return": 0.18157657689835816,
+      "interpretation": "Beta 0.64: Moves roughly 36% less than the market. CAPM expected return is 11.65%; realized alpha is -0.74%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.08545952879980485,
+      "actual_return": 0.10907929136757585,
       "components": {
-        "market_component": 0.11329034656815455,
+        "market_component": 0.11652693150632384,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0004779812322901589,
-        "alpha_component": -0.027830817768349697
+        "volatility_drag": -0.0008654741718202241,
+        "alpha_component": -0.007447640138747991
       },
       "component_weights_pct": {
-        "market_component": 80.01,
+        "market_component": 93.34,
         "momentum_component": 0.0,
-        "volatility_drag": 0.34,
-        "alpha_component": 19.65
+        "volatility_drag": 0.69,
+        "alpha_component": 5.97
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 130.75722389221193,
-      "sma50": 134.21980239868165,
-      "sma200": 155.40687328338623,
-      "ema20": 131.3019925082832,
-      "ema50": 134.72729287191163,
-      "ema200": 146.79689646062926
+      "sma20": 130.94623985290528,
+      "sma50": 133.98468948364257,
+      "sma200": 155.22857822418212,
+      "ema20": 131.63989856497201,
+      "ema50": 134.73210515550429,
+      "ema200": 146.67802188447757
     },
     "momentum": {
-      "3m": -0.09983441949536032,
-      "6m": -0.18846810066155162,
-      "12m": -0.05703569533269037,
+      "3m": -0.07084397675535503,
+      "6m": -0.15050966363468932,
+      "12m": -0.04585144634934013,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 998904.15,
-      "relative_volume": 0.5789174066400665,
+      "average_volume": 989103.25,
+      "relative_volume": 0.21601890399207566,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -420,13 +425,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-23",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-06-24",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: ALLE\nRating: Drop | Score: 35.3/100 | Confidence: 19.57/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 125.6500015258789 | Resistance: 148.39999389648438\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.473735\nNews/Catalyst: Is Allegion Stock Underperforming the S&P 500?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALLE\nRating: Drop | Score: 44.05/100 | Confidence: 31.1/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 125.6500015258789 | Resistance: 148.39999389648438\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.094264\nNews/Catalyst: 2 Value Stocks Worth Your Attention and 1 Facing Headwinds\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }
