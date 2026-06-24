@@ -1,10 +1,10 @@
 {
   "ticker": "ANET",
-  "generated_at": "2026-06-24T21:11:27.115878",
+  "generated_at": "2026-06-24T22:49:47.679400",
   "score": {
-    "final_score": 69.9,
+    "final_score": 70.65,
     "rating": "Watch",
-    "confidence": 63.88,
+    "confidence": 65.79,
     "risk_level": "Moderate",
     "categories": {
       "technical": 75.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 60.0,
-      "catalyst": 85.0
+      "catalyst": 100
     },
     "technical": {
       "score": 75.0,
@@ -73,11 +73,11 @@
         "sharpe_ratio": 0.8912467122433342,
         "sortino_ratio": 1.1351146846574534,
         "calmar_ratio": 0.78216191775285,
-        "beta": 1.7907634026447918,
-        "alpha": 0.16450548315498076,
-        "capm_expected_return": 0.31485513455069575,
+        "beta": 1.7907625404459508,
+        "alpha": 0.16450565489727392,
+        "capm_expected_return": 0.3148549628084026,
         "actual_return": 0.4793606177056765,
-        "market_return": 0.1758217384193154
+        "market_return": 0.17582172716768732
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -85,12 +85,13 @@
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 100,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -103,7 +104,7 @@
     "sector": "Technology",
     "industry": "Computer Hardware",
     "exchange": "NYQ",
-    "market_cap": 207334834176.0,
+    "market_cap": 203658067968.0,
     "revenue_growth": 0.351,
     "eps_growth": 0.25,
     "fcf_growth": null,
@@ -120,14 +121,14 @@
     "cash_position": 12353200128.0,
     "total_debt": 0.0,
     "interest_coverage": null,
-    "forward_pe": 36.966194,
-    "trailing_pe": 56.77931,
+    "forward_pe": 36.310658,
+    "trailing_pe": 55.772415,
     "peg": 2.24,
-    "price_to_book": 15.372981,
-    "price_to_sales": 21.352932,
+    "price_to_book": 15.100364,
+    "price_to_sales": 20.974272,
     "enterprise_to_ebitda": 45.287,
     "enterprise_to_revenue": 19.762,
-    "fcf_yield": 0.021039578116897783,
+    "fcf_yield": 0.021419418751853332,
     "institutional_ownership": 0.72823995,
     "insider_ownership": 0.1727,
     "short_interest": 21269942.0,
@@ -144,8 +145,7 @@
     "next_earnings_date": "1778011200",
     "eps_current_year": 2.9,
     "eps_forward": 4.45434,
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
     "rsi": 41.081773209214404,
@@ -204,9 +204,9 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
     "institutional_ownership": 0.72823995,
     "detail": {
@@ -256,6 +256,7 @@
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -277,6 +278,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Everyone Is Watching Cisco Stock's AI Orders. Here's The Number They Stopped Bragging About.",
+        "source": "Trefis",
+        "published": "2026-06-24T21:05:51Z",
+        "summary": "The pivot to an AI powerhouse is driving record sales, but it comes at a cost to the high-profitability story management once championed.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Analysts Pound The Table For 4 Rising S&P 500 Stocks",
         "source": "Investor's Business Daily",
@@ -316,16 +327,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Top Analyst Reports for Micron Technology, Coca-Cola & Arista Networks",
-        "source": "Zacks",
-        "published": "2026-06-23T20:29:00Z",
-        "summary": "MU, KO and ANET headline Zacks' latest analyst reports, with AI demand, pricing gains and networking expansion driving the outlook.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -345,37 +346,37 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8853,
-    "probability_pct": 88.53,
+    "probability_of_outperformance": 0.8913,
+    "probability_pct": 89.13,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 69.9/100"
+      "Composite score 70.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 69.9,
+    "final_score": 70.65,
     "technical_score": 75.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 60.0,
-    "catalyst_score": 85.0,
+    "catalyst_score": 100,
     "revenue_growth": 0.351,
     "eps_growth": 0.25,
     "roe": 0.31520998,
-    "forward_pe": 36.966194,
+    "forward_pe": 36.310658,
     "relative_volume": 0.4764965036970654,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -391,27 +392,27 @@
       "sharpe_ratio": 0.8912467122433342,
       "sortino_ratio": 1.1351146846574534,
       "calmar_ratio": 0.78216191775285,
-      "beta": 1.7907634026447918,
-      "alpha": 0.16450548315498076,
-      "capm_expected_return": 0.31485513455069575,
+      "beta": 1.7907625404459508,
+      "alpha": 0.16450565489727392,
+      "capm_expected_return": 0.3148549628084026,
       "actual_return": 0.4793606177056765,
-      "market_return": 0.1758217384193154
+      "market_return": 0.17582172716768732
     },
     "capm": {
-      "beta": 1.7907634026447918,
-      "alpha": 0.16450548315498076,
-      "capm_expected_return": 0.31485513455069575,
+      "beta": 1.7907625404459508,
+      "alpha": 0.16450565489727392,
+      "capm_expected_return": 0.3148549628084026,
       "actual_return": 0.4793606177056765,
-      "market_return": 0.1758217384193154,
+      "market_return": 0.17582172716768732,
       "interpretation": "Beta 1.79: Moves roughly 79% more than the market. CAPM expected return is 31.49%; realized alpha is 16.45%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
       "actual_return": 0.4793606177056765,
       "components": {
-        "market_component": 0.31485513455069575,
+        "market_component": 0.3148549628084026,
         "momentum_component": 0.18974989358674482,
         "volatility_drag": -0.05757080191613615,
-        "alpha_component": 0.16450548315498076
+        "alpha_component": 0.16450565489727392
       },
       "component_weights_pct": {
         "market_component": 43.33,
@@ -456,5 +457,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ANET\nRating: Watch | Score: 69.9/100 | Confidence: 63.88/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 36.966194\nNews/Catalyst: Analysts Pound The Table For 4 Rising S&P 500 Stocks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ANET\nRating: Watch | Score: 70.65/100 | Confidence: 65.79/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 116.12999725341797 | Resistance: 177.72999572753906\nFundamental Outlook: Quality Compounder | Forward P/E: 36.310658\nNews/Catalyst: Everyone Is Watching Cisco Stock's AI Orders. Here's The Number They Stopped Bragging About.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
