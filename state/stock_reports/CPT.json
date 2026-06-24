@@ -1,13 +1,13 @@
 {
   "ticker": "CPT",
-  "generated_at": "2026-06-24T17:31:21.173982",
+  "generated_at": "2026-06-24T19:13:31.394577",
   "score": {
-    "final_score": 60.0,
+    "final_score": 62.0,
     "rating": "Hold",
-    "confidence": 46.11,
+    "confidence": 47.26,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 72.0,
+      "technical": 80.0,
       "momentum": 65.0,
       "volume": 0,
       "fundamental": 50.0,
@@ -15,8 +15,9 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 72.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -26,17 +27,17 @@
       ],
       "support": 96.95999908447266,
       "resistance": 115.4000015258789,
-      "risk_reward": 0.34
+      "risk_reward": 0.29
     },
     "momentum": {
       "score": 65.0,
       "returns": {
-        "1m": 0.03000835989103745,
-        "3m": 0.14296194867839107,
-        "6m": 0.04313396546798054,
-        "12m": -0.008929800348298378
+        "1m": 0.034986527342721674,
+        "3m": 0.14848603585378672,
+        "6m": 0.048175570717852834,
+        "12m": -0.004139826205989294
       },
-      "acceleration": 0.1214,
+      "acceleration": 0.1244,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +48,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 1306630.55,
-      "relative_volume": 0.2149123177932737,
+      "average_volume": 1314442.3,
+      "relative_volume": 0.3324953860660145,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": []
@@ -64,17 +65,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.013063749751087825,
-        "annualized_volatility": 0.207380598188162,
-        "maximum_drawdown": -0.2032612978248387,
-        "sharpe_ratio": 0.277206680087202,
-        "sortino_ratio": 0.4150316885743841,
-        "calmar_ratio": 0.18032280765129868,
-        "beta": 0.42645563203819803,
-        "alpha": -0.017926571996559393,
-        "capm_expected_return": 0.0754138591347978,
-        "actual_return": 0.057487287138238405,
-        "market_return": 0.17683869896234108
+        "volatility": 0.013066676152771317,
+        "annualized_volatility": 0.20742705337470682,
+        "maximum_drawdown": -0.20326134850519317,
+        "sharpe_ratio": 0.2888850121502548,
+        "sortino_ratio": 0.4326134578449945,
+        "calmar_ratio": 0.19270624197247285,
+        "beta": 0.4259670194963055,
+        "alpha": -0.01501051012085896,
+        "capm_expected_return": 0.07493307695530269,
+        "actual_return": 0.059922566834443726,
+        "market_return": 0.17591286068087858
       },
       "evidence": []
     },
@@ -87,7 +88,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "CPT",
@@ -141,11 +142,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 55.73927020770876,
+    "rsi": 57.195583209891375,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2149123177932737,
+    "relative_volume": 0.3324953860660145,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -241,7 +242,7 @@
         "last_surprise_pct": -1.9642999,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 3.27,
+      "analyst_upside_pct": 2.7,
       "eps_growth_implied": -55.4
     },
     "evidence": [
@@ -337,18 +338,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7636,
-    "probability_pct": 76.36,
+    "probability_of_outperformance": 0.7794,
+    "probability_pct": 77.94,
     "confidence": "High",
     "evidence": [
       "Positive earnings surprise/catalyst",
-      "Composite score 60.0/100"
+      "Composite score 62.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.0,
-    "technical_score": 72.0,
+    "final_score": 62.0,
+    "technical_score": 80.0,
     "momentum_score": 65.0,
     "volume_score": 0,
     "fundamental_score": 50.0,
@@ -358,7 +359,7 @@
     "eps_growth": 0.121,
     "roe": 0.09064999,
     "forward_pe": 69.61617,
-    "relative_volume": 0.2149123177932737,
+    "relative_volume": 0.3324953860660145,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -368,66 +369,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0017647031205811903,
-      "weekly": -0.014818448793902483,
-      "monthly": 0.03000835989103745,
-      "annual": -0.008929800348298378
+      "daily": 0.006606365221118571,
+      "weekly": -0.010056935273048295,
+      "monthly": 0.034986527342721674,
+      "annual": -0.004139826205989294
     },
     "risk": {
-      "volatility": 0.013063749751087825,
-      "annualized_volatility": 0.207380598188162,
-      "maximum_drawdown": -0.2032612978248387,
-      "sharpe_ratio": 0.277206680087202,
-      "sortino_ratio": 0.4150316885743841,
-      "calmar_ratio": 0.18032280765129868,
-      "beta": 0.42645563203819803,
-      "alpha": -0.017926571996559393,
-      "capm_expected_return": 0.0754138591347978,
-      "actual_return": 0.057487287138238405,
-      "market_return": 0.17683869896234108
+      "volatility": 0.013066676152771317,
+      "annualized_volatility": 0.20742705337470682,
+      "maximum_drawdown": -0.20326134850519317,
+      "sharpe_ratio": 0.2888850121502548,
+      "sortino_ratio": 0.4326134578449945,
+      "calmar_ratio": 0.19270624197247285,
+      "beta": 0.4259670194963055,
+      "alpha": -0.01501051012085896,
+      "capm_expected_return": 0.07493307695530269,
+      "actual_return": 0.059922566834443726,
+      "market_return": 0.17591286068087858
     },
     "capm": {
-      "beta": 0.42645563203819803,
-      "alpha": -0.017926571996559393,
-      "capm_expected_return": 0.0754138591347978,
-      "actual_return": 0.057487287138238405,
-      "market_return": 0.17683869896234108,
-      "interpretation": "Beta 0.43: Moves roughly 57% less than the market. CAPM expected return is 7.54%; realized alpha is -1.79%, meaning negative alpha versus CAPM."
+      "beta": 0.4259670194963055,
+      "alpha": -0.01501051012085896,
+      "capm_expected_return": 0.07493307695530269,
+      "actual_return": 0.059922566834443726,
+      "market_return": 0.17591286068087858,
+      "interpretation": "Beta 0.43: Moves roughly 57% less than the market. CAPM expected return is 7.49%; realized alpha is -1.50%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.057487287138238405,
+      "actual_return": 0.059922566834443726,
       "components": {
-        "market_component": 0.0754138591347978,
+        "market_component": 0.07493307695530269,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": -0.017926571996559393
+        "alpha_component": -0.01501051012085896
       },
       "component_weights_pct": {
-        "market_component": 80.79,
+        "market_component": 83.31,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 19.21
+        "alpha_component": 16.69
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 110.7912498474121,
-      "sma50": 106.77929962158203,
-      "sma200": 104.2843603515625,
-      "ema20": 110.28897999013981,
-      "ema50": 107.77769709947027,
-      "ema200": 105.7608088321853
+      "sma20": 110.81800003051758,
+      "sma50": 106.78999969482422,
+      "sma200": 104.28703525543213,
+      "ema20": 110.33993271986456,
+      "ema50": 107.79867763511486,
+      "ema200": 105.76613230429413
     },
     "momentum": {
-      "3m": 0.14296194867839107,
-      "6m": 0.04313396546798054,
-      "12m": -0.008929800348298378,
+      "3m": 0.14848603585378672,
+      "6m": 0.048175570717852834,
+      "12m": -0.004139826205989294,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1306630.55,
-      "relative_volume": 0.2149123177932737,
+      "average_volume": 1314442.3,
+      "relative_volume": 0.3324953860660145,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -445,5 +446,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CPT\nRating: Hold | Score: 60.0/100 | Confidence: 46.11/100\nBull Case: momentum and relative strength are constructive\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 96.95999908447266 | Resistance: 115.4000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 69.61617\nNews/Catalyst: Camden Property Trust Stock: Is CPT Underperforming the Real Estate Sector?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CPT\nRating: Hold | Score: 62.0/100 | Confidence: 47.26/100\nBull Case: momentum and relative strength are constructive\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 96.95999908447266 | Resistance: 115.4000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 69.61617\nNews/Catalyst: Camden Property Trust Stock: Is CPT Underperforming the Real Estate Sector?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

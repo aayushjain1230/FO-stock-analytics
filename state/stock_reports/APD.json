@@ -1,13 +1,13 @@
 {
   "ticker": "APD",
-  "generated_at": "2026-06-24T17:30:48.936263",
+  "generated_at": "2026-06-24T19:12:58.868746",
   "score": {
-    "final_score": 45.75,
+    "final_score": 48.25,
     "rating": "Hold",
-    "confidence": 34.91,
+    "confidence": 36.62,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 40.0,
+      "technical": 50.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 65.0,
@@ -15,25 +15,26 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 40.0,
+      "score": 50.0,
       "evidence": [
         "Price above SMA200",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 276.260009765625,
+      "support": 276.510009765625,
       "resistance": 306.20001220703125,
-      "risk_reward": 0.0
+      "risk_reward": 16.57
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.045635096553602206,
-        "3m": -0.028848468619936285,
-        "6m": 0.16694977294562752,
-        "12m": 0.038405273511321836
+        "1m": -0.03893318466903661,
+        "3m": -0.02202867467490921,
+        "6m": 0.17514453631522864,
+        "12m": 0.04569734871066089
       },
-      "acceleration": -0.1123,
+      "acceleration": -0.1096,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -41,8 +42,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 1343557.2,
-      "relative_volume": 0.34746864517565756,
+      "average_volume": 1351512.3,
+      "relative_volume": 0.46314487851867864,
       "accumulation_days": 5,
       "distribution_days": 7,
       "evidence": []
@@ -55,17 +56,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016550232261468952,
-        "annualized_volatility": 0.2627267922252298,
-        "maximum_drawdown": -0.3042991374120868,
-        "sharpe_ratio": 0.2664340289535615,
-        "sortino_ratio": 0.40087362524025033,
-        "calmar_ratio": 0.11968966559020468,
-        "beta": 0.5638357809958274,
-        "alpha": -0.029708628173104407,
-        "capm_expected_return": 0.09970798593971761,
-        "actual_return": 0.0699993577666132,
-        "market_return": 0.17683869896234108
+        "volatility": 0.01653464651636529,
+        "annualized_volatility": 0.2624793761919782,
+        "maximum_drawdown": -0.30429920229160357,
+        "sharpe_ratio": 0.279847322583922,
+        "sortino_ratio": 0.4213915893707544,
+        "calmar_ratio": 0.13169919076045553,
+        "beta": 0.5639364172407566,
+        "alpha": -0.025749517738123895,
+        "capm_expected_return": 0.09920366839894702,
+        "actual_return": 0.07345415066082313,
+        "market_return": 0.17591286068087858
       },
       "evidence": []
     },
@@ -77,7 +78,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; analyst revision"
+    "explanation": "Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive"
   },
   "fundamentals": {
     "ticker": "APD",
@@ -131,15 +132,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 42.64023852002777,
+    "rsi": 44.76732004705155,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.34746864517565756,
+    "relative_volume": 0.46314487851867864,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 276.260009765625,
+    "support": 276.510009765625,
     "resistance": 306.20001220703125
   },
   "earnings": {
@@ -231,7 +232,7 @@
         "last_surprise_pct": 0.0454,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 18.75,
+      "analyst_upside_pct": 17.85,
       "eps_growth_implied": 50.19
     },
     "evidence": [
@@ -331,13 +332,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 45.75/100"
+      "Composite score 48.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 45.75,
-    "technical_score": 40.0,
+    "final_score": 48.25,
+    "technical_score": 50.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 65.0,
@@ -347,7 +348,7 @@
     "eps_growth": null,
     "roe": 0.12353,
     "forward_pe": 19.510284,
-    "relative_volume": 0.34746864517565756,
+    "relative_volume": 0.46314487851867864,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -357,66 +358,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.021915390950201452,
-      "weekly": -0.015045639815340794,
-      "monthly": -0.045635096553602206,
-      "annual": 0.038405273511321836
+      "daily": -0.015046910307388583,
+      "weekly": -0.0081289171776594,
+      "monthly": -0.03893318466903661,
+      "annual": 0.04569734871066089
     },
     "risk": {
-      "volatility": 0.016550232261468952,
-      "annualized_volatility": 0.2627267922252298,
-      "maximum_drawdown": -0.3042991374120868,
-      "sharpe_ratio": 0.2664340289535615,
-      "sortino_ratio": 0.40087362524025033,
-      "calmar_ratio": 0.11968966559020468,
-      "beta": 0.5638357809958274,
-      "alpha": -0.029708628173104407,
-      "capm_expected_return": 0.09970798593971761,
-      "actual_return": 0.0699993577666132,
-      "market_return": 0.17683869896234108
+      "volatility": 0.01653464651636529,
+      "annualized_volatility": 0.2624793761919782,
+      "maximum_drawdown": -0.30429920229160357,
+      "sharpe_ratio": 0.279847322583922,
+      "sortino_ratio": 0.4213915893707544,
+      "calmar_ratio": 0.13169919076045553,
+      "beta": 0.5639364172407566,
+      "alpha": -0.025749517738123895,
+      "capm_expected_return": 0.09920366839894702,
+      "actual_return": 0.07345415066082313,
+      "market_return": 0.17591286068087858
     },
     "capm": {
-      "beta": 0.5638357809958274,
-      "alpha": -0.029708628173104407,
-      "capm_expected_return": 0.09970798593971761,
-      "actual_return": 0.0699993577666132,
-      "market_return": 0.17683869896234108,
-      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 9.97%; realized alpha is -2.97%, meaning negative alpha versus CAPM."
+      "beta": 0.5639364172407566,
+      "alpha": -0.025749517738123895,
+      "capm_expected_return": 0.09920366839894702,
+      "actual_return": 0.07345415066082313,
+      "market_return": 0.17591286068087858,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 9.92%; realized alpha is -2.57%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.0699993577666132,
+      "actual_return": 0.07345415066082313,
       "components": {
-        "market_component": 0.09970798593971761,
-        "momentum_component": 0.009601318377830459,
-        "volatility_drag": -0.0025453584450459647,
-        "alpha_component": -0.029708628173104407
+        "market_component": 0.09920366839894702,
+        "momentum_component": 0.011424337177665222,
+        "volatility_drag": -0.00249587523839564,
+        "alpha_component": -0.025749517738123895
       },
       "component_weights_pct": {
-        "market_component": 70.43,
-        "momentum_component": 6.78,
+        "market_component": 71.43,
+        "momentum_component": 8.23,
         "volatility_drag": 1.8,
-        "alpha_component": 20.99
+        "alpha_component": 18.54
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 280.84350128173827,
-      "sma50": 290.92360046386716,
-      "sma200": 271.7081844329834,
-      "ema20": 282.6011765045544,
-      "ema50": 285.97512585760137,
-      "ema200": 279.0637361262697
+      "sma20": 280.9405014038086,
+      "sma50": 290.9624005126953,
+      "sma200": 271.7178845977783,
+      "ema20": 282.7859386418312,
+      "ema50": 286.05120438485187,
+      "ema200": 279.0830396331994
     },
     "momentum": {
-      "3m": -0.028848468619936285,
-      "6m": 0.16694977294562752,
-      "12m": 0.038405273511321836,
+      "3m": -0.02202867467490921,
+      "6m": 0.17514453631522864,
+      "12m": 0.04569734871066089,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1343557.2,
-      "relative_volume": 0.34746864517565756,
+      "average_volume": 1351512.3,
+      "relative_volume": 0.46314487851867864,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -434,5 +435,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APD\nRating: Hold | Score: 45.75/100 | Confidence: 34.91/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 276.260009765625 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.510284\nNews/Catalyst: Has The AI Power Boom Pushed Bloom Energy Stock Too Far, Too Fast?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APD\nRating: Hold | Score: 48.25/100 | Confidence: 36.62/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 276.510009765625 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 19.510284\nNews/Catalyst: Has The AI Power Boom Pushed Bloom Energy Stock Too Far, Too Fast?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

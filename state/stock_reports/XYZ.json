@@ -1,10 +1,10 @@
 {
   "ticker": "XYZ",
-  "generated_at": "2026-06-24T17:31:41.089363",
+  "generated_at": "2026-06-24T19:13:50.754048",
   "score": {
-    "final_score": 67.25,
+    "final_score": 68.0,
     "rating": "Watch",
-    "confidence": 55.36,
+    "confidence": 58.0,
     "risk_level": "Moderate",
     "categories": {
       "technical": 90.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 55.0,
       "risk": 60.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 90.0,
@@ -28,17 +28,17 @@
       ],
       "support": 55.97999954223633,
       "resistance": 76.0999984741211,
-      "risk_reward": 0.03
+      "risk_reward": 0.01
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.10994418932194083,
-        "3m": 0.2617298916597939,
-        "6m": 0.15666616138814105,
-        "12m": 0.18775548113904383
+        "1m": 0.11479134256496026,
+        "3m": 0.2672398967528511,
+        "6m": 0.16171735061837444,
+        "12m": 0.19294243818400503
       },
-      "acceleration": 0.1834,
+      "acceleration": 0.1864,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -50,8 +50,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5927644.9,
-      "relative_volume": 0.4906667064351307,
+      "average_volume": 5966873.95,
+      "relative_volume": 0.6189302859330554,
       "accumulation_days": 7,
       "distribution_days": 1,
       "evidence": [
@@ -66,17 +66,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.032269174795229956,
-        "annualized_volatility": 0.5122572691287126,
+        "volatility": 0.03228205302820554,
+        "annualized_volatility": 0.5124617047393887,
         "maximum_drawdown": -0.5296198984978918,
-        "sharpe_ratio": 0.4160393552135037,
-        "sortino_ratio": 0.544691773588948,
-        "calmar_ratio": 0.15811432322799676,
-        "beta": 1.7315638066157213,
-        "alpha": -0.09308830678046312,
-        "capm_expected_return": 0.30620749073220294,
-        "actual_return": 0.21311918395173982,
-        "market_return": 0.17683869896234108
+        "sharpe_ratio": 0.42034896310222425,
+        "sortino_ratio": 0.5505536790018147,
+        "calmar_ratio": 0.1626042462433932,
+        "beta": 1.7294802879093716,
+        "alpha": -0.08882507872052683,
+        "capm_expected_return": 0.30423782493732704,
+        "actual_return": 0.2154127462168002,
+        "market_return": 0.17591286068087858
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -84,10 +84,11 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "analyst revision",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -145,11 +146,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 60.94966772642568,
+    "rsi": 61.43311876757259,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4906667064351307,
+    "relative_volume": 0.6189302859330554,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -201,10 +202,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bullish_news_score": 3,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.84401,
     "detail": {
       "earnings": {
@@ -245,12 +246,13 @@
         "last_surprise_pct": 0.2555,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 19.79,
+      "analyst_upside_pct": 19.03,
       "eps_growth_implied": 288.79
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -272,6 +274,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "SoFi's Valuation Premium Suggests Growth Confidence But Also Risk",
+        "source": "Zacks",
+        "published": "2026-06-24T16:32:00Z",
+        "summary": "SOFI's valuation premium reflects confidence in its growth story, but it also raises the stakes if execution or earnings momentum slows.",
+        "bullish_score": 2,
+        "bearish_score": 2,
+        "importance_score": 90,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "PayPal's Checkout Recovery: Can Branded TPV Reaccelerate?",
         "source": "Zacks",
@@ -311,16 +323,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Block's Square Expands Enterprise Reach Through Sofive Partnership",
-        "source": "Zacks",
-        "published": "2026-06-19T12:06:00Z",
-        "summary": "XYZ's Square deepens its enterprise reach as Sofive Soccer Centers rolls out its unified commerce platform across 22 locations nationwide.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -340,97 +342,97 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7474,
-    "probability_pct": 74.74,
+    "probability_of_outperformance": 0.7585,
+    "probability_pct": 75.85,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 67.25/100"
+      "Composite score 68.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 67.25,
+    "final_score": 68.0,
     "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 55.0,
     "risk_score": 60.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.049,
     "eps_growth": null,
     "roe": 0.03743,
     "forward_pe": 15.426535,
-    "relative_volume": 0.4906667064351307,
+    "relative_volume": 0.6189302859330554,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.04414812178482497,
-      "weekly": 0.01185059095626606,
-      "monthly": 0.10994418932194083,
-      "annual": 0.18775548113904383
+      "daily": 0.04870794200226647,
+      "weekly": 0.016269367071847896,
+      "monthly": 0.11479134256496026,
+      "annual": 0.19294243818400503
     },
     "risk": {
-      "volatility": 0.032269174795229956,
-      "annualized_volatility": 0.5122572691287126,
+      "volatility": 0.03228205302820554,
+      "annualized_volatility": 0.5124617047393887,
       "maximum_drawdown": -0.5296198984978918,
-      "sharpe_ratio": 0.4160393552135037,
-      "sortino_ratio": 0.544691773588948,
-      "calmar_ratio": 0.15811432322799676,
-      "beta": 1.7315638066157213,
-      "alpha": -0.09308830678046312,
-      "capm_expected_return": 0.30620749073220294,
-      "actual_return": 0.21311918395173982,
-      "market_return": 0.17683869896234108
+      "sharpe_ratio": 0.42034896310222425,
+      "sortino_ratio": 0.5505536790018147,
+      "calmar_ratio": 0.1626042462433932,
+      "beta": 1.7294802879093716,
+      "alpha": -0.08882507872052683,
+      "capm_expected_return": 0.30423782493732704,
+      "actual_return": 0.2154127462168002,
+      "market_return": 0.17591286068087858
     },
     "capm": {
-      "beta": 1.7315638066157213,
-      "alpha": -0.09308830678046312,
-      "capm_expected_return": 0.30620749073220294,
-      "actual_return": 0.21311918395173982,
-      "market_return": 0.17683869896234108,
-      "interpretation": "Beta 1.73: Moves roughly 73% more than the market. CAPM expected return is 30.62%; realized alpha is -9.31%, meaning negative alpha versus CAPM."
+      "beta": 1.7294802879093716,
+      "alpha": -0.08882507872052683,
+      "capm_expected_return": 0.30423782493732704,
+      "actual_return": 0.2154127462168002,
+      "market_return": 0.17591286068087858,
+      "interpretation": "Beta 1.73: Moves roughly 73% more than the market. CAPM expected return is 30.42%; realized alpha is -8.88%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.21311918395173982,
+      "actual_return": 0.2154127462168002,
       "components": {
-        "market_component": 0.30620749073220294,
-        "momentum_component": 0.04693887028476096,
-        "volatility_drag": -0.052451453825742525,
-        "alpha_component": -0.09308830678046312
+        "market_component": 0.30423782493732704,
+        "momentum_component": 0.04823560954600126,
+        "volatility_drag": -0.05249234094787774,
+        "alpha_component": -0.08882507872052683
       },
       "component_weights_pct": {
-        "market_component": 61.4,
-        "momentum_component": 9.41,
-        "volatility_drag": 10.52,
-        "alpha_component": 18.67
+        "market_component": 61.61,
+        "momentum_component": 9.77,
+        "volatility_drag": 10.63,
+        "alpha_component": 17.99
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 72.08424949645996,
-      "sma50": 71.21109970092773,
-      "sma200": 67.27207492828369,
-      "ema20": 72.0752422748577,
-      "ema50": 70.11881047569652,
-      "ema200": 67.48457697196584
+      "sma20": 72.10074920654297,
+      "sma50": 71.21769958496094,
+      "sma200": 67.27372489929199,
+      "ema20": 72.10667029406342,
+      "ema50": 70.13175142478124,
+      "ema200": 67.48786049636045
     },
     "momentum": {
-      "3m": 0.2617298916597939,
-      "6m": 0.15666616138814105,
-      "12m": 0.18775548113904383,
+      "3m": 0.2672398967528511,
+      "6m": 0.16171735061837444,
+      "12m": 0.19294243818400503,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5927644.9,
-      "relative_volume": 0.4906667064351307,
+      "average_volume": 5966873.95,
+      "relative_volume": 0.6189302859330554,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -448,5 +450,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: XYZ\nRating: Watch | Score: 67.25/100 | Confidence: 55.36/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 55.97999954223633 | Resistance: 76.0999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.426535\nNews/Catalyst: PayPal's Checkout Recovery: Can Branded TPV Reaccelerate?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: XYZ\nRating: Watch | Score: 68.0/100 | Confidence: 58.0/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 55.97999954223633 | Resistance: 76.0999984741211\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.426535\nNews/Catalyst: SoFi's Valuation Premium Suggests Growth Confidence But Also Risk\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

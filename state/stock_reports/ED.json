@@ -1,13 +1,13 @@
 {
   "ticker": "ED",
-  "generated_at": "2026-06-24T17:31:31.178818",
+  "generated_at": "2026-06-24T19:13:41.449909",
   "score": {
-    "final_score": 59.2,
+    "final_score": 57.45,
     "rating": "Hold",
-    "confidence": 45.58,
+    "confidence": 44.45,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 58.0,
       "momentum": 60.0,
       "volume": 0,
       "fundamental": 68.0,
@@ -15,28 +15,27 @@
       "catalyst": 55.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 58.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 103.4800033569336,
       "resistance": 115.43000030517578,
-      "risk_reward": 0.98
+      "risk_reward": 0.65
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.009028889987772848,
-        "3m": 0.005072621810313427,
-        "6m": 0.13507022607064445,
-        "12m": 0.1187307651242917
+        "1m": 0.020084764020523505,
+        "3m": 0.01608514723031007,
+        "6m": 0.14750712808830113,
+        "12m": 0.1309885484258244
       },
-      "acceleration": -0.0625,
+      "acceleration": -0.0577,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +45,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2745680.75,
-      "relative_volume": 0.25669954527670413,
+      "average_volume": 2759631.2,
+      "relative_volume": 0.35650560843057577,
       "accumulation_days": 3,
       "distribution_days": 4,
       "evidence": []
@@ -62,17 +61,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.011642298128472383,
-        "annualized_volatility": 0.18481575322326382,
-        "maximum_drawdown": -0.1735644913075456,
-        "sharpe_ratio": 0.7705293945629438,
-        "sortino_ratio": 1.244427184178599,
-        "calmar_ratio": 0.7693119936891242,
-        "beta": -0.21136532926144258,
-        "alpha": 0.17978354026915627,
-        "capm_expected_return": -0.03737756983234035,
-        "actual_return": 0.1424059704368159,
-        "market_return": 0.17683869896234108
+        "volatility": 0.011665062501568454,
+        "annualized_volatility": 0.1851771264430508,
+        "maximum_drawdown": -0.17356455356355982,
+        "sharpe_ratio": 0.7989983642923982,
+        "sortino_ratio": 1.2929293866412812,
+        "calmar_ratio": 0.8052073163385718,
+        "beta": -0.21233056151250002,
+        "alpha": 0.1853078976180053,
+        "capm_expected_return": -0.03735167648564113,
+        "actual_return": 0.14795622113236417,
+        "market_return": 0.17591286068087858
       },
       "evidence": []
     },
@@ -84,7 +83,7 @@
         "major news"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "ED",
@@ -138,11 +137,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 69.45873590012575,
+    "rsi": 71.65069985512372,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.25669954527670413,
+    "relative_volume": 0.35650560843057577,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -238,7 +237,7 @@
         "last_surprise_pct": -0.0383,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 0.32,
+      "analyst_upside_pct": -0.78,
       "eps_growth_implied": 9.43
     },
     "evidence": [
@@ -333,18 +332,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7656,
-    "probability_pct": 76.56,
+    "probability_of_outperformance": 0.7512,
+    "probability_pct": 75.12,
     "confidence": "High",
     "evidence": [
       "Positive earnings surprise/catalyst",
-      "Composite score 59.2/100"
+      "Composite score 57.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 59.2,
-    "technical_score": 65.0,
+    "final_score": 57.45,
+    "technical_score": 58.0,
     "momentum_score": 60.0,
     "volume_score": 0,
     "fundamental_score": 68.0,
@@ -354,7 +353,7 @@
     "eps_growth": 0.129,
     "roe": 0.08732,
     "forward_pe": 16.920593,
-    "relative_volume": 0.25669954527670413,
+    "relative_volume": 0.35650560843057577,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.007080428901760083,
-      "weekly": 0.010611736341592515,
-      "monthly": 0.009028889987772848,
-      "annual": 0.1187307651242917
+      "daily": 0.018114953753591845,
+      "weekly": 0.021684953534756746,
+      "monthly": 0.020084764020523505,
+      "annual": 0.1309885484258244
     },
     "risk": {
-      "volatility": 0.011642298128472383,
-      "annualized_volatility": 0.18481575322326382,
-      "maximum_drawdown": -0.1735644913075456,
-      "sharpe_ratio": 0.7705293945629438,
-      "sortino_ratio": 1.244427184178599,
-      "calmar_ratio": 0.7693119936891242,
-      "beta": -0.21136532926144258,
-      "alpha": 0.17978354026915627,
-      "capm_expected_return": -0.03737756983234035,
-      "actual_return": 0.1424059704368159,
-      "market_return": 0.17683869896234108
+      "volatility": 0.011665062501568454,
+      "annualized_volatility": 0.1851771264430508,
+      "maximum_drawdown": -0.17356455356355982,
+      "sharpe_ratio": 0.7989983642923982,
+      "sortino_ratio": 1.2929293866412812,
+      "calmar_ratio": 0.8052073163385718,
+      "beta": -0.21233056151250002,
+      "alpha": 0.1853078976180053,
+      "capm_expected_return": -0.03735167648564113,
+      "actual_return": 0.14795622113236417,
+      "market_return": 0.17591286068087858
     },
     "capm": {
-      "beta": -0.21136532926144258,
-      "alpha": 0.17978354026915627,
-      "capm_expected_return": -0.03737756983234035,
-      "actual_return": 0.1424059704368159,
-      "market_return": 0.17683869896234108,
-      "interpretation": "Beta -0.21: Moves roughly 121% less than the market. CAPM expected return is -3.74%; realized alpha is 17.98%, meaning positive alpha versus CAPM."
+      "beta": -0.21233056151250002,
+      "alpha": 0.1853078976180053,
+      "capm_expected_return": -0.03735167648564113,
+      "actual_return": 0.14795622113236417,
+      "market_return": 0.17591286068087858,
+      "interpretation": "Beta -0.21: Moves roughly 121% less than the market. CAPM expected return is -3.74%; realized alpha is 18.53%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.1424059704368159,
+      "actual_return": 0.14795622113236417,
       "components": {
-        "market_component": -0.03737756983234035,
-        "momentum_component": 0.029682691281072926,
+        "market_component": -0.03735167648564113,
+        "momentum_component": 0.0327471371064561,
         "volatility_drag": -0.0,
-        "alpha_component": 0.17978354026915627
+        "alpha_component": 0.1853078976180053
       },
       "component_weights_pct": {
-        "market_component": 15.14,
-        "momentum_component": 12.02,
+        "market_component": 14.62,
+        "momentum_component": 12.82,
         "volatility_drag": 0.0,
-        "alpha_component": 72.83
+        "alpha_component": 72.55
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 106.43600006103516,
-      "sma50": 107.23256805419922,
-      "sma200": 103.16798934936523,
-      "ema20": 107.13694208278677,
-      "ema50": 107.34876384778207,
-      "ema200": 104.51033768008547
+      "sma20": 106.49600028991699,
+      "sma50": 107.25656814575196,
+      "sma200": 103.17398937225342,
+      "ema20": 107.25122823303789,
+      "ema50": 107.39582285092698,
+      "ema200": 104.52227807721891
     },
     "momentum": {
-      "3m": 0.005072621810313427,
-      "6m": 0.13507022607064445,
-      "12m": 0.1187307651242917,
+      "3m": 0.01608514723031007,
+      "6m": 0.14750712808830113,
+      "12m": 0.1309885484258244,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 2745680.75,
-      "relative_volume": 0.25669954527670413,
+      "average_volume": 2759631.2,
+      "relative_volume": 0.35650560843057577,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -441,5 +440,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ED\nRating: Hold | Score: 59.2/100 | Confidence: 45.58/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 103.4800033569336 | Resistance: 115.43000030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.920593\nNews/Catalyst: Mizuho Cuts Consolidated Edison (ED) to Neutral on Growth and Valuation Concerns\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ED\nRating: Hold | Score: 57.45/100 | Confidence: 44.45/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 103.4800033569336 | Resistance: 115.43000030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.920593\nNews/Catalyst: Mizuho Cuts Consolidated Edison (ED) to Neutral on Growth and Valuation Concerns\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

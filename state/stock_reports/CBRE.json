@@ -1,13 +1,13 @@
 {
   "ticker": "CBRE",
-  "generated_at": "2026-06-24T17:31:06.902488",
+  "generated_at": "2026-06-24T19:13:17.547577",
   "score": {
-    "final_score": 50.9,
+    "final_score": 48.4,
     "rating": "Hold",
-    "confidence": 39.51,
+    "confidence": 37.8,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 43.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 76.0,
@@ -15,27 +15,26 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 43.0,
       "evidence": [
         "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 124.63999938964844,
       "resistance": 153.52000427246094,
-      "risk_reward": 2.04
+      "risk_reward": 1.93
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.023460721571761045,
-        "3m": 0.009216115862103802,
-        "6m": -0.17004887570398308,
-        "12m": -0.0321428689384573
+        "1m": 0.02613098040420936,
+        "3m": 0.011849209824998042,
+        "6m": -0.16788349282856763,
+        "12m": -0.029617682579770155
       },
-      "acceleration": 0.0942,
+      "acceleration": 0.0958,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -44,8 +43,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2596338.85,
-      "relative_volume": 0.30954241585222975,
+      "average_volume": 2613541.1,
+      "relative_volume": 0.4391444236327487,
       "accumulation_days": 3,
       "distribution_days": 3,
       "evidence": []
@@ -61,17 +60,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.019534590549206195,
-        "annualized_volatility": 0.3101020113400335,
+        "volatility": 0.019536560878887013,
+        "annualized_volatility": 0.31013328935405104,
         "maximum_drawdown": -0.2737020048578098,
-        "sharpe_ratio": 0.8166204939545301,
-        "sortino_ratio": 1.0730552770550539,
-        "calmar_ratio": 0.8308551707669203,
-        "beta": 0.9046946747562136,
-        "alpha": 0.09325062843474433,
-        "capm_expected_return": 0.15998502924204713,
-        "actual_return": 0.25323565767679146,
-        "market_return": 0.17683869896234108
+        "sharpe_ratio": 0.820799357963458,
+        "sortino_ratio": 1.078655172074748,
+        "calmar_ratio": 0.8367364826811909,
+        "beta": 0.9041239344838622,
+        "alpha": 0.095510177059793,
+        "capm_expected_return": 0.15904702772510745,
+        "actual_return": 0.25455720478490046,
+        "market_return": 0.17591286068087858
       },
       "evidence": []
     },
@@ -83,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "CBRE",
@@ -137,11 +136,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 63.945682050249296,
+    "rsi": 64.37423239761415,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.30954241585222975,
+    "relative_volume": 0.4391444236327487,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -237,7 +236,7 @@
         "last_surprise_pct": 0.42049998,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 32.13,
+      "analyst_upside_pct": 31.63,
       "eps_growth_implied": 102.33
     },
     "evidence": [
@@ -332,20 +331,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7916,
-    "probability_pct": 79.16,
+    "probability_of_outperformance": 0.786,
+    "probability_pct": 78.6,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 50.9/100"
+      "Composite score 48.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 50.9,
-    "technical_score": 53.0,
+    "final_score": 48.4,
+    "technical_score": 43.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 76.0,
@@ -355,7 +354,7 @@
     "eps_growth": 0.981,
     "roe": 0.15597,
     "forward_pe": 15.01354,
-    "relative_volume": 0.30954241585222975,
+    "relative_volume": 0.4391444236327487,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -365,66 +364,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.007018973886865121,
-      "weekly": -0.009780740653301923,
-      "monthly": 0.023460721571761045,
-      "annual": -0.0321428689384573
+      "daily": 0.009646335399415173,
+      "weekly": -0.007197210413596888,
+      "monthly": 0.02613098040420936,
+      "annual": -0.029617682579770155
     },
     "risk": {
-      "volatility": 0.019534590549206195,
-      "annualized_volatility": 0.3101020113400335,
+      "volatility": 0.019536560878887013,
+      "annualized_volatility": 0.31013328935405104,
       "maximum_drawdown": -0.2737020048578098,
-      "sharpe_ratio": 0.8166204939545301,
-      "sortino_ratio": 1.0730552770550539,
-      "calmar_ratio": 0.8308551707669203,
-      "beta": 0.9046946747562136,
-      "alpha": 0.09325062843474433,
-      "capm_expected_return": 0.15998502924204713,
-      "actual_return": 0.25323565767679146,
-      "market_return": 0.17683869896234108
+      "sharpe_ratio": 0.820799357963458,
+      "sortino_ratio": 1.078655172074748,
+      "calmar_ratio": 0.8367364826811909,
+      "beta": 0.9041239344838622,
+      "alpha": 0.095510177059793,
+      "capm_expected_return": 0.15904702772510745,
+      "actual_return": 0.25455720478490046,
+      "market_return": 0.17591286068087858
     },
     "capm": {
-      "beta": 0.9046946747562136,
-      "alpha": 0.09325062843474433,
-      "capm_expected_return": 0.15998502924204713,
-      "actual_return": 0.25323565767679146,
-      "market_return": 0.17683869896234108,
-      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 16.00%; realized alpha is 9.33%, meaning positive alpha versus CAPM."
+      "beta": 0.9041239344838622,
+      "alpha": 0.095510177059793,
+      "capm_expected_return": 0.15904702772510745,
+      "actual_return": 0.25455720478490046,
+      "market_return": 0.17591286068087858,
+      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 15.90%; realized alpha is 9.55%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.25323565767679146,
+      "actual_return": 0.25455720478490046,
       "components": {
-        "market_component": 0.15998502924204713,
+        "market_component": 0.15904702772510745,
         "momentum_component": 0.0,
-        "volatility_drag": -0.012020402268006703,
-        "alpha_component": 0.09325062843474433
+        "volatility_drag": -0.01202665787081021,
+        "alpha_component": 0.095510177059793
       },
       "component_weights_pct": {
-        "market_component": 60.31,
+        "market_component": 59.66,
         "momentum_component": 0.0,
-        "volatility_drag": 4.53,
-        "alpha_component": 35.15
+        "volatility_drag": 4.51,
+        "alpha_component": 35.83
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 130.92425041198732,
-      "sma50": 137.63449966430665,
-      "sma200": 150.42507541656494,
-      "ema20": 132.60025937074704,
-      "ema50": 135.64143675305678,
-      "ema200": 143.68636089844847
+      "sma20": 130.94174995422364,
+      "sma50": 137.64149948120118,
+      "sma200": 150.42682537078858,
+      "ema20": 132.63359183214956,
+      "ema50": 135.6551618842225,
+      "ema200": 143.68984339441587
     },
     "momentum": {
-      "3m": 0.009216115862103802,
-      "6m": -0.17004887570398308,
-      "12m": -0.0321428689384573,
+      "3m": 0.011849209824998042,
+      "6m": -0.16788349282856763,
+      "12m": -0.029617682579770155,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2596338.85,
-      "relative_volume": 0.30954241585222975,
+      "average_volume": 2613541.1,
+      "relative_volume": 0.4391444236327487,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -442,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CBRE\nRating: Hold | Score: 50.9/100 | Confidence: 39.51/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.63999938964844 | Resistance: 153.52000427246094\nFundamental Outlook: Quality Compounder | Forward P/E: 15.01354\nNews/Catalyst: Top Midday Decliners\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CBRE\nRating: Hold | Score: 48.4/100 | Confidence: 37.8/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 124.63999938964844 | Resistance: 153.52000427246094\nFundamental Outlook: Quality Compounder | Forward P/E: 15.01354\nNews/Catalyst: Top Midday Decliners\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
