@@ -1,15 +1,15 @@
 {
   "ticker": "ABBV",
-  "generated_at": "2026-06-25T20:31:07.885838",
+  "generated_at": "2026-06-25T22:05:38.560471",
   "score": {
-    "final_score": 67.75,
+    "final_score": 79.0,
     "rating": "Watch",
-    "confidence": 57.02,
+    "confidence": 70.49,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 60.0,
       "risk": 85.0,
       "catalyst": 45.0
@@ -35,7 +35,7 @@
         "1m": 0.1408596328840659,
         "3m": 0.1833050003148664,
         "6m": 0.08432974834881257,
-        "12m": 0.3530639878511088
+        "12m": 0.3530641027459067
       },
       "acceleration": 0.1411,
       "evidence": [
@@ -48,13 +48,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 6098514.9,
-      "relative_volume": 1.098775375624646,
+      "score": 100,
+      "average_volume": 6271748.9,
+      "relative_volume": 1.6208521996153258,
       "accumulation_days": 9,
       "distribution_days": 3,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.62x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -67,17 +70,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.0168744840098015,
-        "annualized_volatility": 0.2678741291548247,
-        "maximum_drawdown": -0.2073638930417545,
-        "sharpe_ratio": 0.9234654609514643,
-        "sortino_ratio": 1.1694872492038473,
-        "calmar_ratio": 1.133416106669085,
-        "beta": 0.28676435636965913,
-        "alpha": 0.19692457678992462,
-        "capm_expected_return": 0.050447929367007684,
-        "actual_return": 0.2473725061569323,
-        "market_return": 0.17592119887444033
+        "volatility": 0.016874481118658368,
+        "annualized_volatility": 0.26787408325935036,
+        "maximum_drawdown": -0.20736389304175407,
+        "sharpe_ratio": 0.9234653948773394,
+        "sortino_ratio": 1.1694868059008714,
+        "calmar_ratio": 1.133415820292241,
+        "beta": 0.2867650383244159,
+        "alpha": 0.19692435949320286,
+        "capm_expected_return": 0.05044808658129839,
+        "actual_return": 0.24737244607450123,
+        "market_return": 0.1759213287507758
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -100,7 +103,7 @@
     "sector": "Healthcare",
     "industry": "Drug Manufacturers - General",
     "exchange": "NYQ",
-    "market_cap": 427245862912.0,
+    "market_cap": 429577994240.0,
     "revenue_growth": 0.124,
     "eps_growth": -0.462,
     "fcf_growth": null,
@@ -117,23 +120,23 @@
     "cash_position": 9390999552.0,
     "total_debt": 72912003072.0,
     "interest_coverage": null,
-    "forward_pe": 14.842896,
-    "trailing_pe": 118.53922,
-    "peg": 0.63,
-    "price_to_book": -64.19432,
-    "price_to_sales": 6.8012204,
+    "forward_pe": 14.923917,
+    "trailing_pe": 119.18628,
+    "peg": 0.65,
+    "price_to_book": -64.54473,
+    "price_to_sales": 6.838345,
     "enterprise_to_ebitda": 15.998,
     "enterprise_to_revenue": 7.618,
-    "fcf_yield": 0.048711119883416115,
+    "fcf_yield": 0.04844667261138334,
     "institutional_ownership": 0.76862997,
     "insider_ownership": 0.00112,
     "short_interest": 23158744.0,
     "short_ratio": 3.88,
     "short_percent_float": 0.0146,
     "days_to_cover": 3.88,
-    "target_mean_price": 253.82759,
+    "target_mean_price": 254.3793,
     "target_high_price": 328.0,
-    "target_low_price": 184.0,
+    "target_low_price": 200.0,
     "recommendation": "buy",
     "number_of_analysts": 29.0,
     "dividend_yield": 2.95,
@@ -141,18 +144,17 @@
     "next_earnings_date": "1777465800",
     "eps_current_year": 2.04,
     "eps_forward": 16.29197,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
     "rsi": 67.47984422303645,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 1.098775375624646,
+    "relative_volume": 1.6208521996153258,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure",
+    "setup_type": "52-week high pressure, volume surge",
     "support": 197.3800048828125,
     "resistance": 243.13999938964844
   },
@@ -203,8 +205,8 @@
     "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
-    "bearish_news_score": 1,
+    "bullish_news_score": 2,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.76862997,
     "detail": {
       "earnings": {
@@ -245,7 +247,7 @@
         "last_surprise_pct": -0.0077,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 4.4,
+      "analyst_upside_pct": 4.62,
       "eps_growth_implied": 698.63
     },
     "evidence": [
@@ -256,9 +258,9 @@
   },
   "analyst": {
     "consensus": "buy",
-    "target_mean_price": 253.82759,
+    "target_mean_price": 254.3793,
     "target_high_price": 328.0,
-    "target_low_price": 184.0,
+    "target_low_price": 200.0,
     "number_of_analysts": 29.0
   },
   "insider_short_interest": {
@@ -272,6 +274,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "AbbVie vs. Pfizer: Which Pharma Giant Stock Is a Better Buy in 2026?",
+        "source": "Motley Fool",
+        "published": "2026-06-25T21:15:01Z",
+        "summary": "AbbVie and Pfizer are taking divergent paths to navigate patent expirations and competition. Dig into their financials, risk profiles, and valuation metrics.",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
       {
         "headline": "Is AbbVie a Buy After Its Purchase of Apogee?",
         "source": "Motley Fool",
@@ -311,16 +323,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Number That Could Test AbbVie Stock",
-        "source": "Trefis",
-        "published": "2026-06-24T19:32:30Z",
-        "summary": "AbbVie's post-Humira growth story has been a triumph, but the single drug driving that narrative is showing the first hint of a slowdown.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -340,28 +342,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7902,
-    "probability_pct": 79.02,
+    "probability_of_outperformance": 0.8728,
+    "probability_pct": 87.28,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
-      "Composite score 67.75/100"
+      "Composite score 79.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 67.75,
+    "final_score": 79.0,
     "technical_score": 75.0,
     "momentum_score": 85.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 60.0,
     "risk_score": 85.0,
     "catalyst_score": 45.0,
     "revenue_growth": 0.124,
     "eps_growth": -0.462,
     "roe": null,
-    "forward_pe": 14.842896,
-    "relative_volume": 1.098775375624646,
+    "forward_pe": 14.923917,
+    "relative_volume": 1.6208521996153258,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -374,36 +377,36 @@
       "daily": 0.035122823540539194,
       "weekly": 0.09903721956896461,
       "monthly": 0.1408596328840659,
-      "annual": 0.3530639878511088
+      "annual": 0.3530641027459067
     },
     "risk": {
-      "volatility": 0.0168744840098015,
-      "annualized_volatility": 0.2678741291548247,
-      "maximum_drawdown": -0.2073638930417545,
-      "sharpe_ratio": 0.9234654609514643,
-      "sortino_ratio": 1.1694872492038473,
-      "calmar_ratio": 1.133416106669085,
-      "beta": 0.28676435636965913,
-      "alpha": 0.19692457678992462,
-      "capm_expected_return": 0.050447929367007684,
-      "actual_return": 0.2473725061569323,
-      "market_return": 0.17592119887444033
+      "volatility": 0.016874481118658368,
+      "annualized_volatility": 0.26787408325935036,
+      "maximum_drawdown": -0.20736389304175407,
+      "sharpe_ratio": 0.9234653948773394,
+      "sortino_ratio": 1.1694868059008714,
+      "calmar_ratio": 1.133415820292241,
+      "beta": 0.2867650383244159,
+      "alpha": 0.19692435949320286,
+      "capm_expected_return": 0.05044808658129839,
+      "actual_return": 0.24737244607450123,
+      "market_return": 0.1759213287507758
     },
     "capm": {
-      "beta": 0.28676435636965913,
-      "alpha": 0.19692457678992462,
-      "capm_expected_return": 0.050447929367007684,
-      "actual_return": 0.2473725061569323,
-      "market_return": 0.17592119887444033,
+      "beta": 0.2867650383244159,
+      "alpha": 0.19692435949320286,
+      "capm_expected_return": 0.05044808658129839,
+      "actual_return": 0.24737244607450123,
+      "market_return": 0.1759213287507758,
       "interpretation": "Beta 0.29: Moves roughly 71% less than the market. CAPM expected return is 5.04%; realized alpha is 19.69%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2473725061569323,
+      "actual_return": 0.24737244607450123,
       "components": {
-        "market_component": 0.050447929367007684,
-        "momentum_component": 0.0882659969627772,
-        "volatility_drag": -0.003574825830964945,
-        "alpha_component": 0.19692457678992462
+        "market_component": 0.05044808658129839,
+        "momentum_component": 0.08826602568647668,
+        "volatility_drag": -0.003574816651870072,
+        "alpha_component": 0.19692435949320286
       },
       "component_weights_pct": {
         "market_component": 14.87,
@@ -416,21 +419,21 @@
     "trend": {
       "sma20": 224.22499923706056,
       "sma50": 213.88420043945314,
-      "sma200": 218.65610046386718,
-      "ema20": 224.97954296422338,
-      "ema50": 218.62662281185314,
-      "ema200": 213.01544353195789
+      "sma200": 218.65610008239747,
+      "ema20": 224.97954296422333,
+      "ema50": 218.6266228100306,
+      "ema200": 213.01544349171283
     },
     "momentum": {
       "3m": 0.1833050003148664,
       "6m": 0.08432974834881257,
-      "12m": 0.3530639878511088,
+      "12m": 0.3530641027459067,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 6098514.9,
-      "relative_volume": 1.098775375624646,
+      "average_volume": 6271748.9,
+      "relative_volume": 1.6208521996153258,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -448,5 +451,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ABBV\nRating: Watch | Score: 67.75/100 | Confidence: 57.02/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure | Support: 197.3800048828125 | Resistance: 243.13999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.842896\nNews/Catalyst: Is AbbVie a Buy After Its Purchase of Apogee?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABBV\nRating: Watch | Score: 79.0/100 | Confidence: 70.49/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, volume surge | Support: 197.3800048828125 | Resistance: 243.13999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.923917\nNews/Catalyst: AbbVie vs. Pfizer: Which Pharma Giant Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

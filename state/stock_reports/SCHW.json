@@ -1,10 +1,10 @@
 {
   "ticker": "SCHW",
-  "generated_at": "2026-06-25T20:32:15.551485",
+  "generated_at": "2026-06-25T22:07:09.204561",
   "score": {
-    "final_score": 56.15,
+    "final_score": 56.9,
     "rating": "Hold",
-    "confidence": 53.59,
+    "confidence": 55.83,
     "risk_level": "Controlled",
     "categories": {
       "technical": 45.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 65.0
+      "catalyst": 80.0
     },
     "technical": {
       "score": 45.0,
@@ -62,26 +62,27 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017095236004969146,
-        "annualized_volatility": 0.2713784584386343,
-        "maximum_drawdown": -0.1983442185486477,
-        "sharpe_ratio": 0.5565463229308065,
-        "sortino_ratio": 0.6788015219746389,
-        "calmar_ratio": 0.6085203300306775,
-        "beta": 0.7269544204786068,
-        "alpha": 0.02314798998898207,
-        "capm_expected_return": 0.1278866931776705,
-        "actual_return": 0.15103468316665258,
-        "market_return": 0.17592119887444033
+        "volatility": 0.01709522637685245,
+        "annualized_volatility": 0.27137830559702003,
+        "maximum_drawdown": -0.1983442185486476,
+        "sharpe_ratio": 0.5565466738108882,
+        "sortino_ratio": 0.6788022832425332,
+        "calmar_ratio": 0.6085206345731068,
+        "beta": 0.7269539604435143,
+        "alpha": 0.023147986662594294,
+        "capm_expected_return": 0.12788670666186194,
+        "actual_return": 0.15103469332445624,
+        "market_return": 0.1759213287507758
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
+        "major news",
         "guidance change"
       ]
     },
@@ -94,7 +95,7 @@
     "sector": "Financial Services",
     "industry": "Capital Markets",
     "exchange": "NYQ",
-    "market_cap": 159148294144.0,
+    "market_cap": 155548286976.0,
     "revenue_growth": 0.158,
     "eps_growth": 0.386,
     "fcf_growth": null,
@@ -111,11 +112,11 @@
     "cash_position": 96474996736.0,
     "total_debt": 59457998848.0,
     "interest_coverage": null,
-    "forward_pe": 12.608279,
-    "trailing_pe": 18.192842,
+    "forward_pe": 12.323073,
+    "trailing_pe": 17.781311,
     "peg": 1.09,
-    "price_to_book": 3.745038,
-    "price_to_sales": 6.416235,
+    "price_to_book": 3.6603234,
+    "price_to_sales": 6.2710967,
     "enterprise_to_ebitda": null,
     "enterprise_to_revenue": 5.188,
     "fcf_yield": null,
@@ -135,8 +136,7 @@
     "next_earnings_date": "1784637000",
     "eps_current_year": 5.03,
     "eps_forward": 7.25793,
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
     "rsi": 54.11900112520503,
@@ -195,10 +195,10 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bullish_news_score": 4,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.84476995,
     "detail": {
       "earnings": {
@@ -246,6 +246,7 @@
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -267,6 +268,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Charles Schwab (SCHW) Hits Record Client Assets As New Trading Tools Roll Out",
+        "source": "Simply Wall St.",
+        "published": "2026-06-25T21:08:14Z",
+        "summary": "Charles Schwab (NYSE:SCHW) reported record core net new assets for May 2026. Total client assets reached an all time high level in May 2026. The company rolled out major upgrades to its digital trading platforms, including 24/7 cryptocurrency futures trading. New data and analytics features were introduced across Schwab\u2019s digital tools for active and long term investors. Charles Schwab sits at the intersection of retail brokerage, advisory services, and banking. Record client asset growth...",
+        "bullish_score": 3,
+        "bearish_score": 0,
+        "importance_score": 75,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Wall Street Analysts Believe Charles Schwab (SCHW) Could Rally 25.89%: Here's is How to Trade",
         "source": "Zacks",
@@ -306,16 +317,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Micron Earnings Take on New Gravity With Market on Edge Over AI",
-        "source": "Bloomberg",
-        "published": "2026-06-24T08:07:50Z",
-        "summary": "(Bloomberg) -- Micron Technology Inc.\u2019s earnings report on Wednesday afternoon is shaping up to be one of the most important in months as investors find themselves suddenly on edge over the sustainability of the AI rally.Most Read from BloombergStocks Slide as Wall Street Gets AI Wake-Up Call: Markets WrapOracle Cut 21,000 Jobs in 12 Months, Says AI Replaced Some Roles\u2018FOMO Really Got Me\u2019: Taiwanese Go Deep Into Debt to Amp 100% Stock RallySpaceX Falls for Third Day, Erases $600 Billion in Marke",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -335,36 +336,36 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8135,
-    "probability_pct": 81.35,
+    "probability_of_outperformance": 0.8225,
+    "probability_pct": 82.25,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 56.15/100"
+      "Composite score 56.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 56.15,
+    "final_score": 56.9,
     "technical_score": 45.0,
     "momentum_score": 40.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 100,
-    "catalyst_score": 65.0,
+    "catalyst_score": 80.0,
     "revenue_growth": 0.158,
     "eps_growth": 0.386,
     "roe": 0.19083,
-    "forward_pe": 12.608279,
+    "forward_pe": 12.323073,
     "relative_volume": 0.8044085002590907,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -374,33 +375,33 @@
       "annual": 0.014045599130087405
     },
     "risk": {
-      "volatility": 0.017095236004969146,
-      "annualized_volatility": 0.2713784584386343,
-      "maximum_drawdown": -0.1983442185486477,
-      "sharpe_ratio": 0.5565463229308065,
-      "sortino_ratio": 0.6788015219746389,
-      "calmar_ratio": 0.6085203300306775,
-      "beta": 0.7269544204786068,
-      "alpha": 0.02314798998898207,
-      "capm_expected_return": 0.1278866931776705,
-      "actual_return": 0.15103468316665258,
-      "market_return": 0.17592119887444033
+      "volatility": 0.01709522637685245,
+      "annualized_volatility": 0.27137830559702003,
+      "maximum_drawdown": -0.1983442185486476,
+      "sharpe_ratio": 0.5565466738108882,
+      "sortino_ratio": 0.6788022832425332,
+      "calmar_ratio": 0.6085206345731068,
+      "beta": 0.7269539604435143,
+      "alpha": 0.023147986662594294,
+      "capm_expected_return": 0.12788670666186194,
+      "actual_return": 0.15103469332445624,
+      "market_return": 0.1759213287507758
     },
     "capm": {
-      "beta": 0.7269544204786068,
-      "alpha": 0.02314798998898207,
-      "capm_expected_return": 0.1278866931776705,
-      "actual_return": 0.15103468316665258,
-      "market_return": 0.17592119887444033,
+      "beta": 0.7269539604435143,
+      "alpha": 0.023147986662594294,
+      "capm_expected_return": 0.12788670666186194,
+      "actual_return": 0.15103469332445624,
+      "market_return": 0.1759213287507758,
       "interpretation": "Beta 0.73: Moves roughly 27% less than the market. CAPM expected return is 12.79%; realized alpha is 2.31%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.15103468316665258,
+      "actual_return": 0.15103469332445624,
       "components": {
-        "market_component": 0.1278866931776705,
+        "market_component": 0.12788670666186194,
         "momentum_component": 0.0035113997825218513,
-        "volatility_drag": -0.004275691687726857,
-        "alpha_component": 0.02314798998898207
+        "volatility_drag": -0.004275661119404007,
+        "alpha_component": 0.023147986662594294
       },
       "component_weights_pct": {
         "market_component": 80.52,
@@ -413,10 +414,10 @@
     "trend": {
       "sma20": 89.76299858093262,
       "sma50": 90.3709831237793,
-      "sma200": 94.14564228057861,
-      "ema20": 90.64780543529334,
-      "ema50": 90.95116470085149,
-      "ema200": 92.06992752297306
+      "sma200": 94.14564205169678,
+      "ema20": 90.64780543529285,
+      "ema50": 90.95116469792092,
+      "ema200": 92.06992739335845
     },
     "momentum": {
       "3m": -0.05504854782918578,
@@ -445,5 +446,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: SCHW\nRating: Hold | Score: 56.15/100 | Confidence: 53.59/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.608279\nNews/Catalyst: Wall Street Analysts Believe Charles Schwab (SCHW) Could Rally 25.89%: Here's is How to Trade\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: SCHW\nRating: Hold | Score: 56.9/100 | Confidence: 55.83/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.323073\nNews/Catalyst: Charles Schwab (SCHW) Hits Record Client Assets As New Trading Tools Roll Out\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
