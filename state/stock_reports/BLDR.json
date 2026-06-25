@@ -1,18 +1,18 @@
 {
   "ticker": "BLDR",
-  "generated_at": "2026-06-25T18:06:56.277870",
+  "generated_at": "2026-06-25T20:31:33.873974",
   "score": {
-    "final_score": 39.55,
+    "final_score": 42.3,
     "rating": "Drop",
-    "confidence": 27.6,
+    "confidence": 34.06,
     "risk_level": "Moderate",
     "categories": {
       "technical": 53.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 47.0,
       "risk": 60.0,
-      "catalyst": 30.0
+      "catalyst": 10.0
     },
     "technical": {
       "score": 53.0,
@@ -25,17 +25,17 @@
       ],
       "support": 66.38999938964844,
       "resistance": 91.31999969482422,
-      "risk_reward": 0.21
+      "risk_reward": 0.12
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.16946636689091066,
-        "3m": 0.01885016873815304,
-        "6m": -0.16044384600091288,
-        "12m": -0.26775497034140194
+        "1m": 0.19231281889965302,
+        "3m": 0.03875421398749079,
+        "6m": -0.1440424513785281,
+        "12m": -0.25344998355224724
       },
-      "acceleration": 0.0991,
+      "acceleration": 0.1108,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,12 +43,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2740673.45,
-      "relative_volume": 0.6133050984238928,
-      "accumulation_days": 3,
+      "score": 25.0,
+      "average_volume": 2797071.6,
+      "relative_volume": 1.0035967616989139,
+      "accumulation_days": 4,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 47.0,
@@ -58,17 +60,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.029462084887925857,
-        "annualized_volatility": 0.46769609831355663,
+        "volatility": 0.029530977021984494,
+        "annualized_volatility": 0.4687897270376027,
         "maximum_drawdown": -0.6710598088126603,
-        "sharpe_ratio": -0.25330409563872913,
-        "sortino_ratio": -0.47075523847419914,
-        "calmar_ratio": -0.3020045870134817,
-        "beta": 1.2068054419947538,
-        "alpha": -0.32968209601130893,
-        "capm_expected_return": 0.21121275879423135,
-        "actual_return": -0.11846933721707761,
-        "market_return": 0.17501806956149732
+        "sharpe_ratio": -0.23363107151075613,
+        "sortino_ratio": -0.43520902173474185,
+        "calmar_ratio": -0.29192238613361204,
+        "beta": 1.2078874159937185,
+        "alpha": -0.32201684856799473,
+        "capm_expected_return": 0.21249300232696477,
+        "actual_return": -0.10952384624102997,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -76,9 +78,8 @@
       ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 10.0,
       "evidence": [
-        "analyst revision",
         "guidance change"
       ]
     },
@@ -136,11 +137,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 66.66666666666666,
+    "rsi": 68.16499671887485,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6133050984238928,
+    "relative_volume": 1.0035967616989139,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -189,7 +190,7 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
     "major_news": false,
@@ -236,11 +237,10 @@
         "last_surprise_pct": -0.2761,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 11.83,
+      "analyst_upside_pct": 9.76,
       "eps_growth_implied": 124.42
     },
     "evidence": [
-      "analyst target/recommendation data is supportive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -330,97 +330,96 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5076,
-    "probability_pct": 50.76,
+    "probability_of_outperformance": 0.4478,
+    "probability_pct": 44.78,
     "confidence": "High",
     "evidence": [
-      "Analyst data is supportive",
-      "Composite score 39.55/100"
+      "Composite score 42.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 39.55,
+    "final_score": 42.3,
     "technical_score": 53.0,
     "momentum_score": 35.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 47.0,
     "risk_score": 60.0,
-    "catalyst_score": 30.0,
+    "catalyst_score": 10.0,
     "revenue_growth": -0.101,
     "eps_growth": null,
     "roe": 0.06958,
     "forward_pe": 14.976649,
-    "relative_volume": 0.6133050984238928,
+    "relative_volume": 1.0035967616989139,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": false,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.01885016873815304,
-      "weekly": 0.14289463279004377,
-      "monthly": 0.16946636689091066,
-      "annual": -0.26775497034140194
+      "daily": 0.03875421398749079,
+      "weekly": 0.16522198492117401,
+      "monthly": 0.19231281889965302,
+      "annual": -0.25344998355224724
     },
     "risk": {
-      "volatility": 0.029462084887925857,
-      "annualized_volatility": 0.46769609831355663,
+      "volatility": 0.029530977021984494,
+      "annualized_volatility": 0.4687897270376027,
       "maximum_drawdown": -0.6710598088126603,
-      "sharpe_ratio": -0.25330409563872913,
-      "sortino_ratio": -0.47075523847419914,
-      "calmar_ratio": -0.3020045870134817,
-      "beta": 1.2068054419947538,
-      "alpha": -0.32968209601130893,
-      "capm_expected_return": 0.21121275879423135,
-      "actual_return": -0.11846933721707761,
-      "market_return": 0.17501806956149732
+      "sharpe_ratio": -0.23363107151075613,
+      "sortino_ratio": -0.43520902173474185,
+      "calmar_ratio": -0.29192238613361204,
+      "beta": 1.2078874159937185,
+      "alpha": -0.32201684856799473,
+      "capm_expected_return": 0.21249300232696477,
+      "actual_return": -0.10952384624102997,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 1.2068054419947538,
-      "alpha": -0.32968209601130893,
-      "capm_expected_return": 0.21121275879423135,
-      "actual_return": -0.11846933721707761,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 1.21: Moves roughly in line with the market. CAPM expected return is 21.12%; realized alpha is -32.97%, meaning negative alpha versus CAPM."
+      "beta": 1.2078874159937185,
+      "alpha": -0.32201684856799473,
+      "capm_expected_return": 0.21249300232696477,
+      "actual_return": -0.10952384624102997,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 1.21: Moves roughly in line with the market. CAPM expected return is 21.25%; realized alpha is -32.20%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.11846933721707761,
+      "actual_return": -0.10952384624102997,
       "components": {
-        "market_component": 0.21121275879423135,
+        "market_component": 0.21249300232696477,
         "momentum_component": 0.0,
-        "volatility_drag": -0.04353921966271133,
-        "alpha_component": -0.32968209601130893
+        "volatility_drag": -0.04375794540752054,
+        "alpha_component": -0.32201684856799473
       },
       "component_weights_pct": {
-        "market_component": 36.14,
+        "market_component": 36.75,
         "momentum_component": 0.0,
-        "volatility_drag": 7.45,
-        "alpha_component": 56.41
+        "volatility_drag": 7.57,
+        "alpha_component": 55.69
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 77.41200065612793,
-      "sma50": 78.61320037841797,
-      "sma200": 102.27370010375977,
-      "ema20": 78.47826933198698,
-      "ema50": 79.95791808709781,
-      "ema200": 98.73269563862141
+      "sma20": 77.49700088500977,
+      "sma50": 78.6472004699707,
+      "sma200": 102.28220012664795,
+      "ema20": 78.64017452985715,
+      "ema50": 80.02458493373395,
+      "ema200": 98.75114542404478
     },
     "momentum": {
-      "3m": 0.01885016873815304,
-      "6m": -0.16044384600091288,
-      "12m": -0.26775497034140194,
+      "3m": 0.03875421398749079,
+      "6m": -0.1440424513785281,
+      "12m": -0.25344998355224724,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2740673.45,
-      "relative_volume": 0.6133050984238928,
+      "average_volume": 2797071.6,
+      "relative_volume": 1.0035967616989139,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -438,5 +437,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BLDR\nRating: Drop | Score: 39.55/100 | Confidence: 27.6/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 66.38999938964844 | Resistance: 91.31999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.976649\nNews/Catalyst: Builders FirstSource and Gibraltar Shares Skyrocket, What You Need To Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BLDR\nRating: Drop | Score: 42.3/100 | Confidence: 34.06/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 66.38999938964844 | Resistance: 91.31999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.976649\nNews/Catalyst: Builders FirstSource and Gibraltar Shares Skyrocket, What You Need To Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

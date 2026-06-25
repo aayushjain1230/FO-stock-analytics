@@ -1,15 +1,15 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2026-06-25T18:06:55.095904",
+  "generated_at": "2026-06-25T20:31:32.693873",
   "score": {
-    "final_score": 61.45,
-    "rating": "Hold",
-    "confidence": 45.07,
+    "final_score": 65.2,
+    "rating": "Watch",
+    "confidence": 56.23,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 60.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 68.0,
       "risk": 75.0,
       "catalyst": 50.0
@@ -28,17 +28,17 @@
       ],
       "support": 172.33999633789062,
       "resistance": 204.52999877929688,
-      "risk_reward": 0.02
+      "risk_reward": 0.09
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.05531382108192773,
-        "3m": 0.07706947032206557,
-        "6m": 0.16634229001848966,
-        "12m": 0.6131739248297747
+        "1m": 0.04599132379635318,
+        "3m": 0.0675547866205306,
+        "6m": 0.1560389824946662,
+        "12m": 0.5989233680428208
       },
-      "acceleration": -0.0061,
+      "acceleration": -0.0105,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,12 +47,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1050598.75,
-      "relative_volume": 0.37081235819098396,
-      "accumulation_days": 3,
+      "score": 25.0,
+      "average_volume": 1086429.7,
+      "relative_volume": 1.0181919732128089,
+      "accumulation_days": 4,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 68.0,
@@ -64,17 +66,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.01967483562717573,
-        "annualized_volatility": 0.31232833293348305,
+        "volatility": 0.01967784501052499,
+        "annualized_volatility": 0.3123761054131338,
         "maximum_drawdown": -0.5211993420936047,
-        "sharpe_ratio": 0.008661437786290466,
-        "sortino_ratio": 0.013977417299707692,
-        "calmar_ratio": -0.08591615047140742,
-        "beta": 0.5271580131979721,
-        "alpha": -0.08955696539918423,
-        "capm_expected_return": 0.0922621778237834,
-        "actual_return": 0.002705212424599179,
-        "market_return": 0.17501806956149732
+        "sharpe_ratio": -0.015054110317991816,
+        "sortino_ratio": -0.024297324740533435,
+        "calmar_ratio": -0.09947095357632305,
+        "beta": 0.5278639778100649,
+        "alpha": -0.09756500817057154,
+        "capm_expected_return": 0.09286246381897759,
+        "actual_return": -0.004702544351593957,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -142,11 +144,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.541710795546535,
+    "rsi": 56.72116000985734,
     "macd_cross": true,
     "breakout": true,
-    "new_52w_high": true,
-    "relative_volume": 0.37081235819098396,
+    "new_52w_high": false,
+    "relative_volume": 1.0181919732128089,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, MACD bullish crossover, trend continuation",
@@ -242,7 +244,7 @@
         "last_surprise_pct": 0.2361,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.09,
+      "analyst_upside_pct": 9.06,
       "eps_growth_implied": 78.76
     },
     "evidence": [
@@ -344,15 +346,15 @@
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 61.45/100"
+      "Composite score 65.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.45,
+    "final_score": 65.2,
     "technical_score": 90.0,
     "momentum_score": 60.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 68.0,
     "risk_score": 75.0,
     "catalyst_score": 50.0,
@@ -360,7 +362,7 @@
     "eps_growth": 0.311,
     "roe": 0.077010006,
     "forward_pe": 12.343168,
-    "relative_volume": 0.37081235819098396,
+    "relative_volume": 1.0181919732128089,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,89 +372,82 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.02089282151138394,
-      "weekly": 0.02562035730005996,
-      "monthly": 0.05531382108192773,
-      "annual": 0.6131739248297747
+      "daily": 0.011874394606252281,
+      "weekly": 0.016560167993378228,
+      "monthly": 0.04599132379635318,
+      "annual": 0.5989233680428208
     },
     "risk": {
-      "volatility": 0.01967483562717573,
-      "annualized_volatility": 0.31232833293348305,
+      "volatility": 0.01967784501052499,
+      "annualized_volatility": 0.3123761054131338,
       "maximum_drawdown": -0.5211993420936047,
-      "sharpe_ratio": 0.008661437786290466,
-      "sortino_ratio": 0.013977417299707692,
-      "calmar_ratio": -0.08591615047140742,
-      "beta": 0.5271580131979721,
-      "alpha": -0.08955696539918423,
-      "capm_expected_return": 0.0922621778237834,
-      "actual_return": 0.002705212424599179,
-      "market_return": 0.17501806956149732
+      "sharpe_ratio": -0.015054110317991816,
+      "sortino_ratio": -0.024297324740533435,
+      "calmar_ratio": -0.09947095357632305,
+      "beta": 0.5278639778100649,
+      "alpha": -0.09756500817057154,
+      "capm_expected_return": 0.09286246381897759,
+      "actual_return": -0.004702544351593957,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 0.5271580131979721,
-      "alpha": -0.08955696539918423,
-      "capm_expected_return": 0.0922621778237834,
-      "actual_return": 0.002705212424599179,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.23%; realized alpha is -8.96%, meaning negative alpha versus CAPM."
+      "beta": 0.5278639778100649,
+      "alpha": -0.09756500817057154,
+      "capm_expected_return": 0.09286246381897759,
+      "actual_return": -0.004702544351593957,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.29%; realized alpha is -9.76%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.002705212424599179,
+      "actual_return": -0.004702544351593957,
       "components": {
-        "market_component": 0.0922621778237834,
-        "momentum_component": 0.15329348120744368,
-        "volatility_drag": -0.012465666586696612,
-        "alpha_component": -0.08955696539918423
+        "market_component": 0.09286246381897759,
+        "momentum_component": 0.1497308420107052,
+        "volatility_drag": -0.012475221082626765,
+        "alpha_component": -0.09756500817057154
       },
       "component_weights_pct": {
-        "market_component": 26.54,
-        "momentum_component": 44.1,
-        "volatility_drag": 3.59,
-        "alpha_component": 25.77
+        "market_component": 26.33,
+        "momentum_component": 42.46,
+        "volatility_drag": 3.54,
+        "alpha_component": 27.67
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 196.84600067138672,
-      "sma50": 192.3756005859375,
-      "sma200": 175.8818502807617,
-      "ema20": 197.1606157398779,
-      "ema50": 193.213302677727,
-      "ema200": 178.2618155520603
+      "sma20": 196.7560012817383,
+      "sma50": 192.33960083007813,
+      "sma200": 175.87285034179686,
+      "ema20": 196.98918833102374,
+      "ema50": 193.1427149236483,
+      "ema200": 178.25237694775518
     },
     "momentum": {
-      "3m": 0.07706947032206557,
-      "6m": 0.16634229001848966,
-      "12m": 0.6131739248297747,
+      "3m": 0.0675547866205306,
+      "6m": 0.1560389824946662,
+      "12m": 0.5989233680428208,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1050598.75,
-      "relative_volume": 0.37081235819098396,
+      "average_volume": 1086429.7,
+      "relative_volume": 1.0181919732128089,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
-      "score": 65,
+      "score": 55,
       "label": "Watch closely"
     }
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "52-week high",
-    "evidence": "Price is pressing against 52-week highs",
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
     "date_of_change": "2026-06-25",
-    "strength": 65,
-    "invalidates": "Failed breakout below prior range high",
-    "triggers": [
-      {
-        "reason": "52-week high",
-        "evidence": "Price is pressing against 52-week highs",
-        "strength": 65,
-        "invalidates": "Failed breakout below prior range high"
-      }
-    ]
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: BIIB\nRating: Hold | Score: 61.45/100 | Confidence: 45.07/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.343168\nNews/Catalyst: Therapeutics Stocks Q1 Recap: Benchmarking Biogen (NASDAQ:BIIB)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: BIIB\nRating: Watch | Score: 65.2/100 | Confidence: 56.23/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation | Support: 172.33999633789062 | Resistance: 204.52999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.343168\nNews/Catalyst: Therapeutics Stocks Q1 Recap: Benchmarking Biogen (NASDAQ:BIIB)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

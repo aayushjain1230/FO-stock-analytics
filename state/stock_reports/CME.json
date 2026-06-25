@@ -1,10 +1,10 @@
 {
   "ticker": "CME",
-  "generated_at": "2026-06-25T18:07:13.779934",
+  "generated_at": "2026-06-25T20:31:49.426993",
   "score": {
-    "final_score": 31.4,
+    "final_score": 30.65,
     "rating": "Drop",
-    "confidence": 21.39,
+    "confidence": 19.19,
     "risk_level": "Controlled",
     "categories": {
       "technical": 10.0,
@@ -12,32 +12,32 @@
       "volume": 0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 10.0,
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 226.27000427246094,
+      "support": 225.0,
       "resistance": 310.5799865722656,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.1950054155489226,
-        "3m": -0.22619950618974394,
-        "6m": -0.1475827611206394,
-        "12m": -0.13378665428598535
+        "1m": -0.19952367489508727,
+        "3m": -0.2305426798964455,
+        "6m": -0.15236719350166572,
+        "12m": -0.13864852121110727
       },
-      "acceleration": -0.1524,
+      "acceleration": -0.1544,
       "evidence": []
     },
     "volume": {
       "score": 0,
-      "average_volume": 4354663.8,
-      "relative_volume": 0.48205236877299235,
+      "average_volume": 4465206.25,
+      "relative_volume": 0.9640372155261585,
       "accumulation_days": 4,
       "distribution_days": 9,
       "evidence": []
@@ -53,32 +53,31 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.012626368536497177,
-        "annualized_volatility": 0.20043738665653263,
-        "maximum_drawdown": -0.28664954875463644,
-        "sharpe_ratio": 0.6919830246251311,
-        "sortino_ratio": 0.8976160273532887,
-        "calmar_ratio": 0.4389351507558481,
-        "beta": -0.11217868539865683,
-        "alpha": 0.15833256603096377,
-        "capm_expected_return": -0.019633296964419445,
-        "actual_return": 0.1386992690665443,
-        "market_return": 0.17501806956149732
+        "volatility": 0.012660063130325427,
+        "annualized_volatility": 0.2009722717513139,
+        "maximum_drawdown": -0.29065342953307416,
+        "sharpe_ratio": 0.6635623525312261,
+        "sortino_ratio": 0.859442060186653,
+        "calmar_ratio": 0.41184371556906335,
+        "beta": -0.11328543547833017,
+        "alpha": 0.15328694306120763,
+        "capm_expected_return": -0.0199293096243609,
+        "actual_return": 0.13335763343684673,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision; major news"
+    "explanation": "Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision; guidance change"
   },
   "fundamentals": {
     "ticker": "CME",
@@ -132,15 +131,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 28.935084631172444,
+    "rsi": 28.424558219991184,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.48205236877299235,
+    "relative_volume": 0.9640372155261585,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
-    "support": 226.27000427246094,
+    "support": 225.0,
     "resistance": 310.5799865722656
   },
   "earnings": {
@@ -188,9 +187,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 0,
     "bearish_news_score": 0,
     "institutional_ownership": 0.92612,
     "detail": {
@@ -232,13 +231,12 @@
         "last_surprise_pct": -0.0025,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 33.47,
+      "analyst_upside_pct": 34.49,
       "eps_growth_implied": 10.21
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -260,6 +258,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Sector Update: Financial Stocks Mixed Late Afternoon",
+        "source": "MT Newswires",
+        "published": "2026-06-25T19:52:54Z",
+        "summary": "Financial stocks were mixed in late Thursday afternoon trading, with the NYSE Financial Index rising",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Sector Update: Financial Stocks Mixed Thursday Afternoon",
         "source": "MT Newswires",
@@ -299,16 +307,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "CBOE Stock Plunges 28.4% in a Month: Time to Buy the Dip?",
-        "source": "Zacks",
-        "published": "2026-06-23T14:46:00Z",
-        "summary": "Cboe Global leverages record derivatives activity, data services growth and portfolio optimization to fuel long-term expansion.",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -328,99 +326,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7813,
-    "probability_pct": 78.13,
+    "probability_of_outperformance": 0.7709,
+    "probability_pct": 77.09,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 31.4/100"
+      "Composite score 30.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 31.4,
+    "final_score": 30.65,
     "technical_score": 10.0,
     "momentum_score": 0,
     "volume_score": 0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.144,
     "eps_growth": 0.213,
     "roe": 0.15919,
     "forward_pe": 17.7535,
-    "relative_volume": 0.48205236877299235,
+    "relative_volume": 0.9640372155261585,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.023351124716630922,
-      "weekly": -0.10402308431166962,
-      "monthly": -0.1950054155489226,
-      "annual": -0.13378665428598535
+      "daily": -0.028832842226170996,
+      "weekly": -0.10905200767519407,
+      "monthly": -0.19952367489508727,
+      "annual": -0.13864852121110727
     },
     "risk": {
-      "volatility": 0.012626368536497177,
-      "annualized_volatility": 0.20043738665653263,
-      "maximum_drawdown": -0.28664954875463644,
-      "sharpe_ratio": 0.6919830246251311,
-      "sortino_ratio": 0.8976160273532887,
-      "calmar_ratio": 0.4389351507558481,
-      "beta": -0.11217868539865683,
-      "alpha": 0.15833256603096377,
-      "capm_expected_return": -0.019633296964419445,
-      "actual_return": 0.1386992690665443,
-      "market_return": 0.17501806956149732
+      "volatility": 0.012660063130325427,
+      "annualized_volatility": 0.2009722717513139,
+      "maximum_drawdown": -0.29065342953307416,
+      "sharpe_ratio": 0.6635623525312261,
+      "sortino_ratio": 0.859442060186653,
+      "calmar_ratio": 0.41184371556906335,
+      "beta": -0.11328543547833017,
+      "alpha": 0.15328694306120763,
+      "capm_expected_return": -0.0199293096243609,
+      "actual_return": 0.13335763343684673,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": -0.11217868539865683,
-      "alpha": 0.15833256603096377,
-      "capm_expected_return": -0.019633296964419445,
-      "actual_return": 0.1386992690665443,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta -0.11: Moves roughly 111% less than the market. CAPM expected return is -1.96%; realized alpha is 15.83%, meaning positive alpha versus CAPM."
+      "beta": -0.11328543547833017,
+      "alpha": 0.15328694306120763,
+      "capm_expected_return": -0.0199293096243609,
+      "actual_return": 0.13335763343684673,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta -0.11: Moves roughly 111% less than the market. CAPM expected return is -1.99%; realized alpha is 15.33%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.1386992690665443,
+      "actual_return": 0.13335763343684673,
       "components": {
-        "market_component": -0.019633296964419445,
+        "market_component": -0.0199293096243609,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": 0.15833256603096377
+        "alpha_component": 0.15328694306120763
       },
       "component_weights_pct": {
-        "market_component": 11.03,
+        "market_component": 11.51,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 88.97
+        "alpha_component": 88.49
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 254.50623016357423,
-      "sma50": 274.41352600097656,
-      "sma200": 275.27855308532713,
-      "ema20": 254.85149743531076,
-      "ema50": 269.6993449814693,
-      "ema200": 273.9685189632
+      "sma20": 254.44272994995117,
+      "sma50": 274.3881259155273,
+      "sma200": 275.27220252990725,
+      "ema20": 254.7305446474523,
+      "ema50": 269.6495408835481,
+      "ema200": 273.9626402412191
     },
     "momentum": {
-      "3m": -0.22619950618974394,
-      "6m": -0.1475827611206394,
-      "12m": -0.13378665428598535,
+      "3m": -0.2305426798964455,
+      "6m": -0.15236719350166572,
+      "12m": -0.13864852121110727,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 4354663.8,
-      "relative_volume": 0.48205236877299235,
+      "average_volume": 4465206.25,
+      "relative_volume": 0.9640372155261585,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -438,5 +436,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CME\nRating: Drop | Score: 31.4/100 | Confidence: 21.39/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 226.27000427246094 | Resistance: 310.5799865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.7535\nNews/Catalyst: Sector Update: Financial Stocks Mixed Thursday Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CME\nRating: Drop | Score: 30.65/100 | Confidence: 19.19/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 225.0 | Resistance: 310.5799865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.7535\nNews/Catalyst: Sector Update: Financial Stocks Mixed Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

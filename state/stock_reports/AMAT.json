@@ -1,44 +1,43 @@
 {
   "ticker": "AMAT",
-  "generated_at": "2026-06-25T18:06:39.352378",
+  "generated_at": "2026-06-25T20:31:18.042757",
   "score": {
-    "final_score": 69.65,
+    "final_score": 79.15,
     "rating": "Watch",
-    "confidence": 57.31,
+    "confidence": 69.8,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 90.0,
+      "technical": 83.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 86.0,
       "risk": 45.0,
       "catalyst": 50.0
     },
     "technical": {
-      "score": 90.0,
+      "score": 83.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 323.1199951171875,
-      "resistance": 654.5,
+      "resistance": 668.0,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.43880933615531537,
-        "3m": 0.7742829662297583,
-        "6m": 1.5332262873424178,
-        "12m": 2.6591258154127644
+        "1m": 0.46848683965126137,
+        "3m": 0.8108800938754446,
+        "6m": 1.5854777080897406,
+        "12m": 2.7346005266550444
       },
-      "acceleration": 0.0077,
+      "acceleration": 0.0181,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,13 +48,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 10229118.4,
-      "relative_volume": 0.8314761514540686,
-      "accumulation_days": 11,
+      "score": 100,
+      "average_volume": 10605617.7,
+      "relative_volume": 1.5086395203553302,
+      "accumulation_days": 12,
       "distribution_days": 4,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.51x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -69,17 +71,17 @@
     "risk": {
       "score": 45.0,
       "risk_metrics": {
-        "volatility": 0.03158933972797725,
-        "annualized_volatility": 0.5014652220057634,
-        "maximum_drawdown": -0.4988191887308103,
-        "sharpe_ratio": 1.2993962992667583,
-        "sortino_ratio": 1.755902948779382,
-        "calmar_ratio": 1.384800310594247,
-        "beta": 1.9079988192308515,
-        "alpha": 0.31766778361787235,
-        "capm_expected_return": 0.3339342700673999,
-        "actual_return": 0.6516020536852722,
-        "market_return": 0.17501806956149732
+        "volatility": 0.03179072753056082,
+        "annualized_volatility": 0.5046621542620708,
+        "maximum_drawdown": -0.4988192191578168,
+        "sharpe_ratio": 1.3255907109285165,
+        "sortino_ratio": 1.79998187997742,
+        "calmar_ratio": 1.4390508752245674,
+        "beta": 1.912955058694718,
+        "alpha": 0.332446116528475,
+        "capm_expected_return": 0.33652934731850015,
+        "actual_return": 0.6689754638469751,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -95,7 +97,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "AMAT",
@@ -149,16 +151,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 69.18248174063892,
+    "rsi": 70.19281849060653,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 0.8314761514540686,
+    "relative_volume": 1.5086395203553302,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 323.1199951171875,
-    "resistance": 654.5
+    "resistance": 668.0
   },
   "earnings": {
     "next_earnings_date": "1786651200",
@@ -249,7 +251,7 @@
         "last_surprise_pct": 0.065,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -18.74,
+      "analyst_upside_pct": -20.31,
       "eps_growth_implied": 53.74
     },
     "evidence": [
@@ -280,7 +282,7 @@
         "headline": "Sandisk, Western Digital, and others soar as Micron results  'justify elevated valuations'",
         "source": "Yahoo Finance",
         "published": "2026-06-25T14:06:42Z",
-        "summary": "Micron's blowout earnings lifted the entire semiconductor complex on Thursday.",
+        "summary": "Micron's blowout earnings lifted the semiconductor complex on Thursday.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -344,22 +346,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8418,
-    "probability_pct": 84.18,
+    "probability_of_outperformance": 0.8997,
+    "probability_pct": 89.97,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 69.65/100"
+      "Composite score 79.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 69.65,
-    "technical_score": 90.0,
+    "final_score": 79.15,
+    "technical_score": 83.0,
     "momentum_score": 85.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 86.0,
     "risk_score": 45.0,
     "catalyst_score": 50.0,
@@ -367,7 +370,7 @@
     "eps_growth": 0.335,
     "roe": 0.39692003,
     "forward_pe": 38.808666,
-    "relative_volume": 0.8314761514540686,
+    "relative_volume": 1.5086395203553302,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -377,66 +380,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.11126208899690404,
-      "weekly": 0.10385889979217455,
-      "monthly": 0.43880933615531537,
-      "annual": 2.6591258154127644
+      "daily": 0.1341834613444337,
+      "weekly": 0.12662757075809417,
+      "monthly": 0.46848683965126137,
+      "annual": 2.7346005266550444
     },
     "risk": {
-      "volatility": 0.03158933972797725,
-      "annualized_volatility": 0.5014652220057634,
-      "maximum_drawdown": -0.4988191887308103,
-      "sharpe_ratio": 1.2993962992667583,
-      "sortino_ratio": 1.755902948779382,
-      "calmar_ratio": 1.384800310594247,
-      "beta": 1.9079988192308515,
-      "alpha": 0.31766778361787235,
-      "capm_expected_return": 0.3339342700673999,
-      "actual_return": 0.6516020536852722,
-      "market_return": 0.17501806956149732
+      "volatility": 0.03179072753056082,
+      "annualized_volatility": 0.5046621542620708,
+      "maximum_drawdown": -0.4988192191578168,
+      "sharpe_ratio": 1.3255907109285165,
+      "sortino_ratio": 1.79998187997742,
+      "calmar_ratio": 1.4390508752245674,
+      "beta": 1.912955058694718,
+      "alpha": 0.332446116528475,
+      "capm_expected_return": 0.33652934731850015,
+      "actual_return": 0.6689754638469751,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 1.9079988192308515,
-      "alpha": 0.31766778361787235,
-      "capm_expected_return": 0.3339342700673999,
-      "actual_return": 0.6516020536852722,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 1.91: Moves roughly 91% more than the market. CAPM expected return is 33.39%; realized alpha is 31.77%, meaning positive alpha versus CAPM."
+      "beta": 1.912955058694718,
+      "alpha": 0.332446116528475,
+      "capm_expected_return": 0.33652934731850015,
+      "actual_return": 0.6689754638469751,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 1.91: Moves roughly 91% more than the market. CAPM expected return is 33.65%; realized alpha is 33.24%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.6516020536852722,
+      "actual_return": 0.6689754638469751,
       "components": {
-        "market_component": 0.3339342700673999,
-        "momentum_component": 0.6647814538531911,
-        "volatility_drag": -0.050293044401152676,
-        "alpha_component": 0.31766778361787235
+        "market_component": 0.33652934731850015,
+        "momentum_component": 0.6836501316637611,
+        "volatility_drag": -0.05093243085241417,
+        "alpha_component": 0.332446116528475
       },
       "component_weights_pct": {
-        "market_component": 24.43,
-        "momentum_component": 48.64,
-        "volatility_drag": 3.68,
-        "alpha_component": 23.24
+        "market_component": 23.98,
+        "momentum_component": 48.71,
+        "volatility_drag": 3.63,
+        "alpha_component": 23.69
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 537.2644989013672,
-      "sma50": 463.0233721923828,
-      "sma200": 326.35395248413084,
-      "ema20": 550.0419443058863,
-      "ema50": 482.21324222622536,
-      "ema200": 353.77766188908083
+      "sma20": 537.9394989013672,
+      "sma50": 463.29337219238283,
+      "sma200": 326.421452331543,
+      "ema20": 551.3276585916014,
+      "ema50": 482.7426539868585,
+      "ema200": 353.8982139267166
     },
     "momentum": {
-      "3m": 0.7742829662297583,
-      "6m": 1.5332262873424178,
-      "12m": 2.6591258154127644,
+      "3m": 0.8108800938754446,
+      "6m": 1.5854777080897406,
+      "12m": 2.7346005266550444,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 10229118.4,
-      "relative_volume": 0.8314761514540686,
+      "average_volume": 10605617.7,
+      "relative_volume": 1.5086395203553302,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -461,5 +464,5 @@
       }
     ]
   },
-  "report": "Ticker: AMAT\nRating: Watch | Score: 69.65/100 | Confidence: 57.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 323.1199951171875 | Resistance: 654.5\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.808666\nNews/Catalyst: Sandisk, Western Digital, and others soar as Micron results  'justify elevated valuations'\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: AMAT\nRating: Watch | Score: 79.15/100 | Confidence: 69.8/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 323.1199951171875 | Resistance: 668.0\nFundamental Outlook: Fundamentally Strong | Forward P/E: 38.808666\nNews/Catalyst: Sandisk, Western Digital, and others soar as Micron results  'justify elevated valuations'\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

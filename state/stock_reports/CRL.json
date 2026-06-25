@@ -1,43 +1,42 @@
 {
   "ticker": "CRL",
-  "generated_at": "2026-06-25T18:07:20.914332",
+  "generated_at": "2026-06-25T20:31:56.061773",
   "score": {
-    "final_score": 63.75,
-    "rating": "Hold",
-    "confidence": 54.25,
+    "final_score": 73.25,
+    "rating": "Watch",
+    "confidence": 65.92,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 58.0,
       "momentum": 85.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 60.0,
       "risk": 75.0,
       "catalyst": 45.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 58.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is extended from SMA20"
       ],
       "support": 149.92999267578125,
-      "resistance": 209.18499755859375,
+      "resistance": 212.7100067138672,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.3346838720154308,
-        "3m": 0.2609861855943012,
-        "6m": 0.030366432648967656,
-        "12m": 0.40960246739976025
+        "1m": 0.3571748389736724,
+        "3m": 0.28223526129653065,
+        "6m": 0.04772929877590726,
+        "12m": 0.4333558993421651
       },
-      "acceleration": 0.2458,
+      "acceleration": 0.2584,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,13 +47,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 785044.35,
-      "relative_volume": 0.8349681135849204,
-      "accumulation_days": 3,
+      "score": 100,
+      "average_volume": 829068.9,
+      "relative_volume": 1.8526542245162012,
+      "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.85x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -65,17 +67,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.031689434344023056,
-        "annualized_volatility": 0.5030541747755656,
-        "maximum_drawdown": -0.5933384861581337,
-        "sharpe_ratio": 0.27170192655855446,
-        "sortino_ratio": 0.3411113178966713,
-        "calmar_ratio": 0.011441922504543903,
-        "beta": 1.3722112985797592,
-        "alpha": -0.10348098405805992,
-        "capm_expected_return": 0.24016177250790485,
-        "actual_return": 0.13668078844984494,
-        "market_return": 0.17501806956149732
+        "volatility": 0.03176872791374786,
+        "annualized_volatility": 0.504312921171916,
+        "maximum_drawdown": -0.5933384861581339,
+        "sharpe_ratio": 0.2874473627078637,
+        "sortino_ratio": 0.36178210208493444,
+        "calmar_ratio": 0.024480763749727907,
+        "beta": 1.3739029603798874,
+        "alpha": -0.09673523675680645,
+        "capm_expected_return": 0.24169865592717246,
+        "actual_return": 0.144963419170366,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -89,7 +91,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is extended from SMA20"
   },
   "fundamentals": {
     "ticker": "CRL",
@@ -143,16 +145,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 69.608571619313,
+    "rsi": 71.30420270842068,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8349681135849204,
+    "relative_volume": 1.8526542245162012,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 149.92999267578125,
-    "resistance": 209.18499755859375
+    "resistance": 212.7100067138672
   },
   "earnings": {
     "next_earnings_date": "1778157000",
@@ -243,7 +245,7 @@
         "last_surprise_pct": 0.0542,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 2.85,
+      "analyst_upside_pct": 1.23,
       "eps_growth_implied": 430.86
     },
     "evidence": [
@@ -338,19 +340,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.707,
-    "probability_pct": 70.7,
+    "probability_of_outperformance": 0.8025,
+    "probability_pct": 80.25,
     "confidence": "High",
     "evidence": [
-      "Composite score 63.75/100"
+      "Volume surge above 1.5x",
+      "Composite score 73.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 63.75,
-    "technical_score": 65.0,
+    "final_score": 73.25,
+    "technical_score": 58.0,
     "momentum_score": 85.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 60.0,
     "risk_score": 75.0,
     "catalyst_score": 45.0,
@@ -358,7 +361,7 @@
     "eps_growth": null,
     "roe": -0.0587,
     "forward_pe": 16.890543,
-    "relative_volume": 0.8349681135849204,
+    "relative_volume": 1.8526542245162012,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -368,66 +371,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.03505685918410717,
-      "weekly": 0.14722497400382295,
-      "monthly": 0.3346838720154308,
-      "annual": 0.40960246739976025
+      "daily": 0.052498764423179356,
+      "weekly": 0.16655704171288077,
+      "monthly": 0.3571748389736724,
+      "annual": 0.4333558993421651
     },
     "risk": {
-      "volatility": 0.031689434344023056,
-      "annualized_volatility": 0.5030541747755656,
-      "maximum_drawdown": -0.5933384861581337,
-      "sharpe_ratio": 0.27170192655855446,
-      "sortino_ratio": 0.3411113178966713,
-      "calmar_ratio": 0.011441922504543903,
-      "beta": 1.3722112985797592,
-      "alpha": -0.10348098405805992,
-      "capm_expected_return": 0.24016177250790485,
-      "actual_return": 0.13668078844984494,
-      "market_return": 0.17501806956149732
+      "volatility": 0.03176872791374786,
+      "annualized_volatility": 0.504312921171916,
+      "maximum_drawdown": -0.5933384861581339,
+      "sharpe_ratio": 0.2874473627078637,
+      "sortino_ratio": 0.36178210208493444,
+      "calmar_ratio": 0.024480763749727907,
+      "beta": 1.3739029603798874,
+      "alpha": -0.09673523675680645,
+      "capm_expected_return": 0.24169865592717246,
+      "actual_return": 0.144963419170366,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 1.3722112985797592,
-      "alpha": -0.10348098405805992,
-      "capm_expected_return": 0.24016177250790485,
-      "actual_return": 0.13668078844984494,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 24.02%; realized alpha is -10.35%, meaning negative alpha versus CAPM."
+      "beta": 1.3739029603798874,
+      "alpha": -0.09673523675680645,
+      "capm_expected_return": 0.24169865592717246,
+      "actual_return": 0.144963419170366,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 24.17%; realized alpha is -9.67%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.13668078844984494,
+      "actual_return": 0.144963419170366,
       "components": {
-        "market_component": 0.24016177250790485,
-        "momentum_component": 0.10240061684994006,
-        "volatility_drag": -0.05061083495511312,
-        "alpha_component": -0.10348098405805992
+        "market_component": 0.24169865592717246,
+        "momentum_component": 0.10833897483554128,
+        "volatility_drag": -0.050862584234383196,
+        "alpha_component": -0.09673523675680645
       },
       "component_weights_pct": {
-        "market_component": 48.36,
-        "momentum_component": 20.62,
-        "volatility_drag": 10.19,
-        "alpha_component": 20.84
+        "market_component": 48.57,
+        "momentum_component": 21.77,
+        "volatility_drag": 10.22,
+        "alpha_component": 19.44
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 186.2052490234375,
-      "sma50": 175.97109954833985,
-      "sma200": 178.65777557373048,
-      "ema20": 185.675428493323,
-      "ema50": 178.96312127483293,
-      "ema200": 176.12646260545174
+      "sma20": 186.38149948120116,
+      "sma50": 176.0415997314453,
+      "sma200": 178.67540061950683,
+      "ema20": 186.0111436509681,
+      "ema50": 179.10135692861292,
+      "ema200": 176.16367197220697
     },
     "momentum": {
-      "3m": 0.2609861855943012,
-      "6m": 0.030366432648967656,
-      "12m": 0.40960246739976025,
+      "3m": 0.28223526129653065,
+      "6m": 0.04772929877590726,
+      "12m": 0.4333558993421651,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 785044.35,
-      "relative_volume": 0.8349681135849204,
+      "average_volume": 829068.9,
+      "relative_volume": 1.8526542245162012,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -437,13 +440,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.85x",
     "date_of_change": "2026-06-25",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.85x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CRL\nRating: Hold | Score: 63.75/100 | Confidence: 54.25/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 149.92999267578125 | Resistance: 209.18499755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.890543\nNews/Catalyst: Bio-Rad vs. Charles River Labs: Which Medical Research Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CRL\nRating: Watch | Score: 73.25/100 | Confidence: 65.92/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 149.92999267578125 | Resistance: 212.7100067138672\nFundamental Outlook: Fundamentally Average | Forward P/E: 16.890543\nNews/Catalyst: Bio-Rad vs. Charles River Labs: Which Medical Research Stock Is a Better Buy in 2026?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.85x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

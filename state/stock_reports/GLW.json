@@ -1,15 +1,15 @@
 {
   "ticker": "GLW",
-  "generated_at": "2026-06-25T18:07:32.007370",
+  "generated_at": "2026-06-25T20:32:11.579809",
   "score": {
-    "final_score": 73.15,
-    "rating": "Watch",
-    "confidence": 64.75,
+    "final_score": 80.65,
+    "rating": "Buy Watch",
+    "confidence": 76.49,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 75.0,
-      "volume": 25.0,
+      "volume": 75.0,
       "fundamental": 81.0,
       "risk": 85.0,
       "catalyst": 65.0
@@ -27,18 +27,18 @@
         "Stock is not materially extended from SMA20"
       ],
       "support": 128.5500030517578,
-      "resistance": 224.05999755859375,
+      "resistance": 228.00999450683594,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": 0.14392316361681434,
-        "3m": 0.5333336744455213,
-        "6m": 1.5432377378895241,
-        "12m": 3.405081294456471
+        "1m": 0.16408960588470878,
+        "3m": 0.5603651097784299,
+        "6m": 1.5880729669030877,
+        "12m": 3.482739322928561
       },
-      "acceleration": -0.2383,
+      "acceleration": -0.2337,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,13 +48,15 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 14219471.15,
-      "relative_volume": 1.3051908052150025,
+      "score": 75.0,
+      "average_volume": 14438289.9,
+      "relative_volume": 1.582971263099517,
       "accumulation_days": 5,
       "distribution_days": 5,
       "evidence": [
-        "Price advanced on above-average volume"
+        "Relative volume is 1.58x",
+        "Price advanced on above-average volume",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -68,17 +70,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.030625264344637172,
-        "annualized_volatility": 0.4861609997491408,
-        "maximum_drawdown": -0.2756766115045365,
-        "sharpe_ratio": 2.067426961445754,
-        "sortino_ratio": 2.9845989706336593,
-        "calmar_ratio": 5.180546292098745,
-        "beta": 1.481326108154741,
-        "alpha": 0.7458435226445075,
-        "capm_expected_return": 0.2592588358402886,
-        "actual_return": 1.005102358484796,
-        "market_return": 0.17501806956149732
+        "volatility": 0.03071761035952518,
+        "annualized_volatility": 0.48762694728891,
+        "maximum_drawdown": -0.27567653960738536,
+        "sharpe_ratio": 2.1238923336732425,
+        "sortino_ratio": 3.073468918018315,
+        "calmar_ratio": 5.447223338755854,
+        "beta": 1.4855120765411007,
+        "alpha": 0.7743340695918324,
+        "capm_expected_return": 0.2613330654475698,
+        "actual_return": 1.0356671350394022,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -147,16 +149,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.14485289298903,
+    "rsi": 59.14218482456856,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 1.3051908052150025,
+    "relative_volume": 1.582971263099517,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 128.5500030517578,
-    "resistance": 224.05999755859375
+    "resistance": 228.00999450683594
   },
   "earnings": {
     "next_earnings_date": "1777379400",
@@ -247,7 +249,7 @@
         "last_surprise_pct": 0.0121,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -9.99,
+      "analyst_upside_pct": -11.52,
       "eps_growth_implied": 102.06
     },
     "evidence": [
@@ -343,23 +345,24 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9093,
-    "probability_pct": 90.93,
+    "probability_of_outperformance": 0.9393,
+    "probability_pct": 93.93,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 73.15/100"
+      "Composite score 80.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 73.15,
+    "final_score": 80.65,
     "technical_score": 90.0,
     "momentum_score": 75.0,
-    "volume_score": 25.0,
+    "volume_score": 75.0,
     "fundamental_score": 81.0,
     "risk_score": 85.0,
     "catalyst_score": 65.0,
@@ -367,7 +370,7 @@
     "eps_growth": 1.389,
     "roe": 0.1674,
     "forward_pe": 52.72187,
-    "relative_volume": 1.3051908052150025,
+    "relative_volume": 1.582971263099517,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -377,66 +380,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.08856821437771867,
-      "weekly": 0.27742306359957447,
-      "monthly": 0.14392316361681434,
-      "annual": 3.405081294456471
+      "daily": 0.10775879356006901,
+      "weekly": 0.29994300137433494,
+      "monthly": 0.16408960588470878,
+      "annual": 3.482739322928561
     },
     "risk": {
-      "volatility": 0.030625264344637172,
-      "annualized_volatility": 0.4861609997491408,
-      "maximum_drawdown": -0.2756766115045365,
-      "sharpe_ratio": 2.067426961445754,
-      "sortino_ratio": 2.9845989706336593,
-      "calmar_ratio": 5.180546292098745,
-      "beta": 1.481326108154741,
-      "alpha": 0.7458435226445075,
-      "capm_expected_return": 0.2592588358402886,
-      "actual_return": 1.005102358484796,
-      "market_return": 0.17501806956149732
+      "volatility": 0.03071761035952518,
+      "annualized_volatility": 0.48762694728891,
+      "maximum_drawdown": -0.27567653960738536,
+      "sharpe_ratio": 2.1238923336732425,
+      "sortino_ratio": 3.073468918018315,
+      "calmar_ratio": 5.447223338755854,
+      "beta": 1.4855120765411007,
+      "alpha": 0.7743340695918324,
+      "capm_expected_return": 0.2613330654475698,
+      "actual_return": 1.0356671350394022,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 1.481326108154741,
-      "alpha": 0.7458435226445075,
-      "capm_expected_return": 0.2592588358402886,
-      "actual_return": 1.005102358484796,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 1.48: Moves roughly 48% more than the market. CAPM expected return is 25.93%; realized alpha is 74.58%, meaning positive alpha versus CAPM."
+      "beta": 1.4855120765411007,
+      "alpha": 0.7743340695918324,
+      "capm_expected_return": 0.2613330654475698,
+      "actual_return": 1.0356671350394022,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 1.49: Moves roughly 49% more than the market. CAPM expected return is 26.13%; realized alpha is 77.43%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.005102358484796,
+      "actual_return": 1.0356671350394022,
       "components": {
-        "market_component": 0.2592588358402886,
-        "momentum_component": 0.8512703236141177,
-        "volatility_drag": -0.04723219994982816,
-        "alpha_component": 0.7458435226445075
+        "market_component": 0.2613330654475698,
+        "momentum_component": 0.8706848307321402,
+        "volatility_drag": -0.047525389457782,
+        "alpha_component": 0.7743340695918324
       },
       "component_weights_pct": {
-        "market_component": 13.62,
-        "momentum_component": 44.72,
-        "volatility_drag": 2.48,
-        "alpha_component": 39.18
+        "market_component": 13.38,
+        "momentum_component": 44.56,
+        "volatility_drag": 2.43,
+        "alpha_component": 39.63
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 188.58999938964843,
-      "sma50": 181.92159637451172,
-      "sma200": 122.99841777801514,
-      "ema20": 191.71449198469793,
-      "ema50": 180.06838024046257,
-      "ema200": 132.72351297352512
+      "sma20": 188.78749923706056,
+      "sma50": 182.00059631347656,
+      "sma200": 123.01816772460937,
+      "ema20": 192.09068217024475,
+      "ema50": 180.2232820780169,
+      "ema200": 132.7532180864011
     },
     "momentum": {
-      "3m": 0.5333336744455213,
-      "6m": 1.5432377378895241,
-      "12m": 3.405081294456471,
+      "3m": 0.5603651097784299,
+      "6m": 1.5880729669030877,
+      "12m": 3.482739322928561,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 14219471.15,
-      "relative_volume": 1.3051908052150025,
+      "average_volume": 14438289.9,
+      "relative_volume": 1.582971263099517,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -461,5 +464,5 @@
       }
     ]
   },
-  "report": "Ticker: GLW\nRating: Watch | Score: 73.15/100 | Confidence: 64.75/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: valuation is demanding\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 128.5500030517578 | Resistance: 224.05999755859375\nFundamental Outlook: Quality Compounder | Forward P/E: 52.72187\nNews/Catalyst: Micron Sparks Fresh AI Stock Rally\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: GLW\nRating: Buy Watch | Score: 80.65/100 | Confidence: 76.49/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder, price is pressing near breakout/high territory\nBear Case: valuation is demanding\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 128.5500030517578 | Resistance: 228.00999450683594\nFundamental Outlook: Quality Compounder | Forward P/E: 52.72187\nNews/Catalyst: Micron Sparks Fresh AI Stock Rally\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

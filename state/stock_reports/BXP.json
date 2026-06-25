@@ -1,41 +1,42 @@
 {
   "ticker": "BXP",
-  "generated_at": "2026-06-25T18:06:59.966618",
+  "generated_at": "2026-06-25T20:31:37.733816",
   "score": {
-    "final_score": 50.45,
+    "final_score": 54.45,
     "rating": "Hold",
-    "confidence": 42.09,
+    "confidence": 48.07,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 65.0,
       "momentum": 50.0,
       "volume": 25.0,
       "fundamental": 58.0,
       "risk": 75.0,
-      "catalyst": 20.0
+      "catalyst": 40.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 51.02000045776367,
       "resistance": 66.61000061035156,
-      "risk_reward": 0.15
+      "risk_reward": 0.06
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": 0.06566566057515133,
-        "3m": 0.23910760202146042,
-        "6m": -0.04761915475769685,
-        "12m": -0.03709847256302634
+        "1m": 0.08348453238143594,
+        "3m": 0.2598265763972478,
+        "6m": -0.0316945051983083,
+        "12m": -0.020997907897918555
       },
-      "acceleration": 0.2629,
+      "acceleration": 0.2757,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1540532.3,
-      "relative_volume": 0.21910997906373011,
+      "average_volume": 1555875.75,
+      "relative_volume": 0.41418153088381254,
       "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
@@ -64,29 +65,30 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.01893359685446072,
-        "annualized_volatility": 0.3005615322051472,
-        "maximum_drawdown": -0.3902516336279511,
-        "sharpe_ratio": 0.40073766206228795,
-        "sortino_ratio": 0.5533392090151877,
-        "calmar_ratio": 0.19988730090465393,
-        "beta": 0.9126133095323642,
-        "alpha": -0.03927749396873387,
-        "capm_expected_return": 0.1597238196904836,
-        "actual_return": 0.12044632572174974,
-        "market_return": 0.17501806956149732
+        "volatility": 0.018973242266782143,
+        "annualized_volatility": 0.30119088361490975,
+        "maximum_drawdown": -0.3902515777189872,
+        "sharpe_ratio": 0.4456887950163566,
+        "sortino_ratio": 0.6155341659009981,
+        "calmar_ratio": 0.2377039285282562,
+        "beta": 0.9132410266569883,
+        "alpha": -0.026421054282581263,
+        "capm_expected_return": 0.1606584562708221,
+        "actual_return": 0.13423740198824083,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 20.0,
+      "score": 40.0,
       "evidence": [
-        "earnings surprise"
+        "earnings surprise",
+        "sector strength"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "BXP",
@@ -140,13 +142,13 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 59.93739476371404,
+    "rsi": 63.0591622251305,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.21910997906373011,
+    "relative_volume": 0.41418153088381254,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 51.02000045776367,
     "resistance": 66.61000061035156
@@ -195,7 +197,7 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": false,
     "bullish_news_score": 1,
@@ -240,11 +242,12 @@
         "last_surprise_pct": 0.9757,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.68,
+      "analyst_upside_pct": 5.91,
       "eps_growth_implied": 3.49
     },
     "evidence": [
-      "recent earnings surprise or earnings growth is positive"
+      "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive"
     ]
   },
   "analyst": {
@@ -265,6 +268,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "BXP Secures 320K Sq.Ft. Lease With Boston Dynamics at Reservoir Place",
+        "source": "Zacks",
+        "published": "2026-06-25T17:24:00Z",
+        "summary": "BXP signs a long-term 320,000-square-foot lease with Boston Dynamics at Reservoir Place. This represents one of Greater Boston's largest innovation office deals this year.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Is BXP Stock Underperforming the Nasdaq?",
         "source": "Barchart",
@@ -304,16 +317,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Are Wall Street Analysts Bullish on BXP Stock?",
-        "source": "Barchart",
-        "published": "2026-05-22T18:09:52Z",
-        "summary": "While BXP has underperformed relative to the broader market over the past year, Wall Street analysts remain moderately optimistic about the stock\u2019s prospects.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -333,98 +336,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6271,
-    "probability_pct": 62.71,
+    "probability_of_outperformance": 0.6757,
+    "probability_pct": 67.57,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 50.45/100"
+      "Composite score 54.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 50.45,
-    "technical_score": 53.0,
+    "final_score": 54.45,
+    "technical_score": 65.0,
     "momentum_score": 50.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
     "risk_score": 75.0,
-    "catalyst_score": 20.0,
+    "catalyst_score": 40.0,
     "revenue_growth": 0.006,
     "eps_growth": 0.655,
     "roe": 0.05525,
     "forward_pe": 31.391726,
-    "relative_volume": 0.21910997906373011,
+    "relative_volume": 0.41418153088381254,
     "breakout": false,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
     "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.007015855199942633,
-      "weekly": 0.024262526661593675,
-      "monthly": 0.06566566057515133,
-      "annual": -0.03709847256302634
+      "daily": 0.02385405041871258,
+      "weekly": 0.041389101471852374,
+      "monthly": 0.08348453238143594,
+      "annual": -0.020997907897918555
     },
     "risk": {
-      "volatility": 0.01893359685446072,
-      "annualized_volatility": 0.3005615322051472,
-      "maximum_drawdown": -0.3902516336279511,
-      "sharpe_ratio": 0.40073766206228795,
-      "sortino_ratio": 0.5533392090151877,
-      "calmar_ratio": 0.19988730090465393,
-      "beta": 0.9126133095323642,
-      "alpha": -0.03927749396873387,
-      "capm_expected_return": 0.1597238196904836,
-      "actual_return": 0.12044632572174974,
-      "market_return": 0.17501806956149732
+      "volatility": 0.018973242266782143,
+      "annualized_volatility": 0.30119088361490975,
+      "maximum_drawdown": -0.3902515777189872,
+      "sharpe_ratio": 0.4456887950163566,
+      "sortino_ratio": 0.6155341659009981,
+      "calmar_ratio": 0.2377039285282562,
+      "beta": 0.9132410266569883,
+      "alpha": -0.026421054282581263,
+      "capm_expected_return": 0.1606584562708221,
+      "actual_return": 0.13423740198824083,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 0.9126133095323642,
-      "alpha": -0.03927749396873387,
-      "capm_expected_return": 0.1597238196904836,
-      "actual_return": 0.12044632572174974,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 15.97%; realized alpha is -3.93%, meaning negative alpha versus CAPM."
+      "beta": 0.9132410266569883,
+      "alpha": -0.026421054282581263,
+      "capm_expected_return": 0.1606584562708221,
+      "actual_return": 0.13423740198824083,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 16.07%; realized alpha is -2.64%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.12044632572174974,
+      "actual_return": 0.13423740198824083,
       "components": {
-        "market_component": 0.1597238196904836,
+        "market_component": 0.1606584562708221,
         "momentum_component": 0.0,
-        "volatility_drag": -0.01011230644102944,
-        "alpha_component": -0.03927749396873387
+        "volatility_drag": -0.010238176722981952,
+        "alpha_component": -0.026421054282581263
       },
       "component_weights_pct": {
-        "market_component": 76.38,
+        "market_component": 81.42,
         "momentum_component": 0.0,
-        "volatility_drag": 4.84,
-        "alpha_component": 18.78
+        "volatility_drag": 5.19,
+        "alpha_component": 13.39
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 63.642000389099124,
-      "sma50": 60.718600006103514,
-      "sma200": 63.74440414428711,
-      "ema20": 63.60514195627308,
-      "ema50": 61.302757749113454,
-      "ema200": 62.06864223909204
+      "sma20": 63.696000480651854,
+      "sma50": 60.74020004272461,
+      "sma200": 63.74980415344238,
+      "ema20": 63.707999273516386,
+      "ema50": 61.345110761001514,
+      "ema200": 62.0756602022257
     },
     "momentum": {
-      "3m": 0.23910760202146042,
-      "6m": -0.04761915475769685,
-      "12m": -0.03709847256302634,
+      "3m": 0.2598265763972478,
+      "6m": -0.0316945051983083,
+      "12m": -0.020997907897918555,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 1540532.3,
-      "relative_volume": 0.21910997906373011,
+      "average_volume": 1555875.75,
+      "relative_volume": 0.41418153088381254,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -434,13 +437,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
     "date_of_change": "2026-06-25",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: BXP\nRating: Hold | Score: 50.45/100 | Confidence: 42.09/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 51.02000045776367 | Resistance: 66.61000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 31.391726\nNews/Catalyst: Is BXP Stock Underperforming the Nasdaq?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BXP\nRating: Hold | Score: 54.45/100 | Confidence: 48.07/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 51.02000045776367 | Resistance: 66.61000061035156\nFundamental Outlook: Fundamentally Average | Forward P/E: 31.391726\nNews/Catalyst: BXP Secures 320K Sq.Ft. Lease With Boston Dynamics at Reservoir Place\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

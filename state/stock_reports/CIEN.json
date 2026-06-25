@@ -1,13 +1,13 @@
 {
   "ticker": "CIEN",
-  "generated_at": "2026-06-25T18:07:11.259186",
+  "generated_at": "2026-06-25T20:31:47.211150",
   "score": {
-    "final_score": 36.4,
+    "final_score": 38.9,
     "rating": "Avoid",
-    "confidence": 27.65,
+    "confidence": 29.52,
     "risk_level": "High",
     "categories": {
-      "technical": 22.0,
+      "technical": 32.0,
       "momentum": 50.0,
       "volume": 0,
       "fundamental": 81.0,
@@ -15,24 +15,25 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 22.0,
+      "score": 32.0,
       "evidence": [
         "Price above SMA200",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 365.0,
       "resistance": 627.0,
-      "risk_reward": 1.27
+      "risk_reward": 1.19
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": -0.20207840107935937,
-        "3m": 0.09814939514956689,
-        "6m": 1.0302428876963439,
-        "12m": 5.057467081349346
+        "1m": -0.19538838517388524,
+        "3m": 0.1073566116606568,
+        "6m": 1.0472650578306495,
+        "12m": 5.1082547165956305
       },
-      "acceleration": -0.417,
+      "acceleration": -0.4163,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -41,8 +42,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3809053.9,
-      "relative_volume": 0.41022732705357623,
+      "average_volume": 3879677.95,
+      "relative_volume": 0.765800419078599,
       "accumulation_days": 4,
       "distribution_days": 10,
       "evidence": []
@@ -58,17 +59,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.03881495466722875,
-        "annualized_volatility": 0.6161683031983988,
-        "maximum_drawdown": -0.45508250322158916,
-        "sharpe_ratio": 2.2051407928473217,
-        "sortino_ratio": 2.825450520389999,
-        "calmar_ratio": 4.8517382140812915,
-        "beta": 1.9509371082649272,
-        "alpha": 1.0172886141178885,
-        "capm_expected_return": 0.34144924652441744,
-        "actual_return": 1.358737860642306,
-        "market_return": 0.17501806956149732
+        "volatility": 0.03886992283645425,
+        "annualized_volatility": 0.6170408958331698,
+        "maximum_drawdown": -0.4550825032215895,
+        "sharpe_ratio": 2.2083541400875792,
+        "sortino_ratio": 2.833574906968089,
+        "calmar_ratio": 4.8754408191457985,
+        "beta": 1.9524209383172302,
+        "alpha": 1.0191725847402022,
+        "capm_expected_return": 0.34347223217632683,
+        "actual_return": 1.362644816916529,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Volatility is elevated",
@@ -86,7 +87,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; 12m return is positive; revenue growth is strong"
+    "explanation": "Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; 12m return is positive"
   },
   "fundamentals": {
     "ticker": "CIEN",
@@ -140,14 +141,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 38.110481890444845,
-    "macd_cross": false,
+    "rsi": 39.170918410376814,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.41022732705357623,
+    "relative_volume": 0.765800419078599,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 365.0,
     "resistance": 627.0
   },
@@ -240,7 +241,7 @@
         "last_surprise_pct": 0.1234,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 17.58,
+      "analyst_upside_pct": 16.72,
       "eps_growth_implied": 220.2
     },
     "evidence": [
@@ -344,13 +345,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 36.4/100"
+      "Composite score 38.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 36.4,
-    "technical_score": 22.0,
+    "final_score": 38.9,
+    "technical_score": 32.0,
     "momentum_score": 50.0,
     "volume_score": 0,
     "fundamental_score": 81.0,
@@ -360,7 +361,7 @@
     "eps_growth": 23.833,
     "roe": 0.15464,
     "forward_pe": 49.250065,
-    "relative_volume": 0.41022732705357623,
+    "relative_volume": 0.765800419078599,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -370,66 +371,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.03700026652101074,
-      "weekly": 0.10061367081559536,
-      "monthly": -0.20207840107935937,
-      "annual": 5.057467081349346
+      "daily": 0.045694790251651574,
+      "weekly": 0.10984154855884598,
+      "monthly": -0.19538838517388524,
+      "annual": 5.1082547165956305
     },
     "risk": {
-      "volatility": 0.03881495466722875,
-      "annualized_volatility": 0.6161683031983988,
-      "maximum_drawdown": -0.45508250322158916,
-      "sharpe_ratio": 2.2051407928473217,
-      "sortino_ratio": 2.825450520389999,
-      "calmar_ratio": 4.8517382140812915,
-      "beta": 1.9509371082649272,
-      "alpha": 1.0172886141178885,
-      "capm_expected_return": 0.34144924652441744,
-      "actual_return": 1.358737860642306,
-      "market_return": 0.17501806956149732
+      "volatility": 0.03886992283645425,
+      "annualized_volatility": 0.6170408958331698,
+      "maximum_drawdown": -0.4550825032215895,
+      "sharpe_ratio": 2.2083541400875792,
+      "sortino_ratio": 2.833574906968089,
+      "calmar_ratio": 4.8754408191457985,
+      "beta": 1.9524209383172302,
+      "alpha": 1.0191725847402022,
+      "capm_expected_return": 0.34347223217632683,
+      "actual_return": 1.362644816916529,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 1.9509371082649272,
-      "alpha": 1.0172886141178885,
-      "capm_expected_return": 0.34144924652441744,
-      "actual_return": 1.358737860642306,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 1.95: Moves roughly 95% more than the market. CAPM expected return is 34.14%; realized alpha is 101.73%, meaning positive alpha versus CAPM."
+      "beta": 1.9524209383172302,
+      "alpha": 1.0191725847402022,
+      "capm_expected_return": 0.34347223217632683,
+      "actual_return": 1.362644816916529,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 1.95: Moves roughly 95% more than the market. CAPM expected return is 34.35%; realized alpha is 101.92%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.358737860642306,
+      "actual_return": 1.362644816916529,
       "components": {
-        "market_component": 0.34144924652441744,
-        "momentum_component": 1.2643667703373365,
-        "volatility_drag": -0.07323366063967976,
-        "alpha_component": 1.0172886141178885
+        "market_component": 0.34347223217632683,
+        "momentum_component": 1.2770636791489076,
+        "volatility_drag": -0.07340817916663396,
+        "alpha_component": 1.0191725847402022
       },
       "component_weights_pct": {
         "market_component": 12.66,
-        "momentum_component": 46.89,
-        "volatility_drag": 2.72,
-        "alpha_component": 37.73
+        "momentum_component": 47.07,
+        "volatility_drag": 2.71,
+        "alpha_component": 37.56
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 492.30449829101565,
-      "sma50": 519.8735998535157,
-      "sma200": 317.12424972534177,
-      "ema20": 482.23292147453134,
-      "ema50": 488.00381007552375,
-      "ema200": 349.69673830887945
+      "sma20": 492.5059982299805,
+      "sma50": 519.9541998291015,
+      "sma200": 317.14439971923827,
+      "ema20": 482.6167308820834,
+      "ema50": 488.1618492439319,
+      "ema200": 349.7388389815708
     },
     "momentum": {
-      "3m": 0.09814939514956689,
-      "6m": 1.0302428876963439,
-      "12m": 5.057467081349346,
+      "3m": 0.1073566116606568,
+      "6m": 1.0472650578306495,
+      "12m": 5.1082547165956305,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3809053.9,
-      "relative_volume": 0.41022732705357623,
+      "average_volume": 3879677.95,
+      "relative_volume": 0.765800419078599,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -447,5 +448,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CIEN\nRating: Avoid | Score: 36.4/100 | Confidence: 27.65/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 49.250065\nNews/Catalyst: What Arista Networks Stock's Balance Sheet Revealed Before the AI Boom\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CIEN\nRating: Avoid | Score: 38.9/100 | Confidence: 29.52/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 49.250065\nNews/Catalyst: What Arista Networks Stock's Balance Sheet Revealed Before the AI Boom\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

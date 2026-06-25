@@ -1,13 +1,13 @@
 {
   "ticker": "AMT",
-  "generated_at": "2026-06-25T18:06:42.512363",
+  "generated_at": "2026-06-25T20:31:20.389729",
   "score": {
-    "final_score": 41.2,
+    "final_score": 38.7,
     "rating": "Drop",
-    "confidence": 33.98,
+    "confidence": 31.89,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 20.0,
+      "technical": 10.0,
       "momentum": 40.0,
       "volume": 0,
       "fundamental": 68.0,
@@ -15,24 +15,23 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 20.0,
+      "score": 10.0,
       "evidence": [
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
-      "support": 168.9199981689453,
+      "support": 168.72000122070312,
       "resistance": 194.1199951171875,
-      "risk_reward": 29.36
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": -0.07342318912402057,
-        "3m": 0.03475000869675693,
-        "6m": 0.012964800254080311,
-        "12m": -0.21259704750505892
+        "1m": -0.07904541583463642,
+        "3m": 0.028471415201410277,
+        "6m": 0.006818302052392644,
+        "12m": -0.2173748034984878
       },
-      "acceleration": 0.0283,
+      "acceleration": 0.0251,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -41,8 +40,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3218480.8,
-      "relative_volume": 0.5069211536076276,
+      "average_volume": 3263227.4,
+      "relative_volume": 0.7738804840876244,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -58,17 +57,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01635022948272463,
-        "annualized_volatility": 0.25955184654075364,
-        "maximum_drawdown": -0.27542156244688365,
-        "sharpe_ratio": 0.01988029707511969,
-        "sortino_ratio": 0.028143648044240358,
-        "calmar_ratio": -0.1020417789832062,
-        "beta": -0.029243226975117675,
-        "alpha": 0.010278060948559858,
-        "capm_expected_return": -0.0051180931329338,
-        "actual_return": 0.0051599678156260586,
-        "market_return": 0.17501806956149732
+        "volatility": 0.01638825672739635,
+        "annualized_volatility": 0.26015551033543194,
+        "maximum_drawdown": -0.27542156244688554,
+        "sharpe_ratio": 0.008536775724771963,
+        "sortino_ratio": 0.012078504528113666,
+        "calmar_ratio": -0.11295805299272045,
+        "beta": -0.030432356329537683,
+        "alpha": 0.007574585855363608,
+        "capm_expected_return": -0.005353696610066431,
+        "actual_return": 0.002220889245297177,
+        "market_return": 0.17592119887444033
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -83,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; 6m return is positive; Momentum is accelerating; eps growth is strong"
+    "explanation": "Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive; Momentum is accelerating; eps growth is strong; Debt-to-equity is elevated"
   },
   "fundamentals": {
     "ticker": "AMT",
@@ -137,15 +136,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 18.243930576480906,
+    "rsi": 17.76296724455085,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5069211536076276,
+    "relative_volume": 0.7738804840876244,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
-    "support": 168.9199981689453,
+    "support": 168.72000122070312,
     "resistance": 194.1199951171875
   },
   "earnings": {
@@ -237,7 +236,7 @@
         "last_surprise_pct": 0.17040001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.33,
+      "analyst_upside_pct": 28.1,
       "eps_growth_implied": 11.03
     },
     "evidence": [
@@ -340,13 +339,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 41.2/100"
+      "Composite score 38.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.2,
-    "technical_score": 20.0,
+    "final_score": 38.7,
+    "technical_score": 10.0,
     "momentum_score": 40.0,
     "volume_score": 0,
     "fundamental_score": 68.0,
@@ -356,7 +355,7 @@
     "eps_growth": 0.769,
     "roe": 0.29952,
     "forward_pe": 24.438225,
-    "relative_volume": 0.5069211536076276,
+    "relative_volume": 0.7738804840876244,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -366,66 +365,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.02699763001609934,
-      "weekly": -0.06262077733289939,
-      "monthly": -0.07342318912402057,
-      "annual": -0.21259704750505892
+      "daily": -0.03290155492529745,
+      "weekly": -0.06830855026418292,
+      "monthly": -0.07904541583463642,
+      "annual": -0.2173748034984878
     },
     "risk": {
-      "volatility": 0.01635022948272463,
-      "annualized_volatility": 0.25955184654075364,
-      "maximum_drawdown": -0.27542156244688365,
-      "sharpe_ratio": 0.01988029707511969,
-      "sortino_ratio": 0.028143648044240358,
-      "calmar_ratio": -0.1020417789832062,
-      "beta": -0.029243226975117675,
-      "alpha": 0.010278060948559858,
-      "capm_expected_return": -0.0051180931329338,
-      "actual_return": 0.0051599678156260586,
-      "market_return": 0.17501806956149732
+      "volatility": 0.01638825672739635,
+      "annualized_volatility": 0.26015551033543194,
+      "maximum_drawdown": -0.27542156244688554,
+      "sharpe_ratio": 0.008536775724771963,
+      "sortino_ratio": 0.012078504528113666,
+      "calmar_ratio": -0.11295805299272045,
+      "beta": -0.030432356329537683,
+      "alpha": 0.007574585855363608,
+      "capm_expected_return": -0.005353696610066431,
+      "actual_return": 0.002220889245297177,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": -0.029243226975117675,
-      "alpha": 0.010278060948559858,
-      "capm_expected_return": -0.0051180931329338,
-      "actual_return": 0.0051599678156260586,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta -0.03: Moves roughly 103% less than the market. CAPM expected return is -0.51%; realized alpha is 1.03%, meaning positive alpha versus CAPM."
+      "beta": -0.030432356329537683,
+      "alpha": 0.007574585855363608,
+      "capm_expected_return": -0.005353696610066431,
+      "actual_return": 0.002220889245297177,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta -0.03: Moves roughly 103% less than the market. CAPM expected return is -0.54%; realized alpha is 0.76%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.0051599678156260586,
+      "actual_return": 0.002220889245297177,
       "components": {
-        "market_component": -0.0051180931329338,
+        "market_component": -0.005353696610066431,
         "momentum_component": 0.0,
-        "volatility_drag": -0.001910369308150728,
-        "alpha_component": 0.010278060948559858
+        "volatility_drag": -0.002031102067086388,
+        "alpha_component": 0.007574585855363608
       },
       "component_weights_pct": {
-        "market_component": 29.57,
+        "market_component": 35.79,
         "momentum_component": 0.0,
-        "volatility_drag": 11.04,
-        "alpha_component": 59.39
+        "volatility_drag": 13.58,
+        "alpha_component": 50.63
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 183.68125076293944,
-      "sma50": 179.91087768554686,
-      "sma200": 178.1400690460205,
-      "ema20": 180.7465047551755,
-      "ema50": 180.19476022116598,
-      "ema200": 181.23960874836263
+      "sma20": 183.6297508239746,
+      "sma50": 179.89027770996094,
+      "sma200": 178.1349195098877,
+      "ema20": 180.64840964461735,
+      "ema50": 180.15436828708994,
+      "ema200": 181.22929821148685
     },
     "momentum": {
-      "3m": 0.03475000869675693,
-      "6m": 0.012964800254080311,
-      "12m": -0.21259704750505892,
+      "3m": 0.028471415201410277,
+      "6m": 0.006818302052392644,
+      "12m": -0.2173748034984878,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 3218480.8,
-      "relative_volume": 0.5069211536076276,
+      "average_volume": 3263227.4,
+      "relative_volume": 0.7738804840876244,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -443,5 +442,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMT\nRating: Drop | Score: 41.2/100 | Confidence: 33.98/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 168.9199981689453 | Resistance: 194.1199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 24.438225\nNews/Catalyst: Is it Wise to Retain American Tower Stock in Your Portfolio Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMT\nRating: Drop | Score: 38.7/100 | Confidence: 31.89/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 168.72000122070312 | Resistance: 194.1199951171875\nFundamental Outlook: Fundamentally Average | Forward P/E: 24.438225\nNews/Catalyst: Is it Wise to Retain American Tower Stock in Your Portfolio Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

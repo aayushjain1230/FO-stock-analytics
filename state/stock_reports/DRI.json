@@ -1,15 +1,15 @@
 {
   "ticker": "DRI",
-  "generated_at": "2026-06-25T18:07:28.153703",
+  "generated_at": "2026-06-25T20:32:07.703609",
   "score": {
-    "final_score": 54.3,
+    "final_score": 61.8,
     "rating": "Hold",
-    "confidence": 38.59,
+    "confidence": 54.25,
     "risk_level": "Controlled",
     "categories": {
       "technical": 83.0,
       "momentum": 40.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 42.0,
       "risk": 100,
       "catalyst": 45.0
@@ -27,17 +27,17 @@
       ],
       "support": 190.6300048828125,
       "resistance": 213.4499969482422,
-      "risk_reward": 0.13
+      "risk_reward": 0.03
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": 0.034636694770995735,
-        "3m": 0.05382110681934038,
-        "6m": 0.1312453401535465,
-        "12m": -0.015785096011764255
+        "1m": 0.04381098265986827,
+        "3m": 0.0631655059366274,
+        "6m": 0.14127627224397576,
+        "12m": -0.007057976859047854
       },
-      "acceleration": -0.0118,
+      "acceleration": -0.0075,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,12 +45,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1298051.85,
-      "relative_volume": 1.4710791406367933,
+      "score": 50.0,
+      "average_volume": 1346674.8,
+      "relative_volume": 2.139266287599649,
       "accumulation_days": 7,
       "distribution_days": 7,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.14x",
+        "High-volume breakout behavior"
+      ]
     },
     "fundamental": {
       "score": 42.0,
@@ -62,17 +65,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017645187335188918,
-        "annualized_volatility": 0.28010866515633837,
-        "maximum_drawdown": -0.23919580818733477,
-        "sharpe_ratio": 0.8277965554890097,
-        "sortino_ratio": 1.4290622057859936,
-        "calmar_ratio": 0.8911585256194293,
-        "beta": 0.5560437178243052,
-        "alpha": 0.13455529009363343,
-        "capm_expected_return": 0.09731769808540783,
-        "actual_return": 0.23187298817904126,
-        "market_return": 0.17501806956149732
+        "volatility": 0.017651406818506143,
+        "annualized_volatility": 0.2802073963931825,
+        "maximum_drawdown": -0.23919580818733432,
+        "sharpe_ratio": 0.8561969016635852,
+        "sortino_ratio": 1.4745870128760328,
+        "calmar_ratio": 0.9319281472618892,
+        "beta": 0.5557190829131363,
+        "alpha": 0.14214993731157943,
+        "capm_expected_return": 0.09776276730348345,
+        "actual_return": 0.2399127046150629,
+        "market_return": 0.17592119887444033
       },
       "evidence": []
     },
@@ -138,14 +141,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 72.97653050551537,
+    "rsi": 76.76093885143541,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.4710791406367933,
+    "relative_volume": 2.139266287599649,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 190.6300048828125,
     "resistance": 213.4499969482422
   },
@@ -197,7 +200,7 @@
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 3,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.99587,
     "detail": {
       "earnings": {
@@ -238,7 +241,7 @@
         "last_surprise_pct": 0.0064,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.68,
+      "analyst_upside_pct": 6.73,
       "eps_growth_implied": 31.86
     },
     "evidence": [
@@ -266,50 +269,50 @@
     "available": true,
     "items": [
       {
+        "headline": "Sector Update: Consumer Stocks Decline Late Afternoon",
+        "source": "MT Newswires",
+        "published": "2026-06-25T19:46:50Z",
+        "summary": "Consumer stocks were lower late Thursday afternoon, with the State Street Consumer Staples Select Se",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Update: Equity Markets Mixed Intraday as Apple Falls, Micron Rallies",
+        "source": "MT Newswires",
+        "published": "2026-06-25T18:03:17Z",
+        "summary": "(Updates with latest market prices and developments.) US benchmark equity indexes were mixed intr",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Darden Posts Weak Outlook as Olive Garden Sales Disappoint",
+        "source": "Bloomberg",
+        "published": "2026-06-25T17:35:09Z",
+        "summary": "Darden Restaurants Inc.&nbsp;posted a cautious overall profit outlook as same-store sales at Olive Garden trailed expectations, raising questions about demand that overshadowed better-than-expected earnings. Michael Halen, Bloomberg Intelligence Senior Restaurant and Foodservice Analyst, breaks down the earnings and gives his outlook for the broader food service industry.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Surging LongHorn Steakhouse powers growth for Darden",
+        "source": "Nation's Restaurant News",
+        "published": "2026-06-25T17:06:43Z",
+        "summary": "Same-store sales at the steakhouse chain jumped by 9.5% last quarter, thanks in part to demand for lamb.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Darden Restaurants posts mixed fourth quarter results as revenue falls short of estimates",
         "source": "Proactive",
         "published": "2026-06-25T15:41:00Z",
         "summary": "Darden Restaurants Inc (NYSE:DRI) reported mixed fiscal fourth quarter results on Thursday, with adjusted earnings slightly exceeding Wall Street expectations while revenue came in just below analyst estimates. For the quarter ended May 31, 2026, Darden reported adjusted earnings per share...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Darden Q4 Earnings Beat Estimates, Revenues Miss, Both Rise Y/Y",
-        "source": "Zacks",
-        "published": "2026-06-25T14:50:00Z",
-        "summary": "DRI reports fourth-quarter fiscal 2026 results with EPS above estimates and sales up 13.7% YoY, supported by same-restaurant sales growth despite a revenue miss.",
-        "bullish_score": 2,
-        "bearish_score": 1,
-        "importance_score": 75,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Darden Restaurants (DRI) Reports Q4 Earnings: What Key Metrics Have to Say",
-        "source": "Zacks",
-        "published": "2026-06-25T13:30:04Z",
-        "summary": "Although the revenue and EPS for Darden Restaurants (DRI) give a sense of how its business performed in the quarter ended May 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Darden Issues Weak Full-Year Earnings Outlook as Fourth-Quarter Sales Miss Views",
-        "source": "MT Newswires",
-        "published": "2026-06-25T13:26:35Z",
-        "summary": "Darden Restaurants (DRI) issued a full-year earnings outlook below market estimates on Thursday, whi",
-        "bullish_score": 0,
-        "bearish_score": 2,
-        "importance_score": 60,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Darden Restaurants Q4 fiscal 2026 earnings results",
-        "source": "Quartz",
-        "published": "2026-06-25T12:31:20Z",
-        "summary": "Olive Garden same-store sales grew 2.4% in the quarter, while LongHorn Steakhouse surged 9.5% and the company's 2027 outlook came in soft",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -333,19 +336,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6899,
-    "probability_pct": 68.99,
+    "probability_of_outperformance": 0.7439,
+    "probability_pct": 74.39,
     "confidence": "High",
     "evidence": [
-      "Composite score 54.3/100"
+      "Volume surge above 1.5x",
+      "Composite score 61.8/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 54.3,
+    "final_score": 61.8,
     "technical_score": 83.0,
     "momentum_score": 40.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 42.0,
     "risk_score": 100,
     "catalyst_score": 45.0,
@@ -353,7 +357,7 @@
     "eps_growth": -0.033,
     "roe": 0.51539004,
     "forward_pe": 17.086123,
-    "relative_volume": 1.4710791406367933,
+    "relative_volume": 2.139266287599649,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -363,82 +367,89 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.011993429820542523,
-      "weekly": -0.0020820633019158485,
-      "monthly": 0.034636694770995735,
-      "annual": -0.015785096011764255
+      "daily": -0.0032326186520094113,
+      "weekly": 0.006766633527616417,
+      "monthly": 0.04381098265986827,
+      "annual": -0.007057976859047854
     },
     "risk": {
-      "volatility": 0.017645187335188918,
-      "annualized_volatility": 0.28010866515633837,
-      "maximum_drawdown": -0.23919580818733477,
-      "sharpe_ratio": 0.8277965554890097,
-      "sortino_ratio": 1.4290622057859936,
-      "calmar_ratio": 0.8911585256194293,
-      "beta": 0.5560437178243052,
-      "alpha": 0.13455529009363343,
-      "capm_expected_return": 0.09731769808540783,
-      "actual_return": 0.23187298817904126,
-      "market_return": 0.17501806956149732
+      "volatility": 0.017651406818506143,
+      "annualized_volatility": 0.2802073963931825,
+      "maximum_drawdown": -0.23919580818733432,
+      "sharpe_ratio": 0.8561969016635852,
+      "sortino_ratio": 1.4745870128760328,
+      "calmar_ratio": 0.9319281472618892,
+      "beta": 0.5557190829131363,
+      "alpha": 0.14214993731157943,
+      "capm_expected_return": 0.09776276730348345,
+      "actual_return": 0.2399127046150629,
+      "market_return": 0.17592119887444033
     },
     "capm": {
-      "beta": 0.5560437178243052,
-      "alpha": 0.13455529009363343,
-      "capm_expected_return": 0.09731769808540783,
-      "actual_return": 0.23187298817904126,
-      "market_return": 0.17501806956149732,
-      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 9.73%; realized alpha is 13.46%, meaning positive alpha versus CAPM."
+      "beta": 0.5557190829131363,
+      "alpha": 0.14214993731157943,
+      "capm_expected_return": 0.09776276730348345,
+      "actual_return": 0.2399127046150629,
+      "market_return": 0.17592119887444033,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 9.78%; realized alpha is 14.21%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.23187298817904126,
+      "actual_return": 0.2399127046150629,
       "components": {
-        "market_component": 0.09731769808540783,
+        "market_component": 0.09776276730348345,
         "momentum_component": 0.0,
-        "volatility_drag": -0.006021733031267674,
-        "alpha_component": 0.13455529009363343
+        "volatility_drag": -0.006041479278636497,
+        "alpha_component": 0.14214993731157943
       },
       "component_weights_pct": {
-        "market_component": 40.91,
+        "market_component": 39.75,
         "momentum_component": 0.0,
-        "volatility_drag": 2.53,
-        "alpha_component": 56.56
+        "volatility_drag": 2.46,
+        "alpha_component": 57.8
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 205.53950042724608,
-      "sma50": 200.87919921875,
-      "sma200": 194.03578720092773,
-      "ema20": 206.86853577571074,
-      "ema50": 202.79434286263515,
-      "ema200": 196.89246779557226
+      "sma20": 205.63300018310548,
+      "sma50": 200.91659912109375,
+      "sma200": 194.04513710021973,
+      "ema20": 207.04663054877616,
+      "ema50": 202.86767600219335,
+      "ema200": 196.90506679026788
     },
     "momentum": {
-      "3m": 0.05382110681934038,
-      "6m": 0.1312453401535465,
-      "12m": -0.015785096011764255,
+      "3m": 0.0631655059366274,
+      "6m": 0.14127627224397576,
+      "12m": -0.007057976859047854,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1298051.85,
-      "relative_volume": 1.4710791406367933,
-      "volume_spike": false
+      "average_volume": 1346674.8,
+      "relative_volume": 2.139266287599649,
+      "volume_spike": true
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
-      "score": 63,
+      "score": 73,
       "label": "Watch closely"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.14x",
     "date_of_change": "2026-06-25",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.14x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: DRI\nRating: Hold | Score: 54.3/100 | Confidence: 38.59/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 17.086123\nNews/Catalyst: Darden Restaurants posts mixed fourth quarter results as revenue falls short of estimates\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DRI\nRating: Hold | Score: 61.8/100 | Confidence: 54.25/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 190.6300048828125 | Resistance: 213.4499969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 17.086123\nNews/Catalyst: Sector Update: Consumer Stocks Decline Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.14x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }
