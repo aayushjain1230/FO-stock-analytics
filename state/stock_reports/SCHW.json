@@ -1,13 +1,13 @@
 {
   "ticker": "SCHW",
-  "generated_at": "2026-06-25T15:41:10.255589",
+  "generated_at": "2026-06-25T18:07:35.740785",
   "score": {
-    "final_score": 58.15,
+    "final_score": 56.15,
     "rating": "Hold",
-    "confidence": 55.08,
+    "confidence": 53.59,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 53.0,
+      "technical": 45.0,
       "momentum": 40.0,
       "volume": 25.0,
       "fundamental": 86.0,
@@ -15,27 +15,26 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 45.0,
       "evidence": [
-        "Price above SMA20",
-        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 85.3499984741211,
       "resistance": 100.2699966430664,
-      "risk_reward": 1.37
+      "risk_reward": 2.45
     },
     "momentum": {
       "score": 40.0,
       "returns": {
-        "1m": 0.02500000640049871,
-        "3m": -0.03185793856575836,
-        "6m": -0.09008613087723616,
-        "12m": 0.03893188848463636
+        "1m": 0.0030760796553153114,
+        "3m": -0.05256571954261213,
+        "6m": -0.10954845759577791,
+        "12m": 0.01671005791862812
       },
-      "acceleration": 0.0132,
+      "acceleration": 0.0022,
       "evidence": [
         "1m return is positive",
         "12m return is positive",
@@ -44,8 +43,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 12443900.95,
-      "relative_volume": 0.15273498299582658,
+      "average_volume": 12615997.65,
+      "relative_volume": 0.4234744764715456,
       "accumulation_days": 4,
       "distribution_days": 3,
       "evidence": [
@@ -63,17 +62,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01705518336006303,
-        "annualized_volatility": 0.2707426424120025,
-        "maximum_drawdown": -0.19834421854864792,
-        "sharpe_ratio": 0.5852717872634496,
-        "sortino_ratio": 0.7127125735477904,
-        "calmar_ratio": 0.6515847318066735,
-        "beta": 0.7271752354576625,
-        "alpha": 0.030316186458338973,
-        "capm_expected_return": 0.12814184375456278,
-        "actual_return": 0.15845803021290175,
-        "market_return": 0.17621865749307883
+        "volatility": 0.0170769218901936,
+        "annualized_volatility": 0.27108773087956395,
+        "maximum_drawdown": -0.1983442185486468,
+        "sharpe_ratio": 0.5447336003685429,
+        "sortino_ratio": 0.6653720350941601,
+        "calmar_ratio": 0.5900035163091667,
+        "beta": 0.7276637675491955,
+        "alpha": 0.020316287771457192,
+        "capm_expected_return": 0.1273543078863063,
+        "actual_return": 0.1476705956577635,
+        "market_return": 0.17501806956149732
       },
       "evidence": []
     },
@@ -86,7 +85,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; 12m return is positive"
   },
   "fundamentals": {
     "ticker": "SCHW",
@@ -136,15 +135,16 @@
     "next_earnings_date": "1784637000",
     "eps_current_year": 5.03,
     "eps_forward": 7.25793,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 61.52140026822579,
+    "rsi": 54.85649036249478,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.15273498299582658,
-    "price_above_sma50": true,
+    "relative_volume": 0.4234744764715456,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 85.3499984741211,
@@ -239,7 +239,7 @@
         "last_surprise_pct": 0.0248,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 26.93,
+      "analyst_upside_pct": 29.52,
       "eps_growth_implied": 44.29
     },
     "evidence": [
@@ -335,20 +335,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8186,
-    "probability_pct": 81.86,
+    "probability_of_outperformance": 0.8135,
+    "probability_pct": 81.35,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 58.15/100"
+      "Composite score 56.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 58.15,
-    "technical_score": 53.0,
+    "final_score": 56.15,
+    "technical_score": 45.0,
     "momentum_score": 40.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
@@ -358,9 +358,9 @@
     "eps_growth": 0.386,
     "roe": 0.19083,
     "forward_pe": 12.608279,
-    "relative_volume": 0.15273498299582658,
+    "relative_volume": 0.4234744764715456,
     "breakout": false,
-    "price_above_sma50": true,
+    "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
@@ -368,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0026808485416160988,
-      "weekly": -0.030420060681575878,
-      "monthly": 0.02500000640049871,
-      "annual": 0.03893188848463636
+      "daily": -0.018765689346146086,
+      "weekly": -0.051158596711312065,
+      "monthly": 0.0030760796553153114,
+      "annual": 0.01671005791862812
     },
     "risk": {
-      "volatility": 0.01705518336006303,
-      "annualized_volatility": 0.2707426424120025,
-      "maximum_drawdown": -0.19834421854864792,
-      "sharpe_ratio": 0.5852717872634496,
-      "sortino_ratio": 0.7127125735477904,
-      "calmar_ratio": 0.6515847318066735,
-      "beta": 0.7271752354576625,
-      "alpha": 0.030316186458338973,
-      "capm_expected_return": 0.12814184375456278,
-      "actual_return": 0.15845803021290175,
-      "market_return": 0.17621865749307883
+      "volatility": 0.0170769218901936,
+      "annualized_volatility": 0.27108773087956395,
+      "maximum_drawdown": -0.1983442185486468,
+      "sharpe_ratio": 0.5447336003685429,
+      "sortino_ratio": 0.6653720350941601,
+      "calmar_ratio": 0.5900035163091667,
+      "beta": 0.7276637675491955,
+      "alpha": 0.020316287771457192,
+      "capm_expected_return": 0.1273543078863063,
+      "actual_return": 0.1476705956577635,
+      "market_return": 0.17501806956149732
     },
     "capm": {
-      "beta": 0.7271752354576625,
-      "alpha": 0.030316186458338973,
-      "capm_expected_return": 0.12814184375456278,
-      "actual_return": 0.15845803021290175,
-      "market_return": 0.17621865749307883,
-      "interpretation": "Beta 0.73: Moves roughly 27% less than the market. CAPM expected return is 12.81%; realized alpha is 3.03%, meaning positive alpha versus CAPM."
+      "beta": 0.7276637675491955,
+      "alpha": 0.020316287771457192,
+      "capm_expected_return": 0.1273543078863063,
+      "actual_return": 0.1476705956577635,
+      "market_return": 0.17501806956149732,
+      "interpretation": "Beta 0.73: Moves roughly 27% less than the market. CAPM expected return is 12.74%; realized alpha is 2.03%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.15845803021290175,
+      "actual_return": 0.1476705956577635,
       "components": {
-        "market_component": 0.12814184375456278,
-        "momentum_component": 0.00973297212115909,
-        "volatility_drag": -0.004148528482400504,
-        "alpha_component": 0.030316186458338973
+        "market_component": 0.1273543078863063,
+        "momentum_component": 0.00417751447965703,
+        "volatility_drag": -0.0042175461759127895,
+        "alpha_component": 0.020316287771457192
       },
       "component_weights_pct": {
-        "market_component": 74.35,
-        "momentum_component": 5.65,
-        "volatility_drag": 2.41,
-        "alpha_component": 17.59
+        "market_component": 81.6,
+        "momentum_component": 2.68,
+        "volatility_drag": 2.7,
+        "alpha_component": 13.02
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 89.87274856567383,
-      "sma50": 90.41488311767579,
-      "sma200": 94.15661716461182,
-      "ema20": 90.85685302515218,
-      "ema50": 91.03724310504607,
-      "ema200": 92.09592560252682
+      "sma20": 89.77474861145019,
+      "sma50": 90.37568313598632,
+      "sma200": 94.14681728363037,
+      "ema20": 90.67018644580301,
+      "ema50": 90.96038041238559,
+      "ema200": 92.07642311774164
     },
     "momentum": {
-      "3m": -0.03185793856575836,
-      "6m": -0.09008613087723616,
-      "12m": 0.03893188848463636,
+      "3m": -0.05256571954261213,
+      "6m": -0.10954845759577791,
+      "12m": 0.01671005791862812,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 12443900.95,
-      "relative_volume": 0.15273498299582658,
+      "average_volume": 12615997.65,
+      "relative_volume": 0.4234744764715456,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -445,5 +445,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: SCHW\nRating: Hold | Score: 58.15/100 | Confidence: 55.08/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.608279\nNews/Catalyst: Wall Street Analysts Believe Charles Schwab (SCHW) Could Rally 25.89%: Here's is How to Trade\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: SCHW\nRating: Hold | Score: 56.15/100 | Confidence: 53.59/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.608279\nNews/Catalyst: Wall Street Analysts Believe Charles Schwab (SCHW) Could Rally 25.89%: Here's is How to Trade\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

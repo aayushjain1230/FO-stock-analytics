@@ -1,23 +1,22 @@
 {
   "ticker": "KO",
-  "generated_at": "2026-06-25T15:41:07.198437",
+  "generated_at": "2026-06-25T18:07:33.316866",
   "score": {
-    "final_score": 64.15,
+    "final_score": 62.65,
     "rating": "Hold",
-    "confidence": 51.05,
+    "confidence": 51.36,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 72.0,
       "momentum": 60.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 85.0,
-      "catalyst": 70.0
+      "catalyst": 80.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 72.0,
       "evidence": [
-        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -27,17 +26,17 @@
       ],
       "support": 74.62999725341797,
       "resistance": 83.58999633789062,
-      "risk_reward": 0.58
+      "risk_reward": 0.64
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.004392368644796196,
-        "3m": 0.07393230765588665,
-        "6m": 0.15893850199276716,
-        "12m": 0.17602928288248254
+        "1m": 0.0017030270171947137,
+        "3m": 0.07105676722928833,
+        "6m": 0.1558353506203165,
+        "12m": 0.17288036956486996
       },
-      "acceleration": -0.0055,
+      "acceleration": -0.0069,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 18892074.1,
-      "relative_volume": 0.2549578185277179,
+      "average_volume": 19032254.2,
+      "relative_volume": 0.40038788468892983,
       "accumulation_days": 6,
       "distribution_days": 7,
       "evidence": []
@@ -64,32 +63,33 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.010625930919072,
-        "annualized_volatility": 0.16868142396249908,
-        "maximum_drawdown": -0.1550296291880482,
-        "sharpe_ratio": 0.9372354398023253,
-        "sortino_ratio": 1.6208739801379815,
-        "calmar_ratio": 0.9982911782216284,
-        "beta": -0.018687019277522296,
-        "alpha": 0.16138721002360756,
-        "capm_expected_return": -0.0032930014496322627,
-        "actual_return": 0.1580942085739753,
-        "market_return": 0.17621865749307883
+        "volatility": 0.01062881288728233,
+        "annualized_volatility": 0.16872717378952468,
+        "maximum_drawdown": -0.15502973978805223,
+        "sharpe_ratio": 0.9290291577534043,
+        "sortino_ratio": 1.6082630371842053,
+        "calmar_ratio": 0.98825162974398,
+        "beta": -0.018428205774292942,
+        "alpha": 0.15997773315589314,
+        "capm_expected_return": -0.003225269000098789,
+        "actual_return": 0.15675246415579436,
+        "market_return": 0.17501806956149732
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 70.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
         "sector strength",
-        "major news"
+        "major news",
+        "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "KO",
@@ -139,14 +139,15 @@
     "next_earnings_date": "1777379400",
     "eps_current_year": 3.18,
     "eps_forward": 3.48348,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 63.71890336723439,
+    "rsi": 62.65529049458982,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2549578185277179,
+    "relative_volume": 0.40038788468892983,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -199,8 +200,8 @@
     "insider_buying": true,
     "sector_strength": true,
     "major_news": true,
-    "guidance_change": false,
-    "bullish_news_score": 1,
+    "guidance_change": true,
+    "bullish_news_score": 3,
     "bearish_news_score": 1,
     "institutional_ownership": 0.68276,
     "detail": {
@@ -242,14 +243,15 @@
         "last_surprise_pct": 0.0588,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.08,
+      "analyst_upside_pct": 7.37,
       "eps_growth_implied": 9.54
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance"
+      "recent news item has elevated importance",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -270,6 +272,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Coke, IRS Clash in Appeals Court Over $20 Billion Tax Fight",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-25T16:26:08Z",
+        "summary": "Coca-Cola asked a federal appeals court Thursday to overturn a U.S. Tax Court decision that put the company on the hook for more than $20 billion in taxes and interest, contending that the Internal Revenue Service engaged in an unfair and retroactive bait-and-switch in how it calculated Coke\u2019s foreign profits.  The IRS challenged Coke\u2019s tax returns for 2007 through 2009, and the outcome of the case will affect the company\u2019s payments for every year since then.  Gregory Garre, arguing for the company before a three-judge panel in Miami, pointed to a 1996 Coke-IRS agreement and subsequent IRS statements that accepted the company\u2019s method for calculating how much profit was assigned to the U.S. and how much was attributed to lower-taxed foreign countries.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "The Dividend Growth Path That Turns A $50,000 Income Stream Into More Than $100,000",
+        "source": "24/7 Wall St.",
+        "published": "2026-06-25T15:53:54Z",
+        "summary": "Turning a $50,000 income stream into a $100,000 income stream sounds like it should require another million dollars, a lucky stock pick, or a second career. Sometimes it requires none of those things. The secret is that retirement income is not a snapshot. It is a moving target. A portfolio that pays $50,000 today and ... The Dividend Growth Path That Turns A $50,000 Income Stream Into More Than $100,000",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "2 Wide-Moat Dividend Stocks to Buy and Hold Forever",
         "source": "Motley Fool",
@@ -299,26 +321,6 @@
         "bearish_score": 1,
         "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Retirement Portfolio for Grandparents Who Want to Say Yes",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-24T17:22:25Z",
-        "summary": "A Utah couple with two children and four grandchildren nearby has a retirement goal that has nothing to do with yachts or sports cars. They want to be the grandparents who can say \u201cyes.\u201d Yes to helping with travel hockey. Yes to a week at the lake. Yes to Disney. Yes to contributing toward a ... The Retirement Portfolio for Grandparents Who Want to Say Yes",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The Dividend Portfolio That Starts Like A Honda And Ends Like A Ferrari",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-24T15:38:51Z",
-        "summary": "Most retirees shop for dividend portfolios the same way people shop for cars: they focus on what they get today. A portfolio yielding $90,000 a year feels like the retirement equivalent of driving a Ferrari off the lot. Another portfolio paying only $45,000 can look more like a dependable Honda. The mistake is assuming the race ... The Dividend Portfolio That Starts Like A Honda And Ends Like A Ferrari",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -338,29 +340,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8339,
-    "probability_pct": 83.39,
+    "probability_of_outperformance": 0.8269,
+    "probability_pct": 82.69,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 64.15/100"
+      "Composite score 62.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 64.15,
-    "technical_score": 80.0,
+    "final_score": 62.65,
+    "technical_score": 72.0,
     "momentum_score": 60.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
-    "catalyst_score": 70.0,
+    "catalyst_score": 80.0,
     "revenue_growth": 0.121,
     "eps_growth": 0.182,
     "roe": 0.43372002,
     "forward_pe": 23.04879,
-    "relative_volume": 0.2549578185277179,
+    "relative_volume": 0.40038788468892983,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +372,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.003784122964638925,
-      "weekly": 0.004566468940021995,
-      "monthly": 0.004392368644796196,
-      "annual": 0.17602928288248254
+      "daily": -0.0064515713760635585,
+      "weekly": 0.0018766611448290949,
+      "monthly": 0.0017030270171947137,
+      "annual": 0.17288036956486996
     },
     "risk": {
-      "volatility": 0.010625930919072,
-      "annualized_volatility": 0.16868142396249908,
-      "maximum_drawdown": -0.1550296291880482,
-      "sharpe_ratio": 0.9372354398023253,
-      "sortino_ratio": 1.6208739801379815,
-      "calmar_ratio": 0.9982911782216284,
-      "beta": -0.018687019277522296,
-      "alpha": 0.16138721002360756,
-      "capm_expected_return": -0.0032930014496322627,
-      "actual_return": 0.1580942085739753,
-      "market_return": 0.17621865749307883
+      "volatility": 0.01062881288728233,
+      "annualized_volatility": 0.16872717378952468,
+      "maximum_drawdown": -0.15502973978805223,
+      "sharpe_ratio": 0.9290291577534043,
+      "sortino_ratio": 1.6082630371842053,
+      "calmar_ratio": 0.98825162974398,
+      "beta": -0.018428205774292942,
+      "alpha": 0.15997773315589314,
+      "capm_expected_return": -0.003225269000098789,
+      "actual_return": 0.15675246415579436,
+      "market_return": 0.17501806956149732
     },
     "capm": {
-      "beta": -0.018687019277522296,
-      "alpha": 0.16138721002360756,
-      "capm_expected_return": -0.0032930014496322627,
-      "actual_return": 0.1580942085739753,
-      "market_return": 0.17621865749307883,
-      "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.33%; realized alpha is 16.14%, meaning positive alpha versus CAPM."
+      "beta": -0.018428205774292942,
+      "alpha": 0.15997773315589314,
+      "capm_expected_return": -0.003225269000098789,
+      "actual_return": 0.15675246415579436,
+      "market_return": 0.17501806956149732,
+      "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.32%; realized alpha is 16.00%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.1580942085739753,
+      "actual_return": 0.15675246415579436,
       "components": {
-        "market_component": -0.0032930014496322627,
-        "momentum_component": 0.044007320720620635,
+        "market_component": -0.003225269000098789,
+        "momentum_component": 0.04322009239121749,
         "volatility_drag": -0.0,
-        "alpha_component": 0.16138721002360756
+        "alpha_component": 0.15997773315589314
       },
       "component_weights_pct": {
-        "market_component": 1.58,
-        "momentum_component": 21.09,
+        "market_component": 1.56,
+        "momentum_component": 20.94,
         "volatility_drag": 0.0,
-        "alpha_component": 77.33
+        "alpha_component": 77.5
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 79.81146659851075,
-      "sma50": 78.74867614746094,
-      "sma200": 73.03420223236084,
-      "ema20": 80.03307269675344,
-      "ema50": 78.98471143932697,
-      "ema200": 74.3849901054447
+      "sma20": 79.80071678161622,
+      "sma50": 78.74437622070313,
+      "sma200": 73.0331275177002,
+      "ema20": 80.01259685505035,
+      "ema50": 78.97628021373468,
+      "ema200": 74.38285099200988
     },
     "momentum": {
-      "3m": 0.07393230765588665,
-      "6m": 0.15893850199276716,
-      "12m": 0.17602928288248254,
+      "3m": 0.07105676722928833,
+      "6m": 0.1558353506203165,
+      "12m": 0.17288036956486996,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 18892074.1,
-      "relative_volume": 0.2549578185277179,
+      "average_volume": 19032254.2,
+      "relative_volume": 0.40038788468892983,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -447,5 +449,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: KO\nRating: Hold | Score: 64.15/100 | Confidence: 51.05/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.04879\nNews/Catalyst: 2 Wide-Moat Dividend Stocks to Buy and Hold Forever\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: KO\nRating: Hold | Score: 62.65/100 | Confidence: 51.36/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.04879\nNews/Catalyst: Coke, IRS Clash in Appeals Court Over $20 Billion Tax Fight\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

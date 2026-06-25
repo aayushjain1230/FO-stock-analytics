@@ -1,13 +1,13 @@
 {
   "ticker": "BSX",
-  "generated_at": "2026-06-25T15:40:26.205290",
+  "generated_at": "2026-06-25T18:06:59.161400",
   "score": {
-    "final_score": 31.15,
-    "rating": "Drop",
-    "confidence": 19.32,
+    "final_score": 28.65,
+    "rating": "Avoid",
+    "confidence": 17.5,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 30.0,
+      "technical": 20.0,
       "momentum": 0,
       "volume": 0,
       "fundamental": 81.0,
@@ -15,31 +15,30 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 20.0,
       "evidence": [
         "MACD is above signal",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
-      "support": 44.33000183105469,
+      "support": 44.27000045776367,
       "resistance": 70.16999816894531,
-      "risk_reward": 142.56
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.22779322011015235,
-        "3m": -0.36213816136180654,
-        "6m": -0.5384216718793874,
-        "12m": -0.5725125129907438
+        "1m": -0.2319569582487866,
+        "3m": -0.36557751171961617,
+        "6m": -0.540910501735345,
+        "12m": -0.5748175250675651
       },
-      "acceleration": -0.0929,
+      "acceleration": -0.0951,
       "evidence": []
     },
     "volume": {
       "score": 0,
-      "average_volume": 21689313.6,
-      "relative_volume": 0.25447425869668827,
+      "average_volume": 21894829.95,
+      "relative_volume": 0.4398161128444846,
       "accumulation_days": 2,
       "distribution_days": 4,
       "evidence": []
@@ -55,17 +54,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.018735863721705326,
-        "annualized_volatility": 0.29742261603377623,
-        "maximum_drawdown": -0.5900684105672547,
-        "sharpe_ratio": -0.7839263218497633,
-        "sortino_ratio": -0.8176946359303032,
-        "calmar_ratio": -0.41260578811131243,
-        "beta": 0.5763275856007117,
-        "alpha": -0.3347170908330775,
-        "capm_expected_return": 0.1015596734107849,
-        "actual_return": -0.2331574174222926,
-        "market_return": 0.17621865749307883
+        "volatility": 0.01873623470903151,
+        "annualized_volatility": 0.2974285052750041,
+        "maximum_drawdown": -0.5906232595928667,
+        "sharpe_ratio": -0.7930396934573422,
+        "sortino_ratio": -0.8285263330657018,
+        "calmar_ratio": -0.4156968487441194,
+        "beta": 0.5763734424713393,
+        "alpha": -0.3367483778966132,
+        "capm_expected_return": 0.10087576724784852,
+        "actual_return": -0.2358726106487647,
+        "market_return": 0.17501806956149732
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -80,7 +79,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; revenue growth is strong; eps growth is strong; earnings surprise"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision"
   },
   "fundamentals": {
     "ticker": "BSX",
@@ -130,18 +129,19 @@
     "next_earnings_date": "1785328200",
     "eps_current_year": 2.39,
     "eps_forward": 3.72022,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 25.34088470716752,
+    "rsi": 24.384772771397436,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.25447425869668827,
+    "relative_volume": 0.4398161128444846,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
-    "support": 44.33000183105469,
+    "support": 44.27000045776367,
     "resistance": 70.16999816894531
   },
   "earnings": {
@@ -233,7 +233,7 @@
         "last_surprise_pct": 0.0162,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 68.6,
+      "analyst_upside_pct": 69.4,
       "eps_growth_implied": 55.66
     },
     "evidence": [
@@ -335,13 +335,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 31.15/100"
+      "Composite score 28.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 31.15,
-    "technical_score": 30.0,
+    "final_score": 28.65,
+    "technical_score": 20.0,
     "momentum_score": 0,
     "volume_score": 0,
     "fundamental_score": 81.0,
@@ -351,7 +351,7 @@
     "eps_growth": 1.0,
     "roe": 0.14661,
     "forward_pe": 11.957626,
-    "relative_volume": 0.25447425869668827,
+    "relative_volume": 0.4398161128444846,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -361,66 +361,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0011245892507902866,
-      "weekly": -0.009788708207743246,
-      "monthly": -0.22779322011015235,
-      "annual": -0.5725125129907438
+      "daily": -0.004273473473267342,
+      "weekly": -0.015127926443472495,
+      "monthly": -0.2319569582487866,
+      "annual": -0.5748175250675651
     },
     "risk": {
-      "volatility": 0.018735863721705326,
-      "annualized_volatility": 0.29742261603377623,
-      "maximum_drawdown": -0.5900684105672547,
-      "sharpe_ratio": -0.7839263218497633,
-      "sortino_ratio": -0.8176946359303032,
-      "calmar_ratio": -0.41260578811131243,
-      "beta": 0.5763275856007117,
-      "alpha": -0.3347170908330775,
-      "capm_expected_return": 0.1015596734107849,
-      "actual_return": -0.2331574174222926,
-      "market_return": 0.17621865749307883
+      "volatility": 0.01873623470903151,
+      "annualized_volatility": 0.2974285052750041,
+      "maximum_drawdown": -0.5906232595928667,
+      "sharpe_ratio": -0.7930396934573422,
+      "sortino_ratio": -0.8285263330657018,
+      "calmar_ratio": -0.4156968487441194,
+      "beta": 0.5763734424713393,
+      "alpha": -0.3367483778966132,
+      "capm_expected_return": 0.10087576724784852,
+      "actual_return": -0.2358726106487647,
+      "market_return": 0.17501806956149732
     },
     "capm": {
-      "beta": 0.5763275856007117,
-      "alpha": -0.3347170908330775,
-      "capm_expected_return": 0.1015596734107849,
-      "actual_return": -0.2331574174222926,
-      "market_return": 0.17621865749307883,
-      "interpretation": "Beta 0.58: Moves roughly 42% less than the market. CAPM expected return is 10.16%; realized alpha is -33.47%, meaning negative alpha versus CAPM."
+      "beta": 0.5763734424713393,
+      "alpha": -0.3367483778966132,
+      "capm_expected_return": 0.10087576724784852,
+      "actual_return": -0.2358726106487647,
+      "market_return": 0.17501806956149732,
+      "interpretation": "Beta 0.58: Moves roughly 42% less than the market. CAPM expected return is 10.09%; realized alpha is -33.67%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.2331574174222926,
+      "actual_return": -0.2358726106487647,
       "components": {
-        "market_component": 0.1015596734107849,
+        "market_component": 0.10087576724784852,
         "momentum_component": 0.0,
-        "volatility_drag": -0.009484523206755247,
-        "alpha_component": -0.3347170908330775
+        "volatility_drag": -0.009485701055000817,
+        "alpha_component": -0.3367483778966132
       },
       "component_weights_pct": {
-        "market_component": 22.78,
+        "market_component": 22.56,
         "momentum_component": 0.0,
-        "volatility_drag": 2.13,
-        "alpha_component": 75.09
+        "volatility_drag": 2.12,
+        "alpha_component": 75.32
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 47.05349960327148,
-      "sma50": 53.492999954223635,
-      "sma200": 79.94270002365113,
-      "ema20": 47.612464057495714,
-      "ema50": 53.30989167657983,
-      "ema200": 73.51512410375291
+      "sma20": 47.04149971008301,
+      "sma50": 53.48819999694824,
+      "sma200": 79.94150003433228,
+      "ema20": 47.58960711808909,
+      "ema50": 53.3004799956477,
+      "ema200": 73.51273606530745
     },
     "momentum": {
-      "3m": -0.36213816136180654,
-      "6m": -0.5384216718793874,
-      "12m": -0.5725125129907438,
+      "3m": -0.36557751171961617,
+      "6m": -0.540910501735345,
+      "12m": -0.5748175250675651,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 21689313.6,
-      "relative_volume": 0.25447425869668827,
+      "average_volume": 21894829.95,
+      "relative_volume": 0.4398161128444846,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -438,5 +438,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BSX\nRating: Drop | Score: 31.15/100 | Confidence: 19.32/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 44.33000183105469 | Resistance: 70.16999816894531\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.957626\nNews/Catalyst: TD Cowen Maintains a Buy Rating on Boston Scientific (BSX)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BSX\nRating: Avoid | Score: 28.65/100 | Confidence: 17.5/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 44.27000045776367 | Resistance: 70.16999816894531\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.957626\nNews/Catalyst: TD Cowen Maintains a Buy Rating on Boston Scientific (BSX)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,10 +1,10 @@
 {
   "ticker": "ABNB",
-  "generated_at": "2026-06-25T15:39:48.016859",
+  "generated_at": "2026-06-25T18:06:30.369414",
   "score": {
-    "final_score": 67.45,
+    "final_score": 68.45,
     "rating": "Watch",
-    "confidence": 55.56,
+    "confidence": 59.69,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 73.0,
       "risk": 100,
-      "catalyst": 30.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 75.0,
@@ -27,17 +27,17 @@
       ],
       "support": 122.87000274658203,
       "resistance": 144.39999389648438,
-      "risk_reward": 0.06
+      "risk_reward": 0.12
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.07928855029535442,
-        "3m": 0.08641225704131594,
-        "6m": 0.04563709484682987,
-        "12m": 0.08361712873338067
+        "1m": 0.07129942143563262,
+        "3m": 0.07837039695310422,
+        "6m": 0.037897061387797804,
+        "12m": 0.07559595879353154
       },
-      "acceleration": 0.0636,
+      "acceleration": 0.0594,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3804283.15,
-      "relative_volume": 0.19555931319150102,
+      "average_volume": 3834636.4,
+      "relative_volume": 0.3523223218764627,
       "accumulation_days": 5,
       "distribution_days": 2,
       "evidence": [
@@ -66,23 +66,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02276100713428065,
-        "annualized_volatility": 0.3613197868000412,
+        "volatility": 0.022768827971021123,
+        "annualized_volatility": 0.36144393873439956,
         "maximum_drawdown": -0.34524839771842264,
-        "sharpe_ratio": 0.10719458650670553,
-        "sortino_ratio": 0.14341970969494633,
-        "calmar_ratio": -0.07540330079380225,
-        "beta": 1.2778623577553807,
-        "alpha": -0.18645166400187219,
-        "capm_expected_return": 0.2251831891445936,
-        "actual_return": 0.038731525142721414,
-        "market_return": 0.17621865749307883
+        "sharpe_ratio": 0.09694226800019763,
+        "sortino_ratio": 0.129809113168197,
+        "calmar_ratio": -0.08592627240177761,
+        "beta": 1.278379070356883,
+        "alpha": -0.18870024188584603,
+        "capm_expected_return": 0.2237394370616832,
+        "actual_return": 0.03503919517583717,
+        "market_return": 0.17501806956149732
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 50.0,
       "evidence": [
+        "analyst revision",
         "sector strength",
         "guidance change"
       ]
@@ -137,14 +138,15 @@
     "next_earnings_date": "1778184000",
     "eps_current_year": 4.04,
     "eps_forward": 6.06361,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 65.12444392294259,
+    "rsi": 62.99383290202108,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.19555931319150102,
+    "relative_volume": 0.3523223218764627,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -193,7 +195,7 @@
   },
   "catalysts": {
     "earnings_surprise": false,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": false,
@@ -240,10 +242,11 @@
         "last_surprise_pct": -0.14130001,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 9.27,
+      "analyst_upside_pct": 10.06,
       "eps_growth_implied": 50.09
     },
     "evidence": [
+      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -334,97 +337,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8015,
-    "probability_pct": 80.15,
+    "probability_of_outperformance": 0.8369,
+    "probability_pct": 83.69,
     "confidence": "High",
     "evidence": [
       "Breakout pressure detected",
-      "Composite score 67.45/100"
+      "Analyst data is supportive",
+      "Composite score 68.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 67.45,
+    "final_score": 68.45,
     "technical_score": 75.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 73.0,
     "risk_score": 100,
-    "catalyst_score": 30.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.179,
     "eps_growth": 0.06,
     "roe": 0.32325,
     "forward_pe": 23.616293,
-    "relative_volume": 0.19555931319150102,
+    "relative_volume": 0.3523223218764627,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
-    "analyst_revision": false,
+    "analyst_revision": true,
     "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.008310228524679997,
-      "weekly": 0.018927022834658302,
-      "monthly": 0.07928855029535442,
-      "annual": 0.08361712873338067
+      "daily": -0.015650932149318897,
+      "weekly": 0.011384703144663444,
+      "monthly": 0.07129942143563262,
+      "annual": 0.07559595879353154
     },
     "risk": {
-      "volatility": 0.02276100713428065,
-      "annualized_volatility": 0.3613197868000412,
+      "volatility": 0.022768827971021123,
+      "annualized_volatility": 0.36144393873439956,
       "maximum_drawdown": -0.34524839771842264,
-      "sharpe_ratio": 0.10719458650670553,
-      "sortino_ratio": 0.14341970969494633,
-      "calmar_ratio": -0.07540330079380225,
-      "beta": 1.2778623577553807,
-      "alpha": -0.18645166400187219,
-      "capm_expected_return": 0.2251831891445936,
-      "actual_return": 0.038731525142721414,
-      "market_return": 0.17621865749307883
+      "sharpe_ratio": 0.09694226800019763,
+      "sortino_ratio": 0.129809113168197,
+      "calmar_ratio": -0.08592627240177761,
+      "beta": 1.278379070356883,
+      "alpha": -0.18870024188584603,
+      "capm_expected_return": 0.2237394370616832,
+      "actual_return": 0.03503919517583717,
+      "market_return": 0.17501806956149732
     },
     "capm": {
-      "beta": 1.2778623577553807,
-      "alpha": -0.18645166400187219,
-      "capm_expected_return": 0.2251831891445936,
-      "actual_return": 0.038731525142721414,
-      "market_return": 0.17621865749307883,
-      "interpretation": "Beta 1.28: Moves roughly 28% more than the market. CAPM expected return is 22.52%; realized alpha is -18.65%, meaning negative alpha versus CAPM."
+      "beta": 1.278379070356883,
+      "alpha": -0.18870024188584603,
+      "capm_expected_return": 0.2237394370616832,
+      "actual_return": 0.03503919517583717,
+      "market_return": 0.17501806956149732,
+      "interpretation": "Beta 1.28: Moves roughly 28% more than the market. CAPM expected return is 22.37%; realized alpha is -18.87%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.038731525142721414,
+      "actual_return": 0.03503919517583717,
       "components": {
-        "market_component": 0.2251831891445936,
-        "momentum_component": 0.02090428218334517,
-        "volatility_drag": -0.022263957360008236,
-        "alpha_component": -0.18645166400187219
+        "market_component": 0.2237394370616832,
+        "momentum_component": 0.018898989698382884,
+        "volatility_drag": -0.022288787746879913,
+        "alpha_component": -0.18870024188584603
       },
       "component_weights_pct": {
-        "market_component": 49.51,
-        "momentum_component": 4.6,
-        "volatility_drag": 4.9,
-        "alpha_component": 41.0
+        "market_component": 49.32,
+        "momentum_component": 4.17,
+        "volatility_drag": 4.91,
+        "alpha_component": 41.6
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 136.38299942016602,
-      "sma50": 137.33739990234375,
-      "sma200": 129.49067493438721,
-      "ema20": 137.784653132955,
-      "ema50": 135.9278988367035,
-      "ema200": 132.06565960386075
+      "sma20": 136.32999954223632,
+      "sma50": 137.31619995117188,
+      "sma200": 129.48537494659425,
+      "ema20": 137.6837009845175,
+      "ema50": 135.88633030499395,
+      "ema200": 132.05511236447177
     },
     "momentum": {
-      "3m": 0.08641225704131594,
-      "6m": 0.04563709484682987,
-      "12m": 0.08361712873338067,
+      "3m": 0.07837039695310422,
+      "6m": 0.037897061387797804,
+      "12m": 0.07559595879353154,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3804283.15,
-      "relative_volume": 0.19555931319150102,
+      "average_volume": 3834636.4,
+      "relative_volume": 0.3523223218764627,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -442,5 +446,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ABNB\nRating: Watch | Score: 67.45/100 | Confidence: 55.56/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 122.87000274658203 | Resistance: 144.39999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.616293\nNews/Catalyst: Here is What to Know Beyond Why Airbnb, Inc. (ABNB) is a Trending Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABNB\nRating: Watch | Score: 68.45/100 | Confidence: 59.69/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 122.87000274658203 | Resistance: 144.39999389648438\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.616293\nNews/Catalyst: Here is What to Know Beyond Why Airbnb, Inc. (ABNB) is a Trending Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

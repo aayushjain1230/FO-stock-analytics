@@ -1,13 +1,13 @@
 {
   "ticker": "CVNA",
-  "generated_at": "2026-06-25T15:40:55.762093",
+  "generated_at": "2026-06-25T18:07:24.229555",
   "score": {
-    "final_score": 41.9,
+    "final_score": 42.4,
     "rating": "Drop",
-    "confidence": 32.98,
+    "confidence": 33.31,
     "risk_level": "High",
     "categories": {
-      "technical": 43.0,
+      "technical": 45.0,
       "momentum": 45.0,
       "volume": 0,
       "fundamental": 76.0,
@@ -15,26 +15,26 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 43.0,
+      "score": 45.0,
       "evidence": [
-        "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 58.15999984741211,
       "resistance": 83.35800170898438,
-      "risk_reward": 1.61
+      "risk_reward": 2.12
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": -0.0331433289674129,
-        "3m": 0.09905682799697924,
-        "6m": -0.2178671655917641,
-        "12m": 0.05002004969015994
+        "1m": -0.05588022927553593,
+        "3m": 0.07321106793779553,
+        "6m": -0.23626004306413817,
+        "12m": 0.025327453665727084
       },
-      "acceleration": 0.208,
+      "acceleration": 0.1913,
       "evidence": [
         "3m return is positive",
         "12m return is positive",
@@ -43,8 +43,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 10382086.55,
-      "relative_volume": 0.2869106306959076,
+      "average_volume": 10456838.0,
+      "relative_volume": 0.42783105179596354,
       "accumulation_days": 3,
       "distribution_days": 4,
       "evidence": []
@@ -60,17 +60,17 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.04222165628011948,
-        "annualized_volatility": 0.6702480147506678,
+        "volatility": 0.0422392284376314,
+        "annualized_volatility": 0.6705269641033201,
         "maximum_drawdown": -0.4302386909731668,
-        "sharpe_ratio": 1.0625235758058555,
-        "sortino_ratio": 1.4822083880514578,
-        "calmar_ratio": 1.4613962964677862,
-        "beta": 2.1973330286337567,
-        "alpha": 0.32494324093861365,
-        "capm_expected_return": 0.3872110763710415,
-        "actual_return": 0.7121543173096552,
-        "market_return": 0.17621865749307883
+        "sharpe_ratio": 1.0444629353040524,
+        "sortino_ratio": 1.460735785191771,
+        "calmar_ratio": 1.4163522540112958,
+        "beta": 2.198084383523313,
+        "alpha": 0.31563607559034457,
+        "capm_expected_return": 0.3847044855375241,
+        "actual_return": 0.7003405611278687,
+        "market_return": 0.17501806956149732
       },
       "evidence": [
         "Volatility is elevated",
@@ -87,7 +87,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive"
+    "explanation": "RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; 12m return is positive"
   },
   "fundamentals": {
     "ticker": "CVNA",
@@ -137,14 +137,15 @@
     "next_earnings_date": "1777492800",
     "eps_current_year": 1.72,
     "eps_forward": 2.16388,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 52.55427942101951,
+    "rsi": 50.059525174618905,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2869106306959076,
+    "relative_volume": 0.42783105179596354,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -240,7 +241,7 @@
         "last_surprise_pct": 0.1171,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 35.88,
+      "analyst_upside_pct": 38.89,
       "eps_growth_implied": 25.81
     },
     "evidence": [
@@ -343,13 +344,13 @@
       "Revenue growth above 20%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 41.9/100"
+      "Composite score 42.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.9,
-    "technical_score": 43.0,
+    "final_score": 42.4,
+    "technical_score": 45.0,
     "momentum_score": 45.0,
     "volume_score": 0,
     "fundamental_score": 76.0,
@@ -359,7 +360,7 @@
     "eps_growth": 0.119,
     "roe": 0.60172004,
     "forward_pe": 31.321053,
-    "relative_volume": 0.2869106306959076,
+    "relative_volume": 0.42783105179596354,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -369,66 +370,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.001251755401017851,
-      "weekly": 0.07898498710916346,
-      "monthly": -0.0331433289674129,
-      "annual": 0.05002004969015994
+      "daily": -0.024738627810045988,
+      "weekly": 0.05361124266402051,
+      "monthly": -0.05588022927553593,
+      "annual": 0.025327453665727084
     },
     "risk": {
-      "volatility": 0.04222165628011948,
-      "annualized_volatility": 0.6702480147506678,
+      "volatility": 0.0422392284376314,
+      "annualized_volatility": 0.6705269641033201,
       "maximum_drawdown": -0.4302386909731668,
-      "sharpe_ratio": 1.0625235758058555,
-      "sortino_ratio": 1.4822083880514578,
-      "calmar_ratio": 1.4613962964677862,
-      "beta": 2.1973330286337567,
-      "alpha": 0.32494324093861365,
-      "capm_expected_return": 0.3872110763710415,
-      "actual_return": 0.7121543173096552,
-      "market_return": 0.17621865749307883
+      "sharpe_ratio": 1.0444629353040524,
+      "sortino_ratio": 1.460735785191771,
+      "calmar_ratio": 1.4163522540112958,
+      "beta": 2.198084383523313,
+      "alpha": 0.31563607559034457,
+      "capm_expected_return": 0.3847044855375241,
+      "actual_return": 0.7003405611278687,
+      "market_return": 0.17501806956149732
     },
     "capm": {
-      "beta": 2.1973330286337567,
-      "alpha": 0.32494324093861365,
-      "capm_expected_return": 0.3872110763710415,
-      "actual_return": 0.7121543173096552,
-      "market_return": 0.17621865749307883,
-      "interpretation": "Beta 2.20: Moves roughly 120% more than the market. CAPM expected return is 38.72%; realized alpha is 32.49%, meaning positive alpha versus CAPM."
+      "beta": 2.198084383523313,
+      "alpha": 0.31563607559034457,
+      "capm_expected_return": 0.3847044855375241,
+      "actual_return": 0.7003405611278687,
+      "market_return": 0.17501806956149732,
+      "interpretation": "Beta 2.20: Moves roughly 120% more than the market. CAPM expected return is 38.47%; realized alpha is 31.56%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.7121543173096552,
+      "actual_return": 0.7003405611278687,
       "components": {
-        "market_component": 0.3872110763710415,
-        "momentum_component": 0.012505012422539985,
-        "volatility_drag": -0.08404960295013356,
-        "alpha_component": 0.32494324093861365
+        "market_component": 0.3847044855375241,
+        "momentum_component": 0.006331863416431771,
+        "volatility_drag": -0.08410539282066404,
+        "alpha_component": 0.31563607559034457
       },
       "component_weights_pct": {
-        "market_component": 47.88,
-        "momentum_component": 1.55,
-        "volatility_drag": 10.39,
-        "alpha_component": 40.18
+        "market_component": 48.65,
+        "momentum_component": 0.8,
+        "volatility_drag": 10.64,
+        "alpha_component": 39.91
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 67.66324996948242,
-      "sma50": 71.900419921875,
-      "sma200": 73.38456499099732,
-      "ema20": 67.67320784709345,
-      "ema50": 69.28554627281738,
-      "ema200": 69.92174559737991
+      "sma20": 67.583500289917,
+      "sma50": 71.86852005004883,
+      "sma200": 73.37659002304078,
+      "ema20": 67.52130369554025,
+      "ema50": 69.22299750453077,
+      "ema200": 69.90587501438182
     },
     "momentum": {
-      "3m": 0.09905682799697924,
-      "6m": -0.2178671655917641,
-      "12m": 0.05002004969015994,
+      "3m": 0.07321106793779553,
+      "6m": -0.23626004306413817,
+      "12m": 0.025327453665727084,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 10382086.55,
-      "relative_volume": 0.2869106306959076,
+      "average_volume": 10456838.0,
+      "relative_volume": 0.42783105179596354,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -446,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CVNA\nRating: Drop | Score: 41.9/100 | Confidence: 32.98/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 58.15999984741211 | Resistance: 83.35800170898438\nFundamental Outlook: Quality Compounder | Forward P/E: 31.321053\nNews/Catalyst: 2 Large-Cap Stocks to Target This Week and 1 We Find Risky\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CVNA\nRating: Drop | Score: 42.4/100 | Confidence: 33.31/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 58.15999984741211 | Resistance: 83.35800170898438\nFundamental Outlook: Quality Compounder | Forward P/E: 31.321053\nNews/Catalyst: 2 Large-Cap Stocks to Target This Week and 1 We Find Risky\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
