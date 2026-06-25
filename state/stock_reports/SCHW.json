@@ -1,18 +1,18 @@
 {
   "ticker": "SCHW",
-  "generated_at": "2026-06-24T22:50:58.124581",
+  "generated_at": "2026-06-25T15:41:10.255589",
   "score": {
-    "final_score": 52.65,
+    "final_score": 58.15,
     "rating": "Hold",
-    "confidence": 44.5,
+    "confidence": 55.08,
     "risk_level": "Controlled",
     "categories": {
       "technical": 53.0,
-      "momentum": 30.0,
-      "volume": 0,
+      "momentum": 40.0,
+      "volume": 25.0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 80.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 53.0,
@@ -25,29 +25,32 @@
       ],
       "support": 85.3499984741211,
       "resistance": 100.2699966430664,
-      "risk_reward": 1.47
+      "risk_reward": 1.37
     },
     "momentum": {
-      "score": 30.0,
+      "score": 40.0,
       "returns": {
-        "1m": 0.013754829093525434,
-        "3m": -0.04140954370749539,
-        "6m": -0.06873448188172593,
-        "12m": 0.047174504781389404
+        "1m": 0.02500000640049871,
+        "3m": -0.03185793856575836,
+        "6m": -0.09008613087723616,
+        "12m": 0.03893188848463636
       },
-      "acceleration": -0.007,
+      "acceleration": 0.0132,
       "evidence": [
         "1m return is positive",
-        "12m return is positive"
+        "12m return is positive",
+        "Momentum is accelerating"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 13384460.2,
-      "relative_volume": 0.8798340630875798,
+      "score": 25.0,
+      "average_volume": 12443900.95,
+      "relative_volume": 0.15273498299582658,
       "accumulation_days": 4,
-      "distribution_days": 4,
-      "evidence": []
+      "distribution_days": 3,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 86.0,
@@ -60,27 +63,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017072018130812473,
-        "annualized_volatility": 0.2710098861126934,
-        "maximum_drawdown": -0.19834421854864803,
-        "sharpe_ratio": 0.5808784583084801,
-        "sortino_ratio": 0.7080610958086443,
-        "calmar_ratio": 0.6452899535556109,
-        "beta": 0.7271561434435156,
-        "alpha": 0.029573955770664573,
-        "capm_expected_return": 0.12784984906083352,
-        "actual_return": 0.1574238048314981,
-        "market_return": 0.17582172716768732
+        "volatility": 0.01705518336006303,
+        "annualized_volatility": 0.2707426424120025,
+        "maximum_drawdown": -0.19834421854864792,
+        "sharpe_ratio": 0.5852717872634496,
+        "sortino_ratio": 0.7127125735477904,
+        "calmar_ratio": 0.6515847318066735,
+        "beta": 0.7271752354576625,
+        "alpha": 0.030316186458338973,
+        "capm_expected_return": 0.12814184375456278,
+        "actual_return": 0.15845803021290175,
+        "market_return": 0.17621865749307883
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 80.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
-        "major news",
         "guidance change"
       ]
     },
@@ -93,7 +95,7 @@
     "sector": "Financial Services",
     "industry": "Capital Markets",
     "exchange": "NYQ",
-    "market_cap": 158939594752.0,
+    "market_cap": 159148294144.0,
     "revenue_growth": 0.158,
     "eps_growth": 0.386,
     "fcf_growth": null,
@@ -110,13 +112,13 @@
     "cash_position": 96474996736.0,
     "total_debt": 59457998848.0,
     "interest_coverage": null,
-    "forward_pe": 12.591744,
-    "trailing_pe": 18.168985,
-    "peg": 1.1,
-    "price_to_book": 3.7401268,
-    "price_to_sales": 6.407821,
+    "forward_pe": 12.608279,
+    "trailing_pe": 18.192842,
+    "peg": 1.09,
+    "price_to_book": 3.745038,
+    "price_to_sales": 6.416235,
     "enterprise_to_ebitda": null,
-    "enterprise_to_revenue": 5.313,
+    "enterprise_to_revenue": 5.188,
     "fcf_yield": null,
     "institutional_ownership": 0.84476995,
     "insider_ownership": 0.061680004,
@@ -129,7 +131,7 @@
     "target_low_price": 84.0,
     "recommendation": "buy",
     "number_of_analysts": 19.0,
-    "dividend_yield": 1.37,
+    "dividend_yield": 1.4,
     "payout_ratio": 0.22469999,
     "next_earnings_date": "1784637000",
     "eps_current_year": 5.03,
@@ -137,11 +139,11 @@
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 64.16765749698249,
+    "rsi": 61.52140026822579,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8798340630875798,
+    "relative_volume": 0.15273498299582658,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -193,10 +195,10 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": false,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 3,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.84476995,
     "detail": {
       "earnings": {
@@ -237,14 +239,13 @@
         "last_surprise_pct": 0.0248,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.1,
+      "analyst_upside_pct": 26.93,
       "eps_growth_implied": 44.29
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -267,6 +268,36 @@
     "available": true,
     "items": [
       {
+        "headline": "Wall Street Analysts Believe Charles Schwab (SCHW) Could Rally 25.89%: Here's is How to Trade",
+        "source": "Zacks",
+        "published": "2026-06-25T13:55:02Z",
+        "summary": "The mean of analysts' price targets for Charles Schwab (SCHW) points to a 25.9% upside in the stock. While this highly sought-after metric has not proven reasonably effective, strong agreement among analysts in raising earnings estimates does indicate an upside in the stock.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Charles Schwab Expands into Prediction Markets, WSJ Reports",
+        "source": "Insider Monkey",
+        "published": "2026-06-25T04:11:42Z",
+        "summary": "The Charles Schwab Corporation (NYSE:SCHW) is included among the 10 Reliable Dividend Stocks to Buy for Long-Term Investors. On June 19, The Wall Street Journal reported that The Charles Schwab Corporation (NYSE:SCHW) is expanding into the prediction markets space. According to people familiar with the matter, the brokerage is working with Cboe Global Markets to [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Charles Schwab (SCHW) Stock Sees Modest Fair Value Lift After Investor Day Revisions",
+        "source": "Simply Wall St.",
+        "published": "2026-06-25T03:16:28Z",
+        "summary": "The latest analyst work on Charles Schwab includes refreshed price target models that incorporate a slightly higher fair value estimate of US$116.16, compared with the prior US$115.85. These adjustments reflect how bullish and bearish analysts are digesting Schwab\u2019s investor day messaging, particularly around revenue, expense, and earnings frameworks, as well as the role of AI and client cash behavior in their scenarios. As you read on, you will see how to track these shifts and what to watch...",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Franklin Resources' Arm Expands Crypto Capabilities With 250 Digital Buyout",
         "source": "Zacks",
         "published": "2026-06-24T16:19:00Z",
@@ -281,36 +312,6 @@
         "source": "Bloomberg",
         "published": "2026-06-24T08:07:50Z",
         "summary": "(Bloomberg) -- Micron Technology Inc.\u2019s earnings report on Wednesday afternoon is shaping up to be one of the most important in months as investors find themselves suddenly on edge over the sustainability of the AI rally.Most Read from BloombergStocks Slide as Wall Street Gets AI Wake-Up Call: Markets WrapOracle Cut 21,000 Jobs in 12 Months, Says AI Replaced Some Roles\u2018FOMO Really Got Me\u2019: Taiwanese Go Deep Into Debt to Amp 100% Stock RallySpaceX Falls for Third Day, Erases $600 Billion in Marke",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "IBKR Broadens AI Trading Reach With ChatGPT, Grok Integration",
-        "source": "Zacks",
-        "published": "2026-06-23T12:57:00Z",
-        "summary": "Interactive Brokers is expanding AI-assisted trading with ChatGPT and Grok, adding options and futures while keeping investors in control.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Robinhood's Convertible Debt Play: Dilution Risk, Growth Upside",
-        "source": "Zacks",
-        "published": "2026-06-23T12:43:00Z",
-        "summary": "HOOD's $2B convertible debt offering adds cash for buybacks, capped calls and expansion, while future dilution remains the key investor risk.",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Dividend ETFs: How SCHD and FDVV Measure Up",
-        "source": "Motley Fool",
-        "published": "2026-06-22T15:25:01Z",
-        "summary": "Sector allocations and risk profiles set these dividend ETFs apart for investors weighing income versus long-term appreciation.",
         "bullish_score": 0,
         "bearish_score": 1,
         "importance_score": 45,
@@ -334,99 +335,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8273,
-    "probability_pct": 82.73,
+    "probability_of_outperformance": 0.8186,
+    "probability_pct": 81.86,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 52.65/100"
+      "Composite score 58.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 52.65,
+    "final_score": 58.15,
     "technical_score": 53.0,
-    "momentum_score": 30.0,
-    "volume_score": 0,
+    "momentum_score": 40.0,
+    "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 100,
-    "catalyst_score": 80.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.158,
     "eps_growth": 0.386,
     "roe": 0.19083,
-    "forward_pe": 12.591744,
-    "relative_volume": 0.8798340630875798,
+    "forward_pe": 12.608279,
+    "relative_volume": 0.15273498299582658,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01910484935364276,
-      "weekly": -0.024340758234932536,
-      "monthly": 0.013754829093525434,
-      "annual": 0.047174504781389404
+      "daily": 0.0026808485416160988,
+      "weekly": -0.030420060681575878,
+      "monthly": 0.02500000640049871,
+      "annual": 0.03893188848463636
     },
     "risk": {
-      "volatility": 0.017072018130812473,
-      "annualized_volatility": 0.2710098861126934,
-      "maximum_drawdown": -0.19834421854864803,
-      "sharpe_ratio": 0.5808784583084801,
-      "sortino_ratio": 0.7080610958086443,
-      "calmar_ratio": 0.6452899535556109,
-      "beta": 0.7271561434435156,
-      "alpha": 0.029573955770664573,
-      "capm_expected_return": 0.12784984906083352,
-      "actual_return": 0.1574238048314981,
-      "market_return": 0.17582172716768732
+      "volatility": 0.01705518336006303,
+      "annualized_volatility": 0.2707426424120025,
+      "maximum_drawdown": -0.19834421854864792,
+      "sharpe_ratio": 0.5852717872634496,
+      "sortino_ratio": 0.7127125735477904,
+      "calmar_ratio": 0.6515847318066735,
+      "beta": 0.7271752354576625,
+      "alpha": 0.030316186458338973,
+      "capm_expected_return": 0.12814184375456278,
+      "actual_return": 0.15845803021290175,
+      "market_return": 0.17621865749307883
     },
     "capm": {
-      "beta": 0.7271561434435156,
-      "alpha": 0.029573955770664573,
-      "capm_expected_return": 0.12784984906083352,
-      "actual_return": 0.1574238048314981,
-      "market_return": 0.17582172716768732,
-      "interpretation": "Beta 0.73: Moves roughly 27% less than the market. CAPM expected return is 12.78%; realized alpha is 2.96%, meaning positive alpha versus CAPM."
+      "beta": 0.7271752354576625,
+      "alpha": 0.030316186458338973,
+      "capm_expected_return": 0.12814184375456278,
+      "actual_return": 0.15845803021290175,
+      "market_return": 0.17621865749307883,
+      "interpretation": "Beta 0.73: Moves roughly 27% less than the market. CAPM expected return is 12.81%; realized alpha is 3.03%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.1574238048314981,
+      "actual_return": 0.15845803021290175,
       "components": {
-        "market_component": 0.12784984906083352,
-        "momentum_component": 0.011793626195347351,
-        "volatility_drag": -0.0042019772225386776,
-        "alpha_component": 0.029573955770664573
+        "market_component": 0.12814184375456278,
+        "momentum_component": 0.00973297212115909,
+        "volatility_drag": -0.004148528482400504,
+        "alpha_component": 0.030316186458338973
       },
       "component_weights_pct": {
-        "market_component": 73.72,
-        "momentum_component": 6.8,
-        "volatility_drag": 2.42,
-        "alpha_component": 17.05
+        "market_component": 74.35,
+        "momentum_component": 5.65,
+        "volatility_drag": 2.41,
+        "alpha_component": 17.59
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 89.57149848937988,
-      "sma50": 90.54274795532227,
-      "sma200": 94.16114086151123,
-      "ema20": 90.7749425925446,
-      "ema50": 91.0128447945591,
-      "ema200": 92.10055811496255
+      "sma20": 89.87274856567383,
+      "sma50": 90.41488311767579,
+      "sma200": 94.15661716461182,
+      "ema20": 90.85685302515218,
+      "ema50": 91.03724310504607,
+      "ema200": 92.09592560252682
     },
     "momentum": {
-      "3m": -0.04140954370749539,
-      "6m": -0.06873448188172593,
-      "12m": 0.047174504781389404,
+      "3m": -0.03185793856575836,
+      "6m": -0.09008613087723616,
+      "12m": 0.03893188848463636,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 13384460.2,
-      "relative_volume": 0.8798340630875798,
+      "average_volume": 12443900.95,
+      "relative_volume": 0.15273498299582658,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -439,10 +440,10 @@
     "send_alert": false,
     "reason": "No clear Why Now trigger",
     "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-24",
+    "date_of_change": "2026-06-25",
     "strength": 0,
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: SCHW\nRating: Hold | Score: 52.65/100 | Confidence: 44.5/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.591744\nNews/Catalyst: Franklin Resources' Arm Expands Crypto Capabilities With 250 Digital Buyout\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: SCHW\nRating: Hold | Score: 58.15/100 | Confidence: 55.08/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 85.3499984741211 | Resistance: 100.2699966430664\nFundamental Outlook: Quality Compounder | Forward P/E: 12.608279\nNews/Catalyst: Wall Street Analysts Believe Charles Schwab (SCHW) Could Rally 25.89%: Here's is How to Trade\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

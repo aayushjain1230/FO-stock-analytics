@@ -1,10 +1,10 @@
 {
   "ticker": "AME",
-  "generated_at": "2026-06-24T22:49:44.962129",
+  "generated_at": "2026-06-25T15:40:02.153171",
   "score": {
-    "final_score": 71.4,
+    "final_score": 70.4,
     "rating": "Watch",
-    "confidence": 66.85,
+    "confidence": 63.66,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 81.0,
       "risk": 100,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 75.0,
@@ -27,17 +27,17 @@
       ],
       "support": 208.3699951171875,
       "resistance": 241.5500030517578,
-      "risk_reward": 0.23
+      "risk_reward": 0.02
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.049941686407981356,
-        "3m": 0.08642691770725985,
-        "6m": 0.1614303834704096,
-        "12m": 0.336088336086777
+        "1m": 0.05115082053034259,
+        "3m": 0.1200299544218435,
+        "6m": 0.1713085422266396,
+        "12m": 0.3519913579749836
       },
-      "acceleration": 0.0057,
+      "acceleration": 0.0344,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1327757.1,
-      "relative_volume": 0.9940387439841217,
+      "average_volume": 1287966.9,
+      "relative_volume": 0.23248889393042632,
       "accumulation_days": 7,
       "distribution_days": 1,
       "evidence": [
@@ -67,25 +67,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.0148600171809935,
-        "annualized_volatility": 0.23589545963433536,
-        "maximum_drawdown": -0.23041236150252276,
-        "sharpe_ratio": 0.8566017306833323,
-        "sortino_ratio": 1.2656220756735637,
-        "calmar_ratio": 0.8265004334109075,
-        "beta": 0.8221615356312496,
-        "alpha": 0.05751459777758741,
-        "capm_expected_return": 0.1445538612055244,
-        "actual_return": 0.20206845898311182,
-        "market_return": 0.17582172716768732
+        "volatility": 0.014878512093144624,
+        "annualized_volatility": 0.23618905726276654,
+        "maximum_drawdown": -0.23041230133588386,
+        "sharpe_ratio": 0.9030030021291344,
+        "sortino_ratio": 1.3358394440968047,
+        "calmar_ratio": 0.8843479004044209,
+        "beta": 0.8224599696219795,
+        "alpha": 0.06834663608974456,
+        "capm_expected_return": 0.14493279168858364,
+        "actual_return": 0.2132794277783282,
+        "market_return": 0.17621865749307883
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "sector strength",
         "major news",
         "guidance change"
@@ -100,7 +99,7 @@
     "sector": "Industrials",
     "industry": "Specialty Industrial Machinery",
     "exchange": "NYQ",
-    "market_cap": 53949804544.0,
+    "market_cap": 55195521024.0,
     "revenue_growth": 0.113,
     "eps_growth": 0.145,
     "fcf_growth": null,
@@ -117,14 +116,14 @@
     "cash_position": 481249984.0,
     "total_debt": 2455633920.0,
     "interest_coverage": null,
-    "forward_pe": 26.757944,
-    "trailing_pe": 35.555893,
-    "peg": 3.13,
-    "price_to_book": 4.9408064,
-    "price_to_sales": 7.100918,
-    "enterprise_to_ebitda": 22.983,
-    "enterprise_to_revenue": 7.322,
-    "fcf_yield": 0.02567862026024841,
+    "forward_pe": 27.375793,
+    "trailing_pe": 36.43192,
+    "peg": 3.05,
+    "price_to_book": 5.054891,
+    "price_to_sales": 7.26488,
+    "enterprise_to_ebitda": 23.106,
+    "enterprise_to_revenue": 7.361,
+    "fcf_yield": 0.02509907540138306,
     "institutional_ownership": 0.92408997,
     "insider_ownership": 0.00386,
     "short_interest": 4061644.0,
@@ -139,19 +138,19 @@
     "dividend_yield": 0.58,
     "payout_ratio": 0.1918,
     "next_earnings_date": "1777552200",
-    "eps_current_year": 6.62,
+    "eps_current_year": 6.61,
     "eps_forward": 8.79664,
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 57.94269054419405,
+    "rsi": 62.07553797059148,
     "macd_cross": false,
-    "breakout": false,
-    "new_52w_high": false,
-    "relative_volume": 0.9940387439841217,
+    "breakout": true,
+    "new_52w_high": true,
+    "relative_volume": 0.23248889393042632,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "52-week high pressure, trend continuation",
     "support": 208.3699951171875,
     "resistance": 241.5500030517578
   },
@@ -197,7 +196,7 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
@@ -244,12 +243,11 @@
         "last_surprise_pct": 0.0356,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.06,
-      "eps_growth_implied": 32.88
+      "analyst_upside_pct": 7.57,
+      "eps_growth_implied": 33.08
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
@@ -273,6 +271,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Are Computer and Technology Stocks Lagging  Flex (FLEX) This Year?",
+        "source": "Zacks",
+        "published": "2026-06-25T13:40:04Z",
+        "summary": "Here is how Flex (FLEX) and Ametek (AME) have performed compared to their sector so far this year.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Is AMETEK Stock Just More Market Exposure?",
         "source": "Trefis",
@@ -312,16 +320,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "How Is Rockwell Automation's Stock Performance Compared to Other Industrial Stocks?",
-        "source": "Barchart",
-        "published": "2026-06-12T04:12:26Z",
-        "summary": "Rockwell Automation has outperformed its industry peers recently, and analysts remain moderately optimistic about the stock\u2019s prospects.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -341,98 +339,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8659,
-    "probability_pct": 86.59,
+    "probability_of_outperformance": 0.8612,
+    "probability_pct": 86.12,
     "confidence": "High",
     "evidence": [
+      "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Analyst data is supportive",
-      "Composite score 71.4/100"
+      "Composite score 70.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 71.4,
+    "final_score": 70.4,
     "technical_score": 75.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 81.0,
     "risk_score": 100,
-    "catalyst_score": 85.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.113,
     "eps_growth": 0.145,
     "roe": 0.14626999,
-    "forward_pe": 26.757944,
-    "relative_volume": 0.9940387439841217,
-    "breakout": false,
+    "forward_pe": 27.375793,
+    "relative_volume": 0.23248889393042632,
+    "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.005553669863246569,
-      "weekly": 0.01500651607555259,
-      "monthly": 0.049941686407981356,
-      "annual": 0.336088336086777
+      "daily": 0.02309031118127325,
+      "weekly": 0.041272097516374284,
+      "monthly": 0.05115082053034259,
+      "annual": 0.3519913579749836
     },
     "risk": {
-      "volatility": 0.0148600171809935,
-      "annualized_volatility": 0.23589545963433536,
-      "maximum_drawdown": -0.23041236150252276,
-      "sharpe_ratio": 0.8566017306833323,
-      "sortino_ratio": 1.2656220756735637,
-      "calmar_ratio": 0.8265004334109075,
-      "beta": 0.8221615356312496,
-      "alpha": 0.05751459777758741,
-      "capm_expected_return": 0.1445538612055244,
-      "actual_return": 0.20206845898311182,
-      "market_return": 0.17582172716768732
+      "volatility": 0.014878512093144624,
+      "annualized_volatility": 0.23618905726276654,
+      "maximum_drawdown": -0.23041230133588386,
+      "sharpe_ratio": 0.9030030021291344,
+      "sortino_ratio": 1.3358394440968047,
+      "calmar_ratio": 0.8843479004044209,
+      "beta": 0.8224599696219795,
+      "alpha": 0.06834663608974456,
+      "capm_expected_return": 0.14493279168858364,
+      "actual_return": 0.2132794277783282,
+      "market_return": 0.17621865749307883
     },
     "capm": {
-      "beta": 0.8221615356312496,
-      "alpha": 0.05751459777758741,
-      "capm_expected_return": 0.1445538612055244,
-      "actual_return": 0.20206845898311182,
-      "market_return": 0.17582172716768732,
-      "interpretation": "Beta 0.82: Moves roughly in line with the market. CAPM expected return is 14.46%; realized alpha is 5.75%, meaning positive alpha versus CAPM."
+      "beta": 0.8224599696219795,
+      "alpha": 0.06834663608974456,
+      "capm_expected_return": 0.14493279168858364,
+      "actual_return": 0.2132794277783282,
+      "market_return": 0.17621865749307883,
+      "interpretation": "Beta 0.82: Moves roughly in line with the market. CAPM expected return is 14.49%; realized alpha is 6.83%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.20206845898311182,
+      "actual_return": 0.2132794277783282,
       "components": {
-        "market_component": 0.1445538612055244,
-        "momentum_component": 0.08402208402169425,
+        "market_component": 0.14493279168858364,
+        "momentum_component": 0.0879978394937459,
         "volatility_drag": -0.0,
-        "alpha_component": 0.05751459777758741
+        "alpha_component": 0.06834663608974456
       },
       "component_weights_pct": {
-        "market_component": 50.53,
-        "momentum_component": 29.37,
+        "market_component": 48.11,
+        "momentum_component": 29.21,
         "volatility_drag": 0.0,
-        "alpha_component": 20.1
+        "alpha_component": 22.69
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 229.04069747924805,
-      "sma50": 230.06031311035156,
-      "sma200": 212.0049961090088,
-      "ema20": 230.83971738517218,
-      "ema50": 228.6290851527886,
-      "ema200": 214.35987435516927
+      "sma20": 229.77939224243164,
+      "sma50": 230.19643005371094,
+      "sma200": 212.27162284851073,
+      "ema20": 231.78974452804457,
+      "ema50": 229.106964064825,
+      "ema200": 214.62310932981282
     },
     "momentum": {
-      "3m": 0.08642691770725985,
-      "6m": 0.1614303834704096,
-      "12m": 0.336088336086777,
+      "3m": 0.1200299544218435,
+      "6m": 0.1713085422266396,
+      "12m": 0.3519913579749836,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1327757.1,
-      "relative_volume": 0.9940387439841217,
+      "average_volume": 1287966.9,
+      "relative_volume": 0.23248889393042632,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -442,13 +440,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-24",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "52-week high",
+    "evidence": "Price is pressing against 52-week highs",
+    "date_of_change": "2026-06-25",
+    "strength": 65,
+    "invalidates": "Failed breakout below prior range high",
+    "triggers": [
+      {
+        "reason": "52-week high",
+        "evidence": "Price is pressing against 52-week highs",
+        "strength": 65,
+        "invalidates": "Failed breakout below prior range high"
+      }
+    ]
   },
-  "report": "Ticker: AME\nRating: Watch | Score: 71.4/100 | Confidence: 66.85/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 208.3699951171875 | Resistance: 241.5500030517578\nFundamental Outlook: Fundamentally Strong | Forward P/E: 26.757944\nNews/Catalyst: Is AMETEK Stock Just More Market Exposure?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AME\nRating: Watch | Score: 70.4/100 | Confidence: 63.66/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 208.3699951171875 | Resistance: 241.5500030517578\nFundamental Outlook: Fundamentally Strong | Forward P/E: 27.375793\nNews/Catalyst: Are Computer and Technology Stocks Lagging  Flex (FLEX) This Year?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

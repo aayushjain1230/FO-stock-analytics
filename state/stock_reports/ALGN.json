@@ -1,40 +1,43 @@
 {
   "ticker": "ALGN",
-  "generated_at": "2026-06-24T22:49:41.534811",
+  "generated_at": "2026-06-25T15:39:58.807354",
   "score": {
-    "final_score": 44.95,
-    "rating": "Drop",
-    "confidence": 44.41,
+    "final_score": 52.95,
+    "rating": "Hold",
+    "confidence": 51.15,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 47.0,
+      "technical": 75.0,
       "momentum": 25.0,
       "volume": 25.0,
       "fundamental": 58.0,
       "risk": 75.0,
-      "catalyst": 65.0
+      "catalyst": 85.0
     },
     "technical": {
-      "score": 47.0,
+      "score": 75.0,
       "evidence": [
+        "Price above SMA20",
+        "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 155.16000366210938,
       "resistance": 196.0500030517578,
-      "risk_reward": 1.6
+      "risk_reward": 1.04
     },
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": 0.04455713745453993,
-        "3m": -0.047061462104106555,
-        "6m": 0.08377190215331898,
-        "12m": -0.0682586653442715
+        "1m": 0.07129320357407387,
+        "3m": -0.028068993391413333,
+        "6m": 0.10001260708598703,
+        "12m": -0.06093898062817504
       },
-      "acceleration": -0.0889,
+      "acceleration": -0.0781,
       "evidence": [
         "1m return is positive",
         "6m return is positive"
@@ -42,10 +45,10 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1083022.25,
-      "relative_volume": 1.2326108720296374,
+      "average_volume": 1021936.2,
+      "relative_volume": 0.16030746342090632,
       "accumulation_days": 6,
-      "distribution_days": 5,
+      "distribution_days": 4,
       "evidence": [
         "Accumulation days exceed distribution days"
       ]
@@ -61,32 +64,33 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.029878975080583608,
-        "annualized_volatility": 0.4743140249563219,
+        "volatility": 0.029870592858595446,
+        "annualized_volatility": 0.47418096130743304,
         "maximum_drawdown": -0.5144068486487463,
-        "sharpe_ratio": -0.07978929989186759,
-        "sortino_ratio": -0.09005302720578527,
-        "calmar_ratio": -0.2891201963262783,
-        "beta": 1.341054267472169,
-        "alpha": -0.27363166151271323,
-        "capm_expected_return": 0.2357864775325545,
-        "actual_return": -0.03784518398015873,
-        "market_return": 0.17582172716768732
+        "sharpe_ratio": -0.05290044943301754,
+        "sortino_ratio": -0.059688569435884235,
+        "calmar_ratio": -0.26771905738195517,
+        "beta": 1.3413871835814324,
+        "alpha": -0.2614618346348856,
+        "capm_expected_return": 0.2363774486691421,
+        "actual_return": -0.025084385965743507,
+        "market_return": 0.17621865749307883
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 85.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive; 6m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "ALGN",
@@ -95,7 +99,7 @@
     "sector": "Healthcare",
     "industry": "Medical Instruments & Supplies",
     "exchange": "NMS",
-    "market_cap": 12239537152.0,
+    "market_cap": 12548212736.0,
     "revenue_growth": 0.062,
     "eps_growth": 0.239,
     "fcf_growth": null,
@@ -112,14 +116,14 @@
     "cash_position": 1059833984.0,
     "total_debt": 116044000.0,
     "interest_coverage": null,
-    "forward_pe": 13.812534,
-    "trailing_pe": 28.722689,
-    "peg": 0.92,
-    "price_to_book": 2.9496539,
-    "price_to_sales": 2.9883223,
-    "enterprise_to_ebitda": 12.492,
-    "enterprise_to_revenue": 2.716,
-    "fcf_yield": 0.04403610179915405,
+    "forward_pe": 14.160879,
+    "trailing_pe": 29.447062,
+    "peg": 0.9,
+    "price_to_book": 3.0240426,
+    "price_to_sales": 3.0636864,
+    "enterprise_to_ebitda": 12.685,
+    "enterprise_to_revenue": 2.758,
+    "fcf_yield": 0.04295285036519164,
     "institutional_ownership": 1.01657,
     "insider_ownership": 0.06816,
     "short_interest": 4629162.0,
@@ -139,14 +143,14 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 56.75833987725187,
-    "macd_cross": false,
+    "rsi": 55.26476970419961,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.2326108720296374,
-    "price_above_sma50": false,
+    "relative_volume": 0.16030746342090632,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover, trend continuation",
     "support": 155.16000366210938,
     "resistance": 196.0500030517578
   },
@@ -194,7 +198,7 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 0,
@@ -239,13 +243,14 @@
         "last_surprise_pct": 0.1284,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 22.34,
+      "analyst_upside_pct": 19.33,
       "eps_growth_implied": 107.95
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -335,32 +340,32 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6956,
-    "probability_pct": 69.56,
+    "probability_of_outperformance": 0.7661,
+    "probability_pct": 76.61,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 44.95/100"
+      "Composite score 52.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 44.95,
-    "technical_score": 47.0,
+    "final_score": 52.95,
+    "technical_score": 75.0,
     "momentum_score": 25.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
     "risk_score": 75.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 85.0,
     "revenue_growth": 0.062,
     "eps_growth": 0.239,
     "roe": 0.10824,
-    "forward_pe": 13.812534,
-    "relative_volume": 1.2326108720296374,
+    "forward_pe": 14.160879,
+    "relative_volume": 0.16030746342090632,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
@@ -368,66 +373,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.01430345020327084,
-      "weekly": -0.048016990702015594,
-      "monthly": 0.04455713745453993,
-      "annual": -0.0682586653442715
+      "daily": 0.025219502465245514,
+      "weekly": 0.00968136890675031,
+      "monthly": 0.07129320357407387,
+      "annual": -0.06093898062817504
     },
     "risk": {
-      "volatility": 0.029878975080583608,
-      "annualized_volatility": 0.4743140249563219,
+      "volatility": 0.029870592858595446,
+      "annualized_volatility": 0.47418096130743304,
       "maximum_drawdown": -0.5144068486487463,
-      "sharpe_ratio": -0.07978929989186759,
-      "sortino_ratio": -0.09005302720578527,
-      "calmar_ratio": -0.2891201963262783,
-      "beta": 1.341054267472169,
-      "alpha": -0.27363166151271323,
-      "capm_expected_return": 0.2357864775325545,
-      "actual_return": -0.03784518398015873,
-      "market_return": 0.17582172716768732
+      "sharpe_ratio": -0.05290044943301754,
+      "sortino_ratio": -0.059688569435884235,
+      "calmar_ratio": -0.26771905738195517,
+      "beta": 1.3413871835814324,
+      "alpha": -0.2614618346348856,
+      "capm_expected_return": 0.2363774486691421,
+      "actual_return": -0.025084385965743507,
+      "market_return": 0.17621865749307883
     },
     "capm": {
-      "beta": 1.341054267472169,
-      "alpha": -0.27363166151271323,
-      "capm_expected_return": 0.2357864775325545,
-      "actual_return": -0.03784518398015873,
-      "market_return": 0.17582172716768732,
-      "interpretation": "Beta 1.34: Moves roughly 34% more than the market. CAPM expected return is 23.58%; realized alpha is -27.36%, meaning negative alpha versus CAPM."
+      "beta": 1.3413871835814324,
+      "alpha": -0.2614618346348856,
+      "capm_expected_return": 0.2363774486691421,
+      "actual_return": -0.025084385965743507,
+      "market_return": 0.17621865749307883,
+      "interpretation": "Beta 1.34: Moves roughly 34% more than the market. CAPM expected return is 23.64%; realized alpha is -26.15%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.03784518398015873,
+      "actual_return": -0.025084385965743507,
       "components": {
-        "market_component": 0.2357864775325545,
+        "market_component": 0.2363774486691421,
         "momentum_component": 0.0,
-        "volatility_drag": -0.04486280499126438,
-        "alpha_component": -0.27363166151271323
+        "volatility_drag": -0.04483619226148661,
+        "alpha_component": -0.2614618346348856
       },
       "component_weights_pct": {
-        "market_component": 42.54,
+        "market_component": 43.56,
         "momentum_component": 0.0,
-        "volatility_drag": 8.09,
-        "alpha_component": 49.37
+        "volatility_drag": 8.26,
+        "alpha_component": 48.18
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 172.19100036621094,
-      "sma50": 173.555400390625,
-      "sma200": 160.71084945678712,
-      "ema20": 172.4133713601137,
-      "ema50": 172.2388529866544,
-      "ema200": 170.12471698047233
+      "sma20": 172.80750045776367,
+      "sma50": 173.3658004760742,
+      "sma200": 160.90259948730468,
+      "ema20": 172.6797175842807,
+      "ema50": 172.3553688190941,
+      "ema200": 170.17531687831703
     },
     "momentum": {
-      "3m": -0.047061462104106555,
-      "6m": 0.08377190215331898,
-      "12m": -0.0682586653442715,
+      "3m": -0.028068993391413333,
+      "6m": 0.10001260708598703,
+      "12m": -0.06093898062817504,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 1083022.25,
-      "relative_volume": 1.2326108720296374,
+      "average_volume": 1021936.2,
+      "relative_volume": 0.16030746342090632,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -437,13 +442,26 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-24",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-25",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: ALGN\nRating: Drop | Score: 44.95/100 | Confidence: 44.41/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 155.16000366210938 | Resistance: 196.0500030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 13.812534\nNews/Catalyst: Is Aveanna Healthcare (AVAH) Stock Outpacing Its Medical Peers This Year?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALGN\nRating: Hold | Score: 52.95/100 | Confidence: 51.15/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover, trend continuation | Support: 155.16000366210938 | Resistance: 196.0500030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.160879\nNews/Catalyst: Is Aveanna Healthcare (AVAH) Stock Outpacing Its Medical Peers This Year?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

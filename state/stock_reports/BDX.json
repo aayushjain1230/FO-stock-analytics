@@ -1,13 +1,13 @@
 {
   "ticker": "BDX",
-  "generated_at": "2026-06-24T22:50:02.702495",
+  "generated_at": "2026-06-25T15:40:19.026004",
   "score": {
-    "final_score": 41.25,
-    "rating": "Drop",
-    "confidence": 31.26,
+    "final_score": 46.25,
+    "rating": "Hold",
+    "confidence": 34.66,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 33.0,
+      "technical": 53.0,
       "momentum": 30.0,
       "volume": 0,
       "fundamental": 55.0,
@@ -15,25 +15,27 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 33.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
+        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 140.7100067138672,
       "resistance": 158.63999938964844,
-      "risk_reward": 1.54
+      "risk_reward": 0.58
     },
     "momentum": {
       "score": 30.0,
       "returns": {
-        "1m": 0.008004808818248499,
-        "3m": -0.04558907009472901,
-        "6m": -0.026036935601053357,
-        "12m": 0.13466465063172928
+        "1m": 0.03635821310911247,
+        "3m": -0.03252722487449233,
+        "6m": -0.0036851081716275935,
+        "12m": 0.15493980137548502
       },
-      "acceleration": -0.0326,
+      "acceleration": -0.0307,
       "evidence": [
         "1m return is positive",
         "12m return is positive"
@@ -41,8 +43,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2542662.7,
-      "relative_volume": 0.6110735804635038,
+      "average_volume": 2464020.35,
+      "relative_volume": 0.23027691309448803,
       "accumulation_days": 2,
       "distribution_days": 3,
       "evidence": []
@@ -55,17 +57,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016965390013275523,
-        "annualized_volatility": 0.26931721722207497,
-        "maximum_drawdown": -0.33394227132310306,
-        "sharpe_ratio": -0.18893408350099777,
-        "sortino_ratio": -0.22752134865167517,
-        "calmar_ratio": -0.2526580655050002,
-        "beta": 0.4582413328739612,
-        "alpha": -0.13145198421241483,
-        "capm_expected_return": 0.08056878260552298,
-        "actual_return": -0.05088320160689186,
-        "market_return": 0.17582172716768732
+        "volatility": 0.016998435679108807,
+        "annualized_volatility": 0.26984180090429544,
+        "maximum_drawdown": -0.3339422847210607,
+        "sharpe_ratio": -0.13420066106439466,
+        "sortino_ratio": -0.16192421700343712,
+        "calmar_ratio": -0.2125066130748615,
+        "beta": 0.4586375407053734,
+        "alpha": -0.1170334397631914,
+        "capm_expected_return": 0.08082049169902819,
+        "actual_return": -0.03621294806416321,
+        "market_return": 0.17621865749307883
       },
       "evidence": []
     },
@@ -77,7 +79,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive; 12m return is positive; analyst revision"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "BDX",
@@ -86,7 +88,7 @@
     "sector": "Healthcare",
     "industry": "Medical Instruments & Supplies",
     "exchange": "NYQ",
-    "market_cap": 40716607488.0,
+    "market_cap": 41857347584.0,
     "revenue_growth": 0.052,
     "eps_growth": null,
     "fcf_growth": null,
@@ -103,14 +105,14 @@
     "cash_position": 816000000.0,
     "total_debt": 17279000576.0,
     "interest_coverage": null,
-    "forward_pe": 11.035922,
-    "trailing_pe": 25.788832,
+    "forward_pe": 11.34511,
+    "trailing_pe": 26.511345,
     "peg": 1.11,
-    "price_to_book": 1.6871804,
-    "price_to_sales": 1.8318535,
-    "enterprise_to_ebitda": 9.115,
-    "enterprise_to_revenue": 2.525,
-    "fcf_yield": 0.11128751768760328,
+    "price_to_book": 1.7344493,
+    "price_to_sales": 1.8831758,
+    "enterprise_to_ebitda": 9.287,
+    "enterprise_to_revenue": 2.573,
+    "fcf_yield": 0.10825459417624622,
     "institutional_ownership": 0.99307,
     "insider_ownership": 0.00417,
     "short_interest": 7204143.0,
@@ -122,7 +124,7 @@
     "target_low_price": 150.0,
     "recommendation": "buy",
     "number_of_analysts": 12.0,
-    "dividend_yield": 2.92,
+    "dividend_yield": 2.84,
     "payout_ratio": 0.7295,
     "next_earnings_date": "1778157000",
     "eps_current_year": 5.73,
@@ -130,14 +132,14 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 53.38558956393296,
-    "macd_cross": false,
+    "rsi": 53.86287338032017,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6110735804635038,
-    "price_above_sma50": false,
+    "relative_volume": 0.23027691309448803,
+    "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 140.7100067138672,
     "resistance": 158.63999938964844
   },
@@ -230,7 +232,7 @@
         "last_surprise_pct": 0.045100003,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 20.29,
+      "analyst_upside_pct": 17.01,
       "eps_growth_implied": 133.68
     },
     "evidence": [
@@ -325,18 +327,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6561,
-    "probability_pct": 65.61,
+    "probability_of_outperformance": 0.6636,
+    "probability_pct": 66.36,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 41.25/100"
+      "Composite score 46.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.25,
-    "technical_score": 33.0,
+    "final_score": 46.25,
+    "technical_score": 53.0,
     "momentum_score": 30.0,
     "volume_score": 0,
     "fundamental_score": 55.0,
@@ -345,10 +347,10 @@
     "revenue_growth": 0.052,
     "eps_growth": null,
     "roe": 0.06672,
-    "forward_pe": 11.035922,
-    "relative_volume": 0.6110735804635038,
+    "forward_pe": 11.34511,
+    "relative_volume": 0.23027691309448803,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
@@ -356,66 +358,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.02675101551207759,
-      "weekly": 0.01798016357471921,
-      "monthly": 0.008004808818248499,
-      "annual": 0.13466465063172928
+      "daily": 0.0289639213341657,
+      "weekly": 0.07372362401249144,
+      "monthly": 0.03635821310911247,
+      "annual": 0.15493980137548502
     },
     "risk": {
-      "volatility": 0.016965390013275523,
-      "annualized_volatility": 0.26931721722207497,
-      "maximum_drawdown": -0.33394227132310306,
-      "sharpe_ratio": -0.18893408350099777,
-      "sortino_ratio": -0.22752134865167517,
-      "calmar_ratio": -0.2526580655050002,
-      "beta": 0.4582413328739612,
-      "alpha": -0.13145198421241483,
-      "capm_expected_return": 0.08056878260552298,
-      "actual_return": -0.05088320160689186,
-      "market_return": 0.17582172716768732
+      "volatility": 0.016998435679108807,
+      "annualized_volatility": 0.26984180090429544,
+      "maximum_drawdown": -0.3339422847210607,
+      "sharpe_ratio": -0.13420066106439466,
+      "sortino_ratio": -0.16192421700343712,
+      "calmar_ratio": -0.2125066130748615,
+      "beta": 0.4586375407053734,
+      "alpha": -0.1170334397631914,
+      "capm_expected_return": 0.08082049169902819,
+      "actual_return": -0.03621294806416321,
+      "market_return": 0.17621865749307883
     },
     "capm": {
-      "beta": 0.4582413328739612,
-      "alpha": -0.13145198421241483,
-      "capm_expected_return": 0.08056878260552298,
-      "actual_return": -0.05088320160689186,
-      "market_return": 0.17582172716768732,
-      "interpretation": "Beta 0.46: Moves roughly 54% less than the market. CAPM expected return is 8.06%; realized alpha is -13.15%, meaning negative alpha versus CAPM."
+      "beta": 0.4586375407053734,
+      "alpha": -0.1170334397631914,
+      "capm_expected_return": 0.08082049169902819,
+      "actual_return": -0.03621294806416321,
+      "market_return": 0.17621865749307883,
+      "interpretation": "Beta 0.46: Moves roughly 54% less than the market. CAPM expected return is 8.08%; realized alpha is -11.70%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.05088320160689186,
+      "actual_return": -0.03621294806416321,
       "components": {
-        "market_component": 0.08056878260552298,
-        "momentum_component": 0.03366616265793232,
-        "volatility_drag": -0.0038634434444149938,
-        "alpha_component": -0.13145198421241483
+        "market_component": 0.08082049169902819,
+        "momentum_component": 0.038734950343871255,
+        "volatility_drag": -0.003968360180859088,
+        "alpha_component": -0.1170334397631914
       },
       "component_weights_pct": {
-        "market_component": 32.29,
-        "momentum_component": 13.49,
-        "volatility_drag": 1.55,
-        "alpha_component": 52.68
+        "market_component": 33.6,
+        "momentum_component": 16.1,
+        "volatility_drag": 1.65,
+        "alpha_component": 48.65
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 146.0818733215332,
-      "sma50": 147.49626831054687,
-      "sma200": 152.0871176147461,
-      "ema20": 145.69517595657598,
-      "ema50": 148.12286774564754,
-      "ema200": 152.2787007871788
+      "sma20": 146.37391052246093,
+      "sma50": 147.44447204589844,
+      "sma200": 152.10834098815917,
+      "ema20": 146.3003975858374,
+      "ema50": 148.27687305495425,
+      "ema200": 152.27642498705845
     },
     "momentum": {
-      "3m": -0.04558907009472901,
-      "6m": -0.026036935601053357,
-      "12m": 0.13466465063172928,
+      "3m": -0.03252722487449233,
+      "6m": -0.0036851081716275935,
+      "12m": 0.15493980137548502,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2542662.7,
-      "relative_volume": 0.6110735804635038,
+      "average_volume": 2464020.35,
+      "relative_volume": 0.23027691309448803,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -425,13 +427,26 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-24",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-25",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: BDX\nRating: Drop | Score: 41.25/100 | Confidence: 31.26/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 140.7100067138672 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.035922\nNews/Catalyst: How Are Emerging Markets Supporting Abbott's EPD Momentum?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BDX\nRating: Hold | Score: 46.25/100 | Confidence: 34.66/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 140.7100067138672 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.34511\nNews/Catalyst: How Are Emerging Markets Supporting Abbott's EPD Momentum?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }
