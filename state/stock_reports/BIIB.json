@@ -1,10 +1,10 @@
 {
   "ticker": "BIIB",
-  "generated_at": "2026-06-26T21:06:36.261844",
+  "generated_at": "2026-06-26T22:44:58.483912",
   "score": {
-    "final_score": 78.95,
+    "final_score": 79.7,
     "rating": "Watch",
-    "confidence": 71.49,
+    "confidence": 74.82,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
@@ -12,7 +12,7 @@
       "volume": 100,
       "fundamental": 68.0,
       "risk": 75.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 90.0,
@@ -76,21 +76,22 @@
         "sharpe_ratio": 0.065966441670054,
         "sortino_ratio": 0.10769976267679969,
         "calmar_ratio": -0.05441118655968098,
-        "beta": 0.5173485395421576,
-        "alpha": -0.06787162300085137,
-        "capm_expected_return": 0.08871601291011984,
+        "beta": 0.517348641101786,
+        "alpha": -0.06787167468172842,
+        "capm_expected_return": 0.08871606459099687,
         "actual_return": 0.020844389909268464,
-        "market_return": 0.17148209790759553
+        "market_return": 0.17148216413995063
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -103,7 +104,7 @@
     "sector": "Healthcare",
     "industry": "Drug Manufacturers - General",
     "exchange": "NMS",
-    "market_cap": 31688091648.0,
+    "market_cap": 31894046720.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.311,
     "fcf_growth": null,
@@ -120,14 +121,14 @@
     "cash_position": 4282700032.0,
     "total_debt": 6561900032.0,
     "interest_coverage": null,
-    "forward_pe": 12.910702,
-    "trailing_pe": 23.103874,
+    "forward_pe": 12.994614,
+    "trailing_pe": 23.254036,
     "peg": 3.94,
-    "price_to_book": 1.6985052,
-    "price_to_sales": 3.188771,
+    "price_to_book": 1.7095444,
+    "price_to_sales": 3.2094963,
     "enterprise_to_ebitda": 9.068,
     "enterprise_to_revenue": 3.23,
-    "fcf_yield": 0.060935353174600866,
+    "fcf_yield": 0.060541864535150466,
     "institutional_ownership": 0.96228,
     "insider_ownership": 0.0018799999,
     "short_interest": 5188836.0,
@@ -144,8 +145,7 @@
     "next_earnings_date": "1785328200",
     "eps_current_year": 9.29,
     "eps_forward": 16.62458,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
     "rsi": 69.17516011118691,
@@ -204,9 +204,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
+    "bullish_news_score": 3,
     "bearish_news_score": 0,
     "institutional_ownership": 0.96228,
     "detail": {
@@ -254,6 +254,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -275,6 +276,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Why Biogen (BIIB) Stock Is Up Today",
+        "source": "StockStory",
+        "published": "2026-06-26T22:08:25Z",
+        "summary": "Shares of biotech company Biogen (NASDAQ:BIIB) jumped 5.6% in the afternoon session after investors continued to cheer a string of growth signals, including the $1 billion purchase of RayThera Inc., an FDA Breakthrough Therapy tag for its drug candidate Salanersen, and a recent analyst upgrade.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Lilly, J&J and AbbVie Hit New Highs",
         "source": "GuruFocus.com",
@@ -314,16 +325,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Biogen to acquire RayThera for up to $1bn",
-        "source": "Pharmaceutical Technology",
-        "published": "2026-06-19T09:48:18Z",
-        "summary": "The proposed acquisition will add anti-inflammatory candidates to Biogen, including RayThera\u2019s lead asset.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -343,37 +344,37 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.905,
-    "probability_pct": 90.5,
+    "probability_of_outperformance": 0.9101,
+    "probability_pct": 91.01,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 78.95/100"
+      "Composite score 79.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 78.95,
+    "final_score": 79.7,
     "technical_score": 90.0,
     "momentum_score": 70.0,
     "volume_score": 100,
     "fundamental_score": 68.0,
     "risk_score": 75.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.019,
     "eps_growth": 0.311,
     "roe": 0.077010006,
-    "forward_pe": 12.910702,
+    "forward_pe": 12.994614,
     "relative_volume": 1.837571602566837,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -389,27 +390,27 @@
       "sharpe_ratio": 0.065966441670054,
       "sortino_ratio": 0.10769976267679969,
       "calmar_ratio": -0.05441118655968098,
-      "beta": 0.5173485395421576,
-      "alpha": -0.06787162300085137,
-      "capm_expected_return": 0.08871601291011984,
+      "beta": 0.517348641101786,
+      "alpha": -0.06787167468172842,
+      "capm_expected_return": 0.08871606459099687,
       "actual_return": 0.020844389909268464,
-      "market_return": 0.17148209790759553
+      "market_return": 0.17148216413995063
     },
     "capm": {
-      "beta": 0.5173485395421576,
-      "alpha": -0.06787162300085137,
-      "capm_expected_return": 0.08871601291011984,
+      "beta": 0.517348641101786,
+      "alpha": -0.06787167468172842,
+      "capm_expected_return": 0.08871606459099687,
       "actual_return": 0.020844389909268464,
-      "market_return": 0.17148209790759553,
+      "market_return": 0.17148216413995063,
       "interpretation": "Beta 0.52: Moves roughly 48% less than the market. CAPM expected return is 8.87%; realized alpha is -6.79%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
       "actual_return": 0.020844389909268464,
       "components": {
-        "market_component": 0.08871601291011984,
+        "market_component": 0.08871606459099687,
         "momentum_component": 0.1742204126189505,
         "volatility_drag": -0.013196950999801905,
-        "alpha_component": -0.06787162300085137
+        "alpha_component": -0.06787167468172842
       },
       "component_weights_pct": {
         "market_component": 25.79,
@@ -467,5 +468,5 @@
       }
     ]
   },
-  "report": "Ticker: BIIB\nRating: Watch | Score: 78.95/100 | Confidence: 71.49/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 172.33999633789062 | Resistance: 216.02999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.910702\nNews/Catalyst: Lilly, J&J and AbbVie Hit New Highs\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.84x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: BIIB\nRating: Watch | Score: 79.7/100 | Confidence: 74.82/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 172.33999633789062 | Resistance: 216.02999877929688\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.994614\nNews/Catalyst: Why Biogen (BIIB) Stock Is Up Today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.84x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

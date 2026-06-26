@@ -1,10 +1,10 @@
 {
   "ticker": "CAT",
-  "generated_at": "2026-06-26T21:06:45.906273",
+  "generated_at": "2026-06-26T22:45:08.950866",
   "score": {
-    "final_score": 77.15,
+    "final_score": 77.9,
     "rating": "Watch",
-    "confidence": 67.71,
+    "confidence": 70.85,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
@@ -12,7 +12,7 @@
       "volume": 50.0,
       "fundamental": 71.0,
       "risk": 85.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 90.0,
@@ -36,7 +36,7 @@
         "1m": 0.09620517922474425,
         "3m": 0.4211933327727133,
         "6m": 0.7199052200035676,
-        "12m": 1.71345433552443
+        "12m": 1.7134541102586445
       },
       "acceleration": 0.0612,
       "evidence": [
@@ -71,27 +71,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.021420933049818975,
-        "annualized_volatility": 0.34004677020471225,
-        "maximum_drawdown": -0.34047144427270526,
-        "sharpe_ratio": 1.8606723382167103,
-        "sortino_ratio": 2.9995150198950413,
-        "calmar_ratio": 2.282147268629215,
-        "beta": 1.2630006839514691,
-        "alpha": 0.41613361207711635,
-        "capm_expected_return": 0.21658200694272595,
-        "actual_return": 0.6327156190198423,
-        "market_return": 0.17148209790759553
+        "volatility": 0.021420938182056152,
+        "annualized_volatility": 0.3400468516764517,
+        "maximum_drawdown": -0.34047151889854677,
+        "sharpe_ratio": 1.8606722580299122,
+        "sortino_ratio": 2.99951454557777,
+        "calmar_ratio": 2.28214727207477,
+        "beta": 1.2630012787093845,
+        "alpha": 0.4161335507601758,
+        "capm_expected_return": 0.2165821925846102,
+        "actual_return": 0.632715743344786,
+        "market_return": 0.17148216413995063
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -104,7 +105,7 @@
     "sector": "Industrials",
     "industry": "Farm & Heavy Construction Machinery",
     "exchange": "NYQ",
-    "market_cap": 467187662848.0,
+    "market_cap": 459426660352.0,
     "revenue_growth": 0.222,
     "eps_growth": 0.302,
     "fcf_growth": null,
@@ -121,14 +122,14 @@
     "cash_position": 3316000000.0,
     "total_debt": 43065999360.0,
     "interest_coverage": null,
-    "forward_pe": 33.684643,
-    "trailing_pe": 50.513947,
+    "forward_pe": 33.12507,
+    "trailing_pe": 49.6748,
     "peg": 2.36,
-    "price_to_book": 25.038137,
-    "price_to_sales": 6.6028924,
+    "price_to_book": 24.6222,
+    "price_to_sales": 6.493204,
     "enterprise_to_ebitda": 36.178,
     "enterprise_to_revenue": 7.443,
-    "fcf_yield": 0.008083742779031237,
+    "fcf_yield": 0.008220299825670662,
     "institutional_ownership": 0.72883004,
     "insider_ownership": 0.00219,
     "short_interest": 8445334.0,
@@ -145,8 +146,7 @@
     "next_earnings_date": "1785846600",
     "eps_current_year": 20.08,
     "eps_forward": 30.11224,
-    "classification": "Fundamentally Strong",
-    "from_cache": true
+    "classification": "Fundamentally Strong"
   },
   "technical_screen": {
     "rsi": 61.43967740436991,
@@ -205,10 +205,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 0,
+    "bullish_news_score": 1,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.72883004,
     "detail": {
       "earnings": {
@@ -255,6 +255,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -276,6 +277,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Top Analyst Reports for Caterpillar, Palo Alto & Toyota",
+        "source": "Zacks",
+        "published": "2026-06-26T20:16:00Z",
+        "summary": "Caterpillar, Palo Alto Networks and Toyota headline Zacks' top analyst reports, highlighting growth drivers, opportunities and key risks shaping outlooks.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Chip Stocks Drag Nasdaq Lower. Tech-Heavy Index Falls for Fifth Day in a Row.",
+        "source": "Barrons.com",
+        "published": "2026-06-26T20:08:17Z",
+        "summary": "Another sharp chip stock drop sent the Nasdaq tumbling for a fifth day in a row. The Dow fell 56 points, or 0.1%. The S&P 500 was down 0.1%. The Nasdaq was down 0.2%. The S&P and Nasdaq each fell every day this week.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Dow, Nasdaq Turn Lower to Wrap Wild Week",
         "source": "Barrons.com",
@@ -305,26 +326,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Global Cold Feet on AI Trade Affect Pre-Markets",
-        "source": "Zacks",
-        "published": "2026-06-26T14:20:00Z",
-        "summary": "This week of trading had so far been established early on: sinking in the Nasdaq and, by consequence, the S&P 500, while staying in the green for the blue-chip Dow and small-cap Russell 2000.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Beyond Cloud & Memory: Infrastructure ETFs to Buy Amid AI Data Center Boom",
-        "source": "Zacks",
-        "published": "2026-06-26T14:06:00Z",
-        "summary": "ETFs like PAVE offer diversified exposure to AI data center power infrastructure as utilities and grid equipment firms benefit from rising AI build-out spending.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -344,73 +345,73 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9124,
-    "probability_pct": 91.24,
+    "probability_of_outperformance": 0.9171,
+    "probability_pct": 91.71,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 77.15/100"
+      "Composite score 77.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 77.15,
+    "final_score": 77.9,
     "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 50.0,
     "fundamental_score": 71.0,
     "risk_score": 85.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.222,
     "eps_growth": 0.302,
     "roe": 0.51331,
-    "forward_pe": 33.684643,
+    "forward_pe": 33.12507,
     "relative_volume": 3.542318169053386,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
       "daily": -0.05632873720439224,
       "weekly": 0.011817535952153513,
       "monthly": 0.09620517922474425,
-      "annual": 1.71345433552443
+      "annual": 1.7134541102586445
     },
     "risk": {
-      "volatility": 0.021420933049818975,
-      "annualized_volatility": 0.34004677020471225,
-      "maximum_drawdown": -0.34047144427270526,
-      "sharpe_ratio": 1.8606723382167103,
-      "sortino_ratio": 2.9995150198950413,
-      "calmar_ratio": 2.282147268629215,
-      "beta": 1.2630006839514691,
-      "alpha": 0.41613361207711635,
-      "capm_expected_return": 0.21658200694272595,
-      "actual_return": 0.6327156190198423,
-      "market_return": 0.17148209790759553
+      "volatility": 0.021420938182056152,
+      "annualized_volatility": 0.3400468516764517,
+      "maximum_drawdown": -0.34047151889854677,
+      "sharpe_ratio": 1.8606722580299122,
+      "sortino_ratio": 2.99951454557777,
+      "calmar_ratio": 2.28214727207477,
+      "beta": 1.2630012787093845,
+      "alpha": 0.4161335507601758,
+      "capm_expected_return": 0.2165821925846102,
+      "actual_return": 0.632715743344786,
+      "market_return": 0.17148216413995063
     },
     "capm": {
-      "beta": 1.2630006839514691,
-      "alpha": 0.41613361207711635,
-      "capm_expected_return": 0.21658200694272595,
-      "actual_return": 0.6327156190198423,
-      "market_return": 0.17148209790759553,
+      "beta": 1.2630012787093845,
+      "alpha": 0.4161335507601758,
+      "capm_expected_return": 0.2165821925846102,
+      "actual_return": 0.632715743344786,
+      "market_return": 0.17148216413995063,
       "interpretation": "Beta 1.26: Moves roughly 26% more than the market. CAPM expected return is 21.66%; realized alpha is 41.61%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.6327156190198423,
+      "actual_return": 0.632715743344786,
       "components": {
-        "market_component": 0.21658200694272595,
-        "momentum_component": 0.4283635838811075,
-        "volatility_drag": -0.01800935404094245,
-        "alpha_component": 0.41613361207711635
+        "market_component": 0.2165821925846102,
+        "momentum_component": 0.4283635275646611,
+        "volatility_drag": -0.018009370335290344,
+        "alpha_component": 0.4161335507601758
       },
       "component_weights_pct": {
         "market_component": 20.07,
@@ -423,15 +424,15 @@
     "trend": {
       "sma20": 939.6630004882812,
       "sma50": 895.3136352539062,
-      "sma200": 683.4705778503418,
-      "ema20": 952.8509987065202,
-      "ema50": 894.5907326946883,
-      "ema200": 712.0900539489888
+      "sma200": 683.4705781555176,
+      "ema20": 952.8509987065199,
+      "ema50": 894.5907326923634,
+      "ema200": 712.0900534955064
     },
     "momentum": {
       "3m": 0.4211933327727133,
       "6m": 0.7199052200035676,
-      "12m": 1.71345433552443,
+      "12m": 1.7134541102586445,
       "24m": 0.0,
       "score": 75.0
     },
@@ -462,5 +463,5 @@
       }
     ]
   },
-  "report": "Ticker: CAT\nRating: Watch | Score: 77.15/100 | Confidence: 67.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 667.4299926757812 | Resistance: 1057.010009765625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 33.684643\nNews/Catalyst: Dow, Nasdaq Turn Lower to Wrap Wild Week\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.54x\nWhat Invalidates: Volume fades and price cannot hold the move"
+  "report": "Ticker: CAT\nRating: Watch | Score: 77.9/100 | Confidence: 70.85/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 667.4299926757812 | Resistance: 1057.010009765625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 33.12507\nNews/Catalyst: Top Analyst Reports for Caterpillar, Palo Alto & Toyota\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 3.54x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

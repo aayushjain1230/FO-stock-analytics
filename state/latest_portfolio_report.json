@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T21:05:49.609879",
+  "generated_at": "2026-06-26T22:44:14.052358",
   "positions": [
     {
       "ticker": "AAPL",
@@ -46,14 +46,14 @@
       "weight": 9.1
     }
   ],
-  "portfolio_return": 0.3155783637724645,
+  "portfolio_return": 0.3155783309964757,
   "variance": {
-    "daily_variance": 0.00026475040323100025,
-    "monthly_variance": 0.005559758467851005,
-    "annual_variance": 0.06671710161421206,
-    "daily_volatility": 0.016271152486256168,
-    "monthly_volatility": 0.0745637879124378,
-    "annual_volatility": 0.2582965381382648,
+    "daily_variance": 0.00026475041151839885,
+    "monthly_variance": 0.005559758641886376,
+    "annual_variance": 0.0667171037026365,
+    "daily_volatility": 0.01627115274092155,
+    "monthly_volatility": 0.07456378907946119,
+    "annual_volatility": 0.2582965421809524,
     "risk_classification": "High",
     "covariance_matrix": {
       "AAPL": {
@@ -470,23 +470,23 @@
     ]
   },
   "sharpe": {
-    "portfolio_return": 0.3155783637724645,
+    "portfolio_return": 0.3155783309964757,
     "risk_free_rate": 0.045,
-    "portfolio_volatility": 0.2582965381382648,
-    "sharpe_ratio": 1.0161313394395723,
+    "portfolio_volatility": 0.2582965421809524,
+    "sharpe_ratio": 1.016131230408387,
     "classification": "Strong"
   },
   "sortino": {
-    "sortino_ratio": 1.5610386895664812,
-    "downside_deviation": 0.17333225984783715
+    "sortino_ratio": 1.561038611236521,
+    "downside_deviation": 0.17333224754905116
   },
   "tail_risk": {
-    "value_at_risk": -0.026468619104083636,
-    "conditional_value_at_risk": -0.0363342770553119,
+    "value_at_risk": -0.026468620011154693,
+    "conditional_value_at_risk": -0.036334273348313545,
     "confidence": 0.95,
     "interpretation": "VaR and CVaR are one-day historical estimates; CVaR describes the average loss beyond VaR."
   },
-  "maximum_drawdown": -0.26846569162430656,
+  "maximum_drawdown": -0.26846569130576825,
   "risk_contributions": {
     "AAPL": 6.27,
     "AMD": 16.1,
@@ -606,12 +606,12 @@
     "sharpe_trend": "Stable",
     "drawdown_trend": "Rising",
     "correlation_trend": "Stable",
-    "latest_rolling_volatility": 0.25451728031819454,
-    "latest_rolling_sharpe": 3.777572353471967,
+    "latest_rolling_volatility": 0.25451728031819515,
+    "latest_rolling_sharpe": 3.7775723534719643,
     "latest_rolling_correlation": 0.2996
   },
   "forecast": {
-    "autocorrelation_1d": -0.07240590114461852,
+    "autocorrelation_1d": -0.07240585416476265,
     "momentum_state": "Mean reversion likely",
     "current_volatility": 0.2545172803181952,
     "expected_volatility": 0.2464191756280516,
@@ -621,19 +621,19 @@
   "monte_carlo": {
     "horizon_days": 126,
     "simulations": 10000,
-    "expected_return": 0.16963805176914767,
-    "best_case_p95": 0.5554184399438787,
-    "worst_case_p05": -0.14861450850208033,
+    "expected_return": 0.16963803849948364,
+    "best_case_p95": 0.5554183442905479,
+    "worst_case_p05": -0.14861454551831693,
     "probability_of_loss": 0.2214,
     "probability_of_hitting_target": 0.5933,
     "probability_of_large_drawdown": 0.4087
   },
   "optimization": {
-    "current_volatility": 0.2582965381382648,
-    "optimized_volatility": 0.29690859477255677,
-    "current_sharpe": 1.0161313394395723,
-    "optimized_sharpe": 1.6045199918577366,
-    "risk_reduction_opportunity": -0.14948731761020786,
+    "current_volatility": 0.2582965421809524,
+    "optimized_volatility": 0.29690859635618366,
+    "current_sharpe": 1.016131230408387,
+    "optimized_sharpe": 1.60451991108085,
+    "risk_reduction_opportunity": -0.14948730575023028,
     "optimized_weights": {
       "AAPL": 0.0,
       "AMD": 15.79,
@@ -807,26 +807,26 @@
           "momentum": 27.3,
           "quality": 35.0,
           "growth": 52.5,
-          "value": 52.5,
+          "value": 50.0,
           "low_volatility": 54.5
         },
-        "composite_score": 42.7,
+        "composite_score": 42.2,
         "contributions": {
           "momentum": 6.83,
           "quality": 7.7,
           "growth": 10.5,
-          "value": 9.45,
+          "value": 9.0,
           "low_volatility": 8.17
         },
         "data_coverage_pct": 89.3,
-        "explanation": "Primary score drivers: Low Volatility: 54.5/100, Growth: 52.5/100, Value: 52.5/100",
+        "explanation": "Primary score drivers: Low Volatility: 54.5/100, Growth: 52.5/100, Value: 50.0/100",
         "research_mindset": {
           "signal": "multi_factor",
           "thesis": "The stock ranks well when several economically distinct factors agree.",
           "evidence": [
             "Low Volatility: 54.5/100",
             "Growth: 52.5/100",
-            "Value: 52.5/100"
+            "Value: 50.0/100"
           ],
           "assumptions": [
             "Cross-sectional inputs are comparable across the universe.",
@@ -948,15 +948,15 @@
           "momentum": 72.7,
           "quality": 67.5,
           "growth": 70.0,
-          "value": 42.5,
+          "value": 45.0,
           "low_volatility": 69.7
         },
-        "composite_score": 65.1,
+        "composite_score": 65.6,
         "contributions": {
           "momentum": 18.18,
           "quality": 14.85,
           "growth": 14.0,
-          "value": 7.65,
+          "value": 8.1,
           "low_volatility": 10.46
         },
         "data_coverage_pct": 89.3,
@@ -1280,15 +1280,15 @@
           "momentum": 72.7,
           "quality": 67.5,
           "growth": 70.0,
-          "value": 42.5,
+          "value": 45.0,
           "low_volatility": 69.7
         },
-        "composite_score": 65.1,
+        "composite_score": 65.6,
         "contributions": {
           "momentum": 18.18,
           "quality": 14.85,
           "growth": 14.0,
-          "value": 7.65,
+          "value": 8.1,
           "low_volatility": 10.46
         },
         "data_coverage_pct": 89.3,
@@ -1663,26 +1663,26 @@
           "momentum": 27.3,
           "quality": 35.0,
           "growth": 52.5,
-          "value": 52.5,
+          "value": 50.0,
           "low_volatility": 54.5
         },
-        "composite_score": 42.7,
+        "composite_score": 42.2,
         "contributions": {
           "momentum": 6.83,
           "quality": 7.7,
           "growth": 10.5,
-          "value": 9.45,
+          "value": 9.0,
           "low_volatility": 8.17
         },
         "data_coverage_pct": 89.3,
-        "explanation": "Primary score drivers: Low Volatility: 54.5/100, Growth: 52.5/100, Value: 52.5/100",
+        "explanation": "Primary score drivers: Low Volatility: 54.5/100, Growth: 52.5/100, Value: 50.0/100",
         "research_mindset": {
           "signal": "multi_factor",
           "thesis": "The stock ranks well when several economically distinct factors agree.",
           "evidence": [
             "Low Volatility: 54.5/100",
             "Growth: 52.5/100",
-            "Value: 52.5/100"
+            "Value: 50.0/100"
           ],
           "assumptions": [
             "Cross-sectional inputs are comparable across the universe.",
@@ -1807,10 +1807,10 @@
       "value": {
         "AAPL": 3.86,
         "AMD": 2.73,
-        "AMZN": 4.77,
+        "AMZN": 4.55,
         "FIZZ": 7.73,
         "GE": 2.95,
-        "GOOGL": 3.86,
+        "GOOGL": 4.09,
         "MSFT": 6.14,
         "NVDA": 4.32,
         "TSLA": 1.14,
@@ -1839,24 +1839,24 @@
     "benchmark": "SPY",
     "periods": {
       "1M": {
-        "portfolio_return": -0.050832114053202204,
+        "portfolio_return": -0.05083211646633856,
         "benchmark_return": -0.03144969787773633,
-        "relative_return": -0.019382416175465877
+        "relative_return": -0.019382418588602235
       },
       "3M": {
-        "portfolio_return": 0.31642911363712,
+        "portfolio_return": 0.3164291152214074,
         "benchmark_return": 0.1526250852253399,
-        "relative_return": 0.1638040284117801
+        "relative_return": 0.16380402999606747
       },
       "6M": {
-        "portfolio_return": 0.1686921353810229,
+        "portfolio_return": 0.16869214670484967,
         "benchmark_return": 0.06153718032958233,
-        "relative_return": 0.10715495505144057
+        "relative_return": 0.10715496637526734
       },
       "1Y": {
-        "portfolio_return": 0.49364278058583144,
+        "portfolio_return": 0.4936427842635558,
         "benchmark_return": 0.2046143743374318,
-        "relative_return": 0.28902840624839965
+        "relative_return": 0.289028409926124
       }
     }
   }

@@ -1,10 +1,10 @@
 {
   "ticker": "GE",
-  "generated_at": "2026-06-26T21:07:18.324234",
+  "generated_at": "2026-06-26T22:45:43.636654",
   "score": {
-    "final_score": 70.75,
+    "final_score": 71.5,
     "rating": "Watch",
-    "confidence": 54.56,
+    "confidence": 57.84,
     "risk_level": "Controlled",
     "categories": {
       "technical": 83.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 60.0,
       "risk": 100,
-      "catalyst": 20.0
+      "catalyst": 35.0
     },
     "technical": {
       "score": 83.0,
@@ -68,24 +68,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02075179572716349,
-        "annualized_volatility": 0.32942454451252423,
-        "maximum_drawdown": -0.213642550260851,
-        "sharpe_ratio": 1.4582994198564132,
-        "sortino_ratio": 1.8824880611276928,
-        "calmar_ratio": 2.483141574999141,
-        "beta": 1.1644590460152655,
-        "alpha": 0.2807157420109022,
-        "capm_expected_return": 0.19968388013817504,
-        "actual_return": 0.4803996221490772,
-        "market_return": 0.17148209790759553
+        "volatility": 0.020751796350029557,
+        "annualized_volatility": 0.3294245544002165,
+        "maximum_drawdown": -0.21364260712396543,
+        "sharpe_ratio": 1.4582993849097656,
+        "sortino_ratio": 1.8824876067672769,
+        "calmar_ratio": 2.483140914086198,
+        "beta": 1.1644585491503003,
+        "alpha": 0.2807157529964488,
+        "capm_expected_return": 0.19968387205956056,
+        "actual_return": 0.48039962505600936,
+        "market_return": 0.17148216413995063
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 20.0,
+      "score": 35.0,
       "evidence": [
-        "sector strength"
+        "sector strength",
+        "major news"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
@@ -97,7 +98,7 @@
     "sector": "Industrials",
     "industry": "Aerospace & Defense",
     "exchange": "NYQ",
-    "market_cap": 384277905408.0,
+    "market_cap": 385542127616.0,
     "revenue_growth": 0.247,
     "eps_growth": -0.018,
     "fcf_growth": null,
@@ -114,14 +115,14 @@
     "cash_position": 10581000192.0,
     "total_debt": 21321000960.0,
     "interest_coverage": null,
-    "forward_pe": 42.34095,
-    "trailing_pe": 45.63151,
+    "forward_pe": 42.480247,
+    "trailing_pe": 45.781635,
     "peg": 8.81,
-    "price_to_book": 21.25094,
-    "price_to_sales": 7.9539237,
+    "price_to_book": 21.320854,
+    "price_to_sales": 7.9800906,
     "enterprise_to_ebitda": 36.1,
     "enterprise_to_revenue": 8.247,
-    "fcf_yield": 0.014749741435126501,
+    "fcf_yield": 0.014701375901637727,
     "institutional_ownership": 0.80989,
     "insider_ownership": 0.00302,
     "short_interest": 13943685.0,
@@ -198,10 +199,10 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": false,
-    "bullish_news_score": 1,
-    "bearish_news_score": 0,
+    "bullish_news_score": 2,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.80989,
     "detail": {
       "earnings": {
@@ -246,7 +247,8 @@
       "eps_growth_implied": 7.77
     },
     "evidence": [
-      "technical backdrop is constructive"
+      "technical backdrop is constructive",
+      "recent news item has elevated importance"
     ]
   },
   "analyst": {
@@ -267,6 +269,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "General Electric (GE) Is Betting On A $170 Billion Services Backlog",
+        "source": "Simply Wall St.",
+        "published": "2026-06-26T22:09:30Z",
+        "summary": "GE Aerospace, part of General Electric (NYSE:GE), has shifted its focus toward a high margin services business. The company reports a services revenue backlog of about $170b tied to its aerospace operations. Engine deliveries have increased, supporting a larger installed base that feeds future services activity. This pivot strengthens operational execution but raises concentration risk around the services segment. For investors following General Electric, the key story now centers on GE...",
+        "bullish_score": 1,
+        "bearish_score": 2,
+        "importance_score": 75,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
       {
         "headline": "GE Stock At 52-Week Highs: Is the Best Still Ahead?",
         "source": "Trefis",
@@ -306,16 +318,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Wall Street Analysts Think GE (GE) Is a Good Investment: Is It?",
-        "source": "Zacks",
-        "published": "2026-06-26T13:30:04Z",
-        "summary": "Based on the average brokerage recommendation (ABR), GE (GE) should be added to one's portfolio. Wall Street analysts' overly optimistic recommendations cast doubt on the effectiveness of this highly sought-after metric. So, is the stock worth buying?",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -333,35 +335,35 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8527,
-    "probability_pct": 85.27,
+    "probability_of_outperformance": 0.86,
+    "probability_pct": 86.0,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "Breakout pressure detected",
-      "Composite score 70.75/100"
+      "Composite score 71.5/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 70.75,
+    "final_score": 71.5,
     "technical_score": 83.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 60.0,
     "risk_score": 100,
-    "catalyst_score": 20.0,
+    "catalyst_score": 35.0,
     "revenue_growth": 0.247,
     "eps_growth": -0.018,
     "roe": 0.45428002,
-    "forward_pe": 42.34095,
+    "forward_pe": 42.480247,
     "relative_volume": 1.430865419632849,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -371,33 +373,33 @@
       "annual": 0.4844063205594966
     },
     "risk": {
-      "volatility": 0.02075179572716349,
-      "annualized_volatility": 0.32942454451252423,
-      "maximum_drawdown": -0.213642550260851,
-      "sharpe_ratio": 1.4582994198564132,
-      "sortino_ratio": 1.8824880611276928,
-      "calmar_ratio": 2.483141574999141,
-      "beta": 1.1644590460152655,
-      "alpha": 0.2807157420109022,
-      "capm_expected_return": 0.19968388013817504,
-      "actual_return": 0.4803996221490772,
-      "market_return": 0.17148209790759553
+      "volatility": 0.020751796350029557,
+      "annualized_volatility": 0.3294245544002165,
+      "maximum_drawdown": -0.21364260712396543,
+      "sharpe_ratio": 1.4582993849097656,
+      "sortino_ratio": 1.8824876067672769,
+      "calmar_ratio": 2.483140914086198,
+      "beta": 1.1644585491503003,
+      "alpha": 0.2807157529964488,
+      "capm_expected_return": 0.19968387205956056,
+      "actual_return": 0.48039962505600936,
+      "market_return": 0.17148216413995063
     },
     "capm": {
-      "beta": 1.1644590460152655,
-      "alpha": 0.2807157420109022,
-      "capm_expected_return": 0.19968388013817504,
-      "actual_return": 0.4803996221490772,
-      "market_return": 0.17148209790759553,
+      "beta": 1.1644585491503003,
+      "alpha": 0.2807157529964488,
+      "capm_expected_return": 0.19968387205956056,
+      "actual_return": 0.48039962505600936,
+      "market_return": 0.17148216413995063,
       "interpretation": "Beta 1.16: Moves roughly in line with the market. CAPM expected return is 19.97%; realized alpha is 28.07%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.4803996221490772,
+      "actual_return": 0.48039962505600936,
       "components": {
-        "market_component": 0.19968388013817504,
+        "market_component": 0.19968387205956056,
         "momentum_component": 0.12110158013987415,
-        "volatility_drag": -0.01588490890250485,
-        "alpha_component": 0.2807157420109022
+        "volatility_drag": -0.0158849108800433,
+        "alpha_component": 0.2807157529964488
       },
       "component_weights_pct": {
         "market_component": 32.34,
@@ -410,10 +412,10 @@
     "trend": {
       "sma20": 340.1055023193359,
       "sma50": 312.7846014404297,
-      "sma200": 307.14701385498046,
-      "ema20": 343.07759609381185,
-      "ema50": 324.10349135652973,
-      "ema200": 299.7316651543493
+      "sma200": 307.14701416015623,
+      "ema20": 343.07759609379366,
+      "ema50": 324.10349134244615,
+      "ema200": 299.73166493140104
     },
     "momentum": {
       "3m": 0.29364749906491494,
@@ -442,5 +444,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: GE\nRating: Watch | Score: 70.75/100 | Confidence: 54.56/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 273.25 | Resistance: 371.3599853515625\nFundamental Outlook: Fundamentally Average | Forward P/E: 42.34095\nNews/Catalyst: GE Stock At 52-Week Highs: Is the Best Still Ahead?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: GE\nRating: Watch | Score: 71.5/100 | Confidence: 57.84/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 273.25 | Resistance: 371.3599853515625\nFundamental Outlook: Fundamentally Average | Forward P/E: 42.480247\nNews/Catalyst: General Electric (GE) Is Betting On A $170 Billion Services Backlog\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

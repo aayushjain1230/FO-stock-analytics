@@ -1,10 +1,10 @@
 {
   "ticker": "CEG",
-  "generated_at": "2026-06-26T21:06:50.176667",
+  "generated_at": "2026-06-26T22:45:13.235309",
   "score": {
-    "final_score": 39.4,
+    "final_score": 40.15,
     "rating": "Drop",
-    "confidence": 36.68,
+    "confidence": 38.81,
     "risk_level": "High",
     "categories": {
       "technical": 53.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 81.0,
       "risk": 35.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 53.0,
@@ -61,17 +61,17 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.037149063959633626,
-        "annualized_volatility": 0.589723108056138,
-        "maximum_drawdown": -0.5070228487628661,
-        "sharpe_ratio": 0.519403118017917,
-        "sortino_ratio": 0.732506263281785,
-        "calmar_ratio": 0.28295248928216166,
-        "beta": 1.6309928210657612,
-        "alpha": 0.026617950462990758,
-        "capm_expected_return": 0.2796860706285843,
-        "actual_return": 0.30630402109157506,
-        "market_return": 0.17148209790759553
+        "volatility": 0.03714906396161671,
+        "annualized_volatility": 0.5897231080876185,
+        "maximum_drawdown": -0.5070228044711592,
+        "sharpe_ratio": 0.5194030538617929,
+        "sortino_ratio": 0.7325060877716364,
+        "calmar_ratio": 0.28295242829039524,
+        "beta": 1.6309934959678256,
+        "alpha": 0.026617688886830637,
+        "capm_expected_return": 0.2796862943867466,
+        "actual_return": 0.3063039832735772,
+        "market_return": 0.17148216413995063
       },
       "evidence": [
         "Volatility is elevated",
@@ -80,10 +80,11 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
@@ -96,7 +97,7 @@
     "sector": "Utilities",
     "industry": "Utilities - Independent Power Producers",
     "exchange": "NMS",
-    "market_cap": 94249934848.0,
+    "market_cap": 94282072064.0,
     "revenue_growth": 0.638,
     "eps_growth": 10.91,
     "fcf_growth": null,
@@ -113,14 +114,14 @@
     "cash_position": 864000000.0,
     "total_debt": 22466000896.0,
     "interest_coverage": null,
-    "forward_pe": 19.515762,
-    "trailing_pe": 22.950434,
+    "forward_pe": 19.522417,
+    "trailing_pe": 22.95826,
     "peg": 3.74,
-    "price_to_book": 2.8562925,
-    "price_to_sales": 3.1556547,
+    "price_to_book": 2.8572664,
+    "price_to_sales": 3.1567307,
     "enterprise_to_ebitda": 14.954,
     "enterprise_to_revenue": 3.984,
-    "fcf_yield": -0.04752125445204,
+    "fcf_yield": -0.04750505624186618,
     "institutional_ownership": 0.83021003,
     "insider_ownership": 0.0032300001,
     "short_interest": 11380943.0,
@@ -137,8 +138,7 @@
     "next_earnings_date": "1778502600",
     "eps_current_year": 11.5,
     "eps_forward": 13.52394,
-    "classification": "Quality Compounder",
-    "from_cache": true
+    "classification": "Quality Compounder"
   },
   "technical_screen": {
     "rsi": 57.37204509239859,
@@ -197,10 +197,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.83021003,
     "detail": {
       "earnings": {
@@ -247,6 +247,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -268,6 +269,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Constellation Energy (CEG) Files To Extend New York Reactor Licenses Through 2049",
+        "source": "Simply Wall St.",
+        "published": "2026-06-26T22:08:45Z",
+        "summary": "Constellation Energy (NasdaqGS:CEG) has filed to extend the operating licenses of its Ginna and Nine Mile Point Unit 1 nuclear reactors in New York. The applications seek to keep both reactors online through 2049 as part of New York's Zero Emissions Credit program. The move is linked to maintaining zero-emissions power, potential ratepayer savings, and continued local jobs and tax revenue. Constellation Energy is a large US power producer with a focus on zero-emission electricity, and its...",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Does Constellation Energy Stock Add A Different Kind of Risk?",
+        "source": "Trefis",
+        "published": "2026-06-26T21:53:00Z",
+        "summary": "The nuclear power giant is surging, but its real value for your portfolio lies in a return stream that marches to its own beat.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Nuclear Stocks And Small Modular Reactors Ace Big Wins. A DOE Deadline Looms.",
         "source": "Investor's Business Daily",
@@ -297,26 +318,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Constellation Energy vs. GE Vernova: Which Utilities Stock Is a Better Buy in 2026?",
-        "source": "Motley Fool",
-        "published": "2026-06-26T01:33:40Z",
-        "summary": "Constellation leads in carbon-free generation, while GE Vernova powers global grids with turbines and automation, see how their financials and risks stack up.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "Why New CEOs Aren\u2019t Quick Fixes for Sluggish Stocks",
-        "source": "Barrons.com",
-        "published": "2026-06-25T15:08:00Z",
-        "summary": "On Monday,  Domino\u2019s Pizza  named Joe Jordan, its operating chief and U.S. president, as its new CEO.  The internal succession didn\u2019t impress investors just yet as slowing sales growth and softer pizza demand came under scrutiny.  Shares fell 5.6% on the announcement day and slipped again the following session.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -336,37 +337,37 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6965,
-    "probability_pct": 69.65,
+    "probability_of_outperformance": 0.7091,
+    "probability_pct": 70.91,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 39.4/100"
+      "Composite score 40.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 39.4,
+    "final_score": 40.15,
     "technical_score": 53.0,
     "momentum_score": 10.0,
     "volume_score": 25.0,
     "fundamental_score": 81.0,
     "risk_score": 35.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.638,
     "eps_growth": 10.91,
     "roe": 0.16104999,
-    "forward_pe": 19.515762,
+    "forward_pe": 19.522417,
     "relative_volume": 0.82222513502104,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -376,33 +377,33 @@
       "annual": -0.1578094145488369
     },
     "risk": {
-      "volatility": 0.037149063959633626,
-      "annualized_volatility": 0.589723108056138,
-      "maximum_drawdown": -0.5070228487628661,
-      "sharpe_ratio": 0.519403118017917,
-      "sortino_ratio": 0.732506263281785,
-      "calmar_ratio": 0.28295248928216166,
-      "beta": 1.6309928210657612,
-      "alpha": 0.026617950462990758,
-      "capm_expected_return": 0.2796860706285843,
-      "actual_return": 0.30630402109157506,
-      "market_return": 0.17148209790759553
+      "volatility": 0.03714906396161671,
+      "annualized_volatility": 0.5897231080876185,
+      "maximum_drawdown": -0.5070228044711592,
+      "sharpe_ratio": 0.5194030538617929,
+      "sortino_ratio": 0.7325060877716364,
+      "calmar_ratio": 0.28295242829039524,
+      "beta": 1.6309934959678256,
+      "alpha": 0.026617688886830637,
+      "capm_expected_return": 0.2796862943867466,
+      "actual_return": 0.3063039832735772,
+      "market_return": 0.17148216413995063
     },
     "capm": {
-      "beta": 1.6309928210657612,
-      "alpha": 0.026617950462990758,
-      "capm_expected_return": 0.2796860706285843,
-      "actual_return": 0.30630402109157506,
-      "market_return": 0.17148209790759553,
+      "beta": 1.6309934959678256,
+      "alpha": 0.026617688886830637,
+      "capm_expected_return": 0.2796862943867466,
+      "actual_return": 0.3063039832735772,
+      "market_return": 0.17148216413995063,
       "interpretation": "Beta 1.63: Moves roughly 63% more than the market. CAPM expected return is 27.97%; realized alpha is 2.66%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.30630402109157506,
+      "actual_return": 0.3063039832735772,
       "components": {
-        "market_component": 0.2796860706285843,
+        "market_component": 0.2796862943867466,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0679446216112276,
-        "alpha_component": 0.026617950462990758
+        "volatility_drag": -0.06794462161752371,
+        "alpha_component": 0.026617688886830637
       },
       "component_weights_pct": {
         "market_component": 74.73,
@@ -417,8 +418,8 @@
       "sma50": 282.1810647583008,
       "sma200": 317.60846786499025,
       "ema20": 268.16331540421686,
-      "ema50": 277.61588462186063,
-      "ema200": 298.1484775615495
+      "ema50": 277.61588462165344,
+      "ema200": 298.1484778429232
     },
     "momentum": {
       "3m": -0.10420343969282386,
@@ -447,5 +448,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CEG\nRating: Drop | Score: 39.4/100 | Confidence: 36.68/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 19.515762\nNews/Catalyst: Nuclear Stocks And Small Modular Reactors Ace Big Wins. A DOE Deadline Looms.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CEG\nRating: Drop | Score: 40.15/100 | Confidence: 38.81/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 242.3000030517578 | Resistance: 322.7799987792969\nFundamental Outlook: Quality Compounder | Forward P/E: 19.522417\nNews/Catalyst: Constellation Energy (CEG) Files To Extend New York Reactor Licenses Through 2049\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
