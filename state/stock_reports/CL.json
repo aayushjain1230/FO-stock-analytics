@@ -1,15 +1,15 @@
 {
   "ticker": "CL",
-  "generated_at": "2026-06-26T19:18:11.904190",
+  "generated_at": "2026-06-26T21:06:54.957578",
   "score": {
-    "final_score": 58.8,
-    "rating": "Hold",
-    "confidence": 39.22,
+    "final_score": 68.8,
+    "rating": "Watch",
+    "confidence": 56.63,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
-      "momentum": 60.0,
-      "volume": 0,
+      "momentum": 70.0,
+      "volume": 50.0,
       "fundamental": 47.0,
       "risk": 85.0,
       "catalyst": 30.0
@@ -27,19 +27,20 @@
         "Stock is not materially extended from SMA20"
       ],
       "support": 81.80999755859375,
-      "resistance": 91.87999725341797,
-      "risk_reward": 0.08
+      "resistance": 92.06999969482422,
+      "risk_reward": 0.0
     },
     "momentum": {
-      "score": 60.0,
+      "score": 70.0,
       "returns": {
-        "1m": -0.0014240031998494773,
-        "3m": 0.09016574573537439,
-        "6m": 0.15461309450472527,
-        "12m": 0.06451101058628828
+        "1m": 0.008544186345431415,
+        "3m": 0.10104822120452739,
+        "6m": 0.16613890947961685,
+        "12m": 0.07513748589682634
       },
-      "acceleration": 0.0129,
+      "acceleration": 0.018,
       "evidence": [
+        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -47,12 +48,15 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 5626315.45,
-      "relative_volume": 0.39450489751689977,
-      "accumulation_days": 7,
+      "score": 50.0,
+      "average_volume": 5950081.9,
+      "relative_volume": 1.4613140030896044,
+      "accumulation_days": 8,
       "distribution_days": 7,
-      "evidence": []
+      "evidence": [
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 47.0,
@@ -64,17 +68,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.013371254962455089,
-        "annualized_volatility": 0.2122620920849668,
-        "maximum_drawdown": -0.2904585229711726,
-        "sharpe_ratio": 0.03857440192903226,
-        "sortino_ratio": 0.059064068601976924,
-        "calmar_ratio": -0.048880567335037164,
-        "beta": 0.01251931983831107,
-        "alpha": 0.006004357611196248,
-        "capm_expected_return": 0.0021835256431865188,
-        "actual_return": 0.008187883254382767,
-        "market_return": 0.17441248177912907
+        "volatility": 0.013393665869694671,
+        "annualized_volatility": 0.21261785420823442,
+        "maximum_drawdown": -0.2904585442010993,
+        "sharpe_ratio": 0.0637235933522953,
+        "sortino_ratio": 0.09777598753101902,
+        "calmar_ratio": -0.030894203891018504,
+        "beta": 0.01104431325765506,
+        "alpha": 0.01165487167363178,
+        "capm_expected_return": 0.0018939020073713603,
+        "actual_return": 0.01354877368100314,
+        "market_return": 0.17148209790759553
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -141,16 +145,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.99581500914569,
+    "rsi": 61.442610222182864,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.39450489751689977,
+    "relative_volume": 1.4613140030896044,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
     "support": 81.80999755859375,
-    "resistance": 91.87999725341797
+    "resistance": 92.06999969482422
   },
   "earnings": {
     "next_earnings_date": "1785501000",
@@ -241,7 +245,7 @@
         "last_surprise_pct": 0.027,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.19,
+      "analyst_upside_pct": 4.11,
       "eps_growth_implied": 56.7
     },
     "evidence": [
@@ -335,19 +339,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6818,
-    "probability_pct": 68.18,
+    "probability_of_outperformance": 0.7257,
+    "probability_pct": 72.57,
     "confidence": "High",
     "evidence": [
-      "Composite score 58.8/100"
+      "Composite score 68.8/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 58.8,
+    "final_score": 68.8,
     "technical_score": 90.0,
-    "momentum_score": 60.0,
-    "volume_score": 0,
+    "momentum_score": 70.0,
+    "volume_score": 50.0,
     "fundamental_score": 47.0,
     "risk_score": 85.0,
     "catalyst_score": 30.0,
@@ -355,7 +359,7 @@
     "eps_growth": -0.059,
     "roe": 3.6357698,
     "forward_pe": 22.73194,
-    "relative_volume": 0.39450489751689977,
+    "relative_volume": 1.4613140030896044,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -365,66 +369,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0010982440829878648,
-      "weekly": 0.018775147990040875,
-      "monthly": -0.0014240031998494773,
-      "annual": 0.06451101058628828
+      "daily": 0.011091611720948746,
+      "weekly": 0.02894497363348547,
+      "monthly": 0.008544186345431415,
+      "annual": 0.07513748589682634
     },
     "risk": {
-      "volatility": 0.013371254962455089,
-      "annualized_volatility": 0.2122620920849668,
-      "maximum_drawdown": -0.2904585229711726,
-      "sharpe_ratio": 0.03857440192903226,
-      "sortino_ratio": 0.059064068601976924,
-      "calmar_ratio": -0.048880567335037164,
-      "beta": 0.01251931983831107,
-      "alpha": 0.006004357611196248,
-      "capm_expected_return": 0.0021835256431865188,
-      "actual_return": 0.008187883254382767,
-      "market_return": 0.17441248177912907
+      "volatility": 0.013393665869694671,
+      "annualized_volatility": 0.21261785420823442,
+      "maximum_drawdown": -0.2904585442010993,
+      "sharpe_ratio": 0.0637235933522953,
+      "sortino_ratio": 0.09777598753101902,
+      "calmar_ratio": -0.030894203891018504,
+      "beta": 0.01104431325765506,
+      "alpha": 0.01165487167363178,
+      "capm_expected_return": 0.0018939020073713603,
+      "actual_return": 0.01354877368100314,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.01251931983831107,
-      "alpha": 0.006004357611196248,
-      "capm_expected_return": 0.0021835256431865188,
-      "actual_return": 0.008187883254382767,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.01: Moves roughly 99% less than the market. CAPM expected return is 0.22%; realized alpha is 0.60%, meaning positive alpha versus CAPM."
+      "beta": 0.01104431325765506,
+      "alpha": 0.01165487167363178,
+      "capm_expected_return": 0.0018939020073713603,
+      "actual_return": 0.01354877368100314,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.01: Moves roughly 99% less than the market. CAPM expected return is 0.19%; realized alpha is 1.17%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.008187883254382767,
+      "actual_return": 0.01354877368100314,
       "components": {
-        "market_component": 0.0021835256431865188,
-        "momentum_component": 0.01612775264657207,
+        "market_component": 0.0018939020073713603,
+        "momentum_component": 0.018784371474206585,
         "volatility_drag": -0.0,
-        "alpha_component": 0.006004357611196248
+        "alpha_component": 0.01165487167363178
       },
       "component_weights_pct": {
-        "market_component": 8.98,
-        "momentum_component": 66.33,
+        "market_component": 5.86,
+        "momentum_component": 58.1,
         "volatility_drag": 0.0,
-        "alpha_component": 24.69
+        "alpha_component": 36.05
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 89.17700004577637,
-      "sma50": 87.85727066040039,
-      "sma200": 83.88679920196533,
-      "ema20": 89.76024937950042,
-      "ema50": 88.59113733780352,
-      "ema200": 86.32837072375881
+      "sma20": 89.22249984741211,
+      "sma50": 87.87547058105469,
+      "sma200": 83.89134922027588,
+      "ema20": 89.84691566835983,
+      "ema50": 88.62682346634851,
+      "ema200": 86.33704321391724
     },
     "momentum": {
-      "3m": 0.09016574573537439,
-      "6m": 0.15461309450472527,
-      "12m": 0.06451101058628828,
+      "3m": 0.10104822120452739,
+      "6m": 0.16613890947961685,
+      "12m": 0.07513748589682634,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5626315.45,
-      "relative_volume": 0.39450489751689977,
+      "average_volume": 5950081.9,
+      "relative_volume": 1.4613140030896044,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -442,5 +446,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CL\nRating: Hold | Score: 58.8/100 | Confidence: 39.22/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 81.80999755859375 | Resistance: 91.87999725341797\nFundamental Outlook: Fundamentally Weak | Forward P/E: 22.73194\nNews/Catalyst: UN estimates 80 mines remain in Hormuz\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CL\nRating: Watch | Score: 68.8/100 | Confidence: 56.63/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 81.80999755859375 | Resistance: 92.06999969482422\nFundamental Outlook: Fundamentally Weak | Forward P/E: 22.73194\nNews/Catalyst: UN estimates 80 mines remain in Hormuz\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

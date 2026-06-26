@@ -1,17 +1,17 @@
 {
   "ticker": "AEE",
-  "generated_at": "2026-06-26T19:17:37.159115",
+  "generated_at": "2026-06-26T21:06:11.521311",
   "score": {
-    "final_score": 62.45,
-    "rating": "Hold",
-    "confidence": 57.96,
+    "final_score": 71.45,
+    "rating": "Watch",
+    "confidence": 69.78,
     "risk_level": "Controlled",
     "categories": {
       "technical": 58.0,
       "momentum": 60.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 73.0,
-      "risk": 100,
+      "risk": 85.0,
       "catalyst": 65.0
     },
     "technical": {
@@ -25,18 +25,18 @@
         "Stock is extended from SMA20"
       ],
       "support": 105.08999633789062,
-      "resistance": 115.58499908447266,
+      "resistance": 118.31999969482422,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.04751391399741167,
-        "3m": 0.0721170231436401,
-        "6m": 0.17957155348068032,
-        "12m": 0.2500350258333055
+        "1m": 0.0723004452672773,
+        "3m": 0.09748571921918514,
+        "6m": 0.2074828650200371,
+        "12m": 0.2796137669276071
       },
-      "acceleration": -0.0177,
+      "acceleration": -0.0063,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,13 +45,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1782536.25,
-      "relative_volume": 0.6922299616627713,
-      "accumulation_days": 4,
+      "score": 100,
+      "average_volume": 1919572.95,
+      "relative_volume": 2.0705954415538104,
+      "accumulation_days": 5,
       "distribution_days": 3,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 2.07x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -62,21 +65,23 @@
       ]
     },
     "risk": {
-      "score": 100,
+      "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.0109233091020036,
-        "annualized_volatility": 0.17340215626673883,
-        "maximum_drawdown": -0.08450901318927817,
-        "sharpe_ratio": 1.7051978056189285,
-        "sortino_ratio": 2.45286572884768,
-        "calmar_ratio": 3.8313622756242474,
-        "beta": 0.13134576870760697,
-        "alpha": 0.2727766348641524,
-        "capm_expected_return": 0.0229083414914812,
-        "actual_return": 0.29568497635563357,
-        "market_return": 0.17441248177912907
+        "volatility": 0.011011517192619707,
+        "annualized_volatility": 0.17480241629510324,
+        "maximum_drawdown": -0.08450900669866979,
+        "sharpe_ratio": 1.7304723479850392,
+        "sortino_ratio": 2.5093183711151443,
+        "calmar_ratio": 3.934458660070895,
+        "beta": 0.12706279285398134,
+        "alpha": 0.28070175347504656,
+        "capm_expected_return": 0.021788994284598958,
+        "actual_return": 0.3024907477596455,
+        "market_return": 0.17148209790759553
       },
-      "evidence": []
+      "evidence": [
+        "Short-term volatility is rising"
+      ]
     },
     "catalyst": {
       "score": 65.0,
@@ -141,16 +146,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.7525598467602,
+    "rsi": 75.20892643562277,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 0.6922299616627713,
+    "relative_volume": 2.0705954415538104,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 105.08999633789062,
-    "resistance": 115.58499908447266
+    "resistance": 118.31999969482422
   },
   "earnings": {
     "next_earnings_date": "1778011200",
@@ -199,7 +204,7 @@
     "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 4,
     "bearish_news_score": 1,
     "institutional_ownership": 0.86328006,
     "detail": {
@@ -241,7 +246,7 @@
         "last_surprise_pct": 0.090900004,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 3.99,
+      "analyst_upside_pct": 1.59,
       "eps_growth_implied": 4.67
     },
     "evidence": [
@@ -269,6 +274,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Is Alliant Energy Stock Underperforming the S&P 500?",
+        "source": "Barchart",
+        "published": "2026-06-19T12:50:44Z",
+        "summary": "Alliant Energy has underperformed the S&P 500 Index over the past year, but analysts are reasonably upbeat about the stock\u2019s prospects.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Why Ameren (AEE) is a Top Dividend Stock for Your Portfolio",
         "source": "Zacks",
@@ -308,16 +323,6 @@
         "bearish_score": 1,
         "importance_score": 75,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Why Is Ameren (AEE) Down 3.1% Since Last Earnings Report?",
-        "source": "Zacks",
-        "published": "2026-06-04T15:30:05Z",
-        "summary": "Ameren (AEE) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -337,30 +342,31 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8322,
-    "probability_pct": 83.22,
+    "probability_of_outperformance": 0.8809,
+    "probability_pct": 88.09,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 62.45/100"
+      "Composite score 71.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 62.45,
+    "final_score": 71.45,
     "technical_score": 58.0,
     "momentum_score": 60.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 73.0,
-    "risk_score": 100,
+    "risk_score": 85.0,
     "catalyst_score": 65.0,
     "revenue_growth": 0.037,
     "eps_growth": 0.196,
     "roe": 0.117469996,
     "forward_pe": 19.791124,
-    "relative_volume": 0.6922299616627713,
+    "relative_volume": 2.0705954415538104,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,82 +376,88 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.009211563052653249,
-      "weekly": 0.06363302688914052,
-      "monthly": 0.04751391399741167,
-      "annual": 0.2500350258333055
+      "daily": 0.03309177469591007,
+      "weekly": 0.0888009725635257,
+      "monthly": 0.0723004452672773,
+      "annual": 0.2796137669276071
     },
     "risk": {
-      "volatility": 0.0109233091020036,
-      "annualized_volatility": 0.17340215626673883,
-      "maximum_drawdown": -0.08450901318927817,
-      "sharpe_ratio": 1.7051978056189285,
-      "sortino_ratio": 2.45286572884768,
-      "calmar_ratio": 3.8313622756242474,
-      "beta": 0.13134576870760697,
-      "alpha": 0.2727766348641524,
-      "capm_expected_return": 0.0229083414914812,
-      "actual_return": 0.29568497635563357,
-      "market_return": 0.17441248177912907
+      "volatility": 0.011011517192619707,
+      "annualized_volatility": 0.17480241629510324,
+      "maximum_drawdown": -0.08450900669866979,
+      "sharpe_ratio": 1.7304723479850392,
+      "sortino_ratio": 2.5093183711151443,
+      "calmar_ratio": 3.934458660070895,
+      "beta": 0.12706279285398134,
+      "alpha": 0.28070175347504656,
+      "capm_expected_return": 0.021788994284598958,
+      "actual_return": 0.3024907477596455,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.13134576870760697,
-      "alpha": 0.2727766348641524,
-      "capm_expected_return": 0.0229083414914812,
-      "actual_return": 0.29568497635563357,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.13: Moves roughly 87% less than the market. CAPM expected return is 2.29%; realized alpha is 27.28%, meaning positive alpha versus CAPM."
+      "beta": 0.12706279285398134,
+      "alpha": 0.28070175347504656,
+      "capm_expected_return": 0.021788994284598958,
+      "actual_return": 0.3024907477596455,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.13: Moves roughly 87% less than the market. CAPM expected return is 2.18%; realized alpha is 28.07%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.29568497635563357,
+      "actual_return": 0.3024907477596455,
       "components": {
-        "market_component": 0.0229083414914812,
-        "momentum_component": 0.06250875645832638,
+        "market_component": 0.021788994284598958,
+        "momentum_component": 0.06990344173190177,
         "volatility_drag": -0.0,
-        "alpha_component": 0.2727766348641524
+        "alpha_component": 0.28070175347504656
       },
       "component_weights_pct": {
-        "market_component": 6.4,
-        "momentum_component": 17.45,
+        "market_component": 5.85,
+        "momentum_component": 18.77,
         "volatility_drag": 0.0,
-        "alpha_component": 76.15
+        "alpha_component": 75.38
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 109.03594818115235,
-      "sma50": 109.44057708740235,
-      "sma200": 104.7142234802246,
-      "ema20": 110.35681193562513,
-      "ema50": 109.40067963699518,
-      "ema200": 104.86001610330565
+      "sma20": 109.17269821166992,
+      "sma50": 109.49527709960938,
+      "sma200": 104.72789859771729,
+      "ema20": 110.61728818422816,
+      "ema50": 109.50793456221291,
+      "ema200": 104.89232893152726
     },
     "momentum": {
-      "3m": 0.0721170231436401,
-      "6m": 0.17957155348068032,
-      "12m": 0.2500350258333055,
+      "3m": 0.09748571921918514,
+      "6m": 0.2074828650200371,
+      "12m": 0.2796137669276071,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1782536.25,
-      "relative_volume": 0.6922299616627713,
-      "volume_spike": false
+      "average_volume": 1919572.95,
+      "relative_volume": 2.0705954415538104,
+      "volume_spike": true
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 70,
-      "label": "Watch closely"
+      "score": 80,
+      "label": "Research priority"
     }
   },
   "why_now": {
     "send_alert": true,
-    "reason": "52-week high",
-    "evidence": "Price is pressing against 52-week highs",
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.07x",
     "date_of_change": "2026-06-26",
-    "strength": 65,
-    "invalidates": "Failed breakout below prior range high",
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
     "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.07x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      },
       {
         "reason": "52-week high",
         "evidence": "Price is pressing against 52-week highs",
@@ -454,5 +466,5 @@
       }
     ]
   },
-  "report": "Ticker: AEE\nRating: Hold | Score: 62.45/100 | Confidence: 57.96/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 105.08999633789062 | Resistance: 115.58499908447266\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.791124\nNews/Catalyst: Why Ameren (AEE) is a Top Dividend Stock for Your Portfolio\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: AEE\nRating: Watch | Score: 71.45/100 | Confidence: 69.78/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 105.08999633789062 | Resistance: 118.31999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.791124\nNews/Catalyst: Is Alliant Energy Stock Underperforming the S&P 500?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.07x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

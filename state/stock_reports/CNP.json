@@ -1,13 +1,13 @@
 {
   "ticker": "CNP",
-  "generated_at": "2026-06-26T19:18:15.324620",
+  "generated_at": "2026-06-26T21:06:59.184863",
   "score": {
-    "final_score": 76.5,
+    "final_score": 74.75,
     "rating": "Watch",
-    "confidence": 64.99,
+    "confidence": 63.99,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 90.0,
+      "technical": 83.0,
       "momentum": 60.0,
       "volume": 100,
       "fundamental": 50.0,
@@ -15,30 +15,29 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 90.0,
+      "score": 83.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 41.290000915527344,
-      "resistance": 44.92499923706055,
+      "resistance": 45.040000915527344,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.04306941154817889,
-        "3m": 0.0671144381615485,
-        "6m": 0.19621023964389228,
-        "12m": 0.2654620683815623
+        "1m": 0.045739522513622566,
+        "3m": 0.06984610101271871,
+        "6m": 0.19927236958700711,
+        "12m": 0.2687014732646211
       },
-      "acceleration": -0.031,
+      "acceleration": -0.0298,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,12 +47,12 @@
     },
     "volume": {
       "score": 100,
-      "average_volume": 6166264.1,
-      "relative_volume": 1.509533462895305,
+      "average_volume": 6254816.35,
+      "relative_volume": 1.771311319156477,
       "accumulation_days": 8,
       "distribution_days": 3,
       "evidence": [
-        "Relative volume is 1.51x",
+        "Relative volume is 1.77x",
         "Price advanced on above-average volume",
         "Accumulation days exceed distribution days",
         "High-volume breakout behavior"
@@ -69,17 +68,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.011660301585930325,
-        "annualized_volatility": 0.1851015492503021,
-        "maximum_drawdown": -0.17269209056118484,
-        "sharpe_ratio": 1.2794451715099047,
-        "sortino_ratio": 1.7251322868928474,
-        "calmar_ratio": 1.4217561548277526,
-        "beta": 0.1267472565005038,
-        "alpha": 0.21472097986235308,
-        "capm_expected_return": 0.02210630356494872,
-        "actual_return": 0.2368272834273018,
-        "market_return": 0.17441248177912907
+        "volatility": 0.011671938723090058,
+        "annualized_volatility": 0.1852862830756865,
+        "maximum_drawdown": -0.17269209056118473,
+        "sharpe_ratio": 1.2601529786624077,
+        "sortino_ratio": 1.700816880643801,
+        "calmar_ratio": 1.3974977544594644,
+        "beta": 0.1248320499639373,
+        "alpha": 0.21208259970919063,
+        "capm_expected_return": 0.021406461813921755,
+        "actual_return": 0.23348906152311238,
+        "market_return": 0.17148209790759553
       },
       "evidence": []
     },
@@ -90,7 +89,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "CNP",
@@ -144,16 +143,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 69.48561789442036,
+    "rsi": 70.0854817895553,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 1.509533462895305,
+    "relative_volume": 1.771311319156477,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation, volume surge",
     "support": 41.290000915527344,
-    "resistance": 44.92499923706055
+    "resistance": 45.040000915527344
   },
   "earnings": {
     "next_earnings_date": "1776947400",
@@ -244,7 +243,7 @@
         "last_surprise_pct": 0.011,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 2.76,
+      "analyst_upside_pct": 2.41,
       "eps_growth_implied": 27.73
     },
     "evidence": [
@@ -338,19 +337,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8535,
-    "probability_pct": 85.35,
+    "probability_of_outperformance": 0.8434,
+    "probability_pct": 84.34,
     "confidence": "High",
     "evidence": [
       "Volume surge above 1.5x",
       "Breakout pressure detected",
-      "Composite score 76.5/100"
+      "Composite score 74.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 76.5,
-    "technical_score": 90.0,
+    "final_score": 74.75,
+    "technical_score": 83.0,
     "momentum_score": 60.0,
     "volume_score": 100,
     "fundamental_score": 50.0,
@@ -360,7 +359,7 @@
     "eps_growth": 0.067,
     "roe": 0.09561,
     "forward_pe": 21.434336,
-    "relative_volume": 1.509533462895305,
+    "relative_volume": 1.771311319156477,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +369,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.015942966913066403,
-      "weekly": 0.049159261028457246,
-      "monthly": 0.04306941154817889,
-      "annual": 0.2654620683815623
+      "daily": 0.01854363799610903,
+      "weekly": 0.05184496115191384,
+      "monthly": 0.045739522513622566,
+      "annual": 0.2687014732646211
     },
     "risk": {
-      "volatility": 0.011660301585930325,
-      "annualized_volatility": 0.1851015492503021,
-      "maximum_drawdown": -0.17269209056118484,
-      "sharpe_ratio": 1.2794451715099047,
-      "sortino_ratio": 1.7251322868928474,
-      "calmar_ratio": 1.4217561548277526,
-      "beta": 0.1267472565005038,
-      "alpha": 0.21472097986235308,
-      "capm_expected_return": 0.02210630356494872,
-      "actual_return": 0.2368272834273018,
-      "market_return": 0.17441248177912907
+      "volatility": 0.011671938723090058,
+      "annualized_volatility": 0.1852862830756865,
+      "maximum_drawdown": -0.17269209056118473,
+      "sharpe_ratio": 1.2601529786624077,
+      "sortino_ratio": 1.700816880643801,
+      "calmar_ratio": 1.3974977544594644,
+      "beta": 0.1248320499639373,
+      "alpha": 0.21208259970919063,
+      "capm_expected_return": 0.021406461813921755,
+      "actual_return": 0.23348906152311238,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.1267472565005038,
-      "alpha": 0.21472097986235308,
-      "capm_expected_return": 0.02210630356494872,
-      "actual_return": 0.2368272834273018,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.13: Moves roughly 87% less than the market. CAPM expected return is 2.21%; realized alpha is 21.47%, meaning positive alpha versus CAPM."
+      "beta": 0.1248320499639373,
+      "alpha": 0.21208259970919063,
+      "capm_expected_return": 0.021406461813921755,
+      "actual_return": 0.23348906152311238,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.12: Moves roughly 88% less than the market. CAPM expected return is 2.14%; realized alpha is 21.21%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2368272834273018,
+      "actual_return": 0.23348906152311238,
       "components": {
-        "market_component": 0.02210630356494872,
-        "momentum_component": 0.06636551709539057,
+        "market_component": 0.021406461813921755,
+        "momentum_component": 0.06717536831615528,
         "volatility_drag": -0.0,
-        "alpha_component": 0.21472097986235308
+        "alpha_component": 0.21208259970919063
       },
       "component_weights_pct": {
-        "market_component": 7.29,
-        "momentum_component": 21.89,
+        "market_component": 7.12,
+        "momentum_component": 22.34,
         "volatility_drag": 0.0,
-        "alpha_component": 70.82
+        "alpha_component": 70.54
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 42.76424980163574,
-      "sma50": 42.56012016296387,
-      "sma200": 40.41089401245117,
-      "ema20": 43.11294613375593,
-      "ema50": 42.66189062031829,
-      "ema200": 40.503382204939896
+      "sma20": 42.76999988555908,
+      "sma50": 42.5624201965332,
+      "sma200": 40.4114688873291,
+      "ema20": 43.12389867450982,
+      "ema50": 42.66640047628841,
+      "ema200": 40.50649489807623
     },
     "momentum": {
-      "3m": 0.0671144381615485,
-      "6m": 0.19621023964389228,
-      "12m": 0.2654620683815623,
+      "3m": 0.06984610101271871,
+      "6m": 0.19927236958700711,
+      "12m": 0.2687014732646211,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 6166264.1,
-      "relative_volume": 1.509533462895305,
+      "average_volume": 6254816.35,
+      "relative_volume": 1.771311319156477,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -454,5 +453,5 @@
       }
     ]
   },
-  "report": "Ticker: CNP\nRating: Watch | Score: 76.5/100 | Confidence: 64.99/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 41.290000915527344 | Resistance: 44.92499923706055\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.434336\nNews/Catalyst: CNP vs. ES: Which Utility Stock Offers Better Return Potential?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: CNP\nRating: Watch | Score: 74.75/100 | Confidence: 63.99/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: No major bear case detected from available data.\nTechnical Outlook: 52-week high pressure, trend continuation, volume surge | Support: 41.290000915527344 | Resistance: 45.040000915527344\nFundamental Outlook: Fundamentally Average | Forward P/E: 21.434336\nNews/Catalyst: CNP vs. ES: Which Utility Stock Offers Better Return Potential?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

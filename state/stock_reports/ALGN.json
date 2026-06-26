@@ -1,15 +1,15 @@
 {
   "ticker": "ALGN",
-  "generated_at": "2026-06-26T19:17:41.018633",
+  "generated_at": "2026-06-26T21:06:16.443776",
   "score": {
-    "final_score": 52.95,
+    "final_score": 64.2,
     "rating": "Hold",
-    "confidence": 51.15,
+    "confidence": 64.29,
     "risk_level": "Controlled",
     "categories": {
       "technical": 75.0,
-      "momentum": 25.0,
-      "volume": 25.0,
+      "momentum": 40.0,
+      "volume": 75.0,
       "fundamental": 58.0,
       "risk": 75.0,
       "catalyst": 85.0
@@ -27,29 +27,32 @@
       ],
       "support": 155.16000366210938,
       "resistance": 196.0500030517578,
-      "risk_reward": 1.02
+      "risk_reward": 0.76
     },
     "momentum": {
-      "score": 25.0,
+      "score": 40.0,
       "returns": {
-        "1m": 0.07705051213620795,
-        "3m": -0.010714538632236703,
-        "6m": 0.11909925250814646,
-        "12m": -0.06257351048444493
+        "1m": 0.0954689791675567,
+        "3m": 0.006203072426371081,
+        "6m": 0.13823678826424257,
+        "12m": -0.04654273133629694
       },
-      "acceleration": -0.0703,
+      "acceleration": -0.0629,
       "evidence": [
         "1m return is positive",
+        "3m return is positive",
         "6m return is positive"
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 996671.45,
-      "relative_volume": 0.40006062178263463,
-      "accumulation_days": 5,
+      "score": 75.0,
+      "average_volume": 1060082.1,
+      "relative_volume": 1.572465000588162,
+      "accumulation_days": 6,
       "distribution_days": 4,
       "evidence": [
+        "Relative volume is 1.57x",
+        "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
     },
@@ -64,17 +67,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.029833086706600273,
-        "annualized_volatility": 0.4735855696025477,
-        "maximum_drawdown": -0.5144068486487465,
-        "sharpe_ratio": -0.08938909749673735,
-        "sortino_ratio": -0.10084407962313502,
-        "calmar_ratio": -0.2959353429486126,
-        "beta": 1.3409357140531295,
-        "alpha": -0.2762093124485249,
-        "capm_expected_return": 0.23387592579427488,
-        "actual_return": -0.04233338665425003,
-        "market_return": 0.17441248177912907
+        "volatility": 0.029870902829275976,
+        "annualized_volatility": 0.47418588193943945,
+        "maximum_drawdown": -0.5144068486487461,
+        "sharpe_ratio": -0.06864596490324443,
+        "sortino_ratio": -0.07736307041657205,
+        "calmar_ratio": -0.2802387515051902,
+        "beta": 1.3374906058202332,
+        "alpha": -0.26190664242698325,
+        "capm_expected_return": 0.2293556950177545,
+        "actual_return": -0.032550947409228766,
+        "market_return": 0.17148209790759553
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -144,14 +147,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 55.83016222897152,
+    "rsi": 57.81546079691531,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.40006062178263463,
+    "relative_volume": 1.572465000588162,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 155.16000366210938,
     "resistance": 196.0500030517578
   },
@@ -244,7 +247,7 @@
         "last_surprise_pct": 0.1284,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 19.18,
+      "analyst_upside_pct": 17.17,
       "eps_growth_implied": 107.6
     },
     "evidence": [
@@ -341,22 +344,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7661,
-    "probability_pct": 76.61,
+    "probability_of_outperformance": 0.8347,
+    "probability_pct": 83.47,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 52.95/100"
+      "Composite score 64.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 52.95,
+    "final_score": 64.2,
     "technical_score": 75.0,
-    "momentum_score": 25.0,
-    "volume_score": 25.0,
+    "momentum_score": 40.0,
+    "volume_score": 75.0,
     "fundamental_score": 58.0,
     "risk_score": 75.0,
     "catalyst_score": 85.0,
@@ -364,7 +368,7 @@
     "eps_growth": 0.239,
     "roe": 0.10824,
     "forward_pe": 14.279687,
-    "relative_volume": 0.40006062178263463,
+    "relative_volume": 1.572465000588162,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -374,71 +378,71 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0015936146342645507,
-      "weekly": -0.03652245764718154,
-      "monthly": 0.07705051213620795,
-      "annual": -0.06257351048444493
+      "daily": 0.015479971874017284,
+      "weekly": -0.02004618364767019,
+      "monthly": 0.0954689791675567,
+      "annual": -0.04654273133629694
     },
     "risk": {
-      "volatility": 0.029833086706600273,
-      "annualized_volatility": 0.4735855696025477,
-      "maximum_drawdown": -0.5144068486487465,
-      "sharpe_ratio": -0.08938909749673735,
-      "sortino_ratio": -0.10084407962313502,
-      "calmar_ratio": -0.2959353429486126,
-      "beta": 1.3409357140531295,
-      "alpha": -0.2762093124485249,
-      "capm_expected_return": 0.23387592579427488,
-      "actual_return": -0.04233338665425003,
-      "market_return": 0.17441248177912907
+      "volatility": 0.029870902829275976,
+      "annualized_volatility": 0.47418588193943945,
+      "maximum_drawdown": -0.5144068486487461,
+      "sharpe_ratio": -0.06864596490324443,
+      "sortino_ratio": -0.07736307041657205,
+      "calmar_ratio": -0.2802387515051902,
+      "beta": 1.3374906058202332,
+      "alpha": -0.26190664242698325,
+      "capm_expected_return": 0.2293556950177545,
+      "actual_return": -0.032550947409228766,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 1.3409357140531295,
-      "alpha": -0.2762093124485249,
-      "capm_expected_return": 0.23387592579427488,
-      "actual_return": -0.04233338665425003,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 1.34: Moves roughly 34% more than the market. CAPM expected return is 23.39%; realized alpha is -27.62%, meaning negative alpha versus CAPM."
+      "beta": 1.3374906058202332,
+      "alpha": -0.26190664242698325,
+      "capm_expected_return": 0.2293556950177545,
+      "actual_return": -0.032550947409228766,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 1.34: Moves roughly 34% more than the market. CAPM expected return is 22.94%; realized alpha is -26.19%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.04233338665425003,
+      "actual_return": -0.032550947409228766,
       "components": {
-        "market_component": 0.23387592579427488,
+        "market_component": 0.2293556950177545,
         "momentum_component": 0.0,
-        "volatility_drag": -0.044717113920509546,
-        "alpha_component": -0.2762093124485249
+        "volatility_drag": -0.044837176387887895,
+        "alpha_component": -0.26190664242698325
       },
       "component_weights_pct": {
-        "market_component": 42.15,
+        "market_component": 42.78,
         "momentum_component": 0.0,
-        "volatility_drag": 8.06,
-        "alpha_component": 49.79
+        "volatility_drag": 8.36,
+        "alpha_component": 48.85
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 172.94150009155274,
-      "sma50": 173.15380035400392,
-      "sma200": 161.1025994873047,
-      "ema20": 172.98473244560273,
-      "ema50": 172.49478122768411,
-      "ema200": 170.28787148106815
+      "sma20": 173.09150009155275,
+      "sma50": 173.2138003540039,
+      "sma200": 161.1175994873047,
+      "ema20": 173.270446731317,
+      "ema50": 172.61242828530294,
+      "ema200": 170.31365314213883
     },
     "momentum": {
-      "3m": -0.010714538632236703,
-      "6m": 0.11909925250814646,
-      "12m": -0.06257351048444493,
+      "3m": 0.006203072426371081,
+      "6m": 0.13823678826424257,
+      "12m": -0.04654273133629694,
       "24m": 0.0,
-      "score": 25.0
+      "score": 50.0
     },
     "volume": {
-      "average_volume": 996671.45,
-      "relative_volume": 0.40006062178263463,
+      "average_volume": 1060082.1,
+      "relative_volume": 1.572465000588162,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 0,
+      "score": 15,
       "label": "High risk / weak setup"
     }
   },
@@ -451,5 +455,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ALGN\nRating: Hold | Score: 52.95/100 | Confidence: 51.15/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 155.16000366210938 | Resistance: 196.0500030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.279687\nNews/Catalyst: ALGN or SAUHY: Which Is the Better Value Stock Right Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ALGN\nRating: Hold | Score: 64.2/100 | Confidence: 64.29/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 155.16000366210938 | Resistance: 196.0500030517578\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.279687\nNews/Catalyst: ALGN or SAUHY: Which Is the Better Value Stock Right Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

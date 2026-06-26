@@ -1,15 +1,15 @@
 {
   "ticker": "AMD",
-  "generated_at": "2026-06-26T19:17:43.012559",
+  "generated_at": "2026-06-26T21:06:19.037764",
   "score": {
-    "final_score": 56.65,
+    "final_score": 60.4,
     "rating": "Avoid",
-    "confidence": 39.03,
+    "confidence": 49.73,
     "risk_level": "High",
     "categories": {
       "technical": 80.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 61.0,
       "risk": 20.0,
       "catalyst": 65.0
@@ -27,17 +27,17 @@
       ],
       "support": 196.0399932861328,
       "resistance": 551.6300048828125,
-      "risk_reward": 0.1
+      "risk_reward": 0.09
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.04905752637894589,
-        "3m": 1.5511604489679742,
-        "6m": 1.419032063055084,
-        "12m": 2.625174321563777
+        "1m": 0.052548751051170184,
+        "3m": 1.5596506166454165,
+        "6m": 1.4270825123479747,
+        "12m": 2.6372387677112092
       },
-      "acceleration": 0.8416,
+      "acceleration": 0.8461,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,12 +48,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 30475327.05,
-      "relative_volume": 0.6688177937043664,
+      "score": 25.0,
+      "average_volume": 32034742.95,
+      "relative_volume": 1.6098383895413777,
       "accumulation_days": 2,
-      "distribution_days": 2,
-      "evidence": []
+      "distribution_days": 3,
+      "evidence": [
+        "Relative volume is 1.61x"
+      ]
     },
     "fundamental": {
       "score": 61.0,
@@ -67,17 +69,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.038523248132009656,
-        "annualized_volatility": 0.6115376055103866,
-        "maximum_drawdown": -0.5748532494558938,
-        "sharpe_ratio": 1.2819115503446956,
-        "sortino_ratio": 2.079240391766262,
-        "calmar_ratio": 1.431737579557591,
-        "beta": 2.228813377631231,
-        "alpha": 0.3952042473587163,
-        "capm_expected_return": 0.3887328726151862,
-        "actual_return": 0.7839371199739025,
-        "market_return": 0.17441248177912907
+        "volatility": 0.038555373085656694,
+        "annualized_volatility": 0.6120475733397638,
+        "maximum_drawdown": -0.5748532494558936,
+        "sharpe_ratio": 1.2759919378528306,
+        "sortino_ratio": 2.0712466856641694,
+        "calmar_ratio": 1.4214114348819868,
+        "beta": 2.228483796847134,
+        "alpha": 0.3988226925274972,
+        "capm_expected_return": 0.38214507663643044,
+        "actual_return": 0.7809677691639276,
+        "market_return": 0.17148209790759553
       },
       "evidence": [
         "Volatility is elevated",
@@ -149,14 +151,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.956742523864314,
+    "rsi": 59.30044655454539,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6688177937043664,
+    "relative_volume": 1.6098383895413777,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 196.0399932861328,
     "resistance": 551.6300048828125
   },
@@ -249,7 +251,7 @@
         "last_surprise_pct": 0.0582,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -3.78,
+      "analyst_upside_pct": -4.06,
       "eps_growth_implied": 341.88
     },
     "evidence": [
@@ -288,10 +290,10 @@
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Sandisk, Western Digital, and others soar as Micron results  'justify elevated valuations'",
-        "source": "Yahoo Finance",
-        "published": "2026-06-25T14:06:42Z",
-        "summary": "Micron's blowout earnings lifted the semiconductor complex on Thursday.",
+        "headline": "OpenAI Just Signaled It Might Delay Its IPO. AI Stocks Are Tumbling. Is the Bubble Bursting?",
+        "source": "Motley Fool",
+        "published": "2026-06-26T19:23:00Z",
+        "summary": "Could a delayed mega-IPO be the first crack in the AI spending boom?",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -343,22 +345,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.788,
-    "probability_pct": 78.8,
+    "probability_of_outperformance": 0.8195,
+    "probability_pct": 81.95,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 56.65/100"
+      "Composite score 60.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 56.65,
+    "final_score": 60.4,
     "technical_score": 80.0,
     "momentum_score": 85.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 61.0,
     "risk_score": 20.0,
     "catalyst_score": 65.0,
@@ -366,7 +369,7 @@
     "eps_growth": 0.912,
     "roe": 0.08063,
     "forward_pe": 39.142174,
-    "relative_volume": 0.6688177937043664,
+    "relative_volume": 1.6098383895413777,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -376,66 +379,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.023884243504793456,
-      "weekly": -0.03260327091286386,
-      "monthly": 0.04905752637894589,
-      "annual": 2.625174321563777
+      "daily": -0.020635766346647655,
+      "weekly": -0.02938381035565696,
+      "monthly": 0.052548751051170184,
+      "annual": 2.6372387677112092
     },
     "risk": {
-      "volatility": 0.038523248132009656,
-      "annualized_volatility": 0.6115376055103866,
-      "maximum_drawdown": -0.5748532494558938,
-      "sharpe_ratio": 1.2819115503446956,
-      "sortino_ratio": 2.079240391766262,
-      "calmar_ratio": 1.431737579557591,
-      "beta": 2.228813377631231,
-      "alpha": 0.3952042473587163,
-      "capm_expected_return": 0.3887328726151862,
-      "actual_return": 0.7839371199739025,
-      "market_return": 0.17441248177912907
+      "volatility": 0.038555373085656694,
+      "annualized_volatility": 0.6120475733397638,
+      "maximum_drawdown": -0.5748532494558936,
+      "sharpe_ratio": 1.2759919378528306,
+      "sortino_ratio": 2.0712466856641694,
+      "calmar_ratio": 1.4214114348819868,
+      "beta": 2.228483796847134,
+      "alpha": 0.3988226925274972,
+      "capm_expected_return": 0.38214507663643044,
+      "actual_return": 0.7809677691639276,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 2.228813377631231,
-      "alpha": 0.3952042473587163,
-      "capm_expected_return": 0.3887328726151862,
-      "actual_return": 0.7839371199739025,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 2.23: Moves roughly 123% more than the market. CAPM expected return is 38.87%; realized alpha is 39.52%, meaning positive alpha versus CAPM."
+      "beta": 2.228483796847134,
+      "alpha": 0.3988226925274972,
+      "capm_expected_return": 0.38214507663643044,
+      "actual_return": 0.7809677691639276,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 2.23: Moves roughly 123% more than the market. CAPM expected return is 38.21%; realized alpha is 39.88%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.7839371199739025,
+      "actual_return": 0.7809677691639276,
       "components": {
-        "market_component": 0.3887328726151862,
-        "momentum_component": 0.6562935803909442,
-        "volatility_drag": -0.07230752110207732,
-        "alpha_component": 0.3952042473587163
+        "market_component": 0.38214507663643044,
+        "momentum_component": 0.6593096919278023,
+        "volatility_drag": -0.07240951466795276,
+        "alpha_component": 0.3988226925274972
       },
       "component_weights_pct": {
-        "market_component": 25.7,
-        "momentum_component": 43.39,
-        "volatility_drag": 4.78,
-        "alpha_component": 26.13
+        "market_component": 25.26,
+        "momentum_component": 43.59,
+        "volatility_drag": 4.79,
+        "alpha_component": 26.37
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 512.308497619629,
-      "sma50": 439.08600036621095,
-      "sma200": 270.4569998931885,
-      "ema20": 505.5970499314076,
-      "ema50": 442.3165546414953,
-      "ema200": 297.3157526209372
+      "sma20": 512.3949996948243,
+      "sma50": 439.12060119628904,
+      "sma200": 270.465650100708,
+      "ema20": 505.7618157889225,
+      "ema50": 442.3843994101662,
+      "ema200": 297.34584132304747
     },
     "momentum": {
-      "3m": 1.5511604489679742,
-      "6m": 1.419032063055084,
-      "12m": 2.625174321563777,
+      "3m": 1.5596506166454165,
+      "6m": 1.4270825123479747,
+      "12m": 2.6372387677112092,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 30475327.05,
-      "relative_volume": 0.6688177937043664,
+      "average_volume": 32034742.95,
+      "relative_volume": 1.6098383895413777,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -453,5 +456,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMD\nRating: Avoid | Score: 56.65/100 | Confidence: 39.03/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 196.0399932861328 | Resistance: 551.6300048828125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.142174\nNews/Catalyst: Semiconductor stocks retreat over worries about memory costs\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMD\nRating: Avoid | Score: 60.4/100 | Confidence: 49.73/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated\nTechnical Outlook: trend continuation, volume surge | Support: 196.0399932861328 | Resistance: 551.6300048828125\nFundamental Outlook: Fundamentally Average | Forward P/E: 39.142174\nNews/Catalyst: Semiconductor stocks retreat over worries about memory costs\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,21 +1,21 @@
 {
   "ticker": "CPAY",
-  "generated_at": "2026-06-26T19:18:18.664131",
+  "generated_at": "2026-06-26T21:07:03.276420",
   "score": {
-    "final_score": 55.4,
-    "rating": "Hold",
-    "confidence": 41.98,
+    "final_score": 68.65,
+    "rating": "Watch",
+    "confidence": 62.1,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 47.0,
-      "momentum": 60.0,
-      "volume": 0,
+      "technical": 55.0,
+      "momentum": 75.0,
+      "volume": 50.0,
       "fundamental": 76.0,
       "risk": 100,
       "catalyst": 45.0
     },
     "technical": {
-      "score": 47.0,
+      "score": 55.0,
       "evidence": [
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -24,31 +24,35 @@
       ],
       "support": 284.92999267578125,
       "resistance": 364.1300048828125,
-      "risk_reward": 0.78
+      "risk_reward": 0.67
     },
     "momentum": {
-      "score": 60.0,
+      "score": 75.0,
       "returns": {
-        "1m": -0.06591043774721428,
-        "3m": 0.12329045718083176,
-        "6m": 0.06324045915573184,
-        "12m": 0.00885221956091975
+        "1m": -0.057061811596454404,
+        "3m": 0.13393138254385328,
+        "6m": 0.0733125311621261,
+        "12m": 0.018409072022400164
       },
-      "acceleration": 0.0917,
+      "acceleration": 0.0973,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
-        "Momentum is accelerating"
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 686909.8,
-      "relative_volume": 1.1813719938192757,
+      "score": 50.0,
+      "average_volume": 699758.7,
+      "relative_volume": 1.5269177789429413,
       "accumulation_days": 3,
       "distribution_days": 6,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.53x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 76.0,
@@ -62,17 +66,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02278452493090277,
-        "annualized_volatility": 0.3616931202475191,
-        "maximum_drawdown": -0.34539851626045215,
-        "sharpe_ratio": 0.4541637229319957,
-        "sortino_ratio": 0.650177171024947,
-        "calmar_ratio": 0.30233785491420767,
-        "beta": 1.248767714538958,
-        "alpha": -0.05353278220788743,
-        "capm_expected_return": 0.21780067625839067,
-        "actual_return": 0.16426789405050324,
-        "market_return": 0.17441248177912907
+        "volatility": 0.02281899214725559,
+        "annualized_volatility": 0.36224027034464445,
+        "maximum_drawdown": -0.34539851626045204,
+        "sharpe_ratio": 0.47336979645383975,
+        "sortino_ratio": 0.6780462571847957,
+        "calmar_ratio": 0.3248169522833617,
+        "beta": 1.2454764029007,
+        "alpha": -0.0421033034233895,
+        "capm_expected_return": 0.21357690646381772,
+        "actual_return": 0.17147360304042822,
+        "market_return": 0.17148209790759553
       },
       "evidence": []
     },
@@ -138,14 +142,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 39.673466543560444,
+    "rsi": 41.7484331616307,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.1813719938192757,
+    "relative_volume": 1.5269177789429413,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 284.92999267578125,
     "resistance": 364.1300048828125
   },
@@ -238,7 +242,7 @@
         "last_surprise_pct": 0.060300004,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 19.96,
+      "analyst_upside_pct": 18.85,
       "eps_growth_implied": 83.16
     },
     "evidence": [
@@ -333,22 +337,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8183,
-    "probability_pct": 81.83,
+    "probability_of_outperformance": 0.8853,
+    "probability_pct": 88.53,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 55.4/100"
+      "Composite score 68.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 55.4,
-    "technical_score": 47.0,
-    "momentum_score": 60.0,
-    "volume_score": 0,
+    "final_score": 68.65,
+    "technical_score": 55.0,
+    "momentum_score": 75.0,
+    "volume_score": 50.0,
     "fundamental_score": 76.0,
     "risk_score": 100,
     "catalyst_score": 45.0,
@@ -356,7 +361,7 @@
     "eps_growth": 0.491,
     "roe": 0.32124,
     "forward_pe": 10.685309,
-    "relative_volume": 1.1813719938192757,
+    "relative_volume": 1.5269177789429413,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -366,66 +371,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.010895883550443575,
-      "weekly": -0.04610754600329592,
-      "monthly": -0.06591043774721428,
-      "annual": 0.00885221956091975
+      "daily": 0.020472095631549392,
+      "weekly": -0.03707132714962302,
+      "monthly": -0.057061811596454404,
+      "annual": 0.018409072022400164
     },
     "risk": {
-      "volatility": 0.02278452493090277,
-      "annualized_volatility": 0.3616931202475191,
-      "maximum_drawdown": -0.34539851626045215,
-      "sharpe_ratio": 0.4541637229319957,
-      "sortino_ratio": 0.650177171024947,
-      "calmar_ratio": 0.30233785491420767,
-      "beta": 1.248767714538958,
-      "alpha": -0.05353278220788743,
-      "capm_expected_return": 0.21780067625839067,
-      "actual_return": 0.16426789405050324,
-      "market_return": 0.17441248177912907
+      "volatility": 0.02281899214725559,
+      "annualized_volatility": 0.36224027034464445,
+      "maximum_drawdown": -0.34539851626045204,
+      "sharpe_ratio": 0.47336979645383975,
+      "sortino_ratio": 0.6780462571847957,
+      "calmar_ratio": 0.3248169522833617,
+      "beta": 1.2454764029007,
+      "alpha": -0.0421033034233895,
+      "capm_expected_return": 0.21357690646381772,
+      "actual_return": 0.17147360304042822,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 1.248767714538958,
-      "alpha": -0.05353278220788743,
-      "capm_expected_return": 0.21780067625839067,
-      "actual_return": 0.16426789405050324,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 1.25: Moves roughly in line with the market. CAPM expected return is 21.78%; realized alpha is -5.35%, meaning negative alpha versus CAPM."
+      "beta": 1.2454764029007,
+      "alpha": -0.0421033034233895,
+      "capm_expected_return": 0.21357690646381772,
+      "actual_return": 0.17147360304042822,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 1.25: Moves roughly in line with the market. CAPM expected return is 21.36%; realized alpha is -4.21%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.16426789405050324,
+      "actual_return": 0.17147360304042822,
       "components": {
-        "market_component": 0.21780067625839067,
-        "momentum_component": 0.0022130548902299374,
-        "volatility_drag": -0.02233862404950382,
-        "alpha_component": -0.05353278220788743
+        "market_component": 0.21357690646381772,
+        "momentum_component": 0.004602268005600041,
+        "volatility_drag": -0.022448054068928892,
+        "alpha_component": -0.0421033034233895
       },
       "component_weights_pct": {
-        "market_component": 73.61,
-        "momentum_component": 0.75,
-        "volatility_drag": 7.55,
-        "alpha_component": 18.09
+        "market_component": 75.54,
+        "momentum_component": 1.63,
+        "volatility_drag": 7.94,
+        "alpha_component": 14.89
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 350.19199829101564,
-      "sma50": 337.4043994140625,
-      "sma200": 312.7938995361328,
-      "ema20": 344.470603050047,
-      "ema50": 338.2773661620088,
-      "ema200": 323.1503259820002
+      "sma20": 350.3479995727539,
+      "sma50": 337.4667999267578,
+      "sma200": 312.80949966430666,
+      "ema20": 344.76774834859606,
+      "ema50": 338.39972010629765,
+      "ema200": 323.1740332852002
     },
     "momentum": {
-      "3m": 0.12329045718083176,
-      "6m": 0.06324045915573184,
-      "12m": 0.00885221956091975,
+      "3m": 0.13393138254385328,
+      "6m": 0.0733125311621261,
+      "12m": 0.018409072022400164,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 686909.8,
-      "relative_volume": 1.1813719938192757,
+      "average_volume": 699758.7,
+      "relative_volume": 1.5269177789429413,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -443,5 +448,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CPAY\nRating: Hold | Score: 55.4/100 | Confidence: 41.98/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 284.92999267578125 | Resistance: 364.1300048828125\nFundamental Outlook: Quality Compounder | Forward P/E: 10.685309\nNews/Catalyst: Corpay (CPAY) Stock Draws Fresh Price Target Split As Analysts Rework Growth Views\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CPAY\nRating: Watch | Score: 68.65/100 | Confidence: 62.1/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 284.92999267578125 | Resistance: 364.1300048828125\nFundamental Outlook: Quality Compounder | Forward P/E: 10.685309\nNews/Catalyst: Corpay (CPAY) Stock Draws Fresh Price Target Split As Analysts Rework Growth Views\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

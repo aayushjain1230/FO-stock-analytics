@@ -1,13 +1,13 @@
 {
   "ticker": "DVN",
-  "generated_at": "2026-06-26T19:18:27.996700",
+  "generated_at": "2026-06-26T21:07:15.368754",
   "score": {
-    "final_score": 35.6,
+    "final_score": 38.1,
     "rating": "Drop",
-    "confidence": 25.12,
+    "confidence": 26.82,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 30.0,
+      "technical": 40.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 44.0,
@@ -15,24 +15,25 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 40.0,
       "evidence": [
         "Price above SMA200",
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 41.95000076293945,
+      "support": 42.119998931884766,
       "resistance": 52.06999969482422,
-      "risk_reward": 0.0
+      "risk_reward": 109.56
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.045665792050874954,
-        "3m": -0.17724677477060125,
-        "6m": 0.16865826004693352,
-        "12m": 0.33954335663569024
+        "1m": -0.03975100569245138,
+        "3m": -0.17214750293019032,
+        "6m": 0.17590138711563563,
+        "12m": 0.3478455978278745
       },
-      "acceleration": -0.2616,
+      "acceleration": -0.2601,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -40,8 +41,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 15558210.15,
-      "relative_volume": 0.4093789027525123,
+      "average_volume": 15911054.95,
+      "relative_volume": 0.8438220496498254,
       "accumulation_days": 4,
       "distribution_days": 5,
       "evidence": []
@@ -54,17 +55,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.023635461938828897,
-        "annualized_volatility": 0.37520132647364274,
-        "maximum_drawdown": -0.435377014400512,
-        "sharpe_ratio": 0.12042530546512359,
-        "sortino_ratio": 0.16472739315046087,
-        "calmar_ratio": -0.05747860874563502,
-        "beta": 0.7968423058743405,
-        "alpha": -0.09379550980263963,
-        "capm_expected_return": 0.1389792441541476,
-        "actual_return": 0.04518373435150798,
-        "market_return": 0.17441248177912907
+        "volatility": 0.02365118497701601,
+        "annualized_volatility": 0.37545092196702756,
+        "maximum_drawdown": -0.43537696751649557,
+        "sharpe_ratio": 0.12044650247084313,
+        "sortino_ratio": 0.16479735181200444,
+        "calmar_ratio": -0.057602489231655854,
+        "beta": 0.7964956833346544,
+        "alpha": -0.0913630003521885,
+        "capm_expected_return": 0.1365847507525704,
+        "actual_return": 0.045221750400381906,
+        "market_return": 0.17148209790759553
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -77,7 +78,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; analyst revision; guidance change"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; analyst revision"
   },
   "fundamentals": {
     "ticker": "DVN",
@@ -131,15 +132,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 40.98995640389518,
+    "rsi": 41.83110202248111,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4093789027525123,
+    "relative_volume": 0.8438220496498254,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 41.95000076293945,
+    "support": 42.119998931884766,
     "resistance": 52.06999969482422
   },
   "earnings": {
@@ -231,7 +232,7 @@
         "last_surprise_pct": -0.049099997,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 45.34,
+      "analyst_upside_pct": 44.52,
       "eps_growth_implied": 53.15
     },
     "evidence": [
@@ -330,13 +331,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 35.6/100"
+      "Composite score 38.1/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.6,
-    "technical_score": 30.0,
+    "final_score": 38.1,
+    "technical_score": 40.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 44.0,
@@ -346,7 +347,7 @@
     "eps_growth": -0.753,
     "roe": 0.15178001,
     "forward_pe": 7.783725,
-    "relative_volume": 0.4093789027525123,
+    "relative_volume": 0.8438220496498254,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -356,66 +357,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.015258162780839135,
-      "weekly": -0.004036043999436689,
-      "monthly": -0.045665792050874954,
-      "annual": 0.33954335663569024
+      "daily": -0.009154915577880951,
+      "weekly": 0.002136755813632263,
+      "monthly": -0.03975100569245138,
+      "annual": 0.3478455978278745
     },
     "risk": {
-      "volatility": 0.023635461938828897,
-      "annualized_volatility": 0.37520132647364274,
-      "maximum_drawdown": -0.435377014400512,
-      "sharpe_ratio": 0.12042530546512359,
-      "sortino_ratio": 0.16472739315046087,
-      "calmar_ratio": -0.05747860874563502,
-      "beta": 0.7968423058743405,
-      "alpha": -0.09379550980263963,
-      "capm_expected_return": 0.1389792441541476,
-      "actual_return": 0.04518373435150798,
-      "market_return": 0.17441248177912907
+      "volatility": 0.02365118497701601,
+      "annualized_volatility": 0.37545092196702756,
+      "maximum_drawdown": -0.43537696751649557,
+      "sharpe_ratio": 0.12044650247084313,
+      "sortino_ratio": 0.16479735181200444,
+      "calmar_ratio": -0.057602489231655854,
+      "beta": 0.7964956833346544,
+      "alpha": -0.0913630003521885,
+      "capm_expected_return": 0.1365847507525704,
+      "actual_return": 0.045221750400381906,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.7968423058743405,
-      "alpha": -0.09379550980263963,
-      "capm_expected_return": 0.1389792441541476,
-      "actual_return": 0.04518373435150798,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.80: Moves roughly in line with the market. CAPM expected return is 13.90%; realized alpha is -9.38%, meaning negative alpha versus CAPM."
+      "beta": 0.7964956833346544,
+      "alpha": -0.0913630003521885,
+      "capm_expected_return": 0.1365847507525704,
+      "actual_return": 0.045221750400381906,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.80: Moves roughly in line with the market. CAPM expected return is 13.66%; realized alpha is -9.14%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.04518373435150798,
+      "actual_return": 0.045221750400381906,
       "components": {
-        "market_component": 0.1389792441541476,
-        "momentum_component": 0.08488583915892256,
-        "volatility_drag": -0.02504026529472855,
-        "alpha_component": -0.09379550980263963
+        "market_component": 0.1365847507525704,
+        "momentum_component": 0.08696139945696862,
+        "volatility_drag": -0.025090184393405515,
+        "alpha_component": -0.0913630003521885
       },
       "component_weights_pct": {
-        "market_component": 40.55,
-        "momentum_component": 24.77,
-        "volatility_drag": 7.31,
-        "alpha_component": 27.37
+        "market_component": 40.17,
+        "momentum_component": 25.58,
+        "volatility_drag": 7.38,
+        "alpha_component": 26.87
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 44.02324295043945,
-      "sma50": 45.94833106994629,
-      "sma200": 40.35300935745239,
-      "ema20": 43.87173757403286,
-      "ema50": 45.035896799230386,
-      "ema200": 41.74426236307436
+      "sma20": 44.03624286651611,
+      "sma50": 45.95353103637695,
+      "sma200": 40.35430932044983,
+      "ema20": 43.89649931894101,
+      "ema50": 45.04609281243447,
+      "ema200": 41.74867608070882
     },
     "momentum": {
-      "3m": -0.17724677477060125,
-      "6m": 0.16865826004693352,
-      "12m": 0.33954335663569024,
+      "3m": -0.17214750293019032,
+      "6m": 0.17590138711563563,
+      "12m": 0.3478455978278745,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 15558210.15,
-      "relative_volume": 0.4093789027525123,
+      "average_volume": 15911054.95,
+      "relative_volume": 0.8438220496498254,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -433,5 +434,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DVN\nRating: Drop | Score: 35.6/100 | Confidence: 25.12/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 41.95000076293945 | Resistance: 52.06999969482422\nFundamental Outlook: Cheap but Weak | Forward P/E: 7.783725\nNews/Catalyst: Devon or Diamondback: Which E&P Stock Is the Better Investment?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DVN\nRating: Drop | Score: 38.1/100 | Confidence: 26.82/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 42.119998931884766 | Resistance: 52.06999969482422\nFundamental Outlook: Cheap but Weak | Forward P/E: 7.783725\nNews/Catalyst: Devon or Diamondback: Which E&P Stock Is the Better Investment?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

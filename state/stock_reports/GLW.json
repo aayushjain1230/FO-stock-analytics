@@ -1,15 +1,15 @@
 {
   "ticker": "GLW",
-  "generated_at": "2026-06-26T19:18:30.952756",
+  "generated_at": "2026-06-26T21:07:18.915724",
   "score": {
-    "final_score": 70.15,
+    "final_score": 73.9,
     "rating": "Watch",
-    "confidence": 55.76,
+    "confidence": 67.21,
     "risk_level": "Controlled",
     "categories": {
       "technical": 90.0,
       "momentum": 75.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 81.0,
       "risk": 85.0,
       "catalyst": 80.0
@@ -28,17 +28,17 @@
       ],
       "support": 128.5500030517578,
       "resistance": 228.00999450683594,
-      "risk_reward": 0.12
+      "risk_reward": 0.08
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": 0.13852260139141537,
-        "3m": 0.6060639016682663,
-        "6m": 1.437186248716932,
-        "12m": 3.268770558166051
+        "1m": 0.1597715415302654,
+        "3m": 0.6360388496087019,
+        "6m": 1.482673151520916,
+        "12m": 3.348440894467995
       },
-      "acceleration": -0.1125,
+      "acceleration": -0.1053,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,12 +48,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 14835257.35,
-      "relative_volume": 1.003942611079814,
+      "score": 25.0,
+      "average_volume": 16351140.1,
+      "relative_volume": 2.765030555881544,
       "accumulation_days": 5,
       "distribution_days": 6,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 2.77x"
+      ]
     },
     "fundamental": {
       "score": 81.0,
@@ -66,17 +68,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.030776040469228085,
-        "annualized_volatility": 0.48855449652502264,
-        "maximum_drawdown": -0.2756766115045365,
-        "sharpe_ratio": 2.0659145283117004,
-        "sortino_ratio": 2.9890672085896584,
-        "calmar_ratio": 5.207919012676341,
-        "beta": 1.4880255386161265,
-        "alpha": 0.7497816051022886,
-        "capm_expected_return": 0.2595302271407639,
-        "actual_return": 1.0093118322430525,
-        "market_return": 0.17441248177912907
+        "volatility": 0.030756105875311836,
+        "annualized_volatility": 0.4882380446570859,
+        "maximum_drawdown": -0.27567666358132015,
+        "sharpe_ratio": 2.081364177323137,
+        "sortino_ratio": 3.0208191663244097,
+        "calmar_ratio": 5.270294997347807,
+        "beta": 1.488635640437308,
+        "alpha": 0.7609268135133457,
+        "capm_expected_return": 0.2552743626422066,
+        "actual_return": 1.0162011761555523,
+        "market_return": 0.17148209790759553
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -146,14 +148,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 62.58138678890322,
+    "rsi": 64.24218773121652,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.003942611079814,
+    "relative_volume": 2.765030555881544,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "trend continuation, volume surge",
     "support": 128.5500030517578,
     "resistance": 228.00999450683594
   },
@@ -246,7 +248,7 @@
         "last_surprise_pct": 0.0121,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -7.16,
+      "analyst_upside_pct": -8.74,
       "eps_growth_implied": 103.03
     },
     "evidence": [
@@ -343,22 +345,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8971,
-    "probability_pct": 89.71,
+    "probability_of_outperformance": 0.9141,
+    "probability_pct": 91.41,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
-      "Composite score 70.15/100"
+      "Composite score 73.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 70.15,
+    "final_score": 73.9,
     "technical_score": 90.0,
     "momentum_score": 75.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 81.0,
     "risk_score": 85.0,
     "catalyst_score": 80.0,
@@ -366,7 +369,7 @@
     "eps_growth": 1.389,
     "roe": 0.1674,
     "forward_pe": 49.612045,
-    "relative_volume": 1.003942611079814,
+    "relative_volume": 2.765030555881544,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -376,82 +379,89 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.04828733288928633,
-      "weekly": 0.11327725240340403,
-      "monthly": 0.13852260139141537,
-      "annual": 3.268770558166051
+      "daily": -0.03052494023401009,
+      "weekly": 0.1340550232314517,
+      "monthly": 0.1597715415302654,
+      "annual": 3.348440894467995
     },
     "risk": {
-      "volatility": 0.030776040469228085,
-      "annualized_volatility": 0.48855449652502264,
-      "maximum_drawdown": -0.2756766115045365,
-      "sharpe_ratio": 2.0659145283117004,
-      "sortino_ratio": 2.9890672085896584,
-      "calmar_ratio": 5.207919012676341,
-      "beta": 1.4880255386161265,
-      "alpha": 0.7497816051022886,
-      "capm_expected_return": 0.2595302271407639,
-      "actual_return": 1.0093118322430525,
-      "market_return": 0.17441248177912907
+      "volatility": 0.030756105875311836,
+      "annualized_volatility": 0.4882380446570859,
+      "maximum_drawdown": -0.27567666358132015,
+      "sharpe_ratio": 2.081364177323137,
+      "sortino_ratio": 3.0208191663244097,
+      "calmar_ratio": 5.270294997347807,
+      "beta": 1.488635640437308,
+      "alpha": 0.7609268135133457,
+      "capm_expected_return": 0.2552743626422066,
+      "actual_return": 1.0162011761555523,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 1.4880255386161265,
-      "alpha": 0.7497816051022886,
-      "capm_expected_return": 0.2595302271407639,
-      "actual_return": 1.0093118322430525,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 1.49: Moves roughly 49% more than the market. CAPM expected return is 25.95%; realized alpha is 74.98%, meaning positive alpha versus CAPM."
+      "beta": 1.488635640437308,
+      "alpha": 0.7609268135133457,
+      "capm_expected_return": 0.2552743626422066,
+      "actual_return": 1.0162011761555523,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 1.49: Moves roughly 49% more than the market. CAPM expected return is 25.53%; realized alpha is 76.09%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.0093118322430525,
+      "actual_return": 1.0162011761555523,
       "components": {
-        "market_component": 0.2595302271407639,
-        "momentum_component": 0.8171926395415128,
-        "volatility_drag": -0.04771089930500453,
-        "alpha_component": 0.7497816051022886
+        "market_component": 0.2552743626422066,
+        "momentum_component": 0.8371102236169987,
+        "volatility_drag": -0.04764760893141719,
+        "alpha_component": 0.7609268135133457
       },
       "component_weights_pct": {
-        "market_component": 13.85,
-        "momentum_component": 43.6,
-        "volatility_drag": 2.55,
-        "alpha_component": 40.01
+        "market_component": 13.43,
+        "momentum_component": 44.04,
+        "volatility_drag": 2.51,
+        "alpha_component": 40.03
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 190.50299911499025,
-      "sma50": 182.98034637451173,
-      "sma200": 123.7436713027954,
-      "ema20": 194.462998154031,
-      "ema50": 181.66550631083913,
-      "ema200": 133.59149449978253
+      "sma20": 190.70549926757812,
+      "sma50": 183.06134643554688,
+      "sma200": 123.76392135620117,
+      "ema20": 194.8487127302108,
+      "ema50": 181.82432992983271,
+      "ema200": 133.63378995716042
     },
     "momentum": {
-      "3m": 0.6060639016682663,
-      "6m": 1.437186248716932,
-      "12m": 3.268770558166051,
+      "3m": 0.6360388496087019,
+      "6m": 1.482673151520916,
+      "12m": 3.348440894467995,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 14835257.35,
-      "relative_volume": 1.003942611079814,
-      "volume_spike": false
+      "average_volume": 16351140.1,
+      "relative_volume": 2.765030555881544,
+      "volume_spike": true
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 73,
-      "label": "Watch closely"
+      "score": 83,
+      "label": "Research priority"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.77x",
     "date_of_change": "2026-06-26",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.77x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: GLW\nRating: Watch | Score: 70.15/100 | Confidence: 55.76/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 128.5500030517578 | Resistance: 228.00999450683594\nFundamental Outlook: Quality Compounder | Forward P/E: 49.612045\nNews/Catalyst: Corning Stock: Get A Fast 59% Return From The Glass Maker And AI Play\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: GLW\nRating: Watch | Score: 73.9/100 | Confidence: 67.21/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation, volume surge | Support: 128.5500030517578 | Resistance: 228.00999450683594\nFundamental Outlook: Quality Compounder | Forward P/E: 49.612045\nNews/Catalyst: Corning Stock: Get A Fast 59% Return From The Glass Maker And AI Play\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.77x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

@@ -1,53 +1,57 @@
 {
   "ticker": "BMY",
-  "generated_at": "2026-06-26T19:17:58.413040",
+  "generated_at": "2026-06-26T21:06:38.883709",
   "score": {
-    "final_score": 48.75,
+    "final_score": 58.0,
     "rating": "Hold",
-    "confidence": 34.43,
+    "confidence": 50.91,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 58.0,
+      "technical": 65.0,
       "momentum": 35.0,
-      "volume": 0,
+      "volume": 50.0,
       "fundamental": 60.0,
       "risk": 100,
       "catalyst": 30.0
     },
     "technical": {
-      "score": 58.0,
+      "score": 65.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 54.0,
       "resistance": 61.72999954223633,
-      "risk_reward": 1.5
+      "risk_reward": 1.2
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.00747566588584303,
-        "3m": -0.029469034812732886,
-        "6m": 0.07517101416498817,
-        "12m": 0.28411890347520696
+        "1m": 0.0,
+        "3m": -0.02215902237451861,
+        "6m": 0.08326917256350663,
+        "12m": 0.2937909626198505
       },
-      "acceleration": -0.0671,
+      "acceleration": -0.0638,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 14050042.5,
-      "relative_volume": 0.41893467582037563,
-      "accumulation_days": 6,
+      "score": 50.0,
+      "average_volume": 14955444.8,
+      "relative_volume": 1.604371940846587,
+      "accumulation_days": 7,
       "distribution_days": 7,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.60x",
+        "Price advanced on above-average volume"
+      ]
     },
     "fundamental": {
       "score": 60.0,
@@ -59,17 +63,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.018487727022919613,
-        "annualized_volatility": 0.29348356805696296,
-        "maximum_drawdown": -0.29917076532372466,
-        "sharpe_ratio": 0.8168664482224464,
-        "sortino_ratio": 1.3641079377751335,
-        "calmar_ratio": 0.7282570551195183,
-        "beta": 0.25029507524321004,
-        "alpha": 0.1960822946000798,
-        "capm_expected_return": 0.04365458525026211,
-        "actual_return": 0.23973687985034192,
-        "market_return": 0.17441248177912907
+        "volatility": 0.018502565957299332,
+        "annualized_volatility": 0.2937191288375026,
+        "maximum_drawdown": -0.29917081028433645,
+        "sharpe_ratio": 0.8711354213514865,
+        "sortino_ratio": 1.4554907845388794,
+        "calmar_ratio": 0.7941422811279591,
+        "beta": 0.2468036238576726,
+        "alpha": 0.21354673386853856,
+        "capm_expected_return": 0.04232240319031079,
+        "actual_return": 0.25586913705884934,
+        "market_return": 0.17148209790759553
       },
       "evidence": []
     },
@@ -80,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 6m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "BMY",
@@ -134,14 +138,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.26829162391932,
+    "rsi": 50.98193218410989,
     "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.41893467582037563,
+    "relative_volume": 1.604371940846587,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "MACD bullish crossover, trend continuation",
+    "setup_type": "MACD bullish crossover, trend continuation, volume surge",
     "support": 54.0,
     "resistance": 61.72999954223633
   },
@@ -234,7 +238,7 @@
         "last_surprise_pct": 0.1118,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.6,
+      "analyst_upside_pct": 9.67,
       "eps_growth_implied": 72.72
     },
     "evidence": [
@@ -328,19 +332,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6391,
-    "probability_pct": 63.91,
+    "probability_of_outperformance": 0.7144,
+    "probability_pct": 71.44,
     "confidence": "High",
     "evidence": [
-      "Composite score 48.75/100"
+      "Volume surge above 1.5x",
+      "Composite score 58.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 48.75,
-    "technical_score": 58.0,
+    "final_score": 58.0,
+    "technical_score": 65.0,
     "momentum_score": 35.0,
-    "volume_score": 0,
+    "volume_score": 50.0,
     "fundamental_score": 60.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -348,7 +353,7 @@
     "eps_growth": 0.092,
     "roe": 0.38731998,
     "forward_pe": 9.320975,
-    "relative_volume": 0.41893467582037563,
+    "relative_volume": 1.604371940846587,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -358,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.030691474664597207,
-      "weekly": 0.05722222504792396,
-      "monthly": -0.00747566588584303,
-      "annual": 0.28411890347520696
+      "daily": 0.03845461439945952,
+      "weekly": 0.06518519366229025,
+      "monthly": 0.0,
+      "annual": 0.2937909626198505
     },
     "risk": {
-      "volatility": 0.018487727022919613,
-      "annualized_volatility": 0.29348356805696296,
-      "maximum_drawdown": -0.29917076532372466,
-      "sharpe_ratio": 0.8168664482224464,
-      "sortino_ratio": 1.3641079377751335,
-      "calmar_ratio": 0.7282570551195183,
-      "beta": 0.25029507524321004,
-      "alpha": 0.1960822946000798,
-      "capm_expected_return": 0.04365458525026211,
-      "actual_return": 0.23973687985034192,
-      "market_return": 0.17441248177912907
+      "volatility": 0.018502565957299332,
+      "annualized_volatility": 0.2937191288375026,
+      "maximum_drawdown": -0.29917081028433645,
+      "sharpe_ratio": 0.8711354213514865,
+      "sortino_ratio": 1.4554907845388794,
+      "calmar_ratio": 0.7941422811279591,
+      "beta": 0.2468036238576726,
+      "alpha": 0.21354673386853856,
+      "capm_expected_return": 0.04232240319031079,
+      "actual_return": 0.25586913705884934,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.25029507524321004,
-      "alpha": 0.1960822946000798,
-      "capm_expected_return": 0.04365458525026211,
-      "actual_return": 0.23973687985034192,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.25: Moves roughly 75% less than the market. CAPM expected return is 4.37%; realized alpha is 19.61%, meaning positive alpha versus CAPM."
+      "beta": 0.2468036238576726,
+      "alpha": 0.21354673386853856,
+      "capm_expected_return": 0.04232240319031079,
+      "actual_return": 0.25586913705884934,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.25: Moves roughly 75% less than the market. CAPM expected return is 4.23%; realized alpha is 21.35%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.23973687985034192,
+      "actual_return": 0.25586913705884934,
       "components": {
-        "market_component": 0.04365458525026211,
-        "momentum_component": 0.07102972586880174,
-        "volatility_drag": -0.008696713611392593,
-        "alpha_component": 0.1960822946000798
+        "market_component": 0.04232240319031079,
+        "momentum_component": 0.07344774065496262,
+        "volatility_drag": -0.008743825767500523,
+        "alpha_component": 0.21354673386853856
       },
       "component_weights_pct": {
-        "market_component": 13.66,
-        "momentum_component": 22.23,
-        "volatility_drag": 2.72,
-        "alpha_component": 61.38
+        "market_component": 12.52,
+        "momentum_component": 21.73,
+        "volatility_drag": 2.59,
+        "alpha_component": 63.17
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 55.80049991607666,
-      "sma50": 57.07739990234375,
-      "sma200": 53.152683143615725,
-      "ema20": 56.008808710408296,
-      "ema50": 56.72068065993929,
-      "ema200": 54.411044296474294
+      "sma20": 55.82199993133545,
+      "sma50": 57.08599990844726,
+      "sma200": 53.15483316421509,
+      "ema20": 56.049761120425046,
+      "ema50": 56.73754341520869,
+      "ema200": 54.40932794463594
     },
     "momentum": {
-      "3m": -0.029469034812732886,
-      "6m": 0.07517101416498817,
-      "12m": 0.28411890347520696,
+      "3m": -0.02215902237451861,
+      "6m": 0.08326917256350663,
+      "12m": 0.2937909626198505,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 14050042.5,
-      "relative_volume": 0.41893467582037563,
+      "average_volume": 14955444.8,
+      "relative_volume": 1.604371940846587,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -428,19 +433,25 @@
   },
   "why_now": {
     "send_alert": true,
-    "reason": "Breakout",
-    "evidence": "Price reclaimed a major moving average",
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
     "date_of_change": "2026-06-26",
-    "strength": 75,
-    "invalidates": "Close back below the reclaimed moving average",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
     "triggers": [
       {
         "reason": "Breakout",
         "evidence": "Price reclaimed a major moving average",
         "strength": 75,
         "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
       }
     ]
   },
-  "report": "Ticker: BMY\nRating: Hold | Score: 48.75/100 | Confidence: 34.43/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover, trend continuation | Support: 54.0 | Resistance: 61.72999954223633\nFundamental Outlook: Fundamentally Average | Forward P/E: 9.320975\nNews/Catalyst: AbbVie Stock's Growth Story Has One Question Mark\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: BMY\nRating: Hold | Score: 58.0/100 | Confidence: 50.91/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: MACD bullish crossover, trend continuation, volume surge | Support: 54.0 | Resistance: 61.72999954223633\nFundamental Outlook: Fundamentally Average | Forward P/E: 9.320975\nNews/Catalyst: AbbVie Stock's Growth Story Has One Question Mark\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

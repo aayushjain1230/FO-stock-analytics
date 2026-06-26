@@ -1,15 +1,15 @@
 {
   "ticker": "BDX",
-  "generated_at": "2026-06-26T19:17:55.337779",
+  "generated_at": "2026-06-26T21:06:34.627822",
   "score": {
-    "final_score": 54.0,
-    "rating": "Hold",
-    "confidence": 42.53,
+    "final_score": 65.25,
+    "rating": "Watch",
+    "confidence": 63.18,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
       "momentum": 45.0,
-      "volume": 0,
+      "volume": 75.0,
       "fundamental": 55.0,
       "risk": 100,
       "catalyst": 65.0
@@ -26,17 +26,17 @@
       ],
       "support": 140.7100067138672,
       "resistance": 158.63999938964844,
-      "risk_reward": 0.26
+      "risk_reward": 0.18
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": 0.05981661391133564,
-        "3m": -0.008467413074567665,
-        "6m": 0.020902341369857247,
-        "12m": 0.1816199096022979
+        "1m": 0.06641671806528304,
+        "3m": -0.0022925538962529357,
+        "6m": 0.027260103359625143,
+        "12m": 0.188978693181157
       },
-      "acceleration": -0.0189,
+      "acceleration": -0.0159,
       "evidence": [
         "1m return is positive",
         "6m return is positive",
@@ -44,12 +44,16 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 2535867.65,
-      "relative_volume": 1.0495236216290704,
+      "score": 75.0,
+      "average_volume": 2633708.05,
+      "relative_volume": 1.7535204784752054,
       "accumulation_days": 3,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.75x",
+        "Price advanced on above-average volume",
+        "High-volume breakout behavior"
+      ]
     },
     "fundamental": {
       "score": 55.0,
@@ -59,17 +63,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017011940533552997,
-        "annualized_volatility": 0.27005618382240415,
-        "maximum_drawdown": -0.3339422175838723,
-        "sharpe_ratio": -0.08063382552623932,
-        "sortino_ratio": -0.09718614551004738,
-        "calmar_ratio": -0.1722067188578365,
-        "beta": 0.45733507511947175,
-        "alpha": -0.10154060866484924,
-        "capm_expected_return": 0.07976494545623149,
-        "actual_return": -0.02177566320861775,
-        "market_return": 0.17441248177912907
+        "volatility": 0.01704864922145933,
+        "annualized_volatility": 0.270638916177338,
+        "maximum_drawdown": -0.3339423250623256,
+        "sharpe_ratio": -0.06328249841221141,
+        "sortino_ratio": -0.07633504551436757,
+        "calmar_ratio": -0.1594991839888485,
+        "beta": 0.45402924728737226,
+        "alpha": -0.09498459461952008,
+        "capm_expected_return": 0.07785788783624507,
+        "actual_return": -0.01712670678327501,
+        "market_return": 0.17148209790759553
       },
       "evidence": []
     },
@@ -136,14 +140,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 55.6582718574977,
+    "rsi": 56.89855191688239,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0495236216290704,
+    "relative_volume": 1.7535204784752054,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 140.7100067138672,
     "resistance": 158.63999938964844
   },
@@ -236,7 +240,7 @@
         "last_surprise_pct": 0.045100003,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 14.67,
+      "analyst_upside_pct": 14.0,
       "eps_growth_implied": 133.27
     },
     "evidence": [
@@ -332,20 +336,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7097,
-    "probability_pct": 70.97,
+    "probability_of_outperformance": 0.7904,
+    "probability_pct": 79.04,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 54.0/100"
+      "Composite score 65.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 54.0,
+    "final_score": 65.25,
     "technical_score": 65.0,
     "momentum_score": 45.0,
-    "volume_score": 0,
+    "volume_score": 75.0,
     "fundamental_score": 55.0,
     "risk_score": 100,
     "catalyst_score": 65.0,
@@ -353,7 +358,7 @@
     "eps_growth": null,
     "roe": 0.06672,
     "forward_pe": 11.673342,
-    "relative_volume": 1.0495236216290704,
+    "relative_volume": 1.7535204784752054,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -363,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.023616044609125808,
-      "weekly": 0.07622590935677076,
-      "monthly": 0.05981661391133564,
-      "annual": 0.1816199096022979
+      "daily": 0.029990706432116543,
+      "weekly": 0.08292820388744104,
+      "monthly": 0.06641671806528304,
+      "annual": 0.188978693181157
     },
     "risk": {
-      "volatility": 0.017011940533552997,
-      "annualized_volatility": 0.27005618382240415,
-      "maximum_drawdown": -0.3339422175838723,
-      "sharpe_ratio": -0.08063382552623932,
-      "sortino_ratio": -0.09718614551004738,
-      "calmar_ratio": -0.1722067188578365,
-      "beta": 0.45733507511947175,
-      "alpha": -0.10154060866484924,
-      "capm_expected_return": 0.07976494545623149,
-      "actual_return": -0.02177566320861775,
-      "market_return": 0.17441248177912907
+      "volatility": 0.01704864922145933,
+      "annualized_volatility": 0.270638916177338,
+      "maximum_drawdown": -0.3339423250623256,
+      "sharpe_ratio": -0.06328249841221141,
+      "sortino_ratio": -0.07633504551436757,
+      "calmar_ratio": -0.1594991839888485,
+      "beta": 0.45402924728737226,
+      "alpha": -0.09498459461952008,
+      "capm_expected_return": 0.07785788783624507,
+      "actual_return": -0.01712670678327501,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.45733507511947175,
-      "alpha": -0.10154060866484924,
-      "capm_expected_return": 0.07976494545623149,
-      "actual_return": -0.02177566320861775,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.46: Moves roughly 54% less than the market. CAPM expected return is 7.98%; realized alpha is -10.15%, meaning negative alpha versus CAPM."
+      "beta": 0.45402924728737226,
+      "alpha": -0.09498459461952008,
+      "capm_expected_return": 0.07785788783624507,
+      "actual_return": -0.01712670678327501,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.45: Moves roughly 55% less than the market. CAPM expected return is 7.79%; realized alpha is -9.50%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.02177566320861775,
+      "actual_return": -0.01712670678327501,
       "components": {
-        "market_component": 0.07976494545623149,
-        "momentum_component": 0.045404977400574476,
-        "volatility_drag": -0.00401123676448083,
-        "alpha_component": -0.10154060866484924
+        "market_component": 0.07785788783624507,
+        "momentum_component": 0.04724467329528925,
+        "volatility_drag": -0.004127783235467597,
+        "alpha_component": -0.09498459461952008
       },
       "component_weights_pct": {
-        "market_component": 34.57,
-        "momentum_component": 19.68,
-        "volatility_drag": 1.74,
-        "alpha_component": 44.01
+        "market_component": 34.72,
+        "momentum_component": 21.07,
+        "volatility_drag": 1.84,
+        "alpha_component": 42.36
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 146.7196075439453,
-      "sma50": 147.4415463256836,
-      "sma200": 152.14494468688966,
-      "ema20": 147.0669133396261,
-      "ema50": 148.5135163837778,
-      "ema200": 152.28529396895408
+      "sma20": 146.76785736083986,
+      "sma50": 147.4608462524414,
+      "sma200": 152.14976936340332,
+      "ema20": 147.15881775379796,
+      "ema50": 148.5513593793994,
+      "ema200": 152.29148180380835
     },
     "momentum": {
-      "3m": -0.008467413074567665,
-      "6m": 0.020902341369857247,
-      "12m": 0.1816199096022979,
+      "3m": -0.0022925538962529357,
+      "6m": 0.027260103359625143,
+      "12m": 0.188978693181157,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 2535867.65,
-      "relative_volume": 1.0495236216290704,
+      "average_volume": 2633708.05,
+      "relative_volume": 1.7535204784752054,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +452,5 @@
       }
     ]
   },
-  "report": "Ticker: BDX\nRating: Hold | Score: 54.0/100 | Confidence: 42.53/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 140.7100067138672 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.673342\nNews/Catalyst: How Are Emerging Markets Supporting Abbott's EPD Momentum?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: BDX\nRating: Watch | Score: 65.25/100 | Confidence: 63.18/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 140.7100067138672 | Resistance: 158.63999938964844\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.673342\nNews/Catalyst: How Are Emerging Markets Supporting Abbott's EPD Momentum?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

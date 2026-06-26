@@ -1,15 +1,15 @@
 {
   "ticker": "CIEN",
-  "generated_at": "2026-06-26T19:18:10.968141",
+  "generated_at": "2026-06-26T21:06:53.842005",
   "score": {
-    "final_score": 44.65,
+    "final_score": 48.4,
     "rating": "Avoid",
-    "confidence": 33.12,
+    "confidence": 43.71,
     "risk_level": "High",
     "categories": {
       "technical": 40.0,
       "momentum": 65.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 81.0,
       "risk": 20.0,
       "catalyst": 65.0
@@ -23,17 +23,17 @@
       ],
       "support": 365.0,
       "resistance": 627.0,
-      "risk_reward": 1.37
+      "risk_reward": 1.29
     },
     "momentum": {
       "score": 65.0,
       "returns": {
-        "1m": -0.1833425450195606,
-        "3m": 0.22518620922258714,
-        "6m": 0.9782762438447146,
-        "12m": 4.984640356605756
+        "1m": -0.1762300956536884,
+        "3m": 0.2358566253483656,
+        "6m": 0.9955054866934072,
+        "12m": 5.036761905548615
       },
-      "acceleration": -0.264,
+      "acceleration": -0.2619,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -42,12 +42,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 3909816.75,
-      "relative_volume": 0.4687265713923805,
+      "score": 25.0,
+      "average_volume": 4254726.3,
+      "relative_volume": 2.0520299977932774,
       "accumulation_days": 4,
-      "distribution_days": 10,
-      "evidence": []
+      "distribution_days": 11,
+      "evidence": [
+        "Relative volume is 2.05x"
+      ]
     },
     "fundamental": {
       "score": 81.0,
@@ -60,17 +62,17 @@
     "risk": {
       "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.03884665552462261,
-        "annualized_volatility": 0.6166715387084688,
-        "maximum_drawdown": -0.4550825032215895,
-        "sharpe_ratio": 2.189565308238307,
-        "sortino_ratio": 2.8142622474575827,
-        "calmar_ratio": 4.7903047291711385,
-        "beta": 1.9534061885822682,
-        "alpha": 1.0095441864606562,
-        "capm_expected_return": 0.3406984212733428,
-        "actual_return": 1.350242607733999,
-        "market_return": 0.17441248177912907
+        "volatility": 0.038875981935008574,
+        "annualized_volatility": 0.6171370810408336,
+        "maximum_drawdown": -0.45508250322158916,
+        "sharpe_ratio": 2.1908687151885546,
+        "sortino_ratio": 2.816678452260724,
+        "calmar_ratio": 4.80099661411523,
+        "beta": 1.9524583699109688,
+        "alpha": 1.0172546664855688,
+        "capm_expected_return": 0.33481165734957713,
+        "actual_return": 1.352066323835146,
+        "market_return": 0.17148209790759553
       },
       "evidence": [
         "Volatility is elevated",
@@ -142,14 +144,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 46.74039747628892,
+    "rsi": 47.743174742193126,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.4687265713923805,
+    "relative_volume": 2.0520299977932774,
     "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 365.0,
     "resistance": 627.0
   },
@@ -242,7 +244,7 @@
         "last_surprise_pct": 0.1234,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 18.84,
+      "analyst_upside_pct": 17.98,
       "eps_growth_implied": 220.2
     },
     "evidence": [
@@ -338,23 +340,24 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7452,
-    "probability_pct": 74.52,
+    "probability_of_outperformance": 0.7813,
+    "probability_pct": 78.13,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 44.65/100"
+      "Composite score 48.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 44.65,
+    "final_score": 48.4,
     "technical_score": 40.0,
     "momentum_score": 65.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 81.0,
     "risk_score": 20.0,
     "catalyst_score": 65.0,
@@ -362,7 +365,7 @@
     "eps_growth": 23.833,
     "roe": 0.15464,
     "forward_pe": 48.617683,
-    "relative_volume": 0.4687265713923805,
+    "relative_volume": 2.0520299977932774,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -372,82 +375,89 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.019249452315599713,
-      "weekly": 0.1100835645146887,
-      "monthly": -0.1833425450195606,
-      "annual": 4.984640356605756
+      "daily": -0.010707880119796065,
+      "weekly": 0.11975152639558129,
+      "monthly": -0.1762300956536884,
+      "annual": 5.036761905548615
     },
     "risk": {
-      "volatility": 0.03884665552462261,
-      "annualized_volatility": 0.6166715387084688,
-      "maximum_drawdown": -0.4550825032215895,
-      "sharpe_ratio": 2.189565308238307,
-      "sortino_ratio": 2.8142622474575827,
-      "calmar_ratio": 4.7903047291711385,
-      "beta": 1.9534061885822682,
-      "alpha": 1.0095441864606562,
-      "capm_expected_return": 0.3406984212733428,
-      "actual_return": 1.350242607733999,
-      "market_return": 0.17441248177912907
+      "volatility": 0.038875981935008574,
+      "annualized_volatility": 0.6171370810408336,
+      "maximum_drawdown": -0.45508250322158916,
+      "sharpe_ratio": 2.1908687151885546,
+      "sortino_ratio": 2.816678452260724,
+      "calmar_ratio": 4.80099661411523,
+      "beta": 1.9524583699109688,
+      "alpha": 1.0172546664855688,
+      "capm_expected_return": 0.33481165734957713,
+      "actual_return": 1.352066323835146,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 1.9534061885822682,
-      "alpha": 1.0095441864606562,
-      "capm_expected_return": 0.3406984212733428,
-      "actual_return": 1.350242607733999,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 1.95: Moves roughly 95% more than the market. CAPM expected return is 34.07%; realized alpha is 100.95%, meaning positive alpha versus CAPM."
+      "beta": 1.9524583699109688,
+      "alpha": 1.0172546664855688,
+      "capm_expected_return": 0.33481165734957713,
+      "actual_return": 1.352066323835146,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 1.95: Moves roughly 95% more than the market. CAPM expected return is 33.48%; realized alpha is 101.73%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.350242607733999,
+      "actual_return": 1.352066323835146,
       "components": {
-        "market_component": 0.3406984212733428,
-        "momentum_component": 1.246160089151439,
-        "volatility_drag": -0.07333430774169376,
-        "alpha_component": 1.0095441864606562
+        "market_component": 0.33481165734957713,
+        "momentum_component": 1.2591904763871538,
+        "volatility_drag": -0.07342741620816673,
+        "alpha_component": 1.0172546664855688
       },
       "component_weights_pct": {
-        "market_component": 12.76,
-        "momentum_component": 46.68,
-        "volatility_drag": 2.75,
-        "alpha_component": 37.81
+        "market_component": 12.47,
+        "momentum_component": 46.9,
+        "volatility_drag": 2.74,
+        "alpha_component": 37.89
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 487.7649978637695,
-      "sma50": 519.9461993408203,
-      "sma200": 318.9102496337891,
-      "ema20": 481.92561226012907,
-      "ema50": 487.6598153657998,
-      "ema200": 350.98880063699363
+      "sma20": 487.9719985961914,
+      "sma50": 520.0289996337891,
+      "sma200": 318.93094970703123,
+      "ema20": 482.31989936950407,
+      "ema50": 487.82216888239265,
+      "ema200": 351.03326342994717
     },
     "momentum": {
-      "3m": 0.22518620922258714,
-      "6m": 0.9782762438447146,
-      "12m": 4.984640356605756,
+      "3m": 0.2358566253483656,
+      "6m": 0.9955054866934072,
+      "12m": 5.036761905548615,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3909816.75,
-      "relative_volume": 0.4687265713923805,
-      "volume_spike": false
+      "average_volume": 4254726.3,
+      "relative_volume": 2.0520299977932774,
+      "volume_spike": true
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 45,
-      "label": "Neutral"
+      "score": 55,
+      "label": "Watch closely"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 2.05x",
     "date_of_change": "2026-06-26",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 2.05x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: CIEN\nRating: Avoid | Score: 44.65/100 | Confidence: 33.12/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 48.617683\nNews/Catalyst: Tradr to Launch Leveraged ETFs on CIEN, QNT, RMBS, TSEM & TTMI\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CIEN\nRating: Avoid | Score: 48.4/100 | Confidence: 43.71/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: volume surge | Support: 365.0 | Resistance: 627.0\nFundamental Outlook: Quality Compounder | Forward P/E: 48.617683\nNews/Catalyst: Tradr to Launch Leveraged ETFs on CIEN, QNT, RMBS, TSEM & TTMI\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 2.05x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

@@ -1,51 +1,53 @@
 {
   "ticker": "AZO",
-  "generated_at": "2026-06-26T19:17:52.814006",
+  "generated_at": "2026-06-26T21:06:31.538472",
   "score": {
-    "final_score": 47.0,
+    "final_score": 52.5,
     "rating": "Hold",
-    "confidence": 42.4,
+    "confidence": 47.38,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 46.0,
+      "technical": 53.0,
       "momentum": 10.0,
-      "volume": 50.0,
+      "volume": 75.0,
       "fundamental": 60.0,
       "risk": 100,
       "catalyst": 30.0
     },
     "technical": {
-      "score": 46.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 2935.18994140625,
       "resistance": 3704.030029296875,
-      "risk_reward": 3.37
+      "risk_reward": 2.97
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": 0.027686415401629416,
-        "3m": -0.0838258065680304,
-        "6m": -0.10171758589074875,
-        "12m": -0.10839250617568297
+        "1m": 0.03343373741730016,
+        "3m": -0.07870211510613345,
+        "6m": -0.09669395395640801,
+        "12m": -0.10340620364039965
       },
-      "acceleration": -0.033,
+      "acceleration": -0.0304,
       "evidence": [
         "1m return is positive"
       ]
     },
     "volume": {
-      "score": 50.0,
-      "average_volume": 526545.15,
-      "relative_volume": 1.3193607423788825,
+      "score": 75.0,
+      "average_volume": 532219.7,
+      "relative_volume": 1.5185345450384495,
       "accumulation_days": 9,
       "distribution_days": 5,
       "evidence": [
+        "Relative volume is 1.52x",
         "Price advanced on above-average volume",
         "Accumulation days exceed distribution days"
       ]
@@ -58,17 +60,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01560351041618775,
-        "annualized_volatility": 0.24769804884503244,
-        "maximum_drawdown": -0.32594719187880694,
-        "sharpe_ratio": 0.24671376718915922,
-        "sortino_ratio": 0.33137922064236297,
-        "calmar_ratio": 0.09422562522552043,
-        "beta": 0.23218711774825232,
-        "alpha": 0.02061418731234675,
-        "capm_expected_return": 0.04049633144361556,
-        "actual_return": 0.06111051875596231,
-        "market_return": 0.17441248177912907
+        "volatility": 0.015628832204185157,
+        "annualized_volatility": 0.24810001976778825,
+        "maximum_drawdown": -0.3259471918788065,
+        "sharpe_ratio": 0.24054133590413668,
+        "sortino_ratio": 0.32361289551333244,
+        "calmar_ratio": 0.08938908083618352,
+        "beta": 0.22959773514198809,
+        "alpha": 0.020306408895805907,
+        "capm_expected_return": 0.03937190129698059,
+        "actual_return": 0.05967831019278649,
+        "market_return": 0.17148209790759553
       },
       "evidence": []
     },
@@ -79,7 +81,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; Price advanced on above-average volume"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "AZO",
@@ -133,14 +135,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.598078612242645,
+    "rsi": 50.93582857828091,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.3193607423788825,
+    "relative_volume": 1.5185345450384495,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "volume surge",
     "support": 2935.18994140625,
     "resistance": 3704.030029296875
   },
@@ -233,7 +235,7 @@
         "last_surprise_pct": 0.052600004,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.63,
+      "analyst_upside_pct": 26.87,
       "eps_growth_implied": 20.84
     },
     "evidence": [
@@ -327,20 +329,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6701,
-    "probability_pct": 67.01,
+    "probability_of_outperformance": 0.7519,
+    "probability_pct": 75.19,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 47.0/100"
+      "Composite score 52.5/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 47.0,
-    "technical_score": 46.0,
+    "final_score": 52.5,
+    "technical_score": 53.0,
     "momentum_score": 10.0,
-    "volume_score": 50.0,
+    "volume_score": 75.0,
     "fundamental_score": 60.0,
     "risk_score": 100,
     "catalyst_score": 30.0,
@@ -348,7 +351,7 @@
     "eps_growth": 0.077,
     "roe": null,
     "forward_pe": 18.002079,
-    "relative_volume": 1.3193607423788825,
+    "relative_volume": 1.5185345450384495,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -358,66 +361,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.017083793967483052,
-      "weekly": 0.015278307790483003,
-      "monthly": 0.027686415401629416,
-      "annual": -0.10839250617568297
+      "daily": 0.022771820969928802,
+      "weekly": 0.020956237636540864,
+      "monthly": 0.03343373741730016,
+      "annual": -0.10340620364039965
     },
     "risk": {
-      "volatility": 0.01560351041618775,
-      "annualized_volatility": 0.24769804884503244,
-      "maximum_drawdown": -0.32594719187880694,
-      "sharpe_ratio": 0.24671376718915922,
-      "sortino_ratio": 0.33137922064236297,
-      "calmar_ratio": 0.09422562522552043,
-      "beta": 0.23218711774825232,
-      "alpha": 0.02061418731234675,
-      "capm_expected_return": 0.04049633144361556,
-      "actual_return": 0.06111051875596231,
-      "market_return": 0.17441248177912907
+      "volatility": 0.015628832204185157,
+      "annualized_volatility": 0.24810001976778825,
+      "maximum_drawdown": -0.3259471918788065,
+      "sharpe_ratio": 0.24054133590413668,
+      "sortino_ratio": 0.32361289551333244,
+      "calmar_ratio": 0.08938908083618352,
+      "beta": 0.22959773514198809,
+      "alpha": 0.020306408895805907,
+      "capm_expected_return": 0.03937190129698059,
+      "actual_return": 0.05967831019278649,
+      "market_return": 0.17148209790759553
     },
     "capm": {
-      "beta": 0.23218711774825232,
-      "alpha": 0.02061418731234675,
-      "capm_expected_return": 0.04049633144361556,
-      "actual_return": 0.06111051875596231,
-      "market_return": 0.17441248177912907,
-      "interpretation": "Beta 0.23: Moves roughly 77% less than the market. CAPM expected return is 4.05%; realized alpha is 2.06%, meaning positive alpha versus CAPM."
+      "beta": 0.22959773514198809,
+      "alpha": 0.020306408895805907,
+      "capm_expected_return": 0.03937190129698059,
+      "actual_return": 0.05967831019278649,
+      "market_return": 0.17148209790759553,
+      "interpretation": "Beta 0.23: Moves roughly 77% less than the market. CAPM expected return is 3.94%; realized alpha is 2.03%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.06111051875596231,
+      "actual_return": 0.05967831019278649,
       "components": {
-        "market_component": 0.04049633144361556,
+        "market_component": 0.03937190129698059,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": 0.02061418731234675
+        "alpha_component": 0.020306408895805907
       },
       "component_weights_pct": {
-        "market_component": 66.27,
+        "market_component": 65.97,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 33.73
+        "alpha_component": 34.03
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 3068.814501953125,
-      "sma50": 3299.4316015625,
-      "sma200": 3617.51974609375,
-      "ema20": 3108.282645548833,
-      "ema50": 3238.066437661981,
-      "ema200": 3499.6123019851107
+      "sma20": 3069.6844970703123,
+      "sma50": 3299.779599609375,
+      "sma200": 3617.606745605469,
+      "ema20": 3109.9397791053807,
+      "ema50": 3238.7487868242615,
+      "ema200": 3499.956870073351
     },
     "momentum": {
-      "3m": -0.0838258065680304,
-      "6m": -0.10171758589074875,
-      "12m": -0.10839250617568297,
+      "3m": -0.07870211510613345,
+      "6m": -0.09669395395640801,
+      "12m": -0.10340620364039965,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 526545.15,
-      "relative_volume": 1.3193607423788825,
+      "average_volume": 532219.7,
+      "relative_volume": 1.5185345450384495,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -435,5 +438,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AZO\nRating: Hold | Score: 47.0/100 | Confidence: 42.4/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 2935.18994140625 | Resistance: 3704.030029296875\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.002079\nNews/Catalyst: Here is What to Know Beyond Why AutoZone, Inc. (AZO) is a Trending Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AZO\nRating: Hold | Score: 52.5/100 | Confidence: 47.38/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 2935.18994140625 | Resistance: 3704.030029296875\nFundamental Outlook: Fundamentally Average | Forward P/E: 18.002079\nNews/Catalyst: Here is What to Know Beyond Why AutoZone, Inc. (AZO) is a Trending Stock\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
