@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-26T17:16:10.520350",
+  "generated_at": "2026-06-26T19:17:13.139228",
   "benchmark": "SPY",
   "market_regime": {
     "regime": "Sideways",
-    "heuristic_regime": "Bull market",
-    "regime_confidence": 100.0,
+    "heuristic_regime": "Correction",
+    "regime_confidence": 99.9,
     "regime_model": "Gaussian HMM",
     "transition_probabilities": {
-      "Sideways": 86.6,
-      "Bull Trend": 9.72,
-      "Bear Trend": 3.68,
+      "Sideways": 86.65,
+      "Bull Trend": 9.71,
+      "Bear Trend": 3.64,
       "High Volatility": 0.0
     },
     "strategy_recommendation": {
@@ -28,7 +28,7 @@
       "thesis": "Market behavior is better modeled as a changing latent state than as one permanent distribution.",
       "evidence": [
         "Model: Gaussian HMM",
-        "Current state confidence: 100.0%",
+        "Current state confidence: 99.9%",
         "Observations: 443"
       ],
       "assumptions": [
@@ -45,163 +45,163 @@
         "Policy shock",
         "Sparse crisis history"
       ],
-      "confidence": 100.0,
+      "confidence": 99.9,
       "uncertainty": "Lower uncertainty",
       "historical_robustness": {},
       "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
     },
-    "health_score": 76.52,
+    "health_score": 73.18,
     "risk_environment": "Neutral",
     "buy_environment": "Favorable",
     "vix_status": {
-      "level": 18.84,
+      "level": 18.95,
       "regime": "Normal"
     },
     "index_trends": {
       "sp500": {
-        "latest": 734.7000122070312,
+        "latest": 732.580078125,
         "above_sma20": false,
-        "above_sma50": true,
+        "above_sma50": false,
         "above_sma200": true,
-        "trend_score": 66.67,
-        "one_month_return": -0.01847831635211583,
-        "three_month_return": 0.14184495991081758,
-        "volatility": 0.16555389208258217
+        "trend_score": 33.33,
+        "one_month_return": -0.021310439987403673,
+        "three_month_return": 0.13855023280221324,
+        "volatility": 0.1655526247742061
       },
       "nasdaq": {
-        "latest": 713.4450073242188,
+        "latest": 709.8900146484375,
         "above_sma20": false,
         "above_sma50": true,
         "above_sma200": true,
         "trend_score": 66.67,
-        "one_month_return": -0.020866395994702747,
-        "three_month_return": 0.24475694187466157,
-        "volatility": 0.31110985742219394
+        "one_month_return": -0.025745276293977604,
+        "three_month_return": 0.23855449912705762,
+        "volatility": 0.3122414072006495
       },
       "russell2000": {
-        "latest": 298.4599914550781,
+        "latest": 296.95001220703125,
         "above_sma20": true,
         "above_sma50": true,
         "above_sma200": true,
         "trend_score": 100.0,
-        "one_month_return": 0.030305287322706986,
-        "three_month_return": 0.20905977318485958,
-        "volatility": 0.2183701522977286
+        "one_month_return": 0.025092730706908872,
+        "three_month_return": 0.202942855609888,
+        "volatility": 0.2199454982148
       },
       "dow": {
-        "latest": 519.9099731445312,
+        "latest": 518.739990234375,
         "above_sma20": true,
         "above_sma50": true,
         "above_sma200": true,
         "trend_score": 100.0,
-        "one_month_return": 0.028505072220315508,
-        "three_month_return": 0.1361336214634723,
-        "volatility": 0.14236259696212644
+        "one_month_return": 0.026190568903080136,
+        "three_month_return": 0.13357683991886127,
+        "volatility": 0.14260146993478584
       },
       "vix": {
-        "latest": 18.84000015258789,
+        "latest": 18.950000762939453,
         "above_sma20": true,
         "above_sma50": true,
         "above_sma200": true,
         "trend_score": 100.0,
-        "one_month_return": 0.156537697590301,
-        "three_month_return": -0.39323669515260695,
-        "volatility": 1.8493073939756495
+        "one_month_return": 0.16329034364121142,
+        "three_month_return": -0.3896940023006127,
+        "volatility": 1.8488073282295456
       }
     },
     "sector_rankings": [
       {
         "name": "Technology",
-        "latest": 182.58999633789062,
+        "latest": 181.82000732421875,
         "above_sma50": true,
-        "one_month_return": -0.00879617315814929,
-        "three_month_return": 0.3796808966678651,
+        "one_month_return": -0.012976117691175015,
+        "three_month_return": 0.3738627294401198,
         "momentum_score": 100.0
       },
       {
         "name": "Industrials",
-        "latest": 182.52000427246094,
+        "latest": 181.7100067138672,
         "above_sma50": true,
-        "one_month_return": 0.04973641693776765,
-        "three_month_return": 0.13455107686085577,
-        "momentum_score": 93.43
+        "one_month_return": 0.04507783752190675,
+        "three_month_return": 0.12951610216851828,
+        "momentum_score": 92.46
       },
       {
         "name": "Healthcare",
-        "latest": 159.53500366210938,
+        "latest": 159.375,
         "above_sma50": true,
-        "one_month_return": 0.07694469208516241,
-        "three_month_return": 0.09948251597203117,
-        "momentum_score": 92.64
+        "one_month_return": 0.0758645837035068,
+        "three_month_return": 0.09837980355818776,
+        "momentum_score": 92.42
       },
       {
         "name": "Real Estate",
-        "latest": 45.064998626708984,
+        "latest": 45.125,
         "above_sma50": true,
-        "one_month_return": 0.01859498698768225,
-        "three_month_return": 0.12831704956096135,
-        "momentum_score": 89.69
+        "one_month_return": 0.019951185809585326,
+        "three_month_return": 0.12981933680259905,
+        "momentum_score": 89.98
       },
       {
         "name": "Financials",
-        "latest": 53.70500183105469,
+        "latest": 53.55500030517578,
         "above_sma50": true,
-        "one_month_return": 0.04809664936048996,
-        "three_month_return": 0.09873866781006391,
-        "momentum_score": 89.68
+        "one_month_return": 0.04516924797677491,
+        "three_month_return": 0.0956698200101489,
+        "momentum_score": 89.08
       },
       {
         "name": "Materials",
-        "latest": 51.54999923706055,
+        "latest": 51.4900016784668,
         "above_sma50": true,
-        "one_month_return": 0.010995506619471351,
-        "three_month_return": 0.05403850067285654,
-        "momentum_score": 81.5
+        "one_month_return": 0.009818838083212267,
+        "three_month_return": 0.05281173563619057,
+        "momentum_score": 81.26
       },
       {
         "name": "Consumer Staples",
-        "latest": 84.73500061035156,
+        "latest": 84.69999694824219,
         "above_sma50": true,
-        "one_month_return": 0.008783908121563488,
-        "three_month_return": 0.051552197488765605,
-        "momentum_score": 81.03
+        "one_month_return": 0.00836718385405999,
+        "three_month_return": 0.05111780582598002,
+        "momentum_score": 80.95
       },
       {
         "name": "Utilities",
-        "latest": 46.125,
+        "latest": 46.040000915527344,
         "above_sma50": true,
-        "one_month_return": 0.028345823589340347,
-        "three_month_return": 0.02403547006328388,
-        "momentum_score": 80.24
+        "one_month_return": 0.026450789366546434,
+        "three_month_return": 0.02214837895384414,
+        "momentum_score": 79.86
       },
       {
         "name": "Consumer Discretionary",
-        "latest": 115.08999633789062,
+        "latest": 114.2750015258789,
         "above_sma50": false,
-        "one_month_return": -0.051260122723617574,
-        "three_month_return": 0.05962813947937495,
-        "momentum_score": 50.84
+        "one_month_return": -0.057978500536914224,
+        "three_month_return": 0.05212452088682662,
+        "momentum_score": 49.41
       },
       {
         "name": "Communication Services",
-        "latest": 106.71499633789062,
+        "latest": 106.45999908447266,
         "above_sma50": false,
-        "one_month_return": -0.07971259218846949,
-        "three_month_return": -0.016702357507639043,
-        "momentum_score": 40.36
+        "one_month_return": -0.08191163421068026,
+        "three_month_return": -0.019051963530526406,
+        "momentum_score": 39.9
       },
       {
         "name": "Energy",
-        "latest": 53.84000015258789,
+        "latest": 53.75,
         "above_sma50": false,
-        "one_month_return": -0.04845975268829816,
-        "three_month_return": -0.11852599364199523,
-        "momentum_score": 33.3
+        "one_month_return": -0.050050368721152205,
+        "three_month_return": -0.11999948537397231,
+        "momentum_score": 33.0
       }
     ],
     "sector_participation": 72.73,
     "risk_on_risk_off": {
-      "score": -1.15,
+      "score": -1.67,
       "label": "Neutral"
     },
     "breadth_proxy": 60.0
@@ -269,15 +269,15 @@
           "quality": 30.0,
           "growth": 90.0,
           "value": 30.0,
-          "low_volatility": 6.1
+          "low_volatility": 3.0
         },
-        "composite_score": 55.9,
+        "composite_score": 55.5,
         "contributions": {
           "momentum": 25.0,
           "quality": 6.6,
           "growth": 18.0,
           "value": 5.4,
-          "low_volatility": 0.91
+          "low_volatility": 0.45
         },
         "data_coverage_pct": 89.3,
         "explanation": "Primary score drivers: Momentum: 100.0/100, Growth: 90.0/100, Quality: 30.0/100",
@@ -598,15 +598,15 @@
           "quality": 25.0,
           "growth": 25.0,
           "value": 12.5,
-          "low_volatility": 9.1
+          "low_volatility": 12.1
         },
-        "composite_score": 20.9,
+        "composite_score": 21.4,
         "contributions": {
           "momentum": 6.83,
           "quality": 5.5,
           "growth": 5.0,
           "value": 2.25,
-          "low_volatility": 1.36
+          "low_volatility": 1.81
         },
         "data_coverage_pct": 89.3,
         "explanation": "Primary score drivers: Momentum: 27.3/100, Quality: 25.0/100, Growth: 25.0/100",
@@ -932,15 +932,15 @@
           "quality": 30.0,
           "growth": 90.0,
           "value": 30.0,
-          "low_volatility": 6.1
+          "low_volatility": 3.0
         },
-        "composite_score": 55.9,
+        "composite_score": 55.5,
         "contributions": {
           "momentum": 25.0,
           "quality": 6.6,
           "growth": 18.0,
           "value": 5.4,
-          "low_volatility": 0.91
+          "low_volatility": 0.45
         },
         "data_coverage_pct": 89.3,
         "explanation": "Primary score drivers: Momentum: 100.0/100, Growth: 90.0/100, Quality: 30.0/100",
@@ -1220,15 +1220,15 @@
           "quality": 25.0,
           "growth": 25.0,
           "value": 12.5,
-          "low_volatility": 9.1
+          "low_volatility": 12.1
         },
-        "composite_score": 20.9,
+        "composite_score": 21.4,
         "contributions": {
           "momentum": 6.83,
           "quality": 5.5,
           "growth": 5.0,
           "value": 2.25,
-          "low_volatility": 1.36
+          "low_volatility": 1.81
         },
         "data_coverage_pct": 89.3,
         "explanation": "Primary score drivers: Momentum: 27.3/100, Quality: 25.0/100, Growth: 25.0/100",
@@ -1327,14 +1327,14 @@
       },
       "low_volatility": {
         "AAPL": 5.51,
-        "AMD": 0.55,
+        "AMD": 0.27,
         "AMZN": 4.95,
         "FIZZ": 5.78,
         "GE": 5.24,
         "GOOGL": 6.34,
         "MSFT": 6.89,
         "NVDA": 2.2,
-        "TSLA": 0.83,
+        "TSLA": 1.1,
         "TSM": 3.03,
         "VGT": 7.17
       }
@@ -1347,18 +1347,18 @@
       {
         "pair": "AAPL/AMD",
         "available": true,
-        "hedge_ratio": 0.23443876477018935,
-        "intercept": 4.268817356385471,
-        "correlation": 0.38462621721268003,
-        "spread_zscore": -2.999997361880062,
-        "half_life_days": 21.3311151159871,
-        "engle_granger_p_value": 0.04962174783174903,
+        "hedge_ratio": 0.23454604525245323,
+        "intercept": 4.268281635798318,
+        "correlation": 0.38378513632142386,
+        "spread_zscore": -2.7712358008073212,
+        "half_life_days": 21.03047789448652,
+        "engle_granger_p_value": 0.04510096026157404,
         "cointegrated": true,
         "stationarity_test": {
           "available": true,
           "method": "Engle-Granger residual ADF",
-          "test_statistic": -2.86460294585083,
-          "p_value": 0.04962174783174903,
+          "test_statistic": -2.902129198893768,
+          "p_value": 0.04510096026157404,
           "used_lag": 0,
           "observations": 501,
           "critical_values": {
@@ -1377,500 +1377,500 @@
         "historical_performance": {
           "trades": 21,
           "win_rate": 0.16334661354581673,
-          "average_daily_pnl": 0.0004821876683027074,
-          "profit_factor": 1.2643289901936463,
-          "maximum_drawdown": -0.13643485267167854,
+          "average_daily_pnl": 0.0004983960023098736,
+          "profit_factor": 1.2731828023902727,
+          "maximum_drawdown": -0.13643646366034723,
           "cost_bps_per_turn": 10
         },
         "spread_history": [
           {
             "date": "2026-01-05 00:00:00",
-            "spread": 0.051925
+            "spread": 0.051882
           },
           {
             "date": "2026-01-06 00:00:00",
-            "spread": 0.040668
+            "spread": 0.040628
           },
           {
             "date": "2026-01-07 00:00:00",
-            "spread": 0.037685
+            "spread": 0.037647
           },
           {
             "date": "2026-01-08 00:00:00",
-            "spread": 0.038755
+            "spread": 0.03872
           },
           {
             "date": "2026-01-09 00:00:00",
-            "spread": 0.041764
+            "spread": 0.04173
           },
           {
             "date": "2026-01-12 00:00:00",
-            "spread": 0.039993
+            "spread": 0.039956
           },
           {
             "date": "2026-01-13 00:00:00",
-            "spread": 0.028532
+            "spread": 0.028488
           },
           {
             "date": "2026-01-14 00:00:00",
-            "spread": 0.021574
+            "spread": 0.021529
           },
           {
             "date": "2026-01-15 00:00:00",
-            "spread": 0.010333
+            "spread": 0.010286
           },
           {
             "date": "2026-01-16 00:00:00",
-            "spread": -0.004088
+            "spread": -0.004137
           },
           {
             "date": "2026-01-20 00:00:00",
-            "spread": -0.039346
+            "spread": -0.039395
           },
           {
             "date": "2026-01-21 00:00:00",
-            "spread": -0.052914
+            "spread": -0.05297
           },
           {
             "date": "2026-01-22 00:00:00",
-            "spread": -0.053751
+            "spread": -0.053809
           },
           {
             "date": "2026-01-23 00:00:00",
-            "spread": -0.060434
+            "spread": -0.060495
           },
           {
             "date": "2026-01-26 00:00:00",
-            "spread": -0.023473
+            "spread": -0.02353
           },
           {
             "date": "2026-01-27 00:00:00",
-            "spread": -0.013009
+            "spread": -0.013066
           },
           {
             "date": "2026-01-28 00:00:00",
-            "spread": -0.020779
+            "spread": -0.020837
           },
           {
             "date": "2026-01-29 00:00:00",
-            "spread": -0.013109
+            "spread": -0.013167
           },
           {
             "date": "2026-01-30 00:00:00",
-            "spread": 0.006348
+            "spread": 0.006297
           },
           {
             "date": "2026-02-02 00:00:00",
-            "spread": 0.036865
+            "spread": 0.03681
           },
           {
             "date": "2026-02-03 00:00:00",
-            "spread": 0.038894
+            "spread": 0.038841
           },
           {
             "date": "2026-02-04 00:00:00",
-            "spread": 0.109147
+            "spread": 0.109115
           },
           {
             "date": "2026-02-05 00:00:00",
-            "spread": 0.116231
+            "spread": 0.116202
           },
           {
             "date": "2026-02-06 00:00:00",
-            "spread": 0.105558
+            "spread": 0.105521
           },
           {
             "date": "2026-02-09 00:00:00",
-            "spread": 0.085476
+            "spread": 0.085435
           },
           {
             "date": "2026-02-10 00:00:00",
-            "spread": 0.0847
+            "spread": 0.08466
           },
           {
             "date": "2026-02-11 00:00:00",
-            "spread": 0.091317
+            "spread": 0.091277
           },
           {
             "date": "2026-02-12 00:00:00",
-            "spread": 0.048583
+            "spread": 0.048547
           },
           {
             "date": "2026-02-13 00:00:00",
-            "spread": 0.024021
+            "spread": 0.023985
           },
           {
             "date": "2026-02-17 00:00:00",
-            "spread": 0.060042
+            "spread": 0.060008
           },
           {
             "date": "2026-02-18 00:00:00",
-            "spread": 0.065264
+            "spread": 0.065231
           },
           {
             "date": "2026-02-19 00:00:00",
-            "spread": 0.047123
+            "spread": 0.047089
           },
           {
             "date": "2026-02-20 00:00:00",
-            "spread": 0.066099
+            "spread": 0.066066
           },
           {
             "date": "2026-02-23 00:00:00",
-            "spread": 0.076323
+            "spread": 0.076292
           },
           {
             "date": "2026-02-24 00:00:00",
-            "spread": 0.078761
+            "spread": 0.078721
           },
           {
             "date": "2026-02-25 00:00:00",
-            "spread": 0.089702
+            "spread": 0.089663
           },
           {
             "date": "2026-02-26 00:00:00",
-            "spread": 0.093145
+            "spread": 0.09311
           },
           {
             "date": "2026-02-27 00:00:00",
-            "spread": 0.064515
+            "spread": 0.064483
           },
           {
             "date": "2026-03-02 00:00:00",
-            "spread": 0.068427
+            "spread": 0.068395
           },
           {
             "date": "2026-03-03 00:00:00",
-            "spread": 0.073988
+            "spread": 0.073961
           },
           {
             "date": "2026-03-04 00:00:00",
-            "spread": 0.056044
+            "spread": 0.05601
           },
           {
             "date": "2026-03-05 00:00:00",
-            "spread": 0.050573
+            "spread": 0.05054
           },
           {
             "date": "2026-03-06 00:00:00",
-            "spread": 0.048041
+            "spread": 0.048012
           },
           {
             "date": "2026-03-09 00:00:00",
-            "spread": 0.04523
+            "spread": 0.045196
           },
           {
             "date": "2026-03-10 00:00:00",
-            "spread": 0.048244
+            "spread": 0.048209
           },
           {
             "date": "2026-03-11 00:00:00",
-            "spread": 0.046328
+            "spread": 0.046293
           },
           {
             "date": "2026-03-12 00:00:00",
-            "spread": 0.035034
+            "spread": 0.035003
           },
           {
             "date": "2026-03-13 00:00:00",
-            "spread": 0.017951
+            "spread": 0.017922
           },
           {
             "date": "2026-03-16 00:00:00",
-            "spread": 0.024852
+            "spread": 0.024821
           },
           {
             "date": "2026-03-17 00:00:00",
-            "spread": 0.030736
+            "spread": 0.030705
           },
           {
             "date": "2026-03-18 00:00:00",
-            "spread": 0.009986
+            "spread": 0.009953
           },
           {
             "date": "2026-03-19 00:00:00",
-            "spread": -0.000674
+            "spread": -0.00071
           },
           {
             "date": "2026-03-20 00:00:00",
-            "spread": -3.5e-05
+            "spread": -6.8e-05
           },
           {
             "date": "2026-03-23 00:00:00",
-            "spread": 0.012413
+            "spread": 0.012379
           },
           {
             "date": "2026-03-24 00:00:00",
-            "spread": 0.009919
+            "spread": 0.009883
           },
           {
             "date": "2026-03-25 00:00:00",
-            "spread": -0.002615
+            "spread": -0.002658
           },
           {
             "date": "2026-03-26 00:00:00",
-            "spread": 0.016707
+            "spread": 0.016673
           },
           {
             "date": "2026-03-27 00:00:00",
-            "spread": 0.002459
+            "spread": 0.002425
           },
           {
             "date": "2026-03-30 00:00:00",
-            "spread": 0.000708
+            "spread": 0.000678
           },
           {
             "date": "2026-03-31 00:00:00",
-            "spread": 0.020651
+            "spread": 0.020617
           },
           {
             "date": "2026-04-01 00:00:00",
-            "spread": 0.020189
+            "spread": 0.020151
           },
           {
             "date": "2026-04-02 00:00:00",
-            "spread": 0.013331
+            "spread": 0.013289
           },
           {
             "date": "2026-04-06 00:00:00",
-            "spread": 0.021882
+            "spread": 0.021839
           },
           {
             "date": "2026-04-07 00:00:00",
-            "spread": -0.000475
+            "spread": -0.000518
           },
           {
             "date": "2026-04-08 00:00:00",
-            "spread": 0.009959
+            "spread": 0.009911
           },
           {
             "date": "2026-04-09 00:00:00",
-            "spread": 0.011257
+            "spread": 0.011207
           },
           {
             "date": "2026-04-10 00:00:00",
-            "spread": 0.003041
+            "spread": 0.002987
           },
           {
             "date": "2026-04-13 00:00:00",
-            "spread": -0.003591
+            "spread": -0.003646
           },
           {
             "date": "2026-04-14 00:00:00",
-            "spread": -0.012718
+            "spread": -0.012777
           },
           {
             "date": "2026-04-15 00:00:00",
-            "spread": 0.013435
+            "spread": 0.013375
           },
           {
             "date": "2026-04-16 00:00:00",
-            "spread": -0.015616
+            "spread": -0.015684
           },
           {
             "date": "2026-04-17 00:00:00",
-            "spread": 0.009874
+            "spread": 0.009806
           },
           {
             "date": "2026-04-20 00:00:00",
-            "spread": 0.02317
+            "spread": 0.023104
           },
           {
             "date": "2026-04-21 00:00:00",
-            "spread": -0.010346
+            "spread": -0.010416
           },
           {
             "date": "2026-04-22 00:00:00",
-            "spread": 0.00048
+            "spread": 0.000403
           },
           {
             "date": "2026-04-23 00:00:00",
-            "spread": -9e-06
+            "spread": -8.7e-05
           },
           {
             "date": "2026-04-24 00:00:00",
-            "spread": -0.039253
+            "spread": -0.039345
           },
           {
             "date": "2026-04-27 00:00:00",
-            "spread": -0.043006
+            "spread": -0.043094
           },
           {
             "date": "2026-04-28 00:00:00",
-            "spread": -0.023348
+            "spread": -0.023432
           },
           {
             "date": "2026-04-29 00:00:00",
-            "spread": -0.035216
+            "spread": -0.035305
           },
           {
             "date": "2026-04-30 00:00:00",
-            "spread": -0.042644
+            "spread": -0.042738
           },
           {
             "date": "2026-05-01 00:00:00",
-            "spread": -0.014731
+            "spread": -0.014827
           },
           {
             "date": "2026-05-04 00:00:00",
-            "spread": -0.013925
+            "spread": -0.014015
           },
           {
             "date": "2026-05-05 00:00:00",
-            "spread": 0.003046
+            "spread": 0.002952
           },
           {
             "date": "2026-05-06 00:00:00",
-            "spread": -0.025325
+            "spread": -0.025438
           },
           {
             "date": "2026-05-07 00:00:00",
-            "spread": -0.018262
+            "spread": -0.018372
           },
           {
             "date": "2026-05-08 00:00:00",
-            "spread": -0.023407
+            "spread": -0.023528
           },
           {
             "date": "2026-05-11 00:00:00",
-            "spread": -0.026517
+            "spread": -0.026639
           },
           {
             "date": "2026-05-12 00:00:00",
-            "spread": -0.013872
+            "spread": -0.013991
           },
           {
             "date": "2026-05-13 00:00:00",
-            "spread": 0.001303
+            "spread": 0.001184
           },
           {
             "date": "2026-05-14 00:00:00",
-            "spread": -0.003108
+            "spread": -0.003227
           },
           {
             "date": "2026-05-15 00:00:00",
-            "spread": 0.017384
+            "spread": 0.017271
           },
           {
             "date": "2026-05-18 00:00:00",
-            "spread": 0.011117
+            "spread": 0.011005
           },
           {
             "date": "2026-05-19 00:00:00",
-            "spread": 0.018801
+            "spread": 0.01869
           },
           {
             "date": "2026-05-20 00:00:00",
-            "spread": 0.011457
+            "spread": 0.011338
           },
           {
             "date": "2026-05-21 00:00:00",
-            "spread": 0.019431
+            "spread": 0.019311
           },
           {
             "date": "2026-05-22 00:00:00",
-            "spread": 0.022748
+            "spread": 0.022624
           },
           {
             "date": "2026-05-26 00:00:00",
-            "spread": 0.003591
+            "spread": 0.003459
           },
           {
             "date": "2026-05-27 00:00:00",
-            "spread": 0.015649
+            "spread": 0.015519
           },
           {
             "date": "2026-05-28 00:00:00",
-            "spread": 0.010542
+            "spread": 0.010407
           },
           {
             "date": "2026-05-29 00:00:00",
-            "spread": 0.010003
+            "spread": 0.009869
           },
           {
             "date": "2026-06-01 00:00:00",
-            "spread": -0.005867
+            "spread": -0.006
           },
           {
             "date": "2026-06-02 00:00:00",
-            "spread": 0.017557
+            "spread": 0.017421
           },
           {
             "date": "2026-06-03 00:00:00",
-            "spread": -0.007486
+            "spread": -0.007626
           },
           {
             "date": "2026-06-04 00:00:00",
-            "spread": 0.004137
+            "spread": 0.004001
           },
           {
             "date": "2026-06-05 00:00:00",
-            "spread": 0.018511
+            "spread": 0.018387
           },
           {
             "date": "2026-06-08 00:00:00",
-            "spread": -0.012281
+            "spread": -0.01241
           },
           {
             "date": "2026-06-09 00:00:00",
-            "spread": -0.042213
+            "spread": -0.042339
           },
           {
             "date": "2026-06-10 00:00:00",
-            "spread": -0.026994
+            "spread": -0.027115
           },
           {
             "date": "2026-06-11 00:00:00",
-            "spread": -0.031175
+            "spread": -0.031303
           },
           {
             "date": "2026-06-12 00:00:00",
-            "spread": -0.057356
+            "spread": -0.057489
           },
           {
             "date": "2026-06-15 00:00:00",
-            "spread": -0.055159
+            "spread": -0.055299
           },
           {
             "date": "2026-06-16 00:00:00",
-            "spread": -0.02791
+            "spread": -0.028042
           },
           {
             "date": "2026-06-17 00:00:00",
-            "spread": -0.041352
+            "spread": -0.041485
           },
           {
             "date": "2026-06-18 00:00:00",
-            "spread": -0.045533
+            "spread": -0.045672
           },
           {
             "date": "2026-06-22 00:00:00",
-            "spread": -0.055035
+            "spread": -0.055176
           },
           {
             "date": "2026-06-23 00:00:00",
-            "spread": -0.05029
+            "spread": -0.050425
           },
           {
             "date": "2026-06-24 00:00:00",
-            "spread": -0.054394
+            "spread": -0.05453
           },
           {
             "date": "2026-06-25 00:00:00",
-            "spread": -0.123241
+            "spread": -0.123378
           },
           {
             "date": "2026-06-26 00:00:00",
-            "spread": -0.104052
+            "spread": -0.096023
           }
         ],
         "research_mindset": {
           "signal": "pairs_trading",
           "thesis": "The price relationship is stationary enough that an extreme spread may mean-revert.",
           "evidence": [
-            "Engle-Granger p-value: 0.0496",
-            "Spread z-score: -3.00",
-            "Estimated half-life: 21.3 days"
+            "Engle-Granger p-value: 0.0451",
+            "Spread z-score: -2.77",
+            "Estimated half-life: 21.0 days"
           ],
           "assumptions": [
             "The hedge ratio remains stable after entry.",
@@ -1887,14 +1887,14 @@
             "Structural break",
             "Liquidity shock"
           ],
-          "confidence": 44.1,
+          "confidence": 46.1,
           "uncertainty": "High uncertainty",
           "historical_robustness": {
             "trades": 21,
             "win_rate": 0.16334661354581673,
-            "average_daily_pnl": 0.0004821876683027074,
-            "profit_factor": 1.2643289901936463,
-            "maximum_drawdown": -0.13643485267167854,
+            "average_daily_pnl": 0.0004983960023098736,
+            "profit_factor": 1.2731828023902727,
+            "maximum_drawdown": -0.13643646366034723,
             "cost_bps_per_turn": 10
           },
           "decision_rule": "Research candidate only; require risk limits and out-of-sample evidence before deployment."
@@ -1960,10 +1960,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.15066243584477926,
-        "beta": 0.24269842000308445,
-        "residual_volatility": 0.13007743584580245,
-        "benchmark_correlation": 0.2376488894601697
+        "alpha_annualized": 0.15154124217299955,
+        "beta": 0.24269607664164153,
+        "residual_volatility": 0.1300748743776145,
+        "benchmark_correlation": 0.23772705728180166
       },
       "robustness": {
         "sample_size": 201,
@@ -2233,10 +2233,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.6165955402657423,
-        "beta": 1.4561632965294864,
-        "residual_volatility": 0.45035838355907964,
-        "benchmark_correlation": 0.39034585934430854
+        "alpha_annualized": 0.6219094064887827,
+        "beta": 1.4559137477530237,
+        "residual_volatility": 0.4503448505302983,
+        "benchmark_correlation": 0.3904111048697668
       },
       "robustness": {
         "sample_size": 201,
@@ -2506,10 +2506,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.12938248688354498,
-        "beta": 0.22937282736210396,
-        "residual_volatility": 0.13216671915391953,
-        "benchmark_correlation": 0.22189643286561495
+        "alpha_annualized": 0.13021476907638524,
+        "beta": 0.22936072068174237,
+        "residual_volatility": 0.13216476279279005,
+        "benchmark_correlation": 0.22195984657122658
       },
       "robustness": {
         "sample_size": 201,
@@ -2779,10 +2779,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": -0.3013206753483762,
-        "beta": 0.04029747388142141,
-        "residual_volatility": 0.13233902194056787,
-        "benchmark_correlation": 0.03989684386165614
+        "alpha_annualized": -0.3011270061398804,
+        "beta": 0.040023655994884826,
+        "residual_volatility": 0.1323403802246312,
+        "benchmark_correlation": 0.03963916471490923
       },
       "robustness": {
         "sample_size": 201,
@@ -3036,34 +3036,34 @@
       "transaction_cost_bps": 5,
       "slippage_bps": 5,
       "performance": {
-        "cagr": 0.1174,
-        "sharpe_ratio": 0.9802,
-        "sortino_ratio": 0.5697,
+        "cagr": 0.1051,
+        "sharpe_ratio": 0.8854,
+        "sortino_ratio": 0.526,
         "max_drawdown": -0.1247,
         "win_rate": 0.0945,
-        "profit_factor": 1.4707
+        "profit_factor": 1.4093
       },
       "performance_attribution": {
-        "gross_return": 0.10478384512933303,
-        "net_return": 0.09255811859289609,
+        "gross_return": 0.09513163392337587,
+        "net_return": 0.08301272040307461,
         "transaction_and_slippage_drag": 0.011,
         "average_exposure": 0.15920398009950248,
         "turnover": 11.0
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.08693659722210001,
-        "beta": 0.17564093192332933,
-        "residual_volatility": 0.11841474352999674,
-        "benchmark_correlation": 0.19092004920584077
+        "alpha_annualized": 0.07624785245655914,
+        "beta": 0.17785088562561907,
+        "residual_volatility": 0.118929375350503,
+        "benchmark_correlation": 0.19249069503313315
       },
       "robustness": {
         "sample_size": 201,
         "fold_count": 4,
         "positive_fold_pct": 0.5,
         "worst_fold_return": -0.02113138341512022,
-        "best_fold_return": 0.12229150031335845,
-        "return_stability": 0.06679140605732935,
+        "best_fold_return": 0.11248632924443602,
+        "return_stability": 0.061986291768920836,
         "warning": "A strategy is not robust if results depend on one fold or disappear after realistic costs."
       },
       "equity_curve": {
@@ -3267,7 +3267,7 @@
         "2026-06-23 00:00:00": 1.050193,
         "2026-06-24 00:00:00": 1.077916,
         "2026-06-25 00:00:00": 1.094061,
-        "2026-06-26 00:00:00": 1.092558
+        "2026-06-26 00:00:00": 1.083013
       }
     },
     "GOOGL": {
@@ -3325,10 +3325,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.28801441632694075,
-        "beta": 0.41416539124767837,
-        "residual_volatility": 0.20188136176864238,
-        "benchmark_correlation": 0.25977675922097054
+        "alpha_annualized": 0.2895093806765255,
+        "beta": 0.41418842204293127,
+        "residual_volatility": 0.20187560131964663,
+        "benchmark_correlation": 0.25987916496930596
       },
       "robustness": {
         "sample_size": 201,
@@ -3598,10 +3598,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": -0.09230086977525921,
-        "beta": -0.0028327792017293824,
-        "residual_volatility": 0.09141047685917501,
-        "benchmark_correlation": -0.004063569813708619
+        "alpha_annualized": -0.09229786048523302,
+        "beta": -0.0029087160593895094,
+        "residual_volatility": 0.09141043531486288,
+        "benchmark_correlation": -0.004173912569154757
       },
       "robustness": {
         "sample_size": 201,
@@ -3871,10 +3871,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": -0.08753700603388634,
-        "beta": 0.11885451178849789,
-        "residual_volatility": 0.09903568440104488,
-        "benchmark_correlation": 0.15545561001146874
+        "alpha_annualized": -0.08708301903032893,
+        "beta": 0.1187181346421626,
+        "residual_volatility": 0.09903766832351867,
+        "benchmark_correlation": 0.15532980948841912
       },
       "robustness": {
         "sample_size": 201,
@@ -4119,7 +4119,7 @@
           "train_end": "2026-06-09 00:00:00",
           "test_start": "2026-06-10 00:00:00",
           "test_end": "2026-06-26 00:00:00",
-          "entry_threshold": 74.41388579777802
+          "entry_threshold": 74.45230792892556
         }
       ],
       "train_window": 252,
@@ -4144,10 +4144,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.10062773297186815,
-        "beta": 0.22182483555943036,
-        "residual_volatility": 0.21024660187725694,
-        "benchmark_correlation": 0.1370435910203035
+        "alpha_annualized": 0.10143639734880627,
+        "beta": 0.22179153960358697,
+        "residual_volatility": 0.2102458435262817,
+        "benchmark_correlation": 0.13706941402707884
       },
       "robustness": {
         "sample_size": 201,
@@ -4417,10 +4417,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": -0.09587762476927172,
-        "beta": 0.5416487368582261,
-        "residual_volatility": 0.21320816965169992,
-        "benchmark_correlation": 0.3160506749752757
+        "alpha_annualized": -0.09385339572205446,
+        "beta": 0.5412831786723058,
+        "residual_volatility": 0.21321613098276634,
+        "benchmark_correlation": 0.31594430896915243
       },
       "robustness": {
         "sample_size": 201,
@@ -4690,10 +4690,10 @@
       },
       "alpha_beta": {
         "available": true,
-        "alpha_annualized": 0.055713993982725044,
-        "beta": 0.49003796643496833,
-        "residual_volatility": 0.1292142716588094,
-        "benchmark_correlation": 0.4460733903435565
+        "alpha_annualized": 0.05753437108102985,
+        "beta": 0.48982499209305,
+        "residual_volatility": 0.12921726101290665,
+        "benchmark_correlation": 0.44603184442436494
       },
       "robustness": {
         "sample_size": 200,
@@ -4927,35 +4927,35 @@
       "ticker": "AAPL",
       "score": 49,
       "rating": "Hold",
-      "close": 279.0,
+      "close": 281.23,
       "weekly_rsi": 75.47,
       "monthly_rsi": 73.42,
       "above_sma200": true,
       "rs_status": "lagging",
-      "relative_volume": "0.83x",
+      "relative_volume": "1.18x",
       "quant_score": 73,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.28170909937842775,
-      "max_drawdown": -0.33360521926123865,
-      "sharpe_ratio": 0.475294613157626,
-      "beta": 1.127743554849582,
-      "capm_expected_return": 0.19255876703474306,
-      "actual_return": 0.17889481741205304,
-      "alpha": -0.01366394962269002,
-      "capm_interpretation": "Beta 1.13: Moves roughly in line with the market. CAPM expected return is 19.26%; realized alpha is -1.37%, meaning negative alpha versus CAPM.",
+      "annualized_volatility": 0.2819600524931662,
+      "max_drawdown": -0.3336050612294842,
+      "sharpe_ratio": 0.4893295686024434,
+      "beta": 1.126459418768774,
+      "capm_expected_return": 0.1907548146635849,
+      "actual_return": 0.18297139084960332,
+      "alpha": -0.007783423813981588,
+      "capm_interpretation": "Beta 1.13: Moves roughly in line with the market. CAPM expected return is 19.08%; realized alpha is -0.78%, meaning negative alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.17889481741205304,
+        "actual_return": 0.18297139084960332,
         "components": {
-          "market_component": 0.19255876703474306,
-          "momentum_component": 0.09742367661054696,
-          "volatility_drag": -0.00634181987568555,
-          "alpha_component": -0.01366394962269002
+          "market_component": 0.1907548146635849,
+          "momentum_component": 0.10020056259523752,
+          "volatility_drag": -0.006392010498633239,
+          "alpha_component": -0.007783423813981588
         },
         "component_weights_pct": {
-          "market_component": 62.12,
-          "momentum_component": 31.43,
-          "volatility_drag": 2.05,
-          "alpha_component": 4.41
+          "market_component": 62.52,
+          "momentum_component": 32.84,
+          "volatility_drag": 2.09,
+          "alpha_component": 2.55
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -4966,7 +4966,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "AAPL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 28.17%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). CAPM expected return is 19.26%, actual annualized return is 17.89%, and estimated alpha is -1.37%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
+      "research_note": "AAPL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 28.20%, max drawdown is -33.36%, and the research score is 73/100 (Watch closely). CAPM expected return is 19.08%, actual annualized return is 18.30%, and estimated alpha is -0.78%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 54.5,
@@ -5019,35 +5019,35 @@
       "ticker": "AMD",
       "score": 52,
       "rating": "Avoid",
-      "close": 520.68,
+      "close": 520.23,
       "weekly_rsi": 84.02,
       "monthly_rsi": 83.87,
       "above_sma200": true,
       "rs_status": "leading",
-      "relative_volume": "0.52x",
+      "relative_volume": "0.67x",
       "quant_score": 65,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.6115039103766692,
+      "annualized_volatility": 0.6115219400137146,
       "max_drawdown": -0.5748532494558938,
-      "sharpe_ratio": 1.2096758354500443,
-      "beta": 2.227812836741876,
-      "capm_expected_return": 0.3364965143983029,
-      "actual_return": 0.7847215036658663,
-      "alpha": 0.44822498926756343,
-      "capm_interpretation": "Beta 2.23: Moves roughly 123% more than the market. CAPM expected return is 33.65%; realized alpha is 44.82%, meaning positive alpha versus CAPM.",
+      "sharpe_ratio": 1.2089443944869136,
+      "beta": 2.2287868966767603,
+      "capm_expected_return": 0.3333871497162477,
+      "actual_return": 0.7842960214853427,
+      "alpha": 0.450908871769095,
+      "capm_interpretation": "Beta 2.23: Moves roughly 123% more than the market. CAPM expected return is 33.34%; realized alpha is 45.09%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.7847215036658663,
+        "actual_return": 0.7842960214853427,
         "components": {
-          "market_component": 0.3364965143983029,
-          "momentum_component": 0.6577414628986891,
-          "volatility_drag": -0.07230078207533384,
-          "alpha_component": 0.44822498926756343
+          "market_component": 0.3333871497162477,
+          "momentum_component": 0.6569560714979641,
+          "volatility_drag": -0.07230438800274293,
+          "alpha_component": 0.450908871769095
         },
         "component_weights_pct": {
-          "market_component": 22.21,
-          "momentum_component": 43.42,
-          "volatility_drag": 4.77,
-          "alpha_component": 29.59
+          "market_component": 22.03,
+          "momentum_component": 43.4,
+          "volatility_drag": 4.78,
+          "alpha_component": 29.79
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5058,22 +5058,22 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.15%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). CAPM expected return is 33.65%, actual annualized return is 78.47%, and estimated alpha is 44.82%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
+      "research_note": "AMD is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.15%, max drawdown is -57.49%, and the research score is 65/100 (Watch closely). CAPM expected return is 33.34%, actual annualized return is 78.43%, and estimated alpha is 45.09%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 100.0,
           "quality": 30.0,
           "growth": 90.0,
           "value": 30.0,
-          "low_volatility": 6.1
+          "low_volatility": 3.0
         },
-        "composite_score": 55.9,
+        "composite_score": 55.5,
         "contributions": {
           "momentum": 25.0,
           "quality": 6.6,
           "growth": 18.0,
           "value": 5.4,
-          "low_volatility": 0.91
+          "low_volatility": 0.45
         },
         "data_coverage_pct": 89.3,
         "explanation": "Primary score drivers: Momentum: 100.0/100, Growth: 90.0/100, Quality: 30.0/100",
@@ -5111,35 +5111,35 @@
       "ticker": "AMZN",
       "score": 36,
       "rating": "Drop",
-      "close": 230.96,
+      "close": 228.68,
       "weekly_rsi": 63.64,
       "monthly_rsi": 69.14,
       "above_sma200": false,
       "rs_status": "lagging",
-      "relative_volume": "0.71x",
+      "relative_volume": "1.01x",
       "quant_score": 43,
       "quant_label": "Neutral",
-      "annualized_volatility": 0.32820691588173184,
+      "annualized_volatility": 0.32802508372700817,
       "max_drawdown": -0.30876638431876025,
-      "sharpe_ratio": 0.2968173486456453,
-      "beta": 1.3701064985817455,
-      "capm_expected_return": 0.2242705662272455,
-      "actual_return": 0.14241750657917998,
-      "alpha": -0.08185305964806552,
-      "capm_interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 22.43%; realized alpha is -8.19%, meaning negative alpha versus CAPM.",
+      "sharpe_ratio": 0.2816147103767006,
+      "beta": 1.3695687791082127,
+      "capm_expected_return": 0.2222112161715838,
+      "actual_return": 0.13737668895007443,
+      "alpha": -0.08483452722150936,
+      "capm_interpretation": "Beta 1.37: Moves roughly 37% more than the market. CAPM expected return is 22.22%; realized alpha is -8.48%, meaning negative alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.14241750657917998,
+        "actual_return": 0.13737668895007443,
         "components": {
-          "market_component": 0.2242705662272455,
-          "momentum_component": 0.022365436867850585,
-          "volatility_drag": -0.01564138317634637,
-          "alpha_component": -0.08185305964806552
+          "market_component": 0.2222112161715838,
+          "momentum_component": 0.01968251656934289,
+          "volatility_drag": -0.015605016745401636,
+          "alpha_component": -0.08483452722150936
         },
         "component_weights_pct": {
-          "market_component": 65.17,
-          "momentum_component": 6.5,
-          "volatility_drag": 4.55,
-          "alpha_component": 23.79
+          "market_component": 64.91,
+          "momentum_component": 5.75,
+          "volatility_drag": 4.56,
+          "alpha_component": 24.78
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5150,7 +5150,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.82%, max drawdown is -30.88%, and the research score is 43/100 (Neutral). CAPM expected return is 22.43%, actual annualized return is 14.24%, and estimated alpha is -8.19%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
+      "research_note": "AMZN is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.80%, max drawdown is -30.88%, and the research score is 43/100 (Neutral). CAPM expected return is 22.22%, actual annualized return is 13.74%, and estimated alpha is -8.48%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 27.3,
@@ -5203,35 +5203,35 @@
       "ticker": "FIZZ",
       "score": 26,
       "rating": "Avoid",
-      "close": 32.55,
+      "close": 31.94,
       "weekly_rsi": 52.68,
       "monthly_rsi": 43.04,
       "above_sma200": false,
       "rs_status": "lagging",
-      "relative_volume": "0.71x",
+      "relative_volume": "1.26x",
       "quant_score": 30,
       "quant_label": "High risk / weak setup",
-      "annualized_volatility": 0.2798167838195542,
+      "annualized_volatility": 0.28075073785299043,
       "max_drawdown": -0.4008327071160781,
-      "sharpe_ratio": -0.5691636031941935,
-      "beta": 0.10013909992844328,
-      "capm_expected_return": 0.05810262608362314,
-      "actual_return": -0.11426152891294808,
-      "alpha": -0.1723641549965712,
-      "capm_interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 5.81%; realized alpha is -17.24%, meaning negative alpha versus CAPM.",
+      "sharpe_ratio": -0.5999085482211431,
+      "beta": 0.10207060966426103,
+      "capm_expected_return": 0.05820711829146445,
+      "actual_return": -0.12342476755740212,
+      "alpha": -0.18163188584886658,
+      "capm_interpretation": "Beta 0.10: Moves roughly 90% less than the market. CAPM expected return is 5.82%; realized alpha is -18.16%, meaning negative alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": -0.11426152891294808,
+        "actual_return": -0.12342476755740212,
         "components": {
-          "market_component": 0.05810262608362314,
+          "market_component": 0.05820711829146445,
           "momentum_component": 0.0,
-          "volatility_drag": -0.005963356763910844,
-          "alpha_component": -0.1723641549965712
+          "volatility_drag": -0.006150147570598086,
+          "alpha_component": -0.18163188584886658
         },
         "component_weights_pct": {
-          "market_component": 24.57,
+          "market_component": 23.66,
           "momentum_component": 0.0,
-          "volatility_drag": 2.52,
-          "alpha_component": 72.9
+          "volatility_drag": 2.5,
+          "alpha_component": 73.84
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5242,7 +5242,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "FIZZ is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 27.98%, max drawdown is -40.08%, and the research score is 30/100 (High risk / weak setup). CAPM expected return is 5.81%, actual annualized return is -11.43%, and estimated alpha is -17.24%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
+      "research_note": "FIZZ is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 28.08%, max drawdown is -40.08%, and the research score is 30/100 (High risk / weak setup). CAPM expected return is 5.82%, actual annualized return is -12.34%, and estimated alpha is -18.16%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 30.3,
@@ -5295,35 +5295,35 @@
       "ticker": "GE",
       "score": 68,
       "rating": "Watch",
-      "close": 370.85,
+      "close": 367.61,
       "weekly_rsi": 66.68,
       "monthly_rsi": 73.4,
       "above_sma200": true,
       "rs_status": "leading",
-      "relative_volume": "0.4x",
+      "relative_volume": "0.53x",
       "quant_score": 83,
       "quant_label": "Research priority",
-      "annualized_volatility": 0.3290568961035429,
-      "max_drawdown": -0.21364267943600967,
-      "sharpe_ratio": 1.3265433005976477,
-      "beta": 1.1645401978299192,
-      "capm_expected_return": 0.1973733964297391,
-      "actual_return": 0.48150822104161106,
-      "alpha": 0.28413482461187195,
-      "capm_interpretation": "Beta 1.16: Moves roughly in line with the market. CAPM expected return is 19.74%; realized alpha is 28.41%, meaning positive alpha versus CAPM.",
+      "annualized_volatility": 0.3291589416551861,
+      "max_drawdown": -0.21364267943600934,
+      "sharpe_ratio": 1.3127997458896326,
+      "beta": 1.1649832194498533,
+      "capm_expected_return": 0.19573948551355203,
+      "actual_return": 0.47711977496222874,
+      "alpha": 0.2813802894486767,
+      "capm_interpretation": "Beta 1.16: Moves roughly in line with the market. CAPM expected return is 19.57%; realized alpha is 28.14%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.48150822104161106,
+        "actual_return": 0.47711977496222874,
         "components": {
-          "market_component": 0.1973733964297391,
-          "momentum_component": 0.12296209976209882,
-          "volatility_drag": -0.015811379220708577,
-          "alpha_component": 0.28413482461187195
+          "market_component": 0.19573948551355203,
+          "momentum_component": 0.11970362619318126,
+          "volatility_drag": -0.01583178833103722,
+          "alpha_component": 0.2813802894486767
         },
         "component_weights_pct": {
-          "market_component": 31.82,
-          "momentum_component": 19.82,
-          "volatility_drag": 2.55,
-          "alpha_component": 45.81
+          "market_component": 31.95,
+          "momentum_component": 19.54,
+          "volatility_drag": 2.58,
+          "alpha_component": 45.93
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5331,10 +5331,10 @@
       "final_score": 68.25,
       "confidence": 43.25,
       "risk_level": "Controlled",
-      "why_now": "52-week high",
-      "why_now_strength": 65,
-      "what_invalidates": "Failed breakout below prior range high",
-      "research_note": "GE is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.91%, max drawdown is -21.36%, and the research score is 83/100 (Research priority). CAPM expected return is 19.74%, actual annualized return is 48.15%, and estimated alpha is 28.41%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
+      "why_now": "No clear Why Now trigger",
+      "why_now_strength": 0,
+      "what_invalidates": "N/A",
+      "research_note": "GE is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 32.92%, max drawdown is -21.36%, and the research score is 83/100 (Research priority). CAPM expected return is 19.57%, actual annualized return is 47.71%, and estimated alpha is 28.14%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 60.6,
@@ -5387,35 +5387,35 @@
       "ticker": "GOOGL",
       "score": 49,
       "rating": "Hold",
-      "close": 341.77,
+      "close": 342.3,
       "weekly_rsi": 66.13,
       "monthly_rsi": 82.26,
       "above_sma200": true,
       "rs_status": "lagging",
-      "relative_volume": "0.48x",
+      "relative_volume": "0.62x",
       "quant_score": 63,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.30848281411425854,
-      "max_drawdown": -0.2980587721731949,
-      "sharpe_ratio": 1.0309981325844335,
-      "beta": 1.0996068833636814,
-      "capm_expected_return": 0.188877245171845,
-      "actual_return": 0.36304520528619166,
-      "alpha": 0.17416796011434665,
-      "capm_interpretation": "Beta 1.10: Moves roughly in line with the market. CAPM expected return is 18.89%; realized alpha is 17.42%, meaning positive alpha versus CAPM.",
+      "annualized_volatility": 0.3084669208445479,
+      "max_drawdown": -0.2980587500209959,
+      "sharpe_ratio": 1.033565550391193,
+      "beta": 1.0997066763675698,
+      "capm_expected_return": 0.18729322435197643,
+      "actual_return": 0.3638207828201718,
+      "alpha": 0.17652755846819534,
+      "capm_interpretation": "Beta 1.10: Moves roughly in line with the market. CAPM expected return is 18.73%; realized alpha is 17.65%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.36304520528619166,
+        "actual_return": 0.3638207828201718,
         "components": {
-          "market_component": 0.188877245171845,
-          "momentum_component": 0.25202862415853156,
-          "volatility_drag": -0.01169656282285171,
-          "alpha_component": 0.17416796011434665
+          "market_component": 0.18729322435197643,
+          "momentum_component": 0.25280714353275746,
+          "volatility_drag": -0.011693384168909582,
+          "alpha_component": 0.17652755846819534
         },
         "component_weights_pct": {
-          "market_component": 30.13,
-          "momentum_component": 40.21,
-          "volatility_drag": 1.87,
-          "alpha_component": 27.79
+          "market_component": 29.81,
+          "momentum_component": 40.24,
+          "volatility_drag": 1.86,
+          "alpha_component": 28.1
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5426,7 +5426,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "GOOGL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.85%, max drawdown is -29.81%, and the research score is 63/100 (Watch closely). CAPM expected return is 18.89%, actual annualized return is 36.30%, and estimated alpha is 17.42%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
+      "research_note": "GOOGL is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 30.85%, max drawdown is -29.81%, and the research score is 63/100 (Watch closely). CAPM expected return is 18.73%, actual annualized return is 36.38%, and estimated alpha is 17.65%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 72.7,
@@ -5479,35 +5479,35 @@
       "ticker": "MSFT",
       "score": 32,
       "rating": "Drop",
-      "close": 369.58,
+      "close": 371.36,
       "weekly_rsi": 46.57,
       "monthly_rsi": 58.83,
       "above_sma200": false,
       "rs_status": "lagging",
-      "relative_volume": "0.91x",
+      "relative_volume": "1.23x",
       "quant_score": 18,
       "quant_label": "High risk / weak setup",
-      "annualized_volatility": 0.2614636835864226,
-      "max_drawdown": -0.34498391627511704,
-      "sharpe_ratio": -0.3993600753387033,
-      "beta": 0.9133744434008914,
-      "capm_expected_return": 0.16450980001588805,
-      "actual_return": -0.059418156375408475,
-      "alpha": -0.22392795639129653,
-      "capm_interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 16.45%; realized alpha is -22.39%, meaning negative alpha versus CAPM.",
+      "annualized_volatility": 0.26195159312307914,
+      "max_drawdown": -0.34498399049469,
+      "sharpe_ratio": -0.3889290150916896,
+      "beta": 0.910547025055847,
+      "capm_expected_return": 0.16281748251930242,
+      "actual_return": -0.05688057511505803,
+      "alpha": -0.21969805763436046,
+      "capm_interpretation": "Beta 0.91: Moves roughly in line with the market. CAPM expected return is 16.28%; realized alpha is -21.97%, meaning negative alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": -0.059418156375408475,
+        "actual_return": -0.05688057511505803,
         "components": {
-          "market_component": 0.16450980001588805,
+          "market_component": 0.16281748251930242,
           "momentum_component": 0.0,
-          "volatility_drag": -0.002292736717284516,
-          "alpha_component": -0.22392795639129653
+          "volatility_drag": -0.0023903186246158285,
+          "alpha_component": -0.21969805763436046
         },
         "component_weights_pct": {
-          "market_component": 42.1,
+          "market_component": 42.3,
           "momentum_component": 0.0,
-          "volatility_drag": 0.59,
-          "alpha_component": 57.31
+          "volatility_drag": 0.62,
+          "alpha_component": 57.08
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5518,7 +5518,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 26.15%, max drawdown is -34.50%, and the research score is 18/100 (High risk / weak setup). CAPM expected return is 16.45%, actual annualized return is -5.94%, and estimated alpha is -22.39%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
+      "research_note": "MSFT is not in a clean long-term uptrend. Momentum is mixed or weak without unusual volume confirmation. Annualized volatility is 26.20%, max drawdown is -34.50%, and the research score is 18/100 (High risk / weak setup). CAPM expected return is 16.28%, actual annualized return is -5.69%, and estimated alpha is -21.97%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 9.1,
@@ -5571,35 +5571,35 @@
       "ticker": "NVDA",
       "score": 42,
       "rating": "Drop",
-      "close": 194.55,
+      "close": 194.3,
       "weekly_rsi": 63.12,
       "monthly_rsi": 76.41,
       "above_sma200": true,
       "rs_status": "lagging",
-      "relative_volume": "0.4x",
+      "relative_volume": "0.54x",
       "quant_score": 35,
       "quant_label": "Neutral",
-      "annualized_volatility": 0.4770038780910728,
-      "max_drawdown": -0.36881031125619246,
-      "sharpe_ratio": 0.6007581044410166,
-      "beta": 2.0066150286212814,
-      "capm_expected_return": 0.30755405164007765,
-      "actual_return": 0.33156394561300667,
-      "alpha": 0.02400989397292902,
-      "capm_interpretation": "Beta 2.01: Moves roughly 101% more than the market. CAPM expected return is 30.76%; realized alpha is 2.40%, meaning positive alpha versus CAPM.",
+      "annualized_volatility": 0.477014685735665,
+      "max_drawdown": -0.36881031125619235,
+      "sharpe_ratio": 0.5993977689661562,
+      "beta": 2.0067318825298877,
+      "capm_expected_return": 0.3046550117511953,
+      "actual_return": 0.33092153839404975,
+      "alpha": 0.02626652664285445,
+      "capm_interpretation": "Beta 2.01: Moves roughly 101% more than the market. CAPM expected return is 30.47%; realized alpha is 2.63%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.33156394561300667,
+        "actual_return": 0.33092153839404975,
         "components": {
-          "market_component": 0.30755405164007765,
-          "momentum_component": 0.06561321403923598,
-          "volatility_drag": -0.04540077561821457,
-          "alpha_component": 0.02400989397292902
+          "market_component": 0.3046550117511953,
+          "momentum_component": 0.06520767700367419,
+          "volatility_drag": -0.045402937147133005,
+          "alpha_component": 0.02626652664285445
         },
         "component_weights_pct": {
-          "market_component": 69.49,
-          "momentum_component": 14.83,
-          "volatility_drag": 10.26,
-          "alpha_component": 5.43
+          "market_component": 69.0,
+          "momentum_component": 14.77,
+          "volatility_drag": 10.28,
+          "alpha_component": 5.95
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5610,7 +5610,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "NVDA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 47.70%, max drawdown is -36.88%, and the research score is 35/100 (Neutral). CAPM expected return is 30.76%, actual annualized return is 33.16%, and estimated alpha is 2.40%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
+      "research_note": "NVDA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 47.70%, max drawdown is -36.88%, and the research score is 35/100 (Neutral). CAPM expected return is 30.47%, actual annualized return is 33.09%, and estimated alpha is 2.63%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 54.5,
@@ -5663,35 +5663,35 @@
       "ticker": "TSLA",
       "score": 28,
       "rating": "Avoid",
-      "close": 386.05,
+      "close": 380.29,
       "weekly_rsi": 51.81,
       "monthly_rsi": 69.13,
       "above_sma200": false,
       "rs_status": "lagging",
-      "relative_volume": "0.57x",
+      "relative_volume": "0.74x",
       "quant_score": 25,
       "quant_label": "High risk / weak setup",
-      "annualized_volatility": 0.6116107150661274,
+      "annualized_volatility": 0.611365569309125,
       "max_drawdown": -0.5376568011858522,
-      "sharpe_ratio": 0.7841303146973313,
-      "beta": 2.2987924149103955,
-      "capm_expected_return": 0.3457837845353421,
-      "actual_return": 0.524582502477062,
-      "alpha": 0.17879871794171986,
-      "capm_interpretation": "Beta 2.30: Moves roughly 130% more than the market. CAPM expected return is 34.58%; realized alpha is 17.88%, meaning positive alpha versus CAPM.",
+      "sharpe_ratio": 0.7718224699916851,
+      "beta": 2.297871011132607,
+      "capm_expected_return": 0.3423260800771085,
+      "actual_return": 0.5168656837720413,
+      "alpha": 0.17453960369493282,
+      "capm_interpretation": "Beta 2.30: Moves roughly 130% more than the market. CAPM expected return is 34.23%; realized alpha is 17.45%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.524582502477062,
+        "actual_return": 0.5168656837720413,
         "components": {
-          "market_component": 0.3457837845353421,
-          "momentum_component": 0.0446458768239506,
-          "volatility_drag": -0.07232214301322548,
-          "alpha_component": 0.17879871794171986
+          "market_component": 0.3423260800771085,
+          "momentum_component": 0.04025341376694541,
+          "volatility_drag": -0.072273113861825,
+          "alpha_component": 0.17453960369493282
         },
         "component_weights_pct": {
-          "market_component": 53.9,
-          "momentum_component": 6.96,
-          "volatility_drag": 11.27,
-          "alpha_component": 27.87
+          "market_component": 54.39,
+          "momentum_component": 6.4,
+          "volatility_drag": 11.48,
+          "alpha_component": 27.73
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5702,22 +5702,22 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "TSLA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.16%, max drawdown is -53.77%, and the research score is 25/100 (High risk / weak setup). CAPM expected return is 34.58%, actual annualized return is 52.46%, and estimated alpha is 17.88%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
+      "research_note": "TSLA is not in a clean long-term uptrend. Momentum is positive without unusual volume confirmation. Annualized volatility is 61.14%, max drawdown is -53.77%, and the research score is 25/100 (High risk / weak setup). CAPM expected return is 34.23%, actual annualized return is 51.69%, and estimated alpha is 17.45%. The current volatility regime is normal volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 27.3,
           "quality": 25.0,
           "growth": 25.0,
           "value": 12.5,
-          "low_volatility": 9.1
+          "low_volatility": 12.1
         },
-        "composite_score": 20.9,
+        "composite_score": 21.4,
         "contributions": {
           "momentum": 6.83,
           "quality": 5.5,
           "growth": 5.0,
           "value": 2.25,
-          "low_volatility": 1.36
+          "low_volatility": 1.81
         },
         "data_coverage_pct": 89.3,
         "explanation": "Primary score drivers: Momentum: 27.3/100, Quality: 25.0/100, Growth: 25.0/100",
@@ -5755,35 +5755,35 @@
       "ticker": "TSM",
       "score": 57,
       "rating": "Hold",
-      "close": 433.61,
+      "close": 431.55,
       "weekly_rsi": 84.79,
       "monthly_rsi": 84.58,
       "above_sma200": true,
       "rs_status": "leading",
-      "relative_volume": "0.69x",
+      "relative_volume": "0.88x",
       "quant_score": 75,
       "quant_label": "Research priority",
-      "annualized_volatility": 0.42050804257891305,
-      "max_drawdown": -0.3681737372087691,
-      "sharpe_ratio": 1.2400520438965845,
-      "beta": 1.6561211218740228,
-      "capm_expected_return": 0.26169393697977805,
-      "actual_return": 0.566451857674933,
-      "alpha": 0.30475792069515495,
-      "capm_interpretation": "Beta 1.66: Moves roughly 66% more than the market. CAPM expected return is 26.17%; realized alpha is 30.48%, meaning positive alpha versus CAPM.",
+      "annualized_volatility": 0.42055208051518683,
+      "max_drawdown": -0.3681737372087702,
+      "sharpe_ratio": 1.2342717046492702,
+      "beta": 1.6563777774117217,
+      "capm_expected_return": 0.2593220003641188,
+      "actual_return": 0.5640755333112767,
+      "alpha": 0.3047535329471579,
+      "capm_interpretation": "Beta 1.66: Moves roughly 66% more than the market. CAPM expected return is 25.93%; realized alpha is 30.48%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.566451857674933,
+        "actual_return": 0.5640755333112767,
         "components": {
-          "market_component": 0.26169393697977805,
-          "momentum_component": 0.24205399154927532,
-          "volatility_drag": -0.03410160851578261,
-          "alpha_component": 0.30475792069515495
+          "market_component": 0.2593220003641188,
+          "momentum_component": 0.23972195584996758,
+          "volatility_drag": -0.03411041610303737,
+          "alpha_component": 0.3047535329471579
         },
         "component_weights_pct": {
-          "market_component": 31.06,
-          "momentum_component": 28.73,
-          "volatility_drag": 4.05,
-          "alpha_component": 36.17
+          "market_component": 30.95,
+          "momentum_component": 28.61,
+          "volatility_drag": 4.07,
+          "alpha_component": 36.37
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5794,7 +5794,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "TSM is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 42.05%, max drawdown is -36.82%, and the research score is 75/100 (Research priority). CAPM expected return is 26.17%, actual annualized return is 56.65%, and estimated alpha is 30.48%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
+      "research_note": "TSM is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 42.06%, max drawdown is -36.82%, and the research score is 75/100 (Research priority). CAPM expected return is 25.93%, actual annualized return is 56.41%, and estimated alpha is 30.48%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 87.9,
@@ -5847,35 +5847,35 @@
       "ticker": "VGT",
       "score": 59,
       "rating": "Hold",
-      "close": 114.69,
+      "close": 114.26,
       "weekly_rsi": 80.34,
       "monthly_rsi": 84.35,
       "above_sma200": true,
       "rs_status": "leading",
-      "relative_volume": "0.48x",
+      "relative_volume": "0.67x",
       "quant_score": 73,
       "quant_label": "Watch closely",
-      "annualized_volatility": 0.26636153074514435,
-      "max_drawdown": -0.2722878443094502,
-      "sharpe_ratio": 0.8621928990060856,
-      "beta": 1.4500369385429668,
-      "capm_expected_return": 0.23472900522120232,
-      "actual_return": 0.2746550203768547,
-      "alpha": 0.03992601515565236,
-      "capm_interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 23.47%; realized alpha is 3.99%, meaning positive alpha versus CAPM.",
+      "annualized_volatility": 0.2664298212619771,
+      "max_drawdown": -0.2722877752159184,
+      "sharpe_ratio": 0.8549414401651287,
+      "beta": 1.45039764718413,
+      "capm_expected_return": 0.232669823458786,
+      "actual_return": 0.2727818950926526,
+      "alpha": 0.0401120716338666,
+      "capm_interpretation": "Beta 1.45: Moves roughly 45% more than the market. CAPM expected return is 23.27%; realized alpha is 4.01%, meaning positive alpha versus CAPM.",
       "factor_decomposition": {
-        "actual_return": 0.2746550203768547,
+        "actual_return": 0.2727818950926526,
         "components": {
-          "market_component": 0.23472900522120232,
-          "momentum_component": 0.10373037212845299,
-          "volatility_drag": -0.00327230614902887,
-          "alpha_component": 0.03992601515565236
+          "market_component": 0.232669823458786,
+          "momentum_component": 0.10240411902070429,
+          "volatility_drag": -0.0032859642523954237,
+          "alpha_component": 0.0401120716338666
         },
         "component_weights_pct": {
-          "market_component": 61.5,
-          "momentum_component": 27.18,
-          "volatility_drag": 0.86,
-          "alpha_component": 10.46
+          "market_component": 61.48,
+          "momentum_component": 27.06,
+          "volatility_drag": 0.87,
+          "alpha_component": 10.6
         },
         "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
       },
@@ -5886,7 +5886,7 @@
       "why_now": "No clear Why Now trigger",
       "why_now_strength": 0,
       "what_invalidates": "N/A",
-      "research_note": "VGT is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 26.64%, max drawdown is -27.23%, and the research score is 73/100 (Watch closely). CAPM expected return is 23.47%, actual annualized return is 27.47%, and estimated alpha is 3.99%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
+      "research_note": "VGT is above its 50-day and 200-day moving averages. Momentum is positive without unusual volume confirmation. Annualized volatility is 26.64%, max drawdown is -27.23%, and the research score is 73/100 (Watch closely). CAPM expected return is 23.27%, actual annualized return is 27.28%, and estimated alpha is 4.01%. The current volatility regime is high volatility. This is an educational research summary, not financial advice.",
       "factor_model": {
         "scores": {
           "momentum": 75.8,

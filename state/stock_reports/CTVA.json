@@ -1,10 +1,10 @@
 {
   "ticker": "CTVA",
-  "generated_at": "2026-06-26T17:17:26.936710",
+  "generated_at": "2026-06-26T19:18:23.154327",
   "score": {
-    "final_score": 60.15,
+    "final_score": 59.15,
     "rating": "Hold",
-    "confidence": 58.55,
+    "confidence": 55.62,
     "risk_level": "Controlled",
     "categories": {
       "technical": 58.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 76.0,
       "risk": 100,
-      "catalyst": 85.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 58.0,
@@ -25,17 +25,17 @@
       ],
       "support": 74.45999908447266,
       "resistance": 85.45999908447266,
-      "risk_reward": 0.5
+      "risk_reward": 0.47
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": 0.026142251215246493,
-        "3m": -0.009083755620963196,
-        "6m": 0.22357538687070133,
-        "12m": 0.12757028553445782
+        "1m": 0.027930087724403307,
+        "3m": -0.007357293001263643,
+        "6m": 0.2257072089896741,
+        "12m": 0.1295347202026189
       },
-      "acceleration": -0.1209,
+      "acceleration": -0.1202,
       "evidence": [
         "1m return is positive",
         "6m return is positive",
@@ -44,8 +44,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 4507784.85,
-      "relative_volume": 0.3331563173428741,
+      "average_volume": 4530975.85,
+      "relative_volume": 0.43381758479246807,
       "accumulation_days": 7,
       "distribution_days": 5,
       "evidence": [
@@ -63,25 +63,24 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01550747218940175,
-        "annualized_volatility": 0.24617348925844418,
-        "maximum_drawdown": -0.20710126079043678,
-        "sharpe_ratio": 1.0280378054674437,
-        "sortino_ratio": 1.2941852712503756,
-        "calmar_ratio": 1.2031763081566111,
-        "beta": 0.5430185277573591,
-        "alpha": 0.1575406662996145,
-        "capm_expected_return": 0.09553498736189975,
-        "actual_return": 0.25307565366151424,
-        "market_return": 0.17593320021041406
+        "volatility": 0.01550791583584861,
+        "annualized_volatility": 0.24618053192745473,
+        "maximum_drawdown": -0.207101260790437,
+        "sharpe_ratio": 1.0315757145440516,
+        "sortino_ratio": 1.298675746515529,
+        "calmar_ratio": 1.2084599963679143,
+        "beta": 0.5427847911978015,
+        "alpha": 0.1592854156251238,
+        "capm_expected_return": 0.09466844250477494,
+        "actual_return": 0.25395385812989874,
+        "market_return": 0.17441248177912907
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
-        "analyst revision",
         "sector strength",
         "major news",
         "guidance change"
@@ -141,11 +140,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 72.11896464315217,
+    "rsi": 72.48338538557732,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3331563173428741,
+    "relative_volume": 0.43381758479246807,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -194,7 +193,7 @@
   },
   "catalysts": {
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": true,
     "major_news": true,
@@ -241,12 +240,11 @@
         "last_surprise_pct": 0.2711,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 10.05,
+      "analyst_upside_pct": 9.91,
       "eps_growth_implied": 122.18
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
@@ -338,98 +336,97 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.791,
-    "probability_pct": 79.1,
+    "probability_of_outperformance": 0.7485,
+    "probability_pct": 74.85,
     "confidence": "High",
     "evidence": [
       "Positive earnings surprise/catalyst",
-      "Analyst data is supportive",
-      "Composite score 60.15/100"
+      "Composite score 59.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.15,
+    "final_score": 59.15,
     "technical_score": 58.0,
     "momentum_score": 45.0,
     "volume_score": 25.0,
     "fundamental_score": 76.0,
     "risk_score": 100,
-    "catalyst_score": 85.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.11,
     "eps_growth": 0.121,
     "roe": 0.051370002,
     "forward_pe": 19.941269,
-    "relative_volume": 0.3331563173428741,
+    "relative_volume": 0.43381758479246807,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
-    "analyst_revision": true,
+    "analyst_revision": false,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0020828003335546796,
-      "weekly": 0.040717708700208854,
-      "monthly": 0.026142251215246493,
-      "annual": 0.12757028553445782
+      "daily": 0.003828718322520297,
+      "weekly": 0.04253093987077694,
+      "monthly": 0.027930087724403307,
+      "annual": 0.1295347202026189
     },
     "risk": {
-      "volatility": 0.01550747218940175,
-      "annualized_volatility": 0.24617348925844418,
-      "maximum_drawdown": -0.20710126079043678,
-      "sharpe_ratio": 1.0280378054674437,
-      "sortino_ratio": 1.2941852712503756,
-      "calmar_ratio": 1.2031763081566111,
-      "beta": 0.5430185277573591,
-      "alpha": 0.1575406662996145,
-      "capm_expected_return": 0.09553498736189975,
-      "actual_return": 0.25307565366151424,
-      "market_return": 0.17593320021041406
+      "volatility": 0.01550791583584861,
+      "annualized_volatility": 0.24618053192745473,
+      "maximum_drawdown": -0.207101260790437,
+      "sharpe_ratio": 1.0315757145440516,
+      "sortino_ratio": 1.298675746515529,
+      "calmar_ratio": 1.2084599963679143,
+      "beta": 0.5427847911978015,
+      "alpha": 0.1592854156251238,
+      "capm_expected_return": 0.09466844250477494,
+      "actual_return": 0.25395385812989874,
+      "market_return": 0.17441248177912907
     },
     "capm": {
-      "beta": 0.5430185277573591,
-      "alpha": 0.1575406662996145,
-      "capm_expected_return": 0.09553498736189975,
-      "actual_return": 0.25307565366151424,
-      "market_return": 0.17593320021041406,
-      "interpretation": "Beta 0.54: Moves roughly 46% less than the market. CAPM expected return is 9.55%; realized alpha is 15.75%, meaning positive alpha versus CAPM."
+      "beta": 0.5427847911978015,
+      "alpha": 0.1592854156251238,
+      "capm_expected_return": 0.09466844250477494,
+      "actual_return": 0.25395385812989874,
+      "market_return": 0.17441248177912907,
+      "interpretation": "Beta 0.54: Moves roughly 46% less than the market. CAPM expected return is 9.47%; realized alpha is 15.93%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.25307565366151424,
+      "actual_return": 0.25395385812989874,
       "components": {
-        "market_component": 0.09553498736189975,
-        "momentum_component": 0.031892571383614454,
+        "market_component": 0.09466844250477494,
+        "momentum_component": 0.03238368005065473,
         "volatility_drag": -0.0,
-        "alpha_component": 0.1575406662996145
+        "alpha_component": 0.1592854156251238
       },
       "component_weights_pct": {
-        "market_component": 33.52,
-        "momentum_component": 11.19,
+        "market_component": 33.06,
+        "momentum_component": 11.31,
         "volatility_drag": 0.0,
-        "alpha_component": 55.28
+        "alpha_component": 55.63
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 77.59900016784668,
-      "sma50": 79.31633483886719,
-      "sma200": 72.67306972503663,
-      "ema20": 78.65787555552163,
-      "ema50": 78.82054196847709,
-      "ema200": 74.52999704601775
+      "sma20": 77.60612525939942,
+      "sma50": 79.31918487548828,
+      "sma200": 72.67378219604493,
+      "ema20": 78.67144715847974,
+      "ema50": 78.82613027604008,
+      "ema200": 74.53141493580766
     },
     "momentum": {
-      "3m": -0.009083755620963196,
-      "6m": 0.22357538687070133,
-      "12m": 0.12757028553445782,
+      "3m": -0.007357293001263643,
+      "6m": 0.2257072089896741,
+      "12m": 0.1295347202026189,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 4507784.85,
-      "relative_volume": 0.3331563173428741,
+      "average_volume": 4530975.85,
+      "relative_volume": 0.43381758479246807,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +444,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CTVA\nRating: Hold | Score: 60.15/100 | Confidence: 58.55/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.45999908447266 | Resistance: 85.45999908447266\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.941269\nNews/Catalyst: 3 AgTech & Food Innovation Stocks Driving Agriculture's Future\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CTVA\nRating: Hold | Score: 59.15/100 | Confidence: 55.62/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.45999908447266 | Resistance: 85.45999908447266\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.941269\nNews/Catalyst: 3 AgTech & Food Innovation Stocks Driving Agriculture's Future\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
