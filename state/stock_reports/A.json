@@ -1,10 +1,10 @@
 {
   "ticker": "A",
-  "generated_at": "2026-06-26T15:26:48.741857",
+  "generated_at": "2026-06-26T17:16:33.124438",
   "score": {
-    "final_score": 66.2,
+    "final_score": 65.45,
     "rating": "Watch",
-    "confidence": 62.86,
+    "confidence": 60.69,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 78.0,
       "risk": 85.0,
-      "catalyst": 85.0
+      "catalyst": 70.0
     },
     "technical": {
       "score": 65.0,
@@ -26,17 +26,17 @@
       ],
       "support": 110.23999786376953,
       "resistance": 138.3699951171875,
-      "risk_reward": 0.1
+      "risk_reward": 0.11
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.17334256272318815,
-        "3m": 0.20047702896506236,
-        "6m": -0.013633930542861328,
-        "12m": 0.1552490593781981
+        "1m": 0.17101172466209769,
+        "3m": 0.19809228844726978,
+        "6m": -0.01559334090595521,
+        "12m": 0.15295423871881142
       },
-      "acceleration": 0.2073,
+      "acceleration": 0.2059,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2417578.0,
-      "relative_volume": 0.2067192868234241,
+      "average_volume": 2428972.0,
+      "relative_volume": 0.2995670596449856,
       "accumulation_days": 3,
       "distribution_days": 1,
       "evidence": [
@@ -65,29 +65,28 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01989624614097251,
-        "annualized_volatility": 0.3158431158764509,
-        "maximum_drawdown": -0.3479622955112489,
-        "sharpe_ratio": 0.21332892279750507,
-        "sortino_ratio": 0.3627836569677651,
-        "calmar_ratio": 0.053439852081178185,
-        "beta": 0.9633068914692176,
-        "alpha": -0.10163720388668512,
-        "capm_expected_return": 0.16901567556961597,
-        "actual_return": 0.06737847168293085,
-        "market_return": 0.17545361407291132
+        "volatility": 0.01989588939813814,
+        "annualized_volatility": 0.31583745275952047,
+        "maximum_drawdown": -0.34796229551124935,
+        "sharpe_ratio": 0.2101594866821088,
+        "sortino_ratio": 0.35738749304137624,
+        "calmar_ratio": 0.050513449871748835,
+        "beta": 0.9633658312102247,
+        "alpha": -0.10311179671125481,
+        "capm_expected_return": 0.1694880336581804,
+        "actual_return": 0.0663762369469256,
+        "market_return": 0.17593320021041406
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 85.0,
+      "score": 70.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -141,14 +140,15 @@
     "next_earnings_date": "1779912000",
     "eps_current_year": 4.99,
     "eps_forward": 6.61234,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 50.76189871835736,
+    "rsi": 50.33620187161007,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2067192868234241,
+    "relative_volume": 0.2995670596449856,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -200,9 +200,9 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 1,
     "bearish_news_score": 0,
     "institutional_ownership": 0.94075996,
     "detail": {
@@ -244,14 +244,13 @@
         "last_surprise_pct": 0.058000002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 18.19,
+      "analyst_upside_pct": 18.34,
       "eps_growth_implied": 32.51
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -273,6 +272,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Why Is Agilent (A) Up 0.1% Since Last Earnings Report?",
+        "source": "Zacks",
+        "published": "2026-06-26T15:30:02Z",
+        "summary": "Agilent (A) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Agilent finalizes Biocare Medical takeover",
         "source": "MedTech Dive",
@@ -312,16 +321,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Agilent Technologies (A) Stock Could Be 23% Undervalued After Earnings Beat And Guidance Raise",
-        "source": "Simply Wall St.",
-        "published": "2026-06-21T10:08:17Z",
-        "summary": "Agilent Technologies (A) has been in focus after reporting quarterly results that exceeded analyst expectations on both revenue and earnings. The company raised full-year guidance and paired that update with expansion moves in China and cancer diagnostics. See our latest analysis for Agilent Technologies. Agilent Technologies' latest earnings beat and guidance raise have arrived alongside a 10.53% 1 month share price return and a 13.43% 3 month share price return. The stock's year to date...",
-        "bullish_score": 2,
-        "bearish_score": 0,
-        "importance_score": 60,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -341,99 +340,99 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8481,
-    "probability_pct": 84.81,
+    "probability_of_outperformance": 0.8402,
+    "probability_pct": 84.02,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 66.2/100"
+      "Composite score 65.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.2,
+    "final_score": 65.45,
     "technical_score": 65.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 78.0,
     "risk_score": 85.0,
-    "catalyst_score": 85.0,
+    "catalyst_score": 70.0,
     "revenue_growth": 0.1,
     "eps_growth": 0.6,
     "roe": 0.21330999,
     "forward_pe": 20.555506,
-    "relative_volume": 0.2067192868234241,
+    "relative_volume": 0.2995670596449856,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0030256341135685982,
-      "weekly": 0.0697308419690923,
-      "monthly": 0.17334256272318815,
-      "annual": 0.1552490593781981
+      "daily": 0.0010331296238181853,
+      "weekly": 0.06760582797846615,
+      "monthly": 0.17101172466209769,
+      "annual": 0.15295423871881142
     },
     "risk": {
-      "volatility": 0.01989624614097251,
-      "annualized_volatility": 0.3158431158764509,
-      "maximum_drawdown": -0.3479622955112489,
-      "sharpe_ratio": 0.21332892279750507,
-      "sortino_ratio": 0.3627836569677651,
-      "calmar_ratio": 0.053439852081178185,
-      "beta": 0.9633068914692176,
-      "alpha": -0.10163720388668512,
-      "capm_expected_return": 0.16901567556961597,
-      "actual_return": 0.06737847168293085,
-      "market_return": 0.17545361407291132
+      "volatility": 0.01989588939813814,
+      "annualized_volatility": 0.31583745275952047,
+      "maximum_drawdown": -0.34796229551124935,
+      "sharpe_ratio": 0.2101594866821088,
+      "sortino_ratio": 0.35738749304137624,
+      "calmar_ratio": 0.050513449871748835,
+      "beta": 0.9633658312102247,
+      "alpha": -0.10311179671125481,
+      "capm_expected_return": 0.1694880336581804,
+      "actual_return": 0.0663762369469256,
+      "market_return": 0.17593320021041406
     },
     "capm": {
-      "beta": 0.9633068914692176,
-      "alpha": -0.10163720388668512,
-      "capm_expected_return": 0.16901567556961597,
-      "actual_return": 0.06737847168293085,
-      "market_return": 0.17545361407291132,
-      "interpretation": "Beta 0.96: Moves roughly in line with the market. CAPM expected return is 16.90%; realized alpha is -10.16%, meaning negative alpha versus CAPM."
+      "beta": 0.9633658312102247,
+      "alpha": -0.10311179671125481,
+      "capm_expected_return": 0.1694880336581804,
+      "actual_return": 0.0663762369469256,
+      "market_return": 0.17593320021041406,
+      "interpretation": "Beta 0.96: Moves roughly in line with the market. CAPM expected return is 16.95%; realized alpha is -10.31%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.06737847168293085,
+      "actual_return": 0.0663762369469256,
       "components": {
-        "market_component": 0.16901567556961597,
-        "momentum_component": 0.03881226484454953,
-        "volatility_drag": -0.013168623175290184,
-        "alpha_component": -0.10163720388668512
+        "market_component": 0.1694880336581804,
+        "momentum_component": 0.038238559679702855,
+        "volatility_drag": -0.013167490551904094,
+        "alpha_component": -0.10311179671125481
       },
       "component_weights_pct": {
-        "market_component": 52.39,
-        "momentum_component": 12.03,
-        "volatility_drag": 4.08,
-        "alpha_component": 31.5
+        "market_component": 52.31,
+        "momentum_component": 11.8,
+        "volatility_drag": 4.06,
+        "alpha_component": 31.82
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 132.17449836730958,
-      "sma50": 122.50399963378906,
-      "sma200": 130.20457988739014,
-      "ema20": 129.32226011675334,
-      "ema50": 125.17164479846053,
-      "ema200": 125.79838706616741
+      "sma20": 132.16099815368653,
+      "sma50": 122.49859954833984,
+      "sma200": 130.20322986602784,
+      "ema20": 129.29654542413803,
+      "ema50": 125.16105639559862,
+      "ema200": 125.79570040568504
     },
     "momentum": {
-      "3m": 0.20047702896506236,
-      "6m": -0.013633930542861328,
-      "12m": 0.1552490593781981,
+      "3m": 0.19809228844726978,
+      "6m": -0.01559334090595521,
+      "12m": 0.15295423871881142,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 2417578.0,
-      "relative_volume": 0.2067192868234241,
+      "average_volume": 2428972.0,
+      "relative_volume": 0.2995670596449856,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -451,5 +450,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: A\nRating: Watch | Score: 66.2/100 | Confidence: 62.86/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 110.23999786376953 | Resistance: 138.3699951171875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 20.555506\nNews/Catalyst: Agilent finalizes Biocare Medical takeover\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: A\nRating: Watch | Score: 65.45/100 | Confidence: 60.69/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 110.23999786376953 | Resistance: 138.3699951171875\nFundamental Outlook: Fundamentally Strong | Forward P/E: 20.555506\nNews/Catalyst: Why Is Agilent (A) Up 0.1% Since Last Earnings Report?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

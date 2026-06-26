@@ -1,13 +1,13 @@
 {
   "ticker": "APA",
-  "generated_at": "2026-06-26T15:27:11.138344",
+  "generated_at": "2026-06-26T17:16:49.097045",
   "score": {
-    "final_score": 39.5,
+    "final_score": 37.0,
     "rating": "Drop",
-    "confidence": 27.05,
+    "confidence": 25.21,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 32.0,
+      "technical": 22.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 70.0,
@@ -15,25 +15,24 @@
       "catalyst": 20.0
     },
     "technical": {
-      "score": 32.0,
+      "score": 22.0,
       "evidence": [
         "Price above SMA200",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
-      "support": 33.029998779296875,
+      "support": 32.82500076293945,
       "resistance": 44.38999938964844,
-      "risk_reward": 112.6
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.09530305749765644,
-        "3m": -0.22075334384970413,
-        "6m": 0.3821390422330073,
-        "12m": 0.9387471230754463
+        "1m": -0.10363184816046067,
+        "3m": -0.2279272182919173,
+        "6m": 0.36941484011753745,
+        "12m": 0.9208984799013218
       },
-      "acceleration": -0.4118,
+      "acceleration": -0.4126,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -41,8 +40,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 5450919.75,
-      "relative_volume": 0.22043894518902063,
+      "average_volume": 5500129.0,
+      "relative_volume": 0.39740522449564364,
       "accumulation_days": 1,
       "distribution_days": 6,
       "evidence": []
@@ -57,17 +56,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.031083873055593587,
-        "annualized_volatility": 0.4934411873388122,
-        "maximum_drawdown": -0.551989264683987,
-        "sharpe_ratio": 0.4843498983636424,
-        "sortino_ratio": 0.6372456725847541,
-        "calmar_ratio": 0.22336414598689713,
-        "beta": 0.9407426410342404,
-        "alpha": 0.07394149265403574,
-        "capm_expected_return": 0.16505669628195296,
-        "actual_return": 0.2389981889359887,
-        "market_return": 0.17545361407291132
+        "volatility": 0.031092201457491395,
+        "annualized_volatility": 0.4935733966202534,
+        "maximum_drawdown": -0.5519893224617458,
+        "sharpe_ratio": 0.4749196681399508,
+        "sortino_ratio": 0.6254196804946407,
+        "calmar_ratio": 0.21391905561487431,
+        "beta": 0.9405940268576556,
+        "alpha": 0.0689259964817315,
+        "capm_expected_return": 0.1654817172438675,
+        "actual_return": 0.23440771372559902,
+        "market_return": 0.17593320021041406
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -79,7 +78,7 @@
         "earnings surprise"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; eps growth is strong"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "APA",
@@ -129,18 +128,19 @@
     "next_earnings_date": "1778097600",
     "eps_current_year": 4.29,
     "eps_forward": 4.28835,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 34.96503916234039,
+    "rsi": 34.05704864851873,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.22043894518902063,
+    "relative_volume": 0.39740522449564364,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 33.029998779296875,
+    "support": 32.82500076293945,
     "resistance": 44.38999938964844
   },
   "earnings": {
@@ -232,7 +232,7 @@
         "last_surprise_pct": 0.20899999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 31.55,
+      "analyst_upside_pct": 32.75,
       "eps_growth_implied": -0.04
     },
     "evidence": [
@@ -331,13 +331,13 @@
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 39.5/100"
+      "Composite score 37.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 39.5,
-    "technical_score": 32.0,
+    "final_score": 37.0,
+    "technical_score": 22.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 70.0,
@@ -347,7 +347,7 @@
     "eps_growth": 0.322,
     "roe": 0.26217,
     "forward_pe": 7.725582,
-    "relative_volume": 0.22043894518902063,
+    "relative_volume": 0.39740522449564364,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -357,66 +357,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.008677352385361603,
-      "weekly": 0.003027620118503993,
-      "monthly": -0.09530305749765644,
-      "annual": 0.9387471230754463
+      "daily": -0.017803633710511302,
+      "weekly": -0.00620641913211073,
+      "monthly": -0.10363184816046067,
+      "annual": 0.9208984799013218
     },
     "risk": {
-      "volatility": 0.031083873055593587,
-      "annualized_volatility": 0.4934411873388122,
-      "maximum_drawdown": -0.551989264683987,
-      "sharpe_ratio": 0.4843498983636424,
-      "sortino_ratio": 0.6372456725847541,
-      "calmar_ratio": 0.22336414598689713,
-      "beta": 0.9407426410342404,
-      "alpha": 0.07394149265403574,
-      "capm_expected_return": 0.16505669628195296,
-      "actual_return": 0.2389981889359887,
-      "market_return": 0.17545361407291132
+      "volatility": 0.031092201457491395,
+      "annualized_volatility": 0.4935733966202534,
+      "maximum_drawdown": -0.5519893224617458,
+      "sharpe_ratio": 0.4749196681399508,
+      "sortino_ratio": 0.6254196804946407,
+      "calmar_ratio": 0.21391905561487431,
+      "beta": 0.9405940268576556,
+      "alpha": 0.0689259964817315,
+      "capm_expected_return": 0.1654817172438675,
+      "actual_return": 0.23440771372559902,
+      "market_return": 0.17593320021041406
     },
     "capm": {
-      "beta": 0.9407426410342404,
-      "alpha": 0.07394149265403574,
-      "capm_expected_return": 0.16505669628195296,
-      "actual_return": 0.2389981889359887,
-      "market_return": 0.17545361407291132,
-      "interpretation": "Beta 0.94: Moves roughly in line with the market. CAPM expected return is 16.51%; realized alpha is 7.39%, meaning positive alpha versus CAPM."
+      "beta": 0.9405940268576556,
+      "alpha": 0.0689259964817315,
+      "capm_expected_return": 0.1654817172438675,
+      "actual_return": 0.23440771372559902,
+      "market_return": 0.17593320021041406,
+      "interpretation": "Beta 0.94: Moves roughly in line with the market. CAPM expected return is 16.55%; realized alpha is 6.89%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2389981889359887,
+      "actual_return": 0.23440771372559902,
       "components": {
-        "market_component": 0.16505669628195296,
-        "momentum_component": 0.23468678076886157,
-        "volatility_drag": -0.04868823746776244,
-        "alpha_component": 0.07394149265403574
+        "market_component": 0.1654817172438675,
+        "momentum_component": 0.23022461997533045,
+        "volatility_drag": -0.048714679324050686,
+        "alpha_component": 0.0689259964817315
       },
       "component_weights_pct": {
-        "market_component": 31.6,
-        "momentum_component": 44.93,
-        "volatility_drag": 9.32,
-        "alpha_component": 14.15
+        "market_component": 32.24,
+        "momentum_component": 44.85,
+        "volatility_drag": 9.49,
+        "alpha_component": 13.43
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 35.77350025177002,
-      "sma50": 37.260624465942385,
-      "sma200": 29.778790006637575,
-      "ema20": 35.29456593307885,
-      "ema50": 36.233234354833144,
-      "ema200": 31.166071133589654
+      "sma20": 35.75825023651123,
+      "sma50": 37.25452445983887,
+      "sma200": 29.777265043258666,
+      "ema20": 35.26551828496688,
+      "ema50": 36.22127355878379,
+      "ema200": 31.163036340692784
     },
     "momentum": {
-      "3m": -0.22075334384970413,
-      "6m": 0.3821390422330073,
-      "12m": 0.9387471230754463,
+      "3m": -0.2279272182919173,
+      "6m": 0.36941484011753745,
+      "12m": 0.9208984799013218,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 5450919.75,
-      "relative_volume": 0.22043894518902063,
+      "average_volume": 5500129.0,
+      "relative_volume": 0.39740522449564364,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -434,5 +434,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APA\nRating: Drop | Score: 39.5/100 | Confidence: 27.05/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 33.029998779296875 | Resistance: 44.38999938964844\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.725582\nNews/Catalyst: Chord Energy and Atlas Energy Solutions Shares Are Falling, What You Need To Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APA\nRating: Drop | Score: 37.0/100 | Confidence: 25.21/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.82500076293945 | Resistance: 44.38999938964844\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.725582\nNews/Catalyst: Chord Energy and Atlas Energy Solutions Shares Are Falling, What You Need To Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

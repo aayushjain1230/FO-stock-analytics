@@ -1,17 +1,17 @@
 {
   "ticker": "AOS",
-  "generated_at": "2026-06-26T15:27:10.522850",
+  "generated_at": "2026-06-26T17:16:48.680066",
   "score": {
-    "final_score": 39.35,
+    "final_score": 37.1,
     "rating": "Drop",
-    "confidence": 34.08,
-    "risk_level": "Controlled",
+    "confidence": 32.5,
+    "risk_level": "Moderate",
     "categories": {
       "technical": 53.0,
       "momentum": 10.0,
       "volume": 25.0,
       "fundamental": 49.0,
-      "risk": 75.0,
+      "risk": 60.0,
       "catalyst": 25.0
     },
     "technical": {
@@ -25,25 +25,25 @@
       ],
       "support": 55.779998779296875,
       "resistance": 67.2699966430664,
-      "risk_reward": 1.0
+      "risk_reward": 0.8
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": 0.060679202889358796,
-        "3m": -0.056853815534010144,
-        "6m": -0.0819932554643692,
-        "12m": -0.03405884977348195
+        "1m": 0.07145320768308072,
+        "3m": -0.04727366963793078,
+        "6m": -0.07266846712181163,
+        "12m": -0.02424727753207301
       },
-      "acceleration": -0.0159,
+      "acceleration": -0.0109,
       "evidence": [
         "1m return is positive"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1797083.7,
-      "relative_volume": 0.17226465300419785,
+      "average_volume": 1812145.4,
+      "relative_volume": 0.3370634608017657,
       "accumulation_days": 9,
       "distribution_days": 4,
       "evidence": [
@@ -56,22 +56,23 @@
       "evidence": []
     },
     "risk": {
-      "score": 75.0,
+      "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.016588697626964032,
-        "annualized_volatility": 0.2633374109723649,
-        "maximum_drawdown": -0.36930915108665063,
-        "sharpe_ratio": -0.3504246795614097,
-        "sortino_ratio": -0.5080769060198119,
-        "calmar_ratio": -0.3230803187094505,
-        "beta": 0.6143402584610105,
-        "alpha": -0.20006814647399296,
-        "capm_expected_return": 0.10778821861747073,
-        "actual_return": -0.09227992785652221,
-        "market_return": 0.17545361407291132
+        "volatility": 0.016603501091959922,
+        "annualized_volatility": 0.263572408693892,
+        "maximum_drawdown": -0.3693092054923762,
+        "sharpe_ratio": -0.33060096171206016,
+        "sortino_ratio": -0.47976239297407913,
+        "calmar_ratio": -0.31092710609502605,
+        "beta": 0.6144700829641869,
+        "alpha": -0.19524297992441286,
+        "capm_expected_return": 0.10810568812944804,
+        "actual_return": -0.08713729179496484,
+        "market_return": 0.17593320021041406
       },
       "evidence": [
-        "Historical drawdown is severe"
+        "Historical drawdown is severe",
+        "Short-term volatility is rising"
       ]
     },
     "catalyst": {
@@ -131,14 +132,15 @@
     "next_earnings_date": "1777552200",
     "eps_current_year": 3.75,
     "eps_forward": 4.17175,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 63.90494271705008,
+    "rsi": 65.29792922774914,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.17226465300419785,
+    "relative_volume": 0.3370634608017657,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -234,7 +236,7 @@
         "last_surprise_pct": -0.0991,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 14.5,
+      "analyst_upside_pct": 13.35,
       "eps_growth_implied": 11.25
     },
     "evidence": [
@@ -328,27 +330,27 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5126,
-    "probability_pct": 51.26,
+    "probability_of_outperformance": 0.4626,
+    "probability_pct": 46.26,
     "confidence": "High",
     "evidence": [
-      "Composite score 39.35/100"
+      "Composite score 37.1/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 39.35,
+    "final_score": 37.1,
     "technical_score": 53.0,
     "momentum_score": 10.0,
     "volume_score": 25.0,
     "fundamental_score": 49.0,
-    "risk_score": 75.0,
+    "risk_score": 60.0,
     "catalyst_score": 25.0,
     "revenue_growth": -0.019,
     "eps_growth": -0.105,
     "roe": 0.28267,
     "forward_pe": 14.749206,
-    "relative_volume": 0.17226465300419785,
+    "relative_volume": 0.3370634608017657,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -358,66 +360,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.006543394473949693,
-      "weekly": 0.056853271885825896,
-      "monthly": 0.060679202889358796,
-      "annual": -0.03405884977348195
+      "daily": 0.016767506842336077,
+      "weekly": 0.06758841422343465,
+      "monthly": 0.07145320768308072,
+      "annual": -0.02424727753207301
     },
     "risk": {
-      "volatility": 0.016588697626964032,
-      "annualized_volatility": 0.2633374109723649,
-      "maximum_drawdown": -0.36930915108665063,
-      "sharpe_ratio": -0.3504246795614097,
-      "sortino_ratio": -0.5080769060198119,
-      "calmar_ratio": -0.3230803187094505,
-      "beta": 0.6143402584610105,
-      "alpha": -0.20006814647399296,
-      "capm_expected_return": 0.10778821861747073,
-      "actual_return": -0.09227992785652221,
-      "market_return": 0.17545361407291132
+      "volatility": 0.016603501091959922,
+      "annualized_volatility": 0.263572408693892,
+      "maximum_drawdown": -0.3693092054923762,
+      "sharpe_ratio": -0.33060096171206016,
+      "sortino_ratio": -0.47976239297407913,
+      "calmar_ratio": -0.31092710609502605,
+      "beta": 0.6144700829641869,
+      "alpha": -0.19524297992441286,
+      "capm_expected_return": 0.10810568812944804,
+      "actual_return": -0.08713729179496484,
+      "market_return": 0.17593320021041406
     },
     "capm": {
-      "beta": 0.6143402584610105,
-      "alpha": -0.20006814647399296,
-      "capm_expected_return": 0.10778821861747073,
-      "actual_return": -0.09227992785652221,
-      "market_return": 0.17545361407291132,
-      "interpretation": "Beta 0.61: Moves roughly 39% less than the market. CAPM expected return is 10.78%; realized alpha is -20.01%, meaning negative alpha versus CAPM."
+      "beta": 0.6144700829641869,
+      "alpha": -0.19524297992441286,
+      "capm_expected_return": 0.10810568812944804,
+      "actual_return": -0.08713729179496484,
+      "market_return": 0.17593320021041406,
+      "interpretation": "Beta 0.61: Moves roughly 39% less than the market. CAPM expected return is 10.81%; realized alpha is -19.52%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.09227992785652221,
+      "actual_return": -0.08713729179496484,
       "components": {
-        "market_component": 0.10778821861747073,
+        "market_component": 0.10810568812944804,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0026674821944729812,
-        "alpha_component": -0.20006814647399296
+        "volatility_drag": -0.002714481738778396,
+        "alpha_component": -0.19524297992441286
       },
       "component_weights_pct": {
-        "market_component": 34.71,
+        "market_component": 35.32,
         "momentum_component": 0.0,
-        "volatility_drag": 0.86,
-        "alpha_component": 64.43
+        "volatility_drag": 0.89,
+        "alpha_component": 63.79
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 58.35250015258789,
-      "sma50": 59.4754451751709,
-      "sma200": 66.68063358306885,
-      "ema20": 58.99402869399479,
-      "ema50": 60.13599055708678,
-      "ema200": 65.19327713021622
+      "sma20": 58.38375015258789,
+      "sma50": 59.4879451751709,
+      "sma200": 66.68375885009766,
+      "ema20": 59.05355250351865,
+      "ema50": 60.16050036343528,
+      "ema200": 65.19949633499122
     },
     "momentum": {
-      "3m": -0.056853815534010144,
-      "6m": -0.0819932554643692,
-      "12m": -0.03405884977348195,
+      "3m": -0.04727366963793078,
+      "6m": -0.07266846712181163,
+      "12m": -0.02424727753207301,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 1797083.7,
-      "relative_volume": 0.17226465300419785,
+      "average_volume": 1812145.4,
+      "relative_volume": 0.3370634608017657,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -435,5 +437,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AOS\nRating: Drop | Score: 39.35/100 | Confidence: 34.08/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 55.779998779296875 | Resistance: 67.2699966430664\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.749206\nNews/Catalyst: How Investors Are Reacting To A. O. Smith (AOS) CEO Stephen Shafer Adding Chairman Role\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AOS\nRating: Drop | Score: 37.1/100 | Confidence: 32.5/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 55.779998779296875 | Resistance: 67.2699966430664\nFundamental Outlook: Fundamentally Weak | Forward P/E: 14.749206\nNews/Catalyst: How Investors Are Reacting To A. O. Smith (AOS) CEO Stephen Shafer Adding Chairman Role\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,17 +1,17 @@
 {
   "ticker": "BRO",
-  "generated_at": "2026-06-26T15:27:33.891753",
+  "generated_at": "2026-06-26T17:17:04.536466",
   "score": {
-    "final_score": 45.0,
-    "rating": "Hold",
-    "confidence": 41.33,
-    "risk_level": "Controlled",
+    "final_score": 42.75,
+    "rating": "Drop",
+    "confidence": 39.59,
+    "risk_level": "Moderate",
     "categories": {
       "technical": 53.0,
       "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 65.0,
-      "risk": 75.0,
+      "risk": 60.0,
       "catalyst": 40.0
     },
     "technical": {
@@ -25,17 +25,17 @@
       ],
       "support": 54.380001068115234,
       "resistance": 68.94999694824219,
-      "risk_reward": 0.65
+      "risk_reward": 0.56
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.11230412073916085,
-        "3m": -0.027091800212238226,
-        "6m": -0.20559164935245056,
-        "12m": -0.411747820965198
+        "1m": 0.121633509599963,
+        "3m": -0.018931586874494477,
+        "6m": -0.19892859355748105,
+        "12m": -0.406813930707831
       },
-      "acceleration": 0.0757,
+      "acceleration": 0.0805,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +43,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3193056.5,
-      "relative_volume": 0.2538727391763973,
+      "average_volume": 3222857.05,
+      "relative_volume": 0.43645776966744465,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -59,22 +59,23 @@
       ]
     },
     "risk": {
-      "score": 75.0,
+      "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.01613531996955014,
-        "annualized_volatility": 0.25614026378330373,
-        "maximum_drawdown": -0.5584660686376726,
-        "sharpe_ratio": -0.5489665732374202,
-        "sortino_ratio": -0.649184835513066,
-        "calmar_ratio": -0.2858092174130928,
-        "beta": 0.2403099591738631,
-        "alpha": -0.18277569371201716,
-        "capm_expected_return": 0.04216325083476805,
-        "actual_return": -0.1406124428772491,
-        "market_return": 0.17545361407291132
+        "volatility": 0.016182450007089892,
+        "annualized_volatility": 0.2568884299349717,
+        "maximum_drawdown": -0.5584660959890364,
+        "sharpe_ratio": -0.5303079199418388,
+        "sortino_ratio": -0.6289517445885382,
+        "calmar_ratio": -0.27947390246284665,
+        "beta": 0.24097403994294794,
+        "alpha": -0.1786253029507346,
+        "capm_expected_return": 0.04239533401479498,
+        "actual_return": -0.1362299689359396,
+        "market_return": 0.17593320021041406
       },
       "evidence": [
-        "Historical drawdown is severe"
+        "Historical drawdown is severe",
+        "Short-term volatility is rising"
       ]
     },
     "catalyst": {
@@ -135,14 +136,15 @@
     "next_earnings_date": "1777320000",
     "eps_current_year": 3.07,
     "eps_forward": 4.86801,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 66.76994820459436,
+    "rsi": 68.08036639273118,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2538727391763973,
+    "relative_volume": 0.43645776966744465,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -238,7 +240,7 @@
         "last_surprise_pct": 0.023,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 12.99,
+      "analyst_upside_pct": 12.14,
       "eps_growth_implied": 58.57
     },
     "evidence": [
@@ -333,28 +335,28 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6267,
-    "probability_pct": 62.67,
+    "probability_of_outperformance": 0.5789,
+    "probability_pct": 57.89,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
-      "Composite score 45.0/100"
+      "Composite score 42.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 45.0,
+    "final_score": 42.75,
     "technical_score": 53.0,
     "momentum_score": 20.0,
     "volume_score": 25.0,
     "fundamental_score": 65.0,
-    "risk_score": 75.0,
+    "risk_score": 60.0,
     "catalyst_score": 40.0,
     "revenue_growth": 0.357,
     "eps_growth": -0.079,
     "roe": 0.11926,
     "forward_pe": 12.999151,
-    "relative_volume": 0.2538727391763973,
+    "relative_volume": 0.43645776966744465,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -364,66 +366,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.03879659254669754,
-      "weekly": 0.06920474210128513,
-      "monthly": 0.11230412073916085,
-      "annual": -0.411747820965198
+      "daily": 0.04750944110892741,
+      "weekly": 0.07817263732426416,
+      "monthly": 0.121633509599963,
+      "annual": -0.406813930707831
     },
     "risk": {
-      "volatility": 0.01613531996955014,
-      "annualized_volatility": 0.25614026378330373,
-      "maximum_drawdown": -0.5584660686376726,
-      "sharpe_ratio": -0.5489665732374202,
-      "sortino_ratio": -0.649184835513066,
-      "calmar_ratio": -0.2858092174130928,
-      "beta": 0.2403099591738631,
-      "alpha": -0.18277569371201716,
-      "capm_expected_return": 0.04216325083476805,
-      "actual_return": -0.1406124428772491,
-      "market_return": 0.17545361407291132
+      "volatility": 0.016182450007089892,
+      "annualized_volatility": 0.2568884299349717,
+      "maximum_drawdown": -0.5584660959890364,
+      "sharpe_ratio": -0.5303079199418388,
+      "sortino_ratio": -0.6289517445885382,
+      "calmar_ratio": -0.27947390246284665,
+      "beta": 0.24097403994294794,
+      "alpha": -0.1786253029507346,
+      "capm_expected_return": 0.04239533401479498,
+      "actual_return": -0.1362299689359396,
+      "market_return": 0.17593320021041406
     },
     "capm": {
-      "beta": 0.2403099591738631,
-      "alpha": -0.18277569371201716,
-      "capm_expected_return": 0.04216325083476805,
-      "actual_return": -0.1406124428772491,
-      "market_return": 0.17545361407291132,
-      "interpretation": "Beta 0.24: Moves roughly 76% less than the market. CAPM expected return is 4.22%; realized alpha is -18.28%, meaning negative alpha versus CAPM."
+      "beta": 0.24097403994294794,
+      "alpha": -0.1786253029507346,
+      "capm_expected_return": 0.04239533401479498,
+      "actual_return": -0.1362299689359396,
+      "market_return": 0.17593320021041406,
+      "interpretation": "Beta 0.24: Moves roughly 76% less than the market. CAPM expected return is 4.24%; realized alpha is -17.86%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.1406124428772491,
+      "actual_return": -0.1362299689359396,
       "components": {
-        "market_component": 0.04216325083476805,
+        "market_component": 0.04239533401479498,
         "momentum_component": 0.0,
-        "volatility_drag": -0.001228052756660747,
-        "alpha_component": -0.18277569371201716
+        "volatility_drag": -0.001377685986994337,
+        "alpha_component": -0.1786253029507346
       },
       "component_weights_pct": {
-        "market_component": 18.64,
+        "market_component": 19.06,
         "momentum_component": 0.0,
-        "volatility_drag": 0.54,
-        "alpha_component": 80.81
+        "volatility_drag": 0.62,
+        "alpha_component": 80.32
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 59.00050029754639,
-      "sma50": 59.702478637695314,
-      "sma200": 73.573037109375,
-      "ema20": 59.64642111789208,
-      "ema50": 60.541598071311576,
-      "ema200": 72.67987101199036
+      "sma20": 59.027000427246094,
+      "sma50": 59.7130786895752,
+      "sma200": 73.57568738937378,
+      "ema20": 59.69689755541538,
+      "ema50": 60.562382488010556,
+      "ema200": 72.68514475831154
     },
     "momentum": {
-      "3m": -0.027091800212238226,
-      "6m": -0.20559164935245056,
-      "12m": -0.411747820965198,
+      "3m": -0.018931586874494477,
+      "6m": -0.19892859355748105,
+      "12m": -0.406813930707831,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 3193056.5,
-      "relative_volume": 0.2538727391763973,
+      "average_volume": 3222857.05,
+      "relative_volume": 0.43645776966744465,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -441,5 +443,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BRO\nRating: Hold | Score: 45.0/100 | Confidence: 41.33/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 54.380001068115234 | Resistance: 68.94999694824219\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.999151\nNews/Catalyst: Brown & Brown (BRO) Earns 2026 Workplace Honors For Mental Wellness\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BRO\nRating: Drop | Score: 42.75/100 | Confidence: 39.59/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 54.380001068115234 | Resistance: 68.94999694824219\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.999151\nNews/Catalyst: Brown & Brown (BRO) Earns 2026 Workplace Honors For Mental Wellness\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

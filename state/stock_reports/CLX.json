@@ -1,14 +1,14 @@
 {
   "ticker": "CLX",
-  "generated_at": "2026-06-26T15:27:52.396142",
+  "generated_at": "2026-06-26T17:17:15.893105",
   "score": {
-    "final_score": 41.75,
+    "final_score": 39.25,
     "rating": "Drop",
-    "confidence": 36.59,
+    "confidence": 34.43,
     "risk_level": "Moderate",
     "categories": {
       "technical": 53.0,
-      "momentum": 25.0,
+      "momentum": 15.0,
       "volume": 25.0,
       "fundamental": 55.0,
       "risk": 60.0,
@@ -25,26 +25,25 @@
       ],
       "support": 86.12000274658203,
       "resistance": 107.62000274658203,
-      "risk_reward": 0.92
+      "risk_reward": 1.08
     },
     "momentum": {
-      "score": 25.0,
+      "score": 15.0,
       "returns": {
-        "1m": 0.001956569253548146,
-        "3m": -0.0357553567483484,
-        "6m": 0.02245539742560365,
-        "12m": -0.1489324473581003
+        "1m": -0.00656987420730426,
+        "3m": -0.04396087950792271,
+        "6m": 0.013754513170822547,
+        "12m": -0.1561748564521125
       },
-      "acceleration": -0.047,
+      "acceleration": -0.0508,
       "evidence": [
-        "1m return is positive",
         "6m return is positive"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2634023.25,
-      "relative_volume": 0.11896819817364938,
+      "average_volume": 2645046.4,
+      "relative_volume": 0.20182179034742076,
       "accumulation_days": 4,
       "distribution_days": 3,
       "evidence": [
@@ -61,17 +60,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.016055430655077408,
-        "annualized_volatility": 0.25487206023226605,
-        "maximum_drawdown": -0.4610511733773449,
-        "sharpe_ratio": -0.3709841323536667,
-        "sortino_ratio": -0.48606134117259864,
-        "calmar_ratio": -0.2591807037645641,
-        "beta": 0.16371888984929395,
-        "alpha": -0.12327856104252218,
-        "capm_expected_return": 0.028725070916063498,
-        "actual_return": -0.09455349012645868,
-        "market_return": 0.17545361407291132
+        "volatility": 0.016036645711080533,
+        "annualized_volatility": 0.254573858491018,
+        "maximum_drawdown": -0.46105127630711673,
+        "sharpe_ratio": -0.38859099768122285,
+        "sortino_ratio": -0.5085340025142743,
+        "calmar_ratio": -0.2673726785829159,
+        "beta": 0.16408006893354338,
+        "alpha": -0.12779224127280675,
+        "capm_expected_return": 0.028867131618223626,
+        "actual_return": -0.09892510965458312,
+        "market_return": 0.17593320021041406
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -85,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 6m return is positive"
   },
   "fundamentals": {
     "ticker": "CLX",
@@ -135,14 +134,15 @@
     "next_earnings_date": "1777579200",
     "eps_current_year": 6.15,
     "eps_forward": 6.23938,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 56.18637941438293,
+    "rsi": 54.71835586461718,
     "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.11896819817364938,
+    "relative_volume": 0.20182179034742076,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "MACD bullish crossover",
@@ -238,7 +238,7 @@
         "last_surprise_pct": 0.0616,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.09,
+      "analyst_upside_pct": 9.23,
       "eps_growth_implied": 1.45
     },
     "evidence": [
@@ -336,14 +336,14 @@
     "probability_pct": 47.66,
     "confidence": "High",
     "evidence": [
-      "Composite score 41.75/100"
+      "Composite score 39.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.75,
+    "final_score": 39.25,
     "technical_score": 53.0,
-    "momentum_score": 25.0,
+    "momentum_score": 15.0,
     "volume_score": 25.0,
     "fundamental_score": 55.0,
     "risk_score": 60.0,
@@ -352,7 +352,7 @@
     "eps_growth": 0.027,
     "roe": 5.46099,
     "forward_pe": 15.612129,
-    "relative_volume": 0.11896819817364938,
+    "relative_volume": 0.20182179034742076,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -362,66 +362,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.021307929885805654,
-      "weekly": 0.01565761954297229,
-      "monthly": 0.001956569253548146,
-      "annual": -0.1489324473581003
+      "daily": 0.012616810342791052,
+      "weekly": 0.007014582973963401,
+      "monthly": -0.00656987420730426,
+      "annual": -0.1561748564521125
     },
     "risk": {
-      "volatility": 0.016055430655077408,
-      "annualized_volatility": 0.25487206023226605,
-      "maximum_drawdown": -0.4610511733773449,
-      "sharpe_ratio": -0.3709841323536667,
-      "sortino_ratio": -0.48606134117259864,
-      "calmar_ratio": -0.2591807037645641,
-      "beta": 0.16371888984929395,
-      "alpha": -0.12327856104252218,
-      "capm_expected_return": 0.028725070916063498,
-      "actual_return": -0.09455349012645868,
-      "market_return": 0.17545361407291132
+      "volatility": 0.016036645711080533,
+      "annualized_volatility": 0.254573858491018,
+      "maximum_drawdown": -0.46105127630711673,
+      "sharpe_ratio": -0.38859099768122285,
+      "sortino_ratio": -0.5085340025142743,
+      "calmar_ratio": -0.2673726785829159,
+      "beta": 0.16408006893354338,
+      "alpha": -0.12779224127280675,
+      "capm_expected_return": 0.028867131618223626,
+      "actual_return": -0.09892510965458312,
+      "market_return": 0.17593320021041406
     },
     "capm": {
-      "beta": 0.16371888984929395,
-      "alpha": -0.12327856104252218,
-      "capm_expected_return": 0.028725070916063498,
-      "actual_return": -0.09455349012645868,
-      "market_return": 0.17545361407291132,
-      "interpretation": "Beta 0.16: Moves roughly 84% less than the market. CAPM expected return is 2.87%; realized alpha is -12.33%, meaning negative alpha versus CAPM."
+      "beta": 0.16408006893354338,
+      "alpha": -0.12779224127280675,
+      "capm_expected_return": 0.028867131618223626,
+      "actual_return": -0.09892510965458312,
+      "market_return": 0.17593320021041406,
+      "interpretation": "Beta 0.16: Moves roughly 84% less than the market. CAPM expected return is 2.89%; realized alpha is -12.78%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.09455349012645868,
+      "actual_return": -0.09892510965458312,
       "components": {
-        "market_component": 0.028725070916063498,
+        "market_component": 0.028867131618223626,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0009744120464532102,
-        "alpha_component": -0.12327856104252218
+        "volatility_drag": -0.0009147716982035981,
+        "alpha_component": -0.12779224127280675
       },
       "component_weights_pct": {
-        "market_component": 18.78,
+        "market_component": 18.32,
         "momentum_component": 0.0,
-        "volatility_drag": 0.64,
-        "alpha_component": 80.59
+        "volatility_drag": 0.58,
+        "alpha_component": 81.1
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 94.2284999847412,
-      "sma50": 94.21943588256836,
-      "sma200": 105.52003597259521,
-      "ema20": 94.85701767858231,
-      "ema50": 96.11480626766034,
-      "ema200": 105.80673607212073
+      "sma20": 94.18709983825684,
+      "sma50": 94.20287582397461,
+      "sma200": 105.51589595794678,
+      "ema20": 94.77816025670731,
+      "ema50": 96.08233556447664,
+      "ema200": 105.79849729777185
     },
     "momentum": {
-      "3m": -0.0357553567483484,
-      "6m": 0.02245539742560365,
-      "12m": -0.1489324473581003,
+      "3m": -0.04396087950792271,
+      "6m": 0.013754513170822547,
+      "12m": -0.1561748564521125,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2634023.25,
-      "relative_volume": 0.11896819817364938,
+      "average_volume": 2645046.4,
+      "relative_volume": 0.20182179034742076,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -439,5 +439,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CLX\nRating: Drop | Score: 41.75/100 | Confidence: 36.59/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 86.12000274658203 | Resistance: 107.62000274658203\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.612129\nNews/Catalyst: 5 High-Yielding S&P 500 Stocks Trading at Double-Digit Discounts Are Incredible Strong Buys Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CLX\nRating: Drop | Score: 39.25/100 | Confidence: 34.43/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 86.12000274658203 | Resistance: 107.62000274658203\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.612129\nNews/Catalyst: 5 High-Yielding S&P 500 Stocks Trading at Double-Digit Discounts Are Incredible Strong Buys Now\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
