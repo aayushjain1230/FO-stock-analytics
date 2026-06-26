@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T22:07:32.060553",
+  "generated_at": "2026-06-26T15:28:51.890519",
   "primary_horizon": "return_1m",
   "signal_types": {
     "breakout": {
@@ -25,7 +25,7 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.06288055556411584,
+      "average_max_drawdown": -0.06818719153640511,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     },
@@ -84,7 +84,7 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.057170330086673604,
+      "average_max_drawdown": -0.05987903547090248,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     },
@@ -111,41 +111,41 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.0899186630260777,
+      "average_max_drawdown": -0.09521612805050744,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     },
     "sma50_reclaim": {
-      "sample_size": 37,
-      "win_rate": 0.6756756756756757,
-      "average_win": 0.1005367757838345,
-      "average_loss": -0.033225805972661,
-      "expected_value": 0.057154316835781906,
-      "average_return": 0.057154316835781906,
-      "median_return": 0.03246444816763483,
-      "variance": 0.013668664343087222,
-      "standard_deviation": 0.11691306318409087,
-      "sharpe_like": 0.4888616830249921,
-      "p_value": 0.005224949539452559,
+      "sample_size": 39,
+      "win_rate": 0.6666666666666666,
+      "average_win": 0.0977104626944768,
+      "average_loss": -0.031876270955632474,
+      "expected_value": 0.05451488481110703,
+      "average_return": 0.05451488481110705,
+      "median_return": 0.02705263546053449,
+      "variance": 0.013105564142800702,
+      "standard_deviation": 0.11447953591275911,
+      "sharpe_like": 0.4761976398353932,
+      "p_value": 0.005085610834687456,
       "confidence_interval_95": {
-        "low": 0.01817356082256332,
-        "high": 0.0961350728490005
+        "low": 0.01740491224609171,
+        "high": 0.09162485737612239
       },
       "train_test": {
         "available": true,
-        "train_size": 25,
+        "train_size": 27,
         "test_size": 12,
-        "train_average_return": 0.04365214815149573,
-        "test_average_return": 0.08528383492804474,
-        "generalization_gap": 0.041631686776549014,
+        "train_average_return": 0.04400441573007202,
+        "test_average_return": 0.07816344024343583,
+        "generalization_gap": 0.034159024513363806,
         "passes_out_of_sample": true
       },
       "confidence": "High",
       "attractiveness": "Constructive",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.14773640696626839,
-      "false_positive_rate": 0.32432432432432434,
-      "readout": "Expected value is 5.72% with variance 0.0137. Constructive."
+      "average_max_drawdown": -0.1471277238797373,
+      "false_positive_rate": 0.3333333333333333,
+      "readout": "Expected value is 5.45% with variance 0.0131. Constructive."
     },
     "volume_spike": {
       "sample_size": 0,
@@ -170,7 +170,7 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.07178981000007217,
+      "average_max_drawdown": -0.058868030569747175,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     },
@@ -197,33 +197,33 @@
       "confidence": "Low sample size",
       "attractiveness": "Insufficient data",
       "average_sp500_relative_return": null,
-      "average_max_drawdown": -0.02657805083199546,
+      "average_max_drawdown": -0.030658825843676584,
       "false_positive_rate": null,
       "readout": "No expected value estimate yet."
     }
   },
   "regression": {
     "available": true,
-    "sample_size": 102,
-    "r_squared": 0.025326112869691997,
+    "sample_size": 104,
+    "r_squared": 0.022140336048366183,
     "features": {
       "intercept": {
-        "coefficient": 0.263751006351127,
-        "std_error": 0.1424007736415491,
-        "t_stat": 1.8521739707330556,
-        "p_value": 0.06698053741219799
+        "coefficient": 0.2447470957734679,
+        "std_error": 0.13882585435357078,
+        "t_stat": 1.7629792153133808,
+        "p_value": 0.08092862833884307
       },
       "score": {
-        "coefficient": -0.0016661023348011703,
-        "std_error": 0.0010387940946954843,
-        "t_stat": -1.6038812150636814,
-        "p_value": 0.11192590749126045
+        "coefficient": -0.0015341307335725264,
+        "std_error": 0.0010144901748709468,
+        "t_stat": -1.512218424163332,
+        "p_value": 0.1336010629435284
       },
       "confidence": {
-        "coefficient": -0.0016661023348011701,
-        "std_error": 0.0010387940946974957,
-        "t_stat": -1.6038812150605757,
-        "p_value": 0.11192590749194585
+        "coefficient": -0.0015341307335623262,
+        "std_error": 0.0010144901748709314,
+        "t_stat": -1.5122184241533005,
+        "p_value": 0.1336010629460773
       }
     }
   },

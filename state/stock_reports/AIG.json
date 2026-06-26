@@ -1,48 +1,51 @@
 {
   "ticker": "AIG",
-  "generated_at": "2026-06-25T22:05:47.381853",
+  "generated_at": "2026-06-26T15:26:59.398375",
   "score": {
-    "final_score": 41.7,
-    "rating": "Drop",
-    "confidence": 34.03,
+    "final_score": 50.45,
+    "rating": "Hold",
+    "confidence": 40.79,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 43.0,
-      "momentum": 10.0,
+      "technical": 53.0,
+      "momentum": 35.0,
       "volume": 0,
       "fundamental": 68.0,
       "risk": 100,
       "catalyst": 65.0
     },
     "technical": {
-      "score": 43.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
+        "Price above SMA50",
         "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 72.55000305175781,
       "resistance": 78.7699966430664,
-      "risk_reward": 1.7
+      "risk_reward": 0.63
     },
     "momentum": {
-      "score": 10.0,
+      "score": 35.0,
       "returns": {
-        "1m": -0.02387097441779429,
-        "3m": -0.0016244514181869008,
-        "6m": -0.12308399123150049,
-        "12m": -0.103243290872984
+        "1m": 0.02122285641987376,
+        "3m": 0.034973025565606886,
+        "6m": -0.10704639324169207,
+        "12m": -0.06814209824253736
       },
-      "acceleration": 0.0599,
+      "acceleration": 0.0885,
       "evidence": [
+        "1m return is positive",
+        "3m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 4106315.85,
-      "relative_volume": 0.44585391549946163,
+      "average_volume": 4043746.85,
+      "relative_volume": 0.19910667751122946,
       "accumulation_days": 3,
       "distribution_days": 4,
       "evidence": []
@@ -57,17 +60,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015252968696461738,
-        "annualized_volatility": 0.2421333715577448,
-        "maximum_drawdown": -0.16976556869500492,
-        "sharpe_ratio": 0.2244490276230121,
-        "sortino_ratio": 0.29416764682406393,
-        "calmar_ratio": 0.14875969419378512,
-        "beta": 0.530678904492309,
-        "alpha": -0.03901113821707572,
-        "capm_expected_return": 0.09335773801829304,
-        "actual_return": 0.054346599801217324,
-        "market_return": 0.1759213287507758
+        "volatility": 0.015263774606730797,
+        "annualized_volatility": 0.2423049100653145,
+        "maximum_drawdown": -0.1697655686950048,
+        "sharpe_ratio": 0.2657204940567065,
+        "sortino_ratio": 0.3485055950293119,
+        "calmar_ratio": 0.2094335228953903,
+        "beta": 0.5303452364139261,
+        "alpha": -0.02866560802025471,
+        "capm_expected_return": 0.0930509884351759,
+        "actual_return": 0.06438538041492119,
+        "market_return": 0.17545361407291132
       },
       "evidence": []
     },
@@ -80,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Momentum is accelerating; eps growth is strong"
+    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "AIG",
@@ -89,7 +92,7 @@
     "sector": "Financial Services",
     "industry": "Insurance - Diversified",
     "exchange": "NYQ",
-    "market_cap": 39685935104.0,
+    "market_cap": 40497147904.0,
     "revenue_growth": 0.014,
     "eps_growth": 0.216,
     "fcf_growth": null,
@@ -106,26 +109,26 @@
     "cash_position": 9592999936.0,
     "total_debt": 9155999744.0,
     "interest_coverage": null,
-    "forward_pe": 8.410992,
-    "trailing_pe": 13.177817,
+    "forward_pe": 8.582919,
+    "trailing_pe": 13.447183,
     "peg": 0.62,
-    "price_to_book": 0.9872065,
-    "price_to_sales": 1.4863089,
-    "enterprise_to_ebitda": 4.805,
-    "enterprise_to_revenue": 1.496,
-    "fcf_yield": 0.23981416869879282,
-    "institutional_ownership": 1.0004901,
+    "price_to_book": 1.0073858,
+    "price_to_sales": 1.5166903,
+    "enterprise_to_ebitda": 4.723,
+    "enterprise_to_revenue": 1.471,
+    "fcf_yield": 0.2350103656326859,
+    "institutional_ownership": 1.0005001,
     "insider_ownership": 0.0057099997,
-    "short_interest": 9557797.0,
-    "short_ratio": 2.17,
-    "short_percent_float": 0.0208,
-    "days_to_cover": 2.17,
+    "short_interest": 10519103.0,
+    "short_ratio": 2.87,
+    "short_percent_float": 0.0229,
+    "days_to_cover": 2.87,
     "target_mean_price": 87.8,
     "target_high_price": 101.0,
     "target_low_price": 80.0,
     "recommendation": "buy",
     "number_of_analysts": 20.0,
-    "dividend_yield": 2.63,
+    "dividend_yield": 2.67,
     "payout_ratio": 0.3169,
     "next_earnings_date": "1777579200",
     "eps_current_year": 5.68,
@@ -133,12 +136,12 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 55.87009068242096,
+    "rsi": 53.79251122624297,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.44585391549946163,
-    "price_above_sma50": false,
+    "relative_volume": 0.19910667751122946,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 72.55000305175781,
@@ -191,9 +194,9 @@
     "sector_strength": false,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 4,
-    "institutional_ownership": 1.0004901,
+    "bullish_news_score": 2,
+    "bearish_news_score": 1,
+    "institutional_ownership": 1.0005001,
     "detail": {
       "earnings": {
         "available": true,
@@ -233,7 +236,7 @@
         "last_surprise_pct": 0.1196,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 17.3,
+      "analyst_upside_pct": 14.95,
       "eps_growth_implied": 56.67
     },
     "evidence": [
@@ -252,15 +255,25 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0057099997,
-    "institutional_ownership": 1.0004901,
-    "short_interest": 9557797.0,
-    "short_percent_float": 0.0208,
-    "days_to_cover": 2.17,
+    "institutional_ownership": 1.0005001,
+    "short_interest": 10519103.0,
+    "short_percent_float": 0.0229,
+    "days_to_cover": 2.87,
     "insider_transactions": "Unavailable from current data provider."
   },
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Should Value Investors Buy American International Group (AIG) Stock?",
+        "source": "Zacks",
+        "published": "2026-06-26T13:40:04Z",
+        "summary": "Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Investor Who Scored 900% Win in 2008 Crisis Has New Big Short Bet",
         "source": "Bloomberg",
@@ -300,16 +313,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AIG's Turnaround Continues Despite Stock Weakness: Time to Buy?",
-        "source": "Zacks",
-        "published": "2026-06-12T17:19:00Z",
-        "summary": "American International's underwriting gains, cost cuts and capital returns support growth, even as shares lag and catastrophe risks remain in focus.",
-        "bullish_score": 1,
-        "bearish_score": 3,
-        "importance_score": 90,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -329,21 +332,21 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.781,
-    "probability_pct": 78.1,
+    "probability_of_outperformance": 0.7867,
+    "probability_pct": 78.67,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 41.7/100"
+      "Composite score 50.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 41.7,
-    "technical_score": 43.0,
-    "momentum_score": 10.0,
+    "final_score": 50.45,
+    "technical_score": 53.0,
+    "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 68.0,
     "risk_score": 100,
@@ -351,10 +354,10 @@
     "revenue_growth": 0.014,
     "eps_growth": 0.216,
     "roe": 0.07723,
-    "forward_pe": 8.410992,
-    "relative_volume": 0.44585391549946163,
+    "forward_pe": 8.582919,
+    "relative_volume": 0.19910667751122946,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
@@ -362,66 +365,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01694248654935926,
-      "weekly": 0.0010699723772438219,
-      "monthly": -0.02387097441779429,
-      "annual": -0.103243290872984
+      "daily": 0.02017370964613363,
+      "weekly": 0.03161313257779441,
+      "monthly": 0.02122285641987376,
+      "annual": -0.06814209824253736
     },
     "risk": {
-      "volatility": 0.015252968696461738,
-      "annualized_volatility": 0.2421333715577448,
-      "maximum_drawdown": -0.16976556869500492,
-      "sharpe_ratio": 0.2244490276230121,
-      "sortino_ratio": 0.29416764682406393,
-      "calmar_ratio": 0.14875969419378512,
-      "beta": 0.530678904492309,
-      "alpha": -0.03901113821707572,
-      "capm_expected_return": 0.09335773801829304,
-      "actual_return": 0.054346599801217324,
-      "market_return": 0.1759213287507758
+      "volatility": 0.015263774606730797,
+      "annualized_volatility": 0.2423049100653145,
+      "maximum_drawdown": -0.1697655686950048,
+      "sharpe_ratio": 0.2657204940567065,
+      "sortino_ratio": 0.3485055950293119,
+      "calmar_ratio": 0.2094335228953903,
+      "beta": 0.5303452364139261,
+      "alpha": -0.02866560802025471,
+      "capm_expected_return": 0.0930509884351759,
+      "actual_return": 0.06438538041492119,
+      "market_return": 0.17545361407291132
     },
     "capm": {
-      "beta": 0.530678904492309,
-      "alpha": -0.03901113821707572,
-      "capm_expected_return": 0.09335773801829304,
-      "actual_return": 0.054346599801217324,
-      "market_return": 0.1759213287507758,
-      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.34%; realized alpha is -3.90%, meaning negative alpha versus CAPM."
+      "beta": 0.5303452364139261,
+      "alpha": -0.02866560802025471,
+      "capm_expected_return": 0.0930509884351759,
+      "actual_return": 0.06438538041492119,
+      "market_return": 0.17545361407291132,
+      "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.31%; realized alpha is -2.87%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.054346599801217324,
+      "actual_return": 0.06438538041492119,
       "components": {
-        "market_component": 0.09335773801829304,
+        "market_component": 0.0930509884351759,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": -0.03901113821707572
+        "alpha_component": -0.02866560802025471
       },
       "component_weights_pct": {
-        "market_component": 70.53,
+        "market_component": 76.45,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 29.47
+        "alpha_component": 23.55
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 74.41327705383301,
-      "sma50": 75.50634384155273,
-      "sma200": 76.64581310272217,
-      "ema20": 75.08743130217158,
-      "ema50": 75.33340018956423,
-      "ema200": 76.36295711505316
+      "sma20": 74.53583450317383,
+      "sma50": 75.5019221496582,
+      "sma200": 76.64436176300049,
+      "ema20": 75.20862837881666,
+      "ema50": 75.37365902559196,
+      "ema200": 76.36292743135114
     },
     "momentum": {
-      "3m": -0.0016244514181869008,
-      "6m": -0.12308399123150049,
-      "12m": -0.103243290872984,
+      "3m": 0.034973025565606886,
+      "6m": -0.10704639324169207,
+      "12m": -0.06814209824253736,
       "24m": 0.0,
-      "score": 0.0
+      "score": 25.0
     },
     "volume": {
-      "average_volume": 4106315.85,
-      "relative_volume": 0.44585391549946163,
+      "average_volume": 4043746.85,
+      "relative_volume": 0.19910667751122946,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -431,13 +434,26 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-25",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-26",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: AIG\nRating: Drop | Score: 41.7/100 | Confidence: 34.03/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 72.55000305175781 | Resistance: 78.7699966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.410992\nNews/Catalyst: Investor Who Scored 900% Win in 2008 Crisis Has New Big Short Bet\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AIG\nRating: Hold | Score: 50.45/100 | Confidence: 40.79/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 72.55000305175781 | Resistance: 78.7699966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.582919\nNews/Catalyst: Should Value Investors Buy American International Group (AIG) Stock?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

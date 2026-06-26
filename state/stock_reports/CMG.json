@@ -1,47 +1,50 @@
 {
   "ticker": "CMG",
-  "generated_at": "2026-06-25T22:06:38.704286",
+  "generated_at": "2026-06-26T15:27:54.417384",
   "score": {
-    "final_score": 30.3,
+    "final_score": 39.05,
     "rating": "Drop",
-    "confidence": 20.28,
+    "confidence": 26.51,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 36.0,
-      "momentum": 10.0,
+      "technical": 46.0,
+      "momentum": 35.0,
       "volume": 0,
       "fundamental": 42.0,
       "risk": 75.0,
       "catalyst": 25.0
     },
     "technical": {
-      "score": 36.0,
+      "score": 46.0,
       "evidence": [
         "Price above SMA20",
+        "Price above SMA50",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 28.18000030517578,
       "resistance": 36.04999923706055,
-      "risk_reward": 0.92
+      "risk_reward": 0.49
     },
     "momentum": {
-      "score": 10.0,
+      "score": 35.0,
       "returns": {
-        "1m": -0.0009285853518701259,
-        "3m": -0.006769268329326894,
-        "6m": -0.1487341683013933,
-        "12m": -0.40933215227796405
+        "1m": 0.02324876623303118,
+        "3m": 0.03978870583927385,
+        "6m": -0.11484519839756469,
+        "12m": -0.39336232982949393
       },
-      "acceleration": 0.0676,
+      "acceleration": 0.0972,
       "evidence": [
+        "1m return is positive",
+        "3m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 22098280.0,
-      "relative_volume": 0.978650827123197,
+      "average_volume": 21642125.65,
+      "relative_volume": 0.2636484554371858,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -56,17 +59,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.023046559018777103,
-        "annualized_volatility": 0.3658527824367419,
+        "volatility": 0.023084051425822438,
+        "annualized_volatility": 0.3664479559473129,
         "maximum_drawdown": -0.5740628968357382,
-        "sharpe_ratio": -0.7948146152771607,
-        "sortino_ratio": -0.9947544262921627,
-        "calmar_ratio": -0.5259019655037618,
-        "beta": 0.8762775804621078,
-        "alpha": -0.4449410548299466,
-        "capm_expected_return": 0.15415591630940886,
-        "actual_return": -0.2907851385205377,
-        "market_return": 0.1759213287507758
+        "sharpe_ratio": -0.7421886176414333,
+        "sortino_ratio": -0.9304012102817989,
+        "calmar_ratio": -0.5030392906204454,
+        "beta": 0.8756575810907813,
+        "alpha": -0.4256107891547859,
+        "capm_expected_return": 0.153637287292721,
+        "actual_return": -0.2719735018620649,
+        "market_return": 0.17545361407291132
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -79,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; Momentum is accelerating; Debt-to-equity is elevated; major news"
+    "explanation": "Price above SMA20; Price above SMA50; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "CMG",
@@ -88,7 +91,7 @@
     "sector": "Consumer Cyclical",
     "industry": "Restaurants",
     "exchange": "NYQ",
-    "market_cap": 41406652416.0,
+    "market_cap": 42868965376.0,
     "revenue_growth": 0.074,
     "eps_growth": -0.179,
     "fcf_growth": null,
@@ -105,20 +108,20 @@
     "cash_position": 871422016.0,
     "total_debt": 5245879808.0,
     "interest_coverage": null,
-    "forward_pe": 23.795834,
-    "trailing_pe": 29.614677,
+    "forward_pe": 24.636206,
+    "trailing_pe": 30.660547,
     "peg": 1.7,
-    "price_to_book": 17.252806,
-    "price_to_sales": 3.4111583,
-    "enterprise_to_ebitda": 19.542,
-    "enterprise_to_revenue": 3.709,
-    "fcf_yield": 0.026273791686178893,
-    "institutional_ownership": 0.92554003,
+    "price_to_book": 17.862104,
+    "price_to_sales": 3.5316265,
+    "enterprise_to_ebitda": 19.87,
+    "enterprise_to_revenue": 3.772,
+    "fcf_yield": 0.0253775604439724,
+    "institutional_ownership": 0.92555,
     "insider_ownership": 0.0066299997,
-    "short_interest": 44671409.0,
-    "short_ratio": 2.49,
-    "short_percent_float": 0.0394,
-    "days_to_cover": 2.49,
+    "short_interest": 50015890.0,
+    "short_ratio": 2.42,
+    "short_percent_float": 0.044099998,
+    "days_to_cover": 2.42,
     "target_mean_price": 42.87879,
     "target_high_price": 52.0,
     "target_low_price": 35.0,
@@ -132,12 +135,12 @@
     "classification": "Fundamentally Weak"
   },
   "technical_screen": {
-    "rsi": 70.74898590028812,
+    "rsi": 70.77856857429828,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.978650827123197,
-    "price_above_sma50": false,
+    "relative_volume": 0.2636484554371858,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
     "support": 28.18000030517578,
@@ -191,8 +194,8 @@
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 1,
-    "institutional_ownership": 0.92554003,
+    "bearish_news_score": 0,
+    "institutional_ownership": 0.92555,
     "detail": {
       "earnings": {
         "available": true,
@@ -232,7 +235,7 @@
         "last_surprise_pct": 0.0139999995,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 32.83,
+      "analyst_upside_pct": 28.3,
       "eps_growth_implied": 24.45
     },
     "evidence": [
@@ -249,15 +252,25 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.0066299997,
-    "institutional_ownership": 0.92554003,
-    "short_interest": 44671409.0,
-    "short_percent_float": 0.0394,
-    "days_to_cover": 2.49,
+    "institutional_ownership": 0.92555,
+    "short_interest": 50015890.0,
+    "short_percent_float": 0.044099998,
+    "days_to_cover": 2.42,
     "insider_transactions": "Unavailable from current data provider."
   },
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "A Tale Of Two Wendy\u2019s: Beneath The Wild Meme-Stock Surge",
+        "source": "Trefis",
+        "published": "2026-06-26T03:31:48Z",
+        "summary": "The company says its new strategy is working in the stores it runs itself. But the numbers from its franchise partners tell a very different story - even if a sudden wave of internet mania just completely upended the stock chart.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "CAVA Stock Jumps 37% in 6 Months: Should You Buy, Sell or Hold?",
         "source": "Zacks",
@@ -297,16 +310,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Investors Are Buying Into Sweetgreen Again\u2014Should They?",
-        "source": "MarketBeat",
-        "published": "2026-06-22T17:10:00Z",
-        "summary": "Sweetgreen continues to miss earnings estimates, but signs of improving traffic and a discounted valuation seem to be fueling optimism.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -330,14 +333,14 @@
     "probability_pct": 50.42,
     "confidence": "High",
     "evidence": [
-      "Composite score 30.3/100"
+      "Composite score 39.05/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 30.3,
-    "technical_score": 36.0,
-    "momentum_score": 10.0,
+    "final_score": 39.05,
+    "technical_score": 46.0,
+    "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 42.0,
     "risk_score": 75.0,
@@ -345,10 +348,10 @@
     "revenue_growth": 0.074,
     "eps_growth": -0.179,
     "roe": 0.49231997,
-    "forward_pe": 23.795834,
-    "relative_volume": 0.978650827123197,
+    "forward_pe": 24.636206,
+    "relative_volume": 0.2636484554371858,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": false,
@@ -356,66 +359,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.018617804837370633,
-      "weekly": 0.013182616475181375,
-      "monthly": -0.0009285853518701259,
-      "annual": -0.40933215227796405
+      "daily": 0.0362454159816441,
+      "weekly": 0.029547523388061547,
+      "monthly": 0.02324876623303118,
+      "annual": -0.39336232982949393
     },
     "risk": {
-      "volatility": 0.023046559018777103,
-      "annualized_volatility": 0.3658527824367419,
+      "volatility": 0.023084051425822438,
+      "annualized_volatility": 0.3664479559473129,
       "maximum_drawdown": -0.5740628968357382,
-      "sharpe_ratio": -0.7948146152771607,
-      "sortino_ratio": -0.9947544262921627,
-      "calmar_ratio": -0.5259019655037618,
-      "beta": 0.8762775804621078,
-      "alpha": -0.4449410548299466,
-      "capm_expected_return": 0.15415591630940886,
-      "actual_return": -0.2907851385205377,
-      "market_return": 0.1759213287507758
+      "sharpe_ratio": -0.7421886176414333,
+      "sortino_ratio": -0.9304012102817989,
+      "calmar_ratio": -0.5030392906204454,
+      "beta": 0.8756575810907813,
+      "alpha": -0.4256107891547859,
+      "capm_expected_return": 0.153637287292721,
+      "actual_return": -0.2719735018620649,
+      "market_return": 0.17545361407291132
     },
     "capm": {
-      "beta": 0.8762775804621078,
-      "alpha": -0.4449410548299466,
-      "capm_expected_return": 0.15415591630940886,
-      "actual_return": -0.2907851385205377,
-      "market_return": 0.1759213287507758,
-      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 15.42%; realized alpha is -44.49%, meaning negative alpha versus CAPM."
+      "beta": 0.8756575810907813,
+      "alpha": -0.4256107891547859,
+      "capm_expected_return": 0.153637287292721,
+      "actual_return": -0.2719735018620649,
+      "market_return": 0.17545361407291132,
+      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 15.36%; realized alpha is -42.56%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.2907851385205377,
+      "actual_return": -0.2719735018620649,
       "components": {
-        "market_component": 0.15415591630940886,
+        "market_component": 0.153637287292721,
         "momentum_component": 0.0,
-        "volatility_drag": -0.023170556487348382,
-        "alpha_component": -0.4449410548299466
+        "volatility_drag": -0.02328959118946258,
+        "alpha_component": -0.4256107891547859
       },
       "component_weights_pct": {
-        "market_component": 24.77,
+        "market_component": 25.5,
         "momentum_component": 0.0,
-        "volatility_drag": 3.72,
-        "alpha_component": 71.5
+        "volatility_drag": 3.87,
+        "alpha_component": 70.64
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 30.92750005722046,
-      "sma50": 32.419000244140626,
-      "sma200": 35.62935007095337,
-      "ema20": 31.508196124534678,
-      "ema50": 32.232184162384854,
-      "ema200": 36.690528337618005
+      "sma20": 30.979000186920167,
+      "sma50": 32.38300025939942,
+      "sma200": 35.5993000793457,
+      "ema20": 31.693129899620846,
+      "ema50": 32.2799416761321,
+      "ema200": 36.658284282148564
     },
     "momentum": {
-      "3m": -0.006769268329326894,
-      "6m": -0.1487341683013933,
-      "12m": -0.40933215227796405,
+      "3m": 0.03978870583927385,
+      "6m": -0.11484519839756469,
+      "12m": -0.39336232982949393,
       "24m": 0.0,
-      "score": 0.0
+      "score": 25.0
     },
     "volume": {
-      "average_volume": 22098280.0,
-      "relative_volume": 0.978650827123197,
+      "average_volume": 21642125.65,
+      "relative_volume": 0.2636484554371858,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -425,13 +428,26 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-25",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-06-26",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: CMG\nRating: Drop | Score: 30.3/100 | Confidence: 20.28/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 23.795834\nNews/Catalyst: CAVA Stock Jumps 37% in 6 Months: Should You Buy, Sell or Hold?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CMG\nRating: Drop | Score: 39.05/100 | Confidence: 26.51/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.18000030517578 | Resistance: 36.04999923706055\nFundamental Outlook: Fundamentally Weak | Forward P/E: 24.636206\nNews/Catalyst: A Tale Of Two Wendy\u2019s: Beneath The Wild Meme-Stock Surge\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }
