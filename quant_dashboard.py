@@ -10,6 +10,8 @@ import json
 import os
 from datetime import datetime
 
+import institutional_research
+
 STATE_DIR = "state"
 PLOTS_DIR = "plots"
 DASHBOARD_FILE = os.path.join(PLOTS_DIR, "quant_research_dashboard.html")
@@ -90,6 +92,20 @@ def _bar(pct, color="#238636", height=14):
         f'<div style="background:#21262d;border-radius:4px;height:{height}px;width:100%;">'
         f'<div style="background:{color};width:{w:.1f}%;height:100%;border-radius:4px;"></div></div>'
     )
+
+
+def _mini_card(label, value, color="#e6edf3"):
+    return f"""
+    <div class="metric-card">
+      <div class="metric-label">{html.escape(str(label))}</div>
+      <div class="metric-value" style="color:{color};">{value}</div>
+    </div>"""
+
+
+def _simple_list(items, empty="No items available."):
+    if not items:
+        return f"<p style='color:#6e7681;'>{html.escape(empty)}</p>"
+    return "<ul>" + "".join(f"<li>{html.escape(str(item))}</li>" for item in items) + "</ul>"
 
 
 # ---------------------------------------------------------------------------
@@ -749,6 +765,251 @@ def _section_quant_lab(quant):
       <p>Every model remains conditional on data quality, stable relationships, execution costs, and the absence of structural breaks.</p>
     </section>"""
 
+
+def _section_factor_dashboard(platform):
+    factor = platform.get("factor_exposure", {})
+    rows = ""
+    for item in factor.get("stock_rows", [])[:30]:
+        rows += f"""<tr>
+          <td><strong>{html.escape(str(item.get('ticker','')))}</strong></td>
+          <td>{_fmt(item.get('weight_pct'))}%</td>
+          <td>{_fmt(item.get('momentum'))}</td>
+          <td>{_fmt(item.get('value'))}</td>
+          <td>{_fmt(item.get('quality'))}</td>
+          <td>{_fmt(item.get('growth'))}</td>
+          <td>{_fmt(item.get('volatility'))}</td>
+          <td>{html.escape(str(item.get('style','Blend')))}</td>
+          <td>{_fmt(item.get('coverage_pct'))}%</td>
+        </tr>"""
+    breakdown = "".join(
+        f"<div style='margin-bottom:10px;'><div style='display:flex;justify-content:space-between;'><span>{html.escape(str(k).replace('_',' ').title())}</span><span>{_fmt(v)}</span></div>{_bar(v, '#58a6ff', 10)}</div>"
+        for k, v in factor.get("portfolio_breakdown", {}).items()
+    )
+    risk_items = factor.get("factor_risk_contribution", {}).get("items", {})
+    risk = "".join(
+        f"<div style='margin-bottom:10px;'><div style='display:flex;justify-content:space-between;'><span>{html.escape(str(k).replace('_',' ').title())}</span><span>{_fmt(v)}%</span></div>{_bar(v, '#d29922', 10)}</div>"
+        for k, v in risk_items.items()
+    )
+    return f"""
+    <section id="factor-dashboard">
+      <h2>Portfolio Factor Exposure Engine</h2>
+      <p>Momentum, value, quality, growth, low-volatility/style tilts, portfolio-level factor concentration, and contribution proxies.</p>
+      <div class="two-col">
+        <div class="panel"><h3>Portfolio Factor Breakdown</h3>{breakdown or '<p>No factor exposure data. Run <code>python main.py --quant-report</code>.</p>'}</div>
+        <div class="panel"><h3>Factor Risk Contribution</h3>{risk or '<p>No factor risk data available yet.</p>'}{_simple_list(factor.get('concentration_warnings', []), 'No concentration warnings.')}</div>
+      </div>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Ticker</th><th>Weight</th><th>Momentum</th><th>Value</th><th>Quality</th><th>Growth</th><th>Low Vol</th><th>Style</th><th>Coverage</th></tr></thead><tbody>{rows or '<tr><td colspan="9">Factor rows unavailable.</td></tr>'}</tbody></table></div>
+    </section>"""
+
+
+def _section_attribution(platform):
+    attr = platform.get("attribution", {})
+    cards = "".join(
+        [
+            _mini_card("Market contribution", _pct(attr.get("market_return_contribution")) if attr.get("market_return_contribution") is not None else "N/A", "#58a6ff"),
+            _mini_card("Sector allocation", _fmt(attr.get("sector_allocation_effect"), suffix="%"), "#d29922"),
+            _mini_card("Stock selection", _fmt(attr.get("stock_selection_effect"), suffix="%") if attr.get("stock_selection_effect") is not None else "N/A", "#2ea043"),
+            _mini_card("Factor effect", _fmt(attr.get("factor_exposure_effect"), suffix="%"), "#58a6ff"),
+            _mini_card("Alpha / unexplained", _fmt(attr.get("alpha_unexplained_return"), suffix="%") if attr.get("alpha_unexplained_return") is not None else "N/A", "#e6edf3"),
+            _mini_card("Cash drag", _fmt(attr.get("cash_drag"), suffix="%"), "#8b949e"),
+        ]
+    )
+    return f"""
+    <section id="attribution">
+      <h2>Attribution Analysis Engine</h2>
+      <p>Explains whether return came from market beta, sector allocation, stock selection, factor exposure, or unexplained alpha.</p>
+      <div class="metric-grid">{cards}</div>
+      <p>{html.escape(str(attr.get('explanation','')))}</p>
+    </section>"""
+
+
+def _section_risk_contribution(platform):
+    risk = platform.get("risk_contribution", {})
+    rows = ""
+    for item in risk.get("rows", []):
+        color = "#da3633" if item.get("concentration_risk") == "High" else "#d29922" if item.get("concentration_risk") == "Medium" else "#2ea043"
+        rows += f"""<tr>
+          <td><strong>{html.escape(str(item.get('ticker','')))}</strong></td>
+          <td>{_fmt(item.get('position_weight_pct'))}%</td>
+          <td>{_fmt(item.get('marginal_risk_contribution'))}%</td>
+          <td>{_fmt(item.get('percentage_risk_contribution'))}%</td>
+          <td style="color:{color};font-weight:700;">{html.escape(str(item.get('concentration_risk')))}</td>
+        </tr>"""
+    bars = "".join(
+        f"<div style='margin-bottom:10px;'><div style='display:flex;justify-content:space-between;'><span>{html.escape(str(i.get('ticker')))}</span><span>{_fmt(i.get('percentage_risk_contribution'))}%</span></div>{_bar(i.get('percentage_risk_contribution'), '#da3633' if i.get('percentage_risk_contribution',0) >= 35 else '#d29922', 10)}</div>"
+        for i in risk.get("top_risk_contributors", [])
+    )
+    return f"""
+    <section id="risk-contribution">
+      <h2>Risk Contribution Engine</h2>
+      <div class="two-col"><div class="panel"><h3>Top Risk Contributors</h3>{bars or '<p>No risk rows available.</p>'}</div><div class="panel"><h3>Risk Warnings</h3>{_simple_list(risk.get('warnings', []), 'No dominant holding risk detected.')}</div></div>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Ticker</th><th>Weight</th><th>Marginal Risk</th><th>% Risk Contribution</th><th>Concentration</th></tr></thead><tbody>{rows or '<tr><td colspan="5">Risk contribution unavailable.</td></tr>'}</tbody></table></div>
+    </section>"""
+
+
+def _section_correlation_network(platform):
+    net = platform.get("correlation_network", {})
+    edge_rows = ""
+    for item in net.get("edges", []):
+        pair = item.get("pair", [])
+        edge_rows += f"<tr><td>{html.escape(' ↔ '.join(pair))}</td><td>{_fmt(item.get('correlation'))}</td><td>Strong edge</td></tr>"
+    cluster_cards = ""
+    for cluster in net.get("clusters", []):
+        cluster_cards += f"<div class='panel'><strong>{html.escape(', '.join(cluster.get('members', [])))}</strong><p>{html.escape(str(cluster.get('reason','')))}</p></div>"
+    warnings = [w.get("message", str(w)) if isinstance(w, dict) else str(w) for w in net.get("diversification_warnings", [])]
+    return f"""
+    <section id="correlation-network">
+      <h2>Correlation Network Engine</h2>
+      <p>Stocks are treated as nodes. Strong correlations become edges; clusters reveal hidden concentration risk.</p>
+      <div class="metric-grid">{_mini_card('Average correlation', _fmt(net.get('average_portfolio_correlation')), '#d29922')}{_mini_card('Strong edges', len(net.get('edges', [])), '#58a6ff')}{_mini_card('Clusters detected', len(net.get('clusters', [])), '#e6edf3')}</div>
+      <div class="two-col"><div><h3>Clusters</h3>{cluster_cards or '<p>No high-correlation clusters detected.</p>'}</div><div><h3>Diversification Warnings</h3>{_simple_list(warnings, 'No diversification warnings.')}</div></div>
+      <div style="overflow-x:auto;margin-top:16px;"><table><thead><tr><th>Pair</th><th>Correlation</th><th>Network Read</th></tr></thead><tbody>{edge_rows or '<tr><td colspan="3">No strong network edges.</td></tr>'}</tbody></table></div>
+    </section>"""
+
+
+def _section_market_and_liquidity(platform):
+    breadth = platform.get("market_breadth", {})
+    sector = platform.get("sector_rotation", {})
+    liquidity = platform.get("liquidity", [])
+    sector_rows = ""
+    for item in sector.get("rows", [])[:12]:
+        sector_rows += f"<tr><td>{html.escape(str(item.get('sector','')))}</td><td>{_fmt(item.get('sector_momentum'))}</td><td>{_fmt(item.get('relative_strength_vs_sp500'))}</td><td>{html.escape(str(item.get('rotation_signal','')))}</td><td>{_fmt(item.get('portfolio_weight_pct'))}%</td></tr>"
+    liq_rows = ""
+    for item in liquidity[:20]:
+        liq_rows += f"<tr><td><strong>{html.escape(str(item.get('ticker','')))}</strong></td><td>{_fmt(item.get('relative_volume'))}x</td><td>{_fmt(item.get('liquidity_score'))}</td><td>{html.escape(str(item.get('slippage_risk_estimate')))}</td><td>{'Yes' if item.get('volume_spike') else 'No'}</td></tr>"
+    return f"""
+    <section id="market-liquidity">
+      <h2>Market Breadth, Sector Rotation & Liquidity</h2>
+      <div class="metric-grid">
+        {_mini_card('Advance/Decline', _fmt(breadth.get('advance_decline_ratio')), '#58a6ff')}
+        {_mini_card('% Above SMA50', _fmt(breadth.get('percent_above_sma50'), suffix='%'), '#2ea043')}
+        {_mini_card('% Above SMA200', _fmt(breadth.get('percent_above_sma200'), suffix='%'), '#2ea043')}
+        {_mini_card('Breadth Score', _fmt(breadth.get('market_breadth_score')), '#d29922')}
+        {_mini_card('Breadth Trend', html.escape(str(breadth.get('breadth_trend','N/A'))), '#e6edf3')}
+      </div>
+      <h3>Sector Rotation</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Sector</th><th>Momentum</th><th>Relative Strength</th><th>Signal</th><th>Portfolio Weight</th></tr></thead><tbody>{sector_rows or '<tr><td colspan="5">Run stock discovery for sector rankings.</td></tr>'}</tbody></table></div>
+      <h3>Liquidity Dashboard</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Ticker</th><th>Relative Volume</th><th>Liquidity Score</th><th>Slippage Risk</th><th>Volume Spike</th></tr></thead><tbody>{liq_rows or '<tr><td colspan="5">No liquidity rows.</td></tr>'}</tbody></table></div>
+    </section>"""
+
+
+def _section_probability_scenarios(platform):
+    forecasts = platform.get("probability_forecasts", [])
+    scenarios = platform.get("scenarios", [])
+    forecast_rows = ""
+    for item in forecasts[:45]:
+        forecast_rows += f"<tr><td><strong>{html.escape(str(item.get('ticker','')))}</strong></td><td>{html.escape(str(item.get('horizon')))}</td><td>{_fmt(item.get('probability_plus_5'))}%</td><td>{_fmt(item.get('probability_plus_10'))}%</td><td>{_fmt(item.get('probability_minus_5'))}%</td><td>{_fmt(item.get('probability_minus_10'))}%</td><td>{_fmt(item.get('expected_return'))}%</td><td>{_fmt(item.get('confidence_level'))}%</td></tr>"
+    scenario_rows = ""
+    for item in scenarios:
+        scenario_rows += f"<tr><td>{html.escape(str(item.get('scenario')))}</td><td style='color:{'#2ea043' if _num_safe(item.get('estimated_portfolio_return')) >= 0 else '#da3633'};'>{_fmt(item.get('estimated_portfolio_return'))}%</td><td>{_fmt(item.get('estimated_drawdown'))}%</td><td>{_fmt(item.get('estimated_volatility_change'))}%</td><td>{html.escape(', '.join(item.get('most_exposed_holdings', [])))}</td><td>{html.escape(str(item.get('explanation')))}</td></tr>"
+    return f"""
+    <section id="probability-scenarios">
+      <h2>Probability Forecasting Lab & Scenario Engine</h2>
+      <p>Forecasts are probability distributions with confidence and assumptions, not point-price predictions.</p>
+      <h3>Probability Forecasts</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Ticker</th><th>Horizon</th><th>P(+5%)</th><th>P(+10%)</th><th>P(-5%)</th><th>P(-10%)</th><th>Expected Return</th><th>Confidence</th></tr></thead><tbody>{forecast_rows or '<tr><td colspan="8">Forecast rows unavailable.</td></tr>'}</tbody></table></div>
+      <h3>What-if Scenarios</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Scenario</th><th>Est. Return</th><th>Est. Drawdown</th><th>Vol Change</th><th>Most Exposed</th><th>Why</th></tr></thead><tbody>{scenario_rows}</tbody></table></div>
+    </section>"""
+
+
+def _num_safe(value):
+    try:
+        return float(value)
+    except Exception:
+        return 0.0
+
+
+def _section_optimization_frontier(platform):
+    opt = platform.get("optimizer", {})
+    frontier = platform.get("efficient_frontier", {})
+    stress = platform.get("historical_stress_tests", [])
+    weights = opt.get("suggested_weights", {})
+    weight_rows = "".join(f"<tr><td>{html.escape(str(k))}</td><td>{_fmt(v)}%</td></tr>" for k, v in sorted(weights.items(), key=lambda x: x[1], reverse=True))
+    stress_rows = ""
+    for item in stress:
+        stress_rows += f"<tr><td>{html.escape(str(item.get('event')))}</td><td>{_fmt(item.get('estimated_loss'))}%</td><td>{_fmt(item.get('worst_drawdown'))}%</td><td>{html.escape(', '.join(item.get('holdings_most_responsible', [])))}</td><td>{html.escape(str(item.get('risk_warning')))}</td></tr>"
+    comparison = opt.get("current_vs_optimized", {})
+    return f"""
+    <section id="optimization-frontier">
+      <h2>Optimization Lab, Efficient Frontier & Historical Stress Tests</h2>
+      <div class="metric-grid">
+        {_mini_card('Current Sharpe', _fmt(comparison.get('current_sharpe')), '#d29922')}
+        {_mini_card('Optimized Sharpe', _fmt(comparison.get('optimized_sharpe')), '#2ea043')}
+        {_mini_card('Current Vol', _pct(comparison.get('current_volatility'), multiply=True), '#da3633')}
+        {_mini_card('Optimized Vol', _pct(comparison.get('optimized_volatility'), multiply=True), '#2ea043')}
+        {_mini_card('Turnover Required', _fmt(opt.get('turnover_required'), suffix='%') if opt.get('turnover_required') is not None else 'N/A', '#58a6ff')}
+      </div>
+      <div class="two-col">
+        <div><h3>Suggested Optimized Weights</h3><table><thead><tr><th>Ticker</th><th>Weight</th></tr></thead><tbody>{weight_rows or '<tr><td colspan="2">Optimizer unavailable.</td></tr>'}</tbody></table></div>
+        <div><h3>Efficient Frontier Read</h3><p>Current portfolio: {_fmt(frontier.get('current_portfolio', {}).get('return'))}% return / {_fmt(frontier.get('current_portfolio', {}).get('volatility'))}% vol.</p><p>{html.escape(str(frontier.get('risk_return_curve','')))}</p>{_simple_list(opt.get('modes', []), 'No optimizer modes configured.')}</div>
+      </div>
+      <h3>Historical Stress Testing</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Event</th><th>Estimated Loss</th><th>Worst Drawdown</th><th>Main Holdings</th><th>Risk Warning</th></tr></thead><tbody>{stress_rows}</tbody></table></div>
+    </section>"""
+
+
+def _section_stock_research(platform):
+    rows = ""
+    for item in platform.get("stock_research_scores", []):
+        rows += f"""<tr>
+          <td><strong>{html.escape(str(item.get('ticker')))}</strong></td>
+          <td>{_fmt(item.get('overall_score'))}</td>
+          <td>{_fmt(item.get('confidence_score'))}%</td>
+          <td>{_fmt(item.get('momentum_score'))}</td>
+          <td>{_fmt(item.get('quality_score'))}</td>
+          <td>{_fmt(item.get('valuation_score'))}</td>
+          <td>{_fmt(item.get('risk_score'))}</td>
+          <td>{_fmt(item.get('liquidity_score'))}</td>
+          <td>{_fmt(item.get('regime_compatibility_score'))}</td>
+          <td>{html.escape(str(item.get('uncertainty_level')))}</td>
+        </tr>"""
+    confidence_rows = ""
+    for item in platform.get("confidence", []):
+        confidence_rows += f"<tr><td><strong>{html.escape(str(item.get('ticker')))}</strong></td><td>{html.escape(str(item.get('signal_direction')))}</td><td>{_fmt(item.get('confidence_pct'))}%</td><td>{html.escape(str(item.get('reason_for_uncertainty')))}</td><td>{_fmt(item.get('data_quality_score'))}</td></tr>"
+    assumption_rows = ""
+    for item in platform.get("assumptions", []):
+        color = "#da3633" if item.get("status") == "Breaking" else "#d29922" if item.get("status") == "Watch" else "#2ea043"
+        assumption_rows += f"<tr><td>{html.escape(str(item.get('assumption')))}</td><td style='color:{color};font-weight:700;'>{html.escape(str(item.get('status')))}</td><td>{html.escape(str(item.get('evidence')))}</td></tr>"
+    return f"""
+    <section id="stock-research">
+      <h2>Stock Research Score, Confidence & Assumption Checker</h2>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Ticker</th><th>Overall</th><th>Confidence</th><th>Momentum</th><th>Quality</th><th>Valuation</th><th>Risk</th><th>Liquidity</th><th>Regime</th><th>Uncertainty</th></tr></thead><tbody>{rows or '<tr><td colspan="10">No stock research rows.</td></tr>'}</tbody></table></div>
+      <h3>Confidence and Uncertainty Engine</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Ticker</th><th>Signal</th><th>Confidence</th><th>Reason for Uncertainty</th><th>Data Quality</th></tr></thead><tbody>{confidence_rows}</tbody></table></div>
+      <h3>Assumption Checker</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Assumption</th><th>Status</th><th>Evidence</th></tr></thead><tbody>{assumption_rows}</tbody></table></div>
+    </section>"""
+
+
+def _section_notebook_alerts(platform):
+    notebook = platform.get("research_notebook", [])
+    alerts = platform.get("alerts", [])
+    note_cards = ""
+    for item in notebook[:15]:
+        note_cards += f"""
+        <div class="panel">
+          <h3>{html.escape(str(item.get('ticker')))} — {html.escape(str(item.get('final_decision')))}</h3>
+          <p><strong>Hypothesis:</strong> {html.escape(str(item.get('hypothesis')))}</p>
+          <p><strong>Evidence:</strong></p>{_simple_list(item.get('evidence', []), 'No positive evidence logged.')}
+          <p><strong>Counterevidence:</strong></p>{_simple_list(item.get('counterevidence', []), 'No counterevidence logged.')}
+          <p><strong>Invalidate if:</strong> {html.escape(str(item.get('what_would_invalidate')))}</p>
+          <p><strong>Confidence:</strong> {_fmt(item.get('confidence_score'))}% | <strong>Follow-up:</strong> {html.escape(str(item.get('follow_up_date')))}</p>
+        </div>"""
+    alert_rows = ""
+    for item in alerts:
+        alert_rows += f"<tr><td>{html.escape(str(item.get('trigger')))}</td><td>{html.escape(str(item.get('what_changed')))}</td><td>{html.escape(str(item.get('why_it_matters')))}</td><td>{html.escape(str(item.get('portfolio_impact')))}</td><td>{_fmt(item.get('confidence_level'))}%</td><td>{html.escape(str(item.get('what_to_watch_next')))}</td></tr>"
+    return f"""
+    <section id="notebook-alerts">
+      <h2>Research Notebook & Intelligent Alerts</h2>
+      <p>Each idea is tracked like a research journal entry: hypothesis, evidence, counterevidence, assumptions, failure modes, confidence, and follow-up date.</p>
+      <h3>Meaningful Alerts Only</h3>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Trigger</th><th>What Changed</th><th>Why It Matters</th><th>Portfolio Impact</th><th>Confidence</th><th>Watch Next</th></tr></thead><tbody>{alert_rows or '<tr><td colspan="6">No meaningful alert triggers right now.</td></tr>'}</tbody></table></div>
+      <h3>Research Notebook Entries</h3>
+      <div class="notebook-grid">{note_cards or '<p>No notebook entries. Run quant report first.</p>'}</div>
+    </section>"""
+
 def generate_dashboard(
     quant_path=os.path.join(STATE_DIR, "latest_quant_research.json"),
     portfolio_path=os.path.join(STATE_DIR, "latest_portfolio_report.json"),
@@ -766,6 +1027,14 @@ def generate_dashboard(
     trade_payload = _load_json(os.path.join(STATE_DIR, "latest_trade_journal.json"), {})
     earnings_payload = _load_json(os.path.join(STATE_DIR, "latest_earnings_alerts.json"), {})
     signal_payload = _load_json(os.path.join(STATE_DIR, "latest_signal_performance.json"), {})
+    platform = institutional_research.build_platform_payload(
+        quant,
+        portfolio,
+        discovery=discovery,
+        watchlist=watchlist_payload,
+        trade=trade_payload,
+        signal=signal_payload,
+    )
 
     rows = quant.get("tickers") or comparison.get("tickers", [])
 
@@ -785,22 +1054,77 @@ def generate_dashboard(
     sec_signal_perf = _section_signal_performance(signal_payload)
     sec_quant_lab = _section_quant_lab(quant)
     sec_notes = _section_research_notes(rows)
+    sec_factor_dashboard = _section_factor_dashboard(platform)
+    sec_attribution = _section_attribution(platform)
+    sec_risk_contribution = _section_risk_contribution(platform)
+    sec_correlation_network = _section_correlation_network(platform)
+    sec_market_liquidity = _section_market_and_liquidity(platform)
+    sec_probability_scenarios = _section_probability_scenarios(platform)
+    sec_optimization_frontier = _section_optimization_frontier(platform)
+    sec_stock_research = _section_stock_research(platform)
+    sec_notebook_alerts = _section_notebook_alerts(platform)
 
     nav_links = "".join(
-        f"<a href='#{anchor}'>{label}</a>"
-        for label, anchor in [
-            ("Portfolio", "portfolio-overview"),
-            ("Risk", "portfolio-risk"),
-            ("Benchmark", "benchmark-drift"),
-            ("Watchlist", "watchlist"),
-            ("Thesis", "watchlist-intelligence"),
-            ("Charts", "stock-charts"),
-            ("Earnings", "earnings-alerts"),
-            ("Discovery", "stock-discovery"),
-            ("Journal", "trade-journal"),
-            ("Signal EV", "signal-performance"),
-            ("Quant Lab", "quant-lab"),
-            ("Research", "research-notes"),
+        f"<button class='tab-button{' active' if index == 0 else ''}' data-page='{page}'>{label}</button>"
+        for index, (label, page) in enumerate(
+            [
+                ("Overview", "overview"),
+                ("Graphs", "graphs"),
+                ("Monte Carlo", "monte-carlo"),
+                ("Risk", "risk"),
+                ("Factors", "factors"),
+                ("Attribution", "attribution-page"),
+                ("Correlation", "correlation"),
+                ("Market", "market"),
+                ("Forecasts", "forecasts"),
+                ("Optimization", "optimization"),
+                ("Quant Lab", "quant-lab-page"),
+                ("Stock Research", "stock-research-page"),
+                ("Notebook", "notebook"),
+            ]
+        )
+    )
+
+    pages = {
+        "overview": sec_overview + sec_benchmark_drift + sec_watchlist,
+        "graphs": sec_exec_chart + sec_charts,
+        "monte-carlo": sec_risk,
+        "risk": sec_risk_contribution + sec_trade,
+        "factors": sec_factor_dashboard,
+        "attribution-page": sec_attribution,
+        "correlation": sec_correlation_network,
+        "market": sec_market_liquidity + sec_earnings,
+        "forecasts": sec_probability_scenarios,
+        "optimization": sec_optimization_frontier,
+        "quant-lab-page": sec_quant_lab + sec_signal_perf,
+        "stock-research-page": sec_stock_research + sec_discovery + sec_watchlist_intel + sec_notes,
+        "notebook": sec_notebook_alerts,
+    }
+    page_html = "".join(
+        f"<div class='page{' active' if index == 0 else ''}' id='page-{page}'>{content}</div>"
+        for index, (page, content) in enumerate(pages.items())
+    )
+
+    module_map_rows = "".join(
+        f"<tr><td>{module}</td><td>{status}</td></tr>"
+        for module, status in [
+            ("Portfolio factor exposure", "Rendered from factor model and portfolio weights."),
+            ("Attribution analysis", "Rendered from benchmark, factor, and sector state."),
+            ("Risk contribution", "Rendered from portfolio variance contribution."),
+            ("Correlation network", "Rendered from correlation pairs and detected clusters."),
+            ("Stock research score", "Rendered for every ticker with drivers and uncertainty."),
+            ("Confidence/uncertainty", "Signals include confidence, assumptions, and risks."),
+            ("Assumption checker", "Explicit model assumptions are displayed and flagged."),
+            ("Market breadth", "Rendered from current watchlist breadth state."),
+            ("Sector rotation", "Rendered when stock discovery sector rankings exist."),
+            ("Liquidity", "Rendered from relative-volume and tradability proxies."),
+            ("Probability forecasting", "Rendered as probability distributions, not price targets."),
+            ("Scenario engine", "Rendered for macro and crisis what-if shocks."),
+            ("Optimization/frontier", "Rendered from optimizer output and frontier placeholders."),
+            ("Historical stress testing", "Rendered as scenario-backed stress estimates."),
+            ("Quant research lab", "Rendered from pairs, regime, factor, and validation state."),
+            ("Research notebook", "Auto-generated for each stock thesis."),
+            ("Telegram/alerts", "Rendered as meaningful-change alert candidates."),
         ]
     )
 
@@ -818,9 +1142,11 @@ def generate_dashboard(
     header h1{{margin:0 0 4px;font-size:22px;font-weight:700;}}
     header p{{margin:0;color:var(--muted);font-size:13px;}}
     nav{{display:flex;gap:6px;padding:10px 32px;border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:100;flex-wrap:wrap;}}
-    nav a{{color:var(--blue);text-decoration:none;font-size:13px;border:1px solid var(--border);padding:5px 10px;border-radius:20px;transition:background 0.15s;}}
-    nav a:hover{{background:#21262d;}}
+    .tab-button{{color:var(--blue);background:transparent;text-decoration:none;font-size:13px;border:1px solid var(--border);padding:6px 11px;border-radius:20px;transition:background 0.15s;cursor:pointer;}}
+    .tab-button:hover,.tab-button.active{{background:#21262d;color:#fff;}}
     main{{padding:24px 32px 48px;max-width:1200px;margin:0 auto;}}
+    .page{{display:none;}}
+    .page.active{{display:block;}}
     section{{margin-bottom:48px;}}
     h2{{color:var(--text);font-size:18px;font-weight:700;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid var(--border);}}
     p{{color:var(--muted);line-height:1.6;margin:8px 0;}}
@@ -829,8 +1155,16 @@ def generate_dashboard(
     td{{padding:10px 8px;border-bottom:1px solid #21262d;color:var(--text);}}
     tr:hover td{{background:#21262d;}}
     code{{background:#21262d;color:var(--blue);padding:2px 6px;border-radius:4px;font-size:12px;}}
+    h3{{font-size:15px;margin:18px 0 8px;color:#e6edf3;}}
+    ul{{color:var(--muted);line-height:1.5;}}
+    .metric-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:14px 0;}}
+    .metric-card,.panel{{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;}}
+    .metric-label{{color:#8b949e;font-size:12px;margin-bottom:6px;}}
+    .metric-value{{font-size:20px;font-weight:700;}}
+    .two-col{{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px;}}
+    .notebook-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;}}
     .disclaimer{{background:#161b22;border:1px solid var(--border);border-radius:6px;padding:12px;color:var(--muted);font-size:12px;margin-top:32px;}}
-    @media (max-width: 760px){{header{{padding:16px;}}nav{{padding:8px 16px;}}main{{padding:16px;}}section{{margin-bottom:32px;}}table{{display:block;overflow-x:auto;white-space:nowrap;}}}}
+    @media (max-width: 760px){{header{{padding:16px;}}nav{{padding:8px 16px;}}main{{padding:16px;}}section{{margin-bottom:32px;}}table{{display:block;overflow-x:auto;white-space:nowrap;}}.two-col{{grid-template-columns:1fr;}}}}
   </style>
 </head>
 <body>
@@ -840,25 +1174,30 @@ def generate_dashboard(
   </header>
   <nav>{nav_links}</nav>
   <main>
-    {sec_overview}
-    {sec_exec_chart}
-    {sec_risk}
-    {sec_benchmark_drift}
-    {sec_watchlist}
-    {sec_watchlist_intel}
-    {sec_charts}
-    {sec_earnings}
-    {sec_discovery}
-    {sec_trade}
-    {sec_signal_perf}
-    {sec_quant_lab}
-    {sec_notes}
+    <section id="platform-map">
+      <h2>Institutional Research Platform Map</h2>
+      <p>This dashboard is organized as research pages instead of one long retail-style screen. Every signal is presented with confidence, assumptions, risks, and portfolio impact where the saved data supports it.</p>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Module</th><th>Status</th></tr></thead><tbody>{module_map_rows}</tbody></table></div>
+    </section>
+    {page_html}
     <div class="disclaimer">
       ⚠ This dashboard is for educational and research purposes only. Nothing here constitutes financial advice,
       a recommendation to buy or sell any security, or a solicitation of any investment. All data is sourced
       from public APIs and may be delayed or inaccurate. Past performance does not guarantee future results.
     </div>
   </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach((button) => {{
+      button.addEventListener('click', () => {{
+        document.querySelectorAll('.tab-button').forEach((b) => b.classList.remove('active'));
+        document.querySelectorAll('.page').forEach((p) => p.classList.remove('active'));
+        button.classList.add('active');
+        const page = document.getElementById('page-' + button.dataset.page);
+        if (page) page.classList.add('active');
+        window.scrollTo({{ top: 0, behavior: 'smooth' }});
+      }});
+    }});
+  </script>
 </body>
 </html>"""
 
