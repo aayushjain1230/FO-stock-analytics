@@ -1010,6 +1010,51 @@ def _section_notebook_alerts(platform):
       <div class="notebook-grid">{note_cards or '<p>No notebook entries. Run quant report first.</p>'}</div>
     </section>"""
 
+
+def _section_home_workspace(platform, portfolio, quant):
+    health = portfolio.get("portfolio_health", {})
+    regime = quant.get("market_regime", {})
+    alerts = platform.get("alerts", [])
+    notebook = platform.get("research_notebook", [])
+    top_risk = platform.get("risk_contribution", {}).get("top_risk_contributors", [{}])
+    biggest_risk = top_risk[0] if top_risk else {}
+    top_stock = (platform.get("stock_research_scores") or [{}])[0]
+    return f"""
+    <section id="home-workspace">
+      <h2>Home — Executive Command Center</h2>
+      <p>Answers what changed, what matters, and where to investigate next.</p>
+      <div class="hero-grid">
+        {_mini_card('Portfolio Health', f"{_fmt(health.get('score'),0)}/100", _score_color(health.get('score')))}
+        {_mini_card('Market Regime', html.escape(str(regime.get('regime','Unknown'))), '#58a6ff')}
+        {_mini_card('Biggest Risk', html.escape(str(biggest_risk.get('ticker','N/A'))), '#da3633')}
+        {_mini_card('Top Opportunity', html.escape(str(top_stock.get('ticker','N/A'))), '#2ea043')}
+      </div>
+      <div class="two-col">
+        <div class="panel"><h3>🚨 Recent Alerts</h3>{_simple_list([a.get('what_changed', a) if isinstance(a, dict) else a for a in alerts[:5]], 'No urgent alerts right now.')}</div>
+        <div class="panel"><h3>🧾 Latest Research</h3>{_simple_list([f"{n.get('ticker')}: {n.get('final_decision')}" for n in notebook[:5]], 'Run quant report to generate research entries.')}</div>
+      </div>
+    </section>"""
+
+
+def _section_workspace(title, question, cards=None, details=None, dictionary=None):
+    cards = cards or []
+    details = details or []
+    dictionary = dictionary or []
+    card_html = "".join(f"<div class='panel hover-card'><h3>{html.escape(str(label))}</h3><p>{html.escape(str(text))}</p></div>" for label, text in cards)
+    detail_html = "".join(f"<details class='expander'><summary>{html.escape(str(label))}</summary><p>{html.escape(str(text))}</p></details>" for label, text in details)
+    dictionary_html = "".join(
+        f"<details class='dictionary-item'><summary>{html.escape(str(term))}</summary><p><b>Simple:</b> {html.escape(str(simple))}</p><p><b>Why it matters:</b> {html.escape(str(why))}</p></details>"
+        for term, simple, why in dictionary
+    )
+    return f"""
+    <section>
+      <h2>{html.escape(title)}</h2>
+      <p class="workspace-question">{html.escape(question)}</p>
+      <div class="workspace-grid">{card_html}</div>
+      {detail_html}
+      {f'<div class="dictionary-panel"><h3>Financial Dictionary</h3>{dictionary_html}</div>' if dictionary_html else ''}
+    </section>"""
+
 def generate_dashboard(
     quant_path=os.path.join(STATE_DIR, "latest_quant_research.json"),
     portfolio_path=os.path.join(STATE_DIR, "latest_portfolio_report.json"),
@@ -1064,41 +1109,102 @@ def generate_dashboard(
     sec_stock_research = _section_stock_research(platform)
     sec_notebook_alerts = _section_notebook_alerts(platform)
 
-    nav_links = "".join(
-        f"<button class='tab-button{' active' if index == 0 else ''}' data-page='{page}'>{label}</button>"
-        for index, (label, page) in enumerate(
-            [
-                ("Overview", "overview"),
-                ("Graphs", "graphs"),
-                ("Monte Carlo", "monte-carlo"),
-                ("Risk", "risk"),
-                ("Factors", "factors"),
-                ("Attribution", "attribution-page"),
-                ("Correlation", "correlation"),
-                ("Market", "market"),
-                ("Forecasts", "forecasts"),
-                ("Optimization", "optimization"),
-                ("Quant Lab", "quant-lab-page"),
-                ("Stock Research", "stock-research-page"),
-                ("Notebook", "notebook"),
-            ]
-        )
+    sec_home = _section_home_workspace(platform, portfolio, quant)
+    sec_ml_lab = _section_workspace(
+        "Machine Learning Lab",
+        "Which predictive models deserve attention, and why?",
+        cards=[
+            ("Model Leaderboard", "Ready for Random Forest, XGBoost, LightGBM, neural network, SVM, KNN, LSTM, and transformer comparisons."),
+            ("Explainable AI", "SHAP, feature importance, confidence, and counterfactual panels are isolated here instead of cluttering stock pages."),
+            ("Validation Discipline", "Training curves, validation curves, prediction confidence, and failure modes belong in this workspace."),
+        ],
+        details=[
+            ("Explain Prediction button", "Each future model output should link here with drivers, confidence, assumptions, and invalidation criteria."),
+            ("Data status", "No ML training artifact is currently saved in state, so the page is model-ready rather than inventing results."),
+        ],
+        dictionary=[
+            ("SHAP", "A method for attributing model predictions to input features.", "It explains why a model preferred one outcome over another."),
+            ("Validation Curve", "A chart showing model performance as complexity changes.", "It helps detect overfitting and underfitting."),
+        ],
+    )
+    sec_stat_lab = _section_workspace(
+        "Statistical Models Lab",
+        "What relationships are statistically stable enough to trust?",
+        cards=[
+            ("Regression Suite", "Linear, multiple, ridge, lasso, elastic net, polynomial, and logistic regression outputs live here."),
+            ("Diagnostics", "Residual plots, coefficient importance, prediction intervals, and assumptions are separated from portfolio views."),
+            ("Correlation Heatmaps", "Correlation matrix and network work together to identify hidden concentration."),
+        ],
+        dictionary=[
+            ("Residual", "The difference between actual and predicted values.", "Patterns in residuals reveal model misspecification."),
+            ("Prediction Interval", "A range where future observations may fall.", "It communicates uncertainty instead of a false point estimate."),
+        ],
+    )
+    sec_vol_lab = _section_workspace(
+        "Volatility Lab",
+        "Is risk expanding, compressing, or changing regime?",
+        cards=[
+            ("Historical / Realized Volatility", "Rolling realized volatility and volatility trend panels connect to portfolio risk."),
+            ("Implied Volatility", "Options IV rank, percentile, smiles, cones, and surfaces belong here when options data is available."),
+            ("Regime Analysis", "High-volatility, crash, mean-reverting, and momentum-friendly states are investigated here."),
+        ],
+        dictionary=[
+            ("Realized Volatility", "Volatility measured from actual price movement.", "It describes the risk investors truly experienced."),
+            ("Volatility Cone", "A comparison of current volatility to historical ranges.", "It shows whether current volatility is unusually high or low."),
+        ],
+    )
+    sec_options_lab = _section_workspace(
+        "Options Lab",
+        "How do Greeks, implied volatility, and payoff geometry change the thesis?",
+        cards=[
+            ("Option Chains", "Chains, IV rank, IV percentile, probability ITM, and expected move panels belong here."),
+            ("Greeks Visualizer", "Delta, gamma, theta, vega, and rho sensitivity sliders can be added without crowding stock research."),
+            ("Payoff Diagrams", "Strategy payoff and breakeven charts belong in this dedicated options workspace."),
+        ],
+        dictionary=[
+            ("Delta", "Approximate option price sensitivity to the underlying stock.", "It estimates directional exposure."),
+            ("Gamma", "How quickly delta changes.", "High gamma can create fast-changing risk."),
+        ],
+    )
+    sec_model_comparison = _section_workspace(
+        "Model Comparison Center",
+        "Which model wins, and on what evidence?",
+        cards=[
+            ("Accuracy Metrics", "RMSE, MAE, precision, recall, and prediction accuracy rankings live here."),
+            ("Trading Metrics", "Sharpe, return, drawdown, win rate, and payoff ratio compare models as strategies."),
+            ("Operational Metrics", "Training speed and inference speed are tracked here for production discipline."),
+        ],
+    )
+    sec_settings = _section_workspace(
+        "Settings",
+        "Control thresholds, pinned widgets, bookmarks, and research workflow preferences.",
+        cards=[
+            ("Thresholds", "Risk, correlation, volatility, confidence, and alert thresholds should be centralized here."),
+            ("Command Palette", "Press Ctrl+K in the dashboard to open the page switcher."),
+            ("Pinned Widgets", "The UI is structured for pinned and recently viewed research widgets."),
+        ],
     )
 
     pages = {
-        "overview": sec_overview + sec_benchmark_drift + sec_watchlist,
-        "graphs": sec_exec_chart + sec_charts,
-        "monte-carlo": sec_risk,
-        "risk": sec_risk_contribution + sec_trade,
-        "factors": sec_factor_dashboard,
-        "attribution-page": sec_attribution,
-        "correlation": sec_correlation_network,
-        "market": sec_market_liquidity + sec_earnings,
-        "forecasts": sec_probability_scenarios,
-        "optimization": sec_optimization_frontier,
-        "quant-lab-page": sec_quant_lab + sec_signal_perf,
-        "stock-research-page": sec_stock_research + sec_discovery + sec_watchlist_intel + sec_notes,
+        "home": sec_home,
+        "portfolio-overview-page": sec_overview + sec_benchmark_drift + sec_watchlist,
+        "market-overview": sec_market_liquidity + sec_earnings,
+        "research-labs": sec_stock_research + sec_discovery + sec_watchlist_intel + sec_notes,
+        "portfolio-lab": sec_risk_contribution + sec_attribution + sec_correlation_network + sec_trade,
+        "machine-learning-lab": sec_ml_lab,
+        "statistical-models": sec_stat_lab + sec_correlation_network,
+        "monte-carlo-lab": sec_risk,
+        "volatility-lab": sec_vol_lab,
+        "factor-research": sec_factor_dashboard,
+        "options-lab": sec_options_lab,
+        "forecasting-lab": sec_probability_scenarios,
+        "optimization-lab": sec_optimization_frontier,
+        "strategy-lab": sec_quant_lab + sec_signal_perf,
+        "scenario-lab": sec_probability_scenarios + sec_optimization_frontier,
         "notebook": sec_notebook_alerts,
+        "model-comparison": sec_model_comparison,
+        "graphs": sec_exec_chart + sec_charts,
+        "settings": sec_settings,
     }
     page_html = "".join(
         f"<div class='page{' active' if index == 0 else ''}' id='page-{page}'>{content}</div>"
@@ -1128,6 +1234,26 @@ def generate_dashboard(
         ]
     )
 
+    nav_groups = [
+        ("🏠 Home", [("Home", "home"), ("Portfolio Overview", "portfolio-overview-page"), ("Market Overview", "market-overview")]),
+        ("🧪 Research Labs", [("Research Labs", "research-labs"), ("Portfolio Lab", "portfolio-lab"), ("Monte Carlo Lab", "monte-carlo-lab"), ("Volatility Lab", "volatility-lab"), ("Factor Research", "factor-research"), ("Options Lab", "options-lab"), ("Forecasting Lab", "forecasting-lab"), ("Optimization Lab", "optimization-lab"), ("Scenario Lab", "scenario-lab")]),
+        ("🤖 Models", [("Machine Learning Lab", "machine-learning-lab"), ("Statistical Models", "statistical-models"), ("Model Comparison", "model-comparison")]),
+        ("⚙️ Workflow", [("Strategy Lab", "strategy-lab"), ("Notebook", "notebook"), ("Graphs", "graphs"), ("Settings", "settings")]),
+    ]
+    nav_links = "".join(
+        "<div class='nav-group'>"
+        f"<div class='nav-heading'>{heading}</div>"
+        + "".join(
+            f"<button class='tab-button{' active' if page == 'home' else ''}' data-page='{page}' data-title='{label.lower()}'>{label}</button>"
+            for label, page in items
+        )
+        + "</div>"
+        for heading, items in nav_groups
+    )
+
+    risk_chart_data = json.dumps(platform.get("risk_contribution", {}).get("top_risk_contributors", [])[:8])
+    factor_chart_data = json.dumps(platform.get("factor_exposure", {}).get("portfolio_breakdown", {}))
+
     html_out = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -1137,16 +1263,19 @@ def generate_dashboard(
   <style>
     *{{box-sizing:border-box;}}
     :root{{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#238636;--blue:#58a6ff;}}
-    body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);}}
-    header{{padding:20px 32px 16px;border-bottom:1px solid var(--border);background:var(--surface);}}
+    body{{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:radial-gradient(circle at top left,#14213d 0,#0d1117 34%,#05070a 100%);color:var(--text);}}
+    header{{padding:20px 32px 16px 316px;border-bottom:1px solid var(--border);background:rgba(13,17,23,.82);backdrop-filter:blur(14px);position:sticky;top:0;z-index:80;}}
     header h1{{margin:0 0 4px;font-size:22px;font-weight:700;}}
     header p{{margin:0;color:var(--muted);font-size:13px;}}
-    nav{{display:flex;gap:6px;padding:10px 32px;border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:100;flex-wrap:wrap;}}
-    .tab-button{{color:var(--blue);background:transparent;text-decoration:none;font-size:13px;border:1px solid var(--border);padding:6px 11px;border-radius:20px;transition:background 0.15s;cursor:pointer;}}
-    .tab-button:hover,.tab-button.active{{background:#21262d;color:#fff;}}
-    main{{padding:24px 32px 48px;max-width:1200px;margin:0 auto;}}
+    nav{{position:fixed;left:0;top:0;bottom:0;width:284px;overflow:auto;padding:18px 14px;border-right:1px solid rgba(88,166,255,.22);background:linear-gradient(180deg,rgba(22,27,34,.96),rgba(6,10,18,.96));z-index:120;box-shadow:12px 0 40px rgba(0,0,0,.28);}}
+    .brand{{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#58a6ff;margin:0 10px 18px;font-weight:800;}}
+    .nav-heading{{color:#8b949e;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin:18px 10px 8px;}}
+    .tab-button{{display:block;width:100%;text-align:left;color:#c9d1d9;background:transparent;text-decoration:none;font-size:13px;border:1px solid transparent;padding:9px 11px;border-radius:10px;transition:all 0.18s ease;cursor:pointer;margin:3px 0;}}
+    .tab-button:hover,.tab-button.active{{background:linear-gradient(90deg,rgba(88,166,255,.18),rgba(35,134,54,.08));border-color:rgba(88,166,255,.3);color:#fff;transform:translateX(3px);}}
+    main{{padding:24px 32px 48px;margin-left:284px;max-width:1480px;}}
     .page{{display:none;}}
-    .page.active{{display:block;}}
+    .page.active{{display:block;animation:fadeIn .22s ease;}}
+    @keyframes fadeIn{{from{{opacity:.2;transform:translateY(8px);}}to{{opacity:1;transform:translateY(0);}}}}
     section{{margin-bottom:48px;}}
     h2{{color:var(--text);font-size:18px;font-weight:700;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid var(--border);}}
     p{{color:var(--muted);line-height:1.6;margin:8px 0;}}
@@ -1158,21 +1287,36 @@ def generate_dashboard(
     h3{{font-size:15px;margin:18px 0 8px;color:#e6edf3;}}
     ul{{color:var(--muted);line-height:1.5;}}
     .metric-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:14px 0;}}
-    .metric-card,.panel{{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;}}
+    .metric-card,.panel{{background:linear-gradient(180deg,rgba(22,27,34,.92),rgba(13,17,23,.92));border:1px solid rgba(88,166,255,.14);border-radius:14px;padding:16px;box-shadow:0 14px 40px rgba(0,0,0,.18);}}
+    .hover-card{{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;}}
+    .hover-card:hover{{transform:translateY(-3px);border-color:rgba(88,166,255,.45);box-shadow:0 20px 50px rgba(0,0,0,.3);}}
     .metric-label{{color:#8b949e;font-size:12px;margin-bottom:6px;}}
     .metric-value{{font-size:20px;font-weight:700;}}
     .two-col{{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px;}}
+    .hero-grid,.workspace-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0;}}
     .notebook-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;}}
+    .workspace-question{{font-size:15px;color:#c9d1d9;}}
+    .expander,.dictionary-item{{background:#0d1117;border:1px solid #30363d;border-radius:10px;padding:10px 12px;margin:8px 0;color:#8b949e;}}
+    .expander summary,.dictionary-item summary{{cursor:pointer;color:#e6edf3;font-weight:700;}}
+    .dictionary-panel{{margin-top:18px;padding:14px;border-radius:14px;background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.18);}}
+    .command-palette{{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:flex-start;justify-content:center;padding-top:9vh;}}
+    .command-palette.active{{display:flex;}}
+    .command-box{{width:min(680px,92vw);background:#0d1117;border:1px solid rgba(88,166,255,.35);border-radius:16px;box-shadow:0 24px 90px rgba(0,0,0,.55);overflow:hidden;}}
+    .command-box input{{width:100%;padding:16px 18px;background:#161b22;border:0;border-bottom:1px solid #30363d;color:#e6edf3;font-size:16px;outline:none;}}
+    .command-results button{{display:block;width:100%;padding:12px 18px;background:transparent;border:0;color:#c9d1d9;text-align:left;cursor:pointer;}}
+    .command-results button:hover{{background:#21262d;color:#fff;}}
+    .plot-panel{{height:360px;}}
     .disclaimer{{background:#161b22;border:1px solid var(--border);border-radius:6px;padding:12px;color:var(--muted);font-size:12px;margin-top:32px;}}
-    @media (max-width: 760px){{header{{padding:16px;}}nav{{padding:8px 16px;}}main{{padding:16px;}}section{{margin-bottom:32px;}}table{{display:block;overflow-x:auto;white-space:nowrap;}}.two-col{{grid-template-columns:1fr;}}}}
+    @media (max-width: 900px){{header{{padding:16px;}}nav{{position:relative;width:auto;height:auto;}}main{{margin-left:0;padding:16px;}}section{{margin-bottom:32px;}}table{{display:block;overflow-x:auto;white-space:nowrap;}}.two-col{{grid-template-columns:1fr;}}}}
   </style>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
+  <nav><div class="brand">JFO Terminal</div>{nav_links}</nav>
   <header>
     <h1>Jain Family Office — Quant Intelligence Engine</h1>
-    <p>Generated {generated_at} &nbsp;|&nbsp; Educational research analytics only, not financial advice.</p>
+    <p>Generated {generated_at} &nbsp;|&nbsp; Ctrl+K command palette &nbsp;|&nbsp; Educational research analytics only, not financial advice.</p>
   </header>
-  <nav>{nav_links}</nav>
   <main>
     <section id="platform-map">
       <h2>Institutional Research Platform Map</h2>
@@ -1180,23 +1324,93 @@ def generate_dashboard(
       <div style="overflow-x:auto;"><table><thead><tr><th>Module</th><th>Status</th></tr></thead><tbody>{module_map_rows}</tbody></table></div>
     </section>
     {page_html}
+    <section id="interactive-charts">
+      <h2>Interactive Chart Layer</h2>
+      <p>Plotly charts support hover, zoom, pan, and PNG export from the chart toolbar. These panels stay separate so research pages do not become chart dumps.</p>
+      <div class="two-col">
+        <div class="panel"><h3>Risk Contribution</h3><div id="riskContributionChart" class="plot-panel"></div></div>
+        <div class="panel"><h3>Factor Exposure</h3><div id="factorExposureChart" class="plot-panel"></div></div>
+      </div>
+    </section>
     <div class="disclaimer">
       ⚠ This dashboard is for educational and research purposes only. Nothing here constitutes financial advice,
       a recommendation to buy or sell any security, or a solicitation of any investment. All data is sourced
       from public APIs and may be delayed or inaccurate. Past performance does not guarantee future results.
     </div>
   </main>
+  <div class="command-palette" id="commandPalette">
+    <div class="command-box">
+      <input id="commandInput" placeholder="Search pages, labs, models..." autocomplete="off">
+      <div class="command-results" id="commandResults"></div>
+    </div>
+  </div>
   <script>
+    const riskData = {risk_chart_data};
+    const factorData = {factor_chart_data};
+    const plotTheme = {{
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      font: {{ color: '#c9d1d9' }},
+      margin: {{ l: 50, r: 20, t: 20, b: 60 }},
+    }};
+    if (window.Plotly) {{
+      Plotly.newPlot('riskContributionChart', [{{
+        type: 'bar',
+        x: riskData.map((d) => d.ticker),
+        y: riskData.map((d) => d.percentage_risk_contribution),
+        marker: {{ color: '#f85149' }},
+        hovertemplate: '%{{x}}<br>Risk contribution: %{{y:.2f}}%<extra></extra>'
+      }}], {{ ...plotTheme, yaxis: {{ title: '% Risk' }} }}, {{ responsive: true, displaylogo: false }});
+      Plotly.newPlot('factorExposureChart', [{{
+        type: 'bar',
+        x: Object.keys(factorData).map((k) => k.replaceAll('_', ' ')),
+        y: Object.values(factorData),
+        marker: {{ color: '#58a6ff' }},
+        hovertemplate: '%{{x}}<br>Score: %{{y:.1f}}<extra></extra>'
+      }}], {{ ...plotTheme, yaxis: {{ title: 'Score' }} }}, {{ responsive: true, displaylogo: false }});
+    }}
+    const buttons = Array.from(document.querySelectorAll('.tab-button'));
+    const switchPage = (pageName) => {{
+      document.querySelectorAll('.tab-button').forEach((b) => b.classList.remove('active'));
+      document.querySelectorAll('.page').forEach((p) => p.classList.remove('active'));
+      const button = document.querySelector(`[data-page="${{pageName}}"]`);
+      if (button) button.classList.add('active');
+      const page = document.getElementById('page-' + pageName);
+      if (page) page.classList.add('active');
+      window.scrollTo({{ top: 0, behavior: 'smooth' }});
+    }};
     document.querySelectorAll('.tab-button').forEach((button) => {{
       button.addEventListener('click', () => {{
-        document.querySelectorAll('.tab-button').forEach((b) => b.classList.remove('active'));
-        document.querySelectorAll('.page').forEach((p) => p.classList.remove('active'));
-        button.classList.add('active');
-        const page = document.getElementById('page-' + button.dataset.page);
-        if (page) page.classList.add('active');
-        window.scrollTo({{ top: 0, behavior: 'smooth' }});
+        switchPage(button.dataset.page);
       }});
     }});
+    const palette = document.getElementById('commandPalette');
+    const input = document.getElementById('commandInput');
+    const results = document.getElementById('commandResults');
+    const renderResults = () => {{
+      const q = input.value.toLowerCase();
+      results.innerHTML = buttons
+        .filter((b) => !q || b.dataset.title.includes(q))
+        .slice(0, 10)
+        .map((b) => `<button data-page="${{b.dataset.page}}">${{b.textContent}}</button>`)
+        .join('');
+      results.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {{
+        palette.classList.remove('active');
+        switchPage(b.dataset.page);
+      }}));
+    }};
+    document.addEventListener('keydown', (event) => {{
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {{
+        event.preventDefault();
+        palette.classList.add('active');
+        input.value = '';
+        renderResults();
+        input.focus();
+      }}
+      if (event.key === 'Escape') palette.classList.remove('active');
+    }});
+    input.addEventListener('input', renderResults);
+    palette.addEventListener('click', (event) => {{ if (event.target === palette) palette.classList.remove('active'); }});
   </script>
 </body>
 </html>"""
