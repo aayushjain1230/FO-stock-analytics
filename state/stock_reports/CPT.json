@@ -1,21 +1,21 @@
 {
   "ticker": "CPT",
-  "generated_at": "2026-06-26T22:45:28.599405",
+  "generated_at": "2026-06-29T16:37:41.775559",
   "score": {
-    "final_score": 67.0,
+    "final_score": 73.25,
     "rating": "Watch",
-    "confidence": 50.24,
+    "confidence": 62.74,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 90.0,
       "momentum": 85.0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 50.0,
       "risk": 100,
       "catalyst": 65.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,21 +23,22 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
-      "support": 96.95999908447266,
+      "support": 97.66000366210938,
       "resistance": 116.30999755859375,
-      "risk_reward": 0.0
+      "risk_reward": 0.02
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.07604775186602186,
-        "3m": 0.20388969310612315,
-        "6m": 0.0907597491271408,
-        "12m": 0.07081595348165504
+        "1m": 0.07318095403031855,
+        "3m": 0.20869117259380165,
+        "6m": 0.07943905481499303,
+        "12m": 0.05541583233287373
       },
-      "acceleration": 0.1585,
+      "acceleration": 0.169,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,12 +49,14 @@
       ]
     },
     "volume": {
-      "score": 0,
-      "average_volume": 1308355.95,
-      "relative_volume": 0.4184021939900988,
-      "accumulation_days": 4,
-      "distribution_days": 5,
-      "evidence": []
+      "score": 25.0,
+      "average_volume": 1272739.15,
+      "relative_volume": 0.12656403317207615,
+      "accumulation_days": 5,
+      "distribution_days": 4,
+      "evidence": [
+        "Accumulation days exceed distribution days"
+      ]
     },
     "fundamental": {
       "score": 50.0,
@@ -66,17 +69,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01312919653764708,
-        "annualized_volatility": 0.20841953371622668,
-        "maximum_drawdown": -0.20326129782483648,
-        "sharpe_ratio": 0.4266661756565907,
-        "sortino_ratio": 0.6392877491059434,
-        "calmar_ratio": 0.342047627089218,
-        "beta": 0.4235837877826471,
-        "alpha": 0.016288500759266383,
-        "capm_expected_return": 0.07263706462356591,
-        "actual_return": 0.08892556538283229,
-        "market_return": 0.17148216413995063
+        "volatility": 0.01314253019263349,
+        "annualized_volatility": 0.20863119892719614,
+        "maximum_drawdown": -0.20326129782483748,
+        "sharpe_ratio": 0.4083937234707724,
+        "sortino_ratio": 0.6130335866309549,
+        "calmar_ratio": 0.3222760858450062,
+        "beta": 0.4222276958229408,
+        "alpha": 0.009584777790811974,
+        "capm_expected_return": 0.07561889437123707,
+        "actual_return": 0.08520367216204905,
+        "market_return": 0.17909505965460756
       },
       "evidence": []
     },
@@ -98,7 +101,7 @@
     "sector": "Real Estate",
     "industry": "REIT - Residential",
     "exchange": "NYQ",
-    "market_cap": 11525226496.0,
+    "market_cap": 11492527104.0,
     "revenue_growth": -0.005,
     "eps_growth": 0.121,
     "fcf_growth": null,
@@ -115,14 +118,14 @@
     "cash_position": 40684000.0,
     "total_debt": 4275068928.0,
     "interest_coverage": null,
-    "forward_pe": 72.85129,
-    "trailing_pe": 32.488827,
+    "forward_pe": 72.6446,
+    "trailing_pe": 32.39665,
     "peg": 9.17,
-    "price_to_book": 3.0016258,
-    "price_to_sales": 7.2720146,
-    "enterprise_to_ebitda": 19.189,
-    "enterprise_to_revenue": 10.172,
-    "fcf_yield": 0.059702047177884805,
+    "price_to_book": 2.9931095,
+    "price_to_sales": 7.2513824,
+    "enterprise_to_ebitda": 19.526,
+    "enterprise_to_revenue": 10.35,
+    "fcf_yield": 0.05987191587831995,
     "institutional_ownership": 1.08606,
     "insider_ownership": 0.01461,
     "short_interest": 6720732.0,
@@ -134,7 +137,7 @@
     "target_low_price": 102.0,
     "recommendation": "buy",
     "number_of_analysts": 22.0,
-    "dividend_yield": 3.73,
+    "dividend_yield": 3.65,
     "payout_ratio": 1.176,
     "next_earnings_date": "1777579200",
     "eps_current_year": 3.58,
@@ -142,15 +145,15 @@
     "classification": "Fundamentally Average"
   },
   "technical_screen": {
-    "rsi": 60.52183681921275,
-    "macd_cross": false,
+    "rsi": 58.37348730782735,
+    "macd_cross": true,
     "breakout": true,
     "new_52w_high": true,
-    "relative_volume": 0.4184021939900988,
+    "relative_volume": 0.12656403317207615,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
-    "support": 96.95999908447266,
+    "setup_type": "52-week high pressure, MACD bullish crossover, trend continuation",
+    "support": 97.66000366210938,
     "resistance": 116.30999755859375
   },
   "earnings": {
@@ -242,7 +245,7 @@
         "last_surprise_pct": -1.9642999,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": -1.64,
+      "analyst_upside_pct": -1.36,
       "eps_growth_implied": -55.4
     },
     "evidence": [
@@ -338,29 +341,29 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.852,
-    "probability_pct": 85.2,
+    "probability_of_outperformance": 0.8655,
+    "probability_pct": 86.55,
     "confidence": "High",
     "evidence": [
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 67.0/100"
+      "Composite score 73.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 67.0,
-    "technical_score": 80.0,
+    "final_score": 73.25,
+    "technical_score": 90.0,
     "momentum_score": 85.0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 50.0,
     "risk_score": 100,
     "catalyst_score": 65.0,
     "revenue_growth": -0.005,
     "eps_growth": 0.121,
     "roe": 0.09064999,
-    "forward_pe": 72.85129,
-    "relative_volume": 0.4184021939900988,
+    "forward_pe": 72.6446,
+    "relative_volume": 0.12656403317207615,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +373,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.023945781392685994,
-      "weekly": 0.06716212348195238,
-      "monthly": 0.07604775186602186,
-      "annual": 0.07081595348165504
+      "daily": -0.003310072349042792,
+      "weekly": 0.06372728464760469,
+      "monthly": 0.07318095403031855,
+      "annual": 0.05541583233287373
     },
     "risk": {
-      "volatility": 0.01312919653764708,
-      "annualized_volatility": 0.20841953371622668,
-      "maximum_drawdown": -0.20326129782483648,
-      "sharpe_ratio": 0.4266661756565907,
-      "sortino_ratio": 0.6392877491059434,
-      "calmar_ratio": 0.342047627089218,
-      "beta": 0.4235837877826471,
-      "alpha": 0.016288500759266383,
-      "capm_expected_return": 0.07263706462356591,
-      "actual_return": 0.08892556538283229,
-      "market_return": 0.17148216413995063
+      "volatility": 0.01314253019263349,
+      "annualized_volatility": 0.20863119892719614,
+      "maximum_drawdown": -0.20326129782483748,
+      "sharpe_ratio": 0.4083937234707724,
+      "sortino_ratio": 0.6130335866309549,
+      "calmar_ratio": 0.3222760858450062,
+      "beta": 0.4222276958229408,
+      "alpha": 0.009584777790811974,
+      "capm_expected_return": 0.07561889437123707,
+      "actual_return": 0.08520367216204905,
+      "market_return": 0.17909505965460756
     },
     "capm": {
-      "beta": 0.4235837877826471,
-      "alpha": 0.016288500759266383,
-      "capm_expected_return": 0.07263706462356591,
-      "actual_return": 0.08892556538283229,
-      "market_return": 0.17148216413995063,
-      "interpretation": "Beta 0.42: Moves roughly 58% less than the market. CAPM expected return is 7.26%; realized alpha is 1.63%, meaning positive alpha versus CAPM."
+      "beta": 0.4222276958229408,
+      "alpha": 0.009584777790811974,
+      "capm_expected_return": 0.07561889437123707,
+      "actual_return": 0.08520367216204905,
+      "market_return": 0.17909505965460756,
+      "interpretation": "Beta 0.42: Moves roughly 58% less than the market. CAPM expected return is 7.56%; realized alpha is 0.96%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.08892556538283229,
+      "actual_return": 0.08520367216204905,
       "components": {
-        "market_component": 0.07263706462356591,
-        "momentum_component": 0.01770398837041376,
+        "market_component": 0.07561889437123707,
+        "momentum_component": 0.013853958083218432,
         "volatility_drag": -0.0,
-        "alpha_component": 0.016288500759266383
+        "alpha_component": 0.009584777790811974
       },
       "component_weights_pct": {
-        "market_component": 68.12,
-        "momentum_component": 16.6,
+        "market_component": 76.34,
+        "momentum_component": 13.99,
         "volatility_drag": 0.0,
-        "alpha_component": 15.28
+        "alpha_component": 9.68
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 111.50900001525879,
-      "sma50": 107.32539962768554,
-      "sma200": 104.35769382476806,
-      "ema20": 111.19089990198273,
-      "ema50": 108.35174509019893,
-      "ema200": 105.940219936888
+      "sma20": 111.977250289917,
+      "sma50": 107.64029968261718,
+      "sma200": 104.40958015441895,
+      "ema20": 111.64176686862793,
+      "ema50": 108.64873559890708,
+      "ema200": 106.04257401077591
     },
     "momentum": {
-      "3m": 0.20388969310612315,
-      "6m": 0.0907597491271408,
-      "12m": 0.07081595348165504,
+      "3m": 0.20869117259380165,
+      "6m": 0.07943905481499303,
+      "12m": 0.05541583233287373,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1308355.95,
-      "relative_volume": 0.4184021939900988,
+      "average_volume": 1272739.15,
+      "relative_volume": 0.12656403317207615,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -442,7 +445,7 @@
     "send_alert": true,
     "reason": "52-week high",
     "evidence": "Price is pressing against 52-week highs",
-    "date_of_change": "2026-06-26",
+    "date_of_change": "2026-06-29",
     "strength": 65,
     "invalidates": "Failed breakout below prior range high",
     "triggers": [
@@ -454,5 +457,5 @@
       }
     ]
   },
-  "report": "Ticker: CPT\nRating: Watch | Score: 67.0/100 | Confidence: 50.24/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 96.95999908447266 | Resistance: 116.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 72.85129\nNews/Catalyst: Is Holding Camden Property Stock Still Smart Move for Your Portfolio?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: CPT\nRating: Watch | Score: 73.25/100 | Confidence: 62.74/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: 52-week high pressure, MACD bullish crossover, trend continuation | Support: 97.66000366210938 | Resistance: 116.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 72.6446\nNews/Catalyst: Is Holding Camden Property Stock Still Smart Move for Your Portfolio?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }
