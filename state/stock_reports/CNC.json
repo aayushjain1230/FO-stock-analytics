@@ -1,13 +1,13 @@
 {
   "ticker": "CNC",
-  "generated_at": "2026-06-29T16:37:35.094115",
+  "generated_at": "2026-06-29T19:02:39.210707",
   "score": {
-    "final_score": 68.2,
+    "final_score": 66.45,
     "rating": "Watch",
-    "confidence": 59.69,
+    "confidence": 58.71,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 73.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 58.0,
@@ -15,29 +15,28 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 73.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 31.799999237060547,
       "resistance": 66.20999908447266,
-      "risk_reward": 0.03
+      "risk_reward": 0.05
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.1054150893779493,
-        "3m": 1.0350000858306885,
-        "6m": 0.6324894395330787,
-        "12m": 0.21560580768257398
+        "1m": 0.09633337721541091,
+        "3m": 1.0182812213897705,
+        "6m": 0.6190774648453026,
+        "12m": 0.20561880627960272
       },
-      "acceleration": 0.7188,
+      "acceleration": 0.7087,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5542426.7,
-      "relative_volume": 0.22265229055713087,
+      "average_volume": 5582056.35,
+      "relative_volume": 0.3630610070785115,
       "accumulation_days": 7,
       "distribution_days": 5,
       "evidence": [
@@ -67,17 +66,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.032786819330103426,
-        "annualized_volatility": 0.520474621369554,
+        "volatility": 0.032793766015752665,
+        "annualized_volatility": 0.5205848965855382,
         "maximum_drawdown": -0.6857784116957291,
-        "sharpe_ratio": 0.2879506004732612,
-        "sortino_ratio": 0.29396834906317826,
-        "calmar_ratio": -0.0024814724671623372,
-        "beta": 0.17628817605586114,
-        "alpha": 0.11829863834732993,
-        "capm_expected_return": 0.03157234140712641,
-        "actual_return": 0.14987097975445635,
-        "market_return": 0.17909505965460756
+        "sharpe_ratio": 0.27999370601734785,
+        "sortino_ratio": 0.2859703069215339,
+        "calmar_ratio": -0.008533552189597044,
+        "beta": 0.17315640284613407,
+        "alpha": 0.11442815387553754,
+        "capm_expected_return": 0.03133234061610506,
+        "actual_return": 0.1457604944916426,
+        "market_return": 0.1809482069452946
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -92,7 +91,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "CNC",
@@ -142,17 +141,18 @@
     "next_earnings_date": "1785241800",
     "eps_current_year": -13.05,
     "eps_forward": 4.47498,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 50.26209649647836,
+    "rsi": 48.7432943884659,
     "macd_cross": false,
-    "breakout": true,
+    "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.22265229055713087,
+    "relative_volume": 0.3630610070785115,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "52-week high pressure, trend continuation",
+    "setup_type": "trend continuation",
     "support": 31.799999237060547,
     "resistance": 66.20999908447266
   },
@@ -245,7 +245,7 @@
         "last_surprise_pct": 0.5791,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -5.08,
+      "analyst_upside_pct": -4.21,
       "eps_growth_implied": 134.29
     },
     "evidence": [
@@ -341,20 +341,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8464,
-    "probability_pct": 84.64,
+    "probability_of_outperformance": 0.8066,
+    "probability_pct": 80.66,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
-      "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 68.2/100"
+      "Composite score 66.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 68.2,
-    "technical_score": 80.0,
+    "final_score": 66.45,
+    "technical_score": 73.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
@@ -364,8 +363,8 @@
     "eps_growth": 0.183,
     "roe": -0.26044,
     "forward_pe": 14.557607,
-    "relative_volume": 0.22265229055713087,
-    "breakout": true,
+    "relative_volume": 0.3630610070785115,
+    "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
@@ -374,66 +373,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.009280398283856406,
-      "weekly": 0.022613103556929692,
-      "monthly": 0.1054150893779493,
-      "annual": 0.21560580768257398
+      "daily": -0.017419811562205845,
+      "weekly": 0.014211664179645478,
+      "monthly": 0.09633337721541091,
+      "annual": 0.20561880627960272
     },
     "risk": {
-      "volatility": 0.032786819330103426,
-      "annualized_volatility": 0.520474621369554,
+      "volatility": 0.032793766015752665,
+      "annualized_volatility": 0.5205848965855382,
       "maximum_drawdown": -0.6857784116957291,
-      "sharpe_ratio": 0.2879506004732612,
-      "sortino_ratio": 0.29396834906317826,
-      "calmar_ratio": -0.0024814724671623372,
-      "beta": 0.17628817605586114,
-      "alpha": 0.11829863834732993,
-      "capm_expected_return": 0.03157234140712641,
-      "actual_return": 0.14987097975445635,
-      "market_return": 0.17909505965460756
+      "sharpe_ratio": 0.27999370601734785,
+      "sortino_ratio": 0.2859703069215339,
+      "calmar_ratio": -0.008533552189597044,
+      "beta": 0.17315640284613407,
+      "alpha": 0.11442815387553754,
+      "capm_expected_return": 0.03133234061610506,
+      "actual_return": 0.1457604944916426,
+      "market_return": 0.1809482069452946
     },
     "capm": {
-      "beta": 0.17628817605586114,
-      "alpha": 0.11829863834732993,
-      "capm_expected_return": 0.03157234140712641,
-      "actual_return": 0.14987097975445635,
-      "market_return": 0.17909505965460756,
-      "interpretation": "Beta 0.18: Moves roughly 82% less than the market. CAPM expected return is 3.16%; realized alpha is 11.83%, meaning positive alpha versus CAPM."
+      "beta": 0.17315640284613407,
+      "alpha": 0.11442815387553754,
+      "capm_expected_return": 0.03133234061610506,
+      "actual_return": 0.1457604944916426,
+      "market_return": 0.1809482069452946,
+      "interpretation": "Beta 0.17: Moves roughly 83% less than the market. CAPM expected return is 3.13%; realized alpha is 11.44%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.14987097975445635,
+      "actual_return": 0.1457604944916426,
       "components": {
-        "market_component": 0.03157234140712641,
-        "momentum_component": 0.053901451920643495,
-        "volatility_drag": -0.054094924273910806,
-        "alpha_component": 0.11829863834732993
+        "market_component": 0.03133234061610506,
+        "momentum_component": 0.05140470156990068,
+        "volatility_drag": -0.05411697931710764,
+        "alpha_component": 0.11442815387553754
       },
       "component_weights_pct": {
-        "market_component": 12.24,
-        "momentum_component": 20.9,
-        "volatility_drag": 20.98,
-        "alpha_component": 45.88
+        "market_component": 12.47,
+        "momentum_component": 20.46,
+        "volatility_drag": 21.54,
+        "alpha_component": 45.54
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 63.1870002746582,
-      "sma50": 56.93300010681153,
-      "sma200": 43.07925001144409,
-      "ema20": 62.545055530162486,
-      "ema50": 57.21678673121868,
-      "ema200": 47.59659255964297
+      "sma20": 63.16025009155273,
+      "sma50": 56.922300033569336,
+      "sma200": 43.07657499313355,
+      "ema20": 62.49410280043779,
+      "ema50": 57.19580619544969,
+      "ema200": 47.59126914011949
     },
     "momentum": {
-      "3m": 1.0350000858306885,
-      "6m": 0.6324894395330787,
-      "12m": 0.21560580768257398,
+      "3m": 1.0182812213897705,
+      "6m": 0.6190774648453026,
+      "12m": 0.20561880627960272,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5542426.7,
-      "relative_volume": 0.22265229055713087,
+      "average_volume": 5582056.35,
+      "relative_volume": 0.3630610070785115,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -451,5 +450,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CNC\nRating: Watch | Score: 68.2/100 | Confidence: 59.69/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 31.799999237060547 | Resistance: 66.20999908447266\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.557607\nNews/Catalyst: Best Growth Stocks to Buy for June 29th\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CNC\nRating: Watch | Score: 66.45/100 | Confidence: 58.71/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 31.799999237060547 | Resistance: 66.20999908447266\nFundamental Outlook: Fundamentally Average | Forward P/E: 14.557607\nNews/Catalyst: Best Growth Stocks to Buy for June 29th\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

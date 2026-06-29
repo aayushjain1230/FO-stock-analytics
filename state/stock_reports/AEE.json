@@ -1,13 +1,13 @@
 {
   "ticker": "AEE",
-  "generated_at": "2026-06-29T16:36:41.569915",
+  "generated_at": "2026-06-29T19:02:03.320392",
   "score": {
-    "final_score": 61.95,
+    "final_score": 63.7,
     "rating": "Hold",
-    "confidence": 55.4,
+    "confidence": 56.4,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
+      "technical": 75.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 73.0,
@@ -15,28 +15,29 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 105.08999633789062,
       "resistance": 118.31999969482422,
-      "risk_reward": 0.3
+      "risk_reward": 0.35
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.06529187734910558,
-        "3m": 0.06734960127990708,
-        "6m": 0.17017739660516362,
-        "12m": 0.24253747889091093
+        "1m": 0.061871232473224236,
+        "3m": 0.06392234906666605,
+        "6m": 0.16641996504985102,
+        "12m": 0.23854769961010458
       },
-      "acceleration": -0.0177,
+      "acceleration": -0.0193,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1805420.9,
-      "relative_volume": 0.761882173846553,
+      "average_volume": 1826426.55,
+      "relative_volume": 0.9831389058596416,
       "accumulation_days": 5,
       "distribution_days": 2,
       "evidence": [
@@ -64,17 +65,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.011086544321175716,
-        "annualized_volatility": 0.17599343503755807,
-        "maximum_drawdown": -0.0845090131892785,
-        "sharpe_ratio": 1.654918335700404,
-        "sortino_ratio": 2.387043134894246,
-        "calmar_ratio": 3.7551958785477257,
-        "beta": 0.12141693891602968,
-        "alpha": 0.26950958868830655,
-        "capm_expected_return": 0.02174517391824618,
-        "actual_return": 0.29125476260655275,
-        "market_return": 0.17909505965460756
+        "volatility": 0.011102871571405933,
+        "annualized_volatility": 0.17625262209977413,
+        "maximum_drawdown": -0.08450901318927828,
+        "sharpe_ratio": 1.6435251117734846,
+        "sortino_ratio": 2.3630864586219285,
+        "calmar_ratio": 3.7298989989481526,
+        "beta": 0.11861762108199786,
+        "alpha": 0.2682119645899971,
+        "capm_expected_return": 0.021463645846903887,
+        "actual_return": 0.289675610436901,
+        "market_return": 0.1809482069452946
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -88,7 +89,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "AEE",
@@ -138,14 +139,15 @@
     "next_earnings_date": "1778011200",
     "eps_current_year": 5.56,
     "eps_forward": 5.80917,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 71.35307244457599,
+    "rsi": 69.98444457891796,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.761882173846553,
+    "relative_volume": 0.9831389058596416,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -241,7 +243,7 @@
         "last_surprise_pct": 0.090900004,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 4.31,
+      "analyst_upside_pct": 4.65,
       "eps_growth_implied": 4.48
     },
     "evidence": [
@@ -336,19 +338,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7779,
-    "probability_pct": 77.79,
+    "probability_of_outperformance": 0.7911,
+    "probability_pct": 79.11,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 61.95/100"
+      "Composite score 63.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.95,
-    "technical_score": 68.0,
+    "final_score": 63.7,
+    "technical_score": 75.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 73.0,
@@ -358,7 +360,7 @@
     "eps_growth": 0.196,
     "roe": 0.117469996,
     "forward_pe": 19.835882,
-    "relative_volume": 0.761882173846553,
+    "relative_volume": 0.9831389058596416,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -368,72 +370,72 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.02611558777772538,
-      "weekly": 0.05041026948524463,
-      "monthly": 0.06529187734910558,
-      "annual": 0.24253747889091093
+      "daily": -0.02924272391309013,
+      "weekly": 0.04703740934964595,
+      "monthly": 0.061871232473224236,
+      "annual": 0.23854769961010458
     },
     "risk": {
-      "volatility": 0.011086544321175716,
-      "annualized_volatility": 0.17599343503755807,
-      "maximum_drawdown": -0.0845090131892785,
-      "sharpe_ratio": 1.654918335700404,
-      "sortino_ratio": 2.387043134894246,
-      "calmar_ratio": 3.7551958785477257,
-      "beta": 0.12141693891602968,
-      "alpha": 0.26950958868830655,
-      "capm_expected_return": 0.02174517391824618,
-      "actual_return": 0.29125476260655275,
-      "market_return": 0.17909505965460756
+      "volatility": 0.011102871571405933,
+      "annualized_volatility": 0.17625262209977413,
+      "maximum_drawdown": -0.08450901318927828,
+      "sharpe_ratio": 1.6435251117734846,
+      "sortino_ratio": 2.3630864586219285,
+      "calmar_ratio": 3.7298989989481526,
+      "beta": 0.11861762108199786,
+      "alpha": 0.2682119645899971,
+      "capm_expected_return": 0.021463645846903887,
+      "actual_return": 0.289675610436901,
+      "market_return": 0.1809482069452946
     },
     "capm": {
-      "beta": 0.12141693891602968,
-      "alpha": 0.26950958868830655,
-      "capm_expected_return": 0.02174517391824618,
-      "actual_return": 0.29125476260655275,
-      "market_return": 0.17909505965460756,
-      "interpretation": "Beta 0.12: Moves roughly 88% less than the market. CAPM expected return is 2.17%; realized alpha is 26.95%, meaning positive alpha versus CAPM."
+      "beta": 0.11861762108199786,
+      "alpha": 0.2682119645899971,
+      "capm_expected_return": 0.021463645846903887,
+      "actual_return": 0.289675610436901,
+      "market_return": 0.1809482069452946,
+      "interpretation": "Beta 0.12: Moves roughly 88% less than the market. CAPM expected return is 2.15%; realized alpha is 26.82%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.29125476260655275,
+      "actual_return": 0.289675610436901,
       "components": {
-        "market_component": 0.02174517391824618,
-        "momentum_component": 0.06063436972272773,
+        "market_component": 0.021463645846903887,
+        "momentum_component": 0.059636924902526145,
         "volatility_drag": -0.0,
-        "alpha_component": 0.26950958868830655
+        "alpha_component": 0.2682119645899971
       },
       "component_weights_pct": {
-        "market_component": 6.18,
-        "momentum_component": 17.23,
+        "market_component": 6.14,
+        "momentum_component": 17.07,
         "volatility_drag": 0.0,
-        "alpha_component": 76.59
+        "alpha_component": 76.78
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 109.57348556518555,
-      "sma50": 109.56999542236328,
-      "sma200": 104.8178999710083,
-      "ema20": 111.05659439115249,
-      "ema50": 109.73232941667945,
-      "ema200": 104.99397257922365
+      "sma20": 109.55498542785645,
+      "sma50": 109.56259536743164,
+      "sma200": 104.81604984283447,
+      "ema20": 111.02135603433685,
+      "ema50": 109.7178195069783,
+      "ema200": 104.9902908027564
     },
     "momentum": {
-      "3m": 0.06734960127990708,
-      "6m": 0.17017739660516362,
-      "12m": 0.24253747889091093,
+      "3m": 0.06392234906666605,
+      "6m": 0.16641996504985102,
+      "12m": 0.23854769961010458,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1805420.9,
-      "relative_volume": 0.761882173846553,
+      "average_volume": 1826426.55,
+      "relative_volume": 0.9831389058596416,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 90,
-      "label": "Research priority"
+      "score": 70,
+      "label": "Watch closely"
     }
   },
   "why_now": {
@@ -445,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AEE\nRating: Hold | Score: 61.95/100 | Confidence: 55.4/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 105.08999633789062 | Resistance: 118.31999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.835882\nNews/Catalyst: Strength Seen in Ameren (AEE): Can Its 3.3% Jump Turn into More Strength?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AEE\nRating: Hold | Score: 63.7/100 | Confidence: 56.4/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 105.08999633789062 | Resistance: 118.31999969482422\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.835882\nNews/Catalyst: Strength Seen in Ameren (AEE): Can Its 3.3% Jump Turn into More Strength?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

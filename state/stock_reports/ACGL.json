@@ -1,13 +1,13 @@
 {
   "ticker": "ACGL",
-  "generated_at": "2026-06-29T16:36:37.488722",
+  "generated_at": "2026-06-29T19:02:00.375906",
   "score": {
-    "final_score": 65.5,
-    "rating": "Watch",
-    "confidence": 62.16,
+    "final_score": 61.0,
+    "rating": "Hold",
+    "confidence": 58.63,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 58.0,
+      "technical": 40.0,
       "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 70.0,
@@ -15,27 +15,27 @@
       "catalyst": 85.0
     },
     "technical": {
-      "score": 58.0,
+      "score": 40.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "MACD is above signal",
-        "Stock is not materially extended from SMA20"
+        "Stock is extended from SMA20"
       ],
       "support": 87.62000274658203,
       "resistance": 98.8499984741211,
-      "risk_reward": 0.16
+      "risk_reward": 0.13
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.07301205338338024,
-        "3m": 0.04142584909478719,
-        "6m": 0.009232358667645046,
-        "12m": 0.07752796465855605
+        "1m": 0.07554867775951091,
+        "3m": 0.04388780298096839,
+        "6m": 0.011618206425928701,
+        "12m": 0.08007526474945137
       },
-      "acceleration": 0.0368,
+      "acceleration": 0.0381,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2334489.9,
-      "relative_volume": 0.177211304276793,
+      "average_volume": 2349554.2,
+      "relative_volume": 0.3043062381791405,
       "accumulation_days": 3,
       "distribution_days": 1,
       "evidence": [
@@ -64,17 +64,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.015036157347134515,
-        "annualized_volatility": 0.23869159808732773,
+        "volatility": 0.015035674653683972,
+        "annualized_volatility": 0.23868393556635004,
         "maximum_drawdown": -0.22431935095644184,
-        "sharpe_ratio": 0.15455899786537305,
-        "sortino_ratio": 0.2043728606575215,
-        "calmar_ratio": 0.03706319701531808,
-        "beta": 0.3318596131811865,
-        "alpha": -0.02254248302037782,
-        "capm_expected_return": 0.05943441721963959,
-        "actual_return": 0.03689193419926177,
-        "market_return": 0.17909505965460756
+        "sharpe_ratio": 0.15955296331582855,
+        "sortino_ratio": 0.21080247373864586,
+        "calmar_ratio": 0.04242643090040584,
+        "beta": 0.331743265896706,
+        "alpha": -0.021945619914689615,
+        "capm_expected_return": 0.060028349130185045,
+        "actual_return": 0.03808272921549543,
+        "market_return": 0.1809482069452946
       },
       "evidence": []
     },
@@ -88,7 +88,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; MACD is above signal; Stock is extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "ACGL",
@@ -138,14 +138,15 @@
     "next_earnings_date": "1785268800",
     "eps_current_year": 13.0,
     "eps_forward": 9.89149,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 79.90653400397512,
+    "rsi": 81.36396060306664,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.177211304276793,
+    "relative_volume": 0.3043062381791405,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -241,7 +242,7 @@
         "last_surprise_pct": 0.0147,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 11.74,
+      "analyst_upside_pct": 11.48,
       "eps_growth_implied": -23.91
     },
     "evidence": [
@@ -338,20 +339,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8522,
-    "probability_pct": 85.22,
+    "probability_of_outperformance": 0.8405,
+    "probability_pct": 84.05,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 65.5/100"
+      "Composite score 61.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 65.5,
-    "technical_score": 58.0,
+    "final_score": 61.0,
+    "technical_score": 40.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 70.0,
@@ -361,7 +362,7 @@
     "eps_growth": 0.946,
     "roe": 0.21305999,
     "forward_pe": 9.835728,
-    "relative_volume": 0.177211304276793,
+    "relative_volume": 0.3043062381791405,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -371,66 +372,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.002563051031919783,
-      "weekly": 0.05704041664252424,
-      "monthly": 0.07301205338338024,
-      "annual": 0.07752796465855605
+      "daily": -0.00020508788469519867,
+      "weekly": 0.059539283713920144,
+      "monthly": 0.07554867775951091,
+      "annual": 0.08007526474945137
     },
     "risk": {
-      "volatility": 0.015036157347134515,
-      "annualized_volatility": 0.23869159808732773,
+      "volatility": 0.015035674653683972,
+      "annualized_volatility": 0.23868393556635004,
       "maximum_drawdown": -0.22431935095644184,
-      "sharpe_ratio": 0.15455899786537305,
-      "sortino_ratio": 0.2043728606575215,
-      "calmar_ratio": 0.03706319701531808,
-      "beta": 0.3318596131811865,
-      "alpha": -0.02254248302037782,
-      "capm_expected_return": 0.05943441721963959,
-      "actual_return": 0.03689193419926177,
-      "market_return": 0.17909505965460756
+      "sharpe_ratio": 0.15955296331582855,
+      "sortino_ratio": 0.21080247373864586,
+      "calmar_ratio": 0.04242643090040584,
+      "beta": 0.331743265896706,
+      "alpha": -0.021945619914689615,
+      "capm_expected_return": 0.060028349130185045,
+      "actual_return": 0.03808272921549543,
+      "market_return": 0.1809482069452946
     },
     "capm": {
-      "beta": 0.3318596131811865,
-      "alpha": -0.02254248302037782,
-      "capm_expected_return": 0.05943441721963959,
-      "actual_return": 0.03689193419926177,
-      "market_return": 0.17909505965460756,
-      "interpretation": "Beta 0.33: Moves roughly 67% less than the market. CAPM expected return is 5.94%; realized alpha is -2.25%, meaning negative alpha versus CAPM."
+      "beta": 0.331743265896706,
+      "alpha": -0.021945619914689615,
+      "capm_expected_return": 0.060028349130185045,
+      "actual_return": 0.03808272921549543,
+      "market_return": 0.1809482069452946,
+      "interpretation": "Beta 0.33: Moves roughly 67% less than the market. CAPM expected return is 6.00%; realized alpha is -2.19%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.03689193419926177,
+      "actual_return": 0.03808272921549543,
       "components": {
-        "market_component": 0.05943441721963959,
-        "momentum_component": 0.019381991164639012,
+        "market_component": 0.060028349130185045,
+        "momentum_component": 0.020018816187362842,
         "volatility_drag": -0.0,
-        "alpha_component": -0.02254248302037782
+        "alpha_component": -0.021945619914689615
       },
       "component_weights_pct": {
-        "market_component": 58.64,
-        "momentum_component": 19.12,
+        "market_component": 58.86,
+        "momentum_component": 19.63,
         "volatility_drag": 0.0,
-        "alpha_component": 22.24
+        "alpha_component": 21.52
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 91.7680004119873,
-      "sma50": 93.65499984741211,
-      "sma200": 93.5000499343872,
-      "ema20": 93.30722397070959,
-      "ema50": 93.51586373289012,
-      "ema200": 93.81597087714306
+      "sma20": 91.77950019836426,
+      "sma50": 93.6595997619629,
+      "sma200": 93.5011999130249,
+      "ema20": 93.3291283257133,
+      "ema50": 93.52488317318577,
+      "ema200": 93.81825939184495
     },
     "momentum": {
-      "3m": 0.04142584909478719,
-      "6m": 0.009232358667645046,
-      "12m": 0.07752796465855605,
+      "3m": 0.04388780298096839,
+      "6m": 0.011618206425928701,
+      "12m": 0.08007526474945137,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 2334489.9,
-      "relative_volume": 0.177211304276793,
+      "average_volume": 2349554.2,
+      "relative_volume": 0.3043062381791405,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -448,5 +449,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ACGL\nRating: Watch | Score: 65.5/100 | Confidence: 62.16/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 87.62000274658203 | Resistance: 98.8499984741211\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.835728\nNews/Catalyst: AXS Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ACGL\nRating: Hold | Score: 61.0/100 | Confidence: 58.63/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 87.62000274658203 | Resistance: 98.8499984741211\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.835728\nNews/Catalyst: AXS Outperforms Industry, Trades Near 52-Week High: Time to Exit?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
