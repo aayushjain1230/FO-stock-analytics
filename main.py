@@ -823,7 +823,7 @@ def run_quant_research_report(send_alert=False):
                 portfolio_report = {}
         message = telegram_notifier.format_quant_intelligence_report(payload, portfolio_report)
         if should_send_report(message):
-            telegram_notifier.send_long_message(message)
+            telegram_notifier.send_quant_intelligence_report(payload, portfolio_report)
     print(f"Quant research snapshot saved to {QUANT_RESEARCH_FILE}")
 
 
@@ -987,33 +987,13 @@ def run_portfolio_report(send_alert=False):
     if send_alert and why_payload.get("send_alert"):
         message = _format_portfolio_telegram(report)
         if should_send_report(message):
-            telegram_notifier.send_long_message(message)
+            telegram_notifier.send_long_message(message, parse_mode="HTML")
     elif send_alert:
         print("No portfolio Why Now trigger. Telegram portfolio alert skipped.")
 
 
 def _format_portfolio_telegram(report):
-    health = report.get("portfolio_health", {})
-    why_payload = report.get("why_now", {})
-    risk_contrib = report.get("risk_contributions", {})
-    top_risk = sorted(risk_contrib.items(), key=lambda item: item[1], reverse=True)[:3]
-    top_risk_text = ", ".join(f"{ticker}: {value:.1f}%" for ticker, value in top_risk) or "N/A"
-    return "\n".join(
-        [
-            "PORTFOLIO RISK ALERT",
-            "",
-            f"Portfolio Health Score: {health.get('score', 'N/A')}/100 ({health.get('classification', 'N/A')})",
-            f"Why Now: {why_payload.get('reason', 'N/A')}",
-            f"Impact: {why_payload.get('evidence', 'N/A')}",
-            f"Annual Volatility: {report.get('variance', {}).get('annual_volatility', 0) * 100:.2f}%",
-            f"Sharpe Ratio: {report.get('sharpe', {}).get('sharpe_ratio', 0):.2f}",
-            f"Average Correlation: {report.get('correlation', {}).get('average_correlation', 0):.2f}",
-            f"Top Risk Contributors: {top_risk_text}",
-            f"What To Watch: {why_payload.get('what_to_watch', 'Monitor volatility, correlation, drawdown, and sector concentration.')}",
-            "",
-            "Educational risk analysis only, not financial advice.",
-        ]
-    )
+    return telegram_notifier.TelegramMessageBuilder({}, report).build_detailed_report()
 
 
 def run_option_lab(args):
