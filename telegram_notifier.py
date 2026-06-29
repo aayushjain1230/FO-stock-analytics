@@ -2,6 +2,8 @@ import json
 import os
 import re
 import time
+from datetime import datetime
+from html import escape
 
 try:
     import requests
@@ -44,6 +46,296 @@ def _escape_md(text: str) -> str:
 
 def _format_metric_line(label, value):
     return f"*{_escape_md(label)}:* {_escape_md(value)}"
+
+
+def _safe_pct(value, multiply=True):
+    value = _safe_float(value)
+    if value is None:
+        return "N/A"
+    if multiply:
+        value *= 100
+    return f"{value:+.2f}%" if value > 0 else f"{value:.2f}%"
+
+
+def _html(value):
+    return escape(str(value if value is not None else "N/A"), quote=False)
+
+
+class TelegramMessageBuilder:
+    """Build concise Telegram HTML briefings for portfolio and quant research.
+
+    The builder keeps every section optional, safely escapes HTML, and splits
+    detailed reports into Telegram-safe mobile-sized chunks.
+    """
+
+    TELEGRAM_LIMIT = 4096
+    SOFT_LIMIT = 3400
+    DIVIDER = "━━━━━━━━━━━━━━━━━━"
+    SEVERITY = {
+        "strong": "🟢",
+        "good": "🟢",
+        "neutral": "🟡",
+        "watch": "🟡",
+        "risk": "🔴",
+        "problem": "🔴",
+        "info": "🔵",
+        "warning": "⚠️",
+        "urgent": "🚨",
+    }
+
+    def __init__(self, quant_payload=None, portfolio_payload=None):
+        self.quant = quant_payload or {}
+        self.portfolio = portfolio_payload or {}
+
+    def status_icon(self, severity):
+        return self.SEVERITY.get(str(severity).lower(), "🔵")
+
+    def _health_status(self):
+        score = _safe_float(self.portfolio.get("portfolio_health", {}).get("score"))
+        if score is None:
+            return "info", "Unknown"
+        if score >= 80:
+            return "good", "Strong"
+        if score >= 60:
+            return "watch", "Watch"
+        return "risk", "Risk"
+
+    def _portfolio_health(self):
+        return self.portfolio.get("portfolio_health", {}).get("score", "N/A")
+
+    def _main_risk(self):
+        warnings = self.portfolio.get("risk_warnings", [])
+        if warnings:
+            return str(warnings[0])
+        top_risk = sorted(
+            self.portfolio.get("risk_contributions", {}).items(),
+            key=lambda item: _safe_float(item[1]) or 0,
+            reverse=True,
+        )
+        if top_risk:
+            return f"{top_risk[0][0]} contributes {top_risk[0][1]:.1f}% of portfolio risk"
+        return "No dominant risk flagged"
+
+    def build_header(self):
+        severity, status = self._health_status()
+        regime = self.quant.get("market_regime", {})
+        regime_text = regime.get("regime") or regime.get("current_regime") or "Unknown"
+        vol_regime = self.portfolio.get("variance", {}).get("risk_classification")
+        if vol_regime:
+            regime_text = f"{regime_text}, {vol_regime} Volatility"
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+        return "\n".join(
+            [
+                "🚨 <b>PORTFOLIO INTELLIGENCE REPORT</b>",
+                _html(timestamp),
+                "",
+                f"<b>Overall Status:</b> {self.status_icon(severity)} {_html(status)}",
+                f"<b>Portfolio Health:</b> {_html(self._portfolio_health())}/100",
+                f"<b>Market Regime:</b> {_html(regime_text)}",
+                f"<b>Main Risk:</b> {_html(self._main_risk())}",
+            ]
+        )
+
+    def build_portfolio_snapshot(self):
+        if not self.portfolio:
+            return ""
+        variance = self.portfolio.get("variance", {})
+        sharpe = self.portfolio.get("sharpe", {})
+        drawdown = self.portfolio.get("maximum_drawdown")
+        vol = variance.get("annual_volatility")
+        sharpe_ratio = _safe_float(sharpe.get("sharpe_ratio"))
+        interpretation = "Portfolio is stable, but monitor concentration and regime changes."
+        if _safe_float(vol) and _safe_float(vol) >= 0.25:
+            interpretation = "Portfolio is participating, but volatility is elevated and position sizing matters."
+        if sharpe_ratio is not None and sharpe_ratio < 0.5:
+            interpretation = "Risk-adjusted returns are weak; focus on drawdown, concentration, and signal quality."
+        lines = [
+            "📊 <b>PORTFOLIO SNAPSHOT</b>",
+            f"Return: {_html(_safe_pct(self.portfolio.get('portfolio_return')))}",
+            f"Portfolio Volatility: {_html(_safe_pct(vol))}",
+            f"Sharpe Ratio: {_html(f'{sharpe_ratio:.2f}' if sharpe_ratio is not None else 'N/A')}",
+            f"Max Drawdown: {_html(_safe_pct(drawdown))}",
+            f"Cash: {_html(_safe_pct(self.portfolio.get('cash_allocation'), multiply=False))}",
+            "",
+            "<b>Interpretation:</b>",
+            _html(interpretation),
+        ]
+        return "\n".join(lines)
+
+    def build_top_risks(self):
+        risks = []
+        for warning in self.portfolio.get("risk_warnings", [])[:4]:
+            icon = "🔴" if any(term in str(warning).lower() for term in ["cvar", "risk", "volatility", "correlation"]) else "🟡"
+            risks.append(f"{icon} {_html(warning)}")
+        risk_contrib = self.portfolio.get("risk_contributions", {})
+        if not risks and risk_contrib:
+            for ticker, value in sorted(risk_contrib.items(), key=lambda item: item[1], reverse=True)[:3]:
+                icon = "🔴" if value >= 30 else "🟡"
+                risks.append(f"{icon} {_html(ticker)} contributes {_html(f'{value:.1f}%')} of portfolio risk")
+        avg_corr = _safe_float(self.portfolio.get("correlation", {}).get("average_correlation"))
+        if avg_corr is not None and avg_corr >= 0.65:
+            risks.append(f"🟡 Average correlation is elevated at {_html(f'{avg_corr:.2f}')}")
+        if not risks:
+            return ""
+        return "\n".join(
+            [
+                "⚠️ <b>TOP RISKS</b>",
+                *risks[:5],
+                "",
+                "<b>What this means:</b>",
+                "Holdings may be moving together, which can reduce diversification when markets turn.",
+            ]
+        )
+
+    def build_factor_exposure(self):
+        exposures = self.quant.get("portfolio_factor_exposure", {}).get("exposures", {})
+        if not exposures:
+            exposures = self.portfolio.get("factor_exposure", {}).get("main_risk_drivers", {})
+        if not exposures:
+            return ""
+        rows = []
+        for name, value in sorted(exposures.items(), key=lambda item: item[1], reverse=True)[:6]:
+            icon = "🟢" if value >= 65 else "🔴" if value <= 35 else "🟡"
+            label = "Strong" if value >= 65 else "Weak" if value <= 35 else "Neutral"
+            rows.append(f"{_html(str(name).replace('_', ' ').title())}: {icon} {_html(label)}")
+        strongest = max(exposures.items(), key=lambda item: item[1], default=("N/A", 0))[0]
+        return "\n".join(
+            [
+                "🧠 <b>FACTOR EXPOSURE</b>",
+                *rows,
+                "",
+                "<b>Main driver:</b>",
+                f"Portfolio behavior is most tilted toward {_html(str(strongest).replace('_', ' '))}.",
+            ]
+        )
+
+    def build_stock_signals(self):
+        tickers = sorted(
+            self.quant.get("tickers", []),
+            key=lambda row: _safe_float(row.get("quant_score") or row.get("score")) or 0,
+            reverse=True,
+        )[:3]
+        if not tickers:
+            return ""
+        lines = ["📈 <b>TOP STOCK SIGNALS</b>"]
+        for idx, row in enumerate(tickers, 1):
+            score = _safe_float(row.get("quant_score") or row.get("score")) or 0
+            confidence = _safe_float(row.get("confidence")) or 0
+            icon = "🟢" if score >= 70 else "🔴" if score < 55 else "🟡"
+            reason = row.get("why_now")
+            if not reason or reason == "No clear Why Now trigger":
+                reason = row.get("research_note", "Signal is based on score, risk, and factor alignment.")
+            lines.extend(
+                [
+                    f"{idx}. {_html(row.get('ticker'))} — {icon} Score {_html(f'{score:.0f}')} | Confidence {_html(f'{confidence:.0f}%')}",
+                    f"Reason: {_html(str(reason)[:130])}",
+                    "",
+                ]
+            )
+        return "\n".join(lines).rstrip()
+
+    def build_quant_alerts(self):
+        lines = []
+        pairs = self.quant.get("pairs_trading", {}).get("candidates", [])
+        if pairs:
+            pair = pairs[0]
+            z_value = _safe_float(pair.get("spread_zscore")) or 0
+            lines.extend(
+                [
+                    f"🟢 New cointegration opportunity: {_html(pair.get('pair'))}",
+                    f"Z-Score: {_html(f'{z_value:.2f}')}",
+                    f"Signal: {_html(pair.get('signal', {}).get('action', 'Watch for mean reversion'))}",
+                ]
+            )
+        transitions = self.quant.get("market_regime", {}).get("transition_probabilities", {})
+        if transitions:
+            name, probability = max(transitions.items(), key=lambda item: item[1])
+            lines.extend(["", f"🟡 Regime transition risk: {_html(name)} probability {_html(f'{probability:.1f}%')}"])
+        if not lines:
+            return ""
+        return "\n".join(["🔬 <b>QUANT RESEARCH ALERTS</b>", *lines])
+
+    def build_action_watchlist(self):
+        actions = []
+        top_risk = sorted(
+            self.portfolio.get("risk_contributions", {}).items(),
+            key=lambda item: item[1],
+            reverse=True,
+        )
+        if top_risk:
+            actions.append(f"✅ Watch {top_risk[0][0]} risk contribution")
+        if _safe_float(self.portfolio.get("correlation", {}).get("average_correlation")) and _safe_float(self.portfolio.get("correlation", {}).get("average_correlation")) >= 0.60:
+            actions.append("✅ Monitor portfolio correlation")
+        if self.quant.get("pairs_trading", {}).get("candidates"):
+            actions.append("✅ Recheck pair spread and z-score")
+        actions.append("✅ Avoid adding highly correlated exposure without a thesis")
+        return "\n".join(["🎯 <b>ACTION WATCHLIST</b>", *actions[:5]])
+
+    def build_footer(self):
+        confidences = [_safe_float(row.get("confidence")) for row in self.quant.get("tickers", [])]
+        confidences = [value for value in confidences if value is not None]
+        confidence = sum(confidences) / len(confidences) if confidences else 70
+        data_quality = "Good" if confidence >= 60 else "Watch"
+        return "\n".join(
+            [
+                f"<b>Confidence:</b> {_html(f'{confidence:.0f}%')}",
+                f"<b>Data Quality:</b> {_html(data_quality)}",
+                "<b>Next Update:</b> 30 minutes",
+            ]
+        )
+
+    def build_summary(self):
+        severity, status = self._health_status()
+        return "\n".join(
+            [
+                "🚨 <b>PORTFOLIO BRIEFING</b>",
+                f"<b>Status:</b> {self.status_icon(severity)} {_html(status)} | <b>Health:</b> {_html(self._portfolio_health())}/100",
+                f"<b>Main Risk:</b> {_html(self._main_risk())}",
+                f"<b>Watch:</b> {_html(self.build_action_watchlist().splitlines()[1] if len(self.build_action_watchlist().splitlines()) > 1 else 'Review portfolio risk dashboard')}",
+            ]
+        )
+
+    def build_detailed_report(self):
+        sections = [
+            self.build_header(),
+            self.build_portfolio_snapshot(),
+            self.build_top_risks(),
+            self.build_factor_exposure(),
+            self.build_stock_signals(),
+            self.build_quant_alerts(),
+            self.build_action_watchlist(),
+            self.build_footer(),
+        ]
+        return f"\n\n{self.DIVIDER}\n\n".join(section for section in sections if section)
+
+    def split_messages(self, text):
+        chunks = []
+        remaining = text
+        while len(remaining) > self.SOFT_LIMIT:
+            split_at = remaining.rfind(f"\n\n{self.DIVIDER}\n\n", 0, self.SOFT_LIMIT)
+            if split_at <= 0:
+                split_at = remaining.rfind("\n\n", 0, self.SOFT_LIMIT)
+            if split_at <= 0:
+                split_at = self.SOFT_LIMIT
+            chunks.append(remaining[:split_at].strip())
+            remaining = remaining[split_at:].strip()
+        if remaining:
+            chunks.append(remaining)
+        return chunks
+
+    def inline_keyboard(self):
+        return {
+            "inline_keyboard": [
+                [
+                    {"text": "📊 Portfolio", "callback_data": "portfolio"},
+                    {"text": "⚠️ Risks", "callback_data": "risks"},
+                ],
+                [
+                    {"text": "🔬 Research", "callback_data": "research"},
+                    {"text": "📈 Top Stocks", "callback_data": "top_stocks"},
+                ],
+            ]
+        }
 
 
 def _direction_label(daily_change):
@@ -166,16 +458,18 @@ def format_sector_summary(sector_map, regime_label="Unknown"):
     return "\n".join(report)
 
 
-def _execute_send(url, chat_id, text, retries=3):
+def _execute_send(url, chat_id, text, retries=3, parse_mode="MarkdownV2", reply_markup=None):
     if requests is None:
         print("Telegram Failure: requests is not installed.")
         return False
     payload = {
         "chat_id": chat_id,
         "text": text,
-        "parse_mode": "MarkdownV2",
+        "parse_mode": parse_mode,
         "disable_web_page_preview": True,
     }
+    if reply_markup:
+        payload["reply_markup"] = reply_markup
 
     for attempt in range(retries):
         try:
@@ -198,7 +492,7 @@ def _execute_send(url, chat_id, text, retries=3):
     return False
 
 
-def send_long_message(message_text):
+def send_long_message(message_text, parse_mode="MarkdownV2", reply_markup=None):
     """Send a message, chunking only when needed for Telegram limits."""
     config = load_telegram_config()
     if not config.get("enabled", True):
@@ -217,7 +511,7 @@ def send_long_message(message_text):
 
     while message_text:
         if len(message_text) <= max_length:
-            _execute_send(url, chat_id, message_text)
+            _execute_send(url, chat_id, message_text, parse_mode=parse_mode, reply_markup=reply_markup)
             break
 
         split_at = message_text.rfind("\n", 0, max_length)
@@ -225,9 +519,20 @@ def send_long_message(message_text):
             split_at = max_length
 
         chunk = message_text[:split_at]
-        _execute_send(url, chat_id, chunk)
+        _execute_send(url, chat_id, chunk, parse_mode=parse_mode, reply_markup=reply_markup)
+        reply_markup = None
         message_text = message_text[split_at:].lstrip()
         time.sleep(0.8)
+
+
+def send_quant_intelligence_report(quant_payload, portfolio_payload=None):
+    """Send a summary first, then clean Telegram HTML detail chunks."""
+    builder = TelegramMessageBuilder(quant_payload, portfolio_payload or {})
+    send_long_message(builder.build_summary(), parse_mode="HTML", reply_markup=builder.inline_keyboard())
+    time.sleep(0.5)
+    for chunk in builder.split_messages(builder.build_detailed_report()):
+        send_long_message(chunk, parse_mode="HTML")
+        time.sleep(0.5)
 
 
 def send_bundle(watchlist_reports, sector_map, regime_label="Unknown", run_summary=None):
@@ -260,88 +565,4 @@ def send_bundle(watchlist_reports, sector_map, regime_label="Unknown", run_summa
 
 
 def format_quant_intelligence_report(quant_payload, portfolio_payload=None):
-    portfolio_payload = portfolio_payload or {}
-    regime = quant_payload.get("market_regime", {})
-    factors = quant_payload.get("factor_model", {})
-    portfolio_factors = quant_payload.get("portfolio_factor_exposure", {})
-    pairs = quant_payload.get("pairs_trading", {}).get("candidates", [])
-    backtests = quant_payload.get("signal_backtests", {})
-
-    lines = [
-        "*QUANT RESEARCH INTELLIGENCE*",
-        _format_metric_line("Regime", regime.get("regime", "Unknown")),
-        _format_metric_line("Regime confidence", f"{regime.get('regime_confidence', 0)}%"),
-        _format_metric_line("Model", regime.get("regime_model", "N/A")),
-    ]
-
-    transitions = regime.get("transition_probabilities", {})
-    if transitions:
-        transition_text = ", ".join(f"{name} {probability:.1f}%" for name, probability in list(transitions.items())[:3])
-        lines.append(_format_metric_line("Next-state probabilities", transition_text))
-
-    lines.extend(["", "*Factor leaderboard*"])
-    for item in factors.get("leaderboard", [])[:5]:
-        scores = item.get("scores", {})
-        driver = max(
-            ((name, value) for name, value in scores.items() if value is not None),
-            key=lambda pair: pair[1],
-            default=("N/A", 0),
-        )
-        lines.append(
-            f"- `{_escape_md(item.get('ticker'))}` {_escape_md(str(item.get('composite_score')))} "
-            f"| {_escape_md(driver[0])} {_escape_md(str(driver[1]))}"
-        )
-
-    exposures = portfolio_factors.get("exposures", {})
-    if exposures:
-        lines.extend(["", "*Portfolio factor exposure*"])
-        for name, value in sorted(exposures.items(), key=lambda item: item[1], reverse=True):
-            lines.append(f"- {_escape_md(name)}: {_escape_md(f'{value:.1f}/100')}")
-    for warning in portfolio_factors.get("warnings", [])[:3]:
-        lines.append(f"- Warning: {_escape_md(warning)}")
-
-    portfolio_warnings = portfolio_payload.get("risk_warnings", [])
-    if portfolio_payload:
-        lines.extend(
-            [
-                "",
-                "*Portfolio risk*",
-                _format_metric_line("Health", f"{portfolio_payload.get('portfolio_health', {}).get('score', 'N/A')}/100"),
-                _format_metric_line("Sortino", f"{portfolio_payload.get('sortino', {}).get('sortino_ratio', 0):.2f}"),
-                _format_metric_line("One-day CVaR", f"{portfolio_payload.get('tail_risk', {}).get('conditional_value_at_risk', 0) * 100:.2f}%"),
-                _format_metric_line("Average correlation", f"{portfolio_payload.get('correlation', {}).get('average_correlation', 0):.2f}"),
-            ]
-        )
-        for warning in portfolio_warnings[:3]:
-            lines.append(f"- {_escape_md(warning)}")
-
-    if pairs:
-        lines.extend(["", "*New pair opportunities*"])
-        for pair in pairs[:3]:
-            z_value = pair.get("spread_zscore", 0)
-            p_value = pair.get("engle_granger_p_value")
-            p_text = f"{p_value:.3f}" if p_value is not None else "N/A"
-            lines.append(
-                f"- `{_escape_md(pair.get('pair'))}` z={_escape_md(f'{z_value:.2f}')} "
-                f"p={_escape_md(p_text)} "
-                f"| {_escape_md(pair.get('signal', {}).get('action', 'watch'))}"
-            )
-
-    validated = []
-    for ticker, result in backtests.items():
-        performance = result.get("performance", {})
-        robustness = result.get("robustness", {})
-        if result.get("available") and performance.get("sharpe_ratio", 0) > 0:
-            validated.append((ticker, performance.get("sharpe_ratio", 0), robustness.get("positive_fold_pct", 0)))
-    if validated:
-        lines.extend(["", "*Historically stronger signals*"])
-        for ticker, sharpe, fold_pct in sorted(validated, key=lambda item: item[1], reverse=True)[:5]:
-            lines.append(f"- `{_escape_md(ticker)}` Sharpe {_escape_md(f'{sharpe:.2f}')} | positive folds {_escape_md(f'{fold_pct * 100:.0f}%')}")
-
-    lines.extend(
-        [
-            "",
-            _format_metric_line("Uncertainty", "Models can fail during structural breaks; position sizing and out-of-sample evidence remain mandatory."),
-        ]
-    )
-    return "\n".join(lines)
+    return TelegramMessageBuilder(quant_payload, portfolio_payload or {}).build_detailed_report()
