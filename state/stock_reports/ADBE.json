@@ -1,10 +1,10 @@
 {
   "ticker": "ADBE",
-  "generated_at": "2026-06-29T20:52:16.722504",
+  "generated_at": "2026-06-29T22:07:31.697774",
   "score": {
-    "final_score": 28.7,
+    "final_score": 29.45,
     "rating": "Avoid",
-    "confidence": 17.45,
+    "confidence": 20.24,
     "risk_level": "Moderate",
     "categories": {
       "technical": 20.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 78.0,
       "risk": 60.0,
-      "catalyst": 10.0
+      "catalyst": 25.0
     },
     "technical": {
       "score": 20.0,
@@ -39,8 +39,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 8896103.4,
-      "relative_volume": 0.8353171794293668,
+      "average_volume": 8899366.9,
+      "relative_volume": 0.8423450886152362,
       "accumulation_days": 4,
       "distribution_days": 7,
       "evidence": []
@@ -61,11 +61,11 @@
         "sharpe_ratio": -1.2750825979366989,
         "sortino_ratio": -1.499413792966554,
         "calmar_ratio": -0.5906507884769653,
-        "beta": 0.8174154410821642,
-        "alpha": -0.5902423703674234,
-        "capm_expected_return": 0.1480287100257681,
+        "beta": 0.8174171553302814,
+        "alpha": -0.5902427113188832,
+        "capm_expected_return": 0.14802905097722788,
         "actual_return": -0.4422136603416553,
-        "market_return": 0.1810936062448185
+        "market_return": 0.18109364357225416
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -73,12 +73,13 @@
       ]
     },
     "catalyst": {
-      "score": 10.0,
+      "score": 25.0,
       "evidence": [
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; revenue growth is strong; guidance change"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; revenue growth is strong; major news; guidance change"
   },
   "fundamentals": {
     "ticker": "ADBE",
@@ -136,7 +137,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8353171794293668,
+    "relative_volume": 0.8423450886152362,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -188,9 +189,9 @@
     "analyst_revision": false,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 2,
+    "bullish_news_score": 4,
     "bearish_news_score": 0,
     "institutional_ownership": 0.88154,
     "detail": {
@@ -236,6 +237,7 @@
       "eps_growth_implied": 57.55
     },
     "evidence": [
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -257,6 +259,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Adobe\u2019s Agentic AI Push and Russell Index Shift Might Change The Case For Investing In Adobe (ADBE)",
+        "source": "Simply Wall St.",
+        "published": "2026-06-29T21:08:18Z",
+        "summary": "In late June 2026, Adobe Inc. was added to several Russell value and defensive benchmarks and unveiled a broad set of AI-powered upgrades across Firefly, Creative Cloud, GenStudio and CX Enterprise, supported by a new data integration from LiveRamp for commerce media networks. Together with record fiscal second-quarter revenue and a raised full-year outlook, these moves highlight Adobe\u2019s push to position its agentic AI platform as core infrastructure for both individual creators and large...",
+        "bullish_score": 3,
+        "bearish_score": 0,
+        "importance_score": 75,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Sector Update: Consumer Stocks Mixed Late Afternoon",
         "source": "MT Newswires",
@@ -296,16 +308,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Amazon climbs as Adobe data points to stronger-than-expected Prime Day demand",
-        "source": "Proactive",
-        "published": "2026-06-29T17:12:00Z",
-        "summary": "Amazon.com Inc (NASDAQ:AMZN) shares rose nearly 4% in trading on Monday following reports indicating stronger-than-expected consumer demand during its extended Prime Day event, which took place from June 23 to June 26. According to data from Adobe Analytics shared with Retail Dive, US online...",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -325,33 +327,33 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5176,
-    "probability_pct": 51.76,
+    "probability_of_outperformance": 0.5325,
+    "probability_pct": 53.25,
     "confidence": "High",
     "evidence": [
-      "Composite score 28.7/100"
+      "Composite score 29.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 28.7,
+    "final_score": 29.45,
     "technical_score": 20.0,
     "momentum_score": 10.0,
     "volume_score": 0,
     "fundamental_score": 78.0,
     "risk_score": 60.0,
-    "catalyst_score": 10.0,
+    "catalyst_score": 25.0,
     "revenue_growth": 0.127,
     "eps_growth": 0.079,
     "roe": 0.62953997,
     "forward_pe": 7.4733715,
-    "relative_volume": 0.8353171794293668,
+    "relative_volume": 0.8423450886152362,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -367,27 +369,27 @@
       "sharpe_ratio": -1.2750825979366989,
       "sortino_ratio": -1.499413792966554,
       "calmar_ratio": -0.5906507884769653,
-      "beta": 0.8174154410821642,
-      "alpha": -0.5902423703674234,
-      "capm_expected_return": 0.1480287100257681,
+      "beta": 0.8174171553302814,
+      "alpha": -0.5902427113188832,
+      "capm_expected_return": 0.14802905097722788,
       "actual_return": -0.4422136603416553,
-      "market_return": 0.1810936062448185
+      "market_return": 0.18109364357225416
     },
     "capm": {
-      "beta": 0.8174154410821642,
-      "alpha": -0.5902423703674234,
-      "capm_expected_return": 0.1480287100257681,
+      "beta": 0.8174171553302814,
+      "alpha": -0.5902427113188832,
+      "capm_expected_return": 0.14802905097722788,
       "actual_return": -0.4422136603416553,
-      "market_return": 0.1810936062448185,
+      "market_return": 0.18109364357225416,
       "interpretation": "Beta 0.82: Moves roughly in line with the market. CAPM expected return is 14.80%; realized alpha is -59.02%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
       "actual_return": -0.4422136603416553,
       "components": {
-        "market_component": 0.1480287100257681,
+        "market_component": 0.14802905097722788,
         "momentum_component": 0.0,
         "volatility_drag": -0.019362355200711313,
-        "alpha_component": -0.5902423703674234
+        "alpha_component": -0.5902427113188832
       },
       "component_weights_pct": {
         "market_component": 19.54,
@@ -413,8 +415,8 @@
       "score": 0.0
     },
     "volume": {
-      "average_volume": 8896103.4,
-      "relative_volume": 0.8353171794293668,
+      "average_volume": 8899366.9,
+      "relative_volume": 0.8423450886152362,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -432,5 +434,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ADBE\nRating: Avoid | Score: 28.7/100 | Confidence: 17.45/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 193.41000366210938 | Resistance: 274.0299987792969\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.4733715\nNews/Catalyst: Sector Update: Consumer Stocks Mixed Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ADBE\nRating: Avoid | Score: 29.45/100 | Confidence: 20.24/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 193.41000366210938 | Resistance: 274.0299987792969\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.4733715\nNews/Catalyst: Adobe\u2019s Agentic AI Push and Russell Index Shift Might Change The Case For Investing In Adobe (ADBE)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

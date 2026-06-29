@@ -1,10 +1,10 @@
 {
   "ticker": "BLK",
-  "generated_at": "2026-06-29T20:52:40.727777",
+  "generated_at": "2026-06-29T22:07:54.443595",
   "score": {
-    "final_score": 40.9,
+    "final_score": 41.65,
     "rating": "Drop",
-    "confidence": 32.23,
+    "confidence": 34.55,
     "risk_level": "Controlled",
     "categories": {
       "technical": 20.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 81.0,
       "risk": 100,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 20.0,
@@ -30,7 +30,7 @@
         "1m": -0.08692448990340773,
         "3m": 0.02320969351397384,
         "6m": -0.11764990942747733,
-        "12m": -0.05889760529362442
+        "12m": -0.058897491509267486
       },
       "acceleration": 0.082,
       "evidence": [
@@ -57,25 +57,26 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016487950509135874,
-        "annualized_volatility": 0.26173810005788595,
-        "maximum_drawdown": -0.23740317693162072,
-        "sharpe_ratio": 0.5878624749953925,
-        "sortino_ratio": 0.769464229171453,
-        "calmar_ratio": 0.5349484729974242,
-        "beta": 1.0625861357511457,
-        "alpha": -0.03856154796830075,
-        "capm_expected_return": 0.19242755526892122,
-        "actual_return": 0.15386600730062047,
-        "market_return": 0.1810936062448185
+        "volatility": 0.01648794897367026,
+        "annualized_volatility": 0.261738075683125,
+        "maximum_drawdown": -0.2374032076892708,
+        "sharpe_ratio": 0.5878625038935015,
+        "sortino_ratio": 0.7694644612206655,
+        "calmar_ratio": 0.5349484036902049,
+        "beta": 1.062587517731013,
+        "alpha": -0.03856184466495771,
+        "capm_expected_return": 0.19242784520030634,
+        "actual_return": 0.15386600053534863,
+        "market_return": 0.18109364357225416
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "major news",
         "guidance change"
       ]
     },
@@ -189,10 +190,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 1,
+    "bullish_news_score": 2,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.84310997,
     "detail": {
       "earnings": {
@@ -239,6 +240,7 @@
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -260,6 +262,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Top Research Reports for UnitedHealth, BlackRock & Salesforce",
+        "source": "Zacks",
+        "published": "2026-06-29T20:32:00Z",
+        "summary": "UnitedHealth, BlackRock and Salesforce lead today's featured research, highlighting growth drivers, key risks and analyst views shaping each outlook.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "More Nasdaq 100 ETFs Are Coming. That Means More Buyers For SpaceX Stock",
+        "source": "Investopedia",
+        "published": "2026-06-29T19:59:19Z",
+        "summary": "State Street and BlackRock want to compete with Invesco's \"QQQ\"\u2014one of the largest ETFs by assets under management.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Momenta Targets $752 Million Hong Kong IPO",
         "source": "GuruFocus.com",
@@ -289,26 +311,6 @@
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      },
-      {
-        "headline": "BlackRock Fuels 10% Surge for Ethena as USDe Joins $25 Trillion Aladdin Platform",
-        "source": "BeInCrypto",
-        "published": "2026-06-29T16:32:28Z",
-        "summary": "Ethena says USDe now reaches BlackRock's Aladdin institutions as ENA rallies, with BUIDL backing its white-label product.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "BlackRock Bitcoin News: IBIT Suffers $1.3Bn Outflow as Iran Shakes Safe Money",
-        "source": "99bitcoins",
-        "published": "2026-06-29T15:36:20Z",
-        "summary": "In crypto news today (June 26), BTC USD continues its struggle to hold key support at $60,000, currently trading around $60,200. Liquidations slowed considerably from $1Bn late last week to $206M in the past 24-hours, with $150M of that figure coming from long positions. ETF flows closed last week bearishly, ...",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -328,26 +330,26 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8316,
-    "probability_pct": 83.16,
+    "probability_of_outperformance": 0.8399,
+    "probability_pct": 83.99,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 40.9/100"
+      "Composite score 41.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.9,
+    "final_score": 41.65,
     "technical_score": 20.0,
     "momentum_score": 25.0,
     "volume_score": 0,
     "fundamental_score": 81.0,
     "risk_score": 100,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.27,
     "eps_growth": 0.459,
     "roe": 0.118990004,
@@ -358,43 +360,43 @@
     "price_above_sma200": false,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
       "daily": -0.015071927036445887,
       "weekly": -0.09657330544366238,
       "monthly": -0.08692448990340773,
-      "annual": -0.05889760529362442
+      "annual": -0.058897491509267486
     },
     "risk": {
-      "volatility": 0.016487950509135874,
-      "annualized_volatility": 0.26173810005788595,
-      "maximum_drawdown": -0.23740317693162072,
-      "sharpe_ratio": 0.5878624749953925,
-      "sortino_ratio": 0.769464229171453,
-      "calmar_ratio": 0.5349484729974242,
-      "beta": 1.0625861357511457,
-      "alpha": -0.03856154796830075,
-      "capm_expected_return": 0.19242755526892122,
-      "actual_return": 0.15386600730062047,
-      "market_return": 0.1810936062448185
+      "volatility": 0.01648794897367026,
+      "annualized_volatility": 0.261738075683125,
+      "maximum_drawdown": -0.2374032076892708,
+      "sharpe_ratio": 0.5878625038935015,
+      "sortino_ratio": 0.7694644612206655,
+      "calmar_ratio": 0.5349484036902049,
+      "beta": 1.062587517731013,
+      "alpha": -0.03856184466495771,
+      "capm_expected_return": 0.19242784520030634,
+      "actual_return": 0.15386600053534863,
+      "market_return": 0.18109364357225416
     },
     "capm": {
-      "beta": 1.0625861357511457,
-      "alpha": -0.03856154796830075,
-      "capm_expected_return": 0.19242755526892122,
-      "actual_return": 0.15386600730062047,
-      "market_return": 0.1810936062448185,
+      "beta": 1.062587517731013,
+      "alpha": -0.03856184466495771,
+      "capm_expected_return": 0.19242784520030634,
+      "actual_return": 0.15386600053534863,
+      "market_return": 0.18109364357225416,
       "interpretation": "Beta 1.06: Moves roughly in line with the market. CAPM expected return is 19.24%; realized alpha is -3.86%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.15386600730062047,
+      "actual_return": 0.15386600053534863,
       "components": {
-        "market_component": 0.19242755526892122,
+        "market_component": 0.19242784520030634,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0023476200115771896,
-        "alpha_component": -0.03856154796830075
+        "volatility_drag": -0.0023476151366250034,
+        "alpha_component": -0.03856184466495771
       },
       "component_weights_pct": {
         "market_component": 82.47,
@@ -407,15 +409,15 @@
     "trend": {
       "sma20": 1011.5518920898437,
       "sma50": 1039.2516943359376,
-      "sma200": 1055.4758319091798,
-      "ema20": 1012.1075979975092,
-      "ema50": 1024.670696755913,
-      "ema200": 1032.99026979729
+      "sma200": 1055.4758322143555,
+      "ema20": 1012.1075979975253,
+      "ema50": 1024.6706968027754,
+      "ema200": 1032.9902701573503
     },
     "momentum": {
       "3m": 0.02320969351397384,
       "6m": -0.11764990942747733,
-      "12m": -0.05889760529362442,
+      "12m": -0.058897491509267486,
       "24m": 0.0,
       "score": 25.0
     },
@@ -439,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BLK\nRating: Drop | Score: 40.9/100 | Confidence: 32.23/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 934.0599975585938 | Resistance: 1104.030029296875\nFundamental Outlook: Quality Compounder | Forward P/E: 15.557004\nNews/Catalyst: Momenta Targets $752 Million Hong Kong IPO\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BLK\nRating: Drop | Score: 41.65/100 | Confidence: 34.55/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 934.0599975585938 | Resistance: 1104.030029296875\nFundamental Outlook: Quality Compounder | Forward P/E: 15.557004\nNews/Catalyst: Top Research Reports for UnitedHealth, BlackRock & Salesforce\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

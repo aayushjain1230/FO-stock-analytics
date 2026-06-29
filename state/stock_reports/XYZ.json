@@ -1,10 +1,10 @@
 {
   "ticker": "XYZ",
-  "generated_at": "2026-06-29T20:53:19.315937",
+  "generated_at": "2026-06-29T22:08:32.279168",
   "score": {
-    "final_score": 67.25,
+    "final_score": 68.0,
     "rating": "Watch",
-    "confidence": 55.36,
+    "confidence": 58.0,
     "risk_level": "Moderate",
     "categories": {
       "technical": 90.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 55.0,
       "risk": 60.0,
-      "catalyst": 50.0
+      "catalyst": 65.0
     },
     "technical": {
       "score": 90.0,
@@ -50,8 +50,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 6267562.95,
-      "relative_volume": 1.123891224738317,
+      "average_volume": 6267681.65,
+      "relative_volume": 1.1242487084518722,
       "accumulation_days": 7,
       "distribution_days": 1,
       "evidence": [
@@ -72,11 +72,11 @@
         "sharpe_ratio": 0.45705152263232696,
         "sortino_ratio": 0.599770402090167,
         "calmar_ratio": 0.20128747259798208,
-        "beta": 1.7195022192998195,
-        "alpha": -0.07623089829614701,
-        "capm_expected_return": 0.311390857838973,
+        "beta": 1.7195021686088898,
+        "alpha": -0.07623095330095034,
+        "capm_expected_return": 0.31139091284377635,
         "actual_return": 0.235159959542826,
-        "market_return": 0.1810936062448185
+        "market_return": 0.18109364357225416
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -84,10 +84,11 @@
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 65.0,
       "evidence": [
         "analyst revision",
         "sector strength",
+        "major news",
         "guidance change"
       ]
     },
@@ -149,7 +150,7 @@
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.123891224738317,
+    "relative_volume": 1.1242487084518722,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -201,10 +202,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 1,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.84442,
     "detail": {
       "earnings": {
@@ -251,6 +252,7 @@
     "evidence": [
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -272,6 +274,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Top Research Reports for UnitedHealth, BlackRock & Salesforce",
+        "source": "Zacks",
+        "published": "2026-06-29T20:32:00Z",
+        "summary": "UnitedHealth, BlackRock and Salesforce lead today's featured research, highlighting growth drivers, key risks and analyst views shaping each outlook.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "PayPal's PYUSD Push: Can Stablecoins Improve Merchant Payments?",
         "source": "Zacks",
@@ -311,16 +323,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Nu Holdings' Rising ARPAC Shows Monetization Strength is Deepening",
-        "source": "Zacks",
-        "published": "2026-06-26T13:49:00Z",
-        "summary": "NU's rising ARPAC signals stronger monetization as the company generates more revenue from each active customer over time.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -340,34 +342,34 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7474,
-    "probability_pct": 74.74,
+    "probability_of_outperformance": 0.7585,
+    "probability_pct": 75.85,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 67.25/100"
+      "Composite score 68.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 67.25,
+    "final_score": 68.0,
     "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 55.0,
     "risk_score": 60.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 65.0,
     "revenue_growth": 0.049,
     "eps_growth": null,
     "roe": 0.03743,
     "forward_pe": 15.655083,
-    "relative_volume": 1.123891224738317,
+    "relative_volume": 1.1242487084518722,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -383,27 +385,27 @@
       "sharpe_ratio": 0.45705152263232696,
       "sortino_ratio": 0.599770402090167,
       "calmar_ratio": 0.20128747259798208,
-      "beta": 1.7195022192998195,
-      "alpha": -0.07623089829614701,
-      "capm_expected_return": 0.311390857838973,
+      "beta": 1.7195021686088898,
+      "alpha": -0.07623095330095034,
+      "capm_expected_return": 0.31139091284377635,
       "actual_return": 0.235159959542826,
-      "market_return": 0.1810936062448185
+      "market_return": 0.18109364357225416
     },
     "capm": {
-      "beta": 1.7195022192998195,
-      "alpha": -0.07623089829614701,
-      "capm_expected_return": 0.311390857838973,
+      "beta": 1.7195021686088898,
+      "alpha": -0.07623095330095034,
+      "capm_expected_return": 0.31139091284377635,
       "actual_return": 0.235159959542826,
-      "market_return": 0.1810936062448185,
+      "market_return": 0.18109364357225416,
       "interpretation": "Beta 1.72: Moves roughly 72% more than the market. CAPM expected return is 31.14%; realized alpha is -7.62%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
       "actual_return": 0.235159959542826,
       "components": {
-        "market_component": 0.311390857838973,
+        "market_component": 0.31139091284377635,
         "momentum_component": 0.04956994283402888,
         "volatility_drag": -0.05290304173518721,
-        "alpha_component": -0.07623089829614701
+        "alpha_component": -0.07623095330095034
       },
       "component_weights_pct": {
         "market_component": 63.54,
@@ -429,8 +431,8 @@
       "score": 75.0
     },
     "volume": {
-      "average_volume": 6267562.95,
-      "relative_volume": 1.123891224738317,
+      "average_volume": 6267681.65,
+      "relative_volume": 1.1242487084518722,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -448,5 +450,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: XYZ\nRating: Watch | Score: 67.25/100 | Confidence: 55.36/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 57.029998779296875 | Resistance: 78.0199966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.655083\nNews/Catalyst: PayPal's PYUSD Push: Can Stablecoins Improve Merchant Payments?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: XYZ\nRating: Watch | Score: 68.0/100 | Confidence: 58.0/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: trend continuation | Support: 57.029998779296875 | Resistance: 78.0199966430664\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.655083\nNews/Catalyst: Top Research Reports for UnitedHealth, BlackRock & Salesforce\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
