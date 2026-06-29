@@ -1,10 +1,10 @@
 {
   "ticker": "CPRT",
-  "generated_at": "2026-06-29T19:02:43.204905",
+  "generated_at": "2026-06-29T20:53:00.925305",
   "score": {
-    "final_score": 26.25,
+    "final_score": 26.75,
     "rating": "Avoid",
-    "confidence": 19.2,
+    "confidence": 20.74,
     "risk_level": "Moderate",
     "categories": {
       "technical": 10.0,
@@ -12,36 +12,36 @@
       "volume": 0,
       "fundamental": 70.0,
       "risk": 60.0,
-      "catalyst": 35.0
+      "catalyst": 45.0
     },
     "technical": {
       "score": 10.0,
       "evidence": [
         "Stock is not materially extended from SMA20"
       ],
-      "support": 28.434999465942383,
+      "support": 28.100000381469727,
       "resistance": 34.400001525878906,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.14558291739988027,
-        "3m": -0.12318843051616635,
-        "6m": -0.27276213361587465,
-        "12m": -0.41055144119874487
+        "1m": -0.15564899602849658,
+        "3m": -0.1335183436003543,
+        "6m": -0.28132988547127125,
+        "12m": -0.417495866422971
       },
-      "acceleration": 0.0132,
+      "acceleration": 0.0071,
       "evidence": [
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 12397641.45,
-      "relative_volume": 0.8114147388897104,
+      "average_volume": 12786310.1,
+      "relative_volume": 1.3946949401766817,
       "accumulation_days": 4,
-      "distribution_days": 4,
+      "distribution_days": 5,
       "evidence": []
     },
     "fundamental": {
@@ -52,17 +52,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.016464234650755,
-        "annualized_volatility": 0.26136162247746064,
-        "maximum_drawdown": -0.5545896084276613,
-        "sharpe_ratio": -1.0836463081040162,
-        "sortino_ratio": -1.3761455860987486,
-        "calmar_ratio": -0.4908792182507274,
-        "beta": 0.5602949311670308,
-        "alpha": -0.3846079204329873,
-        "capm_expected_return": 0.10138436315521147,
-        "actual_return": -0.2832235572777758,
-        "market_return": 0.1809482069452946
+        "volatility": 0.01656234648664551,
+        "annualized_volatility": 0.2629190995880903,
+        "maximum_drawdown": -0.5598370878084877,
+        "sharpe_ratio": -1.0982895339979324,
+        "sortino_ratio": -1.3808327188307996,
+        "calmar_ratio": -0.4940350453556704,
+        "beta": 0.5568532039887906,
+        "alpha": -0.38960385022507116,
+        "capm_expected_return": 0.10084255485931162,
+        "actual_return": -0.28876129536575956,
+        "market_return": 0.1810936062448185
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -70,13 +70,14 @@
       ]
     },
     "catalyst": {
-      "score": 35.0,
+      "score": 45.0,
       "evidence": [
         "analyst revision",
-        "insider buying"
+        "insider buying",
+        "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Momentum is accelerating; analyst revision; insider buying"
+    "explanation": "Stock is not materially extended from SMA20; Momentum is accelerating; analyst revision; insider buying; guidance change"
   },
   "fundamentals": {
     "ticker": "CPRT",
@@ -130,15 +131,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 35.84354353063682,
+    "rsi": 34.49438007202063,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.8114147388897104,
+    "relative_volume": 1.3946949401766817,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
-    "support": 28.434999465942383,
+    "support": 28.100000381469727,
     "resistance": 34.400001525878906
   },
   "earnings": {
@@ -187,9 +188,9 @@
     "insider_buying": true,
     "sector_strength": false,
     "major_news": false,
-    "guidance_change": false,
+    "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 1,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.87251,
     "detail": {
       "earnings": {
@@ -230,12 +231,13 @@
         "last_surprise_pct": 0.0571,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 45.01,
+      "analyst_upside_pct": 46.62,
       "eps_growth_implied": 4.88
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
-      "insider ownership or purchase data is supportive"
+      "insider ownership or purchase data is supportive",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -256,6 +258,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "US Equity Markets End Higher Amid Pause in US-Iran Hostilities",
+        "source": "MT Newswires",
+        "published": "2026-06-29T20:15:10Z",
+        "summary": "US equity indexes were higher on Monday after the US and Iran paused hostilities, followed by gains",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Here\u2019s Why Renaissance Investment Management Sold Copart (CPRT)",
         "source": "Insider Monkey",
@@ -295,16 +307,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "3 S&P 500 Stocks with Solid Fundamentals",
-        "source": "StockStory",
-        "published": "2026-06-08T12:37:50Z",
-        "summary": "The biggest companies in the world call the S&P 500 (^GSPC) home, but only a handful are still growing rapidly. Some of these industry leaders are executing exceptionally well and rewarding shareholders.",
-        "bullish_score": 0,
-        "bearish_score": 1,
-        "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -324,28 +326,28 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5599,
-    "probability_pct": 55.99,
+    "probability_of_outperformance": 0.5697,
+    "probability_pct": 56.97,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 26.25/100"
+      "Composite score 26.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 26.25,
+    "final_score": 26.75,
     "technical_score": 10.0,
     "momentum_score": 10.0,
     "volume_score": 0,
     "fundamental_score": 70.0,
     "risk_score": 60.0,
-    "catalyst_score": 35.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.021,
     "eps_growth": 0.023,
     "roe": 0.17607,
     "forward_pe": 17.026947,
-    "relative_volume": 0.8114147388897104,
+    "relative_volume": 1.3946949401766817,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -355,66 +357,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.069230763467661,
-      "weekly": -0.03544776433245056,
-      "monthly": -0.14558291739988027,
-      "annual": -0.41055144119874487
+      "daily": -0.08019636388791462,
+      "weekly": -0.04681136981666034,
+      "monthly": -0.15564899602849658,
+      "annual": -0.417495866422971
     },
     "risk": {
-      "volatility": 0.016464234650755,
-      "annualized_volatility": 0.26136162247746064,
-      "maximum_drawdown": -0.5545896084276613,
-      "sharpe_ratio": -1.0836463081040162,
-      "sortino_ratio": -1.3761455860987486,
-      "calmar_ratio": -0.4908792182507274,
-      "beta": 0.5602949311670308,
-      "alpha": -0.3846079204329873,
-      "capm_expected_return": 0.10138436315521147,
-      "actual_return": -0.2832235572777758,
-      "market_return": 0.1809482069452946
+      "volatility": 0.01656234648664551,
+      "annualized_volatility": 0.2629190995880903,
+      "maximum_drawdown": -0.5598370878084877,
+      "sharpe_ratio": -1.0982895339979324,
+      "sortino_ratio": -1.3808327188307996,
+      "calmar_ratio": -0.4940350453556704,
+      "beta": 0.5568532039887906,
+      "alpha": -0.38960385022507116,
+      "capm_expected_return": 0.10084255485931162,
+      "actual_return": -0.28876129536575956,
+      "market_return": 0.1810936062448185
     },
     "capm": {
-      "beta": 0.5602949311670308,
-      "alpha": -0.3846079204329873,
-      "capm_expected_return": 0.10138436315521147,
-      "actual_return": -0.2832235572777758,
-      "market_return": 0.1809482069452946,
-      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.14%; realized alpha is -38.46%, meaning negative alpha versus CAPM."
+      "beta": 0.5568532039887906,
+      "alpha": -0.38960385022507116,
+      "capm_expected_return": 0.10084255485931162,
+      "actual_return": -0.28876129536575956,
+      "market_return": 0.1810936062448185,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.08%; realized alpha is -38.96%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.2832235572777758,
+      "actual_return": -0.28876129536575956,
       "components": {
-        "market_component": 0.10138436315521147,
+        "market_component": 0.10084255485931162,
         "momentum_component": 0.0,
-        "volatility_drag": -0.0022723244954921287,
-        "alpha_component": -0.3846079204329873
+        "volatility_drag": -0.0025838199176180577,
+        "alpha_component": -0.38960385022507116
       },
       "component_weights_pct": {
-        "market_component": 20.76,
+        "market_component": 20.45,
         "momentum_component": 0.0,
-        "volatility_drag": 0.47,
-        "alpha_component": 78.77
+        "volatility_drag": 0.52,
+        "alpha_component": 79.02
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 30.495249843597414,
-      "sma50": 32.19810001373291,
-      "sma200": 37.823625020980835,
-      "ema20": 30.588896250452876,
-      "ema50": 31.9312424982218,
-      "ema200": 37.63969551908551
+      "sma20": 30.47849988937378,
+      "sma50": 32.191400032043454,
+      "sma200": 37.82195002555847,
+      "ema20": 30.556991575741193,
+      "ema50": 31.91810527922287,
+      "ema200": 37.636362194861896
     },
     "momentum": {
-      "3m": -0.12318843051616635,
-      "6m": -0.27276213361587465,
-      "12m": -0.41055144119874487,
+      "3m": -0.1335183436003543,
+      "6m": -0.28132988547127125,
+      "12m": -0.417495866422971,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 12397641.45,
-      "relative_volume": 0.8114147388897104,
+      "average_volume": 12786310.1,
+      "relative_volume": 1.3946949401766817,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -432,5 +434,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CPRT\nRating: Avoid | Score: 26.25/100 | Confidence: 19.2/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.434999465942383 | Resistance: 34.400001525878906\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.026947\nNews/Catalyst: Here\u2019s Why Renaissance Investment Management Sold Copart (CPRT)\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CPRT\nRating: Avoid | Score: 26.75/100 | Confidence: 20.74/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 28.100000381469727 | Resistance: 34.400001525878906\nFundamental Outlook: Fundamentally Strong | Forward P/E: 17.026947\nNews/Catalyst: US Equity Markets End Higher Amid Pause in US-Iran Hostilities\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "APA",
-  "generated_at": "2026-06-29T19:02:12.333796",
+  "generated_at": "2026-06-29T20:52:27.994463",
   "score": {
-    "final_score": 39.5,
+    "final_score": 37.0,
     "rating": "Drop",
-    "confidence": 27.05,
+    "confidence": 25.21,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 32.0,
+      "technical": 22.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 70.0,
@@ -15,25 +15,24 @@
       "catalyst": 20.0
     },
     "technical": {
-      "score": 32.0,
+      "score": 22.0,
       "evidence": [
         "Price above SMA200",
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
-      "support": 33.0099983215332,
+      "support": 32.959999084472656,
       "resistance": 43.7400016784668,
-      "risk_reward": 535.49
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.09581166484964687,
-        "3m": -0.2509330013380683,
-        "6m": 0.37796708137480084,
-        "12m": 0.8647979811304398
+        "1m": -0.09772788979252556,
+        "3m": -0.25252048130316274,
+        "6m": 0.3750467883460733,
+        "12m": 0.8608459588957382
       },
-      "acceleration": -0.4399,
+      "acceleration": -0.44,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
@@ -41,8 +40,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 5583074.85,
-      "relative_volume": 0.44281996326809053,
+      "average_volume": 5685252.6,
+      "relative_volume": 0.7943098253892888,
       "accumulation_days": 1,
       "distribution_days": 7,
       "evidence": []
@@ -57,17 +56,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.031136969001292,
-        "annualized_volatility": 0.494284059346475,
-        "maximum_drawdown": -0.5519892935728687,
-        "sharpe_ratio": 0.4474747663278362,
-        "sortino_ratio": 0.5899340977738006,
-        "calmar_ratio": 0.1866175460453611,
-        "beta": 0.9383857024742559,
-        "alpha": 0.051380433669820896,
-        "capm_expected_return": 0.1697992102858173,
-        "actual_return": 0.2211796439556382,
-        "market_return": 0.1809482069452946
+        "volatility": 0.03113715121011213,
+        "annualized_volatility": 0.4942869518218235,
+        "maximum_drawdown": -0.5519892935728685,
+        "sharpe_ratio": 0.44530537480605176,
+        "sortino_ratio": 0.5873310111580843,
+        "calmar_ratio": 0.18447757578020293,
+        "beta": 0.9376570079286145,
+        "alpha": 0.05030494735623878,
+        "capm_expected_return": 0.16980368898651915,
+        "actual_return": 0.22010863634275793,
+        "market_return": 0.1810936062448185
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -79,7 +78,7 @@
         "earnings surprise"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 6m return is positive; 12m return is positive; eps growth is strong"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "APA",
@@ -133,15 +132,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 27.93136164306148,
+    "rsi": 27.661594304062547,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.44281996326809053,
+    "relative_volume": 0.7943098253892888,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 33.0099983215332,
+    "support": 32.959999084472656,
     "resistance": 43.7400016784668
   },
   "earnings": {
@@ -233,7 +232,7 @@
         "last_surprise_pct": 0.20899999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 31.53,
+      "analyst_upside_pct": 31.85,
       "eps_growth_implied": -0.36
     },
     "evidence": [
@@ -332,13 +331,13 @@
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 39.5/100"
+      "Composite score 37.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 39.5,
-    "technical_score": 32.0,
+    "final_score": 37.0,
+    "technical_score": 22.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 70.0,
@@ -348,7 +347,7 @@
     "eps_growth": 0.322,
     "roe": 0.26217,
     "forward_pe": 7.765639,
-    "relative_volume": 0.44281996326809053,
+    "relative_volume": 0.7943098253892888,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -358,66 +357,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0006058909051995798,
-      "weekly": -0.034210583553858864,
-      "monthly": -0.09581166484964687,
-      "annual": 0.8647979811304398
+      "daily": -0.0015146694820621365,
+      "weekly": -0.03625735821066167,
+      "monthly": -0.09772788979252556,
+      "annual": 0.8608459588957382
     },
     "risk": {
-      "volatility": 0.031136969001292,
-      "annualized_volatility": 0.494284059346475,
-      "maximum_drawdown": -0.5519892935728687,
-      "sharpe_ratio": 0.4474747663278362,
-      "sortino_ratio": 0.5899340977738006,
-      "calmar_ratio": 0.1866175460453611,
-      "beta": 0.9383857024742559,
-      "alpha": 0.051380433669820896,
-      "capm_expected_return": 0.1697992102858173,
-      "actual_return": 0.2211796439556382,
-      "market_return": 0.1809482069452946
+      "volatility": 0.03113715121011213,
+      "annualized_volatility": 0.4942869518218235,
+      "maximum_drawdown": -0.5519892935728685,
+      "sharpe_ratio": 0.44530537480605176,
+      "sortino_ratio": 0.5873310111580843,
+      "calmar_ratio": 0.18447757578020293,
+      "beta": 0.9376570079286145,
+      "alpha": 0.05030494735623878,
+      "capm_expected_return": 0.16980368898651915,
+      "actual_return": 0.22010863634275793,
+      "market_return": 0.1810936062448185
     },
     "capm": {
-      "beta": 0.9383857024742559,
-      "alpha": 0.051380433669820896,
-      "capm_expected_return": 0.1697992102858173,
-      "actual_return": 0.2211796439556382,
-      "market_return": 0.1809482069452946,
-      "interpretation": "Beta 0.94: Moves roughly in line with the market. CAPM expected return is 16.98%; realized alpha is 5.14%, meaning positive alpha versus CAPM."
+      "beta": 0.9376570079286145,
+      "alpha": 0.05030494735623878,
+      "capm_expected_return": 0.16980368898651915,
+      "actual_return": 0.22010863634275793,
+      "market_return": 0.1810936062448185,
+      "interpretation": "Beta 0.94: Moves roughly in line with the market. CAPM expected return is 16.98%; realized alpha is 5.03%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2211796439556382,
+      "actual_return": 0.22010863634275793,
       "components": {
-        "market_component": 0.1697992102858173,
-        "momentum_component": 0.21619949528260995,
-        "volatility_drag": -0.048856811869295004,
-        "alpha_component": 0.051380433669820896
+        "market_component": 0.16980368898651915,
+        "momentum_component": 0.21521148972393456,
+        "volatility_drag": -0.0488573903643647,
+        "alpha_component": 0.05030494735623878
       },
       "component_weights_pct": {
-        "market_component": 34.92,
-        "momentum_component": 44.46,
-        "volatility_drag": 10.05,
-        "alpha_component": 10.57
+        "market_component": 35.07,
+        "momentum_component": 44.45,
+        "volatility_drag": 10.09,
+        "alpha_component": 10.39
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 35.597500038146975,
-      "sma50": 37.1658642578125,
-      "sma200": 29.830022506713867,
-      "ema20": 35.06855249809493,
-      "ema50": 36.10309583423918,
-      "ema200": 31.18948363525165
+      "sma20": 35.594000053405765,
+      "sma50": 37.16446426391602,
+      "sma200": 29.829672546386718,
+      "ema20": 35.061885860490236,
+      "ema50": 36.1003507476288,
+      "ema200": 31.188787164706188
     },
     "momentum": {
-      "3m": -0.2509330013380683,
-      "6m": 0.37796708137480084,
-      "12m": 0.8647979811304398,
+      "3m": -0.25252048130316274,
+      "6m": 0.3750467883460733,
+      "12m": 0.8608459588957382,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 5583074.85,
-      "relative_volume": 0.44281996326809053,
+      "average_volume": 5685252.6,
+      "relative_volume": 0.7943098253892888,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -435,5 +434,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APA\nRating: Drop | Score: 39.5/100 | Confidence: 27.05/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 33.0099983215332 | Resistance: 43.7400016784668\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.765639\nNews/Catalyst: APA (APA) Is Sending 60% Of Free Cash Flow Back To Investors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APA\nRating: Drop | Score: 37.0/100 | Confidence: 25.21/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 32.959999084472656 | Resistance: 43.7400016784668\nFundamental Outlook: Fundamentally Strong | Forward P/E: 7.765639\nNews/Catalyst: APA (APA) Is Sending 60% Of Free Cash Flow Back To Investors\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

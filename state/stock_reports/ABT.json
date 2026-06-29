@@ -1,17 +1,17 @@
 {
   "ticker": "ABT",
-  "generated_at": "2026-06-29T19:02:00.059840",
+  "generated_at": "2026-06-29T20:52:15.690118",
   "score": {
-    "final_score": 42.55,
+    "final_score": 40.3,
     "rating": "Drop",
-    "confidence": 39.62,
-    "risk_level": "Controlled",
+    "confidence": 38.06,
+    "risk_level": "Moderate",
     "categories": {
       "technical": 53.0,
       "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 47.0,
-      "risk": 75.0,
+      "risk": 60.0,
       "catalyst": 45.0
     },
     "technical": {
@@ -25,17 +25,17 @@
       ],
       "support": 82.55999755859375,
       "resistance": 103.55999755859375,
-      "risk_reward": 1.0
+      "risk_reward": 1.07
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.07833133566382,
-        "3m": -0.09949200451023277,
-        "6m": -0.2459083425959877,
-        "12m": -0.28958581906697434
+        "1m": 0.07427573355785966,
+        "3m": -0.10287881337143889,
+        "6m": -0.2487444798876599,
+        "12m": -0.2922577678936691
       },
-      "acceleration": 0.0235,
+      "acceleration": 0.0215,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +43,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 14000373.75,
-      "relative_volume": 0.41190864636738717,
+      "average_volume": 14098256.0,
+      "relative_volume": 0.5479060672468992,
       "accumulation_days": 6,
       "distribution_days": 5,
       "evidence": [
@@ -57,22 +57,23 @@
       "evidence": []
     },
     "risk": {
-      "score": 75.0,
+      "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.01452444907607746,
-        "annualized_volatility": 0.23056848111313694,
-        "maximum_drawdown": -0.39639996523861276,
-        "sharpe_ratio": -0.022474869332401625,
-        "sortino_ratio": -0.028451721319337007,
-        "calmar_ratio": -0.07943412992846663,
-        "beta": 0.20309999437051995,
-        "alpha": -0.041932576297133074,
-        "capm_expected_return": 0.03675057981194501,
-        "actual_return": -0.005181996485188064,
-        "market_return": 0.1809482069452946
+        "volatility": 0.014531179921221169,
+        "annualized_volatility": 0.23067532996731818,
+        "maximum_drawdown": -0.39639989790235897,
+        "sharpe_ratio": -0.03060574477490487,
+        "sortino_ratio": -0.038750521687836985,
+        "calmar_ratio": -0.0840791721769297,
+        "beta": 0.20199065384438822,
+        "alpha": -0.04363920620727577,
+        "capm_expected_return": 0.03657921593242907,
+        "actual_return": -0.007059990274846704,
+        "market_return": 0.1810936062448185
       },
       "evidence": [
-        "Historical drawdown is severe"
+        "Historical drawdown is severe",
+        "Short-term volatility is rising"
       ]
     },
     "catalyst": {
@@ -137,11 +138,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 57.33943509290441,
+    "rsi": 56.21134647326305,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.41190864636738717,
+    "relative_volume": 0.5479060672468992,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -196,7 +197,7 @@
     "major_news": true,
     "guidance_change": true,
     "bullish_news_score": 4,
-    "bearish_news_score": 4,
+    "bearish_news_score": 2,
     "institutional_ownership": 0.82654,
     "detail": {
       "earnings": {
@@ -237,7 +238,7 @@
         "last_surprise_pct": 0.0033000002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 25.23,
+      "analyst_upside_pct": 25.71,
       "eps_growth_implied": 69.7
     },
     "evidence": [
@@ -264,6 +265,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Sector Update: Healthcare Stocks Higher Late Afternoon",
+        "source": "MT Newswires",
+        "published": "2026-06-29T19:59:07Z",
+        "summary": "Healthcare stocks were higher late Monday afternoon, with the NYSE Healthcare Index up 0.1% and the",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Edwards Lifesciences Can Sustain Strong Revenue Growth on Technological Leadership, RBC Says",
         "source": "MT Newswires",
@@ -303,16 +314,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Market Chatter: Abbott Laboratories Baby Formula Probe Dropped by DOJ After Years-Long Investigation Into Contamination Risks",
-        "source": "MT Newswires",
-        "published": "2026-06-29T09:51:21Z",
-        "summary": "Abbott Laboratories (ABT) will not face criminal charges after the US Department of Justice closed a",
-        "bullish_score": 0,
-        "bearish_score": 2,
-        "importance_score": 60,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       }
     ]
   },
@@ -332,28 +333,28 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5721,
-    "probability_pct": 57.21,
+    "probability_of_outperformance": 0.5226,
+    "probability_pct": 52.26,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 42.55/100"
+      "Composite score 40.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 42.55,
+    "final_score": 40.3,
     "technical_score": 53.0,
     "momentum_score": 20.0,
     "volume_score": 25.0,
     "fundamental_score": 47.0,
-    "risk_score": 75.0,
+    "risk_score": 60.0,
     "catalyst_score": 45.0,
     "revenue_growth": 0.078,
     "eps_growth": -0.197,
     "roe": 0.123339996,
     "forward_pe": 15.532127,
-    "relative_volume": 0.41190864636738717,
+    "relative_volume": 0.5479060672468992,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -363,66 +364,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.011262273236884002,
-      "weekly": 0.05954680198685658,
-      "monthly": 0.07833133566382,
-      "annual": -0.28958581906697434
+      "daily": -0.014980913949883878,
+      "weekly": 0.05556184847638823,
+      "monthly": 0.07427573355785966,
+      "annual": -0.2922577678936691
     },
     "risk": {
-      "volatility": 0.01452444907607746,
-      "annualized_volatility": 0.23056848111313694,
-      "maximum_drawdown": -0.39639996523861276,
-      "sharpe_ratio": -0.022474869332401625,
-      "sortino_ratio": -0.028451721319337007,
-      "calmar_ratio": -0.07943412992846663,
-      "beta": 0.20309999437051995,
-      "alpha": -0.041932576297133074,
-      "capm_expected_return": 0.03675057981194501,
-      "actual_return": -0.005181996485188064,
-      "market_return": 0.1809482069452946
+      "volatility": 0.014531179921221169,
+      "annualized_volatility": 0.23067532996731818,
+      "maximum_drawdown": -0.39639989790235897,
+      "sharpe_ratio": -0.03060574477490487,
+      "sortino_ratio": -0.038750521687836985,
+      "calmar_ratio": -0.0840791721769297,
+      "beta": 0.20199065384438822,
+      "alpha": -0.04363920620727577,
+      "capm_expected_return": 0.03657921593242907,
+      "actual_return": -0.007059990274846704,
+      "market_return": 0.1810936062448185
     },
     "capm": {
-      "beta": 0.20309999437051995,
-      "alpha": -0.041932576297133074,
-      "capm_expected_return": 0.03675057981194501,
-      "actual_return": -0.005181996485188064,
-      "market_return": 0.1809482069452946,
-      "interpretation": "Beta 0.20: Moves roughly 80% less than the market. CAPM expected return is 3.68%; realized alpha is -4.19%, meaning negative alpha versus CAPM."
+      "beta": 0.20199065384438822,
+      "alpha": -0.04363920620727577,
+      "capm_expected_return": 0.03657921593242907,
+      "actual_return": -0.007059990274846704,
+      "market_return": 0.1810936062448185,
+      "interpretation": "Beta 0.20: Moves roughly 80% less than the market. CAPM expected return is 3.66%; realized alpha is -4.36%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.005181996485188064,
+      "actual_return": -0.007059990274846704,
       "components": {
-        "market_component": 0.03675057981194501,
+        "market_component": 0.03657921593242907,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": -0.041932576297133074
+        "alpha_component": -0.04363920620727577
       },
       "component_weights_pct": {
-        "market_component": 46.71,
+        "market_component": 45.6,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 53.29
+        "alpha_component": 54.4
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 89.89049987792968,
-      "sma50": 89.07760009765624,
-      "sma200": 111.5201078414917,
-      "ema20": 90.20371497279369,
-      "ema50": 91.66505451926773,
-      "ema200": 106.05792783233223
+      "sma20": 89.87299995422363,
+      "sma50": 89.07060012817382,
+      "sma200": 111.5183572769165,
+      "ema20": 90.17038178475806,
+      "ema50": 91.65132907617533,
+      "ema200": 106.05444522990933
     },
     "momentum": {
-      "3m": -0.09949200451023277,
-      "6m": -0.2459083425959877,
-      "12m": -0.28958581906697434,
+      "3m": -0.10287881337143889,
+      "6m": -0.2487444798876599,
+      "12m": -0.2922577678936691,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 14000373.75,
-      "relative_volume": 0.41190864636738717,
+      "average_volume": 14098256.0,
+      "relative_volume": 0.5479060672468992,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -440,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ABT\nRating: Drop | Score: 42.55/100 | Confidence: 39.62/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 82.55999755859375 | Resistance: 103.55999755859375\nFundamental Outlook: Fundamentally Weak | Forward P/E: 15.532127\nNews/Catalyst: Edwards Lifesciences Can Sustain Strong Revenue Growth on Technological Leadership, RBC Says\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABT\nRating: Drop | Score: 40.3/100 | Confidence: 38.06/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 82.55999755859375 | Resistance: 103.55999755859375\nFundamental Outlook: Fundamentally Weak | Forward P/E: 15.532127\nNews/Catalyst: Sector Update: Healthcare Stocks Higher Late Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

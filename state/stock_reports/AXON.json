@@ -1,15 +1,15 @@
 {
   "ticker": "AXON",
-  "generated_at": "2026-06-29T19:02:17.318401",
+  "generated_at": "2026-06-29T20:52:33.220068",
   "score": {
-    "final_score": 52.65,
+    "final_score": 63.9,
     "rating": "Hold",
-    "confidence": 47.93,
+    "confidence": 59.51,
     "risk_level": "Moderate",
     "categories": {
       "technical": 63.0,
       "momentum": 50.0,
-      "volume": 25.0,
+      "volume": 100,
       "fundamental": 71.0,
       "risk": 50.0,
       "catalyst": 50.0
@@ -26,17 +26,17 @@
       ],
       "support": 345.94000244140625,
       "resistance": 513.2000122070312,
-      "risk_reward": 0.03
+      "risk_reward": 0.02
     },
     "momentum": {
       "score": 50.0,
       "returns": {
-        "1m": 0.15567236408695462,
-        "3m": 0.18088567840176872,
-        "6m": -0.14114865856884418,
-        "12m": -0.3684806471222071
+        "1m": 0.16225074567726705,
+        "3m": 0.18760758060213756,
+        "6m": -0.1362598578768336,
+        "12m": -0.36488587803886097
       },
-      "acceleration": 0.2515,
+      "acceleration": 0.2557,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,13 +45,16 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1136437.4,
-      "relative_volume": 1.0154963221027398,
+      "score": 100,
+      "average_volume": 1169591.5,
+      "relative_volume": 1.5536450119550287,
       "accumulation_days": 5,
       "distribution_days": 1,
       "evidence": [
-        "Accumulation days exceed distribution days"
+        "Relative volume is 1.55x",
+        "Price advanced on above-average volume",
+        "Accumulation days exceed distribution days",
+        "High-volume breakout behavior"
       ]
     },
     "fundamental": {
@@ -65,17 +68,17 @@
     "risk": {
       "score": 50.0,
       "risk_metrics": {
-        "volatility": 0.03606113419365515,
-        "annualized_volatility": 0.5724527584280356,
+        "volatility": 0.03609352219316422,
+        "annualized_volatility": 0.5729669019810187,
         "maximum_drawdown": -0.6028106432163984,
-        "sharpe_ratio": 0.7741340709605476,
-        "sortino_ratio": 1.154937928974305,
-        "calmar_ratio": 0.5452726039510469,
-        "beta": 1.1406354230277083,
-        "alpha": 0.23675924973933862,
-        "capm_expected_return": 0.2063959345751514,
-        "actual_return": 0.44315518431449,
-        "market_return": 0.1809482069452946
+        "sharpe_ratio": 0.7789193600726114,
+        "sortino_ratio": 1.163120856636759,
+        "calmar_ratio": 0.551599905775363,
+        "beta": 1.1426184096120835,
+        "alpha": 0.23937412427547042,
+        "capm_expected_return": 0.20692088835837139,
+        "actual_return": 0.4462950126338418,
+        "market_return": 0.1810936062448185
       },
       "evidence": [
         "Volatility is elevated",
@@ -144,14 +147,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 59.828374763548,
+    "rsi": 60.441539573176044,
     "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0154963221027398,
+    "relative_volume": 1.5536450119550287,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "MACD bullish crossover",
+    "setup_type": "MACD bullish crossover, volume surge",
     "support": 345.94000244140625,
     "resistance": 513.2000122070312
   },
@@ -244,7 +247,7 @@
         "last_surprise_pct": 0.008,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 30.79,
+      "analyst_upside_pct": 29.66,
       "eps_growth_implied": 329.81
     },
     "evidence": [
@@ -339,23 +342,24 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7239,
-    "probability_pct": 72.39,
+    "probability_of_outperformance": 0.8269,
+    "probability_pct": 82.69,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 52.65/100"
+      "Composite score 63.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 52.65,
+    "final_score": 63.9,
     "technical_score": 63.0,
     "momentum_score": 50.0,
-    "volume_score": 25.0,
+    "volume_score": 100,
     "fundamental_score": 71.0,
     "risk_score": 50.0,
     "catalyst_score": 50.0,
@@ -363,7 +367,7 @@
     "eps_growth": 0.898,
     "roe": 0.06765,
     "forward_pe": 48.18619,
-    "relative_volume": 1.0154963221027398,
+    "relative_volume": 1.5536450119550287,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -373,66 +377,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.09224879229289162,
-      "weekly": 0.23822645408039667,
-      "monthly": 0.15567236408695462,
-      "annual": -0.3684806471222071
+      "daily": 0.09846615075065568,
+      "weekly": 0.2452747545877776,
+      "monthly": 0.16225074567726705,
+      "annual": -0.36488587803886097
     },
     "risk": {
-      "volatility": 0.03606113419365515,
-      "annualized_volatility": 0.5724527584280356,
+      "volatility": 0.03609352219316422,
+      "annualized_volatility": 0.5729669019810187,
       "maximum_drawdown": -0.6028106432163984,
-      "sharpe_ratio": 0.7741340709605476,
-      "sortino_ratio": 1.154937928974305,
-      "calmar_ratio": 0.5452726039510469,
-      "beta": 1.1406354230277083,
-      "alpha": 0.23675924973933862,
-      "capm_expected_return": 0.2063959345751514,
-      "actual_return": 0.44315518431449,
-      "market_return": 0.1809482069452946
+      "sharpe_ratio": 0.7789193600726114,
+      "sortino_ratio": 1.163120856636759,
+      "calmar_ratio": 0.551599905775363,
+      "beta": 1.1426184096120835,
+      "alpha": 0.23937412427547042,
+      "capm_expected_return": 0.20692088835837139,
+      "actual_return": 0.4462950126338418,
+      "market_return": 0.1810936062448185
     },
     "capm": {
-      "beta": 1.1406354230277083,
-      "alpha": 0.23675924973933862,
-      "capm_expected_return": 0.2063959345751514,
-      "actual_return": 0.44315518431449,
-      "market_return": 0.1809482069452946,
-      "interpretation": "Beta 1.14: Moves roughly in line with the market. CAPM expected return is 20.64%; realized alpha is 23.68%, meaning positive alpha versus CAPM."
+      "beta": 1.1426184096120835,
+      "alpha": 0.23937412427547042,
+      "capm_expected_return": 0.20692088835837139,
+      "actual_return": 0.4462950126338418,
+      "market_return": 0.1810936062448185,
+      "interpretation": "Beta 1.14: Moves roughly in line with the market. CAPM expected return is 20.69%; realized alpha is 23.94%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.44315518431449,
+      "actual_return": 0.4462950126338418,
       "components": {
-        "market_component": 0.2063959345751514,
+        "market_component": 0.20692088835837139,
         "momentum_component": 0.0,
-        "volatility_drag": -0.06449055168560712,
-        "alpha_component": 0.23675924973933862
+        "volatility_drag": -0.06459338039620376,
+        "alpha_component": 0.23937412427547042
       },
       "component_weights_pct": {
-        "market_component": 40.66,
+        "market_component": 40.5,
         "momentum_component": 0.0,
-        "volatility_drag": 12.7,
-        "alpha_component": 46.64
+        "volatility_drag": 12.64,
+        "alpha_component": 46.85
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 457.448503112793,
-      "sma50": 422.6622021484375,
-      "sma200": 536.0506510925293,
-      "ema20": 447.2215738669528,
-      "ema50": 438.97711425861036,
-      "ema200": 508.4663858217387
+      "sma20": 457.59300384521487,
+      "sma50": 422.7200024414062,
+      "sma200": 536.0651011657715,
+      "ema20": 447.4968133572802,
+      "ema50": 439.09044816639226,
+      "ema200": 508.4951421863998
     },
     "momentum": {
-      "3m": 0.18088567840176872,
-      "6m": -0.14114865856884418,
-      "12m": -0.3684806471222071,
+      "3m": 0.18760758060213756,
+      "6m": -0.1362598578768336,
+      "12m": -0.36488587803886097,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 1136437.4,
-      "relative_volume": 1.0154963221027398,
+      "average_volume": 1169591.5,
+      "relative_volume": 1.5536450119550287,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -450,5 +454,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AXON\nRating: Hold | Score: 52.65/100 | Confidence: 47.93/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: MACD bullish crossover | Support: 345.94000244140625 | Resistance: 513.2000122070312\nFundamental Outlook: Fundamentally Strong | Forward P/E: 48.18619\nNews/Catalyst: AXON Stock Set For Best Month In Over A Year \u2013 What\u2019s The Trump Connection?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AXON\nRating: Hold | Score: 63.9/100 | Confidence: 59.51/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: MACD bullish crossover, volume surge | Support: 345.94000244140625 | Resistance: 513.2000122070312\nFundamental Outlook: Fundamentally Strong | Forward P/E: 48.18619\nNews/Catalyst: AXON Stock Set For Best Month In Over A Year \u2013 What\u2019s The Trump Connection?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
