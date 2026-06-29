@@ -1,10 +1,10 @@
 {
   "ticker": "T",
-  "generated_at": "2026-06-29T22:13:49.863499",
+  "generated_at": "2026-06-29T23:52:05.606238",
   "score": {
-    "final_score": 30.05,
+    "final_score": 30.8,
     "rating": "Drop",
-    "confidence": 14.65,
+    "confidence": 17.28,
     "risk_level": "Controlled",
     "categories": {
       "technical": 28.0,
@@ -12,7 +12,7 @@
       "volume": 0,
       "fundamental": 62.0,
       "risk": 85.0,
-      "catalyst": 20.0
+      "catalyst": 35.0
     },
     "technical": {
       "score": 28.0,
@@ -51,29 +51,30 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01464350436924698,
-        "annualized_volatility": 0.23245842530109156,
-        "maximum_drawdown": -0.24232406961209174,
-        "sharpe_ratio": 0.6224447347886535,
-        "sortino_ratio": 0.8708384479266345,
-        "calmar_ratio": 0.5152687939088461,
-        "beta": -0.03608879091778121,
-        "alpha": 0.15122797336291627,
-        "capm_expected_return": -0.0065354504769903005,
-        "actual_return": 0.14469252288592596,
-        "market_return": 0.18109363907146683
+        "volatility": 0.014643507113930346,
+        "annualized_volatility": 0.23245846887158925,
+        "maximum_drawdown": -0.24232406961209185,
+        "sharpe_ratio": 0.6224444214784789,
+        "sortino_ratio": 0.8708381277997005,
+        "calmar_ratio": 0.5152685352289694,
+        "beta": -0.036087944520080004,
+        "alpha": 0.15122777928753017,
+        "capm_expected_return": -0.006535302112980853,
+        "actual_return": 0.14469247717454933,
+        "market_return": 0.1810937752174965
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 20.0,
+      "score": 35.0,
       "evidence": [
-        "analyst revision"
+        "analyst revision",
+        "major news"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; analyst revision"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; analyst revision; major news"
   },
   "fundamentals": {
     "ticker": "T",
@@ -82,7 +83,7 @@
     "sector": "Communication Services",
     "industry": "Telecom Services",
     "exchange": "NYQ",
-    "market_cap": 150223093760.0,
+    "market_cap": 151612751872.0,
     "revenue_growth": 0.029,
     "eps_growth": -0.113,
     "fcf_growth": null,
@@ -99,14 +100,14 @@
     "cash_position": 11964000256.0,
     "total_debt": 159750995968.0,
     "interest_coverage": null,
-    "forward_pe": 8.480594,
-    "trailing_pe": 7.2794614,
+    "forward_pe": 8.559044,
+    "trailing_pe": 7.3468013,
     "peg": 1.59,
-    "price_to_book": 1.3731344,
-    "price_to_sales": 1.1872716,
+    "price_to_book": 1.3858367,
+    "price_to_sales": 1.1982546,
     "enterprise_to_ebitda": 7.287,
     "enterprise_to_revenue": 2.558,
-    "fcf_yield": 0.05890572632019797,
+    "fcf_yield": 0.05836580590180714,
     "institutional_ownership": 0.69277,
     "insider_ownership": 0.00086000003,
     "short_interest": 125381453.0,
@@ -123,8 +124,7 @@
     "next_earnings_date": "1784723400",
     "eps_current_year": 2.97,
     "eps_forward": 2.54935,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
     "rsi": 43.88488246122349,
@@ -183,10 +183,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": false,
-    "major_news": false,
+    "major_news": true,
     "guidance_change": false,
-    "bullish_news_score": 0,
-    "bearish_news_score": 0,
+    "bullish_news_score": 1,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.69277,
     "detail": {
       "earnings": {
@@ -231,7 +231,8 @@
       "eps_growth_implied": -14.16
     },
     "evidence": [
-      "analyst target/recommendation data is supportive"
+      "analyst target/recommendation data is supportive",
+      "recent news item has elevated importance"
     ]
   },
   "analyst": {
@@ -253,10 +254,30 @@
     "available": true,
     "items": [
       {
+        "headline": "Comcast\u2019s NBC Spinoff Raises Questions About Businesses\u2019 Future",
+        "source": "Bloomberg",
+        "published": "2026-06-29T22:27:05Z",
+        "summary": "(Bloomberg) -- Brian Roberts lost out on an opportunity last year to merge NBCUniversal with Warner Bros. Discovery Inc. But the process helped get the chairman and co-chief executive officer of Comcast Corp. thinking about what NBCUniversal would look like on its own. Most Read from BloombergTrump\u2019s U-Turn on Iran Sanctions Would Unravel Decades of CurbsUS Stocks Get Tech Boost After AI-Fueled Selloff: Markets WrapCook Stays at Fed But Trump Wins Power Over Other AgenciesSupreme Court Leaves Tr",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
         "headline": "Stock Market Today, June 29: Verizon Drops After Dow Removal and BT Group Joint Venture Drives Heavy Selling",
         "source": "Motley Fool",
         "published": "2026-06-29T21:13:44Z",
         "summary": "Today, June 29, 2026, index fund rebalancing and new joint venture put fresh pressure on Verizon shares.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Satellite Pay-TV Provider Dish DBS Prepares for Bankruptcy Filing",
+        "source": "The Wall Street Journal",
+        "published": "2026-06-29T20:38:00Z",
+        "summary": "The EchoStar unit is preparing for chapter 11 as soon as Tuesday, as it faces regulatory scrutiny over its network build-out.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -281,26 +302,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AT&T Hits 52-Week Low as SpaceX Eyes U.S. Wireless Market",
-        "source": "GuruFocus.com",
-        "published": "2026-06-29T19:26:59Z",
-        "summary": "Gwynne Shotwell's Starlink retail disclosure rattled the entire telecom sector",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Starlink\u2019s Mobile Threat: Why Verizon, AT&T, and T-Mobile Are Tanking Today",
-        "source": "Barrons.com",
-        "published": "2026-06-29T18:02:00Z",
-        "summary": "Verizon, AT&T, and T-Mobile all fall. Elon Musk\u2019s SpaceX may be looking to enter the mobile phone market, which could put pressure on the cellular service providers.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -320,34 +321,34 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6045,
-    "probability_pct": 60.45,
+    "probability_of_outperformance": 0.6188,
+    "probability_pct": 61.88,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 30.05/100"
+      "Composite score 30.8/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 30.05,
+    "final_score": 30.8,
     "technical_score": 28.0,
     "momentum_score": 0,
     "volume_score": 0,
     "fundamental_score": 62.0,
     "risk_score": 85.0,
-    "catalyst_score": 20.0,
+    "catalyst_score": 35.0,
     "revenue_growth": 0.029,
     "eps_growth": -0.113,
     "roe": 0.18370001,
-    "forward_pe": 8.480594,
+    "forward_pe": 8.559044,
     "relative_volume": 1.4775321869175837,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
@@ -357,33 +358,33 @@
       "annual": -0.18670312295608749
     },
     "risk": {
-      "volatility": 0.01464350436924698,
-      "annualized_volatility": 0.23245842530109156,
-      "maximum_drawdown": -0.24232406961209174,
-      "sharpe_ratio": 0.6224447347886535,
-      "sortino_ratio": 0.8708384479266345,
-      "calmar_ratio": 0.5152687939088461,
-      "beta": -0.03608879091778121,
-      "alpha": 0.15122797336291627,
-      "capm_expected_return": -0.0065354504769903005,
-      "actual_return": 0.14469252288592596,
-      "market_return": 0.18109363907146683
+      "volatility": 0.014643507113930346,
+      "annualized_volatility": 0.23245846887158925,
+      "maximum_drawdown": -0.24232406961209185,
+      "sharpe_ratio": 0.6224444214784789,
+      "sortino_ratio": 0.8708381277997005,
+      "calmar_ratio": 0.5152685352289694,
+      "beta": -0.036087944520080004,
+      "alpha": 0.15122777928753017,
+      "capm_expected_return": -0.006535302112980853,
+      "actual_return": 0.14469247717454933,
+      "market_return": 0.1810937752174965
     },
     "capm": {
-      "beta": -0.03608879091778121,
-      "alpha": 0.15122797336291627,
-      "capm_expected_return": -0.0065354504769903005,
-      "actual_return": 0.14469252288592596,
-      "market_return": 0.18109363907146683,
+      "beta": -0.036087944520080004,
+      "alpha": 0.15122777928753017,
+      "capm_expected_return": -0.006535302112980853,
+      "actual_return": 0.14469247717454933,
+      "market_return": 0.1810937752174965,
       "interpretation": "Beta -0.04: Moves roughly 104% less than the market. CAPM expected return is -0.65%; realized alpha is 15.12%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.14469252288592596,
+      "actual_return": 0.14469247717454933,
       "components": {
-        "market_component": -0.0065354504769903005,
+        "market_component": -0.006535302112980853,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": 0.15122797336291627
+        "alpha_component": 0.15122777928753017
       },
       "component_weights_pct": {
         "market_component": 4.14,
@@ -396,10 +397,10 @@
     "trend": {
       "sma20": 22.919999885559083,
       "sma50": 24.42759994506836,
-      "sma200": 25.509840888977052,
-      "ema20": 22.99840331211514,
-      "ema50": 24.146947786111806,
-      "ema200": 25.27722261910611
+      "sma200": 25.50984094619751,
+      "ema20": 22.998403312115148,
+      "ema50": 24.14694778640182,
+      "ema200": 25.27722265329019
     },
     "momentum": {
       "3m": -0.24232406961209252,
@@ -428,5 +429,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: T\nRating: Drop | Score: 30.05/100 | Confidence: 14.65/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 21.81999969482422 | Resistance: 28.989999771118164\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.480594\nNews/Catalyst: Stock Market Today, June 29: Verizon Drops After Dow Removal and BT Group Joint Venture Drives Heavy Selling\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: T\nRating: Drop | Score: 30.8/100 | Confidence: 17.28/100\nBull Case: No decisive bull case yet.\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 21.81999969482422 | Resistance: 28.989999771118164\nFundamental Outlook: Fundamentally Average | Forward P/E: 8.559044\nNews/Catalyst: Comcast\u2019s NBC Spinoff Raises Questions About Businesses\u2019 Future\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
