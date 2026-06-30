@@ -1,10 +1,10 @@
 {
   "ticker": "CINF",
-  "generated_at": "2026-06-30T21:15:37.434184",
+  "generated_at": "2026-06-30T22:51:39.559237",
   "score": {
-    "final_score": 66.7,
+    "final_score": 67.2,
     "rating": "Watch",
-    "confidence": 52.39,
+    "confidence": 54.58,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
@@ -12,7 +12,7 @@
       "volume": 25.0,
       "fundamental": 63.0,
       "risk": 100,
-      "catalyst": 20.0
+      "catalyst": 30.0
     },
     "technical": {
       "score": 65.0,
@@ -34,7 +34,7 @@
       "returns": {
         "1m": 0.18253496802526592,
         "3m": 0.19009487441574602,
-        "6m": 0.13631561823771343,
+        "6m": 0.13631572465637776,
         "12m": 0.2944489803495203
       },
       "acceleration": 0.1219,
@@ -68,24 +68,25 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014448858831830759,
-        "annualized_volatility": 0.22936852318622053,
-        "maximum_drawdown": -0.2002595366688491,
-        "sharpe_ratio": 1.1836044949757216,
-        "sortino_ratio": 1.6237751129545128,
-        "calmar_ratio": 1.3864060166124201,
-        "beta": 0.528802201629581,
-        "alpha": 0.17383511046827438,
-        "capm_expected_return": 0.09764650458087926,
-        "actual_return": 0.27148161504915364,
-        "market_return": 0.18465600990307401
+        "volatility": 0.014448855690447595,
+        "annualized_volatility": 0.22936847331830879,
+        "maximum_drawdown": -0.20025940780860652,
+        "sharpe_ratio": 1.1836045594542695,
+        "sortino_ratio": 1.6237724961112974,
+        "calmar_ratio": 1.3864066932592638,
+        "beta": 0.5288029685071647,
+        "alpha": 0.17383491378653299,
+        "capm_expected_return": 0.09764665702808221,
+        "actual_return": 0.2714815708146152,
+        "market_return": 0.18465603039964631
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 20.0,
+      "score": 30.0,
       "evidence": [
-        "sector strength"
+        "sector strength",
+        "guidance change"
       ]
     },
     "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
@@ -97,7 +98,7 @@
     "sector": "Financial Services",
     "industry": "Insurance - Property & Casualty",
     "exchange": "NMS",
-    "market_cap": 28954261504.0,
+    "market_cap": 28638701568.0,
     "revenue_growth": 0.116,
     "eps_growth": null,
     "fcf_growth": null,
@@ -114,15 +115,15 @@
     "cash_position": 1259000064.0,
     "total_debt": 884000000.0,
     "interest_coverage": null,
-    "forward_pe": 20.383362,
-    "trailing_pe": 10.695999,
+    "forward_pe": 20.161213,
+    "trailing_pe": 10.579429,
     "peg": 2.19,
-    "price_to_book": 1.8415434,
-    "price_to_sales": 2.239655,
+    "price_to_book": 1.8214732,
+    "price_to_sales": 2.2152462,
     "enterprise_to_ebitda": 7.791,
     "enterprise_to_revenue": 2.198,
-    "fcf_yield": 0.09491694725559939,
-    "institutional_ownership": 0.71756,
+    "fcf_yield": 0.09596280423099941,
+    "institutional_ownership": 0.71764,
     "insider_ownership": 0.01714,
     "short_interest": 3244810.0,
     "short_ratio": 4.98,
@@ -138,8 +139,7 @@
     "next_earnings_date": "1777320000",
     "eps_current_year": 17.5,
     "eps_forward": 9.18298,
-    "classification": "Fundamentally Average",
-    "from_cache": true
+    "classification": "Fundamentally Average"
   },
   "technical_screen": {
     "rsi": 88.09438081615151,
@@ -199,10 +199,10 @@
     "insider_buying": false,
     "sector_strength": true,
     "major_news": false,
-    "guidance_change": false,
-    "bullish_news_score": 0,
+    "guidance_change": true,
+    "bullish_news_score": 2,
     "bearish_news_score": 0,
-    "institutional_ownership": 0.71756,
+    "institutional_ownership": 0.71764,
     "detail": {
       "earnings": {
         "available": true,
@@ -246,7 +246,8 @@
       "eps_growth_implied": -47.53
     },
     "evidence": [
-      "technical backdrop is constructive"
+      "technical backdrop is constructive",
+      "news tone or forward EPS implies a catalyst shift"
     ]
   },
   "analyst": {
@@ -258,15 +259,66 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.01714,
-    "institutional_ownership": 0.71756,
+    "institutional_ownership": 0.71764,
     "short_interest": 3244810.0,
     "short_percent_float": 0.024500001,
     "days_to_cover": 4.98,
     "insider_transactions": "Unavailable from current data provider."
   },
   "news": {
-    "available": false,
-    "items": []
+    "available": true,
+    "items": [
+      {
+        "headline": "Cincinnati Financial (CINF) Surges 3.6%: Is This an Indication of Further Gains?",
+        "source": "Zacks",
+        "published": "2026-06-29T12:44:00Z",
+        "summary": "Cincinnati Financial (CINF) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "MCY Outperforms Industry, Trades Near 52-Week High: Time to Exit?",
+        "source": "Zacks",
+        "published": "2026-06-25T16:15:00Z",
+        "summary": "Mercury General drives growth through premium expansion, rising investment income and a strengthened balance sheet.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "1 S&P 500 Stock to Keep an Eye On and 2 That Underwhelm",
+        "source": "StockStory",
+        "published": "2026-06-19T17:00:58Z",
+        "summary": "The S&P 500 (^GSPC) is home to the biggest and most well-known companies in the market, making it a go-to index for investors seeking stability. But not all large-cap stocks are created equal - some are struggling with slowing growth, declining margins, or increased competition.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "ESNT vs. CINF: Which Stock Is the Better Value Option?",
+        "source": "Zacks",
+        "published": "2026-06-17T15:40:04Z",
+        "summary": "ESNT vs. CINF: Which Stock Is the Better Value Option?",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Why Cincinnati Financial (CINF) is a Great Dividend Stock Right Now",
+        "source": "Zacks",
+        "published": "2026-06-15T15:45:04Z",
+        "summary": "Dividends are one of the best benefits to being a shareholder, but finding a great dividend stock is no easy task. Does Cincinnati Financial (CINF) have what it takes? Let's find out.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      }
+    ]
   },
   "sentiment": {
     "available": false,
@@ -284,27 +336,27 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7937,
-    "probability_pct": 79.37,
+    "probability_of_outperformance": 0.8002,
+    "probability_pct": 80.02,
     "confidence": "High",
     "evidence": [
       "Breakout pressure detected",
-      "Composite score 66.7/100"
+      "Composite score 67.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.7,
+    "final_score": 67.2,
     "technical_score": 65.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 63.0,
     "risk_score": 100,
-    "catalyst_score": 20.0,
+    "catalyst_score": 30.0,
     "revenue_growth": 0.116,
     "eps_growth": null,
     "roe": 0.18735,
-    "forward_pe": 20.383362,
+    "forward_pe": 20.161213,
     "relative_volume": 0.7519474948624694,
     "breakout": true,
     "price_above_sma50": true,
@@ -321,33 +373,33 @@
       "annual": 0.2944489803495203
     },
     "risk": {
-      "volatility": 0.014448858831830759,
-      "annualized_volatility": 0.22936852318622053,
-      "maximum_drawdown": -0.2002595366688491,
-      "sharpe_ratio": 1.1836044949757216,
-      "sortino_ratio": 1.6237751129545128,
-      "calmar_ratio": 1.3864060166124201,
-      "beta": 0.528802201629581,
-      "alpha": 0.17383511046827438,
-      "capm_expected_return": 0.09764650458087926,
-      "actual_return": 0.27148161504915364,
-      "market_return": 0.18465600990307401
+      "volatility": 0.014448855690447595,
+      "annualized_volatility": 0.22936847331830879,
+      "maximum_drawdown": -0.20025940780860652,
+      "sharpe_ratio": 1.1836045594542695,
+      "sortino_ratio": 1.6237724961112974,
+      "calmar_ratio": 1.3864066932592638,
+      "beta": 0.5288029685071647,
+      "alpha": 0.17383491378653299,
+      "capm_expected_return": 0.09764665702808221,
+      "actual_return": 0.2714815708146152,
+      "market_return": 0.18465603039964631
     },
     "capm": {
-      "beta": 0.528802201629581,
-      "alpha": 0.17383511046827438,
-      "capm_expected_return": 0.09764650458087926,
-      "actual_return": 0.27148161504915364,
-      "market_return": 0.18465600990307401,
+      "beta": 0.5288029685071647,
+      "alpha": 0.17383491378653299,
+      "capm_expected_return": 0.09764665702808221,
+      "actual_return": 0.2714815708146152,
+      "market_return": 0.18465603039964631,
       "interpretation": "Beta 0.53: Moves roughly 47% less than the market. CAPM expected return is 9.76%; realized alpha is 17.38%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.27148161504915364,
+      "actual_return": 0.2714815708146152,
       "components": {
-        "market_component": 0.09764650458087926,
+        "market_component": 0.09764665702808221,
         "momentum_component": 0.07361224508738007,
         "volatility_drag": -0.0,
-        "alpha_component": 0.17383511046827438
+        "alpha_component": 0.17383491378653299
       },
       "component_weights_pct": {
         "market_component": 28.3,
@@ -360,14 +412,14 @@
     "trend": {
       "sma20": 170.0868133544922,
       "sma50": 165.9300180053711,
-      "sma200": 161.13606369018555,
-      "ema20": 173.10177718407127,
-      "ema50": 167.63608710085157,
-      "ema200": 160.10139243240332
+      "sma200": 161.13606338500978,
+      "ema20": 173.10177718451857,
+      "ema50": 167.6360871414987,
+      "ema200": 160.10139227594826
     },
     "momentum": {
       "3m": 0.19009487441574602,
-      "6m": 0.13631561823771343,
+      "6m": 0.13631572465637776,
       "12m": 0.2944489803495203,
       "24m": 0.0,
       "score": 75.0
@@ -392,5 +444,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CINF\nRating: Watch | Score: 66.7/100 | Confidence: 52.39/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 156.8300018310547 | Resistance: 186.16000366210938\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.383362\nNews/Catalyst: No major news item available\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CINF\nRating: Watch | Score: 67.2/100 | Confidence: 54.58/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 156.8300018310547 | Resistance: 186.16000366210938\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.161213\nNews/Catalyst: Cincinnati Financial (CINF) Surges 3.6%: Is This an Indication of Further Gains?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
