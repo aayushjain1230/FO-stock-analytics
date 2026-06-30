@@ -1,13 +1,13 @@
 {
   "ticker": "ABT",
-  "generated_at": "2026-06-30T15:26:10.069897",
+  "generated_at": "2026-06-30T17:24:09.317764",
   "score": {
-    "final_score": 40.3,
+    "final_score": 38.55,
     "rating": "Drop",
-    "confidence": 38.06,
+    "confidence": 37.06,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 53.0,
+      "technical": 46.0,
       "momentum": 20.0,
       "volume": 25.0,
       "fundamental": 47.0,
@@ -15,27 +15,26 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 53.0,
+      "score": 46.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 82.55999755859375,
       "resistance": 103.55999755859375,
-      "risk_reward": 1.33
+      "risk_reward": 1.46
     },
     "momentum": {
       "score": 20.0,
       "returns": {
-        "1m": 0.06962615877002043,
-        "3m": -0.09565752614736511,
-        "6m": -0.2582415650059209,
-        "12m": -0.3047299524646816
+        "1m": 0.06425233759394033,
+        "3m": -0.10020095909968396,
+        "6m": -0.2619681728051271,
+        "12m": -0.3082228414528465
       },
-      "acceleration": 0.0335,
+      "acceleration": 0.0308,
       "evidence": [
         "1m return is positive",
         "Momentum is accelerating"
@@ -43,8 +42,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 13782807.85,
-      "relative_volume": 0.12061091020724055,
+      "average_volume": 13847210.7,
+      "relative_volume": 0.21306919233921964,
       "accumulation_days": 6,
       "distribution_days": 5,
       "evidence": [
@@ -59,17 +58,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.014527160105595915,
-        "annualized_volatility": 0.23061151737255367,
-        "maximum_drawdown": -0.3963998979023582,
-        "sharpe_ratio": -0.05766264231509354,
-        "sortino_ratio": -0.07313235829802342,
-        "calmar_ratio": -0.09920787123534316,
-        "beta": 0.20081232597386936,
-        "alpha": -0.05017535300915005,
-        "capm_expected_return": 0.03687768356915551,
-        "actual_return": -0.013297669439994539,
-        "market_return": 0.18364252986121082
+        "volatility": 0.01453731095317756,
+        "annualized_volatility": 0.230772657082339,
+        "maximum_drawdown": -0.3963999652386129,
+        "sharpe_ratio": -0.06845847767597793,
+        "sortino_ratio": -0.08682507284151794,
+        "calmar_ratio": -0.10535206788727912,
+        "beta": 0.19971891837743722,
+        "alpha": -0.05266811434567433,
+        "capm_expected_return": 0.03686976955257692,
+        "actual_return": -0.015798344793097413,
+        "market_return": 0.18460829776225243
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -84,7 +83,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive; Momentum is accelerating"
   },
   "fundamentals": {
     "ticker": "ABT",
@@ -134,14 +133,15 @@
     "next_earnings_date": "1784205000",
     "eps_current_year": 3.57,
     "eps_forward": 6.05841,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 50.85210900754215,
+    "rsi": 49.59785149898036,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.12061091020724055,
+    "relative_volume": 0.21306919233921964,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -237,7 +237,7 @@
         "last_surprise_pct": 0.0033000002,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 27.27,
+      "analyst_upside_pct": 27.91,
       "eps_growth_implied": 69.7
     },
     "evidence": [
@@ -332,18 +332,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.5226,
-    "probability_pct": 52.26,
+    "probability_of_outperformance": 0.5142,
+    "probability_pct": 51.42,
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 40.3/100"
+      "Composite score 38.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 40.3,
-    "technical_score": 53.0,
+    "final_score": 38.55,
+    "technical_score": 46.0,
     "momentum_score": 20.0,
     "volume_score": 25.0,
     "fundamental_score": 47.0,
@@ -353,7 +353,7 @@
     "eps_growth": -0.197,
     "roe": 0.123339996,
     "forward_pe": 15.114527,
-    "relative_volume": 0.12061091020724055,
+    "relative_volume": 0.21306919233921964,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -363,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01240428796500237,
-      "weekly": 0.011377430610685302,
-      "monthly": 0.06962615877002043,
-      "annual": -0.3047299524646816
+      "daily": -0.01736598669238054,
+      "weekly": 0.0062962520988629755,
+      "monthly": 0.06425233759394033,
+      "annual": -0.3082228414528465
     },
     "risk": {
-      "volatility": 0.014527160105595915,
-      "annualized_volatility": 0.23061151737255367,
-      "maximum_drawdown": -0.3963998979023582,
-      "sharpe_ratio": -0.05766264231509354,
-      "sortino_ratio": -0.07313235829802342,
-      "calmar_ratio": -0.09920787123534316,
-      "beta": 0.20081232597386936,
-      "alpha": -0.05017535300915005,
-      "capm_expected_return": 0.03687768356915551,
-      "actual_return": -0.013297669439994539,
-      "market_return": 0.18364252986121082
+      "volatility": 0.01453731095317756,
+      "annualized_volatility": 0.230772657082339,
+      "maximum_drawdown": -0.3963999652386129,
+      "sharpe_ratio": -0.06845847767597793,
+      "sortino_ratio": -0.08682507284151794,
+      "calmar_ratio": -0.10535206788727912,
+      "beta": 0.19971891837743722,
+      "alpha": -0.05266811434567433,
+      "capm_expected_return": 0.03686976955257692,
+      "actual_return": -0.015798344793097413,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 0.20081232597386936,
-      "alpha": -0.05017535300915005,
-      "capm_expected_return": 0.03687768356915551,
-      "actual_return": -0.013297669439994539,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 0.20: Moves roughly 80% less than the market. CAPM expected return is 3.69%; realized alpha is -5.02%, meaning negative alpha versus CAPM."
+      "beta": 0.19971891837743722,
+      "alpha": -0.05266811434567433,
+      "capm_expected_return": 0.03686976955257692,
+      "actual_return": -0.015798344793097413,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 0.20: Moves roughly 80% less than the market. CAPM expected return is 3.69%; realized alpha is -5.27%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.013297669439994539,
+      "actual_return": -0.015798344793097413,
       "components": {
-        "market_component": 0.03687768356915551,
+        "market_component": 0.03686976955257692,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": -0.05017535300915005
+        "alpha_component": -0.05266811434567433
       },
       "component_weights_pct": {
-        "market_component": 42.36,
+        "market_component": 41.18,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 57.64
+        "alpha_component": 58.82
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 90.06199989318847,
-      "sma50": 88.96560012817383,
-      "sma200": 111.32326770782471,
-      "ema20": 90.30272614417105,
-      "ema50": 91.64774744913326,
-      "ema200": 105.91022195461471
+      "sma20": 90.03899993896485,
+      "sma50": 88.95640014648437,
+      "sma200": 111.32096759796143,
+      "ema20": 90.25891670757629,
+      "ema50": 91.62970827934174,
+      "ema200": 105.90564489172559
     },
     "momentum": {
-      "3m": -0.09565752614736511,
-      "6m": -0.2582415650059209,
-      "12m": -0.3047299524646816,
+      "3m": -0.10020095909968396,
+      "6m": -0.2619681728051271,
+      "12m": -0.3082228414528465,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 13782807.85,
-      "relative_volume": 0.12061091020724055,
+      "average_volume": 13847210.7,
+      "relative_volume": 0.21306919233921964,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -440,5 +440,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ABT\nRating: Drop | Score: 40.3/100 | Confidence: 38.06/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 82.55999755859375 | Resistance: 103.55999755859375\nFundamental Outlook: Fundamentally Weak | Forward P/E: 15.114527\nNews/Catalyst: US criminal probe into Abbott infant-formula plant closed\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABT\nRating: Drop | Score: 38.55/100 | Confidence: 37.06/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 82.55999755859375 | Resistance: 103.55999755859375\nFundamental Outlook: Fundamentally Weak | Forward P/E: 15.114527\nNews/Catalyst: US criminal probe into Abbott infant-formula plant closed\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

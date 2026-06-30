@@ -1,14 +1,14 @@
 {
   "ticker": "CDNS",
-  "generated_at": "2026-06-30T15:27:01.931175",
+  "generated_at": "2026-06-30T17:24:46.187656",
   "score": {
-    "final_score": 67.4,
-    "rating": "Watch",
-    "confidence": 58.96,
+    "final_score": 64.9,
+    "rating": "Hold",
+    "confidence": 57.59,
     "risk_level": "Controlled",
     "categories": {
       "technical": 57.0,
-      "momentum": 85.0,
+      "momentum": 75.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 85.0,
@@ -25,19 +25,18 @@
       ],
       "support": 265.6600036621094,
       "resistance": 416.3900146484375,
-      "risk_reward": 0.36
+      "risk_reward": 0.43
     },
     "momentum": {
-      "score": 85.0,
+      "score": 75.0,
       "returns": {
-        "1m": 0.004774247405887833,
-        "3m": 0.390726500406255,
-        "6m": 0.18134774974381274,
-        "12m": 0.2343380935553716
+        "1m": -0.009975169518137594,
+        "3m": 0.3703115613940926,
+        "6m": 0.16400635137675046,
+        "12m": 0.21621883222472138
       },
-      "acceleration": 0.3001,
+      "acceleration": 0.2883,
       "evidence": [
-        "1m return is positive",
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
@@ -47,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2611530.25,
-      "relative_volume": 0.15213494080721446,
+      "average_volume": 2629406.8,
+      "relative_volume": 0.28707463599774674,
       "accumulation_days": 5,
       "distribution_days": 4,
       "evidence": [
@@ -66,17 +65,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.025803712399396033,
-        "annualized_volatility": 0.40962123546621415,
+        "volatility": 0.025800700854434703,
+        "annualized_volatility": 0.4095734286720355,
         "maximum_drawdown": -0.2884805765425046,
-        "sharpe_ratio": 0.439824664621653,
-        "sortino_ratio": 0.6265995619509761,
-        "calmar_ratio": 0.3521421981053913,
-        "beta": 1.4765376807244526,
-        "alpha": -0.09099359261280851,
-        "capm_expected_return": 0.27115511512364326,
-        "actual_return": 0.18016152251083475,
-        "market_return": 0.18364252986121082
+        "sharpe_ratio": 0.42161851127279387,
+        "sortino_ratio": 0.60111883916363,
+        "calmar_ratio": 0.3237872666729484,
+        "beta": 1.4744844274399456,
+        "alpha": -0.09951832097304036,
+        "capm_expected_return": 0.2722020602266378,
+        "actual_return": 0.17268373925359742,
+        "market_return": 0.18460829776225243
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -90,7 +89,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "CDNS",
@@ -140,14 +139,15 @@
     "next_earnings_date": "1777320000",
     "eps_current_year": 4.29,
     "eps_forward": 9.39978,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 39.66170766829178,
+    "rsi": 35.09302305184298,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.15213494080721446,
+    "relative_volume": 0.28707463599774674,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -243,7 +243,7 @@
         "last_surprise_pct": 0.0398,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 3.18,
+      "analyst_upside_pct": 4.69,
       "eps_growth_implied": 119.11
     },
     "evidence": [
@@ -338,20 +338,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8369,
-    "probability_pct": 83.69,
+    "probability_of_outperformance": 0.8163,
+    "probability_pct": 81.63,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 67.4/100"
+      "Composite score 64.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 67.4,
+    "final_score": 64.9,
     "technical_score": 57.0,
-    "momentum_score": 85.0,
+    "momentum_score": 75.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 85.0,
@@ -360,7 +360,7 @@
     "eps_growth": 0.23,
     "roe": 0.20656,
     "forward_pe": 40.08711,
-    "relative_volume": 0.15213494080721446,
+    "relative_volume": 0.28707463599774674,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +370,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.010731916685178033,
-      "weekly": -0.006173155576852718,
-      "monthly": 0.004774247405887833,
-      "annual": 0.2343380935553716
+      "daily": -0.004104954856959497,
+      "weekly": -0.02076187191440848,
+      "monthly": -0.009975169518137594,
+      "annual": 0.21621883222472138
     },
     "risk": {
-      "volatility": 0.025803712399396033,
-      "annualized_volatility": 0.40962123546621415,
+      "volatility": 0.025800700854434703,
+      "annualized_volatility": 0.4095734286720355,
       "maximum_drawdown": -0.2884805765425046,
-      "sharpe_ratio": 0.439824664621653,
-      "sortino_ratio": 0.6265995619509761,
-      "calmar_ratio": 0.3521421981053913,
-      "beta": 1.4765376807244526,
-      "alpha": -0.09099359261280851,
-      "capm_expected_return": 0.27115511512364326,
-      "actual_return": 0.18016152251083475,
-      "market_return": 0.18364252986121082
+      "sharpe_ratio": 0.42161851127279387,
+      "sortino_ratio": 0.60111883916363,
+      "calmar_ratio": 0.3237872666729484,
+      "beta": 1.4744844274399456,
+      "alpha": -0.09951832097304036,
+      "capm_expected_return": 0.2722020602266378,
+      "actual_return": 0.17268373925359742,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 1.4765376807244526,
-      "alpha": -0.09099359261280851,
-      "capm_expected_return": 0.27115511512364326,
-      "actual_return": 0.18016152251083475,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 1.48: Moves roughly 48% more than the market. CAPM expected return is 27.12%; realized alpha is -9.10%, meaning negative alpha versus CAPM."
+      "beta": 1.4744844274399456,
+      "alpha": -0.09951832097304036,
+      "capm_expected_return": 0.2722020602266378,
+      "actual_return": 0.17268373925359742,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 1.47: Moves roughly 47% more than the market. CAPM expected return is 27.22%; realized alpha is -9.95%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.18016152251083475,
+      "actual_return": 0.17268373925359742,
       "components": {
-        "market_component": 0.27115511512364326,
-        "momentum_component": 0.0585845233888429,
-        "volatility_drag": -0.03192424709324283,
-        "alpha_component": -0.09099359261280851
+        "market_component": 0.2722020602266378,
+        "momentum_component": 0.054054708056180345,
+        "volatility_drag": -0.0319146857344071,
+        "alpha_component": -0.09951832097304036
       },
       "component_weights_pct": {
-        "market_component": 59.9,
-        "momentum_component": 12.94,
-        "volatility_drag": 7.05,
-        "alpha_component": 20.1
+        "market_component": 59.47,
+        "momentum_component": 11.81,
+        "volatility_drag": 6.97,
+        "alpha_component": 21.74
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 387.3005004882813,
-      "sma50": 365.4361999511719,
-      "sma200": 327.1845500183106,
-      "ema20": 379.41454160544293,
-      "ema50": 363.76753978431793,
-      "ema200": 331.08276729441
+      "sma20": 387.0240005493164,
+      "sma50": 365.32559997558593,
+      "sma200": 327.1569000244141,
+      "ema20": 378.8878750550337,
+      "ema50": 363.5506770870906,
+      "ema200": 331.02774243093444
     },
     "momentum": {
-      "3m": 0.390726500406255,
-      "6m": 0.18134774974381274,
-      "12m": 0.2343380935553716,
+      "3m": 0.3703115613940926,
+      "6m": 0.16400635137675046,
+      "12m": 0.21621883222472138,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 2611530.25,
-      "relative_volume": 0.15213494080721446,
+      "average_volume": 2629406.8,
+      "relative_volume": 0.28707463599774674,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -447,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CDNS\nRating: Watch | Score: 67.4/100 | Confidence: 58.96/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 265.6600036621094 | Resistance: 416.3900146484375\nFundamental Outlook: Quality Compounder | Forward P/E: 40.08711\nNews/Catalyst: Investors Heavily Search Cadence Design Systems, Inc. (CDNS): Here is What You Need to Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CDNS\nRating: Hold | Score: 64.9/100 | Confidence: 57.59/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 265.6600036621094 | Resistance: 416.3900146484375\nFundamental Outlook: Quality Compounder | Forward P/E: 40.08711\nNews/Catalyst: Investors Heavily Search Cadence Design Systems, Inc. (CDNS): Here is What You Need to Know\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

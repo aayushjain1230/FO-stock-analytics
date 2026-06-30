@@ -1,13 +1,13 @@
 {
   "ticker": "AMP",
-  "generated_at": "2026-06-30T15:26:25.907087",
+  "generated_at": "2026-06-30T17:24:20.341423",
   "score": {
-    "final_score": 46.95,
-    "rating": "Hold",
-    "confidence": 38.6,
+    "final_score": 44.95,
+    "rating": "Drop",
+    "confidence": 37.05,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 33.0,
+      "technical": 25.0,
       "momentum": 35.0,
       "volume": 0,
       "fundamental": 78.0,
@@ -15,25 +15,24 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 33.0,
+      "score": 25.0,
       "evidence": [
-        "Price above SMA20",
         "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 430.3999938964844,
       "resistance": 477.8599853515625,
-      "risk_reward": 0.8
+      "risk_reward": 0.91
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.024702182981542364,
-        "3m": 0.04552151964933837,
-        "6m": -0.08386762855927299,
-        "12m": -0.12356529197446631
+        "1m": 0.02136483847169046,
+        "3m": 0.042116368805040105,
+        "6m": -0.0868513729007061,
+        "12m": -0.1264196429889085
       },
-      "acceleration": 0.0875,
+      "acceleration": 0.0855,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -42,8 +41,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 727088.15,
-      "relative_volume": 0.16567867321176943,
+      "average_volume": 731643.6,
+      "relative_volume": 0.289173581235454,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -58,17 +57,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.017413317160897137,
-        "annualized_volatility": 0.27642784025056283,
-        "maximum_drawdown": -0.26389977299625955,
-        "sharpe_ratio": 0.3116098542082924,
-        "sortino_ratio": 0.40794674121941665,
-        "calmar_ratio": 0.18654772920451157,
-        "beta": 1.0426069651935008,
-        "alpha": -0.10532934173946286,
-        "capm_expected_return": 0.19146698073905388,
-        "actual_return": 0.08613763899959102,
-        "market_return": 0.18364252986121082
+        "volatility": 0.01740556112020674,
+        "annualized_volatility": 0.27630471692161107,
+        "maximum_drawdown": -0.26389974444365105,
+        "sharpe_ratio": 0.3056758986385475,
+        "sortino_ratio": 0.40000018286337313,
+        "calmar_ratio": 0.1800163379782992,
+        "beta": 1.042516141500373,
+        "alpha": -0.10799743762897242,
+        "capm_expected_return": 0.19245713027205535,
+        "actual_return": 0.08445969264308294,
+        "market_return": 0.18460829776225243
       },
       "evidence": []
     },
@@ -81,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; Momentum is accelerating"
+    "explanation": "RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive; Momentum is accelerating; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "AMP",
@@ -131,14 +130,15 @@
     "next_earnings_date": "1784809800",
     "eps_current_year": 40.12,
     "eps_forward": 48.04,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 55.676164860287614,
+    "rsi": 54.65937548681992,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.16567867321176943,
+    "relative_volume": 0.289173581235454,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -234,7 +234,7 @@
         "last_surprise_pct": 0.1025,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 18.31,
+      "analyst_upside_pct": 18.7,
       "eps_growth_implied": 19.74
     },
     "evidence": [
@@ -337,13 +337,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 46.95/100"
+      "Composite score 44.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 46.95,
-    "technical_score": 33.0,
+    "final_score": 44.95,
+    "technical_score": 25.0,
     "momentum_score": 35.0,
     "volume_score": 0,
     "fundamental_score": 78.0,
@@ -353,7 +353,7 @@
     "eps_growth": 0.66,
     "roe": 0.66936,
     "forward_pe": 9.507077,
-    "relative_volume": 0.16567867321176943,
+    "relative_volume": 0.289173581235454,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -363,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.02222518965480136,
-      "weekly": -0.020145425813559825,
-      "monthly": 0.024702182981542364,
-      "annual": -0.12356529197446631
+      "daily": 0.018895912445104912,
+      "weekly": -0.023336706497767534,
+      "monthly": 0.02136483847169046,
+      "annual": -0.1264196429889085
     },
     "risk": {
-      "volatility": 0.017413317160897137,
-      "annualized_volatility": 0.27642784025056283,
-      "maximum_drawdown": -0.26389977299625955,
-      "sharpe_ratio": 0.3116098542082924,
-      "sortino_ratio": 0.40794674121941665,
-      "calmar_ratio": 0.18654772920451157,
-      "beta": 1.0426069651935008,
-      "alpha": -0.10532934173946286,
-      "capm_expected_return": 0.19146698073905388,
-      "actual_return": 0.08613763899959102,
-      "market_return": 0.18364252986121082
+      "volatility": 0.01740556112020674,
+      "annualized_volatility": 0.27630471692161107,
+      "maximum_drawdown": -0.26389974444365105,
+      "sharpe_ratio": 0.3056758986385475,
+      "sortino_ratio": 0.40000018286337313,
+      "calmar_ratio": 0.1800163379782992,
+      "beta": 1.042516141500373,
+      "alpha": -0.10799743762897242,
+      "capm_expected_return": 0.19245713027205535,
+      "actual_return": 0.08445969264308294,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 1.0426069651935008,
-      "alpha": -0.10532934173946286,
-      "capm_expected_return": 0.19146698073905388,
-      "actual_return": 0.08613763899959102,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 1.04: Moves roughly in line with the market. CAPM expected return is 19.15%; realized alpha is -10.53%, meaning negative alpha versus CAPM."
+      "beta": 1.042516141500373,
+      "alpha": -0.10799743762897242,
+      "capm_expected_return": 0.19245713027205535,
+      "actual_return": 0.08445969264308294,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 1.04: Moves roughly in line with the market. CAPM expected return is 19.25%; realized alpha is -10.80%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.08613763899959102,
+      "actual_return": 0.08445969264308294,
       "components": {
-        "market_component": 0.19146698073905388,
+        "market_component": 0.19245713027205535,
         "momentum_component": 0.0,
-        "volatility_drag": -0.005285568050112566,
-        "alpha_component": -0.10532934173946286
+        "volatility_drag": -0.005260943384322214,
+        "alpha_component": -0.10799743762897242
       },
       "component_weights_pct": {
-        "market_component": 63.38,
+        "market_component": 62.95,
         "momentum_component": 0.0,
-        "volatility_drag": 1.75,
-        "alpha_component": 34.87
+        "volatility_drag": 1.72,
+        "alpha_component": 35.33
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 456.67350006103516,
-      "sma50": 460.2351721191406,
-      "sma200": 470.4494924926758,
-      "ema20": 457.5939121677493,
-      "ema50": 458.39023812795386,
-      "ema200": 469.971708747917
+      "sma20": 456.59912567138673,
+      "sma50": 460.20542236328123,
+      "sma200": 470.44205596923825,
+      "ema20": 457.4522466639364,
+      "ema50": 458.3319053572234,
+      "ema200": 469.9569077957823
     },
     "momentum": {
-      "3m": 0.04552151964933837,
-      "6m": -0.08386762855927299,
-      "12m": -0.12356529197446631,
+      "3m": 0.042116368805040105,
+      "6m": -0.0868513729007061,
+      "12m": -0.1264196429889085,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 727088.15,
-      "relative_volume": 0.16567867321176943,
+      "average_volume": 731643.6,
+      "relative_volume": 0.289173581235454,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -440,5 +440,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AMP\nRating: Hold | Score: 46.95/100 | Confidence: 38.6/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.507077\nNews/Catalyst: Financial Advisors Looking for New Clients Shouldn\u2019t Overlook First-Time Parents\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AMP\nRating: Drop | Score: 44.95/100 | Confidence: 37.05/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 430.3999938964844 | Resistance: 477.8599853515625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.507077\nNews/Catalyst: Financial Advisors Looking for New Clients Shouldn\u2019t Overlook First-Time Parents\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

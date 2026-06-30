@@ -1,13 +1,13 @@
 {
   "ticker": "AON",
-  "generated_at": "2026-06-30T15:26:28.299727",
+  "generated_at": "2026-06-30T17:24:21.975816",
   "score": {
-    "final_score": 53.95,
+    "final_score": 56.45,
     "rating": "Hold",
-    "confidence": 51.73,
+    "confidence": 53.53,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 46.0,
+      "technical": 56.0,
       "momentum": 35.0,
       "volume": 25.0,
       "fundamental": 78.0,
@@ -15,26 +15,27 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 46.0,
+      "score": 56.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "EMA trend is positive",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 308.2699890136719,
       "resistance": 336.3299865722656,
-      "risk_reward": 0.37
+      "risk_reward": 0.24
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": 0.03994494747048605,
-        "3m": 0.01694772822487778,
-        "6m": -0.07597899717895351,
-        "12m": -0.06374921742583384
+        "1m": 0.04670002493083181,
+        "3m": 0.023553424703322,
+        "6m": -0.06997691652629501,
+        "12m": -0.05766769688575035
       },
-      "acceleration": 0.0549,
+      "acceleration": 0.0585,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -43,8 +44,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1838042.15,
-      "relative_volume": 0.1929460649202196,
+      "average_volume": 1849590.4,
+      "relative_volume": 0.3166149651295768,
       "accumulation_days": 7,
       "distribution_days": 4,
       "evidence": [
@@ -61,17 +62,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.014576498473944132,
-        "annualized_volatility": 0.23139473968901217,
-        "maximum_drawdown": -0.24170904253801795,
-        "sharpe_ratio": 0.39014365976210896,
-        "sortino_ratio": 0.5090102742999245,
-        "calmar_ratio": 0.2708282769148422,
-        "beta": 0.22632922509480638,
-        "alpha": 0.04871351911403404,
-        "capm_expected_return": 0.041563671477937686,
-        "actual_return": 0.09027719059197173,
-        "market_return": 0.18364252986121082
+        "volatility": 0.01458213699874802,
+        "annualized_volatility": 0.2314842484953663,
+        "maximum_drawdown": -0.24170904253801861,
+        "sharpe_ratio": 0.4041834807778909,
+        "sortino_ratio": 0.5275315154043878,
+        "calmar_ratio": 0.28523607219366154,
+        "beta": 0.22713053439711328,
+        "alpha": 0.051631927977229604,
+        "capm_expected_return": 0.041930181324881806,
+        "actual_return": 0.09356210930211141,
+        "market_return": 0.18460829776225243
       },
       "evidence": []
     },
@@ -84,7 +85,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive; 3m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "AON",
@@ -134,17 +135,18 @@
     "next_earnings_date": "1777638600",
     "eps_current_year": 18.21,
     "eps_forward": 21.40588,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 47.8625546593304,
-    "macd_cross": false,
+    "rsi": 49.45071356511736,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.1929460649202196,
+    "relative_volume": 0.3166149651295768,
     "price_above_sma50": true,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "setup_type": "MACD bullish crossover",
     "support": 308.2699890136719,
     "resistance": 336.3299865722656
   },
@@ -237,7 +239,7 @@
         "last_surprise_pct": 0.0197,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 16.33,
+      "analyst_upside_pct": 15.58,
       "eps_growth_implied": 17.55
     },
     "evidence": [
@@ -333,20 +335,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7996,
-    "probability_pct": 79.96,
+    "probability_of_outperformance": 0.8101,
+    "probability_pct": 81.01,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 53.95/100"
+      "Composite score 56.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 53.95,
-    "technical_score": 46.0,
+    "final_score": 56.45,
+    "technical_score": 56.0,
     "momentum_score": 35.0,
     "volume_score": 25.0,
     "fundamental_score": 78.0,
@@ -356,7 +358,7 @@
     "eps_growth": 0.271,
     "roe": 0.46447,
     "forward_pe": 15.354893,
-    "relative_volume": 0.1929460649202196,
+    "relative_volume": 0.3166149651295768,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -366,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.003403822723218486,
-      "weekly": 0.024770866016467386,
-      "monthly": 0.03994494747048605,
-      "annual": -0.06374921742583384
+      "daily": 0.009921543265050126,
+      "weekly": 0.03142737855194788,
+      "monthly": 0.04670002493083181,
+      "annual": -0.05766769688575035
     },
     "risk": {
-      "volatility": 0.014576498473944132,
-      "annualized_volatility": 0.23139473968901217,
-      "maximum_drawdown": -0.24170904253801795,
-      "sharpe_ratio": 0.39014365976210896,
-      "sortino_ratio": 0.5090102742999245,
-      "calmar_ratio": 0.2708282769148422,
-      "beta": 0.22632922509480638,
-      "alpha": 0.04871351911403404,
-      "capm_expected_return": 0.041563671477937686,
-      "actual_return": 0.09027719059197173,
-      "market_return": 0.18364252986121082
+      "volatility": 0.01458213699874802,
+      "annualized_volatility": 0.2314842484953663,
+      "maximum_drawdown": -0.24170904253801861,
+      "sharpe_ratio": 0.4041834807778909,
+      "sortino_ratio": 0.5275315154043878,
+      "calmar_ratio": 0.28523607219366154,
+      "beta": 0.22713053439711328,
+      "alpha": 0.051631927977229604,
+      "capm_expected_return": 0.041930181324881806,
+      "actual_return": 0.09356210930211141,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 0.22632922509480638,
-      "alpha": 0.04871351911403404,
-      "capm_expected_return": 0.041563671477937686,
-      "actual_return": 0.09027719059197173,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 0.23: Moves roughly 77% less than the market. CAPM expected return is 4.16%; realized alpha is 4.87%, meaning positive alpha versus CAPM."
+      "beta": 0.22713053439711328,
+      "alpha": 0.051631927977229604,
+      "capm_expected_return": 0.041930181324881806,
+      "actual_return": 0.09356210930211141,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 0.23: Moves roughly 77% less than the market. CAPM expected return is 4.19%; realized alpha is 5.16%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.09027719059197173,
+      "actual_return": 0.09356210930211141,
       "components": {
-        "market_component": 0.041563671477937686,
+        "market_component": 0.041930181324881806,
         "momentum_component": 0.0,
         "volatility_drag": -0.0,
-        "alpha_component": 0.04871351911403404
+        "alpha_component": 0.051631927977229604
       },
       "component_weights_pct": {
-        "market_component": 46.04,
+        "market_component": 44.82,
         "momentum_component": 0.0,
         "volatility_drag": 0.0,
-        "alpha_component": 53.96
+        "alpha_component": 55.18
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 325.73075103759766,
-      "sma50": 321.71852600097657,
-      "sma200": 335.53958404541015,
-      "ema20": 324.62447815786686,
-      "ema50": 323.70692442691796,
-      "ema200": 333.54823254894853
+      "sma20": 325.8375015258789,
+      "sma50": 321.76122619628904,
+      "sma200": 335.5502590942383,
+      "ema20": 324.8278124212597,
+      "ema50": 323.7906502999692,
+      "ema200": 333.56947627479707
     },
     "momentum": {
-      "3m": 0.01694772822487778,
-      "6m": -0.07597899717895351,
-      "12m": -0.06374921742583384,
+      "3m": 0.023553424703322,
+      "6m": -0.06997691652629501,
+      "12m": -0.05766769688575035,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 1838042.15,
-      "relative_volume": 0.1929460649202196,
+      "average_volume": 1849590.4,
+      "relative_volume": 0.3166149651295768,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -443,5 +445,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AON\nRating: Hold | Score: 53.95/100 | Confidence: 51.73/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 308.2699890136719 | Resistance: 336.3299865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.354893\nNews/Catalyst: Can Marsh Sustain Organic Growth as Pricing Tailwinds Ease?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AON\nRating: Hold | Score: 56.45/100 | Confidence: 53.53/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 308.2699890136719 | Resistance: 336.3299865722656\nFundamental Outlook: Fundamentally Strong | Forward P/E: 15.354893\nNews/Catalyst: Can Marsh Sustain Organic Growth as Pricing Tailwinds Ease?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "CHD",
-  "generated_at": "2026-06-30T15:27:04.898725",
+  "generated_at": "2026-06-30T17:24:48.412312",
   "score": {
-    "final_score": 62.25,
-    "rating": "Hold",
-    "confidence": 54.25,
+    "final_score": 66.0,
+    "rating": "Watch",
+    "confidence": 56.09,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 75.0,
+      "technical": 90.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 65.0,
@@ -15,28 +15,30 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 75.0,
+      "score": 90.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 90.72000122070312,
       "resistance": 99.58000183105469,
-      "risk_reward": 0.47
+      "risk_reward": 0.34
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.011711834975944191,
-        "3m": 0.033605166617395765,
-        "6m": 0.14024772113941553,
-        "12m": 0.03415642823573273
+        "1m": 0.0175677125737419,
+        "3m": 0.03958776475543857,
+        "6m": 0.1468475758167298,
+        "12m": 0.04014221712478738
       },
-      "acceleration": -0.0365,
+      "acceleration": -0.0338,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 2080316.7,
-      "relative_volume": 0.23108693017750614,
+      "average_volume": 2094797.9,
+      "relative_volume": 0.36774812501005466,
       "accumulation_days": 6,
       "distribution_days": 4,
       "evidence": [
@@ -62,17 +64,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.013614444120831052,
-        "annualized_volatility": 0.21612260029262617,
-        "maximum_drawdown": -0.27277277980076775,
-        "sharpe_ratio": -0.023179939496440705,
-        "sortino_ratio": -0.03512612336733708,
-        "calmar_ratio": -0.10236853577582969,
-        "beta": 0.0036290600184721933,
-        "alpha": -0.00567615856140692,
-        "capm_expected_return": 0.000666449762810406,
-        "actual_return": -0.0050097087985965134,
-        "market_return": 0.18364252986121082
+        "volatility": 0.013606962832172316,
+        "annualized_volatility": 0.21600383851696237,
+        "maximum_drawdown": -0.27277277980076653,
+        "sharpe_ratio": -0.009846512130418827,
+        "sortino_ratio": -0.014905303593345387,
+        "calmar_ratio": -0.09198771044838663,
+        "beta": 0.003930173805833395,
+        "alpha": -0.0028524271123789953,
+        "capm_expected_return": 0.0007255426962046962,
+        "actual_return": -0.002126884416174299,
+        "market_return": 0.18460829776225243
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -86,7 +88,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "CHD",
@@ -136,14 +138,15 @@
     "next_earnings_date": "1785501000",
     "eps_current_year": 3.04,
     "eps_forward": 4.08968,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.22222561306424,
+    "rsi": 50.80274868147983,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.23108693017750614,
+    "relative_volume": 0.36774812501005466,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -239,7 +242,7 @@
         "last_surprise_pct": 0.0223,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.97,
+      "analyst_upside_pct": 5.33,
       "eps_growth_implied": 34.53
     },
     "evidence": [
@@ -334,17 +337,17 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6947,
-    "probability_pct": 69.47,
+    "probability_of_outperformance": 0.7291,
+    "probability_pct": 72.91,
     "confidence": "High",
     "evidence": [
-      "Composite score 62.25/100"
+      "Composite score 66.0/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 62.25,
-    "technical_score": 75.0,
+    "final_score": 66.0,
+    "technical_score": 90.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 65.0,
@@ -354,7 +357,7 @@
     "eps_growth": 0.022,
     "roe": 0.16779,
     "forward_pe": 23.657106,
-    "relative_volume": 0.23108693017750614,
+    "relative_volume": 0.36774812501005466,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -364,66 +367,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.011746695689018094,
-      "weekly": 0.0027984725712284497,
-      "monthly": 0.011711834975944191,
-      "annual": 0.03415642823573273
+      "daily": -0.006026598141872341,
+      "weekly": 0.008602758838943458,
+      "monthly": 0.0175677125737419,
+      "annual": 0.04014221712478738
     },
     "risk": {
-      "volatility": 0.013614444120831052,
-      "annualized_volatility": 0.21612260029262617,
-      "maximum_drawdown": -0.27277277980076775,
-      "sharpe_ratio": -0.023179939496440705,
-      "sortino_ratio": -0.03512612336733708,
-      "calmar_ratio": -0.10236853577582969,
-      "beta": 0.0036290600184721933,
-      "alpha": -0.00567615856140692,
-      "capm_expected_return": 0.000666449762810406,
-      "actual_return": -0.0050097087985965134,
-      "market_return": 0.18364252986121082
+      "volatility": 0.013606962832172316,
+      "annualized_volatility": 0.21600383851696237,
+      "maximum_drawdown": -0.27277277980076653,
+      "sharpe_ratio": -0.009846512130418827,
+      "sortino_ratio": -0.014905303593345387,
+      "calmar_ratio": -0.09198771044838663,
+      "beta": 0.003930173805833395,
+      "alpha": -0.0028524271123789953,
+      "capm_expected_return": 0.0007255426962046962,
+      "actual_return": -0.002126884416174299,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 0.0036290600184721933,
-      "alpha": -0.00567615856140692,
-      "capm_expected_return": 0.000666449762810406,
-      "actual_return": -0.0050097087985965134,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 0.00: Moves roughly 100% less than the market. CAPM expected return is 0.07%; realized alpha is -0.57%, meaning negative alpha versus CAPM."
+      "beta": 0.003930173805833395,
+      "alpha": -0.0028524271123789953,
+      "capm_expected_return": 0.0007255426962046962,
+      "actual_return": -0.002126884416174299,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 0.00: Moves roughly 100% less than the market. CAPM expected return is 0.07%; realized alpha is -0.29%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.0050097087985965134,
+      "actual_return": -0.002126884416174299,
       "components": {
-        "market_component": 0.000666449762810406,
-        "momentum_component": 0.008539107058933182,
+        "market_component": 0.0007255426962046962,
+        "momentum_component": 0.010035554281196846,
         "volatility_drag": -0.0,
-        "alpha_component": -0.00567615856140692
+        "alpha_component": -0.0028524271123789953
       },
       "component_weights_pct": {
-        "market_component": 4.48,
-        "momentum_component": 57.38,
+        "market_component": 5.33,
+        "momentum_component": 73.72,
         "volatility_drag": 0.0,
-        "alpha_component": 38.14
+        "alpha_component": 20.95
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 96.80750007629395,
-      "sma50": 95.69646728515625,
-      "sma200": 91.60098907470703,
-      "ema20": 96.9840408413712,
-      "ema50": 96.19138199708145,
-      "ema200": 94.38446785755116
+      "sma20": 96.83549995422364,
+      "sma50": 95.70766723632812,
+      "sma200": 91.60378925323486,
+      "ema20": 97.03737394218969,
+      "ema50": 96.21334268646356,
+      "ema200": 94.39004011220985
     },
     "momentum": {
-      "3m": 0.033605166617395765,
-      "6m": 0.14024772113941553,
-      "12m": 0.03415642823573273,
+      "3m": 0.03958776475543857,
+      "6m": 0.1468475758167298,
+      "12m": 0.04014221712478738,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 2080316.7,
-      "relative_volume": 0.23108693017750614,
+      "average_volume": 2094797.9,
+      "relative_volume": 0.36774812501005466,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -441,5 +444,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CHD\nRating: Hold | Score: 62.25/100 | Confidence: 54.25/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 90.72000122070312 | Resistance: 99.58000183105469\nFundamental Outlook: Fundamentally Average | Forward P/E: 23.657106\nNews/Catalyst: 3 Reasons CHD is Risky and 1 Stock to Buy Instead\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CHD\nRating: Watch | Score: 66.0/100 | Confidence: 56.09/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 90.72000122070312 | Resistance: 99.58000183105469\nFundamental Outlook: Fundamentally Average | Forward P/E: 23.657106\nNews/Catalyst: 3 Reasons CHD is Risky and 1 Stock to Buy Instead\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

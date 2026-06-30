@@ -1,13 +1,13 @@
 {
   "ticker": "DDOG",
-  "generated_at": "2026-06-30T15:27:29.883974",
+  "generated_at": "2026-06-30T17:25:04.757764",
   "score": {
-    "final_score": 63.9,
-    "rating": "Hold",
-    "confidence": 46.9,
+    "final_score": 66.4,
+    "rating": "Watch",
+    "confidence": 48.31,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 73.0,
+      "technical": 83.0,
       "momentum": 85.0,
       "volume": 0,
       "fundamental": 71.0,
@@ -15,28 +15,29 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 73.0,
+      "score": 83.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 105.37000274658203,
       "resistance": 277.489990234375,
-      "risk_reward": 0.14
+      "risk_reward": 0.12
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.03844745912020309,
-        "3m": 1.2179431030693606,
-        "6m": 0.8570652555233473,
-        "12m": 0.9447303285179809
+        "1m": 0.048554594508563476,
+        "3m": 1.2395301858143983,
+        "6m": 0.8751399398010637,
+        "12m": 0.9636582507268083
       },
-      "acceleration": 0.7894,
+      "acceleration": 0.802,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +49,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 5328652.2,
-      "relative_volume": 0.16748024950849671,
+      "average_volume": 5376895.7,
+      "relative_volume": 0.34542496332967737,
       "accumulation_days": 1,
       "distribution_days": 4,
       "evidence": []
@@ -65,17 +66,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.03462538111189552,
-        "annualized_volatility": 0.5496608848374521,
+        "volatility": 0.03464658782655855,
+        "annualized_volatility": 0.5499975309961906,
         "maximum_drawdown": -0.4862057017996235,
-        "sharpe_ratio": 0.8833297861288861,
-        "sortino_ratio": 1.5905741048034256,
-        "calmar_ratio": 0.8365959979448404,
-        "beta": 1.2643417201762228,
-        "alpha": 0.2533449197446441,
-        "capm_expected_return": 0.23218691210223666,
-        "actual_return": 0.4855318318468808,
-        "market_return": 0.18364252986121082
+        "sharpe_ratio": 0.8920055067489263,
+        "sortino_ratio": 1.6071798366222376,
+        "calmar_ratio": 0.8507548771124833,
+        "beta": 1.2661044286652996,
+        "alpha": 0.2568674429817651,
+        "capm_expected_return": 0.23373338336515012,
+        "actual_return": 0.49060082634691526,
+        "market_return": 0.18460829776225243
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -89,7 +90,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "DDOG",
@@ -139,17 +140,18 @@
     "next_earnings_date": "1778157000",
     "eps_current_year": 0.4,
     "eps_forward": 2.85668,
-    "classification": "Fundamentally Strong"
+    "classification": "Fundamentally Strong",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 72.14221490133744,
-    "macd_cross": false,
+    "rsi": 73.14922024821797,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.16748024950849671,
+    "relative_volume": 0.34542496332967737,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "MACD bullish crossover, trend continuation",
     "support": 105.37000274658203,
     "resistance": 277.489990234375
   },
@@ -242,7 +244,7 @@
         "last_surprise_pct": 0.1825,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -5.97,
+      "analyst_upside_pct": -6.64,
       "eps_growth_implied": 614.17
     },
     "evidence": [
@@ -337,20 +339,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8524,
-    "probability_pct": 85.24,
+    "probability_of_outperformance": 0.8659,
+    "probability_pct": 86.59,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 63.9/100"
+      "Composite score 66.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 63.9,
-    "technical_score": 73.0,
+    "final_score": 66.4,
+    "technical_score": 83.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 71.0,
@@ -360,7 +362,7 @@
     "eps_growth": 1.04,
     "roe": 0.039300002,
     "forward_pe": 90.1396,
-    "relative_volume": 0.16748024950849671,
+    "relative_volume": 0.34542496332967737,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +372,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.03335067700477179,
-      "weekly": 0.16452816258921654,
-      "monthly": 0.03844745912020309,
-      "annual": 0.9447303285179809
+      "daily": 0.04340820577468141,
+      "weekly": 0.17586243251253042,
+      "monthly": 0.048554594508563476,
+      "annual": 0.9636582507268083
     },
     "risk": {
-      "volatility": 0.03462538111189552,
-      "annualized_volatility": 0.5496608848374521,
+      "volatility": 0.03464658782655855,
+      "annualized_volatility": 0.5499975309961906,
       "maximum_drawdown": -0.4862057017996235,
-      "sharpe_ratio": 0.8833297861288861,
-      "sortino_ratio": 1.5905741048034256,
-      "calmar_ratio": 0.8365959979448404,
-      "beta": 1.2643417201762228,
-      "alpha": 0.2533449197446441,
-      "capm_expected_return": 0.23218691210223666,
-      "actual_return": 0.4855318318468808,
-      "market_return": 0.18364252986121082
+      "sharpe_ratio": 0.8920055067489263,
+      "sortino_ratio": 1.6071798366222376,
+      "calmar_ratio": 0.8507548771124833,
+      "beta": 1.2661044286652996,
+      "alpha": 0.2568674429817651,
+      "capm_expected_return": 0.23373338336515012,
+      "actual_return": 0.49060082634691526,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 1.2643417201762228,
-      "alpha": 0.2533449197446441,
-      "capm_expected_return": 0.23218691210223666,
-      "actual_return": 0.4855318318468808,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 1.26: Moves roughly 26% more than the market. CAPM expected return is 23.22%; realized alpha is 25.33%, meaning positive alpha versus CAPM."
+      "beta": 1.2661044286652996,
+      "alpha": 0.2568674429817651,
+      "capm_expected_return": 0.23373338336515012,
+      "actual_return": 0.49060082634691526,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 1.27: Moves roughly 27% more than the market. CAPM expected return is 23.37%; realized alpha is 25.69%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.4855318318468808,
+      "actual_return": 0.49060082634691526,
       "components": {
-        "market_component": 0.23218691210223666,
-        "momentum_component": 0.23618258212949522,
-        "volatility_drag": -0.059932176967490425,
-        "alpha_component": 0.2533449197446441
+        "market_component": 0.23373338336515012,
+        "momentum_component": 0.24091456268170208,
+        "volatility_drag": -0.059999506199238134,
+        "alpha_component": 0.2568674429817651
       },
       "component_weights_pct": {
-        "market_component": 29.7,
-        "momentum_component": 30.22,
-        "volatility_drag": 7.67,
-        "alpha_component": 32.41
+        "market_component": 29.53,
+        "momentum_component": 30.44,
+        "volatility_drag": 7.58,
+        "alpha_component": 32.45
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 234.62600021362306,
-      "sma50": 202.54920013427736,
-      "sma200": 154.8174503326416,
-      "ema20": 230.77486069813273,
-      "ema50": 206.68457976474514,
-      "ema200": 161.4048716032206
+      "sma20": 234.75100021362306,
+      "sma50": 202.59920013427734,
+      "sma200": 154.8299503326416,
+      "ema20": 231.01295593622797,
+      "ema50": 206.78261898043144,
+      "ema200": 161.42974722511116
     },
     "momentum": {
-      "3m": 1.2179431030693606,
-      "6m": 0.8570652555233473,
-      "12m": 0.9447303285179809,
+      "3m": 1.2395301858143983,
+      "6m": 0.8751399398010637,
+      "12m": 0.9636582507268083,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 5328652.2,
-      "relative_volume": 0.16748024950849671,
+      "average_volume": 5376895.7,
+      "relative_volume": 0.34542496332967737,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -447,5 +449,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DDOG\nRating: Hold | Score: 63.9/100 | Confidence: 46.9/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 105.37000274658203 | Resistance: 277.489990234375\nFundamental Outlook: Fundamentally Strong | Forward P/E: 90.1396\nNews/Catalyst: 2 Software Stocks That Are Probably Safe From AI\u2019s Disruption\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DDOG\nRating: Watch | Score: 66.4/100 | Confidence: 48.31/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: MACD bullish crossover, trend continuation | Support: 105.37000274658203 | Resistance: 277.489990234375\nFundamental Outlook: Fundamentally Strong | Forward P/E: 90.1396\nNews/Catalyst: 2 Software Stocks That Are Probably Safe From AI\u2019s Disruption\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

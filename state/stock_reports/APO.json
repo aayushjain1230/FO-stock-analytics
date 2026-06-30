@@ -1,13 +1,13 @@
 {
   "ticker": "APO",
-  "generated_at": "2026-06-30T15:26:32.176605",
+  "generated_at": "2026-06-30T17:24:24.096584",
   "score": {
-    "final_score": 27.8,
-    "rating": "Avoid",
-    "confidence": 22.77,
+    "final_score": 30.3,
+    "rating": "Drop",
+    "confidence": 24.8,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 10.0,
+      "technical": 20.0,
       "momentum": 25.0,
       "volume": 0,
       "fundamental": 47.0,
@@ -15,23 +15,24 @@
       "catalyst": 60.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 20.0,
       "evidence": [
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
       "support": 104.27999877929688,
       "resistance": 138.91000366210938,
-      "risk_reward": 1.96
+      "risk_reward": 2.05
     },
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": -0.09882688358781044,
-        "3m": 0.05938276260747788,
-        "6m": -0.21253080097983013,
-        "12m": -0.17545055596600023
+        "1m": -0.1016238736551941,
+        "3m": 0.0560947339139819,
+        "6m": -0.21497488579318857,
+        "12m": -0.17800972752030886
       },
-      "acceleration": 0.1656,
+      "acceleration": 0.1636,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating"
@@ -39,8 +40,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 4116851.25,
-      "relative_volume": 0.3136195411481044,
+      "average_volume": 4149180.15,
+      "relative_volume": 0.46700864506931566,
       "accumulation_days": 3,
       "distribution_days": 8,
       "evidence": []
@@ -53,17 +54,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.025407447296403388,
-        "annualized_volatility": 0.40333072197158254,
-        "maximum_drawdown": -0.42821274813358046,
-        "sharpe_ratio": 0.2093271171200821,
-        "sortino_ratio": 0.2746345554099456,
-        "calmar_ratio": 0.006891527725568094,
-        "beta": 1.551952566262922,
-        "alpha": -0.20057643821684873,
-        "capm_expected_return": 0.28500449549312146,
-        "actual_return": 0.08442805727627271,
-        "market_return": 0.18364252986121082
+        "volatility": 0.025405413836024227,
+        "annualized_volatility": 0.40329844178879753,
+        "maximum_drawdown": -0.4282127481335809,
+        "sharpe_ratio": 0.20542582142404026,
+        "sortino_ratio": 0.26949457762293777,
+        "calmar_ratio": 0.0032248116234522145,
+        "beta": 1.5512796002106604,
+        "alpha": -0.20353117266469828,
+        "capm_expected_return": 0.2863790863481975,
+        "actual_return": 0.08284791368349921,
+        "market_return": 0.18460829776225243
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -79,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; analyst revision; insider buying; major news"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; Momentum is accelerating; analyst revision; insider buying"
   },
   "fundamentals": {
     "ticker": "APO",
@@ -129,14 +130,15 @@
     "next_earnings_date": "1785846600",
     "eps_current_year": 1.58,
     "eps_forward": 10.61453,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 25.873519477649708,
+    "rsi": 25.09483313842422,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3136195411481044,
+    "relative_volume": 0.46700864506931566,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -232,7 +234,7 @@
         "last_surprise_pct": 0.0292,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 29.86,
+      "analyst_upside_pct": 30.2,
       "eps_growth_implied": 571.81
     },
     "evidence": [
@@ -333,13 +335,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 27.8/100"
+      "Composite score 30.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 27.8,
-    "technical_score": 10.0,
+    "final_score": 30.3,
+    "technical_score": 20.0,
     "momentum_score": 25.0,
     "volume_score": 0,
     "fundamental_score": 47.0,
@@ -349,7 +351,7 @@
     "eps_growth": null,
     "roe": 0.08492,
     "forward_pe": 10.927474,
-    "relative_volume": 0.3136195411481044,
+    "relative_volume": 0.46700864506931566,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -359,66 +361,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.010101855039778673,
-      "weekly": -0.11193631941092963,
-      "monthly": -0.09882688358781044,
-      "annual": -0.17545055596600023
+      "daily": 0.006966780541728834,
+      "weekly": -0.11469262144499481,
+      "monthly": -0.1016238736551941,
+      "annual": -0.17800972752030886
     },
     "risk": {
-      "volatility": 0.025407447296403388,
-      "annualized_volatility": 0.40333072197158254,
-      "maximum_drawdown": -0.42821274813358046,
-      "sharpe_ratio": 0.2093271171200821,
-      "sortino_ratio": 0.2746345554099456,
-      "calmar_ratio": 0.006891527725568094,
-      "beta": 1.551952566262922,
-      "alpha": -0.20057643821684873,
-      "capm_expected_return": 0.28500449549312146,
-      "actual_return": 0.08442805727627271,
-      "market_return": 0.18364252986121082
+      "volatility": 0.025405413836024227,
+      "annualized_volatility": 0.40329844178879753,
+      "maximum_drawdown": -0.4282127481335809,
+      "sharpe_ratio": 0.20542582142404026,
+      "sortino_ratio": 0.26949457762293777,
+      "calmar_ratio": 0.0032248116234522145,
+      "beta": 1.5512796002106604,
+      "alpha": -0.20353117266469828,
+      "capm_expected_return": 0.2863790863481975,
+      "actual_return": 0.08284791368349921,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 1.551952566262922,
-      "alpha": -0.20057643821684873,
-      "capm_expected_return": 0.28500449549312146,
-      "actual_return": 0.08442805727627271,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 1.55: Moves roughly 55% more than the market. CAPM expected return is 28.50%; realized alpha is -20.06%, meaning negative alpha versus CAPM."
+      "beta": 1.5512796002106604,
+      "alpha": -0.20353117266469828,
+      "capm_expected_return": 0.2863790863481975,
+      "actual_return": 0.08284791368349921,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 1.55: Moves roughly 55% more than the market. CAPM expected return is 28.64%; realized alpha is -20.35%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.08442805727627271,
+      "actual_return": 0.08284791368349921,
       "components": {
-        "market_component": 0.28500449549312146,
+        "market_component": 0.2863790863481975,
         "momentum_component": 0.0,
-        "volatility_drag": -0.03066614439431651,
-        "alpha_component": -0.20057643821684873
+        "volatility_drag": -0.030659688357759507,
+        "alpha_component": -0.20353117266469828
       },
       "component_weights_pct": {
-        "market_component": 55.21,
+        "market_component": 55.01,
         "momentum_component": 0.0,
-        "volatility_drag": 5.94,
-        "alpha_component": 38.85
+        "volatility_drag": 5.89,
+        "alpha_component": 39.1
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 128.9395004272461,
-      "sma50": 128.89679611206054,
-      "sma200": 127.47988182067871,
-      "ema20": 126.91298951331699,
-      "ema50": 126.76800476026374,
-      "ema200": 127.5969661287298
+      "sma20": 128.9215003967285,
+      "sma50": 128.88959609985352,
+      "sma200": 127.47808235168458,
+      "ema20": 126.87870374090305,
+      "ema50": 126.75388709281327,
+      "ema200": 127.5933841055232
     },
     "momentum": {
-      "3m": 0.05938276260747788,
-      "6m": -0.21253080097983013,
-      "12m": -0.17545055596600023,
+      "3m": 0.0560947339139819,
+      "6m": -0.21497488579318857,
+      "12m": -0.17800972752030886,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 4116851.25,
-      "relative_volume": 0.3136195411481044,
+      "average_volume": 4149180.15,
+      "relative_volume": 0.46700864506931566,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -436,5 +438,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: APO\nRating: Avoid | Score: 27.8/100 | Confidence: 22.77/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 104.27999877929688 | Resistance: 138.91000366210938\nFundamental Outlook: Fundamentally Weak | Forward P/E: 10.927474\nNews/Catalyst: Private Credit's Liquidity Crunch: APO & ARES Cap Withdrawals Again\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: APO\nRating: Drop | Score: 30.3/100 | Confidence: 24.8/100\nBull Case: No decisive bull case yet.\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 104.27999877929688 | Resistance: 138.91000366210938\nFundamental Outlook: Fundamentally Weak | Forward P/E: 10.927474\nNews/Catalyst: Private Credit's Liquidity Crunch: APO & ARES Cap Withdrawals Again\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

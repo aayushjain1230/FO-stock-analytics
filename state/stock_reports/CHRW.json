@@ -1,13 +1,13 @@
 {
   "ticker": "CHRW",
-  "generated_at": "2026-06-30T15:27:05.519973",
+  "generated_at": "2026-06-30T17:24:48.839734",
   "score": {
-    "final_score": 57.3,
+    "final_score": 59.3,
     "rating": "Hold",
-    "confidence": 39.09,
+    "confidence": 40.25,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 73.0,
       "momentum": 70.0,
       "volume": 0,
       "fundamental": 47.0,
@@ -15,8 +15,9 @@
       "catalyst": 30.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 73.0,
       "evidence": [
+        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -25,17 +26,17 @@
       ],
       "support": 159.77999877929688,
       "resistance": 193.74000549316406,
-      "risk_reward": 0.5
+      "risk_reward": 0.3
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.024992871557682372,
-        "3m": 0.13089780671545181,
-        "6m": 0.11608651405902459,
-        "12m": 0.9178119205612354
+        "1m": 0.04369651579223155,
+        "3m": 0.1515339602238106,
+        "6m": 0.13645239725020675,
+        "12m": 0.952807042863328
       },
-      "acceleration": 0.0729,
+      "acceleration": 0.0833,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +47,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 1365172.7,
-      "relative_volume": 0.1422926198275134,
+      "average_volume": 1372257.05,
+      "relative_volume": 0.24480909025025593,
       "accumulation_days": 1,
       "distribution_days": 4,
       "evidence": []
@@ -60,17 +61,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.02320354465345138,
-        "annualized_volatility": 0.3683448521292886,
-        "maximum_drawdown": -0.23265782341331032,
-        "sharpe_ratio": 1.2519179753307506,
-        "sortino_ratio": 1.8974065379896707,
-        "calmar_ratio": 2.0810824560141987,
-        "beta": 0.6598340355609545,
-        "alpha": 0.33996394992225776,
-        "capm_expected_return": 0.12117359157894583,
-        "actual_return": 0.4611375415012036,
-        "market_return": 0.18364252986121082
+        "volatility": 0.02319565779880395,
+        "annualized_volatility": 0.3682196521931469,
+        "maximum_drawdown": -0.23265794505217652,
+        "sharpe_ratio": 1.2770145332908405,
+        "sortino_ratio": 1.9307185071379607,
+        "calmar_ratio": 2.139486712567519,
+        "beta": 0.661286616167792,
+        "alpha": 0.348142850750251,
+        "capm_expected_return": 0.12207899654369608,
+        "actual_return": 0.47022184729394706,
+        "market_return": 0.18460829776225243
       },
       "evidence": []
     },
@@ -81,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "CHRW",
@@ -131,14 +132,15 @@
     "next_earnings_date": "1777492800",
     "eps_current_year": 4.93,
     "eps_forward": 7.34349,
-    "classification": "Fundamentally Weak"
+    "classification": "Fundamentally Weak",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 40.390280353724584,
+    "rsi": 43.72715451852922,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.1422926198275134,
+    "relative_volume": 0.24480909025025593,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -193,7 +195,7 @@
     "major_news": false,
     "guidance_change": true,
     "bullish_news_score": 2,
-    "bearish_news_score": 0,
+    "bearish_news_score": 1,
     "institutional_ownership": 1.07383,
     "detail": {
       "earnings": {
@@ -234,7 +236,7 @@
         "last_surprise_pct": 0.0964,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.76,
+      "analyst_upside_pct": 6.06,
       "eps_growth_implied": 48.96
     },
     "evidence": [
@@ -260,6 +262,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "C.H. Robinson out of Florida \u2018U-turn\u2019 lawsuit",
+        "source": "FreightWaves",
+        "published": "2026-06-30T15:43:33Z",
+        "summary": "C.H. Robinson has been removed as a defendant in a case that might have been key post-Montgomery litigation. The post C.H. Robinson out of Florida \u2018U-turn\u2019 lawsuit appeared first on FreightWaves.",
+        "bullish_score": 0,
+        "bearish_score": 1,
+        "importance_score": 45,
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
       {
         "headline": "Uber Stock And The Growth Rate That Matters Most",
         "source": "Trefis",
@@ -299,16 +311,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "C.H. Robinson to Benefit From DeSpir Logistics Buyout: Here's How",
-        "source": "Zacks",
-        "published": "2026-06-23T17:34:00Z",
-        "summary": "CHRW's $75M DeSpir Logistics buyout expands secure freight services, adds shipment-monitoring tech, and is expected to aid 2026 earnings.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -328,17 +330,17 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6955,
-    "probability_pct": 69.55,
+    "probability_of_outperformance": 0.7141,
+    "probability_pct": 71.41,
     "confidence": "High",
     "evidence": [
-      "Composite score 57.3/100"
+      "Composite score 59.3/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 57.3,
-    "technical_score": 65.0,
+    "final_score": 59.3,
+    "technical_score": 73.0,
     "momentum_score": 70.0,
     "volume_score": 0,
     "fundamental_score": 47.0,
@@ -348,7 +350,7 @@
     "eps_growth": 0.099,
     "roe": 0.34838,
     "forward_pe": 24.899605,
-    "relative_volume": 0.1422926198275134,
+    "relative_volume": 0.24480909025025593,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -358,66 +360,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.012232717222386724,
-      "weekly": 0.020409356016633406,
-      "monthly": 0.024992871557682372,
-      "annual": 0.9178119205612354
+      "daily": 0.005791649928112319,
+      "weekly": 0.039029362163151005,
+      "monthly": 0.04369651579223155,
+      "annual": 0.952807042863328
     },
     "risk": {
-      "volatility": 0.02320354465345138,
-      "annualized_volatility": 0.3683448521292886,
-      "maximum_drawdown": -0.23265782341331032,
-      "sharpe_ratio": 1.2519179753307506,
-      "sortino_ratio": 1.8974065379896707,
-      "calmar_ratio": 2.0810824560141987,
-      "beta": 0.6598340355609545,
-      "alpha": 0.33996394992225776,
-      "capm_expected_return": 0.12117359157894583,
-      "actual_return": 0.4611375415012036,
-      "market_return": 0.18364252986121082
+      "volatility": 0.02319565779880395,
+      "annualized_volatility": 0.3682196521931469,
+      "maximum_drawdown": -0.23265794505217652,
+      "sharpe_ratio": 1.2770145332908405,
+      "sortino_ratio": 1.9307185071379607,
+      "calmar_ratio": 2.139486712567519,
+      "beta": 0.661286616167792,
+      "alpha": 0.348142850750251,
+      "capm_expected_return": 0.12207899654369608,
+      "actual_return": 0.47022184729394706,
+      "market_return": 0.18460829776225243
     },
     "capm": {
-      "beta": 0.6598340355609545,
-      "alpha": 0.33996394992225776,
-      "capm_expected_return": 0.12117359157894583,
-      "actual_return": 0.4611375415012036,
-      "market_return": 0.18364252986121082,
-      "interpretation": "Beta 0.66: Moves roughly 34% less than the market. CAPM expected return is 12.12%; realized alpha is 34.00%, meaning positive alpha versus CAPM."
+      "beta": 0.661286616167792,
+      "alpha": 0.348142850750251,
+      "capm_expected_return": 0.12207899654369608,
+      "actual_return": 0.47022184729394706,
+      "market_return": 0.18460829776225243,
+      "interpretation": "Beta 0.66: Moves roughly 34% less than the market. CAPM expected return is 12.21%; realized alpha is 34.81%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.4611375415012036,
+      "actual_return": 0.47022184729394706,
       "components": {
-        "market_component": 0.12117359157894583,
-        "momentum_component": 0.22945298014030885,
-        "volatility_drag": -0.023668970425857718,
-        "alpha_component": 0.33996394992225776
+        "market_component": 0.12207899654369608,
+        "momentum_component": 0.238201760715832,
+        "volatility_drag": -0.02364393043862938,
+        "alpha_component": 0.348142850750251
       },
       "component_weights_pct": {
-        "market_component": 16.96,
-        "momentum_component": 32.12,
-        "volatility_drag": 3.31,
-        "alpha_component": 47.6
+        "market_component": 16.68,
+        "momentum_component": 32.54,
+        "volatility_drag": 3.23,
+        "alpha_component": 47.56
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 184.78569259643555,
-      "sma50": 178.88000671386717,
-      "sma200": 164.561868057251,
-      "ema20": 182.57438864476694,
-      "ema50": 179.5948205325396,
-      "ema200": 162.61760729602094
+      "sma20": 184.9521926879883,
+      "sma50": 178.9466067504883,
+      "sma200": 164.5785185241699,
+      "ema20": 182.89153167717413,
+      "ema50": 179.7254089012841,
+      "ema200": 162.65074189298554
     },
     "momentum": {
-      "3m": 0.13089780671545181,
-      "6m": 0.11608651405902459,
-      "12m": 0.9178119205612354,
+      "3m": 0.1515339602238106,
+      "6m": 0.13645239725020675,
+      "12m": 0.952807042863328,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1365172.7,
-      "relative_volume": 0.1422926198275134,
+      "average_volume": 1372257.05,
+      "relative_volume": 0.24480909025025593,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -435,5 +437,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CHRW\nRating: Hold | Score: 57.3/100 | Confidence: 39.09/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 159.77999877929688 | Resistance: 193.74000549316406\nFundamental Outlook: Fundamentally Weak | Forward P/E: 24.899605\nNews/Catalyst: Uber Stock And The Growth Rate That Matters Most\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CHRW\nRating: Hold | Score: 59.3/100 | Confidence: 40.25/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 159.77999877929688 | Resistance: 193.74000549316406\nFundamental Outlook: Fundamentally Weak | Forward P/E: 24.899605\nNews/Catalyst: C.H. Robinson out of Florida \u2018U-turn\u2019 lawsuit\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
