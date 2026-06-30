@@ -1,13 +1,13 @@
 {
   "ticker": "ALL",
-  "generated_at": "2026-06-30T17:24:17.220766",
+  "generated_at": "2026-06-30T19:17:59.405221",
   "score": {
-    "final_score": 66.95,
+    "final_score": 68.95,
     "rating": "Watch",
-    "confidence": 59.8,
+    "confidence": 61.09,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 65.0,
+      "technical": 73.0,
       "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 78.0,
@@ -15,7 +15,7 @@
       "catalyst": 55.0
     },
     "technical": {
-      "score": 65.0,
+      "score": 73.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -26,18 +26,18 @@
         "Stock is extended from SMA20"
       ],
       "support": 204.10000610351562,
-      "resistance": 241.77999877929688,
-      "risk_reward": 0.0
+      "resistance": 241.3800048828125,
+      "risk_reward": 0.04
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.17935713017754784,
-        "3m": 0.17264291491491957,
-        "6m": 0.1755705176390916,
-        "12m": 0.259942908032633
+        "1m": 0.17116244347545528,
+        "3m": 0.1644948815030982,
+        "6m": 0.16740214196918846,
+        "12m": 0.2511883757564586
       },
-      "acceleration": 0.0849,
+      "acceleration": 0.0808,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1827690.95,
-      "relative_volume": 0.21306610945357038,
+      "average_volume": 1848764.0,
+      "relative_volume": 0.4386065501059086,
       "accumulation_days": 5,
       "distribution_days": 2,
       "evidence": [
@@ -66,17 +66,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.01581987586111081,
-        "annualized_volatility": 0.251132743802478,
-        "maximum_drawdown": -0.14106946248553953,
-        "sharpe_ratio": 1.0264687232762955,
-        "sortino_ratio": 1.3949250217743476,
-        "calmar_ratio": 1.7981384265163667,
-        "beta": 0.3057003377269861,
-        "alpha": 0.201345087930678,
-        "capm_expected_return": 0.056434818973124586,
-        "actual_return": 0.2577799069038026,
-        "market_return": 0.18460829776225243
+        "volatility": 0.015822386661870122,
+        "annualized_volatility": 0.2511726015288826,
+        "maximum_drawdown": -0.14106946248553964,
+        "sharpe_ratio": 1.012340410357619,
+        "sortino_ratio": 1.378065672907918,
+        "calmar_ratio": 1.7669632197604674,
+        "beta": 0.3045570701512016,
+        "alpha": 0.19780809821750775,
+        "capm_expected_return": 0.05646407628483193,
+        "actual_return": 0.2542721745023397,
+        "market_return": 0.18539735838934737
       },
       "evidence": []
     },
@@ -142,16 +142,16 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 80.8580456324825,
+    "rsi": 78.12964665044154,
     "macd_cross": false,
     "breakout": true,
-    "new_52w_high": true,
-    "relative_volume": 0.21306610945357038,
+    "new_52w_high": false,
+    "relative_volume": 0.4386065501059086,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
     "support": 204.10000610351562,
-    "resistance": 241.77999877929688
+    "resistance": 241.3800048828125
   },
   "earnings": {
     "next_earnings_date": "1777492800",
@@ -242,7 +242,7 @@
         "last_surprise_pct": 0.4701,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": -0.38,
+      "analyst_upside_pct": 0.36,
       "eps_growth_implied": -41.87
     },
     "evidence": [
@@ -337,20 +337,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8629,
-    "probability_pct": 86.29,
+    "probability_of_outperformance": 0.8732,
+    "probability_pct": 87.32,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 66.95/100"
+      "Composite score 68.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 66.95,
-    "technical_score": 65.0,
+    "final_score": 68.95,
+    "technical_score": 73.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 78.0,
@@ -360,7 +360,7 @@
     "eps_growth": 3.384,
     "roe": 0.45221,
     "forward_pe": 9.177293,
-    "relative_volume": 0.21306610945357038,
+    "relative_volume": 0.4386065501059086,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +370,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0016571128030200555,
-      "weekly": 0.04418050353146552,
-      "monthly": 0.17935713017754784,
-      "annual": 0.259942908032633
+      "daily": -0.005302836827426161,
+      "weekly": 0.036925082872258264,
+      "monthly": 0.17116244347545528,
+      "annual": 0.2511883757564586
     },
     "risk": {
-      "volatility": 0.01581987586111081,
-      "annualized_volatility": 0.251132743802478,
-      "maximum_drawdown": -0.14106946248553953,
-      "sharpe_ratio": 1.0264687232762955,
-      "sortino_ratio": 1.3949250217743476,
-      "calmar_ratio": 1.7981384265163667,
-      "beta": 0.3057003377269861,
-      "alpha": 0.201345087930678,
-      "capm_expected_return": 0.056434818973124586,
-      "actual_return": 0.2577799069038026,
-      "market_return": 0.18460829776225243
+      "volatility": 0.015822386661870122,
+      "annualized_volatility": 0.2511726015288826,
+      "maximum_drawdown": -0.14106946248553964,
+      "sharpe_ratio": 1.012340410357619,
+      "sortino_ratio": 1.378065672907918,
+      "calmar_ratio": 1.7669632197604674,
+      "beta": 0.3045570701512016,
+      "alpha": 0.19780809821750775,
+      "capm_expected_return": 0.05646407628483193,
+      "actual_return": 0.2542721745023397,
+      "market_return": 0.18539735838934737
     },
     "capm": {
-      "beta": 0.3057003377269861,
-      "alpha": 0.201345087930678,
-      "capm_expected_return": 0.056434818973124586,
-      "actual_return": 0.2577799069038026,
-      "market_return": 0.18460829776225243,
-      "interpretation": "Beta 0.31: Moves roughly 69% less than the market. CAPM expected return is 5.64%; realized alpha is 20.13%, meaning positive alpha versus CAPM."
+      "beta": 0.3045570701512016,
+      "alpha": 0.19780809821750775,
+      "capm_expected_return": 0.05646407628483193,
+      "actual_return": 0.2542721745023397,
+      "market_return": 0.18539735838934737,
+      "interpretation": "Beta 0.30: Moves roughly 70% less than the market. CAPM expected return is 5.65%; realized alpha is 19.78%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2577799069038026,
+      "actual_return": 0.2542721745023397,
       "components": {
-        "market_component": 0.056434818973124586,
-        "momentum_component": 0.06498572700815824,
-        "volatility_drag": -0.00022654876049560402,
-        "alpha_component": 0.201345087930678
+        "market_component": 0.05646407628483193,
+        "momentum_component": 0.06279709393911465,
+        "volatility_drag": -0.00023452030577651996,
+        "alpha_component": 0.19780809821750775
       },
       "component_weights_pct": {
-        "market_component": 17.47,
-        "momentum_component": 20.12,
+        "market_component": 17.79,
+        "momentum_component": 19.79,
         "volatility_drag": 0.07,
         "alpha_component": 62.34
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 223.90699996948243,
-      "sma50": 218.00160919189454,
-      "sma200": 206.97772033691408,
-      "ema20": 226.72446766865795,
-      "ema50": 219.5634169001629,
-      "ema200": 208.38605596232273
+      "sma20": 223.82300033569337,
+      "sma50": 217.96800933837892,
+      "sma200": 206.96932060241699,
+      "ema20": 226.56446836595825,
+      "ema50": 219.49753481910412,
+      "ema200": 208.3693396578808
     },
     "momentum": {
-      "3m": 0.17264291491491957,
-      "6m": 0.1755705176390916,
-      "12m": 0.259942908032633,
+      "3m": 0.1644948815030982,
+      "6m": 0.16740214196918846,
+      "12m": 0.2511883757564586,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1827690.95,
-      "relative_volume": 0.21306610945357038,
+      "average_volume": 1848764.0,
+      "relative_volume": 0.4386065501059086,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -439,20 +439,13 @@
     }
   },
   "why_now": {
-    "send_alert": true,
-    "reason": "52-week high",
-    "evidence": "Price is pressing against 52-week highs",
+    "send_alert": false,
+    "reason": "No clear Why Now trigger",
+    "evidence": "No recent statistically meaningful change was detected.",
     "date_of_change": "2026-06-30",
-    "strength": 65,
-    "invalidates": "Failed breakout below prior range high",
-    "triggers": [
-      {
-        "reason": "52-week high",
-        "evidence": "Price is pressing against 52-week highs",
-        "strength": 65,
-        "invalidates": "Failed breakout below prior range high"
-      }
-    ]
+    "strength": 0,
+    "invalidates": "N/A",
+    "triggers": []
   },
-  "report": "Ticker: ALL\nRating: Watch | Score: 66.95/100 | Confidence: 59.8/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 204.10000610351562 | Resistance: 241.77999877929688\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.177293\nNews/Catalyst: Can Allstate's (ALL) Rate-Driven Premium Growth Offset Concerns Around Leverage and Supply Pressures?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
+  "report": "Ticker: ALL\nRating: Watch | Score: 68.95/100 | Confidence: 61.09/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 204.10000610351562 | Resistance: 241.3800048828125\nFundamental Outlook: Fundamentally Strong | Forward P/E: 9.177293\nNews/Catalyst: Can Allstate's (ALL) Rate-Driven Premium Growth Offset Concerns Around Leverage and Supply Pressures?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

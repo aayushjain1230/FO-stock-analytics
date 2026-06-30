@@ -1,43 +1,44 @@
 {
   "ticker": "BAC",
-  "generated_at": "2026-06-30T17:24:30.345362",
+  "generated_at": "2026-06-30T19:18:11.408853",
   "score": {
-    "final_score": 72.2,
+    "final_score": 73.2,
     "rating": "Watch",
-    "confidence": 59.09,
+    "confidence": 58.01,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 83.0,
+      "technical": 90.0,
       "momentum": 85.0,
       "volume": 0,
       "fundamental": 68.0,
       "risk": 100,
-      "catalyst": 100
+      "catalyst": 85.0
     },
     "technical": {
-      "score": 83.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 48.75,
       "resistance": 58.189998626708984,
-      "risk_reward": 0.12
+      "risk_reward": 0.14
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.11379979002300122,
-        "3m": 0.21685516938127458,
-        "6m": 0.028965125497625532,
-        "12m": 0.23982313344287753
+        "1m": 0.11146214617656969,
+        "3m": 0.21430123282626434,
+        "6m": 0.02680553270962327,
+        "12m": 0.23722099170742594
       },
-      "acceleration": 0.2024,
+      "acceleration": 0.2009,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +50,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 37242422.85,
-      "relative_volume": 0.35236850869921316,
+      "average_volume": 37436290.35,
+      "relative_volume": 0.45411569471920177,
       "accumulation_days": 2,
       "distribution_days": 4,
       "evidence": []
@@ -65,32 +66,31 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016038521093610366,
-        "annualized_volatility": 0.2546036292657403,
-        "maximum_drawdown": -0.27509388553898184,
-        "sharpe_ratio": 0.9255504984195428,
-        "sortino_ratio": 1.17028905793097,
-        "calmar_ratio": 0.8181018122474977,
-        "beta": 0.8990385860386695,
-        "alpha": 0.06967853297514934,
-        "capm_expected_return": 0.1659699829911811,
-        "actual_return": 0.23564851596633044,
-        "market_return": 0.18460829776225243
+        "volatility": 0.016042179763788317,
+        "annualized_volatility": 0.2546617088542607,
+        "maximum_drawdown": -0.2750937429828617,
+        "sharpe_ratio": 0.9212361760299397,
+        "sortino_ratio": 1.1649739728391606,
+        "calmar_ratio": 0.8133891781903342,
+        "beta": 0.8979930102707241,
+        "alpha": 0.06811804688985865,
+        "capm_expected_return": 0.16648553195629032,
+        "actual_return": 0.23460357884614896,
+        "market_return": 0.18539735838934737
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 100,
+      "score": 85.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "BAC",
@@ -144,11 +144,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.48327234546794,
+    "rsi": 69.24763817616821,
     "macd_cross": false,
     "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.35236850869921316,
+    "relative_volume": 0.45411569471920177,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -200,9 +200,9 @@
     "analyst_revision": true,
     "insider_buying": true,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 0,
     "bearish_news_score": 2,
     "institutional_ownership": 0.70658,
     "detail": {
@@ -244,7 +244,7 @@
         "last_surprise_pct": 0.087799996,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 11.88,
+      "analyst_upside_pct": 12.11,
       "eps_growth_implied": 26.24
     },
     "evidence": [
@@ -252,7 +252,6 @@
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -275,54 +274,54 @@
     "available": true,
     "items": [
       {
-        "headline": "The One Strategist That Isn\u2019t Raising Their Price Target",
-        "source": "Barrons.com",
-        "published": "2026-06-30T15:36:57Z",
-        "summary": "Pretty much every strategist on Wall Street is rushing to raise their S&P 500 price targets, but BofA\u2019s Savita Subramanian is holding firm at 7100.  Subramanian and her team of strategists describe themselves as \u201cindex bears\u201d but \u201clarge cap value bulls.\u201d  \u201cEquity supply/demand dynamics peaked in bullishness in 2025, with liquidity coming from every channel -easy central banks, accelerating earnings, accelerating buybacks, individual and institutional investor inflows, US government inflows and a spike in take-privates amid a dearth of IPOs,\u201d they write.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Oppenheimer turns cautious on major U.S. banks, favors alternative asset managers",
-        "source": "Investing.com",
-        "published": "2026-06-30T14:27:11Z",
-        "summary": "Investing.com -- Oppenheimer downgraded several large U.S. bank stocks on Tuesday, arguing that rich valuations have left little room for further upside despite improving earnings prospects and a favorable operating environment.",
+        "headline": "SEC fines BofA's Merrill Lynch $7.5M over AML lapses",
+        "source": "American Banker",
+        "published": "2026-06-30T18:53:16Z",
+        "summary": "As a subsidiary of Bank of America, Merrill uses a BofA software program to monitor and report suspicious activity. For years, the Securities and Exchange Commission says, that program fell short.",
         "bullish_score": 0,
         "bearish_score": 1,
         "importance_score": 45,
         "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
       },
       {
-        "headline": "Goldman downgraded, Block upgraded: Wall Street's top analyst calls",
-        "source": "The Fly",
-        "published": "2026-06-30T13:49:11Z",
-        "summary": "Goldman downgraded, Block upgraded: Wall Street's top analyst calls",
-        "bullish_score": 1,
-        "bearish_score": 1,
-        "importance_score": 60,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "The 5 Cheapest Stocks in Warren Buffett\u2019s Berkshire Hathaway All Pay Big Reliable Dividends",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-30T12:40:16Z",
-        "summary": "Warren Buffett handed the reins of Berkshire Hathaway to Greg Abel with a war chest of nearly $400 billion sitting in T-bills, and buried inside that famously concentrated portfolio are five deeply discounted stocks that quietly reward shareholders with dividends every single year.",
+        "headline": "Why These Stock-Market Bears See This Year's Bullish Tailwinds 'Reversing'",
+        "source": "Investopedia",
+        "published": "2026-06-30T17:35:01Z",
+        "summary": "Bank of America analysts on Tuesday left their S&P 500 year-end target unchanged at 7100, 5% below the index's close on Monday, citing Big Tech's dwindling cash flows and the possibility of rate hikes.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "US\u00a0regulator\u00a0fines\u00a0BofA\u2019s\u00a0wealth unit\u00a0Merrill\u00a0over SAR failures",
-        "source": "Private Banker International",
-        "published": "2026-06-30T11:51:04Z",
-        "summary": "The regulator said the broker-dealer did not meet reporting and recordkeeping obligations and agreed to a $7.5m civil penalty.",
-        "bullish_score": 1,
-        "bearish_score": 0,
+        "headline": "Why Bank of America\u2019s Merrill Lynch Must Pay $7.5 Million to the SEC",
+        "source": "Barrons.com",
+        "published": "2026-06-30T17:30:00Z",
+        "summary": "The Securities and Exchange Commission says that the wealth management firm\u2019s internal monitoring system failed to flag numerous transactions that should have produced suspicious activity reports.",
+        "bullish_score": 0,
+        "bearish_score": 1,
         "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+      },
+      {
+        "headline": "Bank Of America Corp (BAC) Is A Long Time Berkshire Hathaway Holding",
+        "source": "Insider Monkey",
+        "published": "2026-06-30T17:28:10Z",
+        "summary": "Bank Of America Corp (NYSE:BAC) is one of the 10 Best Long-Term Stocks to Buy Now According to Warren Buffett. Bank Of America Corp (NYSE:BAC) is another long-time Berkshire Hathaway holding. The investment giant had disclosed holding 679 million shares that were worth $17.2 billion in Q3 2017. It maintained this level until Q2 2018 [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "2 Magnificent Dividend Stocks Worth Holding Forever",
+        "source": "Motley Fool",
+        "published": "2026-06-30T17:20:00Z",
+        "summary": "It's always a good time to build a steady stream of dividend income.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -342,100 +341,100 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.9231,
-    "probability_pct": 92.31,
+    "probability_of_outperformance": 0.9244,
+    "probability_pct": 92.44,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 72.2/100"
+      "Composite score 73.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 72.2,
-    "technical_score": 83.0,
+    "final_score": 73.2,
+    "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 0,
     "fundamental_score": 68.0,
     "risk_score": 100,
-    "catalyst_score": 100,
+    "catalyst_score": 85.0,
     "revenue_growth": 0.081,
     "eps_growth": 0.244,
     "roe": 0.10644,
     "forward_pe": 11.249605,
-    "relative_volume": 0.35236850869921316,
+    "relative_volume": 0.45411569471920177,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01218040459648606,
-      "weekly": -0.012692119017237546,
-      "monthly": 0.11379979002300122,
-      "annual": 0.23982313344287753
+      "daily": -0.014253641114632343,
+      "weekly": -0.01476428154876841,
+      "monthly": 0.11146214617656969,
+      "annual": 0.23722099170742594
     },
     "risk": {
-      "volatility": 0.016038521093610366,
-      "annualized_volatility": 0.2546036292657403,
-      "maximum_drawdown": -0.27509388553898184,
-      "sharpe_ratio": 0.9255504984195428,
-      "sortino_ratio": 1.17028905793097,
-      "calmar_ratio": 0.8181018122474977,
-      "beta": 0.8990385860386695,
-      "alpha": 0.06967853297514934,
-      "capm_expected_return": 0.1659699829911811,
-      "actual_return": 0.23564851596633044,
-      "market_return": 0.18460829776225243
+      "volatility": 0.016042179763788317,
+      "annualized_volatility": 0.2546617088542607,
+      "maximum_drawdown": -0.2750937429828617,
+      "sharpe_ratio": 0.9212361760299397,
+      "sortino_ratio": 1.1649739728391606,
+      "calmar_ratio": 0.8133891781903342,
+      "beta": 0.8979930102707241,
+      "alpha": 0.06811804688985865,
+      "capm_expected_return": 0.16648553195629032,
+      "actual_return": 0.23460357884614896,
+      "market_return": 0.18539735838934737
     },
     "capm": {
-      "beta": 0.8990385860386695,
-      "alpha": 0.06967853297514934,
-      "capm_expected_return": 0.1659699829911811,
-      "actual_return": 0.23564851596633044,
-      "market_return": 0.18460829776225243,
-      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 16.60%; realized alpha is 6.97%, meaning positive alpha versus CAPM."
+      "beta": 0.8979930102707241,
+      "alpha": 0.06811804688985865,
+      "capm_expected_return": 0.16648553195629032,
+      "actual_return": 0.23460357884614896,
+      "market_return": 0.18539735838934737,
+      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 16.65%; realized alpha is 6.81%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.23564851596633044,
+      "actual_return": 0.23460357884614896,
       "components": {
-        "market_component": 0.1659699829911811,
-        "momentum_component": 0.059955783360719384,
-        "volatility_drag": -0.0009207258531480633,
-        "alpha_component": 0.06967853297514934
+        "market_component": 0.16648553195629032,
+        "momentum_component": 0.059305247926856486,
+        "volatility_drag": -0.000932341770852141,
+        "alpha_component": 0.06811804688985865
       },
       "component_weights_pct": {
-        "market_component": 55.97,
-        "momentum_component": 20.22,
-        "volatility_drag": 0.31,
-        "alpha_component": 23.5
+        "market_component": 56.47,
+        "momentum_component": 20.11,
+        "volatility_drag": 0.32,
+        "alpha_component": 23.1
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 55.77014427185058,
-      "sma50": 53.28291938781738,
-      "sma200": 51.99442134857178,
-      "ema20": 55.930100212118994,
-      "ema50": 53.91293869411526,
-      "ema200": 51.194780438552044
+      "sma20": 55.764144325256346,
+      "sma50": 53.28051940917969,
+      "sma200": 51.99382135391235,
+      "ema20": 55.91867174241568,
+      "ema50": 53.90823285367845,
+      "ema200": 51.19358641413636
     },
     "momentum": {
-      "3m": 0.21685516938127458,
-      "6m": 0.028965125497625532,
-      "12m": 0.23982313344287753,
+      "3m": 0.21430123282626434,
+      "6m": 0.02680553270962327,
+      "12m": 0.23722099170742594,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 37242422.85,
-      "relative_volume": 0.35236850869921316,
+      "average_volume": 37436290.35,
+      "relative_volume": 0.45411569471920177,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -453,5 +452,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BAC\nRating: Watch | Score: 72.2/100 | Confidence: 59.09/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 48.75 | Resistance: 58.189998626708984\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.249605\nNews/Catalyst: The One Strategist That Isn\u2019t Raising Their Price Target\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BAC\nRating: Watch | Score: 73.2/100 | Confidence: 58.01/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 48.75 | Resistance: 58.189998626708984\nFundamental Outlook: Fundamentally Average | Forward P/E: 11.249605\nNews/Catalyst: SEC fines BofA's Merrill Lynch $7.5M over AML lapses\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

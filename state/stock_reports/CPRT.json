@@ -1,13 +1,13 @@
 {
   "ticker": "CPRT",
-  "generated_at": "2026-06-30T17:24:58.113542",
+  "generated_at": "2026-06-30T19:18:34.527589",
   "score": {
-    "final_score": 26.25,
+    "final_score": 28.75,
     "rating": "Avoid",
-    "confidence": 19.2,
+    "confidence": 21.14,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 10.0,
+      "technical": 20.0,
       "momentum": 10.0,
       "volume": 0,
       "fundamental": 70.0,
@@ -15,31 +15,32 @@
       "catalyst": 35.0
     },
     "technical": {
-      "score": 10.0,
+      "score": 20.0,
       "evidence": [
-        "Stock is not materially extended from SMA20"
+        "Stock is not materially extended from SMA20",
+        "Support/resistance profile offers positive risk/reward"
       ],
-      "support": 27.940099716186523,
+      "support": 28.100000381469727,
       "resistance": 34.400001525878906,
-      "risk_reward": 0.0
+      "risk_reward": 83.0
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.147387875316092,
-        "3m": -0.14320456322477493,
-        "6m": -0.28905597306377173,
-        "12m": -0.4200892582147818
+        "1m": -0.14021974844417506,
+        "3m": -0.13600126618468045,
+        "6m": -0.28307888590259667,
+        "12m": -0.41521380119140805
       },
-      "acceleration": 0.0013,
+      "acceleration": 0.0055,
       "evidence": [
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 12678415.95,
-      "relative_volume": 0.5417647620245494,
+      "average_volume": 12849579.5,
+      "relative_volume": 0.8009592843096539,
       "accumulation_days": 4,
       "distribution_days": 5,
       "evidence": []
@@ -52,17 +53,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.016546990804630637,
-        "annualized_volatility": 0.26267533569315143,
-        "maximum_drawdown": -0.5623417974717242,
-        "sharpe_ratio": -1.108028438208399,
-        "sortino_ratio": -1.3938537777163198,
-        "calmar_ratio": -0.49469839513948183,
-        "beta": 0.5558329997784426,
-        "alpha": -0.3936631258931342,
-        "capm_expected_return": 0.10261138392918472,
-        "actual_return": -0.29105174196394945,
-        "market_return": 0.18460829776225243
+        "volatility": 0.016546622181679956,
+        "annualized_volatility": 0.2626694839852211,
+        "maximum_drawdown": -0.5598370878084877,
+        "sharpe_ratio": -1.0920134049753136,
+        "sortino_ratio": -1.3716385365076744,
+        "calmar_ratio": -0.4914598290931399,
+        "beta": 0.5567140426495318,
+        "alpha": -0.3900519104752876,
+        "capm_expected_return": 0.10321331288547768,
+        "actual_return": -0.2868385975898099,
+        "market_return": 0.18539735838934737
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -76,7 +77,7 @@
         "insider buying"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Momentum is accelerating; analyst revision; insider buying"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; analyst revision; insider buying"
   },
   "fundamentals": {
     "ticker": "CPRT",
@@ -130,15 +131,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 30.430090995527763,
+    "rsi": 31.612901060620132,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.5417647620245494,
+    "relative_volume": 0.8009592843096539,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
-    "support": 27.940099716186523,
+    "support": 28.100000381469727,
     "resistance": 34.400001525878906
   },
   "earnings": {
@@ -230,7 +231,7 @@
         "last_surprise_pct": 0.0571,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 47.41,
+      "analyst_upside_pct": 46.25,
       "eps_growth_implied": 4.88
     },
     "evidence": [
@@ -329,13 +330,13 @@
     "confidence": "High",
     "evidence": [
       "Analyst data is supportive",
-      "Composite score 26.25/100"
+      "Composite score 28.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 26.25,
-    "technical_score": 10.0,
+    "final_score": 28.75,
+    "technical_score": 20.0,
     "momentum_score": 10.0,
     "volume_score": 0,
     "fundamental_score": 70.0,
@@ -345,7 +346,7 @@
     "eps_growth": 0.023,
     "roe": 0.17607,
     "forward_pe": 16.71602,
-    "relative_volume": 0.5417647620245494,
+    "relative_volume": 0.8009592843096539,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -355,66 +356,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.005690415057383658,
-      "weekly": -0.056077724455785405,
-      "monthly": -0.147387875316092,
-      "annual": -0.4200892582147818
+      "daily": 0.0026689983833694253,
+      "weekly": -0.04814192993393551,
+      "monthly": -0.14021974844417506,
+      "annual": -0.41521380119140805
     },
     "risk": {
-      "volatility": 0.016546990804630637,
-      "annualized_volatility": 0.26267533569315143,
-      "maximum_drawdown": -0.5623417974717242,
-      "sharpe_ratio": -1.108028438208399,
-      "sortino_ratio": -1.3938537777163198,
-      "calmar_ratio": -0.49469839513948183,
-      "beta": 0.5558329997784426,
-      "alpha": -0.3936631258931342,
-      "capm_expected_return": 0.10261138392918472,
-      "actual_return": -0.29105174196394945,
-      "market_return": 0.18460829776225243
+      "volatility": 0.016546622181679956,
+      "annualized_volatility": 0.2626694839852211,
+      "maximum_drawdown": -0.5598370878084877,
+      "sharpe_ratio": -1.0920134049753136,
+      "sortino_ratio": -1.3716385365076744,
+      "calmar_ratio": -0.4914598290931399,
+      "beta": 0.5567140426495318,
+      "alpha": -0.3900519104752876,
+      "capm_expected_return": 0.10321331288547768,
+      "actual_return": -0.2868385975898099,
+      "market_return": 0.18539735838934737
     },
     "capm": {
-      "beta": 0.5558329997784426,
-      "alpha": -0.3936631258931342,
-      "capm_expected_return": 0.10261138392918472,
-      "actual_return": -0.29105174196394945,
-      "market_return": 0.18460829776225243,
-      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.26%; realized alpha is -39.37%, meaning negative alpha versus CAPM."
+      "beta": 0.5567140426495318,
+      "alpha": -0.3900519104752876,
+      "capm_expected_return": 0.10321331288547768,
+      "actual_return": -0.2868385975898099,
+      "market_return": 0.18539735838934737,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.32%; realized alpha is -39.01%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.29105174196394945,
+      "actual_return": -0.2868385975898099,
       "components": {
-        "market_component": 0.10261138392918472,
+        "market_component": 0.10321331288547768,
         "momentum_component": 0.0,
-        "volatility_drag": -0.002535067138630287,
-        "alpha_component": -0.3936631258931342
+        "volatility_drag": -0.0025338967970442217,
+        "alpha_component": -0.3900519104752876
       },
       "component_weights_pct": {
-        "market_component": 20.57,
+        "market_component": 20.82,
         "momentum_component": 0.0,
         "volatility_drag": 0.51,
-        "alpha_component": 78.92
+        "alpha_component": 78.67
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 30.259504890441896,
-      "sma50": 32.081202011108395,
-      "sma200": 37.71715051651001,
-      "ema20": 30.307763779593127,
-      "ema50": 31.762105061064585,
-      "ema200": 37.53988197119349
+      "sma20": 30.271249866485597,
+      "sma50": 32.08590000152588,
+      "sma200": 37.71832501411438,
+      "ema20": 30.330135162533512,
+      "ema50": 31.77131680698121,
+      "ema200": 37.5422192798589
     },
     "momentum": {
-      "3m": -0.14320456322477493,
-      "6m": -0.28905597306377173,
-      "12m": -0.4200892582147818,
+      "3m": -0.13600126618468045,
+      "6m": -0.28307888590259667,
+      "12m": -0.41521380119140805,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 12678415.95,
-      "relative_volume": 0.5417647620245494,
+      "average_volume": 12849579.5,
+      "relative_volume": 0.8009592843096539,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -432,5 +433,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: CPRT\nRating: Avoid | Score: 26.25/100 | Confidence: 19.2/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 27.940099716186523 | Resistance: 34.400001525878906\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.71602\nNews/Catalyst: Why Copart Stock Stumbled Today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CPRT\nRating: Avoid | Score: 28.75/100 | Confidence: 21.14/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 28.100000381469727 | Resistance: 34.400001525878906\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.71602\nNews/Catalyst: Why Copart Stock Stumbled Today\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

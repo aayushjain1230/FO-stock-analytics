@@ -1,41 +1,42 @@
 {
   "ticker": "AXP",
-  "generated_at": "2026-06-30T17:24:29.147482",
+  "generated_at": "2026-06-30T19:18:10.213135",
   "score": {
-    "final_score": 58.65,
+    "final_score": 62.65,
     "rating": "Hold",
-    "confidence": 46.65,
+    "confidence": 51.78,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 56.0,
+      "technical": 68.0,
       "momentum": 55.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 100,
-      "catalyst": 60.0
+      "catalyst": 80.0
     },
     "technical": {
-      "score": 56.0,
+      "score": 68.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "EMA trend is positive",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 300.17999267578125,
       "resistance": 342.55999755859375,
-      "risk_reward": 0.14
+      "risk_reward": 0.1
     },
     "momentum": {
       "score": 55.0,
       "returns": {
-        "1m": 0.0659303888327285,
-        "3m": 0.1375220325699218,
-        "6m": -0.10995097311379987,
-        "12m": 0.07465857271119147
+        "1m": 0.07005407571719013,
+        "3m": 0.14192268080702797,
+        "6m": -0.10650770558230782,
+        "12m": 0.07881613056521064
       },
-      "acceleration": 0.1925,
+      "acceleration": 0.1952,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 3078717.1,
-      "relative_volume": 0.2929928183398208,
+      "average_volume": 3101273.0,
+      "relative_volume": 0.43632405144597075,
       "accumulation_days": 2,
       "distribution_days": 6,
       "evidence": []
@@ -62,30 +63,31 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.018622938802388155,
-        "annualized_volatility": 0.2956299885137646,
-        "maximum_drawdown": -0.28757421759099944,
-        "sharpe_ratio": 0.8096376849590017,
-        "sortino_ratio": 1.0724077416981888,
-        "calmar_ratio": 0.751562866746063,
-        "beta": 1.2259171054196263,
-        "alpha": 0.013038709475595628,
-        "capm_expected_return": 0.22631447002914498,
-        "actual_return": 0.2393531795047406,
-        "market_return": 0.18460829776225243
+        "volatility": 0.018619048603885968,
+        "annualized_volatility": 0.2955682335270398,
+        "maximum_drawdown": -0.2875742650636727,
+        "sharpe_ratio": 0.8163348550398585,
+        "sortino_ratio": 1.0806710961976849,
+        "calmar_ratio": 0.7598002121455582,
+        "beta": 1.2256582474736653,
+        "alpha": 0.014048849700948551,
+        "capm_expected_return": 0.22723380136973453,
+        "actual_return": 0.24128265107068309,
+        "market_return": 0.18539735838934737
       },
       "evidence": []
     },
     "catalyst": {
-      "score": 60.0,
+      "score": 80.0,
       "evidence": [
         "earnings surprise",
         "insider buying",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "AXP",
@@ -139,13 +141,13 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.34449416606235,
+    "rsi": 72.37190443582955,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.2929928183398208,
+    "relative_volume": 0.43632405144597075,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "setup_type": "No clear setup",
     "support": 300.17999267578125,
     "resistance": 342.55999755859375
@@ -194,10 +196,10 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 7,
+    "bullish_news_score": 6,
     "bearish_news_score": 2,
     "institutional_ownership": 0.65323997,
     "detail": {
@@ -239,12 +241,13 @@
         "last_surprise_pct": 0.0718,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.87,
+      "analyst_upside_pct": 7.43,
       "eps_growth_implied": 25.81
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -267,6 +270,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Dozens of Major Companies Become Open USD Launch Partners",
+        "source": "Bankless",
+        "published": "2026-06-30T17:42:32Z",
+        "summary": "Some of the biggest names in finance and beyond are joining forces to back the Open USD stablecoin.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "American Express Company (AXP) Remains One Of Warren Buffett\u2019s Oldest Stock Picks",
+        "source": "Insider Monkey",
+        "published": "2026-06-30T17:34:28Z",
+        "summary": "American Express Company (NYSE:AXP) is one of the 10 Best Long-Term Stocks to Buy Now According to Warren Buffett. Payment card and travel services provider American Express Company (NYSE:AXP) is perhaps Warren Buffett\u2019s best-known stock pick. He first bought the shares in 1964 when the firm\u2019s shares sank during the Salad Oil Scandal. Buffett then [\u2026]",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Goldman downgraded, Block upgraded: Wall Street's top analyst calls",
         "source": "The Fly",
@@ -296,26 +319,6 @@
         "bearish_score": 0,
         "importance_score": 75,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Guardian Metal Advances Toward Becoming a Key U.S. Tungsten Producer Following Strong Pilot Mountain PFS",
-        "source": "InvestorsHub",
-        "published": "2026-06-30T12:26:39Z",
-        "summary": "Guardian Metal Resources (AMEX:GMTL), (USOTC: GMTLF), (LSE:GMET) has reached an important development milestone with the release of the Pre-Feasibility Study (PFS) for its Pilot Mountain Tungsten Project in Nevada. The results reinforce the project\u2019s potential to become a significant domestic source of tungsten at a time when the United States is seeking to strengthen critical mineral supply chains and reduce reliance on overseas production.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Piper Sandler picks Payments and Consumer Finance winners as multiples reset",
-        "source": "Investing.com",
-        "published": "2026-06-30T12:14:06Z",
-        "summary": "Investing.com -- Piper Sandler analyst Bill Carcache launched coverage of the payments and consumer finance sector with a \"selectively constructive view,\" naming Visa, Mastercard, American Express, Capital One and Affirm as Overweight-rated picks.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -335,98 +338,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8073,
-    "probability_pct": 80.73,
+    "probability_of_outperformance": 0.8385,
+    "probability_pct": 83.85,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 58.65/100"
+      "Composite score 62.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 58.65,
-    "technical_score": 56.0,
+    "final_score": 62.65,
+    "technical_score": 68.0,
     "momentum_score": 55.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
     "risk_score": 100,
-    "catalyst_score": 60.0,
+    "catalyst_score": 80.0,
     "revenue_growth": 0.116,
     "eps_growth": 0.176,
     "roe": 0.34419,
     "forward_pe": 16.781225,
-    "relative_volume": 0.2929928183398208,
+    "relative_volume": 0.43632405144597075,
     "breakout": false,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.010399593337699797,
-      "weekly": -0.0013174472314138042,
-      "monthly": 0.0659303888327285,
-      "annual": 0.07465857271119147
+      "daily": -0.0065711986690010216,
+      "weekly": 0.0025460828712435823,
+      "monthly": 0.07005407571719013,
+      "annual": 0.07881613056521064
     },
     "risk": {
-      "volatility": 0.018622938802388155,
-      "annualized_volatility": 0.2956299885137646,
-      "maximum_drawdown": -0.28757421759099944,
-      "sharpe_ratio": 0.8096376849590017,
-      "sortino_ratio": 1.0724077416981888,
-      "calmar_ratio": 0.751562866746063,
-      "beta": 1.2259171054196263,
-      "alpha": 0.013038709475595628,
-      "capm_expected_return": 0.22631447002914498,
-      "actual_return": 0.2393531795047406,
-      "market_return": 0.18460829776225243
+      "volatility": 0.018619048603885968,
+      "annualized_volatility": 0.2955682335270398,
+      "maximum_drawdown": -0.2875742650636727,
+      "sharpe_ratio": 0.8163348550398585,
+      "sortino_ratio": 1.0806710961976849,
+      "calmar_ratio": 0.7598002121455582,
+      "beta": 1.2256582474736653,
+      "alpha": 0.014048849700948551,
+      "capm_expected_return": 0.22723380136973453,
+      "actual_return": 0.24128265107068309,
+      "market_return": 0.18539735838934737
     },
     "capm": {
-      "beta": 1.2259171054196263,
-      "alpha": 0.013038709475595628,
-      "capm_expected_return": 0.22631447002914498,
-      "actual_return": 0.2393531795047406,
-      "market_return": 0.18460829776225243,
-      "interpretation": "Beta 1.23: Moves roughly in line with the market. CAPM expected return is 22.63%; realized alpha is 1.30%, meaning positive alpha versus CAPM."
+      "beta": 1.2256582474736653,
+      "alpha": 0.014048849700948551,
+      "capm_expected_return": 0.22723380136973453,
+      "actual_return": 0.24128265107068309,
+      "market_return": 0.18539735838934737,
+      "interpretation": "Beta 1.23: Moves roughly in line with the market. CAPM expected return is 22.72%; realized alpha is 1.40%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2393531795047406,
+      "actual_return": 0.24128265107068309,
       "components": {
-        "market_component": 0.22631447002914498,
-        "momentum_component": 0.01866464317779787,
-        "volatility_drag": -0.00912599770275292,
-        "alpha_component": 0.013038709475595628
+        "market_component": 0.22723380136973453,
+        "momentum_component": 0.01970403264130266,
+        "volatility_drag": -0.009113646705407962,
+        "alpha_component": 0.014048849700948551
       },
       "component_weights_pct": {
-        "market_component": 84.72,
-        "momentum_component": 6.99,
-        "volatility_drag": 3.42,
-        "alpha_component": 4.88
+        "market_component": 84.13,
+        "momentum_component": 7.3,
+        "volatility_drag": 3.37,
+        "alpha_component": 5.2
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 327.83924865722656,
-      "sma50": 321.01209838867186,
-      "sma200": 336.7713116455078,
-      "ema20": 331.2919745065219,
-      "ema50": 324.23368339897513,
-      "ema200": 324.45090228186905
+      "sma20": 327.90449981689454,
+      "sma50": 321.03819885253904,
+      "sma200": 336.7778364562988,
+      "ema20": 331.41626242967334,
+      "ema50": 324.2848607522936,
+      "ema200": 324.46388757184616
     },
     "momentum": {
-      "3m": 0.1375220325699218,
-      "6m": -0.10995097311379987,
-      "12m": 0.07465857271119147,
+      "3m": 0.14192268080702797,
+      "6m": -0.10650770558230782,
+      "12m": 0.07881613056521064,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 3078717.1,
-      "relative_volume": 0.2929928183398208,
+      "average_volume": 3101273.0,
+      "relative_volume": 0.43632405144597075,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -444,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AXP\nRating: Hold | Score: 58.65/100 | Confidence: 46.65/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 300.17999267578125 | Resistance: 342.55999755859375\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.781225\nNews/Catalyst: Goldman downgraded, Block upgraded: Wall Street's top analyst calls\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AXP\nRating: Hold | Score: 62.65/100 | Confidence: 51.78/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 300.17999267578125 | Resistance: 342.55999755859375\nFundamental Outlook: Fundamentally Strong | Forward P/E: 16.781225\nNews/Catalyst: Dozens of Major Companies Become Open USD Launch Partners\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
