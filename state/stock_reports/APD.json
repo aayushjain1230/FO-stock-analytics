@@ -1,18 +1,18 @@
 {
   "ticker": "APD",
-  "generated_at": "2026-06-30T19:18:05.117541",
+  "generated_at": "2026-06-30T21:15:11.006501",
   "score": {
-    "final_score": 60.75,
+    "final_score": 63.75,
     "rating": "Hold",
-    "confidence": 56.36,
+    "confidence": 59.55,
     "risk_level": "Controlled",
     "categories": {
       "technical": 65.0,
       "momentum": 60.0,
-      "volume": 25.0,
+      "volume": 50.0,
       "fundamental": 65.0,
       "risk": 85.0,
-      "catalyst": 65.0
+      "catalyst": 50.0
     },
     "technical": {
       "score": 65.0,
@@ -26,17 +26,17 @@
       ],
       "support": 271.3500061035156,
       "resistance": 306.20001220703125,
-      "risk_reward": 0.5
+      "risk_reward": 0.6
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.05721054741495446,
-        "3m": 0.016623851548980495,
-        "6m": 0.20673511316225834,
-        "12m": 0.0712324707848726
+        "1m": 0.052257547246276514,
+        "3m": 0.011860998850890647,
+        "6m": 0.20108159482226728,
+        "12m": 0.06621389665221433
       },
-      "acceleration": -0.0867,
+      "acceleration": -0.0887,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -45,12 +45,13 @@
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 1472732.9,
-      "relative_volume": 1.3799229989361954,
+      "score": 50.0,
+      "average_volume": 1514096.1,
+      "relative_volume": 1.8886000697049545,
       "accumulation_days": 5,
       "distribution_days": 8,
       "evidence": [
+        "Relative volume is 1.89x",
         "Price advanced on above-average volume"
       ]
     },
@@ -62,28 +63,27 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01689906574093962,
-        "annualized_volatility": 0.2682643520391462,
-        "maximum_drawdown": -0.30429909078319306,
-        "sharpe_ratio": 0.5449009009969584,
-        "sortino_ratio": 0.8417350288112256,
-        "calmar_ratio": 0.384172697452665,
-        "beta": 0.5673500371331709,
-        "alpha": 0.040992288964908,
-        "capm_expected_return": 0.10518519816658803,
-        "actual_return": 0.14617748713149603,
-        "market_return": 0.18539735838934737
+        "volatility": 0.016849295742056063,
+        "annualized_volatility": 0.2674742778003591,
+        "maximum_drawdown": -0.30429907253255717,
+        "sharpe_ratio": 0.5369277559879638,
+        "sortino_ratio": 0.8269758468684949,
+        "calmar_ratio": 0.37549607404750057,
+        "beta": 0.5647751865024495,
+        "alpha": 0.039325231332041244,
+        "capm_expected_return": 0.10428913243180679,
+        "actual_return": 0.14361436376384804,
+        "market_return": 0.18465600990307401
       },
       "evidence": [
         "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 65.0,
+      "score": 50.0,
       "evidence": [
         "analyst revision",
         "sector strength",
-        "major news",
         "guidance change"
       ]
     },
@@ -141,14 +141,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 59.90082811964291,
+    "rsi": 58.93170088009453,
     "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.3799229989361954,
+    "relative_volume": 1.8886000697049545,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "MACD bullish crossover, trend continuation",
+    "setup_type": "MACD bullish crossover, trend continuation, volume surge",
     "support": 271.3500061035156,
     "resistance": 306.20001220703125
   },
@@ -197,10 +197,10 @@
     "analyst_revision": true,
     "insider_buying": false,
     "sector_strength": true,
-    "major_news": true,
+    "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 1,
-    "bearish_news_score": 2,
+    "bullish_news_score": 0,
+    "bearish_news_score": 0,
     "institutional_ownership": 0.9342,
     "detail": {
       "earnings": {
@@ -241,13 +241,12 @@
         "last_surprise_pct": 0.0454,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 11.25,
+      "analyst_upside_pct": 11.83,
       "eps_growth_implied": 49.85
     },
     "evidence": [
       "analyst target/recommendation data is supportive",
       "technical backdrop is constructive",
-      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -267,59 +266,8 @@
     "insider_transactions": "Unavailable from current data provider."
   },
   "news": {
-    "available": true,
-    "items": [
-      {
-        "headline": "Sector Update: Energy Stocks Softer Tuesday Afternoon",
-        "source": "MT Newswires",
-        "published": "2026-06-30T17:47:01Z",
-        "summary": "Energy stocks were lower Tuesday afternoon, with the NYSE Energy Sector Index easing 0.1% and the St",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Update: US Equity Indexes Rise as Semiconductors Lift Technology; Crude Oil Slips as Trump's Envoys in Qatar for Indirect Talks",
-        "source": "MT Newswires",
-        "published": "2026-06-30T17:42:19Z",
-        "summary": "(Updates with index/price moves, macroeconomic data, and company news from the first paragraph.)",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AMD, Sandisk, AeroVironment, Air Products, Strategy, and More Stocks That Explain Today\u2019s Market",
-        "source": "Barrons.com",
-        "published": "2026-06-30T17:07:00Z",
-        "summary": "The industrials and materials sectors also were advancing broadly but market breadth wasn\u2019t particularly strong on the last trading session of the second quarter of 2026.  Shares of the memory supplier have been on a torrid pace over the past 12 months but technical signals are beginning to appear that the stock might be overbought.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Top Midday Stories: Air Products Ends Louisiana Clean Energy Project; Patrick Industries, LCI to Merge in All-Stock Deal",
-        "source": "MT Newswires",
-        "published": "2026-06-30T15:35:58Z",
-        "summary": "All three major US stock indexes were up in late-morning trading Tuesday, as investors look to end Q",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Investors Cheer Axing of Air Products\u2019 Green Hydrogen Project",
-        "source": "The Wall Street Journal",
-        "published": "2026-06-30T15:04:57Z",
-        "summary": "Industrial-gases supplier Air Products & Chemicals said it would abandon a plan to build a low-carbon hydrogen plant in Louisiana, writing off as much as $2.9 billion.  The plan, unveiled in 2021, was to extract hydrogen from natural gas, capture the carbon-dioxide emissions and sequester them below a lake.  A half-decade and one chief-executive change later, the project has met the same fate as several other low-carbon initiatives that Air Products canceled after investors tired of its bet on the energy transition.",
-        "bullish_score": 0,
-        "bearish_score": 2,
-        "importance_score": 60,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
-      }
-    ]
+    "available": false,
+    "items": []
   },
   "sentiment": {
     "available": false,
@@ -337,100 +285,101 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7211,
-    "probability_pct": 72.11,
+    "probability_of_outperformance": 0.7607,
+    "probability_pct": 76.07,
     "confidence": "High",
     "evidence": [
+      "Volume surge above 1.5x",
       "Analyst data is supportive",
-      "Composite score 60.75/100"
+      "Composite score 63.75/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 60.75,
+    "final_score": 63.75,
     "technical_score": 65.0,
     "momentum_score": 60.0,
-    "volume_score": 25.0,
+    "volume_score": 50.0,
     "fundamental_score": 65.0,
     "risk_score": 85.0,
-    "catalyst_score": 65.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.088,
     "eps_growth": null,
     "roe": 0.12353,
     "forward_pe": 20.78163,
-    "relative_volume": 1.3799229989361954,
+    "relative_volume": 1.8886000697049545,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
     "analyst_revision": true,
-    "major_news": true
+    "major_news": false
   },
   "quant_model": {
     "returns": {
-      "daily": 0.08553525311594745,
-      "weekly": 0.04287479139029404,
-      "monthly": 0.05721054741495446,
-      "annual": 0.0712324707848726
+      "daily": 0.08044955253819985,
+      "weekly": 0.037988953814896975,
+      "monthly": 0.052257547246276514,
+      "annual": 0.06621389665221433
     },
     "risk": {
-      "volatility": 0.01689906574093962,
-      "annualized_volatility": 0.2682643520391462,
-      "maximum_drawdown": -0.30429909078319306,
-      "sharpe_ratio": 0.5449009009969584,
-      "sortino_ratio": 0.8417350288112256,
-      "calmar_ratio": 0.384172697452665,
-      "beta": 0.5673500371331709,
-      "alpha": 0.040992288964908,
-      "capm_expected_return": 0.10518519816658803,
-      "actual_return": 0.14617748713149603,
-      "market_return": 0.18539735838934737
+      "volatility": 0.016849295742056063,
+      "annualized_volatility": 0.2674742778003591,
+      "maximum_drawdown": -0.30429907253255717,
+      "sharpe_ratio": 0.5369277559879638,
+      "sortino_ratio": 0.8269758468684949,
+      "calmar_ratio": 0.37549607404750057,
+      "beta": 0.5647751865024495,
+      "alpha": 0.039325231332041244,
+      "capm_expected_return": 0.10428913243180679,
+      "actual_return": 0.14361436376384804,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": 0.5673500371331709,
-      "alpha": 0.040992288964908,
-      "capm_expected_return": 0.10518519816658803,
-      "actual_return": 0.14617748713149603,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta 0.57: Moves roughly 43% less than the market. CAPM expected return is 10.52%; realized alpha is 4.10%, meaning positive alpha versus CAPM."
+      "beta": 0.5647751865024495,
+      "alpha": 0.039325231332041244,
+      "capm_expected_return": 0.10428913243180679,
+      "actual_return": 0.14361436376384804,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta 0.56: Moves roughly 44% less than the market. CAPM expected return is 10.43%; realized alpha is 3.93%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.14617748713149603,
+      "actual_return": 0.14361436376384804,
       "components": {
-        "market_component": 0.10518519816658803,
-        "momentum_component": 0.01780811769621815,
-        "volatility_drag": -0.003652870407829245,
-        "alpha_component": 0.040992288964908
+        "market_component": 0.10428913243180679,
+        "momentum_component": 0.016553474163053583,
+        "volatility_drag": -0.003494855560071819,
+        "alpha_component": 0.039325231332041244
       },
       "component_weights_pct": {
-        "market_component": 62.75,
-        "momentum_component": 10.62,
-        "volatility_drag": 2.18,
-        "alpha_component": 24.45
+        "market_component": 63.72,
+        "momentum_component": 10.11,
+        "volatility_drag": 2.14,
+        "alpha_component": 24.03
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 280.8040008544922,
-      "sma50": 289.82780090332034,
-      "sma200": 271.6636050415039,
-      "ema20": 282.36475454342315,
-      "ema50": 285.33672723897917,
-      "ema200": 279.02502642707015
+      "sma20": 280.73500061035156,
+      "sma50": 289.8002008056641,
+      "sma200": 271.6567052459717,
+      "ema20": 282.2333255069562,
+      "ema50": 285.28260939253107,
+      "ema200": 279.01129451736745
     },
     "momentum": {
-      "3m": 0.016623851548980495,
-      "6m": 0.20673511316225834,
-      "12m": 0.0712324707848726,
+      "3m": 0.011860998850890647,
+      "6m": 0.20108159482226728,
+      "12m": 0.06621389665221433,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 1472732.9,
-      "relative_volume": 1.3799229989361954,
+      "average_volume": 1514096.1,
+      "relative_volume": 1.8886000697049545,
       "volume_spike": false
     },
-    "volatility_regime": "High volatility",
+    "volatility_regime": "Normal volatility",
     "quant_score": {
       "score": 53,
       "label": "Neutral"
@@ -449,8 +398,14 @@
         "evidence": "Price reclaimed a major moving average",
         "strength": 75,
         "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.89x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
       }
     ]
   },
-  "report": "Ticker: APD\nRating: Hold | Score: 60.75/100 | Confidence: 56.36/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: MACD bullish crossover, trend continuation | Support: 271.3500061035156 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.78163\nNews/Catalyst: Sector Update: Energy Stocks Softer Tuesday Afternoon\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
+  "report": "Ticker: APD\nRating: Hold | Score: 63.75/100 | Confidence: 59.55/100\nBull Case: momentum and relative strength are constructive\nBear Case: No major bear case detected from available data.\nTechnical Outlook: MACD bullish crossover, trend continuation, volume surge | Support: 271.3500061035156 | Resistance: 306.20001220703125\nFundamental Outlook: Fundamentally Average | Forward P/E: 20.78163\nNews/Catalyst: No major news item available\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

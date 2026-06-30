@@ -1,13 +1,13 @@
 {
   "ticker": "BXP",
-  "generated_at": "2026-06-30T19:18:19.376133",
+  "generated_at": "2026-06-30T21:15:27.492796",
   "score": {
-    "final_score": 61.45,
+    "final_score": 58.95,
     "rating": "Hold",
-    "confidence": 56.03,
+    "confidence": 54.46,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 68.0,
+      "technical": 58.0,
       "momentum": 70.0,
       "volume": 25.0,
       "fundamental": 58.0,
@@ -15,28 +15,27 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 68.0,
+      "score": 58.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
-        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 51.02000045776367,
       "resistance": 67.4000015258789,
-      "risk_reward": 0.05
+      "risk_reward": 0.07
     },
     "momentum": {
       "score": 70.0,
       "returns": {
-        "1m": 0.10948181458562023,
-        "3m": 0.3024257281337137,
-        "6m": -0.01671913708813555,
-        "12m": 0.017744218288755276
+        "1m": 0.10498249313897978,
+        "3m": 0.29714395430541796,
+        "6m": -0.020706671283297617,
+        "12m": 0.013617041822130194
       },
-      "acceleration": 0.3108,
+      "acceleration": 0.3075,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1568831.45,
-      "relative_volume": 0.21699526740109654,
+      "average_volume": 1577924.7,
+      "relative_volume": 0.331000585769397,
       "accumulation_days": 6,
       "distribution_days": 2,
       "evidence": [
@@ -66,17 +65,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.018976117501295534,
-        "annualized_volatility": 0.3012365265478103,
-        "maximum_drawdown": -0.39025157771898744,
-        "sharpe_ratio": 0.45266478878819805,
-        "sortino_ratio": 0.6254874380496152,
-        "calmar_ratio": 0.24361402184044056,
-        "beta": 0.9034026127350898,
-        "alpha": -0.0311292892980653,
-        "capm_expected_return": 0.16748845796312023,
-        "actual_return": 0.13635916866505493,
-        "market_return": 0.18539735838934737
+        "volatility": 0.018980305651227193,
+        "annualized_volatility": 0.30130301136684606,
+        "maximum_drawdown": -0.3902515777189879,
+        "sharpe_ratio": 0.4458309398317992,
+        "sortino_ratio": 0.6164959196440352,
+        "calmar_ratio": 0.2378729586228455,
+        "beta": 0.903469416445017,
+        "alpha": -0.032500852778363315,
+        "capm_expected_return": 0.16683105751019556,
+        "actual_return": 0.13433020473183224,
+        "market_return": 0.18465600990307401
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -91,7 +90,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "BXP",
@@ -145,11 +144,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.87342285586624,
+    "rsi": 48.762363928331546,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.21699526740109654,
+    "relative_volume": 0.331000585769397,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
@@ -245,7 +244,7 @@
         "last_surprise_pct": 0.9757,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 4.42,
+      "analyst_upside_pct": 5.04,
       "eps_growth_implied": 2.99
     },
     "evidence": [
@@ -341,19 +340,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7606,
-    "probability_pct": 76.06,
+    "probability_of_outperformance": 0.7396,
+    "probability_pct": 73.96,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 61.45/100"
+      "Composite score 58.95/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.45,
-    "technical_score": 68.0,
+    "final_score": 58.95,
+    "technical_score": 58.0,
     "momentum_score": 70.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
@@ -363,7 +362,7 @@
     "eps_growth": 0.655,
     "roe": 0.05525,
     "forward_pe": 32.437817,
-    "relative_volume": 0.21699526740109654,
+    "relative_volume": 0.331000585769397,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -373,66 +372,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0073057680930233015,
-      "weekly": 0.03481513243178247,
-      "monthly": 0.10948181458562023,
-      "annual": 0.017744218288755276
+      "daily": -0.01133147666152623,
+      "weekly": 0.030618609462726543,
+      "monthly": 0.10498249313897978,
+      "annual": 0.013617041822130194
     },
     "risk": {
-      "volatility": 0.018976117501295534,
-      "annualized_volatility": 0.3012365265478103,
-      "maximum_drawdown": -0.39025157771898744,
-      "sharpe_ratio": 0.45266478878819805,
-      "sortino_ratio": 0.6254874380496152,
-      "calmar_ratio": 0.24361402184044056,
-      "beta": 0.9034026127350898,
-      "alpha": -0.0311292892980653,
-      "capm_expected_return": 0.16748845796312023,
-      "actual_return": 0.13635916866505493,
-      "market_return": 0.18539735838934737
+      "volatility": 0.018980305651227193,
+      "annualized_volatility": 0.30130301136684606,
+      "maximum_drawdown": -0.3902515777189879,
+      "sharpe_ratio": 0.4458309398317992,
+      "sortino_ratio": 0.6164959196440352,
+      "calmar_ratio": 0.2378729586228455,
+      "beta": 0.903469416445017,
+      "alpha": -0.032500852778363315,
+      "capm_expected_return": 0.16683105751019556,
+      "actual_return": 0.13433020473183224,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": 0.9034026127350898,
-      "alpha": -0.0311292892980653,
-      "capm_expected_return": 0.16748845796312023,
-      "actual_return": 0.13635916866505493,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 16.75%; realized alpha is -3.11%, meaning negative alpha versus CAPM."
+      "beta": 0.903469416445017,
+      "alpha": -0.032500852778363315,
+      "capm_expected_return": 0.16683105751019556,
+      "actual_return": 0.13433020473183224,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta 0.90: Moves roughly in line with the market. CAPM expected return is 16.68%; realized alpha is -3.25%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.13635916866505493,
+      "actual_return": 0.13433020473183224,
       "components": {
-        "market_component": 0.16748845796312023,
-        "momentum_component": 0.004436054572188819,
-        "volatility_drag": -0.010247305309562062,
-        "alpha_component": -0.0311292892980653
+        "market_component": 0.16683105751019556,
+        "momentum_component": 0.0034042604555325484,
+        "volatility_drag": -0.010260602273369213,
+        "alpha_component": -0.032500852778363315
       },
       "component_weights_pct": {
-        "market_component": 78.52,
-        "momentum_component": 2.08,
-        "volatility_drag": 4.8,
-        "alpha_component": 14.59
+        "market_component": 78.33,
+        "momentum_component": 1.6,
+        "volatility_drag": 4.82,
+        "alpha_component": 15.26
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 64.76000061035157,
-      "sma50": 61.35820014953613,
-      "sma200": 63.67876258850097,
-      "ema20": 64.55905296298285,
-      "ema50": 61.9852905111129,
-      "ema200": 62.22505184176623
+      "sma20": 64.74650039672852,
+      "sma50": 61.352800064086914,
+      "sma200": 63.677412567138674,
+      "ema20": 64.53333827036751,
+      "ema50": 61.97470210828041,
+      "ema200": 62.222365232950686
     },
     "momentum": {
-      "3m": 0.3024257281337137,
-      "6m": -0.01671913708813555,
-      "12m": 0.017744218288755276,
+      "3m": 0.29714395430541796,
+      "6m": -0.020706671283297617,
+      "12m": 0.013617041822130194,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1568831.45,
-      "relative_volume": 0.21699526740109654,
+      "average_volume": 1577924.7,
+      "relative_volume": 0.331000585769397,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -450,5 +449,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BXP\nRating: Hold | Score: 61.45/100 | Confidence: 56.03/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 51.02000045776367 | Resistance: 67.4000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 32.437817\nNews/Catalyst: Scotiabank Upgrades BXP (BXP) to Outperform\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BXP\nRating: Hold | Score: 58.95/100 | Confidence: 54.46/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 51.02000045776367 | Resistance: 67.4000015258789\nFundamental Outlook: Fundamentally Average | Forward P/E: 32.437817\nNews/Catalyst: Scotiabank Upgrades BXP (BXP) to Outperform\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

@@ -1,13 +1,13 @@
 {
   "ticker": "ADSK",
-  "generated_at": "2026-06-30T19:17:54.709043",
+  "generated_at": "2026-06-30T21:14:59.405307",
   "score": {
-    "final_score": 35.15,
+    "final_score": 32.65,
     "rating": "Drop",
-    "confidence": 29.11,
+    "confidence": 27.23,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 30.0,
+      "technical": 20.0,
       "momentum": 10.0,
       "volume": 0,
       "fundamental": 86.0,
@@ -15,33 +15,32 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 30.0,
+      "score": 20.0,
       "evidence": [
-        "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 187.72000122070312,
       "resistance": 251.0399932861328,
-      "risk_reward": 7.93
+      "risk_reward": 8.45
     },
     "momentum": {
       "score": 10.0,
       "returns": {
-        "1m": -0.15779689760601068,
-        "3m": -0.17341308718305704,
-        "6m": -0.3521665289006679,
-        "12m": -0.36155083262489374
+        "1m": -0.15948294401025076,
+        "3m": -0.1750678707954486,
+        "6m": -0.3534634575054053,
+        "12m": -0.3628289743461519
       },
-      "acceleration": 0.0027,
+      "acceleration": 0.0017,
       "evidence": [
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 3399607.15,
-      "relative_volume": 0.28528090370677095,
+      "average_volume": 3464909.8,
+      "relative_volume": 0.6568413411512185,
       "accumulation_days": 4,
       "distribution_days": 6,
       "evidence": []
@@ -57,17 +56,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.019481878468909176,
-        "annualized_volatility": 0.30926523300670483,
+        "volatility": 0.01948247928270368,
+        "annualized_volatility": 0.3092747706300119,
         "maximum_drawdown": -0.42556382902723255,
-        "sharpe_ratio": -0.22423661485192184,
-        "sortino_ratio": -0.29445902312601807,
-        "calmar_ratio": -0.2599532663317954,
-        "beta": 0.8809030318125279,
-        "alpha": -0.23266568403602425,
-        "capm_expected_return": 0.16331709509520992,
-        "actual_return": -0.06934858894081433,
-        "market_return": 0.18539735838934737
+        "sharpe_ratio": -0.2274849257934466,
+        "sortino_ratio": -0.2988656618683813,
+        "calmar_ratio": -0.26206295505021576,
+        "beta": 0.8810576979665727,
+        "alpha": -0.23304794724744854,
+        "capm_expected_return": 0.16269259900089506,
+        "actual_return": -0.07035534824655347,
+        "market_return": 0.18465600990307401
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -83,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; revenue growth is strong; eps growth is strong"
+    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; Momentum is accelerating; revenue growth is strong; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "ADSK",
@@ -137,14 +136,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 25.4075012903684,
-    "macd_cross": true,
+    "rsi": 25.24207715085153,
+    "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.28528090370677095,
+    "relative_volume": 0.6568413411512185,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "MACD bullish crossover",
+    "setup_type": "No clear setup",
     "support": 187.72000122070312,
     "resistance": 251.0399932861328
   },
@@ -237,7 +236,7 @@
         "last_surprise_pct": 0.0515,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 63.59,
+      "analyst_upside_pct": 63.84,
       "eps_growth_implied": 108.24
     },
     "evidence": [
@@ -340,13 +339,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 35.15/100"
+      "Composite score 32.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 35.15,
-    "technical_score": 30.0,
+    "final_score": 32.65,
+    "technical_score": 20.0,
     "momentum_score": 10.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
@@ -356,7 +355,7 @@
     "eps_growth": 2.314,
     "roe": 0.50396,
     "forward_pe": 13.572969,
-    "relative_volume": 0.28528090370677095,
+    "relative_volume": 0.6568413411512185,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -366,66 +365,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.0022024581155083434,
-      "weekly": 0.03194193674270851,
-      "monthly": -0.15779689760601068,
-      "annual": -0.36155083262489374
+      "daily": -0.004199996420546359,
+      "weekly": 0.029876043151383813,
+      "monthly": -0.15948294401025076,
+      "annual": -0.3628289743461519
     },
     "risk": {
-      "volatility": 0.019481878468909176,
-      "annualized_volatility": 0.30926523300670483,
+      "volatility": 0.01948247928270368,
+      "annualized_volatility": 0.3092747706300119,
       "maximum_drawdown": -0.42556382902723255,
-      "sharpe_ratio": -0.22423661485192184,
-      "sortino_ratio": -0.29445902312601807,
-      "calmar_ratio": -0.2599532663317954,
-      "beta": 0.8809030318125279,
-      "alpha": -0.23266568403602425,
-      "capm_expected_return": 0.16331709509520992,
-      "actual_return": -0.06934858894081433,
-      "market_return": 0.18539735838934737
+      "sharpe_ratio": -0.2274849257934466,
+      "sortino_ratio": -0.2988656618683813,
+      "calmar_ratio": -0.26206295505021576,
+      "beta": 0.8810576979665727,
+      "alpha": -0.23304794724744854,
+      "capm_expected_return": 0.16269259900089506,
+      "actual_return": -0.07035534824655347,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": 0.8809030318125279,
-      "alpha": -0.23266568403602425,
-      "capm_expected_return": 0.16331709509520992,
-      "actual_return": -0.06934858894081433,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 16.33%; realized alpha is -23.27%, meaning negative alpha versus CAPM."
+      "beta": 0.8810576979665727,
+      "alpha": -0.23304794724744854,
+      "capm_expected_return": 0.16269259900089506,
+      "actual_return": -0.07035534824655347,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta 0.88: Moves roughly in line with the market. CAPM expected return is 16.27%; realized alpha is -23.30%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.06934858894081433,
+      "actual_return": -0.07035534824655347,
       "components": {
-        "market_component": 0.16331709509520992,
+        "market_component": 0.16269259900089506,
         "momentum_component": 0.0,
-        "volatility_drag": -0.011853046601340967,
-        "alpha_component": -0.23266568403602425
+        "volatility_drag": -0.011854954126002383,
+        "alpha_component": -0.23304794724744854
       },
       "component_weights_pct": {
-        "market_component": 40.04,
+        "market_component": 39.92,
         "momentum_component": 0.0,
         "volatility_drag": 2.91,
-        "alpha_component": 57.05
+        "alpha_component": 57.18
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 206.81400146484376,
-      "sma50": 226.94620056152343,
-      "sma200": 265.17645011901857,
-      "ema20": 205.03431081549704,
-      "ema50": 220.60063163799705,
-      "ema200": 252.56438409157298
+      "sma20": 206.79450149536132,
+      "sma50": 226.93840057373046,
+      "sma200": 265.1745001220703,
+      "ema20": 204.99716801648287,
+      "ema50": 220.58533754428535,
+      "ema200": 252.5605035006312
     },
     "momentum": {
-      "3m": -0.17341308718305704,
-      "6m": -0.3521665289006679,
-      "12m": -0.36155083262489374,
+      "3m": -0.1750678707954486,
+      "6m": -0.3534634575054053,
+      "12m": -0.3628289743461519,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 3399607.15,
-      "relative_volume": 0.28528090370677095,
+      "average_volume": 3464909.8,
+      "relative_volume": 0.6568413411512185,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -443,5 +442,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ADSK\nRating: Drop | Score: 35.15/100 | Confidence: 29.11/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 187.72000122070312 | Resistance: 251.0399932861328\nFundamental Outlook: Quality Compounder | Forward P/E: 13.572969\nNews/Catalyst: FIG vs. ADSK: Which Design SaaS Stock is a Safer Bet in the AI Era?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ADSK\nRating: Drop | Score: 32.65/100 | Confidence: 27.23/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 187.72000122070312 | Resistance: 251.0399932861328\nFundamental Outlook: Quality Compounder | Forward P/E: 13.572969\nNews/Catalyst: FIG vs. ADSK: Which Design SaaS Stock is a Safer Bet in the AI Era?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

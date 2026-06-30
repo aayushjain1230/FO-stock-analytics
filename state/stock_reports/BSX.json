@@ -1,15 +1,15 @@
 {
   "ticker": "BSX",
-  "generated_at": "2026-06-30T19:18:18.563975",
+  "generated_at": "2026-06-30T21:15:26.542739",
   "score": {
-    "final_score": 30.9,
+    "final_score": 34.65,
     "rating": "Drop",
-    "confidence": 19.39,
+    "confidence": 29.47,
     "risk_level": "Controlled",
     "categories": {
       "technical": 20.0,
       "momentum": 0,
-      "volume": 0,
+      "volume": 25.0,
       "fundamental": 81.0,
       "risk": 75.0,
       "catalyst": 50.0
@@ -20,28 +20,30 @@
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
-      "support": 42.73500061035156,
+      "support": 42.68000030517578,
       "resistance": 65.69000244140625,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 0,
       "returns": {
-        "1m": -0.11540055070297894,
-        "3m": -0.3209121181771748,
-        "6m": -0.5551217812150737,
-        "12m": -0.598845385337067
+        "1m": -0.11653903763347595,
+        "3m": -0.3217861099920336,
+        "6m": -0.5556943432239602,
+        "12m": -0.5993616746997443
       },
-      "acceleration": -0.0434,
+      "acceleration": -0.0439,
       "evidence": []
     },
     "volume": {
-      "score": 0,
-      "average_volume": 20901789.15,
-      "relative_volume": 1.4096344953321855,
+      "score": 25.0,
+      "average_volume": 21563281.65,
+      "relative_volume": 1.9786799473539318,
       "accumulation_days": 3,
       "distribution_days": 3,
-      "evidence": []
+      "evidence": [
+        "Relative volume is 1.98x"
+      ]
     },
     "fundamental": {
       "score": 81.0,
@@ -54,17 +56,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.018779905368602145,
-        "annualized_volatility": 0.2981217555038884,
-        "maximum_drawdown": -0.6048178208659927,
-        "sharpe_ratio": -0.8278387859278048,
-        "sortino_ratio": -0.8663453125327066,
-        "calmar_ratio": -0.4197667420528126,
-        "beta": 0.5659007454836523,
-        "alpha": -0.3517132554582364,
-        "capm_expected_return": 0.10491650332323155,
-        "actual_return": -0.24679675213500482,
-        "market_return": 0.18539735838934737
+        "volatility": 0.018782171090278563,
+        "annualized_volatility": 0.29815772272046376,
+        "maximum_drawdown": -0.6053264236539175,
+        "sharpe_ratio": -0.8298771801720993,
+        "sortino_ratio": -0.8685180888271351,
+        "calmar_ratio": -0.4202138246080339,
+        "beta": 0.5663844204197044,
+        "alpha": -0.3520205773237609,
+        "capm_expected_return": 0.10458628714596777,
+        "actual_return": -0.24743429017779311,
+        "market_return": 0.18465600990307401
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -78,7 +80,7 @@
         "guidance change"
       ]
     },
-    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; revenue growth is strong; eps growth is strong; earnings surprise; analyst revision"
+    "explanation": "MACD is above signal; Stock is not materially extended from SMA20; Relative volume is 1.98x; revenue growth is strong; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "BSX",
@@ -132,15 +134,15 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 18.320584012343716,
+    "rsi": 18.218596282596778,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.4096344953321855,
+    "relative_volume": 1.9786799473539318,
     "price_above_sma50": false,
     "price_above_sma200": false,
-    "setup_type": "No clear setup",
-    "support": 42.73500061035156,
+    "setup_type": "volume surge",
+    "support": 42.68000030517578,
     "resistance": 65.69000244140625
   },
   "earnings": {
@@ -232,7 +234,7 @@
         "last_surprise_pct": 0.0162,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 75.38,
+      "analyst_upside_pct": 75.73,
       "eps_growth_implied": 55.66
     },
     "evidence": [
@@ -327,22 +329,23 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7357,
-    "probability_pct": 73.57,
+    "probability_of_outperformance": 0.7727,
+    "probability_pct": 77.27,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
+      "Volume surge above 1.5x",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 30.9/100"
+      "Composite score 34.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 30.9,
+    "final_score": 34.65,
     "technical_score": 20.0,
     "momentum_score": 0,
-    "volume_score": 0,
+    "volume_score": 25.0,
     "fundamental_score": 81.0,
     "risk_score": 75.0,
     "catalyst_score": 50.0,
@@ -350,7 +353,7 @@
     "eps_growth": 1.0,
     "roe": 0.14661,
     "forward_pe": 11.403895,
-    "relative_volume": 1.4096344953321855,
+    "relative_volume": 1.9786799473539318,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -360,66 +363,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.017134290242139416,
-      "weekly": -0.06282890262365848,
-      "monthly": -0.11540055070297894,
-      "annual": -0.598845385337067
+      "daily": -0.018399246676243153,
+      "weekly": -0.06403504970734741,
+      "monthly": -0.11653903763347595,
+      "annual": -0.5993616746997443
     },
     "risk": {
-      "volatility": 0.018779905368602145,
-      "annualized_volatility": 0.2981217555038884,
-      "maximum_drawdown": -0.6048178208659927,
-      "sharpe_ratio": -0.8278387859278048,
-      "sortino_ratio": -0.8663453125327066,
-      "calmar_ratio": -0.4197667420528126,
-      "beta": 0.5659007454836523,
-      "alpha": -0.3517132554582364,
-      "capm_expected_return": 0.10491650332323155,
-      "actual_return": -0.24679675213500482,
-      "market_return": 0.18539735838934737
+      "volatility": 0.018782171090278563,
+      "annualized_volatility": 0.29815772272046376,
+      "maximum_drawdown": -0.6053264236539175,
+      "sharpe_ratio": -0.8298771801720993,
+      "sortino_ratio": -0.8685180888271351,
+      "calmar_ratio": -0.4202138246080339,
+      "beta": 0.5663844204197044,
+      "alpha": -0.3520205773237609,
+      "capm_expected_return": 0.10458628714596777,
+      "actual_return": -0.24743429017779311,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": 0.5659007454836523,
-      "alpha": -0.3517132554582364,
-      "capm_expected_return": 0.10491650332323155,
-      "actual_return": -0.24679675213500482,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta 0.57: Moves roughly 43% less than the market. CAPM expected return is 10.49%; realized alpha is -35.17%, meaning negative alpha versus CAPM."
+      "beta": 0.5663844204197044,
+      "alpha": -0.3520205773237609,
+      "capm_expected_return": 0.10458628714596777,
+      "actual_return": -0.24743429017779311,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta 0.57: Moves roughly 43% less than the market. CAPM expected return is 10.46%; realized alpha is -35.20%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.24679675213500482,
+      "actual_return": -0.24743429017779311,
       "components": {
-        "market_component": 0.10491650332323155,
+        "market_component": 0.10458628714596777,
         "momentum_component": 0.0,
-        "volatility_drag": -0.009624351100777685,
-        "alpha_component": -0.3517132554582364
+        "volatility_drag": -0.009631544544092752,
+        "alpha_component": -0.3520205773237609
       },
       "component_weights_pct": {
-        "market_component": 22.5,
+        "market_component": 22.43,
         "momentum_component": 0.0,
-        "volatility_drag": 2.06,
-        "alpha_component": 75.43
+        "volatility_drag": 2.07,
+        "alpha_component": 75.5
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 46.29024963378906,
-      "sma50": 52.250499954223635,
-      "sma200": 79.0050750541687,
-      "ema20": 46.506290745944085,
-      "ema50": 52.18534487332597,
-      "ema200": 72.61710903455995
+      "sma20": 46.287499618530276,
+      "sma50": 52.249399948120114,
+      "sma200": 79.00480005264282,
+      "ema20": 46.501052621641634,
+      "ema50": 52.18318799861319,
+      "ema200": 72.61656176784177
     },
     "momentum": {
-      "3m": -0.3209121181771748,
-      "6m": -0.5551217812150737,
-      "12m": -0.598845385337067,
+      "3m": -0.3217861099920336,
+      "6m": -0.5556943432239602,
+      "12m": -0.5993616746997443,
       "24m": 0.0,
       "score": 0.0
     },
     "volume": {
-      "average_volume": 20901789.15,
-      "relative_volume": 1.4096344953321855,
+      "average_volume": 21563281.65,
+      "relative_volume": 1.9786799473539318,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -429,13 +432,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "Volume spike",
+    "evidence": "Relative volume reached 1.98x",
     "date_of_change": "2026-06-30",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 70,
+    "invalidates": "Volume fades and price cannot hold the move",
+    "triggers": [
+      {
+        "reason": "Volume spike",
+        "evidence": "Relative volume reached 1.98x",
+        "strength": 70,
+        "invalidates": "Volume fades and price cannot hold the move"
+      }
+    ]
   },
-  "report": "Ticker: BSX\nRating: Drop | Score: 30.9/100 | Confidence: 19.39/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: No clear setup | Support: 42.73500061035156 | Resistance: 65.69000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.403895\nNews/Catalyst: Boston Scientific (BSX) Invests $1.5B in MiRus for Equity Stake and TAVR Acquisition Option\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BSX\nRating: Drop | Score: 34.65/100 | Confidence: 29.47/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: No major bear case detected from available data.\nTechnical Outlook: volume surge | Support: 42.68000030517578 | Resistance: 65.69000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 11.403895\nNews/Catalyst: Boston Scientific (BSX) Invests $1.5B in MiRus for Equity Stake and TAVR Acquisition Option\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Volume spike | Evidence: Relative volume reached 1.98x\nWhat Invalidates: Volume fades and price cannot hold the move"
 }

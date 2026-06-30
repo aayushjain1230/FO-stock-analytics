@@ -1,13 +1,13 @@
 {
   "ticker": "KO",
-  "generated_at": "2026-06-30T19:18:47.756480",
+  "generated_at": "2026-06-30T21:16:03.087924",
   "score": {
-    "final_score": 70.4,
+    "final_score": 68.65,
     "rating": "Watch",
-    "confidence": 63.74,
+    "confidence": 62.81,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 90.0,
+      "technical": 83.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 86.0,
@@ -15,30 +15,29 @@
       "catalyst": 70.0
     },
     "technical": {
-      "score": 90.0,
+      "score": 83.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 74.62999725341797,
       "resistance": 83.58999633789062,
-      "risk_reward": 0.31
+      "risk_reward": 0.35
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.03807546401859896,
-        "3m": 0.07536838807288881,
-        "6m": 0.18194215542705328,
-        "12m": 0.19152738912689782
+        "1m": 0.035244926753956296,
+        "3m": 0.07243616358520488,
+        "6m": 0.17871933451320854,
+        "12m": 0.18827843200030348
       },
-      "acceleration": -0.0156,
+      "acceleration": -0.0169,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +47,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 20225310.85,
-      "relative_volume": 0.34602271638262605,
+      "average_volume": 20691088.5,
+      "relative_volume": 0.7882896059334916,
       "accumulation_days": 7,
       "distribution_days": 5,
       "evidence": [
@@ -67,17 +66,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.010715832153335061,
-        "annualized_volatility": 0.17010856181300602,
-        "maximum_drawdown": -0.15502972264176573,
-        "sharpe_ratio": 1.0024653776861276,
-        "sortino_ratio": 1.7402706225852422,
-        "calmar_ratio": 1.0896267697068873,
-        "beta": -0.024764382895994034,
-        "alpha": 0.17511919483657865,
-        "capm_expected_return": -0.00459125117105963,
-        "actual_return": 0.17052794366551902,
-        "market_return": 0.18539735838934737
+        "volatility": 0.010723883353528743,
+        "annualized_volatility": 0.17023637065381447,
+        "maximum_drawdown": -0.1550299266954397,
+        "sharpe_ratio": 0.9937529018284255,
+        "sortino_ratio": 1.7225962994464041,
+        "calmar_ratio": 1.07925612855448,
+        "beta": -0.02472889377285952,
+        "alpha": 0.1737392261873807,
+        "capm_expected_return": -0.004566338853413213,
+        "actual_return": 0.1691728873339675,
+        "market_return": 0.18465600990307401
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -92,7 +91,7 @@
         "major news"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "KO",
@@ -146,11 +145,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 50.66711519992724,
+    "rsi": 49.69905580604171,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.34602271638262605,
+    "relative_volume": 0.7882896059334916,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -246,7 +245,7 @@
         "last_surprise_pct": 0.0588,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 5.51,
+      "analyst_upside_pct": 5.79,
       "eps_growth_implied": 9.54
     },
     "evidence": [
@@ -342,19 +341,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8488,
-    "probability_pct": 84.88,
+    "probability_of_outperformance": 0.8385,
+    "probability_pct": 83.85,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 70.4/100"
+      "Composite score 68.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 70.4,
-    "technical_score": 90.0,
+    "final_score": 68.65,
+    "technical_score": 83.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
@@ -364,7 +363,7 @@
     "eps_growth": 0.182,
     "roe": 0.43372002,
     "forward_pe": 23.503796,
-    "relative_volume": 0.34602271638262605,
+    "relative_volume": 0.7882896059334916,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -374,71 +373,71 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.014008454273619297,
-      "weekly": 0.014720523423410459,
-      "monthly": 0.03807546401859896,
-      "annual": 0.19152738912689782
+      "daily": -0.01669697347047716,
+      "weekly": 0.011953668455440436,
+      "monthly": 0.035244926753956296,
+      "annual": 0.18827843200030348
     },
     "risk": {
-      "volatility": 0.010715832153335061,
-      "annualized_volatility": 0.17010856181300602,
-      "maximum_drawdown": -0.15502972264176573,
-      "sharpe_ratio": 1.0024653776861276,
-      "sortino_ratio": 1.7402706225852422,
-      "calmar_ratio": 1.0896267697068873,
-      "beta": -0.024764382895994034,
-      "alpha": 0.17511919483657865,
-      "capm_expected_return": -0.00459125117105963,
-      "actual_return": 0.17052794366551902,
-      "market_return": 0.18539735838934737
+      "volatility": 0.010723883353528743,
+      "annualized_volatility": 0.17023637065381447,
+      "maximum_drawdown": -0.1550299266954397,
+      "sharpe_ratio": 0.9937529018284255,
+      "sortino_ratio": 1.7225962994464041,
+      "calmar_ratio": 1.07925612855448,
+      "beta": -0.02472889377285952,
+      "alpha": 0.1737392261873807,
+      "capm_expected_return": -0.004566338853413213,
+      "actual_return": 0.1691728873339675,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": -0.024764382895994034,
-      "alpha": 0.17511919483657865,
-      "capm_expected_return": -0.00459125117105963,
-      "actual_return": 0.17052794366551902,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.46%; realized alpha is 17.51%, meaning positive alpha versus CAPM."
+      "beta": -0.02472889377285952,
+      "alpha": 0.1737392261873807,
+      "capm_expected_return": -0.004566338853413213,
+      "actual_return": 0.1691728873339675,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta -0.02: Moves roughly 102% less than the market. CAPM expected return is -0.46%; realized alpha is 17.37%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.17052794366551902,
+      "actual_return": 0.1691728873339675,
       "components": {
-        "market_component": -0.00459125117105963,
-        "momentum_component": 0.047881847281724454,
+        "market_component": -0.004566338853413213,
+        "momentum_component": 0.04706960800007587,
         "volatility_drag": -0.0,
-        "alpha_component": 0.17511919483657865
+        "alpha_component": 0.1737392261873807
       },
       "component_weights_pct": {
-        "market_component": 2.02,
-        "momentum_component": 21.04,
+        "market_component": 2.03,
+        "momentum_component": 20.89,
         "volatility_drag": 0.0,
-        "alpha_component": 76.94
+        "alpha_component": 77.09
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 80.32968292236328,
-      "sma50": 79.19104507446289,
-      "sma200": 73.28018341064453,
-      "ema20": 80.60880924919638,
-      "ema50": 79.3574524125955,
-      "ema200": 74.61521692023389
+      "sma20": 80.31857261657714,
+      "sma50": 79.18660095214844,
+      "sma200": 73.27907238006591,
+      "ema20": 80.58764676198471,
+      "ema50": 79.34873844727981,
+      "ema200": 74.61300593002258
     },
     "momentum": {
-      "3m": 0.07536838807288881,
-      "6m": 0.18194215542705328,
-      "12m": 0.19152738912689782,
+      "3m": 0.07243616358520488,
+      "6m": 0.17871933451320854,
+      "12m": 0.18827843200030348,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 20225310.85,
-      "relative_volume": 0.34602271638262605,
+      "average_volume": 20691088.5,
+      "relative_volume": 0.7882896059334916,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
     "quant_score": {
-      "score": 90,
+      "score": 80,
       "label": "Research priority"
     }
   },
@@ -451,5 +450,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: KO\nRating: Watch | Score: 70.4/100 | Confidence: 63.74/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.503796\nNews/Catalyst: The Coca-Cola Company (KO) Remains One Of Warren Buffett\u2019s Oldest Stock Picks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: KO\nRating: Watch | Score: 68.65/100 | Confidence: 62.81/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 74.62999725341797 | Resistance: 83.58999633789062\nFundamental Outlook: Fundamentally Strong | Forward P/E: 23.503796\nNews/Catalyst: The Coca-Cola Company (KO) Remains One Of Warren Buffett\u2019s Oldest Stock Picks\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

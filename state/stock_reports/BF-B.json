@@ -1,13 +1,13 @@
 {
   "ticker": "BF-B",
-  "generated_at": "2026-06-30T19:18:13.655824",
+  "generated_at": "2026-06-30T21:15:20.434570",
   "score": {
-    "final_score": 56.3,
+    "final_score": 54.55,
     "rating": "Hold",
-    "confidence": 46.8,
+    "confidence": 45.76,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 63.0,
+      "technical": 56.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 62.0,
@@ -15,28 +15,27 @@
       "catalyst": 25.0
     },
     "technical": {
-      "score": 63.0,
+      "score": 56.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "EMA trend is positive",
-        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 24.65999984741211,
       "resistance": 30.309999465942383,
-      "risk_reward": 1.4
+      "risk_reward": 1.84
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.059506126238979995,
-        "3m": 0.02023581559568477,
-        "6m": 0.05009543700286656,
-        "12m": 0.055751884547123653
+        "1m": 0.04519113448207834,
+        "3m": 0.00645140517213072,
+        "6m": 0.03590759310807301,
+        "12m": 0.04148761636561371
       },
-      "acceleration": -0.0048,
+      "acceleration": -0.0115,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +45,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3198231.05,
-      "relative_volume": 0.3360048049061371,
+      "average_volume": 3293143.5,
+      "relative_volume": 0.9027453556153869,
       "accumulation_days": 7,
       "distribution_days": 4,
       "evidence": [
@@ -62,17 +61,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.023662110789339524,
-        "annualized_volatility": 0.37562436386070386,
-        "maximum_drawdown": -0.5189176922589767,
-        "sharpe_ratio": -0.3288238242771592,
-        "sortino_ratio": -0.443711353850588,
-        "calmar_ratio": -0.3407837405084121,
-        "beta": 0.3833256384857361,
-        "alpha": -0.19458180059451724,
-        "capm_expected_return": 0.07106756077816542,
-        "actual_return": -0.1235142398163518,
-        "market_return": 0.18539735838934737
+        "volatility": 0.02369723289125468,
+        "annualized_volatility": 0.37618190994384004,
+        "maximum_drawdown": -0.5189177313190865,
+        "sharpe_ratio": -0.3459776102529321,
+        "sortino_ratio": -0.46631109178352087,
+        "calmar_ratio": -0.35162208966065234,
+        "beta": 0.38249926667203943,
+        "alpha": -0.20078130659726412,
+        "capm_expected_return": 0.07063078837451066,
+        "actual_return": -0.13015051822275348,
+        "market_return": 0.18465600990307401
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -85,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "BF-B",
@@ -139,11 +138,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 52.433817723142035,
+    "rsi": 49.356913331180664,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.3360048049061371,
+    "relative_volume": 0.9027453556153869,
     "price_above_sma50": true,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -239,7 +238,7 @@
         "last_surprise_pct": -0.6265,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 3.74,
+      "analyst_upside_pct": 5.16,
       "eps_growth_implied": 11.91
     },
     "evidence": [
@@ -333,17 +332,17 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.6084,
-    "probability_pct": 60.84,
+    "probability_of_outperformance": 0.5896,
+    "probability_pct": 58.96,
     "confidence": "High",
     "evidence": [
-      "Composite score 56.3/100"
+      "Composite score 54.55/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 56.3,
-    "technical_score": 63.0,
+    "final_score": 54.55,
+    "technical_score": 56.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 62.0,
@@ -353,7 +352,7 @@
     "eps_growth": -0.627,
     "roe": 0.17846,
     "forward_pe": 15.827313,
-    "relative_volume": 0.3360048049061371,
+    "relative_volume": 0.9027453556153869,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": false,
@@ -363,66 +362,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.025432898310585816,
-      "weekly": -0.00825992596770464,
-      "monthly": 0.059506126238979995,
-      "annual": 0.055751884547123653
+      "daily": -0.03860027854721959,
+      "weekly": -0.02165933030636258,
+      "monthly": 0.04519113448207834,
+      "annual": 0.04148761636561371
     },
     "risk": {
-      "volatility": 0.023662110789339524,
-      "annualized_volatility": 0.37562436386070386,
-      "maximum_drawdown": -0.5189176922589767,
-      "sharpe_ratio": -0.3288238242771592,
-      "sortino_ratio": -0.443711353850588,
-      "calmar_ratio": -0.3407837405084121,
-      "beta": 0.3833256384857361,
-      "alpha": -0.19458180059451724,
-      "capm_expected_return": 0.07106756077816542,
-      "actual_return": -0.1235142398163518,
-      "market_return": 0.18539735838934737
+      "volatility": 0.02369723289125468,
+      "annualized_volatility": 0.37618190994384004,
+      "maximum_drawdown": -0.5189177313190865,
+      "sharpe_ratio": -0.3459776102529321,
+      "sortino_ratio": -0.46631109178352087,
+      "calmar_ratio": -0.35162208966065234,
+      "beta": 0.38249926667203943,
+      "alpha": -0.20078130659726412,
+      "capm_expected_return": 0.07063078837451066,
+      "actual_return": -0.13015051822275348,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": 0.3833256384857361,
-      "alpha": -0.19458180059451724,
-      "capm_expected_return": 0.07106756077816542,
-      "actual_return": -0.1235142398163518,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta 0.38: Moves roughly 62% less than the market. CAPM expected return is 7.11%; realized alpha is -19.46%, meaning negative alpha versus CAPM."
+      "beta": 0.38249926667203943,
+      "alpha": -0.20078130659726412,
+      "capm_expected_return": 0.07063078837451066,
+      "actual_return": -0.13015051822275348,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta 0.38: Moves roughly 62% less than the market. CAPM expected return is 7.06%; realized alpha is -20.08%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.1235142398163518,
+      "actual_return": -0.13015051822275348,
       "components": {
-        "market_component": 0.07106756077816542,
-        "momentum_component": 0.013937971136780913,
-        "volatility_drag": -0.025124872772140774,
-        "alpha_component": -0.19458180059451724
+        "market_component": 0.07063078837451066,
+        "momentum_component": 0.010371904091403428,
+        "volatility_drag": -0.02523638198876801,
+        "alpha_component": -0.20078130659726412
       },
       "component_weights_pct": {
-        "market_component": 23.32,
-        "momentum_component": 4.57,
-        "volatility_drag": 8.25,
-        "alpha_component": 63.86
+        "market_component": 23.01,
+        "momentum_component": 3.38,
+        "volatility_drag": 8.22,
+        "alpha_component": 65.4
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 26.587495231628417,
-      "sma50": 26.45608097076416,
-      "sma200": 26.883940505981446,
-      "ema20": 26.849402874072783,
-      "ema50": 26.568044315599423,
-      "ema200": 27.411972946021177
+      "sma20": 26.56924524307251,
+      "sma50": 26.448780975341798,
+      "sma200": 26.882115488052367,
+      "ema20": 26.814640991092002,
+      "ema50": 26.553730597120776,
+      "ema200": 27.40834106892073
     },
     "momentum": {
-      "3m": 0.02023581559568477,
-      "6m": 0.05009543700286656,
-      "12m": 0.055751884547123653,
+      "3m": 0.00645140517213072,
+      "6m": 0.03590759310807301,
+      "12m": 0.04148761636561371,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3198231.05,
-      "relative_volume": 0.3360048049061371,
+      "average_volume": 3293143.5,
+      "relative_volume": 0.9027453556153869,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -440,5 +439,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BF-B\nRating: Hold | Score: 56.3/100 | Confidence: 46.8/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 24.65999984741211 | Resistance: 30.309999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.827313\nNews/Catalyst: Is Brown-Forman Corporation (BF-B) A Good Stock To Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BF-B\nRating: Hold | Score: 54.55/100 | Confidence: 45.76/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 24.65999984741211 | Resistance: 30.309999465942383\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.827313\nNews/Catalyst: Is Brown-Forman Corporation (BF-B) A Good Stock To Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

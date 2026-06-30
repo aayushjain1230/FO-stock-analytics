@@ -1,13 +1,13 @@
 {
   "ticker": "ATO",
-  "generated_at": "2026-06-30T19:18:07.902803",
+  "generated_at": "2026-06-30T21:15:13.988785",
   "score": {
-    "final_score": 54.7,
+    "final_score": 56.45,
     "rating": "Hold",
-    "confidence": 49.61,
+    "confidence": 50.85,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 46.0,
+      "technical": 53.0,
       "momentum": 45.0,
       "volume": 25.0,
       "fundamental": 73.0,
@@ -15,26 +15,27 @@
       "catalyst": 45.0
     },
     "technical": {
-      "score": 46.0,
+      "score": 53.0,
       "evidence": [
         "Price above SMA20",
+        "RSI confirms momentum without extreme extension",
         "MACD is above signal",
         "Stock is not materially extended from SMA20",
         "Support/resistance profile offers positive risk/reward"
       ],
       "support": 167.14999389648438,
       "resistance": 192.2899932861328,
-      "risk_reward": 3.24
+      "risk_reward": 3.91
     },
     "momentum": {
       "score": 45.0,
       "returns": {
-        "1m": 0.023354797104032876,
-        "3m": -0.05924272951513021,
-        "6m": 0.041016217244111086,
-        "12m": 0.16037917478753427
+        "1m": 0.01856559628094434,
+        "3m": -0.0636453819548145,
+        "6m": 0.036144362694171095,
+        "12m": 0.15494871321671466
       },
-      "acceleration": -0.0798,
+      "acceleration": -0.0817,
       "evidence": [
         "1m return is positive",
         "6m return is positive",
@@ -43,8 +44,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 1564296.5,
-      "relative_volume": 0.28104007136754444,
+      "average_volume": 1611178.6,
+      "relative_volume": 0.8548226745315509,
       "accumulation_days": 3,
       "distribution_days": 2,
       "evidence": [
@@ -61,17 +62,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.010233225240265908,
-        "annualized_volatility": 0.16244741457511672,
-        "maximum_drawdown": -0.12582367438818298,
-        "sharpe_ratio": 1.4649256871842014,
-        "sortino_ratio": 2.103899021440185,
-        "calmar_ratio": 2.0022383825059964,
-        "beta": 0.11562863192728831,
-        "alpha": 0.2165361475142563,
-        "capm_expected_return": 0.021437242913493405,
-        "actual_return": 0.2379733904277497,
-        "market_return": 0.18539735838934737
+        "volatility": 0.01024530866703857,
+        "annualized_volatility": 0.16263923302847227,
+        "maximum_drawdown": -0.12582367438818343,
+        "sharpe_ratio": 1.4488412968274615,
+        "sortino_ratio": 2.079416979349641,
+        "calmar_ratio": 1.9787422712979097,
+        "beta": 0.11538646864142647,
+        "alpha": 0.21433163239986347,
+        "capm_expected_return": 0.021306804896131987,
+        "actual_return": 0.23563843729599546,
+        "market_return": 0.18465600990307401
       },
       "evidence": []
     },
@@ -83,7 +84,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive; 6m return is positive"
+    "explanation": "Price above SMA20; RSI confirms momentum without extreme extension; MACD is above signal; Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "ATO",
@@ -137,11 +138,11 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.2522109919665,
+    "rsi": 66.27012389603539,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.28104007136754444,
+    "relative_volume": 0.8548226745315509,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -237,7 +238,7 @@
         "last_surprise_pct": 0.0184,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 7.94,
+      "analyst_upside_pct": 8.44,
       "eps_growth_implied": 10.76
     },
     "evidence": [
@@ -332,18 +333,18 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7084,
-    "probability_pct": 70.84,
+    "probability_of_outperformance": 0.7153,
+    "probability_pct": 71.53,
     "confidence": "High",
     "evidence": [
       "Positive earnings surprise/catalyst",
-      "Composite score 54.7/100"
+      "Composite score 56.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 54.7,
-    "technical_score": 46.0,
+    "final_score": 56.45,
+    "technical_score": 53.0,
     "momentum_score": 45.0,
     "volume_score": 25.0,
     "fundamental_score": 73.0,
@@ -353,7 +354,7 @@
     "eps_growth": 0.145,
     "roe": 0.096,
     "forward_pe": 19.355091,
-    "relative_volume": 0.28104007136754444,
+    "relative_volume": 0.8548226745315509,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -363,66 +364,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.01006631516643719,
-      "weekly": 0.011631337516858409,
-      "monthly": 0.023354797104032876,
-      "annual": 0.16037917478753427
+      "daily": -0.014699108437768449,
+      "weekly": 0.006897001343315612,
+      "monthly": 0.01856559628094434,
+      "annual": 0.15494871321671466
     },
     "risk": {
-      "volatility": 0.010233225240265908,
-      "annualized_volatility": 0.16244741457511672,
-      "maximum_drawdown": -0.12582367438818298,
-      "sharpe_ratio": 1.4649256871842014,
-      "sortino_ratio": 2.103899021440185,
-      "calmar_ratio": 2.0022383825059964,
-      "beta": 0.11562863192728831,
-      "alpha": 0.2165361475142563,
-      "capm_expected_return": 0.021437242913493405,
-      "actual_return": 0.2379733904277497,
-      "market_return": 0.18539735838934737
+      "volatility": 0.01024530866703857,
+      "annualized_volatility": 0.16263923302847227,
+      "maximum_drawdown": -0.12582367438818343,
+      "sharpe_ratio": 1.4488412968274615,
+      "sortino_ratio": 2.079416979349641,
+      "calmar_ratio": 1.9787422712979097,
+      "beta": 0.11538646864142647,
+      "alpha": 0.21433163239986347,
+      "capm_expected_return": 0.021306804896131987,
+      "actual_return": 0.23563843729599546,
+      "market_return": 0.18465600990307401
     },
     "capm": {
-      "beta": 0.11562863192728831,
-      "alpha": 0.2165361475142563,
-      "capm_expected_return": 0.021437242913493405,
-      "actual_return": 0.2379733904277497,
-      "market_return": 0.18539735838934737,
-      "interpretation": "Beta 0.12: Moves roughly 88% less than the market. CAPM expected return is 2.14%; realized alpha is 21.65%, meaning positive alpha versus CAPM."
+      "beta": 0.11538646864142647,
+      "alpha": 0.21433163239986347,
+      "capm_expected_return": 0.021306804896131987,
+      "actual_return": 0.23563843729599546,
+      "market_return": 0.18465600990307401,
+      "interpretation": "Beta 0.12: Moves roughly 88% less than the market. CAPM expected return is 2.13%; realized alpha is 21.43%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2379733904277497,
+      "actual_return": 0.23563843729599546,
       "components": {
-        "market_component": 0.021437242913493405,
-        "momentum_component": 0.04009479369688357,
+        "market_component": 0.021306804896131987,
+        "momentum_component": 0.038737178304178665,
         "volatility_drag": -0.0,
-        "alpha_component": 0.2165361475142563
+        "alpha_component": 0.21433163239986347
       },
       "component_weights_pct": {
-        "market_component": 7.71,
-        "momentum_component": 14.42,
+        "market_component": 7.77,
+        "momentum_component": 14.12,
         "volatility_drag": 0.0,
-        "alpha_component": 77.87
+        "alpha_component": 78.12
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 170.36150054931642,
-      "sma50": 176.361396484375,
-      "sma200": 173.88526275634766,
-      "ema20": 172.2300718474802,
-      "ema50": 174.80803550216493,
-      "ema200": 171.8974547628008
+      "sma20": 170.3210006713867,
+      "sma50": 176.34519653320314,
+      "sma200": 173.8812127685547,
+      "ema20": 172.15292922285224,
+      "ema50": 174.77627089199586,
+      "ema200": 171.88939500614057
     },
     "momentum": {
-      "3m": -0.05924272951513021,
-      "6m": 0.041016217244111086,
-      "12m": 0.16037917478753427,
+      "3m": -0.0636453819548145,
+      "6m": 0.036144362694171095,
+      "12m": 0.15494871321671466,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 1564296.5,
-      "relative_volume": 0.28104007136754444,
+      "average_volume": 1611178.6,
+      "relative_volume": 0.8548226745315509,
       "volume_spike": false
     },
     "volatility_regime": "Low volatility",
@@ -440,5 +441,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ATO\nRating: Hold | Score: 54.7/100 | Confidence: 49.61/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 167.14999389648438 | Resistance: 192.2899932861328\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.355091\nNews/Catalyst: Is Atmos Energy Corporation (ATO) A Good Stock To Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ATO\nRating: Hold | Score: 56.45/100 | Confidence: 50.85/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 167.14999389648438 | Resistance: 192.2899932861328\nFundamental Outlook: Fundamentally Strong | Forward P/E: 19.355091\nNews/Catalyst: Is Atmos Energy Corporation (ATO) A Good Stock To Buy Now?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
