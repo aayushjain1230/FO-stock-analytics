@@ -1,22 +1,23 @@
 {
   "ticker": "DXCM",
-  "generated_at": "2026-06-30T22:52:02.129043",
+  "generated_at": "2026-07-01T15:40:00.639409",
   "score": {
-    "final_score": 48.4,
+    "final_score": 56.4,
     "rating": "Hold",
-    "confidence": 45.59,
+    "confidence": 55.61,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 47.0,
-      "momentum": 25.0,
+      "technical": 57.0,
+      "momentum": 40.0,
       "volume": 25.0,
       "fundamental": 86.0,
       "risk": 75.0,
-      "catalyst": 50.0
+      "catalyst": 85.0
     },
     "technical": {
-      "score": 47.0,
+      "score": 57.0,
       "evidence": [
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -24,26 +25,27 @@
       ],
       "support": 57.560001373291016,
       "resistance": 78.19000244140625,
-      "risk_reward": 1.11
+      "risk_reward": 0.83
     },
     "momentum": {
-      "score": 25.0,
+      "score": 40.0,
       "returns": {
-        "1m": -0.08665581197132122,
-        "3m": 0.08804518277699347,
-        "6m": -0.00325590086868055,
-        "12m": -0.21985408264066653
+        "1m": -0.08094036283797157,
+        "3m": 0.09570061137813646,
+        "6m": 0.01986062418329171,
+        "12m": -0.21170813567543822
       },
-      "acceleration": 0.0897,
+      "acceleration": 0.0858,
       "evidence": [
         "3m return is positive",
+        "6m return is positive",
         "Momentum is accelerating"
       ]
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 5238952.5,
-      "relative_volume": 0.7956075188694687,
+      "average_volume": 5130080.9,
+      "relative_volume": 0.28157801566053275,
       "accumulation_days": 3,
       "distribution_days": 1,
       "evidence": [
@@ -61,31 +63,33 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.03169169582780865,
-        "annualized_volatility": 0.5030900747177097,
+        "volatility": 0.03167542384933952,
+        "annualized_volatility": 0.5028317650674998,
         "maximum_drawdown": -0.5274857719611658,
-        "sharpe_ratio": -0.22708121901637734,
-        "sortino_ratio": -0.2342292199259106,
-        "calmar_ratio": -0.42978720938175347,
-        "beta": 0.802126293610773,
-        "alpha": -0.2623597646992844,
-        "capm_expected_return": 0.14811745725734654,
-        "actual_return": -0.11424230744193786,
-        "market_return": 0.18465603039964631
+        "sharpe_ratio": -0.20505960000029802,
+        "sortino_ratio": -0.2114058091154415,
+        "calmar_ratio": -0.41312679221174936,
+        "beta": 0.8026943178780995,
+        "alpha": -0.25196688876430895,
+        "capm_expected_return": 0.14885640815212361,
+        "actual_return": -0.10311048061218532,
+        "market_return": 0.18544594727619532
       },
       "evidence": [
         "Historical drawdown is severe"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 85.0,
       "evidence": [
         "earnings surprise",
         "analyst revision",
+        "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive"
   },
   "fundamentals": {
     "ticker": "DXCM",
@@ -94,7 +98,7 @@
     "sector": "Healthcare",
     "industry": "Medical Devices",
     "exchange": "NMS",
-    "market_cap": 25988544512.0,
+    "market_cap": 26536484864.0,
     "revenue_growth": 0.15,
     "eps_growth": 0.922,
     "fcf_growth": null,
@@ -111,15 +115,15 @@
     "cash_position": 2415200000.0,
     "total_debt": 1384800000.0,
     "interest_coverage": null,
-    "forward_pe": 21.84929,
-    "trailing_pe": 28.90558,
+    "forward_pe": 22.309958,
+    "trailing_pe": 29.51502,
     "peg": 1.31,
-    "price_to_book": 8.7901325,
-    "price_to_sales": 5.3941646,
-    "enterprise_to_ebitda": 20.098,
-    "enterprise_to_revenue": 5.391,
-    "fcf_yield": 0.04065781765931933,
-    "institutional_ownership": 1.02483,
+    "price_to_book": 8.975463,
+    "price_to_sales": 5.5078945,
+    "enterprise_to_ebitda": 19.313,
+    "enterprise_to_revenue": 5.18,
+    "fcf_yield": 0.03981829203887733,
+    "institutional_ownership": 1.02404,
     "insider_ownership": 0.00279,
     "short_interest": 17017820.0,
     "short_ratio": 2.4,
@@ -138,14 +142,14 @@
     "classification": "Fundamentally Strong"
   },
   "technical_screen": {
-    "rsi": 21.71190610912656,
+    "rsi": 32.67442587712509,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.7956075188694687,
-    "price_above_sma50": false,
+    "relative_volume": 0.28157801566053275,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 57.560001373291016,
     "resistance": 78.19000244140625
   },
@@ -193,12 +197,12 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": false,
-    "sector_strength": false,
-    "major_news": false,
+    "sector_strength": true,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 0,
-    "institutional_ownership": 1.02483,
+    "bullish_news_score": 3,
+    "bearish_news_score": 1,
+    "institutional_ownership": 1.02404,
     "detail": {
       "earnings": {
         "available": true,
@@ -238,12 +242,14 @@
         "last_surprise_pct": 0.1899,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 26.56,
+      "analyst_upside_pct": 23.95,
       "eps_growth_implied": 32.3
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
+      "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -256,7 +262,7 @@
   },
   "insider_short_interest": {
     "insider_ownership": 0.00279,
-    "institutional_ownership": 1.02483,
+    "institutional_ownership": 1.02404,
     "short_interest": 17017820.0,
     "short_percent_float": 0.0507,
     "days_to_cover": 2.4,
@@ -265,6 +271,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "3 Nasdaq 100 Stocks with Promising Prospects",
+        "source": "StockStory",
+        "published": "2026-07-01T14:33:00Z",
+        "summary": "The Nasdaq 100 (^NDX) is where investors find some of the most innovative and disruptive companies shaping the future. A select few continue to execute at a high level, growing their market dominance and delivering strong returns.",
+        "bullish_score": 1,
+        "bearish_score": 1,
+        "importance_score": 60,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "DexCom, Inc. (DXCM) Further Advances Vision of Glucose Biosensing for All",
         "source": "Insider Monkey",
@@ -304,16 +320,6 @@
         "bearish_score": 0,
         "importance_score": 45,
         "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "DexCom to Roll Out Reimagined Stelo App With Global Expansion Plans",
-        "source": "Zacks",
-        "published": "2026-06-24T13:29:00Z",
-        "summary": "DXCM's redesigned Stelo app is set for a July U.S. rollout, with international expansion and pediatric clearance broadening its glucose insights push.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -333,115 +339,128 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7465,
-    "probability_pct": 74.65,
+    "probability_of_outperformance": 0.7855,
+    "probability_pct": 78.55,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 48.4/100"
+      "Composite score 56.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 48.4,
-    "technical_score": 47.0,
-    "momentum_score": 25.0,
+    "final_score": 56.4,
+    "technical_score": 57.0,
+    "momentum_score": 40.0,
     "volume_score": 25.0,
     "fundamental_score": 86.0,
     "risk_score": 75.0,
-    "catalyst_score": 50.0,
+    "catalyst_score": 85.0,
     "revenue_growth": 0.15,
     "eps_growth": 0.922,
     "roe": 0.35624,
-    "forward_pe": 21.84929,
-    "relative_volume": 0.7956075188694687,
+    "forward_pe": 22.309958,
+    "relative_volume": 0.28157801566053275,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.03758223430482188,
-      "weekly": -0.02278003100022785,
-      "monthly": -0.08665581197132122,
-      "annual": -0.21985408264066653
+      "daily": 0.021677789421682858,
+      "weekly": -0.01347673751120071,
+      "monthly": -0.08094036283797157,
+      "annual": -0.21170813567543822
     },
     "risk": {
-      "volatility": 0.03169169582780865,
-      "annualized_volatility": 0.5030900747177097,
+      "volatility": 0.03167542384933952,
+      "annualized_volatility": 0.5028317650674998,
       "maximum_drawdown": -0.5274857719611658,
-      "sharpe_ratio": -0.22708121901637734,
-      "sortino_ratio": -0.2342292199259106,
-      "calmar_ratio": -0.42978720938175347,
-      "beta": 0.802126293610773,
-      "alpha": -0.2623597646992844,
-      "capm_expected_return": 0.14811745725734654,
-      "actual_return": -0.11424230744193786,
-      "market_return": 0.18465603039964631
+      "sharpe_ratio": -0.20505960000029802,
+      "sortino_ratio": -0.2114058091154415,
+      "calmar_ratio": -0.41312679221174936,
+      "beta": 0.8026943178780995,
+      "alpha": -0.25196688876430895,
+      "capm_expected_return": 0.14885640815212361,
+      "actual_return": -0.10311048061218532,
+      "market_return": 0.18544594727619532
     },
     "capm": {
-      "beta": 0.802126293610773,
-      "alpha": -0.2623597646992844,
-      "capm_expected_return": 0.14811745725734654,
-      "actual_return": -0.11424230744193786,
-      "market_return": 0.18465603039964631,
-      "interpretation": "Beta 0.80: Moves roughly in line with the market. CAPM expected return is 14.81%; realized alpha is -26.24%, meaning negative alpha versus CAPM."
+      "beta": 0.8026943178780995,
+      "alpha": -0.25196688876430895,
+      "capm_expected_return": 0.14885640815212361,
+      "actual_return": -0.10311048061218532,
+      "market_return": 0.18544594727619532,
+      "interpretation": "Beta 0.80: Moves roughly in line with the market. CAPM expected return is 14.89%; realized alpha is -25.20%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": -0.11424230744193786,
+      "actual_return": -0.10311048061218532,
       "components": {
-        "market_component": 0.14811745725734654,
+        "market_component": 0.14885640815212361,
         "momentum_component": 0.0,
-        "volatility_drag": -0.05061801494354195,
-        "alpha_component": -0.2623597646992844
+        "volatility_drag": -0.050566353013499966,
+        "alpha_component": -0.25196688876430895
       },
       "component_weights_pct": {
-        "market_component": 32.12,
+        "market_component": 32.98,
         "momentum_component": 0.0,
-        "volatility_drag": 10.98,
-        "alpha_component": 56.9
+        "volatility_drag": 11.2,
+        "alpha_component": 55.82
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 72.34050025939942,
-      "sma50": 67.42980010986328,
-      "sma200": 67.19305006027221,
-      "ema20": 70.63105435096206,
-      "ema50": 69.12542191106459,
-      "ema200": 69.44120692733354
+      "sma20": 72.10850028991699,
+      "sma50": 67.51360000610352,
+      "sma200": 67.15600004196168,
+      "ema20": 70.4576203707365,
+      "ema50": 69.11305232861476,
+      "ema200": 69.43492623709733
     },
     "momentum": {
-      "3m": 0.08804518277699347,
-      "6m": -0.00325590086868055,
-      "12m": -0.21985408264066653,
+      "3m": 0.09570061137813646,
+      "6m": 0.01986062418329171,
+      "12m": -0.21170813567543822,
       "24m": 0.0,
-      "score": 25.0
+      "score": 50.0
     },
     "volume": {
-      "average_volume": 5238952.5,
-      "relative_volume": 0.7956075188694687,
+      "average_volume": 5130080.9,
+      "relative_volume": 0.28157801566053275,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
     "quant_score": {
-      "score": 20,
-      "label": "High risk / weak setup"
+      "score": 35,
+      "label": "Neutral"
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-30",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Relative strength acceleration",
+    "evidence": "Relative strength moved from lagging to leading",
+    "date_of_change": "2026-07-01",
+    "strength": 80,
+    "invalidates": "Relative strength falls back below its signal line",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      },
+      {
+        "reason": "Relative strength acceleration",
+        "evidence": "Relative strength moved from lagging to leading",
+        "strength": 80,
+        "invalidates": "Relative strength falls back below its signal line"
+      }
+    ]
   },
-  "report": "Ticker: DXCM\nRating: Hold | Score: 48.4/100 | Confidence: 45.59/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 57.560001373291016 | Resistance: 78.19000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 21.84929\nNews/Catalyst: DexCom, Inc. (DXCM) Further Advances Vision of Glucose Biosensing for All\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DXCM\nRating: Hold | Score: 56.4/100 | Confidence: 55.61/100\nBull Case: fundamentals screen as Fundamentally Strong\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 57.560001373291016 | Resistance: 78.19000244140625\nFundamental Outlook: Fundamentally Strong | Forward P/E: 22.309958\nNews/Catalyst: 3 Nasdaq 100 Stocks with Promising Prospects\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
 }

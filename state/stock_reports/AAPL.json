@@ -1,51 +1,55 @@
 {
   "ticker": "AAPL",
-  "generated_at": "2026-06-30T22:50:47.886580",
+  "generated_at": "2026-07-01T15:38:03.508397",
   "score": {
-    "final_score": 58.15,
-    "rating": "Hold",
-    "confidence": 41.84,
+    "final_score": 66.9,
+    "rating": "Watch",
+    "confidence": 50.04,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 55.0,
-      "momentum": 60.0,
+      "technical": 80.0,
+      "momentum": 75.0,
       "volume": 0,
       "fundamental": 86.0,
-      "risk": 100,
-      "catalyst": 30.0
+      "risk": 85.0,
+      "catalyst": 50.0
     },
     "technical": {
-      "score": 55.0,
+      "score": 80.0,
       "evidence": [
+        "Price above SMA20",
+        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
         "Stock is not materially extended from SMA20"
       ],
       "support": 253.5,
       "resistance": 315.20001220703125,
-      "risk_reward": 0.72
+      "risk_reward": 0.49
     },
     "momentum": {
-      "score": 60.0,
+      "score": 75.0,
       "returns": {
-        "1m": -0.07274246101591086,
-        "3m": 0.17433636527909568,
-        "6m": 0.060342376006147,
-        "12m": 0.44473806227166346
+        "1m": -0.036949473586468495,
+        "3m": 0.16341778885099556,
+        "6m": 0.07955889328186849,
+        "12m": 0.443497175515841
       },
-      "acceleration": 0.1442,
+      "acceleration": 0.1236,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
         "12m return is positive",
-        "Momentum is accelerating"
+        "Momentum is accelerating",
+        "Outperforming S&P 500 over 3 months"
       ]
     },
     "volume": {
       "score": 0,
-      "average_volume": 67584047.5,
-      "relative_volume": 0.9537894278971676,
+      "average_volume": 66195815.25,
+      "relative_volume": 0.24453517097517732,
       "accumulation_days": 3,
       "distribution_days": 5,
       "evidence": []
@@ -59,30 +63,33 @@
       ]
     },
     "risk": {
-      "score": 100,
+      "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01778708739544356,
-        "annualized_volatility": 0.2823612587790915,
-        "maximum_drawdown": -0.3336051402453707,
-        "sharpe_ratio": 0.6712354179748996,
-        "sortino_ratio": 0.8980027349189255,
-        "calmar_ratio": 0.4849896308255904,
-        "beta": 1.1158988469757487,
-        "alpha": -0.01652657385358186,
-        "capm_expected_return": 0.20605745141008414,
-        "actual_return": 0.18953087755650228,
-        "market_return": 0.18465603039964631
+        "volatility": 0.017788949469636203,
+        "annualized_volatility": 0.28239081829051044,
+        "maximum_drawdown": -0.33360527854731103,
+        "sharpe_ratio": 0.7044940395209847,
+        "sortino_ratio": 0.9425952480180643,
+        "calmar_ratio": 0.5178679678600873,
+        "beta": 1.116362484684544,
+        "alpha": -0.008082250174814287,
+        "capm_expected_return": 0.20702489847593233,
+        "actual_return": 0.19894264830111805,
+        "market_return": 0.18544594727619532
       },
-      "evidence": []
+      "evidence": [
+        "Short-term volatility is rising"
+      ]
     },
     "catalyst": {
-      "score": 30.0,
+      "score": 50.0,
       "evidence": [
         "earnings surprise",
+        "sector strength",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 6m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
   },
   "fundamentals": {
     "ticker": "AAPL",
@@ -91,7 +98,7 @@
     "sector": "Technology",
     "industry": "Consumer Electronics",
     "exchange": "NMS",
-    "market_cap": 4249933053952.0,
+    "market_cap": 4330713513984.0,
     "revenue_growth": 0.166,
     "eps_growth": 0.218,
     "fcf_growth": null,
@@ -108,16 +115,16 @@
     "cash_position": 68507000832.0,
     "total_debt": 84710998016.0,
     "interest_coverage": null,
-    "forward_pe": 30.113684,
-    "trailing_pe": 35.073936,
+    "forward_pe": 30.68607,
+    "trailing_pe": 35.740604,
     "peg": 2.29,
-    "price_to_book": 39.856747,
-    "price_to_sales": 9.414128,
-    "enterprise_to_ebitda": 25.968,
-    "enterprise_to_revenue": 9.202,
-    "fcf_yield": 0.023786432653096976,
-    "institutional_ownership": 0.65827006,
-    "insider_ownership": 0.01632,
+    "price_to_book": 40.614323,
+    "price_to_sales": 9.593067,
+    "enterprise_to_ebitda": 26.667,
+    "enterprise_to_revenue": 9.45,
+    "fcf_yield": 0.023342746187568177,
+    "institutional_ownership": 0.65791,
+    "insider_ownership": 0.01631,
     "short_interest": 144248476.0,
     "short_ratio": 2.88,
     "short_percent_float": 0.0098,
@@ -127,7 +134,7 @@
     "target_low_price": 215.0,
     "recommendation": "buy",
     "number_of_analysts": 42.0,
-    "dividend_yield": 0.38,
+    "dividend_yield": 0.37,
     "payout_ratio": 0.1259,
     "next_earnings_date": "1777579200",
     "eps_current_year": 8.25,
@@ -136,14 +143,14 @@
     "from_cache": true
   },
   "technical_screen": {
-    "rsi": 49.073062473792156,
+    "rsi": 52.47995166306816,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.9537894278971676,
-    "price_above_sma50": false,
+    "relative_volume": 0.24453517097517732,
+    "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "trend continuation",
     "support": 253.5,
     "resistance": 315.20001220703125
   },
@@ -191,12 +198,12 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": false,
     "guidance_change": true,
-    "bullish_news_score": 0,
-    "bearish_news_score": 1,
-    "institutional_ownership": 0.65827006,
+    "bullish_news_score": 2,
+    "bearish_news_score": 0,
+    "institutional_ownership": 0.65791,
     "detail": {
       "earnings": {
         "available": true,
@@ -236,11 +243,12 @@
         "last_surprise_pct": 0.0346,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.89,
+      "analyst_upside_pct": 6.8,
       "eps_growth_implied": 16.47
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
+      "technical backdrop is constructive",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -252,8 +260,8 @@
     "number_of_analysts": 42.0
   },
   "insider_short_interest": {
-    "insider_ownership": 0.01632,
-    "institutional_ownership": 0.65827006,
+    "insider_ownership": 0.01631,
+    "institutional_ownership": 0.65791,
     "short_interest": 144248476.0,
     "short_percent_float": 0.0098,
     "days_to_cover": 2.88,
@@ -263,50 +271,50 @@
     "available": true,
     "items": [
       {
-        "headline": "Apple is trying to address AI-related cybersecurity risks. What's going on?",
+        "headline": "Are Nike's turnaround struggles actually more of a 'China story'?",
         "source": "Yahoo Finance Video",
-        "published": "2026-06-30T20:21:59Z",
-        "summary": "Apple (AAPL) is reportedly releasing early software updates to address AI cybersecurity concerns. Yahoo Finance Technology Editor Dan Howley takes a closer look in the video above.",
-        "bullish_score": 0,
-        "bearish_score": 1,
+        "published": "2026-07-01T13:50:00Z",
+        "summary": "Nike stock (NKE) is just below its flatline on Wednesday since reporting fiscal fourth quarter results that beat estimates while showing declines in revenue year-over-year. Morning Brief Host Brooke DiPalma is joined by Yahoo Finance Senior Reporter Pras Subramanian and Payne Capital Management president Ryan Payne to outline the areas where Nike is seeing its biggest challenges.",
+        "bullish_score": 1,
+        "bearish_score": 0,
         "importance_score": 45,
-        "why_it_matters": "News may increase risk, valuation pressure, or negative sentiment."
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "Update: Dow Hits Fresh High as Wall Street Posts Solid Quarterly Gains",
+        "headline": "Forget Tesla: Why Smart Money Is Ditching Tesla To Buy Apple Stock",
+        "source": "24/7 Wall St.",
+        "published": "2026-07-01T15:25:46Z",
+        "summary": "Tesla is once again the ticker every headline is chasing, riding a 10.22% one-week rip on robotaxi buzz and Optimus promises. But here\u2019s what you should actually be watching. The Tesla (NASDAQ:TSLA) story requires you to pay 416x earnings for a company whose full-year 2025 revenue fell 2.93%, whose annual net income dropped 46.79%, and ... Forget Tesla: Why Smart Money Is Ditching Tesla To Buy Apple Stock",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Apple's IPhone Demand Remains Solid Despite Muted AI Upgrade Interest, UBS Says",
         "source": "MT Newswires",
-        "published": "2026-06-30T20:40:49Z",
-        "summary": "(Updates with market moves at the end of the day.) The Dow Jones Industrial Average hit an new al",
-        "bullish_score": 0,
+        "published": "2026-07-01T15:18:11Z",
+        "summary": "Apple (AAPL) is seeing robust smartphone demand across the US and Europe, driven by a growing appeti",
+        "bullish_score": 1,
         "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       },
       {
-        "headline": "What Could Send Google Stock Into A New Gear?",
+        "headline": "China Is Coming For Micron's Thick Margins",
         "source": "Trefis",
-        "published": "2026-06-30T20:32:39Z",
-        "summary": "Behind the \"AI\" hype lies the real story: a burgeoning order book that shows demand is overwhelming the company's capacity.",
+        "published": "2026-07-01T13:33:34Z",
+        "summary": "The memory industry is in the middle of an unprecedented boom.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       },
       {
-        "headline": "Retail Trading in Magnificent Seven Falls to 6%, Citi Says",
-        "source": "GuruFocus.com",
-        "published": "2026-06-30T20:20:42Z",
-        "summary": "Citi says retail participation in Magnificent Seven stocks hit a four-year low as investors increasingly favored ETFs over single stocks.",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "American Express Adds Apple Pay Rewards Redemption for US Cardholders",
-        "source": "GuruFocus.com",
-        "published": "2026-06-30T20:18:38Z",
-        "summary": "Members can now use Membership Rewards points at Apple Pay checkout for online and in-app purchases.",
+        "headline": "Is It Worth Investing in Apple (AAPL) Based on Wall Street's Bullish Views?",
+        "source": "Zacks",
+        "published": "2026-07-01T13:30:02Z",
+        "summary": "The average brokerage recommendation (ABR) for Apple (AAPL) is equivalent to a Buy. The overly optimistic recommendations of Wall Street analysts make the effectiveness of this highly sought-after metric questionable. So, is it worth buying the stock?",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -328,31 +336,31 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7979,
-    "probability_pct": 79.79,
+    "probability_of_outperformance": 0.8519,
+    "probability_pct": 85.19,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 58.15/100"
+      "Composite score 66.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 58.15,
-    "technical_score": 55.0,
-    "momentum_score": 60.0,
+    "final_score": 66.9,
+    "technical_score": 80.0,
+    "momentum_score": 75.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
-    "risk_score": 100,
-    "catalyst_score": 30.0,
+    "risk_score": 85.0,
+    "catalyst_score": 50.0,
     "revenue_growth": 0.166,
     "eps_growth": 0.218,
     "roe": 1.4147099,
-    "forward_pe": 30.113684,
-    "relative_volume": 0.9537894278971676,
+    "forward_pe": 30.68607,
+    "relative_volume": 0.24453517097517732,
     "breakout": false,
-    "price_above_sma50": false,
+    "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
@@ -360,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.02704619642688466,
-      "weekly": -0.016785601924256266,
-      "monthly": -0.07274246101591086,
-      "annual": 0.44473806227166346
+      "daily": 0.019463710699757053,
+      "weekly": 0.0065238771320681455,
+      "monthly": -0.036949473586468495,
+      "annual": 0.443497175515841
     },
     "risk": {
-      "volatility": 0.01778708739544356,
-      "annualized_volatility": 0.2823612587790915,
-      "maximum_drawdown": -0.3336051402453707,
-      "sharpe_ratio": 0.6712354179748996,
-      "sortino_ratio": 0.8980027349189255,
-      "calmar_ratio": 0.4849896308255904,
-      "beta": 1.1158988469757487,
-      "alpha": -0.01652657385358186,
-      "capm_expected_return": 0.20605745141008414,
-      "actual_return": 0.18953087755650228,
-      "market_return": 0.18465603039964631
+      "volatility": 0.017788949469636203,
+      "annualized_volatility": 0.28239081829051044,
+      "maximum_drawdown": -0.33360527854731103,
+      "sharpe_ratio": 0.7044940395209847,
+      "sortino_ratio": 0.9425952480180643,
+      "calmar_ratio": 0.5178679678600873,
+      "beta": 1.116362484684544,
+      "alpha": -0.008082250174814287,
+      "capm_expected_return": 0.20702489847593233,
+      "actual_return": 0.19894264830111805,
+      "market_return": 0.18544594727619532
     },
     "capm": {
-      "beta": 1.1158988469757487,
-      "alpha": -0.01652657385358186,
-      "capm_expected_return": 0.20605745141008414,
-      "actual_return": 0.18953087755650228,
-      "market_return": 0.18465603039964631,
-      "interpretation": "Beta 1.12: Moves roughly in line with the market. CAPM expected return is 20.61%; realized alpha is -1.65%, meaning negative alpha versus CAPM."
+      "beta": 1.116362484684544,
+      "alpha": -0.008082250174814287,
+      "capm_expected_return": 0.20702489847593233,
+      "actual_return": 0.19894264830111805,
+      "market_return": 0.18544594727619532,
+      "interpretation": "Beta 1.12: Moves roughly in line with the market. CAPM expected return is 20.70%; realized alpha is -0.81%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.18953087755650228,
+      "actual_return": 0.19894264830111805,
       "components": {
-        "market_component": 0.20605745141008414,
-        "momentum_component": 0.11118451556791586,
-        "volatility_drag": -0.006472251755818304,
-        "alpha_component": -0.01652657385358186
+        "market_component": 0.20702489847593233,
+        "momentum_component": 0.11087429387896025,
+        "volatility_drag": -0.006478163658102088,
+        "alpha_component": -0.008082250174814287
       },
       "component_weights_pct": {
-        "market_component": 60.56,
-        "momentum_component": 32.68,
-        "volatility_drag": 1.9,
-        "alpha_component": 4.86
+        "market_component": 62.27,
+        "momentum_component": 33.35,
+        "volatility_drag": 1.95,
+        "alpha_component": 2.43
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 295.925,
-      "sma50": 292.1708715820312,
-      "sma200": 269.6533828735352,
-      "ema20": 292.76230560015847,
-      "ema50": 289.59963078381185,
-      "ema200": 268.1576463083826
+      "sma20": 294.914599609375,
+      "sma50": 292.61473876953124,
+      "sma200": 269.9612949371338,
+      "ema20": 292.97465786638804,
+      "ema50": 289.811096460311,
+      "ema200": 268.4246552865574
     },
     "momentum": {
-      "3m": 0.17433636527909568,
-      "6m": 0.060342376006147,
-      "12m": 0.44473806227166346,
+      "3m": 0.16341778885099556,
+      "6m": 0.07955889328186849,
+      "12m": 0.443497175515841,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 67584047.5,
-      "relative_volume": 0.9537894278971676,
+      "average_volume": 66195815.25,
+      "relative_volume": 0.24453517097517732,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -429,13 +437,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
-    "date_of_change": "2026-06-30",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "send_alert": true,
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-07-01",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
+    "triggers": [
+      {
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
+      }
+    ]
   },
-  "report": "Ticker: AAPL\nRating: Hold | Score: 58.15/100 | Confidence: 41.84/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 253.5 | Resistance: 315.20001220703125\nFundamental Outlook: Quality Compounder | Forward P/E: 30.113684\nNews/Catalyst: Apple is trying to address AI-related cybersecurity risks. What's going on?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AAPL\nRating: Watch | Score: 66.9/100 | Confidence: 50.04/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 253.5 | Resistance: 315.20001220703125\nFundamental Outlook: Quality Compounder | Forward P/E: 30.68607\nNews/Catalyst: Are Nike's turnaround struggles actually more of a 'China story'?\nPortfolio Fit: Already held; monitor risk contribution and thesis quality.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }

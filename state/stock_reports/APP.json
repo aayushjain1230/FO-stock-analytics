@@ -1,40 +1,43 @@
 {
   "ticker": "APP",
-  "generated_at": "2026-06-30T22:51:07.973682",
+  "generated_at": "2026-07-01T15:38:36.615855",
   "score": {
-    "final_score": 48.65,
+    "final_score": 56.9,
     "rating": "Hold",
-    "confidence": 38.93,
+    "confidence": 45.96,
     "risk_level": "High",
     "categories": {
-      "technical": 46.0,
+      "technical": 75.0,
       "momentum": 60.0,
       "volume": 0,
       "fundamental": 86.0,
       "risk": 35.0,
-      "catalyst": 80.0
+      "catalyst": 100
     },
     "technical": {
-      "score": 46.0,
+      "score": 75.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
+        "Price above SMA200",
         "EMA trend is positive",
+        "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 379.1400146484375,
       "resistance": 613.7000122070312,
-      "risk_reward": 0.72
+      "risk_reward": 0.24
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.15961774307215815,
-        "3m": 0.38472908799861427,
-        "6m": -0.2786217401142921,
-        "12m": 0.5436214942568565
+        "1m": -0.07414861329261535,
+        "3m": 0.4276256465432633,
+        "6m": -0.18692223838891364,
+        "12m": 0.6230433875628834
       },
-      "acceleration": 0.524,
+      "acceleration": 0.5211,
       "evidence": [
         "3m return is positive",
         "12m return is positive",
@@ -44,8 +47,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 5336501.15,
-      "relative_volume": 1.0473759571849806,
+      "average_volume": 5315055.3,
+      "relative_volume": 0.42991198981504486,
       "accumulation_days": 3,
       "distribution_days": 7,
       "evidence": []
@@ -61,17 +64,17 @@
     "risk": {
       "score": 35.0,
       "risk_metrics": {
-        "volatility": 0.052526582298153865,
-        "annualized_volatility": 0.8338336438864963,
+        "volatility": 0.05265578020195532,
+        "annualized_volatility": 0.8358845970267132,
         "maximum_drawdown": -0.5699723736744686,
-        "sharpe_ratio": 1.4984052986499248,
-        "sortino_ratio": 2.1663991552245436,
-        "calmar_ratio": 2.6009649865969307,
-        "beta": 2.238725088793262,
-        "alpha": 0.8360266621394409,
-        "capm_expected_return": 0.41339408805265954,
-        "actual_return": 1.2494207501921004,
-        "market_return": 0.18465603039964631
+        "sharpe_ratio": 1.553604510624603,
+        "sortino_ratio": 2.251731271535399,
+        "calmar_ratio": 2.8124007819874812,
+        "beta": 2.2413017711977195,
+        "alpha": 0.8829937502107548,
+        "capm_expected_return": 0.41564033009157547,
+        "actual_return": 1.2986340803023302,
+        "market_return": 0.18544594727619532
       },
       "evidence": [
         "Volatility is elevated",
@@ -80,16 +83,17 @@
       ]
     },
     "catalyst": {
-      "score": 80.0,
+      "score": 100,
       "evidence": [
         "earnings surprise",
         "analyst revision",
         "insider buying",
+        "sector strength",
         "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; EMA trend is positive; Stock is not materially extended from SMA20; 3m return is positive; 12m return is positive"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; RSI confirms momentum without extreme extension; MACD is above signal"
   },
   "fundamentals": {
     "ticker": "APP",
@@ -98,7 +102,7 @@
     "sector": "Communication Services",
     "industry": "Advertising Agencies",
     "exchange": "NMS",
-    "market_cap": 173086113792.0,
+    "market_cap": 190933368832.0,
     "revenue_growth": 0.59,
     "eps_growth": 1.131,
     "fcf_growth": null,
@@ -115,16 +119,16 @@
     "cash_position": 2758671104.0,
     "total_debt": 3849840128.0,
     "interest_coverage": null,
-    "forward_pe": 23.49822,
-    "trailing_pe": 44.724823,
+    "forward_pe": 26.222958,
+    "trailing_pe": 49.46531,
     "peg": 1.31,
-    "price_to_book": 73.31104,
-    "price_to_sales": 28.079285,
-    "enterprise_to_ebitda": 34.615,
-    "enterprise_to_revenue": 27.359,
-    "fcf_yield": 0.018372919758436353,
-    "institutional_ownership": 0.7505,
-    "insider_ownership": 0.18297,
+    "price_to_book": 80.87029,
+    "price_to_sales": 30.974596,
+    "enterprise_to_ebitda": 35.75,
+    "enterprise_to_revenue": 28.256,
+    "fcf_yield": 0.01665553433354088,
+    "institutional_ownership": 0.74648005,
+    "insider_ownership": 0.14,
     "short_interest": 12847141.0,
     "short_ratio": 2.64,
     "short_percent_float": 0.044,
@@ -137,19 +141,19 @@
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "next_earnings_date": "1778097600",
-    "eps_current_year": 11.52,
-    "eps_forward": 21.92634,
+    "eps_current_year": 11.49,
+    "eps_forward": 21.674,
     "classification": "Quality Compounder"
   },
   "technical_screen": {
-    "rsi": 48.77397462181489,
-    "macd_cross": false,
+    "rsi": 64.81222544605643,
+    "macd_cross": true,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 1.0473759571849806,
+    "relative_volume": 0.42991198981504486,
     "price_above_sma50": true,
-    "price_above_sma200": false,
-    "setup_type": "No clear setup",
+    "price_above_sma200": true,
+    "setup_type": "MACD bullish crossover",
     "support": 379.1400146484375,
     "resistance": 613.7000122070312
   },
@@ -197,12 +201,12 @@
     "earnings_surprise": true,
     "analyst_revision": true,
     "insider_buying": true,
-    "sector_strength": false,
+    "sector_strength": true,
     "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 3,
+    "bullish_news_score": 4,
     "bearish_news_score": 1,
-    "institutional_ownership": 0.7505,
+    "institutional_ownership": 0.74648005,
     "detail": {
       "earnings": {
         "available": true,
@@ -242,13 +246,14 @@
         "last_surprise_pct": 0.0339,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 26.22,
-      "eps_growth_implied": 90.33
+      "analyst_upside_pct": 14.42,
+      "eps_growth_implied": 88.63
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
       "analyst target/recommendation data is supportive",
       "insider ownership or purchase data is supportive",
+      "technical backdrop is constructive",
       "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
@@ -261,8 +266,8 @@
     "number_of_analysts": 30.0
   },
   "insider_short_interest": {
-    "insider_ownership": 0.18297,
-    "institutional_ownership": 0.7505,
+    "insider_ownership": 0.14,
+    "institutional_ownership": 0.74648005,
     "short_interest": 12847141.0,
     "short_percent_float": 0.044,
     "days_to_cover": 2.64,
@@ -272,10 +277,30 @@
     "available": true,
     "items": [
       {
+        "headline": "Salesforce Upgraded to Buy. Why the Analyst Is Betting Against \u2018Armageddon.\u2019",
+        "source": "Barrons.com",
+        "published": "2026-07-01T14:43:00Z",
+        "summary": "Guggenheim analyst John DiFucci raises his rating on Salesforce to Buy from Hold with a $228 price target.",
+        "bullish_score": 2,
+        "bearish_score": 0,
+        "importance_score": 60,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
         "headline": "Stocks making big moves yesterday: AppLovin, QuidelOrtho, Rocket Lab, Pinterest, and Zscaler",
         "source": "StockStory",
         "published": "2026-06-30T20:03:01Z",
         "summary": "Check out the companies making headlines yesterday:",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
+      {
+        "headline": "Why AppLovin\u2019s CEO Is Selling While Quantum Insiders Are Buying",
+        "source": "MarketBeat",
+        "published": "2026-06-30T15:00:00Z",
+        "summary": "AppLovin's CEO sold $51 million in discretionary shares, ServiceTitan insiders sold $16 million in Q2, and Quantinuum saw $25 million in post-IPO insider buys.",
         "bullish_score": 0,
         "bearish_score": 0,
         "importance_score": 30,
@@ -300,26 +325,6 @@
         "bearish_score": 1,
         "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "AppLovin Stock Jumps As Analyst Initiates 'Strong Buy'",
-        "source": "Investor's Business Daily",
-        "published": "2026-06-29T19:24:06Z",
-        "summary": "AppLovin stock jumped back above its 50-day moving average in trading Monday after being called a \"strong buy.\"",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Wall Street Analysts Think AppLovin (APP) Is a Good Investment: Is It?",
-        "source": "Zacks",
-        "published": "2026-06-29T13:30:06Z",
-        "summary": "Based on the average brokerage recommendation (ABR), AppLovin (APP) should be added to one's portfolio. Wall Street analysts' overly optimistic recommendations cast doubt on the effectiveness of this highly sought-after metric. So, is the stock worth buying?",
-        "bullish_score": 0,
-        "bearish_score": 0,
-        "importance_score": 30,
-        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
       }
     ]
   },
@@ -339,100 +344,100 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7535,
-    "probability_pct": 75.35,
+    "probability_of_outperformance": 0.8141,
+    "probability_pct": 81.41,
     "confidence": "High",
     "evidence": [
       "Revenue growth above 20%",
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 48.65/100"
+      "Composite score 56.9/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 48.65,
-    "technical_score": 46.0,
+    "final_score": 56.9,
+    "technical_score": 75.0,
     "momentum_score": 60.0,
     "volume_score": 0,
     "fundamental_score": 86.0,
     "risk_score": 35.0,
-    "catalyst_score": 80.0,
+    "catalyst_score": 100,
     "revenue_growth": 0.59,
     "eps_growth": 1.131,
     "roe": 2.66444,
-    "forward_pe": 23.49822,
-    "relative_volume": 1.0473759571849806,
+    "forward_pe": 26.222958,
+    "relative_volume": 0.42991198981504486,
     "breakout": false,
     "price_above_sma50": true,
-    "price_above_sma200": false,
+    "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": true,
     "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": 0.033021834911873826,
-      "weekly": 0.10322896790112934,
-      "monthly": -0.15961774307215815,
-      "annual": 0.5436214942568565
+      "daily": 0.10279880609292547,
+      "weekly": 0.22202989024081354,
+      "monthly": -0.07414861329261535,
+      "annual": 0.6230433875628834
     },
     "risk": {
-      "volatility": 0.052526582298153865,
-      "annualized_volatility": 0.8338336438864963,
+      "volatility": 0.05265578020195532,
+      "annualized_volatility": 0.8358845970267132,
       "maximum_drawdown": -0.5699723736744686,
-      "sharpe_ratio": 1.4984052986499248,
-      "sortino_ratio": 2.1663991552245436,
-      "calmar_ratio": 2.6009649865969307,
-      "beta": 2.238725088793262,
-      "alpha": 0.8360266621394409,
-      "capm_expected_return": 0.41339408805265954,
-      "actual_return": 1.2494207501921004,
-      "market_return": 0.18465603039964631
+      "sharpe_ratio": 1.553604510624603,
+      "sortino_ratio": 2.251731271535399,
+      "calmar_ratio": 2.8124007819874812,
+      "beta": 2.2413017711977195,
+      "alpha": 0.8829937502107548,
+      "capm_expected_return": 0.41564033009157547,
+      "actual_return": 1.2986340803023302,
+      "market_return": 0.18544594727619532
     },
     "capm": {
-      "beta": 2.238725088793262,
-      "alpha": 0.8360266621394409,
-      "capm_expected_return": 0.41339408805265954,
-      "actual_return": 1.2494207501921004,
-      "market_return": 0.18465603039964631,
-      "interpretation": "Beta 2.24: Moves roughly 124% more than the market. CAPM expected return is 41.34%; realized alpha is 83.60%, meaning positive alpha versus CAPM."
+      "beta": 2.2413017711977195,
+      "alpha": 0.8829937502107548,
+      "capm_expected_return": 0.41564033009157547,
+      "actual_return": 1.2986340803023302,
+      "market_return": 0.18544594727619532,
+      "interpretation": "Beta 2.24: Moves roughly 124% more than the market. CAPM expected return is 41.56%; realized alpha is 88.30%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.2494207501921004,
+      "actual_return": 1.2986340803023302,
       "components": {
-        "market_component": 0.41339408805265954,
-        "momentum_component": 0.13590537356421412,
-        "volatility_drag": -0.11676672877729927,
-        "alpha_component": 0.8360266621394409
+        "market_component": 0.41564033009157547,
+        "momentum_component": 0.15576084689072084,
+        "volatility_drag": -0.11717691940534265,
+        "alpha_component": 0.8829937502107548
       },
       "component_weights_pct": {
-        "market_component": 27.52,
-        "momentum_component": 9.05,
-        "volatility_drag": 7.77,
-        "alpha_component": 55.66
+        "market_component": 26.45,
+        "momentum_component": 9.91,
+        "volatility_drag": 7.46,
+        "alpha_component": 56.19
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 508.45050048828125,
-      "sma50": 498.0892010498047,
-      "sma200": 540.3315260314941,
-      "ema20": 497.19921478459554,
-      "ema50": 495.17445979020255,
-      "ema200": 487.8492125033618
+      "sma20": 506.57875061035156,
+      "sma50": 499.6339013671875,
+      "sma200": 540.2625010681153,
+      "ema20": 503.96071883598825,
+      "ema50": 498.03801067388946,
+      "ema200": 488.6486731483455
     },
     "momentum": {
-      "3m": 0.38472908799861427,
-      "6m": -0.2786217401142921,
-      "12m": 0.5436214942568565,
+      "3m": 0.4276256465432633,
+      "6m": -0.18692223838891364,
+      "12m": 0.6230433875628834,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 5336501.15,
-      "relative_volume": 1.0473759571849806,
+      "average_volume": 5315055.3,
+      "relative_volume": 0.42991198981504486,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -443,19 +448,19 @@
   },
   "why_now": {
     "send_alert": true,
-    "reason": "Relative strength acceleration",
-    "evidence": "Relative strength moved from lagging to leading",
-    "date_of_change": "2026-06-30",
-    "strength": 80,
-    "invalidates": "Relative strength falls back below its signal line",
+    "reason": "Breakout",
+    "evidence": "Price reclaimed a major moving average",
+    "date_of_change": "2026-07-01",
+    "strength": 75,
+    "invalidates": "Close back below the reclaimed moving average",
     "triggers": [
       {
-        "reason": "Relative strength acceleration",
-        "evidence": "Relative strength moved from lagging to leading",
-        "strength": 80,
-        "invalidates": "Relative strength falls back below its signal line"
+        "reason": "Breakout",
+        "evidence": "Price reclaimed a major moving average",
+        "strength": 75,
+        "invalidates": "Close back below the reclaimed moving average"
       }
     ]
   },
-  "report": "Ticker: APP\nRating: Hold | Score: 48.65/100 | Confidence: 38.93/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated\nTechnical Outlook: No clear setup | Support: 379.1400146484375 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 23.49822\nNews/Catalyst: Stocks making big moves yesterday: AppLovin, QuidelOrtho, Rocket Lab, Pinterest, and Zscaler\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Relative strength acceleration | Evidence: Relative strength moved from lagging to leading\nWhat Invalidates: Relative strength falls back below its signal line"
+  "report": "Ticker: APP\nRating: Hold | Score: 56.9/100 | Confidence: 45.96/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: MACD bullish crossover | Support: 379.1400146484375 | Resistance: 613.7000122070312\nFundamental Outlook: Quality Compounder | Forward P/E: 26.222958\nNews/Catalyst: Salesforce Upgraded to Buy. Why the Analyst Is Betting Against \u2018Armageddon.\u2019\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: Breakout | Evidence: Price reclaimed a major moving average\nWhat Invalidates: Close back below the reclaimed moving average"
 }
