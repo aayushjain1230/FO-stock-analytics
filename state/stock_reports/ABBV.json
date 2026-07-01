@@ -1,6 +1,6 @@
 {
   "ticker": "ABBV",
-  "generated_at": "2026-07-01T15:38:04.421427",
+  "generated_at": "2026-07-01T17:49:30.741241",
   "score": {
     "final_score": 65.25,
     "rating": "Watch",
@@ -26,17 +26,17 @@
       ],
       "support": 197.3800048828125,
       "resistance": 254.30999755859375,
-      "risk_reward": 0.1
+      "risk_reward": 0.07
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.16986810065225888,
-        "3m": 0.15484195872581696,
-        "6m": 0.0968090651354041,
-        "12m": 0.38570850157754144
+        "1m": 0.1761142219973657,
+        "3m": 0.16100785298740128,
+        "6m": 0.10266511207730233,
+        "12m": 0.39310703090317545
       },
-      "acceleration": 0.1064,
+      "acceleration": 0.1097,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -48,8 +48,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 8635480.95,
-      "relative_volume": 0.15861525350246997,
+      "average_volume": 8682678.35,
+      "relative_volume": 0.2664692744261337,
       "accumulation_days": 10,
       "distribution_days": 2,
       "evidence": [
@@ -66,17 +66,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.016946510745090414,
-        "annualized_volatility": 0.2690175181307588,
-        "maximum_drawdown": -0.20736389304175407,
-        "sharpe_ratio": 0.9729418530693003,
-        "sortino_ratio": 1.237692711153037,
-        "calmar_ratio": 1.2177295422954124,
-        "beta": 0.2799493845760434,
-        "alpha": 0.20982292378615233,
-        "capm_expected_return": 0.05191547881209227,
-        "actual_return": 0.2617384025982446,
-        "market_return": 0.18544594727619532
+        "volatility": 0.016941208249511838,
+        "annualized_volatility": 0.2689333436229852,
+        "maximum_drawdown": -0.2073638930417545,
+        "sharpe_ratio": 0.9831317179154424,
+        "sortino_ratio": 1.2497172770197769,
+        "calmar_ratio": 1.2339296626306926,
+        "beta": 0.2802471807023948,
+        "alpha": 0.2126215699478958,
+        "capm_expected_return": 0.0517753301729136,
+        "actual_return": 0.2643969001208094,
+        "market_return": 0.18474879941038838
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -139,17 +139,18 @@
     "next_earnings_date": "1785501000",
     "eps_current_year": 2.04,
     "eps_forward": 16.26292,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 70.40731989035946,
+    "rsi": 72.02628290342349,
     "macd_cross": false,
-    "breakout": false,
+    "breakout": true,
     "new_52w_high": false,
-    "relative_volume": 0.15861525350246997,
+    "relative_volume": 0.2664692744261337,
     "price_above_sma50": true,
     "price_above_sma200": true,
-    "setup_type": "No clear setup",
+    "setup_type": "52-week high pressure",
     "support": 197.3800048828125,
     "resistance": 254.30999755859375
   },
@@ -242,7 +243,7 @@
         "last_surprise_pct": -0.0077,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 2.11,
+      "analyst_upside_pct": 1.57,
       "eps_growth_implied": 697.2
     },
     "evidence": [
@@ -336,10 +337,11 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7286,
-    "probability_pct": 72.86,
+    "probability_of_outperformance": 0.7663,
+    "probability_pct": 76.63,
     "confidence": "High",
     "evidence": [
+      "Breakout pressure detected",
       "Composite score 65.25/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
@@ -356,8 +358,8 @@
     "eps_growth": -0.462,
     "roe": null,
     "forward_pe": 15.318897,
-    "relative_volume": 0.15861525350246997,
-    "breakout": false,
+    "relative_volume": 0.2664692744261337,
+    "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "earnings_surprise": false,
@@ -366,66 +368,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.010093758115933715,
-      "weekly": 0.06049643131164073,
-      "monthly": 0.16986810065225888,
-      "annual": 0.38570850157754144
+      "daily": -0.00480848321730265,
+      "weekly": 0.06615859903151611,
+      "monthly": 0.1761142219973657,
+      "annual": 0.39310703090317545
     },
     "risk": {
-      "volatility": 0.016946510745090414,
-      "annualized_volatility": 0.2690175181307588,
-      "maximum_drawdown": -0.20736389304175407,
-      "sharpe_ratio": 0.9729418530693003,
-      "sortino_ratio": 1.237692711153037,
-      "calmar_ratio": 1.2177295422954124,
-      "beta": 0.2799493845760434,
-      "alpha": 0.20982292378615233,
-      "capm_expected_return": 0.05191547881209227,
-      "actual_return": 0.2617384025982446,
-      "market_return": 0.18544594727619532
+      "volatility": 0.016941208249511838,
+      "annualized_volatility": 0.2689333436229852,
+      "maximum_drawdown": -0.2073638930417545,
+      "sharpe_ratio": 0.9831317179154424,
+      "sortino_ratio": 1.2497172770197769,
+      "calmar_ratio": 1.2339296626306926,
+      "beta": 0.2802471807023948,
+      "alpha": 0.2126215699478958,
+      "capm_expected_return": 0.0517753301729136,
+      "actual_return": 0.2643969001208094,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 0.2799493845760434,
-      "alpha": 0.20982292378615233,
-      "capm_expected_return": 0.05191547881209227,
-      "actual_return": 0.2617384025982446,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 0.28: Moves roughly 72% less than the market. CAPM expected return is 5.19%; realized alpha is 20.98%, meaning positive alpha versus CAPM."
+      "beta": 0.2802471807023948,
+      "alpha": 0.2126215699478958,
+      "capm_expected_return": 0.0517753301729136,
+      "actual_return": 0.2643969001208094,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 0.28: Moves roughly 72% less than the market. CAPM expected return is 5.18%; realized alpha is 21.26%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.2617384025982446,
+      "actual_return": 0.2643969001208094,
       "components": {
-        "market_component": 0.05191547881209227,
-        "momentum_component": 0.09642712539438536,
-        "volatility_drag": -0.003803503626151761,
-        "alpha_component": 0.20982292378615233
+        "market_component": 0.0517753301729136,
+        "momentum_component": 0.09827675772579386,
+        "volatility_drag": -0.003786668724597042,
+        "alpha_component": 0.2126215699478958
       },
       "component_weights_pct": {
-        "market_component": 14.34,
-        "momentum_component": 26.64,
-        "volatility_drag": 1.05,
-        "alpha_component": 57.97
+        "market_component": 14.13,
+        "momentum_component": 26.82,
+        "volatility_drag": 1.03,
+        "alpha_component": 58.02
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 231.41100006103517,
-      "sma50": 217.4622003173828,
-      "sma200": 219.49477088928222,
-      "ema20": 233.86179631004072,
-      "ema50": 223.56497803181176,
-      "ema200": 214.54252104978391
+      "sma20": 231.47749938964844,
+      "sma50": 217.48880004882812,
+      "sma200": 219.5014205932617,
+      "ema20": 233.98846169787552,
+      "ema50": 223.6171343667268,
+      "ema200": 214.5557544717903
     },
     "momentum": {
-      "3m": 0.15484195872581696,
-      "6m": 0.0968090651354041,
-      "12m": 0.38570850157754144,
+      "3m": 0.16100785298740128,
+      "6m": 0.10266511207730233,
+      "12m": 0.39310703090317545,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 8635480.95,
-      "relative_volume": 0.15861525350246997,
+      "average_volume": 8682678.35,
+      "relative_volume": 0.2664692744261337,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -443,5 +445,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ABBV\nRating: Watch | Score: 65.25/100 | Confidence: 52.86/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 197.3800048828125 | Resistance: 254.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.318897\nNews/Catalyst: J&J's Innovative Medicine Business in Q2: Here's What to Watch\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ABBV\nRating: Watch | Score: 65.25/100 | Confidence: 52.86/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure | Support: 197.3800048828125 | Resistance: 254.30999755859375\nFundamental Outlook: Fundamentally Average | Forward P/E: 15.318897\nNews/Catalyst: J&J's Innovative Medicine Business in Q2: Here's What to Watch\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

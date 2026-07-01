@@ -1,13 +1,13 @@
 {
   "ticker": "AES",
-  "generated_at": "2026-07-01T15:38:14.901018",
+  "generated_at": "2026-07-01T17:49:36.046249",
   "score": {
-    "final_score": 61.2,
+    "final_score": 59.2,
     "rating": "Hold",
-    "confidence": 53.52,
+    "confidence": 52.54,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 72.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 58.0,
@@ -15,9 +15,8 @@
       "catalyst": 50.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 72.0,
       "evidence": [
-        "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
@@ -27,17 +26,17 @@
       ],
       "support": 14.199999809265137,
       "resistance": 14.729999542236328,
-      "risk_reward": 0.12
+      "risk_reward": 0.16
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": -0.0017006543438535804,
-        "3m": 0.05436080820940248,
-        "6m": 0.06382506699438073,
-        "12m": 0.4666784030018585
+        "1m": -0.0030612297195802274,
+        "3m": 0.052923827048367844,
+        "6m": 0.06237518705953815,
+        "12m": 0.46467947700043677
       },
-      "acceleration": 0.0224,
+      "acceleration": 0.0217,
       "evidence": [
         "3m return is positive",
         "6m return is positive",
@@ -47,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 7502395.35,
-      "relative_volume": 0.1604830116024211,
+      "average_volume": 7643856.75,
+      "relative_volume": 0.5276439802459668,
       "accumulation_days": 4,
       "distribution_days": 2,
       "evidence": [
@@ -66,17 +65,17 @@
     "risk": {
       "score": 75.0,
       "risk_metrics": {
-        "volatility": 0.027517866178663516,
-        "annualized_volatility": 0.43683258311939377,
-        "maximum_drawdown": -0.502913901168201,
-        "sharpe_ratio": 0.13818557747070523,
-        "sortino_ratio": 0.1754219800345139,
-        "calmar_ratio": -0.06751062185234445,
-        "beta": 0.8328393294068022,
-        "alpha": -0.09408271561434242,
-        "capm_expected_return": 0.15444667837071568,
-        "actual_return": 0.06036396275637326,
-        "market_return": 0.18544594727619532
+        "volatility": 0.02751785433368303,
+        "annualized_volatility": 0.43683239508615784,
+        "maximum_drawdown": -0.5029138496985144,
+        "sharpe_ratio": 0.13661448210149332,
+        "sortino_ratio": 0.17355850206444956,
+        "calmar_ratio": -0.06882808085949281,
+        "beta": 0.8328492260010371,
+        "alpha": -0.09419026317371246,
+        "capm_expected_return": 0.15386789459356282,
+        "actual_return": 0.059677631419850365,
+        "market_return": 0.18474879941038838
       },
       "evidence": [
         "Historical drawdown is severe"
@@ -90,7 +89,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension"
+    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "AES",
@@ -140,14 +139,15 @@
     "next_earnings_date": null,
     "eps_current_year": 1.92,
     "eps_forward": 2.37954,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 56.521727111897384,
+    "rsi": 53.73127530076237,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.1604830116024211,
+    "relative_volume": 0.5276439802459668,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -243,7 +243,7 @@
         "last_surprise_pct": 1.0827,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 2.21,
+      "analyst_upside_pct": 2.35,
       "eps_growth_implied": 23.93
     },
     "evidence": [
@@ -338,19 +338,19 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7477,
-    "probability_pct": 74.77,
+    "probability_of_outperformance": 0.7304,
+    "probability_pct": 73.04,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 61.2/100"
+      "Composite score 59.2/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.2,
-    "technical_score": 80.0,
+    "final_score": 59.2,
+    "technical_score": 72.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
@@ -360,7 +360,7 @@
     "eps_growth": 9.511,
     "roe": 0.052600004,
     "forward_pe": 6.1671586,
-    "relative_volume": 0.1604830116024211,
+    "relative_volume": 0.5276439802459668,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +370,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.0010232157898284466,
-      "weekly": -0.00034060724366302697,
-      "monthly": -0.0017006543438535804,
-      "annual": 0.4666784030018585
+      "daily": -0.00034107192994281554,
+      "weekly": -0.0017030362183150238,
+      "monthly": -0.0030612297195802274,
+      "annual": 0.46467947700043677
     },
     "risk": {
-      "volatility": 0.027517866178663516,
-      "annualized_volatility": 0.43683258311939377,
-      "maximum_drawdown": -0.502913901168201,
-      "sharpe_ratio": 0.13818557747070523,
-      "sortino_ratio": 0.1754219800345139,
-      "calmar_ratio": -0.06751062185234445,
-      "beta": 0.8328393294068022,
-      "alpha": -0.09408271561434242,
-      "capm_expected_return": 0.15444667837071568,
-      "actual_return": 0.06036396275637326,
-      "market_return": 0.18544594727619532
+      "volatility": 0.02751785433368303,
+      "annualized_volatility": 0.43683239508615784,
+      "maximum_drawdown": -0.5029138496985144,
+      "sharpe_ratio": 0.13661448210149332,
+      "sortino_ratio": 0.17355850206444956,
+      "calmar_ratio": -0.06882808085949281,
+      "beta": 0.8328492260010371,
+      "alpha": -0.09419026317371246,
+      "capm_expected_return": 0.15386789459356282,
+      "actual_return": 0.059677631419850365,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 0.8328393294068022,
-      "alpha": -0.09408271561434242,
-      "capm_expected_return": 0.15444667837071568,
-      "actual_return": 0.06036396275637326,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 0.83: Moves roughly in line with the market. CAPM expected return is 15.44%; realized alpha is -9.41%, meaning negative alpha versus CAPM."
+      "beta": 0.8328492260010371,
+      "alpha": -0.09419026317371246,
+      "capm_expected_return": 0.15386789459356282,
+      "actual_return": 0.059677631419850365,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 0.83: Moves roughly in line with the market. CAPM expected return is 15.39%; realized alpha is -9.42%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.06036396275637326,
+      "actual_return": 0.059677631419850365,
       "components": {
-        "market_component": 0.15444667837071568,
-        "momentum_component": 0.11666960075046462,
-        "volatility_drag": -0.03736651662387876,
-        "alpha_component": -0.09408271561434242
+        "market_component": 0.15386789459356282,
+        "momentum_component": 0.11616986925010919,
+        "volatility_drag": -0.03736647901723157,
+        "alpha_component": -0.09419026317371246
       },
       "component_weights_pct": {
-        "market_component": 38.37,
-        "momentum_component": 28.98,
-        "volatility_drag": 9.28,
-        "alpha_component": 23.37
+        "market_component": 38.31,
+        "momentum_component": 28.93,
+        "volatility_drag": 9.3,
+        "alpha_component": 23.45
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 14.66675000190735,
-      "sma50": 14.539703464508056,
-      "sma200": 14.166653714179994,
-      "ema20": 14.648693226015315,
-      "ema50": 14.571344011180862,
-      "ema200": 14.048873971947879
+      "sma20": 14.665749979019164,
+      "sma50": 14.539303455352783,
+      "sma200": 14.166553750038148,
+      "ema20": 14.646788420513397,
+      "ema50": 14.570559680710927,
+      "ema200": 14.048675010747735
     },
     "momentum": {
-      "3m": 0.05436080820940248,
-      "6m": 0.06382506699438073,
-      "12m": 0.4666784030018585,
+      "3m": 0.052923827048367844,
+      "6m": 0.06237518705953815,
+      "12m": 0.46467947700043677,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 7502395.35,
-      "relative_volume": 0.1604830116024211,
+      "average_volume": 7643856.75,
+      "relative_volume": 0.5276439802459668,
       "volume_spike": false
     },
     "volatility_regime": "Low volatility",
@@ -447,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: AES\nRating: Hold | Score: 61.2/100 | Confidence: 53.52/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 14.199999809265137 | Resistance: 14.729999542236328\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.1671586\nNews/Catalyst: Will Constellation's Long-Term Nuclear PPAs Drive Sustainable Growth?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: AES\nRating: Hold | Score: 59.2/100 | Confidence: 52.54/100\nBull Case: momentum and relative strength are constructive\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 14.199999809265137 | Resistance: 14.729999542236328\nFundamental Outlook: Fundamentally Average | Forward P/E: 6.1671586\nNews/Catalyst: Will Constellation's Long-Term Nuclear PPAs Drive Sustainable Growth?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

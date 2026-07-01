@@ -1,23 +1,22 @@
 {
   "ticker": "FIX",
-  "generated_at": "2026-07-01T15:40:03.084931",
+  "generated_at": "2026-07-01T17:50:27.288086",
   "score": {
-    "final_score": 54.7,
-    "rating": "Hold",
-    "confidence": 38.42,
+    "final_score": 49.7,
+    "rating": "Avoid",
+    "confidence": 33.25,
     "risk_level": "High",
     "categories": {
-      "technical": 72.0,
+      "technical": 62.0,
       "momentum": 75.0,
       "volume": 0,
       "fundamental": 68.0,
-      "risk": 35.0,
-      "catalyst": 50.0
+      "risk": 20.0,
+      "catalyst": 45.0
     },
     "technical": {
-      "score": 72.0,
+      "score": 62.0,
       "evidence": [
-        "Price above SMA50",
         "Price above SMA200",
         "SMA alignment is constructive",
         "EMA trend is positive",
@@ -26,17 +25,17 @@
       ],
       "support": 1417.18994140625,
       "resistance": 2066.510009765625,
-      "risk_reward": 0.36
+      "risk_reward": 0.45
     },
     "momentum": {
       "score": 75.0,
       "returns": {
-        "1m": 0.059897736720497585,
-        "3m": 0.3747108749966017,
-        "6m": 0.9951164379582758,
-        "12m": 2.541933272147216
+        "1m": 0.04360469423260316,
+        "3m": 0.3535784374803239,
+        "6m": 0.9644469537564022,
+        "12m": 2.4874856898069213
       },
-      "acceleration": -0.1228,
+      "acceleration": -0.1286,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -47,8 +46,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 523157.85,
-      "relative_volume": 0.29963614232301017,
+      "average_volume": 528167.45,
+      "relative_volume": 0.4864915473303022,
       "accumulation_days": 6,
       "distribution_days": 6,
       "evidence": []
@@ -61,35 +60,36 @@
       ]
     },
     "risk": {
-      "score": 35.0,
+      "score": 20.0,
       "risk_metrics": {
-        "volatility": 0.03569970511778808,
-        "annualized_volatility": 0.5667152497200426,
-        "maximum_drawdown": -0.46048994683045574,
-        "sharpe_ratio": 1.945757669277728,
-        "sortino_ratio": 2.496980628362531,
-        "calmar_ratio": 3.3825557462025024,
-        "beta": 1.9762497223620104,
-        "alpha": 0.7362030416216747,
-        "capm_expected_return": 0.366487501817741,
-        "actual_return": 1.1026905434394156,
-        "market_return": 0.18544594727619532
+        "volatility": 0.03574544834191678,
+        "annualized_volatility": 0.5674414008913075,
+        "maximum_drawdown": -0.4604899468304555,
+        "sharpe_ratio": 1.9302393454513078,
+        "sortino_ratio": 2.4741500350764163,
+        "calmar_ratio": 3.339445067552412,
+        "beta": 1.9774497051501698,
+        "alpha": 0.72996625931749,
+        "capm_expected_return": 0.3653314589209204,
+        "actual_return": 1.0952977182384105,
+        "market_return": 0.18474879941038838
       },
       "evidence": [
         "Volatility is elevated",
         "Historical drawdown is severe",
-        "Beta indicates elevated market sensitivity"
+        "Beta indicates elevated market sensitivity",
+        "Short-term volatility is rising"
       ]
     },
     "catalyst": {
-      "score": 50.0,
+      "score": 45.0,
       "evidence": [
         "earnings surprise",
-        "sector strength",
+        "major news",
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA50; Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20"
+    "explanation": "Price above SMA200; SMA alignment is constructive; EMA trend is positive; RSI confirms momentum without extreme extension; Stock is not materially extended from SMA20; 1m return is positive"
   },
   "fundamentals": {
     "ticker": "FIX",
@@ -139,17 +139,18 @@
     "next_earnings_date": "1776974400",
     "eps_current_year": 34.68,
     "eps_forward": 53.44336,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 58.20683160700026,
+    "rsi": 56.66302297084395,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.29963614232301017,
-    "price_above_sma50": true,
+    "relative_volume": 0.4864915473303022,
+    "price_above_sma50": false,
     "price_above_sma200": true,
-    "setup_type": "trend continuation",
+    "setup_type": "No clear setup",
     "support": 1417.18994140625,
     "resistance": 2066.510009765625
   },
@@ -197,11 +198,11 @@
     "earnings_surprise": true,
     "analyst_revision": false,
     "insider_buying": false,
-    "sector_strength": true,
-    "major_news": false,
+    "sector_strength": false,
+    "major_news": true,
     "guidance_change": true,
-    "bullish_news_score": 2,
-    "bearish_news_score": 0,
+    "bullish_news_score": 4,
+    "bearish_news_score": 1,
     "institutional_ownership": 0.96793,
     "detail": {
       "earnings": {
@@ -242,12 +243,12 @@
         "last_surprise_pct": 0.5444,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 8.12,
+      "analyst_upside_pct": 9.77,
       "eps_growth_implied": 54.1
     },
     "evidence": [
       "recent earnings surprise or earnings growth is positive",
-      "technical backdrop is constructive",
+      "recent news item has elevated importance",
       "news tone or forward EPS implies a catalyst shift"
     ]
   },
@@ -269,6 +270,26 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Comfort Systems' Backlog Boom: Can It Overcome Execution Challenges?",
+        "source": "Zacks",
+        "published": "2026-07-01T16:00:00Z",
+        "summary": "FIX's record backlog fuels growth, but can strong execution, modular investments and automation keep profitability on track as project complexity rises?",
+        "bullish_score": 4,
+        "bearish_score": 1,
+        "importance_score": 100,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
+      {
+        "headline": "Comfort Systems\u2019 Quarterly Earnings Preview: What You Need to Know",
+        "source": "Barchart",
+        "published": "2026-07-01T11:40:36Z",
+        "summary": "Comfort Systems is ready to announce its fiscal second-quarter earnings soon, and analysts project a solid double-digit earnings jump.",
+        "bullish_score": 0,
+        "bearish_score": 0,
+        "importance_score": 30,
+        "why_it_matters": "News impact is unclear; monitor price and volume reaction."
+      },
       {
         "headline": "Here Is What Analysts Expect From Comfort Systems (FIX) Amid Growing AI Infrastructure",
         "source": "Insider Monkey",
@@ -298,26 +319,6 @@
         "bearish_score": 0,
         "importance_score": 30,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "2 Cash-Heavy Stocks with Exciting Potential and 1 We Ignore",
-        "source": "StockStory",
-        "published": "2026-06-29T11:46:15Z",
-        "summary": "A surplus of cash can mean financial stability, but it can also indicate a reluctance (or inability) to invest in growth. Some of these companies also face challenges like stagnating revenue, declining market share, or limited scalability.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
-      },
-      {
-        "headline": "Comfort Systems USA (FIX) Announces Leadership Transitions Effective July 1",
-        "source": "Insider Monkey",
-        "published": "2026-06-27T11:21:53Z",
-        "summary": "Comfort Systems USA Inc. (NYSE:FIX) is one of the high growth stocks to buy right now. On June 22, Comfort Systems announced leadership transitions effective July 1, aimed at positioning the company for long-term growth. Craig Sasser, currently Regional Vice President of the Atlantic Region, will be promoted to Chief Operating Officer, while Trent T. [\u2026]",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -337,98 +338,98 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.7022,
-    "probability_pct": 70.22,
+    "probability_of_outperformance": 0.6739,
+    "probability_pct": 67.39,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
-      "Composite score 54.7/100"
+      "Composite score 49.7/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 54.7,
-    "technical_score": 72.0,
+    "final_score": 49.7,
+    "technical_score": 62.0,
     "momentum_score": 75.0,
     "volume_score": 0,
     "fundamental_score": 68.0,
-    "risk_score": 35.0,
-    "catalyst_score": 50.0,
+    "risk_score": 20.0,
+    "catalyst_score": 45.0,
     "revenue_growth": 0.01,
     "eps_growth": 0.388,
     "roe": 0.53294,
     "forward_pe": 35.447155,
-    "relative_volume": 0.29963614232301017,
+    "relative_volume": 0.4864915473303022,
     "breakout": false,
-    "price_above_sma50": true,
+    "price_above_sma50": false,
     "price_above_sma200": true,
     "earnings_surprise": true,
     "analyst_revision": false,
-    "major_news": false
+    "major_news": true
   },
   "quant_model": {
     "returns": {
-      "daily": -0.04388606302460918,
-      "weekly": -0.030443036164221393,
-      "monthly": 0.059897736720497585,
-      "annual": 2.541933272147216
+      "daily": -0.05858371210782076,
+      "weekly": -0.04534733519130385,
+      "monthly": 0.04360469423260316,
+      "annual": 2.4874856898069213
     },
     "risk": {
-      "volatility": 0.03569970511778808,
-      "annualized_volatility": 0.5667152497200426,
-      "maximum_drawdown": -0.46048994683045574,
-      "sharpe_ratio": 1.945757669277728,
-      "sortino_ratio": 2.496980628362531,
-      "calmar_ratio": 3.3825557462025024,
-      "beta": 1.9762497223620104,
-      "alpha": 0.7362030416216747,
-      "capm_expected_return": 0.366487501817741,
-      "actual_return": 1.1026905434394156,
-      "market_return": 0.18544594727619532
+      "volatility": 0.03574544834191678,
+      "annualized_volatility": 0.5674414008913075,
+      "maximum_drawdown": -0.4604899468304555,
+      "sharpe_ratio": 1.9302393454513078,
+      "sortino_ratio": 2.4741500350764163,
+      "calmar_ratio": 3.339445067552412,
+      "beta": 1.9774497051501698,
+      "alpha": 0.72996625931749,
+      "capm_expected_return": 0.3653314589209204,
+      "actual_return": 1.0952977182384105,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 1.9762497223620104,
-      "alpha": 0.7362030416216747,
-      "capm_expected_return": 0.366487501817741,
-      "actual_return": 1.1026905434394156,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 1.98: Moves roughly 98% more than the market. CAPM expected return is 36.65%; realized alpha is 73.62%, meaning positive alpha versus CAPM."
+      "beta": 1.9774497051501698,
+      "alpha": 0.72996625931749,
+      "capm_expected_return": 0.3653314589209204,
+      "actual_return": 1.0952977182384105,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 1.98: Moves roughly 98% more than the market. CAPM expected return is 36.53%; realized alpha is 73.00%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 1.1026905434394156,
+      "actual_return": 1.0952977182384105,
       "components": {
-        "market_component": 0.366487501817741,
-        "momentum_component": 0.635483318036804,
-        "volatility_drag": -0.06334304994400852,
-        "alpha_component": 0.7362030416216747
+        "market_component": 0.3653314589209204,
+        "momentum_component": 0.6218714224517303,
+        "volatility_drag": -0.0634882801782615,
+        "alpha_component": 0.72996625931749
       },
       "component_weights_pct": {
-        "market_component": 20.34,
-        "momentum_component": 35.27,
-        "volatility_drag": 3.52,
-        "alpha_component": 40.87
+        "market_component": 20.52,
+        "momentum_component": 34.92,
+        "volatility_drag": 3.57,
+        "alpha_component": 40.99
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 1906.2164916992188,
-      "sma50": 1882.4543090820312,
-      "sma200": 1301.5941094970703,
-      "ema20": 1916.1580858986808,
-      "ema50": 1834.3344422245264,
-      "ema200": 1382.1597790225394
+      "sma20": 1904.759991455078,
+      "sma50": 1881.871708984375,
+      "sma200": 1301.4484631347657,
+      "ema20": 1913.3837997225323,
+      "ema50": 1833.1920893813217,
+      "ema200": 1381.8699294747842
     },
     "momentum": {
-      "3m": 0.3747108749966017,
-      "6m": 0.9951164379582758,
-      "12m": 2.541933272147216,
+      "3m": 0.3535784374803239,
+      "6m": 0.9644469537564022,
+      "12m": 2.4874856898069213,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 523157.85,
-      "relative_volume": 0.29963614232301017,
+      "average_volume": 528167.45,
+      "relative_volume": 0.4864915473303022,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -446,5 +447,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: FIX\nRating: Hold | Score: 54.7/100 | Confidence: 38.42/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 1417.18994140625 | Resistance: 2066.510009765625\nFundamental Outlook: Fundamentally Average | Forward P/E: 35.447155\nNews/Catalyst: Here Is What Analysts Expect From Comfort Systems (FIX) Amid Growing AI Infrastructure\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: FIX\nRating: Avoid | Score: 49.7/100 | Confidence: 33.25/100\nBull Case: momentum and relative strength are constructive\nBear Case: risk score is elevated, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 1417.18994140625 | Resistance: 2066.510009765625\nFundamental Outlook: Fundamentally Average | Forward P/E: 35.447155\nNews/Catalyst: Comfort Systems' Backlog Boom: Can It Overcome Execution Challenges?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

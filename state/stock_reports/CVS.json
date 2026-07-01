@@ -1,13 +1,13 @@
 {
   "ticker": "CVS",
-  "generated_at": "2026-07-01T15:39:50.221537",
+  "generated_at": "2026-07-01T17:50:21.310353",
   "score": {
-    "final_score": 71.95,
+    "final_score": 74.45,
     "rating": "Watch",
-    "confidence": 62.87,
+    "confidence": 64.28,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 80.0,
+      "technical": 90.0,
       "momentum": 85.0,
       "volume": 25.0,
       "fundamental": 58.0,
@@ -15,7 +15,7 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 80.0,
+      "score": 90.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
@@ -23,21 +23,22 @@
         "SMA alignment is constructive",
         "EMA trend is positive",
         "RSI confirms momentum without extreme extension",
+        "MACD is above signal",
         "Stock is not materially extended from SMA20"
       ],
       "support": 72.48999786376953,
       "resistance": 104.66000366210938,
-      "risk_reward": 0.02
+      "risk_reward": 0.0
     },
     "momentum": {
       "score": 85.0,
       "returns": {
-        "1m": 0.1477046358547014,
-        "3m": 0.4608447456166813,
-        "6m": 0.32193323337481794,
-        "12m": 0.5629015412166245
+        "1m": 0.15338770111666822,
+        "3m": 0.46807838027108706,
+        "6m": 0.32847902277265995,
+        "12m": 0.570640528390923
       },
-      "acceleration": 0.2999,
+      "acceleration": 0.3038,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -49,8 +50,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 8557997.95,
-      "relative_volume": 0.15882908688941672,
+      "average_volume": 8625764.25,
+      "relative_volume": 0.31470660701166275,
       "accumulation_days": 7,
       "distribution_days": 2,
       "evidence": [
@@ -67,17 +68,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.021786257355299394,
-        "annualized_volatility": 0.34584611376584373,
-        "maximum_drawdown": -0.343790710951975,
-        "sharpe_ratio": 1.136461317214184,
-        "sortino_ratio": 1.5644400736072228,
-        "calmar_ratio": 1.1503893028239538,
-        "beta": 0.30452543719866954,
-        "alpha": 0.3365677218327325,
-        "capm_expected_return": 0.0564730081710048,
-        "actual_return": 0.3930407300037373,
-        "market_return": 0.18544594727619532
+        "volatility": 0.021789135651744233,
+        "annualized_volatility": 0.3458918053053991,
+        "maximum_drawdown": -0.34379089097248583,
+        "sharpe_ratio": 1.1435504919410615,
+        "sortino_ratio": 1.5744067315220134,
+        "calmar_ratio": 1.1604860872000837,
+        "beta": 0.30446132512263535,
+        "alpha": 0.33929587983206816,
+        "capm_expected_return": 0.0562488642833028,
+        "actual_return": 0.39554474411537094,
+        "market_return": 0.18474879941038838
       },
       "evidence": []
     },
@@ -140,14 +141,15 @@
     "next_earnings_date": "1778070600",
     "eps_current_year": 2.28,
     "eps_forward": 8.38336,
-    "classification": "Fundamentally Average"
+    "classification": "Fundamentally Average",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 68.98190627734287,
+    "rsi": 69.96312774913372,
     "macd_cross": false,
     "breakout": true,
-    "new_52w_high": false,
-    "relative_volume": 0.15882908688941672,
+    "new_52w_high": true,
+    "relative_volume": 0.31470660701166275,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "52-week high pressure, trend continuation",
@@ -243,7 +245,7 @@
         "last_surprise_pct": 0.16479999,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 1.17,
+      "analyst_upside_pct": 0.84,
       "eps_growth_implied": 267.69
     },
     "evidence": [
@@ -271,6 +273,16 @@
   "news": {
     "available": true,
     "items": [
+      {
+        "headline": "Will CVS Health (CVS) Beat Estimates Again in Its Next Earnings Report?",
+        "source": "Zacks",
+        "published": "2026-07-01T16:10:03Z",
+        "summary": "CVS Health (CVS) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.",
+        "bullish_score": 1,
+        "bearish_score": 0,
+        "importance_score": 45,
+        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
+      },
       {
         "headline": "Court dismisses PBMs\u2019 lawsuit against FTC following insulin settlements",
         "source": "Healthcare Dive",
@@ -310,16 +322,6 @@
         "bearish_score": 1,
         "importance_score": 60,
         "why_it_matters": "News impact is unclear; monitor price and volume reaction."
-      },
-      {
-        "headline": "Magic Formula Showdown: Why CVS Beats Qualcomm and Valero for Retirees",
-        "source": "24/7 Wall St.",
-        "published": "2026-06-29T11:20:20Z",
-        "summary": "Joel Greenblatt's Magic Formula ranks stocks on earnings yield and return on capital, but for retirees those two numbers can point straight toward disaster. Three stocks cleared the screen, and only one survives when income reliability and volatility enter the equation.",
-        "bullish_score": 1,
-        "bearish_score": 0,
-        "importance_score": 45,
-        "why_it_matters": "News appears more supportive of sentiment or growth expectations."
       }
     ]
   },
@@ -339,20 +341,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8849,
-    "probability_pct": 88.49,
+    "probability_of_outperformance": 0.8958,
+    "probability_pct": 89.58,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Breakout pressure detected",
       "Positive earnings surprise/catalyst",
-      "Composite score 71.95/100"
+      "Composite score 74.45/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 71.95,
-    "technical_score": 80.0,
+    "final_score": 74.45,
+    "technical_score": 90.0,
     "momentum_score": 85.0,
     "volume_score": 25.0,
     "fundamental_score": 58.0,
@@ -362,7 +364,7 @@
     "eps_growth": 0.631,
     "roe": 0.037520003,
     "forward_pe": 12.425209,
-    "relative_volume": 0.15882908688941672,
+    "relative_volume": 0.31470660701166275,
     "breakout": true,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -372,66 +374,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.005364913693071127,
-      "weekly": 0.020958029343997264,
-      "monthly": 0.1477046358547014,
-      "annual": 0.5629015412166245
+      "daily": 0.01034315830245558,
+      "weekly": 0.02601348606102083,
+      "monthly": 0.15338770111666822,
+      "annual": 0.570640528390923
     },
     "risk": {
-      "volatility": 0.021786257355299394,
-      "annualized_volatility": 0.34584611376584373,
-      "maximum_drawdown": -0.343790710951975,
-      "sharpe_ratio": 1.136461317214184,
-      "sortino_ratio": 1.5644400736072228,
-      "calmar_ratio": 1.1503893028239538,
-      "beta": 0.30452543719866954,
-      "alpha": 0.3365677218327325,
-      "capm_expected_return": 0.0564730081710048,
-      "actual_return": 0.3930407300037373,
-      "market_return": 0.18544594727619532
+      "volatility": 0.021789135651744233,
+      "annualized_volatility": 0.3458918053053991,
+      "maximum_drawdown": -0.34379089097248583,
+      "sharpe_ratio": 1.1435504919410615,
+      "sortino_ratio": 1.5744067315220134,
+      "calmar_ratio": 1.1604860872000837,
+      "beta": 0.30446132512263535,
+      "alpha": 0.33929587983206816,
+      "capm_expected_return": 0.0562488642833028,
+      "actual_return": 0.39554474411537094,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 0.30452543719866954,
-      "alpha": 0.3365677218327325,
-      "capm_expected_return": 0.0564730081710048,
-      "actual_return": 0.3930407300037373,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 0.30: Moves roughly 70% less than the market. CAPM expected return is 5.65%; realized alpha is 33.66%, meaning positive alpha versus CAPM."
+      "beta": 0.30446132512263535,
+      "alpha": 0.33929587983206816,
+      "capm_expected_return": 0.0562488642833028,
+      "actual_return": 0.39554474411537094,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 0.30: Moves roughly 70% less than the market. CAPM expected return is 5.62%; realized alpha is 33.93%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.3930407300037373,
+      "actual_return": 0.39554474411537094,
       "components": {
-        "market_component": 0.0564730081710048,
-        "momentum_component": 0.14072538530415613,
-        "volatility_drag": -0.01916922275316875,
-        "alpha_component": 0.3365677218327325
+        "market_component": 0.0562488642833028,
+        "momentum_component": 0.14266013209773076,
+        "volatility_drag": -0.01917836106107982,
+        "alpha_component": 0.33929587983206816
       },
       "component_weights_pct": {
-        "market_component": 10.21,
-        "momentum_component": 25.45,
-        "volatility_drag": 3.47,
+        "market_component": 10.09,
+        "momentum_component": 25.59,
+        "volatility_drag": 3.44,
         "alpha_component": 60.87
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 100.01875038146973,
-      "sma50": 92.82273880004882,
-      "sma200": 80.52982696533203,
-      "ema20": 100.07698681179913,
-      "ema50": 93.8053232607692,
-      "ema200": 81.1878552122146
+      "sma20": 100.04450035095215,
+      "sma50": 92.8330387878418,
+      "sma200": 80.53240196228028,
+      "ema20": 100.12603437271802,
+      "ema50": 93.82551931531435,
+      "ema200": 81.19297962973145
     },
     "momentum": {
-      "3m": 0.4608447456166813,
-      "6m": 0.32193323337481794,
-      "12m": 0.5629015412166245,
+      "3m": 0.46807838027108706,
+      "6m": 0.32847902277265995,
+      "12m": 0.570640528390923,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 8557997.95,
-      "relative_volume": 0.15882908688941672,
+      "average_volume": 8625764.25,
+      "relative_volume": 0.31470660701166275,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -441,13 +443,20 @@
     }
   },
   "why_now": {
-    "send_alert": false,
-    "reason": "No clear Why Now trigger",
-    "evidence": "No recent statistically meaningful change was detected.",
+    "send_alert": true,
+    "reason": "52-week high",
+    "evidence": "Price is pressing against 52-week highs",
     "date_of_change": "2026-07-01",
-    "strength": 0,
-    "invalidates": "N/A",
-    "triggers": []
+    "strength": 65,
+    "invalidates": "Failed breakout below prior range high",
+    "triggers": [
+      {
+        "reason": "52-week high",
+        "evidence": "Price is pressing against 52-week highs",
+        "strength": 65,
+        "invalidates": "Failed breakout below prior range high"
+      }
+    ]
   },
-  "report": "Ticker: CVS\nRating: Watch | Score: 71.95/100 | Confidence: 62.87/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 72.48999786376953 | Resistance: 104.66000366210938\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.425209\nNews/Catalyst: Court dismisses PBMs\u2019 lawsuit against FTC following insulin settlements\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: CVS\nRating: Watch | Score: 74.45/100 | Confidence: 64.28/100\nBull Case: momentum and relative strength are constructive, price is pressing near breakout/high territory\nBear Case: volume confirmation is weak\nTechnical Outlook: 52-week high pressure, trend continuation | Support: 72.48999786376953 | Resistance: 104.66000366210938\nFundamental Outlook: Fundamentally Average | Forward P/E: 12.425209\nNews/Catalyst: Will CVS Health (CVS) Beat Estimates Again in Its Next Earnings Report?\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: 52-week high | Evidence: Price is pressing against 52-week highs\nWhat Invalidates: Failed breakout below prior range high"
 }

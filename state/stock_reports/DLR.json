@@ -1,15 +1,15 @@
 {
   "ticker": "DLR",
-  "generated_at": "2026-07-01T15:39:57.385383",
+  "generated_at": "2026-07-01T17:50:24.501461",
   "score": {
-    "final_score": 46.9,
-    "rating": "Hold",
-    "confidence": 43.27,
+    "final_score": 43.15,
+    "rating": "Drop",
+    "confidence": 32.76,
     "risk_level": "Controlled",
     "categories": {
       "technical": 30.0,
       "momentum": 35.0,
-      "volume": 25.0,
+      "volume": 0,
       "fundamental": 81.0,
       "risk": 85.0,
       "catalyst": 40.0
@@ -20,33 +20,31 @@
         "Price above SMA200",
         "Stock is not materially extended from SMA20"
       ],
-      "support": 177.78500366210938,
+      "support": 178.4600067138672,
       "resistance": 203.91000366210938,
       "risk_reward": 0.0
     },
     "momentum": {
       "score": 35.0,
       "returns": {
-        "1m": -0.032592626665589486,
-        "3m": -0.006878865968616976,
-        "6m": 0.15765462454552281,
-        "12m": 0.04926011665011765
+        "1m": -0.028919634479281142,
+        "3m": -0.0031082453739215143,
+        "6m": 0.16204993567049786,
+        "12m": 0.05324388224472676
       },
-      "acceleration": -0.0857,
+      "acceleration": -0.0841,
       "evidence": [
         "6m return is positive",
         "12m return is positive"
       ]
     },
     "volume": {
-      "score": 25.0,
-      "average_volume": 3292850.25,
-      "relative_volume": 0.6740983741972475,
+      "score": 0,
+      "average_volume": 3358339.95,
+      "relative_volume": 1.0509653735322417,
       "accumulation_days": 9,
-      "distribution_days": 8,
-      "evidence": [
-        "Accumulation days exceed distribution days"
-      ]
+      "distribution_days": 9,
+      "evidence": []
     },
     "fundamental": {
       "score": 81.0,
@@ -59,17 +57,17 @@
     "risk": {
       "score": 85.0,
       "risk_metrics": {
-        "volatility": 0.01659799053631026,
-        "annualized_volatility": 0.26348493133488327,
-        "maximum_drawdown": -0.29399479288341557,
-        "sharpe_ratio": 0.5397722098075458,
-        "sortino_ratio": 0.7557067145370956,
-        "calmar_ratio": 0.3861848194203382,
-        "beta": 0.7674366180517729,
-        "alpha": -9.616697143130515e-05,
-        "capm_expected_return": 0.14231801060905072,
-        "actual_return": 0.14222184363761942,
-        "market_return": 0.18544594727619532
+        "volatility": 0.016594051847158522,
+        "annualized_volatility": 0.26342240658296073,
+        "maximum_drawdown": -0.29399487488266973,
+        "sharpe_ratio": 0.5470772973257417,
+        "sortino_ratio": 0.7654439331761511,
+        "calmar_ratio": 0.3934110233659733,
+        "beta": 0.7677353020441237,
+        "alpha": 0.0022742429308250656,
+        "capm_expected_return": 0.14183817531762374,
+        "actual_return": 0.1441124182484488,
+        "market_return": 0.18474879941038838
       },
       "evidence": [
         "Short-term volatility is rising"
@@ -82,7 +80,7 @@
         "analyst revision"
       ]
     },
-    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; Accumulation days exceed distribution days; revenue growth is strong"
+    "explanation": "Price above SMA200; Stock is not materially extended from SMA20; 6m return is positive; 12m return is positive; revenue growth is strong; eps growth is strong"
   },
   "fundamentals": {
     "ticker": "DLR",
@@ -132,18 +130,19 @@
     "next_earnings_date": "1784836800",
     "eps_current_year": 3.77,
     "eps_forward": 2.86414,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 46.29102491521209,
+    "rsi": 47.07809316478699,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.6740983741972475,
+    "relative_volume": 1.0509653735322417,
     "price_above_sma50": false,
     "price_above_sma200": true,
     "setup_type": "No clear setup",
-    "support": 177.78500366210938,
+    "support": 178.4600067138672,
     "resistance": 203.91000366210938
   },
   "earnings": {
@@ -235,7 +234,7 @@
         "last_surprise_pct": 0.0271,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 23.39,
+      "analyst_upside_pct": 22.89,
       "eps_growth_implied": -24.03
     },
     "evidence": [
@@ -336,15 +335,15 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 46.9/100"
+      "Composite score 43.15/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 46.9,
+    "final_score": 43.15,
     "technical_score": 30.0,
     "momentum_score": 35.0,
-    "volume_score": 25.0,
+    "volume_score": 0,
     "fundamental_score": 81.0,
     "risk_score": 85.0,
     "catalyst_score": 40.0,
@@ -352,7 +351,7 @@
     "eps_growth": 0.676,
     "roe": 0.05688,
     "forward_pe": 62.053528,
-    "relative_volume": 0.6740983741972475,
+    "relative_volume": 1.0509653735322417,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": true,
@@ -362,66 +361,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.009995534862695998,
-      "weekly": -0.07892964601143782,
-      "monthly": -0.032592626665589486,
-      "annual": 0.04926011665011765
+      "daily": -0.006236747442742385,
+      "weekly": -0.07543258334012526,
+      "monthly": -0.028919634479281142,
+      "annual": 0.05324388224472676
     },
     "risk": {
-      "volatility": 0.01659799053631026,
-      "annualized_volatility": 0.26348493133488327,
-      "maximum_drawdown": -0.29399479288341557,
-      "sharpe_ratio": 0.5397722098075458,
-      "sortino_ratio": 0.7557067145370956,
-      "calmar_ratio": 0.3861848194203382,
-      "beta": 0.7674366180517729,
-      "alpha": -9.616697143130515e-05,
-      "capm_expected_return": 0.14231801060905072,
-      "actual_return": 0.14222184363761942,
-      "market_return": 0.18544594727619532
+      "volatility": 0.016594051847158522,
+      "annualized_volatility": 0.26342240658296073,
+      "maximum_drawdown": -0.29399487488266973,
+      "sharpe_ratio": 0.5470772973257417,
+      "sortino_ratio": 0.7654439331761511,
+      "calmar_ratio": 0.3934110233659733,
+      "beta": 0.7677353020441237,
+      "alpha": 0.0022742429308250656,
+      "capm_expected_return": 0.14183817531762374,
+      "actual_return": 0.1441124182484488,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 0.7674366180517729,
-      "alpha": -9.616697143130515e-05,
-      "capm_expected_return": 0.14231801060905072,
-      "actual_return": 0.14222184363761942,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 0.77: Moves roughly in line with the market. CAPM expected return is 14.23%; realized alpha is -0.01%, meaning negative alpha versus CAPM."
+      "beta": 0.7677353020441237,
+      "alpha": 0.0022742429308250656,
+      "capm_expected_return": 0.14183817531762374,
+      "actual_return": 0.1441124182484488,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 0.77: Moves roughly in line with the market. CAPM expected return is 14.18%; realized alpha is 0.23%, meaning positive alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.14222184363761942,
+      "actual_return": 0.1441124182484488,
       "components": {
-        "market_component": 0.14231801060905072,
-        "momentum_component": 0.012315029162529412,
-        "volatility_drag": -0.002696986266976653,
-        "alpha_component": -9.616697143130515e-05
+        "market_component": 0.14183817531762374,
+        "momentum_component": 0.01331097056118169,
+        "volatility_drag": -0.002684481316592147,
+        "alpha_component": 0.0022742429308250656
       },
       "component_weights_pct": {
-        "market_component": 90.4,
-        "momentum_component": 7.82,
-        "volatility_drag": 1.71,
-        "alpha_component": 0.06
+        "market_component": 88.59,
+        "momentum_component": 8.31,
+        "volatility_drag": 1.68,
+        "alpha_component": 1.42
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 186.58265380859376,
-      "sma50": 190.4844369506836,
-      "sma200": 173.08539016723634,
-      "ema20": 187.52730604255163,
-      "ema50": 187.4531466848936,
-      "ema200": 176.68878485554683
+      "sma20": 186.61640396118165,
+      "sma50": 190.49793701171876,
+      "sma200": 173.08876502990722,
+      "ema20": 187.59159204703064,
+      "ema50": 187.47961736589338,
+      "ema200": 176.69550121144584
     },
     "momentum": {
-      "3m": -0.006878865968616976,
-      "6m": 0.15765462454552281,
-      "12m": 0.04926011665011765,
+      "3m": -0.0031082453739215143,
+      "6m": 0.16204993567049786,
+      "12m": 0.05324388224472676,
       "24m": 0.0,
       "score": 50.0
     },
     "volume": {
-      "average_volume": 3292850.25,
-      "relative_volume": 0.6740983741972475,
+      "average_volume": 3358339.95,
+      "relative_volume": 1.0509653735322417,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -439,5 +438,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: DLR\nRating: Hold | Score: 46.9/100 | Confidence: 43.27/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: valuation is demanding, volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 177.78500366210938 | Resistance: 203.91000366210938\nFundamental Outlook: Quality Compounder | Forward P/E: 62.053528\nNews/Catalyst: Digital Realty Trust (DLR) Stock Looks Cheap On Cash Flow But Rich On Earnings\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: DLR\nRating: Drop | Score: 43.15/100 | Confidence: 32.76/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: valuation is demanding\nTechnical Outlook: No clear setup | Support: 178.4600067138672 | Resistance: 203.91000366210938\nFundamental Outlook: Quality Compounder | Forward P/E: 62.053528\nNews/Catalyst: Digital Realty Trust (DLR) Stock Looks Cheap On Cash Flow But Rich On Earnings\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

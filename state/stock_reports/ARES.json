@@ -1,13 +1,13 @@
 {
   "ticker": "ARES",
-  "generated_at": "2026-07-01T15:38:38.999590",
+  "generated_at": "2026-07-01T17:49:47.397564",
   "score": {
-    "final_score": 34.9,
+    "final_score": 32.4,
     "rating": "Drop",
-    "confidence": 29.12,
+    "confidence": 27.09,
     "risk_level": "Moderate",
     "categories": {
-      "technical": 20.0,
+      "technical": 10.0,
       "momentum": 25.0,
       "volume": 0,
       "fundamental": 76.0,
@@ -15,24 +15,23 @@
       "catalyst": 65.0
     },
     "technical": {
-      "score": 20.0,
+      "score": 10.0,
       "evidence": [
-        "Stock is not materially extended from SMA20",
-        "Support/resistance profile offers positive risk/reward"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 100.45999908447266,
       "resistance": 135.36000061035156,
-      "risk_reward": 2.0
+      "risk_reward": 1.8
     },
     "momentum": {
       "score": 25.0,
       "returns": {
-        "1m": -0.12052023244219401,
-        "3m": 0.03780230970007348,
-        "6m": -0.3211138110968026,
-        "12m": -0.3289003579011488
+        "1m": -0.11412585133758302,
+        "3m": 0.04534779707142644,
+        "6m": -0.3161778737635783,
+        "12m": -0.3240210337494809
       },
-      "acceleration": 0.1984,
+      "acceleration": 0.2034,
       "evidence": [
         "3m return is positive",
         "Momentum is accelerating"
@@ -40,8 +39,8 @@
     },
     "volume": {
       "score": 0,
-      "average_volume": 2570010.9,
-      "relative_volume": 0.18035643350773337,
+      "average_volume": 2587216.65,
+      "relative_volume": 0.31216287974955637,
       "accumulation_days": 3,
       "distribution_days": 6,
       "evidence": []
@@ -57,17 +56,17 @@
     "risk": {
       "score": 60.0,
       "risk_metrics": {
-        "volatility": 0.026187991175595733,
-        "annualized_volatility": 0.4157214719218821,
-        "maximum_drawdown": -0.4997174647063729,
-        "sharpe_ratio": 0.049541955416406665,
-        "sortino_ratio": 0.061105236327789456,
-        "calmar_ratio": -0.12909180264660397,
-        "beta": 1.6034264379051337,
-        "alpha": -0.2767532800374163,
-        "capm_expected_return": 0.2973489346650131,
-        "actual_return": 0.020595654627596834,
-        "market_return": 0.18544594727619532
+        "volatility": 0.026193928303066053,
+        "annualized_volatility": 0.4158157208986134,
+        "maximum_drawdown": -0.49971742418824705,
+        "sharpe_ratio": 0.05838752942206172,
+        "sortino_ratio": 0.07203174848625106,
+        "calmar_ratio": -0.12225803778037374,
+        "beta": 1.6033483180532364,
+        "alpha": -0.27193822415887736,
+        "capm_expected_return": 0.296216676797001,
+        "actual_return": 0.02427845263812359,
+        "market_return": 0.18474879941038838
       },
       "evidence": [
         "Historical drawdown is severe",
@@ -83,7 +82,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Stock is not materially extended from SMA20; Support/resistance profile offers positive risk/reward; 3m return is positive; Momentum is accelerating; revenue growth is strong; eps growth is strong"
+    "explanation": "Stock is not materially extended from SMA20; 3m return is positive; Momentum is accelerating; revenue growth is strong; eps growth is strong; earnings surprise"
   },
   "fundamentals": {
     "ticker": "ARES",
@@ -133,14 +132,15 @@
     "next_earnings_date": "1785501000",
     "eps_current_year": 2.17,
     "eps_forward": 7.32103,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 30.362115910650786,
+    "rsi": 31.710217048166683,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.18035643350773337,
+    "relative_volume": 0.31216287974955637,
     "price_above_sma50": false,
     "price_above_sma200": false,
     "setup_type": "No clear setup",
@@ -236,7 +236,7 @@
         "last_surprise_pct": -0.0657,
         "last_surprise_direction": "miss"
       },
-      "analyst_upside_pct": 29.83,
+      "analyst_upside_pct": 29.01,
       "eps_growth_implied": 237.37
     },
     "evidence": [
@@ -340,13 +340,13 @@
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 34.9/100"
+      "Composite score 32.4/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 34.9,
-    "technical_score": 20.0,
+    "final_score": 32.4,
+    "technical_score": 10.0,
     "momentum_score": 25.0,
     "volume_score": 0,
     "fundamental_score": 76.0,
@@ -356,7 +356,7 @@
     "eps_growth": 7.705,
     "roe": 0.14182,
     "forward_pe": 15.335273,
-    "relative_volume": 0.18035643350773337,
+    "relative_volume": 0.31216287974955637,
     "breakout": false,
     "price_above_sma50": false,
     "price_above_sma200": false,
@@ -366,66 +366,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": 0.007052409301295137,
-      "weekly": -0.015587964196586368,
-      "monthly": -0.12052023244219401,
-      "annual": -0.3289003579011488
+      "daily": 0.01437432520536519,
+      "weekly": -0.00843065830611367,
+      "monthly": -0.11412585133758302,
+      "annual": -0.3240210337494809
     },
     "risk": {
-      "volatility": 0.026187991175595733,
-      "annualized_volatility": 0.4157214719218821,
-      "maximum_drawdown": -0.4997174647063729,
-      "sharpe_ratio": 0.049541955416406665,
-      "sortino_ratio": 0.061105236327789456,
-      "calmar_ratio": -0.12909180264660397,
-      "beta": 1.6034264379051337,
-      "alpha": -0.2767532800374163,
-      "capm_expected_return": 0.2973489346650131,
-      "actual_return": 0.020595654627596834,
-      "market_return": 0.18544594727619532
+      "volatility": 0.026193928303066053,
+      "annualized_volatility": 0.4158157208986134,
+      "maximum_drawdown": -0.49971742418824705,
+      "sharpe_ratio": 0.05838752942206172,
+      "sortino_ratio": 0.07203174848625106,
+      "calmar_ratio": -0.12225803778037374,
+      "beta": 1.6033483180532364,
+      "alpha": -0.27193822415887736,
+      "capm_expected_return": 0.296216676797001,
+      "actual_return": 0.02427845263812359,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 1.6034264379051337,
-      "alpha": -0.2767532800374163,
-      "capm_expected_return": 0.2973489346650131,
-      "actual_return": 0.020595654627596834,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 1.60: Moves roughly 60% more than the market. CAPM expected return is 29.73%; realized alpha is -27.68%, meaning negative alpha versus CAPM."
+      "beta": 1.6033483180532364,
+      "alpha": -0.27193822415887736,
+      "capm_expected_return": 0.296216676797001,
+      "actual_return": 0.02427845263812359,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 1.60: Moves roughly 60% more than the market. CAPM expected return is 29.62%; realized alpha is -27.19%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.020595654627596834,
+      "actual_return": 0.02427845263812359,
       "components": {
-        "market_component": 0.2973489346650131,
+        "market_component": 0.296216676797001,
         "momentum_component": 0.0,
-        "volatility_drag": -0.03314429438437642,
-        "alpha_component": -0.2767532800374163
+        "volatility_drag": -0.03316314417972268,
+        "alpha_component": -0.27193822415887736
       },
       "component_weights_pct": {
-        "market_component": 48.97,
+        "market_component": 49.26,
         "momentum_component": 0.0,
-        "volatility_drag": 5.46,
-        "alpha_component": 45.58
+        "volatility_drag": 5.52,
+        "alpha_component": 45.22
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 123.11474304199218,
-      "sma50": 121.74831695556641,
-      "sma200": 135.5833458328247,
-      "ema20": 119.73782244589702,
-      "ema50": 120.91762580446263,
-      "ema200": 132.35709936049682
+      "sma20": 123.1554931640625,
+      "sma50": 121.76461700439454,
+      "sma200": 135.58742115020752,
+      "ema20": 119.8154417252859,
+      "ema50": 120.94958665511965,
+      "ema200": 132.3652088759673
     },
     "momentum": {
-      "3m": 0.03780230970007348,
-      "6m": -0.3211138110968026,
-      "12m": -0.3289003579011488,
+      "3m": 0.04534779707142644,
+      "6m": -0.3161778737635783,
+      "12m": -0.3240210337494809,
       "24m": 0.0,
       "score": 25.0
     },
     "volume": {
-      "average_volume": 2570010.9,
-      "relative_volume": 0.18035643350773337,
+      "average_volume": 2587216.65,
+      "relative_volume": 0.31216287974955637,
       "volume_spike": false
     },
     "volatility_regime": "High volatility",
@@ -443,5 +443,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: ARES\nRating: Drop | Score: 34.9/100 | Confidence: 29.12/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 100.45999908447266 | Resistance: 135.36000061035156\nFundamental Outlook: Quality Compounder | Forward P/E: 15.335273\nNews/Catalyst: TD Cowen Lifts Price Target on Ares Management (ARES) Following Meetings with Management\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: ARES\nRating: Drop | Score: 32.4/100 | Confidence: 27.09/100\nBull Case: fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: No clear setup | Support: 100.45999908447266 | Resistance: 135.36000061035156\nFundamental Outlook: Quality Compounder | Forward P/E: 15.335273\nNews/Catalyst: TD Cowen Lifts Price Target on Ares Management (ARES) Following Meetings with Management\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }

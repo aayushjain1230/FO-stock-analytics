@@ -1,13 +1,13 @@
 {
   "ticker": "BALL",
-  "generated_at": "2026-07-01T15:38:48.926864",
+  "generated_at": "2026-07-01T17:49:52.281335",
   "score": {
-    "final_score": 61.15,
+    "final_score": 63.65,
     "rating": "Hold",
-    "confidence": 57.72,
+    "confidence": 59.56,
     "risk_level": "Controlled",
     "categories": {
-      "technical": 50.0,
+      "technical": 60.0,
       "momentum": 60.0,
       "volume": 25.0,
       "fundamental": 76.0,
@@ -15,28 +15,28 @@
       "catalyst": 70.0
     },
     "technical": {
-      "score": 50.0,
+      "score": 60.0,
       "evidence": [
         "Price above SMA20",
         "Price above SMA50",
         "Price above SMA200",
         "EMA trend is positive",
         "MACD is above signal",
-        "Stock is extended from SMA20"
+        "Stock is not materially extended from SMA20"
       ],
       "support": 52.619998931884766,
       "resistance": 64.4800033569336,
-      "risk_reward": 0.23
+      "risk_reward": 0.31
     },
     "momentum": {
       "score": 60.0,
       "returns": {
-        "1m": 0.15959030862321177,
-        "3m": 0.05732763093343807,
-        "6m": 0.17918356903462107,
-        "12m": 0.126396609543312
+        "1m": 0.14878952979985338,
+        "3m": 0.04747935796960423,
+        "6m": 0.16820020820286952,
+        "12m": 0.11590500698628237
       },
-      "acceleration": -0.0323,
+      "acceleration": -0.0366,
       "evidence": [
         "1m return is positive",
         "3m return is positive",
@@ -46,8 +46,8 @@
     },
     "volume": {
       "score": 25.0,
-      "average_volume": 3320797.55,
-      "relative_volume": 0.10598387727671023,
+      "average_volume": 3339150.8,
+      "relative_volume": 0.21532899921740584,
       "accumulation_days": 7,
       "distribution_days": 1,
       "evidence": [
@@ -65,17 +65,17 @@
     "risk": {
       "score": 100,
       "risk_metrics": {
-        "volatility": 0.016287247743109738,
-        "annualized_volatility": 0.2585520424197983,
-        "maximum_drawdown": -0.33357621803856763,
-        "sharpe_ratio": 0.27149062871032126,
-        "sortino_ratio": 0.3747222335043388,
-        "calmar_ratio": 0.11223037895866547,
-        "beta": 0.47377079434779606,
-        "alpha": -0.017664417198733864,
-        "capm_expected_return": 0.08785887374962256,
-        "actual_return": 0.0701944565508887,
-        "market_return": 0.18544594727619532
+        "volatility": 0.016295233106283884,
+        "annualized_volatility": 0.25867880613032224,
+        "maximum_drawdown": -0.3335761988631424,
+        "sharpe_ratio": 0.25328386468145414,
+        "sortino_ratio": 0.3502457168903902,
+        "calmar_ratio": 0.09762581090082456,
+        "beta": 0.4738175127666451,
+        "alpha": -0.022018048895381406,
+        "capm_expected_return": 0.08753721662325405,
+        "actual_return": 0.06551916772787264,
+        "market_return": 0.18474879941038838
       },
       "evidence": []
     },
@@ -88,7 +88,7 @@
         "guidance change"
       ]
     },
-    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is extended from SMA20"
+    "explanation": "Price above SMA20; Price above SMA50; Price above SMA200; EMA trend is positive; MACD is above signal; Stock is not materially extended from SMA20"
   },
   "fundamentals": {
     "ticker": "BALL",
@@ -138,14 +138,15 @@
     "next_earnings_date": "1777984200",
     "eps_current_year": 3.43,
     "eps_forward": 4.52004,
-    "classification": "Quality Compounder"
+    "classification": "Quality Compounder",
+    "from_cache": true
   },
   "technical_screen": {
-    "rsi": 93.14287159200248,
+    "rsi": 87.3526199779786,
     "macd_cross": false,
     "breakout": false,
     "new_52w_high": false,
-    "relative_volume": 0.10598387727671023,
+    "relative_volume": 0.21532899921740584,
     "price_above_sma50": true,
     "price_above_sma200": true,
     "setup_type": "trend continuation",
@@ -241,7 +242,7 @@
         "last_surprise_pct": 0.11310001,
         "last_surprise_direction": "beat"
       },
-      "analyst_upside_pct": 13.75,
+      "analyst_upside_pct": 14.76,
       "eps_growth_implied": 31.78
     },
     "evidence": [
@@ -337,20 +338,20 @@
   },
   "probability": {
     "model": "rules_to_probability_v1",
-    "probability_of_outperformance": 0.8213,
-    "probability_pct": 82.13,
+    "probability_of_outperformance": 0.8372,
+    "probability_pct": 83.72,
     "confidence": "High",
     "evidence": [
       "EPS growth above 15%",
       "Positive earnings surprise/catalyst",
       "Analyst data is supportive",
-      "Composite score 61.15/100"
+      "Composite score 63.65/100"
     ],
     "note": "Heuristic probability until enough labeled outcomes exist for trained ML."
   },
   "features": {
-    "final_score": 61.15,
-    "technical_score": 50.0,
+    "final_score": 63.65,
+    "technical_score": 60.0,
     "momentum_score": 60.0,
     "volume_score": 25.0,
     "fundamental_score": 76.0,
@@ -360,7 +361,7 @@
     "eps_growth": 0.219,
     "roe": 0.16785999,
     "forward_pe": 13.767577,
-    "relative_volume": 0.10598387727671023,
+    "relative_volume": 0.21532899921740584,
     "breakout": false,
     "price_above_sma50": true,
     "price_above_sma200": true,
@@ -370,66 +371,66 @@
   },
   "quant_model": {
     "returns": {
-      "daily": -0.002083350399620043,
-      "weekly": 0.02115449205003439,
-      "monthly": 0.15959030862321177,
-      "annual": 0.126396609543312
+      "daily": -0.011378251311027099,
+      "weekly": 0.011643146766193269,
+      "monthly": 0.14878952979985338,
+      "annual": 0.11590500698628237
     },
     "risk": {
-      "volatility": 0.016287247743109738,
-      "annualized_volatility": 0.2585520424197983,
-      "maximum_drawdown": -0.33357621803856763,
-      "sharpe_ratio": 0.27149062871032126,
-      "sortino_ratio": 0.3747222335043388,
-      "calmar_ratio": 0.11223037895866547,
-      "beta": 0.47377079434779606,
-      "alpha": -0.017664417198733864,
-      "capm_expected_return": 0.08785887374962256,
-      "actual_return": 0.0701944565508887,
-      "market_return": 0.18544594727619532
+      "volatility": 0.016295233106283884,
+      "annualized_volatility": 0.25867880613032224,
+      "maximum_drawdown": -0.3335761988631424,
+      "sharpe_ratio": 0.25328386468145414,
+      "sortino_ratio": 0.3502457168903902,
+      "calmar_ratio": 0.09762581090082456,
+      "beta": 0.4738175127666451,
+      "alpha": -0.022018048895381406,
+      "capm_expected_return": 0.08753721662325405,
+      "actual_return": 0.06551916772787264,
+      "market_return": 0.18474879941038838
     },
     "capm": {
-      "beta": 0.47377079434779606,
-      "alpha": -0.017664417198733864,
-      "capm_expected_return": 0.08785887374962256,
-      "actual_return": 0.0701944565508887,
-      "market_return": 0.18544594727619532,
-      "interpretation": "Beta 0.47: Moves roughly 53% less than the market. CAPM expected return is 8.79%; realized alpha is -1.77%, meaning negative alpha versus CAPM."
+      "beta": 0.4738175127666451,
+      "alpha": -0.022018048895381406,
+      "capm_expected_return": 0.08753721662325405,
+      "actual_return": 0.06551916772787264,
+      "market_return": 0.18474879941038838,
+      "interpretation": "Beta 0.47: Moves roughly 53% less than the market. CAPM expected return is 8.75%; realized alpha is -2.20%, meaning negative alpha versus CAPM."
     },
     "factor_decomposition": {
-      "actual_return": 0.0701944565508887,
+      "actual_return": 0.06551916772787264,
       "components": {
-        "market_component": 0.08785887374962256,
-        "momentum_component": 0.031599152385828,
-        "volatility_drag": -0.001710408483959658,
-        "alpha_component": -0.017664417198733864
+        "market_component": 0.08753721662325405,
+        "momentum_component": 0.02897625174657059,
+        "volatility_drag": -0.0017357612260644473,
+        "alpha_component": -0.022018048895381406
       },
       "component_weights_pct": {
-        "market_component": 63.28,
-        "momentum_component": 22.76,
-        "volatility_drag": 1.23,
-        "alpha_component": 12.72
+        "market_component": 62.41,
+        "momentum_component": 20.66,
+        "volatility_drag": 1.24,
+        "alpha_component": 15.7
       },
       "interpretation": "Decomposes realized return into market risk, momentum proxy, volatility drag, and residual alpha. This is a research approximation, not proof of causality."
     },
     "trend": {
-      "sma20": 57.68950023651123,
-      "sma50": 57.85997268676758,
-      "sma200": 55.463039512634275,
-      "ema20": 59.06581178663,
-      "ema50": 58.37555725185005,
-      "ema200": 56.96310882140747
+      "sma20": 57.6605001449585,
+      "sma50": 57.84837265014649,
+      "sma200": 55.460139446258545,
+      "ema20": 59.01057351704916,
+      "ema50": 58.352812076337514,
+      "ema200": 56.957337531041304
     },
     "momentum": {
-      "3m": 0.05732763093343807,
-      "6m": 0.17918356903462107,
-      "12m": 0.126396609543312,
+      "3m": 0.04747935796960423,
+      "6m": 0.16820020820286952,
+      "12m": 0.11590500698628237,
       "24m": 0.0,
       "score": 75.0
     },
     "volume": {
-      "average_volume": 3320797.55,
-      "relative_volume": 0.10598387727671023,
+      "average_volume": 3339150.8,
+      "relative_volume": 0.21532899921740584,
       "volume_spike": false
     },
     "volatility_regime": "Normal volatility",
@@ -447,5 +448,5 @@
     "invalidates": "N/A",
     "triggers": []
   },
-  "report": "Ticker: BALL\nRating: Hold | Score: 61.15/100 | Confidence: 57.72/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 52.619998931884766 | Resistance: 64.4800033569336\nFundamental Outlook: Quality Compounder | Forward P/E: 13.767577\nNews/Catalyst: America\u2019s Recycling Goes to Waste. This Garbage Giant Wants to Change That.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
+  "report": "Ticker: BALL\nRating: Hold | Score: 63.65/100 | Confidence: 59.56/100\nBull Case: momentum and relative strength are constructive, fundamentals screen as Quality Compounder\nBear Case: volume confirmation is weak\nTechnical Outlook: trend continuation | Support: 52.619998931884766 | Resistance: 64.4800033569336\nFundamental Outlook: Quality Compounder | Forward P/E: 13.767577\nNews/Catalyst: America\u2019s Recycling Goes to Waste. This Garbage Giant Wants to Change That.\nPortfolio Fit: Potential diversifier; evaluate correlation and volatility before adding.\nWhy Now: No clear Why Now trigger | Evidence: No recent statistically meaningful change was detected.\nWhat Invalidates: N/A"
 }
