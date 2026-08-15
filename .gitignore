@@ -1,0 +1,53 @@
+# Secrets and environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build/package
+build/
+dist/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+
+# Runtime/generated app output
+logs/
+cache/
+plots/*.html
+plots/*.png
+reports/
+state/*.db
+state/*.sqlite3
+state/*.json
+state/stock_reports/
+
+# Keep source-controlled placeholders/defaults
+!plots/.keep
+!state/.keep
+!config/default_watchlist.json
+!config/screeners.json
+
+# Local/user-specific files
+config/config.json
+portfolio.json
+trade_journal.json
+watchlist.json
+watchlist_intelligence.json

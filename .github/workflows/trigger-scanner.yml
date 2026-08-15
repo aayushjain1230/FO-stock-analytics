@@ -1,0 +1,16 @@
+name: Manual Lightweight Scanner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scanner-disabled-for-v2:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Version 2 notice
+        run: |
+          echo "The five-minute scheduled scanner is disabled in Version 2."
+          echo "Version 3 uses separate respectful jobs for daily analysis, SEC sync, model refresh, calibration, and one Telegram brief."
+          echo "Runtime state is never committed to main."

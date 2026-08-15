@@ -1,0 +1,33 @@
+.research-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: rgba(8, 13, 22, 0.96);
+  border-right: 1px solid rgba(121, 192, 255, 0.16);
+}
+
+.metric-card {
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(93, 183, 255, 0.45);
+}
+
+table {
+  border-spacing: 0;
+}
+
+th {
+  color: #92a4b8;
+}
+
+@media (max-width: 900px) {
+  .research-shell {
+    grid-template-columns: 1fr;
+  }
+}
