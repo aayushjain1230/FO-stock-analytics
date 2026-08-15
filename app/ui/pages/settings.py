@@ -15,7 +15,7 @@ def render(st) -> None:
     config = load_config()
     st.subheader("Watchlist Controls")
     st.write(f"Current session watchlist: {', '.join(st.session_state.watchlist)}")
-    st.caption("Streamlit watchlists are session-isolated and do not overwrite another visitor's list.")
+    st.caption("Streamlit watchlists are temporary for this browser session. They do not change scheduled GitHub Actions or Telegram reports.")
 
     st.subheader("Defaults")
     st.write(f"Benchmark: {config.benchmark}")
@@ -38,6 +38,13 @@ def render(st) -> None:
     sec_status = sec_identity_status()
     st.write(f"SEC connection status: {'Configured' if sec_status.configured else 'Disabled'}")
     st.caption(sec_status.message)
+    sync_state = st.session_state.sec_sync_status
+    st.write(f"SEC sync state: {sync_state['state']}")
+    st.caption(sync_state["message"])
+    if sync_state.get("last_success"):
+        st.caption(f"Last successful sync: {sync_state['last_success']}")
+    if st.button("Sync SEC filings now", use_container_width=True):
+        st.info("Use the sidebar **Sync SEC filings** button to refresh market data and SEC filing intelligence together.")
     cache_status = SecCache().status()
     st.write(f"Filing cache entries: {cache_status['entries']}")
     st.caption("SEC_USER_AGENT value is never displayed here.")

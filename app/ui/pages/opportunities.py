@@ -8,7 +8,7 @@ from app.ui.components import analysis_card
 def render(st) -> None:
     """Render restrained watchlist opportunities."""
     st.title("Opportunities")
-    st.caption("Version 1 opportunities are watchlist observations, not trade recommendations.")
+    st.caption("Opportunities are watchlist observations and model-supported research leads, not trade recommendations.")
     candidates = [
         item
         for item in st.session_state.analyses
@@ -42,10 +42,10 @@ def _render_v2_opportunities(st, has_v1_candidates: bool) -> None:
             elif sim.falling_more_than_10_pct >= 25:
                 rows.append(("Model estimate", item.ticker, "Meaningful downside frequency", sim.explanation, sim.confidence))
     if rows:
-        st.subheader("Version 2 Opportunities and Risks")
+        st.subheader("Additional Opportunities and Risks")
         for category, ticker, title, body, confidence in rows[:6]:
             st.write(f"**{category}: {ticker} - {title}**")
             st.write(body)
             st.caption(f"Confidence: {confidence}")
     elif not has_v1_candidates:
-        st.info("No Version 2 opportunities passed validation. That is a valid outcome; the system is allowed to abstain.")
+        st.info("No additional opportunities passed validation. That is a valid outcome; the system is allowed to abstain.")

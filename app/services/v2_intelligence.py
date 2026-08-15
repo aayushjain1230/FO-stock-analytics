@@ -1,4 +1,4 @@
-"""Version 2 orchestration without adding frontend complexity."""
+"""Advanced intelligence orchestration without adding frontend complexity."""
 
 from __future__ import annotations
 

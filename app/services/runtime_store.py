@@ -1,4 +1,4 @@
-"""Transactional runtime persistence for Version 2 results."""
+"""Transactional runtime persistence for analysis results."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""Evidence models for Version 1 stock conclusions."""
+"""Evidence models for stock conclusions."""
 
 from __future__ import annotations
 

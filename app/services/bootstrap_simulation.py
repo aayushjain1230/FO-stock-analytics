@@ -1,4 +1,4 @@
-"""Historical-bootstrap scenario engine for Version 2."""
+"""Historical-bootstrap scenario engine."""
 
 from __future__ import annotations
 

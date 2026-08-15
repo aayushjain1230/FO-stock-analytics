@@ -71,7 +71,7 @@ def render(st) -> None:
 
 
 def _render_v2_signals(st) -> None:
-    """Render only material Version 2 highlights on Home."""
+    """Render only material advanced highlights on Home."""
     v2 = getattr(st.session_state, "v2_intelligence", {})
     material_filings = [insight for item in v2.values() for insight in item.filing_insights]
     elevated_whales = [item for item in v2.values() if item.whale_activity.level in {"High", "Elevated", "Distribution Risk"}]

@@ -1,4 +1,4 @@
-"""Version 1 configuration loading and validation."""
+"""Configuration loading and validation."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 @dataclass(frozen=True)
 class AppConfig:
-    """Validated Version 1 configuration."""
+    """Validated application configuration."""
 
     benchmark: str = "SPY"
     period: str = "6mo"

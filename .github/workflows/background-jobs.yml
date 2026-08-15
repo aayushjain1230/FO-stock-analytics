@@ -1,0 +1,75 @@
+name: Stock Intelligence Background Jobs
+
+on:
+  workflow_dispatch:
+    inputs:
+      watchlist:
+        description: "Comma-separated tickers, for example AAPL,MSFT,NVDA"
+        required: false
+        type: string
+      sync_sec:
+        description: "Synchronize SEC filings"
+        required: true
+        default: true
+        type: boolean
+      refresh_models:
+        description: "Refresh model status/report artifacts"
+        required: true
+        default: true
+        type: boolean
+  schedule:
+    - cron: "15 12 * * 1-5"
+    - cron: "0 14 * * 6"
+
+concurrency:
+  group: stock-intelligence-background-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  background-refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      PYTHONPATH: ${{ github.workspace }}
+      WATCHLIST_TICKERS: ${{ vars.WATCHLIST_TICKERS }}
+      MANUAL_WATCHLIST: ${{ github.event.inputs.watchlist }}
+      SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: SEC synchronization summary
+        if: ${{ github.event_name == 'schedule' || inputs.sync_sec }}
+        run: python main.py --analyze --tickers "$MANUAL_WATCHLIST" --sync-sec
+
+      - name: Model status and methodology report
+        if: ${{ github.event_name == 'schedule' || inputs.refresh_models }}
+        run: |
+          python main.py --export-report --tickers "$MANUAL_WATCHLIST"
+          python main.py --model-report
+
+      - name: Upload background job artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-intelligence-background-${{ github.run_id }}-${{ github.sha }}
+          path: |
+            state/v2_latest_analysis.json
+            reports/watchlist_report.html
+            reports/model_methodology_v3.html
+          if-no-files-found: warn

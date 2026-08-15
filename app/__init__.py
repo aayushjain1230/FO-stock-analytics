@@ -1,1 +1,1 @@
-"""Version 1 watchlist-first stock intelligence app."""
+"""Watchlist-first stock intelligence app."""

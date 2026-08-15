@@ -77,7 +77,7 @@ def render_daily_brief(market: MarketSnapshot, analyses: list[StockAnalysis], v2
 
 
 def _v2_lines(item: V2StockIntelligence | None) -> list[str]:
-    """Return compact Version 2 additions for one attention stock."""
+    """Return compact advanced additions for one attention stock."""
     if item is None:
         return []
     lines: list[str] = []

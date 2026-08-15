@@ -1,4 +1,4 @@
-"""Version 1 explainable watchlist analysis pipeline."""
+"""Explainable watchlist analysis pipeline."""
 
 from __future__ import annotations
 

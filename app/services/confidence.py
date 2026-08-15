@@ -1,4 +1,4 @@
-"""Version 2 confidence engine with abstention support."""
+"""Confidence engine with abstention support."""
 
 from __future__ import annotations
 

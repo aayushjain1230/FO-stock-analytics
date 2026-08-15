@@ -1,3 +1,3 @@
-"""Version 1 navigation definition."""
+"""Primary navigation definition for the official Streamlit app."""
 
 PAGES = ["Home", "Stocks", "Opportunities", "Settings"]

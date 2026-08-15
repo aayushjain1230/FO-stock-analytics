@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import json
+import os
 import re
+from dataclasses import dataclass
 from pathlib import Path
 
 DEFAULT_WATCHLIST_PATH = Path("config/default_watchlist.json")
@@ -77,3 +79,69 @@ def remove_ticker(tickers: list[str], ticker: str) -> list[str]:
     """Remove one ticker from a watchlist."""
     normalized = normalize_ticker(ticker)
     return [item for item in tickers if item != normalized]
+
+
+@dataclass(frozen=True)
+class ResolvedWatchlist:
+    """Resolved watchlist plus source and rejected symbols."""
+
+    tickers: list[str]
+    source: str
+    rejected: list[str]
+
+
+def split_ticker_input(value: str | list[str] | None) -> list[str]:
+    """Split CLI/workflow/env ticker input without shell evaluation."""
+    if value is None:
+        return []
+    if isinstance(value, list):
+        pieces: list[str] = []
+        for item in value:
+            pieces.extend(split_ticker_input(item))
+        return pieces
+    text = str(value).strip()
+    if not text:
+        return []
+    delimiter = "," if "," in text else None
+    if delimiter is None and re.search(r"[^A-Za-z0-9.\-/\s]", text):
+        return [text]
+    pieces = text.split(delimiter) if delimiter else text.split()
+    return [piece.strip() for piece in pieces if piece.strip()]
+
+
+def clean_watchlist_with_rejections(tickers: list[str]) -> tuple[list[str], list[str]]:
+    """Normalize and validate symbols, returning rejected raw values."""
+    clean: list[str] = []
+    rejected: list[str] = []
+    for raw in tickers:
+        ticker = normalize_ticker(str(raw))
+        if not ticker:
+            continue
+        if not is_valid_ticker(ticker):
+            rejected.append(str(raw))
+            continue
+        if ticker not in clean:
+            clean.append(ticker)
+        if len(clean) >= MAX_WATCHLIST_SIZE:
+            break
+    return clean, rejected
+
+
+def resolve_watchlist(manual_input: str | list[str] | None = None, env_value: str | None = None, default_path: Path = DEFAULT_WATCHLIST_PATH) -> ResolvedWatchlist:
+    """Resolve watchlist by priority: manual input, WATCHLIST_TICKERS, default file."""
+    sources = [
+        ("manual input", split_ticker_input(manual_input)),
+        ("WATCHLIST_TICKERS", split_ticker_input(env_value if env_value is not None else os.getenv("WATCHLIST_TICKERS"))),
+        ("config/default_watchlist.json", load_default_watchlist(default_path)),
+    ]
+    all_rejected: list[str] = []
+    for source, raw_tickers in sources:
+        if not raw_tickers:
+            continue
+        clean, rejected = clean_watchlist_with_rejections(raw_tickers)
+        all_rejected.extend(rejected)
+        if clean:
+            return ResolvedWatchlist(clean, source, all_rejected)
+        if source != "config/default_watchlist.json":
+            raise ValueError(f"No valid tickers were provided from {source}. Rejected: {', '.join(rejected) or 'none'}")
+    raise ValueError("No valid tickers were provided. Check manual input, WATCHLIST_TICKERS, or config/default_watchlist.json.")

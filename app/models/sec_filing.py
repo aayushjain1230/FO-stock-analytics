@@ -1,4 +1,4 @@
-"""Normalized SEC filing models used by Version 2 intelligence services."""
+"""Normalized SEC filing models used by intelligence services."""
 
 from __future__ import annotations
 

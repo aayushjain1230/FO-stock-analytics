@@ -74,7 +74,7 @@ def render(st) -> None:
 
 
 def _render_v2_stock_sections(st, selected: str) -> None:
-    """Render Version 2 details inside the selected stock page."""
+    """Render advanced details inside the selected stock page."""
     v2 = getattr(st.session_state, "v2_intelligence", {}).get(selected)
     if not v2:
         return

@@ -19,3 +19,5 @@ def ensure_session_state(st) -> None:
         st.session_state.last_error = None
     if "show_technical_details" not in st.session_state:
         st.session_state.show_technical_details = False
+    if "sec_sync_status" not in st.session_state:
+        st.session_state.sec_sync_status = {"state": "Never synchronized", "message": "SEC filing sync has not been run in this browser session.", "last_success": None}

@@ -1,10 +1,30 @@
-name: Version 2 Watchlist Intelligence
+name: Watchlist Intelligence Daily Run
 
 on:
   schedule:
     # Once after market close on weekdays. Avoid aggressive polling or committing runtime state.
     - cron: "30 21 * * 1-5"
   workflow_dispatch:
+    inputs:
+      watchlist:
+        description: "Comma-separated tickers, for example AAPL,MSFT,NVDA"
+        required: false
+        type: string
+      send_telegram:
+        description: "Send the Telegram brief"
+        required: true
+        default: false
+        type: boolean
+      sync_sec:
+        description: "Synchronize SEC filings"
+        required: true
+        default: true
+        type: boolean
+      export_report:
+        description: "Generate a static HTML report artifact"
+        required: true
+        default: true
+        type: boolean
 
 concurrency:
   group: watchlist-intelligence-${{ github.ref }}
@@ -17,6 +37,9 @@ jobs:
       contents: read
     env:
       PYTHONPATH: ${{ github.workspace }}
+      WATCHLIST_TICKERS: ${{ vars.WATCHLIST_TICKERS }}
+      MANUAL_WATCHLIST: ${{ github.event.inputs.watchlist }}
+      SCHEDULED_SEND_TELEGRAM: ${{ vars.SCHEDULED_SEND_TELEGRAM }}
 
     steps:
       - name: Checkout repository
@@ -36,17 +59,29 @@ jobs:
       - name: Run tests
         run: python -m pytest
 
-      - name: Analyze watchlist and send daily brief when configured
+      - name: Analyze selected watchlist
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
-        run: python main.py --analyze --send-telegram
+        run: |
+          EXTRA_FLAGS=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.sync_sec }}" = "true" ]; then EXTRA_FLAGS="$EXTRA_FLAGS --sync-sec"; fi
+          if [ "${{ github.event_name }}" = "schedule" ]; then EXTRA_FLAGS="$EXTRA_FLAGS --sync-sec"; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.send_telegram }}" = "true" ]; then EXTRA_FLAGS="$EXTRA_FLAGS --send-telegram"; fi
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$SCHEDULED_SEND_TELEGRAM" = "true" ]; then EXTRA_FLAGS="$EXTRA_FLAGS --send-telegram"; fi
+          python main.py --analyze --tickers "$MANUAL_WATCHLIST" $EXTRA_FLAGS
 
-      - name: Upload V2 analysis artifact
+      - name: Export optional static report
+        if: ${{ github.event_name == 'schedule' || inputs.export_report }}
+        run: python main.py --export-report --tickers "$MANUAL_WATCHLIST"
+
+      - name: Upload watchlist artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v2-watchlist-analysis
-          path: state/v2_latest_analysis.json
+          name: watchlist-intelligence-${{ github.run_id }}-${{ github.sha }}
+          path: |
+            state/v2_latest_analysis.json
+            reports/watchlist_report.html
           if-no-files-found: warn
